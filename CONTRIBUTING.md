@@ -55,4 +55,4 @@ El script comprobará que:
 
 ## ⚖️ Licencia
 
-Al contribuir a este repositorio, aceptas que tus aportaciones se publiquen bajo la **Licencia MIT**.
+Al contribuir a este repositorio, aceptas que tus aportaciones se publiquen bajo la licencia **CC BY-NC-SA 4.0 (Atribución - No Comercial - Compartir Igual)**.

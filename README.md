@@ -36,4 +36,4 @@ Este repositorio utiliza el sistema de persistencia y continuidad en `.ia/`:
 
 ## 📄 Licencia
 
-Este proyecto es Open Source bajo la licencia MIT. Libre para consultar, clonar y adaptar por la comunidad.
+Este proyecto es Open Source con fines educativos bajo la licencia **CC BY-NC-SA 4.0 (Atribución - No Comercial - Compartir Igual)**. Gratuito y libre para estudiar y compartir por la comunidad de opositores, quedando estrictamente prohibida su venta o explotación comercial por terceros.
