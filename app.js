@@ -28356,21 +28356,36 @@ function loadSavedProfile() {
 
 let supabaseClient = null;
 
+const resetPasswordModal = document.getElementById('resetPasswordModal');
+
+function openResetPasswordModal() {
+  if (resetPasswordModal) {
+    const status = document.getElementById('resetPasswordStatus');
+    if (status) status.textContent = '';
+    resetPasswordModal.showModal();
+  }
+}
+
 function initSupabase(url, key) {
   if (window.supabase && url && key) {
     supabaseClient = window.supabase.createClient(url, key);
+
+    const hash = window.location.hash || '';
+    if (hash.includes('error_code=otp_expired') || hash.includes('error=access_denied')) {
+      const pageStatus = document.getElementById('authPageStatusText');
+      const modalStatus = document.getElementById('authStatusText');
+      const msg = 'El enlace de recuperación ha caducado o ya fue utilizado. Solicita un nuevo enlace desde "¿Olvidaste tu contraseña?".';
+      if (pageStatus) pageStatus.textContent = msg;
+      if (modalStatus) modalStatus.textContent = msg;
+    } else if (hash.includes('type=recovery') || hash.includes('access_token=')) {
+      setAuthState(true);
+      setTimeout(openResetPasswordModal, 300);
+    }
+
     supabaseClient.auth.onAuthStateChange((event, session) => {
       if (event === 'PASSWORD_RECOVERY') {
         setAuthState(true);
-        setTimeout(() => {
-          const newPassword = prompt('Introduce tu nueva contraseña para tu cuenta de opositor:');
-          if (newPassword && newPassword.trim().length >= 6) {
-            supabaseClient.auth.updateUser({ password: newPassword.trim() }).then(({ error }) => {
-              if (error) alert('Error al actualizar contraseña: ' + error.message);
-              else alert('¡Contraseña actualizada con éxito! Ya puedes iniciar sesión con tu nueva clave.');
-            });
-          }
-        }, 500);
+        setTimeout(openResetPasswordModal, 300);
       }
     });
     checkAuthUser();
@@ -28428,9 +28443,36 @@ if (sidebarLogoutBtn) {
   });
 }
 document.querySelectorAll('.dialog-close,.dialog-action').forEach(button => button.addEventListener('click', () => {
-  pauseDialog.close(); goalDialog.close(); if (authDialog) authDialog.close(); if (feedbackDialog) feedbackDialog.close();
+  pauseDialog.close(); goalDialog.close(); if (authDialog) authDialog.close(); if (feedbackDialog) feedbackDialog.close(); if (resetPasswordModal) resetPasswordModal.close();
 }));
 document.getElementById('saveGoal').addEventListener('click', () => { const input = document.getElementById('goalInput'); const text = input.value.trim(); if (!text) return; state.goals.push({ id:`goal-${Date.now()}`, text, progress:'0/1', done:false }); input.value = ''; persist(); renderGoals(); goalDialog.close(); });
+
+const resetPasswordForm = document.getElementById('resetPasswordForm');
+if (resetPasswordForm) {
+  resetPasswordForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const input = document.getElementById('newPasswordInput');
+    const newPass = input ? input.value.trim() : '';
+    const status = document.getElementById('resetPasswordStatus');
+    if (!newPass || newPass.length < 6) {
+      if (status) status.textContent = 'La contraseña debe tener al menos 6 caracteres.';
+      return;
+    }
+    if (supabaseClient) {
+      try {
+        const { error } = await supabaseClient.auth.updateUser({ password: newPass });
+        if (error) throw error;
+        if (status) status.textContent = '¡Contraseña actualizada con éxito! Redirigiendo...';
+        setTimeout(() => {
+          if (resetPasswordModal) resetPasswordModal.close();
+          window.location.hash = '#inicio';
+        }, 1500);
+      } catch (err) {
+        if (status) status.textContent = `Error: ${err.message}`;
+      }
+    }
+  });
+}
 
 const authForm = document.getElementById('authForm');
 if (authForm) {

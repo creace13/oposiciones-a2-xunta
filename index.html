@@ -351,6 +351,7 @@
     <dialog id="pauseDialog"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">PAUSA CONSCIENTE</p><h2>Respira antes de seguir.</h2><p>Durante un minuto, aleja la mirada de la pantalla y suelta los hombros. Una pausa no retrasa el plan: protege tu atención.</p><button class="primary-button dialog-action">Volver cuando esté lista</button></dialog>
     <dialog id="goalDialog"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">NUEVA META</p><h2>¿Qué paso es realista esta semana?</h2><label>Describe una meta pequeña<input id="goalInput" maxlength="80" placeholder="Ej.: 20 preguntas de empleo público" /></label><button id="saveGoal" class="primary-button">Guardar meta</button></dialog>
     <dialog id="authDialog"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">ACCESO Y PERFIL</p><h2 id="authModalTitle">Bienvenido a Oposiciones A2</h2><p id="authModalDesc">Introduce tu nombre y correo para acceder a tu perfil privado de opositor.</p><form id="authForm"><label>Nombre de usuario / Opositor<input type="text" id="authName" placeholder="Ej.: Merce" maxlength="30" required /></label><label>Correo electrónico<input type="email" id="authEmail" placeholder="tu@email.com" required /></label><label>Contraseña<input type="password" id="authPassword" placeholder="••••••••" required /></label><div style="display:flex;justify-content:space-between;align-items:center;margin:8px 0 16px;"><button type="button" id="forgotPassBtn" class="text-button" style="font-size:11px;color:var(--muted);text-decoration:underline;">¿Olvidaste tu contraseña?</button></div><button type="submit" id="authSubmitBtn" class="primary-button wide">Entrar / Registrarse</button></form><div id="authStatusText" class="tiny" style="margin-top:15px;color:var(--muted);text-align:center;">Perfil guardado localmente</div></dialog>
+    <dialog id="resetPasswordModal"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">RECUPERACIÓN DE CUENTA</p><h2>Cambiar Contraseña</h2><p>Introduce tu nueva contraseña para tu cuenta de opositor.</p><form id="resetPasswordForm"><label>Nueva Contraseña<input type="password" id="newPasswordInput" placeholder="Mínimo 6 caracteres" minlength="6" required /></label><button type="submit" class="primary-button wide" style="margin-top:12px;">Guardar Nueva Contraseña</button></form><div id="resetPasswordStatus" class="tiny" style="margin-top:15px;color:var(--muted);text-align:center;"></div></dialog>
     <div id="authScreen" class="auth-screen">
       <div class="auth-card-container">
         <div class="auth-hero-side">
@@ -399,6 +400,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="app.js?v=v12-resetredirect-20260719"></script>
+    <script src="app.js?v=v13-resetmodal-20260719"></script>
   </body>
 </html>
