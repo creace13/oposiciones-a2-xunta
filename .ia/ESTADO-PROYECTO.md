@@ -10,7 +10,7 @@ Plataforma Web Open-Source de preparación inteligente para el Cuerpo de Gestió
 
 ## Decisión actual
 
-Proyecto 100% en producción y abierto al público. Desplegado en **Cloudflare Pages** con backend de usuarios y progreso en **Supabase** (0 €/mes). Se ha completado la integración de 315 preguntas oficiales de exámenes reales (2024 y 2025) y una pantalla completa de inicio de sesión e historia del opositor.
+Proyecto 100% en producción y abierto al público bajo licencia **CC BY-NC-SA 4.0 (No Comercial)**. Desplegado en **Cloudflare Workers / Pages** (`https://oposiciones-xunta.opos-galicia.workers.dev`) vinculado a GitHub con backend de usuarios en **Supabase** (0 €/mes). Verificado en **Google Search Console** con `sitemap.xml`, `robots.txt`, tarjetas Open Graph sociales para WhatsApp y PWA installable.
 
 ## Cifras canónicas
 
@@ -20,12 +20,14 @@ Proyecto 100% en producción y abierto al público. Desplegado en **Cloudflare P
 - Incompletas o errores de validación: **0** (`node scripts/validar-banco.js` -> RESULTADO: OK).
 - Temas troncales inventariados: **23**.
 - Archivos locales oficiales en Biblioteca: **25**.
-- Despliegue en producción: Cloudflare Pages (`oposiciones-a2-xunta`).
+- Despliegue en producción: Cloudflare Workers (`https://oposiciones-xunta.opos-galicia.workers.dev`).
 - Autenticación y DB: Supabase (`mquigtfqvznwnovzjudf.supabase.co`).
+- Licencia: CC BY-NC-SA 4.0 (Atribución - No Comercial - Compartir Igual).
 
 ## Siguiente tarea exacta
 
 - Mantener la plataforma en producción, recibir aportaciones de la comunidad mediante el buzón de erratas integrado o sugerencias vía GitHub Open Source.
+- Si en el futuro se desea, extender la arquitectura a otros subgrupos (C1, C2, SERGAS) manteniendo el foco en la Xunta de Galicia.
 
 ## Bloqueos activos
 
