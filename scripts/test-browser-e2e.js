@@ -3,7 +3,7 @@ const path = require('path');
 const assert = require('assert');
 const { JSDOM } = require('jsdom');
 
-console.log('--- SUITE DE PRUEBAS FUNCIONALES NAVEGADOR / E2E (JSDOM REAL + HTML + APP.JS) ---');
+console.log('--- SUITE DE INTEGRACIÓN DOM/JSDOM (HTML + APP.JS REALES) ---');
 
 const rootDir = path.resolve(__dirname, '..');
 const htmlPath = path.join(rootDir, 'index.html');
@@ -30,6 +30,7 @@ async function runE2ESuite() {
   const { document } = window;
 
   window.scrollTo = () => {};
+  window.confirm = () => true;
   window.HTMLDialogElement = HTMLDialogElementPolyfill;
 
   document.querySelectorAll('dialog').forEach(d => {
@@ -52,6 +53,17 @@ async function runE2ESuite() {
 
   // Inject app.js into JSDOM window context
   window.eval(appContent);
+
+  // Regression: métricas cuantitativas honestas y formato español
+  console.log('Test DOM 0: Verificando presentación honesta de métricas...');
+  window.updateDashboard();
+  assert.strictEqual(document.querySelector('.readiness-panel .legend').textContent.includes('cantidad clasificada'), true, '❌ DOM 0 Fallido: la leyenda no explica que mide cantidad');
+  assert.strictEqual(document.getElementById('valBlock1').textContent, '302/300 · 100%', '❌ DOM 0 Fallido: Bloque I no muestra recuento y porcentaje');
+  assert.strictEqual(document.getElementById('valBlock2').textContent, '905/910 · 99%', '❌ DOM 0 Fallido: Bloque II no muestra recuento y porcentaje');
+  assert.strictEqual(document.getElementById('snapshotRatio').textContent, '1.207/1.210', '❌ DOM 0 Fallido: el total no mantiene formato es-ES');
+  assert.strictEqual(htmlContent.includes('Preguntas Verificadas'), false, '❌ DOM 0 Fallido: reapareció una afirmación editorial retirada');
+  assert.strictEqual(htmlContent.includes('servidores alojados en la Unión Europea'), false, '❌ DOM 0 Fallido: reapareció una región de Supabase no demostrada');
+  console.log('  PASADO: Métricas y textos de transparencia verificados.');
 
   // Flow 1: Carga de la aplicación e inicio en modo invitado
   console.log('Test E2E 1: Entrando en modo invitado desde la portada...');
@@ -114,11 +126,14 @@ async function runE2ESuite() {
   assert.strictEqual(!!summaryHeading, true, '❌ E2E 4 Fallido: Resumen de examen no mostrado');
   console.log('  PASADO: Simulacro con penalización y nota neta verificado.');
 
-  // Flow 5: Probar persistencia tras recarga
-  console.log('Test E2E 5: Verificando persistencia en localStorage...');
+  // Flow 5: Probar escritura de persistencia local
+  console.log('Test DOM 5: Verificando escritura de persistencia en localStorage...');
   const savedName = window.localStorage.getItem('opoA2UserName');
   assert.strictEqual(savedName, 'Merce', '❌ E2E 5 Fallido: opoA2UserName no persistido en localStorage');
-  console.log('  PASADO: Persistencia local verificada.');
+  const savedState = JSON.parse(window.localStorage.getItem('opoA2State'));
+  assert.strictEqual(Array.isArray(savedState.answered), true, '❌ DOM 5 Fallido: el progreso no se serializó');
+  assert.strictEqual(savedState.answered.length > 0, true, '❌ DOM 5 Fallido: no se guardaron respuestas');
+  console.log('  PASADO: Escritura de persistencia local verificada.');
 
   // Flow 6: Probar alta pendiente de confirmación sin falso estado autenticado
   console.log('Test E2E 6: Probando alta de usuario pendiente de confirmación...');
@@ -160,16 +175,24 @@ async function runE2ESuite() {
   });
   console.log(`  PASADO: Verificados ${docCount} documentos enlazados en disco.`);
 
+  // Flow 9: Comprobar borrado real y separado del progreso local
+  console.log('Test DOM 9: Verificando borrado del progreso local...');
+  window.localStorage.setItem('opoA2State', JSON.stringify({ answered: [{ id: 'demo' }] }));
+  document.getElementById('deleteProgressBtn').click();
+  assert.strictEqual(window.localStorage.getItem('opoA2State'), null, '❌ DOM 9 Fallido: el progreso local no fue eliminado');
+  assert.strictEqual(document.getElementById('pendingReviews').textContent, '0', '❌ DOM 9 Fallido: el panel no se reinició');
+  console.log('  PASADO: Borrado local real, confirmado y separado de la cuenta remota.');
+
   // Teardown: Cancel active intervals to allow Node process to exit cleanly
   if (window.examTimerInterval) {
     window.clearInterval(window.examTimerInterval);
     window.examTimerInterval = null;
   }
 
-  console.log('\n✅ SUITE DE PRUEBAS FUNCIONALES NAVEGADOR / E2E EN NAVEGADOR DOM REAL PASADA CON ÉXITO.');
+  console.log('\n✅ SUITE DE INTEGRACIÓN DOM/JSDOM PASADA CON ÉXITO.');
 }
 
 runE2ESuite().catch(err => {
-  console.error('❌ ERROR EN SUITE E2E NAVEGADOR:', err);
+  console.error('❌ ERROR EN SUITE DE INTEGRACIÓN DOM/JSDOM:', err);
   process.exit(1);
 });

@@ -96,6 +96,8 @@
                 <button type="button" id="openAuthModalBtn" class="profile-action-btn">Editar perfil</button>
                 <span class="dot">•</span>
                 <button type="button" id="sidebarLogoutBtn" class="profile-action-btn logout">Cerrar sesión</button>
+                <span class="dot">•</span>
+                <button type="button" id="deleteProgressBtn" class="profile-action-btn danger">Borrar progreso</button>
               </div>
             </div>
           </div>
@@ -125,7 +127,7 @@
             <article><span class="stat-label">Sesiones esta semana</span><strong id="weeklySessions">0</strong><small>sin contar rachas</small></article>
           </section>
           <section class="coverage-snapshot" id="coverageSnapshot" aria-label="Avance del banco de preguntas por temario">
-            <div><span class="stat-label">Banco troncal</span><strong id="snapshotRatio">1.207<span>/1.210</span></strong><small id="snapshotSub">1.207 propias + 315 oficiales (1.522 total)</small></div><button class="secondary-button" data-view-target="syllabus">Ver avance</button>
+            <div><span class="stat-label">Banco propio clasificado</span><strong id="snapshotRatio">1.207<span>/1.210</span></strong><small id="snapshotSub">Objetivo interno: 1.210 · +315 oficiales (1.522 total)</small></div><button class="secondary-button" data-view-target="syllabus">Ver avance</button>
           </section>
 
           <section class="two-columns">
@@ -134,10 +136,10 @@
               <div id="goalsList"></div>
             </article>
             <article class="panel readiness-panel">
-              <div class="panel-heading"><div><p class="eyebrow">PREPARACIÓN</p><h2>Por bloques</h2></div><span class="legend"><i></i> consolidado</span></div>
-              <div class="readiness-row"><span>Bloque I · Instituciones y Organización</span><div class="bar"><i id="barBlock1" style="width: 100%"></i></div><strong id="valBlock1">100%</strong></div>
-              <div class="readiness-row"><span>Bloque II · Procedimiento y Empleo Público</span><div class="bar"><i id="barBlock2" style="width: 100%"></i></div><strong id="valBlock2">100%</strong></div>
-              <p class="readiness-note">La preparación se calcula por respuestas justificadas y repasos, no por una sola sesión.</p>
+              <div class="panel-heading"><div><p class="eyebrow">BANCO DE PREGUNTAS</p><h2>Objetivo de volumen por bloques</h2></div><span class="legend"><i></i> cantidad clasificada</span></div>
+              <div class="readiness-row"><span>Bloque I · Instituciones y Organización</span><div class="bar"><i id="barBlock1" style="width: 100%"></i></div><strong id="valBlock1">302/300 · 100%</strong></div>
+              <div class="readiness-row"><span>Bloque II · Procedimiento y Empleo Público</span><div class="bar"><i id="barBlock2" style="width: 99%"></i></div><strong id="valBlock2">905/910 · 99%</strong></div>
+              <p class="readiness-note">Son objetivos internos de cantidad. No miden por sí solos tu preparación ni acreditan validación jurídica.</p>
             </article>
           </section>
 
@@ -277,18 +279,18 @@
             <div>
               <p class="eyebrow">CARTA DE PRESENTACIÓN Y METODOLOGÍA</p>
               <h1>Aprende con Rigor, Oposita con Calma</h1>
-              <p class="subtitle">La primera plataforma de oposiciones a la Xunta de Galicia con Trazabilidad Normativa 100% oficial y justificación opción por opción.</p>
+              <p class="subtitle">Plataforma de preparación para la Xunta de Galicia con referencias a fuentes oficiales y justificación opción por opción.</p>
             </div>
           </header>
 
           <div class="methodology-hero">
             <div class="methodology-hero-copy">
-              <span class="pill gold">EXCELENCIA PEDAGÓGICA Y TÉCNICA</span>
+              <span class="pill gold">METODOLOGÍA Y TRANSPARENCIA</span>
               <h2>¿Por qué esta plataforma marca la diferencia?</h2>
               <p>Desarrollada para ofrecer la preparación más rigurosa y transparente del Cuerpo de Gestión A2 de la Xunta de Galicia, combinando un motor de aprendizaje interactivo de alta precisión con evidencia legal directa.</p>
               <div class="methodology-stats-badges">
-                <div class="m-badge"><strong>1.522</strong><span>Preguntas Verificadas</span></div>
-                <div class="m-badge"><strong>100%</strong><span>Trazabilidad BOE/DOG</span></div>
+                <div class="m-badge"><strong>1.522</strong><span>Preguntas en revisión continua</span></div>
+                <div class="m-badge"><strong>100%</strong><span>Con referencia normativa</span></div>
                 <div class="m-badge"><strong>3</strong><span>Exámenes Reales Xunta</span></div>
               </div>
             </div>
@@ -298,12 +300,12 @@
             <article class="panel methodology-card">
               <div class="m-card-icon">🏛️</div>
               <h3>Trazabilidad Normativa Directa</h3>
-              <p>Ninguna pregunta es imprecisa o basada en opiniones. Cada respuesta cita expresamente la ley, el artículo y el apartado del BOE o DOG oficial aplicable con enlace directo al texto legal consolidado.</p>
+              <p>Cada pregunta incluye una referencia normativa y un enlace a la fuente oficial disponible. El banco permanece en revisión continua y admite reportes de posibles erratas.</p>
             </article>
             <article class="panel methodology-card">
               <div class="m-card-icon">🔍</div>
               <h3>Justificación Técnico-Jurídica Cuádruple (`whys`)</h3>
-              <p>Entenderás no solo cuál es la opción correcta, sino el motivo legal exacto por el que se descartan de forma incontestable cada una de las otras tres alternativas.</p>
+              <p>Entenderás no solo cuál es la opción marcada como correcta, sino la justificación aportada para descartar cada una de las otras alternativas.</p>
             </article>
             <article class="panel methodology-card">
               <div class="m-card-icon">⏱️</div>
@@ -357,14 +359,14 @@
     <dialog id="resetPasswordModal"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">RECUPERACIÓN DE CUENTA</p><h2>Cambiar Contraseña</h2><p>Introduce tu nueva contraseña para tu cuenta de opositor.</p><form id="resetPasswordForm"><label>Nueva Contraseña<input type="password" id="newPasswordInput" placeholder="Mínimo 6 caracteres" minlength="6" required /></label><button type="submit" class="primary-button wide" style="margin-top:12px;">Guardar Nueva Contraseña</button></form><div id="resetPasswordStatus" class="tiny" style="margin-top:15px;color:var(--muted);text-align:center;"></div></dialog>
     <dialog id="privacyModal" style="max-width:580px;padding:24px;border-radius:16px;border:1px solid var(--border,#e0e5e2);">
       <button class="dialog-close" aria-label="Cerrar">×</button>
-      <p class="eyebrow" style="color:var(--accent,#153d35);font-size:12px;font-weight:700;">POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS (RGPD / LOPDGDD)</p>
+      <p class="eyebrow" style="color:var(--accent,#153d35);font-size:12px;font-weight:700;">INFORMACIÓN BÁSICA DE PRIVACIDAD · BETA</p>
       <h2 style="margin-top:4px;font-size:20px;color:var(--text,#1e2923);">Tratamiento transparente de tus datos</h2>
       <div style="font-size:13px;line-height:1.6;color:var(--text-secondary,#4a5550);margin-top:12px;display:flex;flex-direction:column;gap:10px;">
-        <p><strong>1. Responsable y Contacto:</strong> Proyecto comunitario Open Source para el Subgrupo A2 de la Xunta de Galicia. Contacto de privacidad: <code>oposiciones.a2.xunta@gmail.com</code> o mediante incidencias en el repositorio público de GitHub (<code>creace13/oposiciones-a2-xunta</code>).</p>
-        <p><strong>2. Datos Remotos Tratados y Proveedor:</strong> En caso de inicio de sesión o registro remoto voluntario, procesamos tu correo electrónico e identificador mediante <strong>Supabase Inc.</strong> (servidores alojados en la Unión Europea). Asimismo, al enviar sugerencias o reportar erratas desde una pregunta, se transfieren a la tabla remota <code>user_feedback</code> de Supabase los datos: nombre asignado (<code>user_name</code>), tipo de sugerencia (<code>feedback_type</code>), ID de pregunta y texto detallado del reporte (<code>content</code>).</p>
+        <p><strong>1. Responsable operativo y contacto:</strong> Titular del proyecto comunitario y del repositorio público <code>creace13/oposiciones-a2-xunta</code>. Canal declarado para solicitudes de privacidad: <code>oposiciones.a2.xunta@gmail.com</code>. No publiques datos personales en una incidencia pública de GitHub.</p>
+        <p><strong>2. Datos remotos tratados y proveedor:</strong> En caso de inicio de sesión o registro remoto voluntario, se procesan el correo electrónico y el identificador de cuenta mediante <strong>Supabase</strong>. La ubicación concreta del tratamiento depende de la región configurada en ese servicio y no se afirma aquí. Al enviar sugerencias o reportar erratas se transfieren a <code>user_feedback</code> el nombre asignado (<code>user_name</code>), el tipo (<code>feedback_type</code>) y el texto del reporte (<code>content</code>), que puede incluir el ID de pregunta.</p>
         <p><strong>3. Progreso de Estudio 100% Local:</strong> Tus respuestas de prácticas, exámenes, simulacros, historial de fallos y metas personales se guardan de forma estricta en el almacenamiento local de tu propio navegador (<code>localStorage</code>). No se envían ni almacenan en servidores remotos.</p>
-        <p><strong>4. Legitimación y Conservación:</strong> El tratamiento se basa en la ejecución del servicio educativo solicitado por el opositor. Las cuentas de acceso permanecen activas hasta que el usuario solicita su supresión. El feedback de erratas se conserva el tiempo necesario para auditar la norma citada.</p>
-        <p><strong>5. Derechos de Acceso y Eliminación:</strong> Tienes derecho a acceder, rectificar o solicitar la eliminación de tu cuenta remota o tus reportes de erratas escribiendo a <code>oposiciones.a2.xunta@gmail.com</code>. Para borrar tus datos locales de progreso, basta con usar la opción "Cerrar Sesión / Borrar Perfil" o limpiar el <code>localStorage</code> desde los ajustes de tu navegador.</p>
+        <p><strong>4. Finalidad y conservación:</strong> La cuenta remota se utiliza para el acceso voluntario. Los reportes se usan para revisar posibles erratas. Las cuentas permanecen activas hasta su supresión y los reportes solo deben conservarse mientras sean necesarios para revisar y documentar la incidencia.</p>
+        <p><strong>5. Acceso y eliminación:</strong> Para solicitar acceso, rectificación o supresión de la cuenta remota o de reportes, utiliza el canal de privacidad indicado arriba. La acción <strong>«Borrar progreso»</strong> elimina del navegador las respuestas, errores, sesiones y metas, pero no elimina la cuenta remota ni los reportes enviados. «Cerrar sesión» tampoco borra el progreso.</p>
       </div>
       <button type="button" class="primary-button dialog-action" style="margin-top:16px;width:100%;">Entendido y cerrar</button>
     </dialog>

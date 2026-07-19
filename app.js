@@ -28100,6 +28100,9 @@ function setLastView(name) {
 function persist() {
   try { localStorage.setItem('opoA2State', JSON.stringify(state)); } catch (_) {}
 }
+function formatCount(value) {
+  return String(Math.trunc(Number(value))).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}
 function showView(name, options = {}) {
   const { updateHash = true, scroll = true } = options;
   if (!validViews.includes(name)) name = 'dashboard';
@@ -28130,21 +28133,20 @@ function updateDashboard() {
     const block2Count = questions.filter(q => { const t = coverageTopic(q); return !q.id.startsWith('h202') && t && t.startsWith('g2-'); }).length;
     const b1Pct = ((block1Count / 300) * 100).toFixed(1);
     const b2Pct = ((block2Count / 910) * 100).toFixed(1);
-    focusText.textContent = `${questions.length} preguntas en el banco (1.207 de temario propio + 315 de exámenes históricos). Bloque I al ${b1Pct}% (${block1Count}/300) y Bloque II al ${b2Pct}% (${block2Count}/910).`;
+    focusText.textContent = `${formatCount(questions.length)} preguntas en el banco (${formatCount(block1Count + block2Count)} propias + 315 de exámenes históricos). Objetivo interno de volumen: Bloque I ${formatCount(block1Count)}/300 (${b1Pct}%) y Bloque II ${formatCount(block2Count)}/910 (${b2Pct}%).`;
   }
   const snapRatio = document.getElementById('snapshotRatio');
   if (snapRatio) {
     const syllabusCount = questions.filter(q => !q.id.startsWith('h202') && Boolean(coverageTopic(q))).length;
-    const pct = ((syllabusCount / 1210) * 100).toFixed(1);
-    snapRatio.innerHTML = `${syllabusCount}<span>/1210</span>`;
+    snapRatio.innerHTML = `${formatCount(syllabusCount)}<span>/${formatCount(1210)}</span>`;
     const snapSub = document.getElementById('snapshotSub');
-    if (snapSub) snapSub.textContent = `${syllabusCount} propias + 315 oficiales (${questions.length} total en banco)`;
+    if (snapSub) snapSub.textContent = `Objetivo interno: ${formatCount(1210)} · +315 oficiales (${formatCount(questions.length)} total)`;
   }
   const b1Val = document.getElementById('valBlock1');
   if (b1Val) {
     const b1Count = questions.filter(q => { const t = coverageTopic(q); return !q.id.startsWith('h202') && t && t.startsWith('g1-'); }).length;
     const b1Pct = Math.min(100, Math.round((b1Count / 300) * 100));
-    b1Val.textContent = `${b1Pct}%`;
+    b1Val.textContent = `${formatCount(b1Count)}/300 · ${b1Pct}%`;
     const b1Bar = document.getElementById('barBlock1');
     if (b1Bar) b1Bar.style.width = `${b1Pct}%`;
   }
@@ -28152,7 +28154,7 @@ function updateDashboard() {
   if (b2Val) {
     const b2Count = questions.filter(q => { const t = coverageTopic(q); return !q.id.startsWith('h202') && t && t.startsWith('g2-'); }).length;
     const b2Pct = Math.min(100, Math.round((b2Count / 910) * 100));
-    b2Val.textContent = `${b2Pct}%`;
+    b2Val.textContent = `${formatCount(b2Count)}/910 · ${b2Pct}%`;
     const b2Bar = document.getElementById('barBlock2');
     if (b2Bar) b2Bar.style.width = `${b2Pct}%`;
   }
@@ -28176,14 +28178,14 @@ function renderCoverage() {
   const historicalCount = questions.filter(q => q.id.startsWith('h202')).length;
   const dashboard = document.getElementById('coverageSnapshot');
   if (dashboard) {
-    dashboard.innerHTML = `<div><span class="stat-label">Banco troncal</span><strong>${current}<span>/${target}</span></strong><small>${current} propias + ${historicalCount} oficiales (${questions.length} total)</small></div><button class="secondary-button" data-view-target="syllabus">Ver avance</button>`;
+    dashboard.innerHTML = `<div><span class="stat-label">Banco propio clasificado</span><strong id="snapshotRatio">${formatCount(current)}<span>/${formatCount(target)}</span></strong><small id="snapshotSub">Objetivo interno: ${formatCount(target)} · +${formatCount(historicalCount)} oficiales (${formatCount(questions.length)} total)</small></div><button class="secondary-button" data-view-target="syllabus">Ver avance</button>`;
     dashboard.querySelector('[data-view-target]').addEventListener('click', () => showView('syllabus'));
   }
   const summary = document.getElementById('coverageSummary');
   if (summary) {
     const emptyTopics = rows.filter(row => row.current === 0);
     const exactPct = ((current / target) * 100).toFixed(1);
-    summary.innerHTML = `<article class="coverage-hero"><div><p class="eyebrow">PROGRESO REAL</p><strong>${exactPct}%</strong><small>${current} de ${target} preguntas temario propias + ${historicalCount} ex. oficiales</small></div><div class="coverage-hero-meter"><span style="width:${exactPct}%"></span></div></article><article class="coverage-kpi"><span>Banco total</span><strong>${questions.length}</strong><small>preguntas en catálogo</small></article><article class="coverage-kpi warning"><span>Temas sin cubrir</span><strong>${emptyTopics.length}</strong><small>${emptyTopics.length === 0 ? 'todos los temas iniciados' : 'temas pendientes'}</small></article><article class="coverage-kpi next"><span>Foco activo</span><strong>Simulacros y repasos</strong><small>23/23 temas con banco propio</small></article>`;
+    summary.innerHTML = `<article class="coverage-hero"><div><p class="eyebrow">OBJETIVO INTERNO DE VOLUMEN</p><strong>${exactPct}%</strong><small>${formatCount(current)} de ${formatCount(target)} preguntas propias clasificadas + ${formatCount(historicalCount)} oficiales</small></div><div class="coverage-hero-meter"><span style="width:${Math.min(100, Number(exactPct))}%"></span></div></article><article class="coverage-kpi"><span>Banco total</span><strong>${formatCount(questions.length)}</strong><small>preguntas en catálogo</small></article><article class="coverage-kpi warning"><span>Temas sin iniciar</span><strong>${emptyTopics.length}</strong><small>${emptyTopics.length === 0 ? 'todos los temas tienen preguntas' : 'temas pendientes'}</small></article><article class="coverage-kpi next"><span>Interpretación</span><strong>Cantidad, no calidad jurídica</strong><small>la revisión normativa se documenta por separado</small></article>`;
   }
   const list = document.getElementById('coverageList');
   if (list) {
@@ -28542,6 +28544,29 @@ if (sidebarLogoutBtn) {
     }
     localStorage.removeItem('opoA2UserName');
     setAuthState(false);
+  });
+}
+const deleteProgressBtn = document.getElementById('deleteProgressBtn');
+if (deleteProgressBtn) {
+  deleteProgressBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const confirmed = window.confirm('¿Borrar de este navegador todas las respuestas, errores, sesiones y metas? La cuenta remota no se eliminará.');
+    if (!confirmed) return;
+    localStorage.removeItem('opoA2State');
+    localStorage.removeItem('opoA2LastView');
+    state.goals = defaults.map(goal => ({ ...goal }));
+    state.answered = [];
+    state.errors = [];
+    state.sessions = 0;
+    state.current = [];
+    activeQuiz = [];
+    questionIndex = 0;
+    examAnswers = [];
+    updateDashboard();
+    renderGoals();
+    renderErrors();
+    renderCoverage();
+    showView('dashboard');
   });
 }
 document.querySelectorAll('.dialog-close,.dialog-action').forEach(button => button.addEventListener('click', () => {
