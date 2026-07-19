@@ -10,6 +10,7 @@ Leer, en este orden:
 2. `.ia/PLAN-MAESTRO.md`: fases, prioridades y condiciones de cierre.
 3. `.ia/AUDITORIA-CONTENIDO.md`: registro jurídico y temas auditados.
 4. `.ia/BITACORA-IA.md`: últimas decisiones y traspasos entre modelos.
+5. Directiva `.ia/auditorias/`: revisar las últimas auditorías e informes de respuesta cruzados entre modelos de IA (Codex, Antigravity, etc.).
 
 Si el chat ha sido compactado, resumido o heredado de otro modelo, volver a leer estos cuatro archivos. No reconstruir el estado desde la memoria del chat.
 

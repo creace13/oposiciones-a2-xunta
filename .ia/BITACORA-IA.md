@@ -2,6 +2,22 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 19 de julio de 2026 - Cierre de Auditoría DAFO Codex y Protocolo Inter-IA
+
+Modelo: Antigravity (Google DeepMind)
+
+Trabajo realizado:
+- Se implementaron los 3 hitos derivados de la auditoría DAFO de Codex (OpenAI):
+  1. Hito 1: Banner UI de Release Candidate / Beta Pública Abierta, aleatorización real Fisher-Yates, exclusión de rutas internas (`.ia/`, `scripts/`, `scratch/`, `docs/`, `*.md`) en `wrangler.json`, y enmienda de los 5 errores de citas normativas P0 (`estatuto-galicia-16`, `bloque1-tc-composicion`, `galicia-art7`, `trebep-art48`, `lpac-art21`).
+  2. Hito 2: Temporizador regresivo en simulacro (`⏱ M:SS`), opción "Dejar en blanco" (0 penalización) y desglose neta.
+  3. Hito 3: Veracidad en etiquetas de perfil ("Sesión activa · Guarda en navegador").
+- Se institucionalizó el protocolo de informes Inter-IA en `.ia/auditorias/` y se actualizaron `AGENTS.md` y `.ia/PROTOCOLO.md` para obligar a cualquier modelo (Codex, Antigravity, Claude, etc.) a leer y documentar informes con la nomenclatura `AUDITORIA-...` y `RESPUESTA-...`.
+- Se ejecutaron `node --check app.js` y `node scripts/validar-banco.js` con RESULTADO: OK (1.522 preguntas verificadas, 0 incompletas, 0 duplicados).
+
+Siguiente paso: Mantener la plataforma en producción en Cloudflare Workers y recibir contribuciones de la comunidad.
+
+
+
 ## 18 de julio de 2026 - Ampliación del tema Derechos de las personas con discapacidad (RDL 1/2013)
 
 Modelo: Subagente de preguntas test.
