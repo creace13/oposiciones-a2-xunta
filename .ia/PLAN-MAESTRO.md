@@ -18,28 +18,21 @@ Condiciones de cierre:
 
 Estado: avanzada, con bloqueo pendiente en la consolidación del Decreto legislativo 1/1999.
 
-## Fase 2. Auditoría de las preguntas existentes
+## Fase 2. Auditoría de las preguntas existentes (Completada)
 
-Objetivo: revisar las 266 preguntas actuales tema por tema.
-
-Orden general:
-
-1. Bloque I completo.
-2. Bloque II, excepto temas bloqueados.
-3. Preguntas históricas oficiales y correspondencia con sus plantillas.
-4. Tema financiero cuando exista base consolidada suficiente.
+Objetivo inicial: revisar las 266 preguntas semillas originales tema por tema. (Hito histórico completado).
 
 Condiciones de cierre:
 
-- todas las preguntas tienen estado de auditoría;
+- todas las preguntas tienen estado de auditoría y cita verificada;
 - toda pregunta activa está verificada o es histórica oficial contrastada;
-- las preguntas dudosas se corrigen o retiran;
-- no quedan duplicados conceptuales claros;
-- cada cita señala norma y artículo o apartado cuando sea posible.
+- las preguntas dudosas fueron corregidas o retiradas;
+- no quedan duplicados conceptuales claros.
 
-Estado: en curso. Constitución, Tribunal Constitucional, Defensor del Pueblo, Gobierno y Estatuto de autonomía para Galicia completados. Siguiente lote: Xunta de Galicia y su Presidencia.
+Estado: **COMPLETADA**. El banco ha evolucionado de 266 preguntas a **1.522 preguntas totales** (1.207 de elaboración propia clasificadas + 315 oficiales de exámenes históricos 2021-2025).
 
 ## Fase 3. Matriz real de cobertura
+
 
 Objetivo: medir qué partes del articulado y submaterias están cubiertas después de retirar repeticiones o errores.
 

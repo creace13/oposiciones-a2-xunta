@@ -2,7 +2,44 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 19 de julio de 2026 - Checkpoint 7f0b4aa: Refactorización de filtros temáticos y autenticación de 3 niveles
+
+Modelo: Antigravity (Google DeepMind)
+
+Trabajo realizado:
+- **Refactorización de Filtros**: Extraída la función pura `filterQuestionsByCategory()` a nivel global en `app.js` y vinculada en `buildSet()`. Actualizada la suite `scripts/test-filters.js` para cargar la función real desde `app.js` mediante `vm` y validar filtros con aserciones sintéticas (Galicia 149, Empleo 138, Procedimiento 227).
+- **Manejo de Autenticación de 3 Niveles**:
+  - `setAuthState('authenticated')` exige obligatoriamente `data.session?.user`.
+  - Formularios de Inicio de Sesión y Crear Cuenta separados en UI sin auto-registro erróneo.
+  - Asignación explícita de `setAuthState('guest')` para perfil local/invitado y `unauthenticated` por defecto.
+  - Implementada suite automatizada `scripts/test-auth-states.js` validando los 3 estados con aserciones.
+- **Validación e Integración**: `validar-banco.js` OK (1.522 preguntas), `sync-public.js` sincronizó `./public` con verificación por hash SHA-256.
+
+Checkpoint: `7f0b4aa`
+
+## 19 de julio de 2026 - Checkpoint 96b9107: Porcentajes dinámicos y aislamiento de producción
+
+Modelo: Antigravity (Google DeepMind)
+
+Trabajo realizado:
+- **Porcentajes de Cobertura Dinámicos**: Reemplazados los textos estáticos del 100% por cálculo exacto en tiempo de ejecución (`coverageTopic(q)`).
+- **Aislamiento de Producción**: Despliegue configurado en `wrangler.json` apuntando a `./public`, excluyendo código interno y documentación.
+- **Sincronización automatizada**: Script `scripts/sync-public.js` creado y verificado con paridad hash.
+
+Checkpoint: `96b9107`
+
+## 19 de julio de 2026 - Checkpoint ca11e54: Supabase Auth Recovery e inspección de hash
+
+Modelo: Antigravity (Google DeepMind)
+
+Trabajo realizado:
+- Inspector de hash `#access_token` y `type=recovery` en `initSupabase()` abriendo modal de cambio de contraseña.
+- Mensaje en español adaptado para límites de velocidad (anti-spam) de Supabase.
+
+Checkpoint: `ca11e54`
+
 ## 19 de julio de 2026 - Cierre de Auditoría DAFO Codex y Protocolo Inter-IA
+
 
 Modelo: Antigravity (Google DeepMind)
 

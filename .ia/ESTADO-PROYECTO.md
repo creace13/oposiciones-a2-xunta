@@ -10,8 +10,8 @@ Plataforma Web independiente de preparación inteligente para el Cuerpo de Gesti
 
 ## Decisión actual
 
-**VERSIÓN 1.0 (BETA PÚBLICA ABIERTA / RELEASE CANDIDATE)**.
-Plataforma 100% operativa y transparente abierta al público bajo licencia **CC BY-NC-SA 4.0 (No Comercial)**. Desplegada en **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`) vinculada a GitHub con backend en **Supabase** (0 €/mes).
+**VERSIÓN 1.0 (BETA PÚBLICA APTA CONDICIONADA / AUDITORÍA CONTINUA EN CURSO)**.
+Plataforma 100% operativa y transparente abierta al público bajo licencia **CC BY-NC-SA 4.0 (No Comercial)**. Desplegada en **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`) vinculada a GitHub con backend en **Supabase** (0 €/mes). Advertencia visible de revisión continua en interfaz.
 
 ### Hitos completados (Auditoría Codex / Antigravity):
 - ✅ **Aislamiento físico y sincronización `./public`**: Despliegue en Cloudflare Workers desde `./public`, aislado de archivos internos (`.ia/`, `scripts/`, `scratch/`). Sincronización automatizada con script `scripts/sync-public.js` y paridad comprobada por hash SHA-256.
