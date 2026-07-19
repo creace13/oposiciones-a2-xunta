@@ -2,41 +2,63 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
-## 19 de julio de 2026 - Checkpoint 7f0b4aa: Refactorización de filtros temáticos y autenticación de 3 niveles
+## 19 de julio de 2026 - Checkpoint bcbacaa: Registro documental de Respuesta 12
+
+Modelo: Antigravity (Google DeepMind)
+
+Trabajo realizado:
+- Registro formal del informe `12-RESPUESTA-AUDITORIA11-GEMINI-2026-07-19.md` en `.ia/auditorias/INDEX.md` y `.ia/auditorias/`.
+
+Checkpoint: `bcbacaa`
+
+## 19 de julio de 2026 - Checkpoint 0a59bfd: Privacidad, 5 aserciones auth y suite E2E
+
+Modelo: Antigravity (Google DeepMind)
+
+Trabajo realizado:
+- **Privacidad y RGPD**: Modal `#privacyModal` y enlace en portada en `index.html`.
+- **Suite de 5 Aserciones Auth**: Ampliada `scripts/test-auth-states.js` ejercitando manejadores de alta con confirmación por email, login fallido sin auto-signup y botón invitado.
+- **Suite E2E de Navegador**: Creada `scripts/test-browser-e2e.js` ejecutando la lógica de `app.js` sobre el DOM de `index.html` y verificando 27 enlaces documentales.
+- **Ajustes de UI**: Renombrado botón en `#authDialog` a "Entrar a mi Cuenta" y actualizado cache-buster a `v17-beta-20260719`.
+
+Checkpoint: `0a59bfd`
+
+## 19 de julio de 2026 - Checkpoint 7f0b4aa: Extraída filterQuestionsByCategory y 3 estados auth
 
 Modelo: Antigravity (Google DeepMind)
 
 Trabajo realizado:
 - **Refactorización de Filtros**: Extraída la función pura `filterQuestionsByCategory()` a nivel global en `app.js` y vinculada en `buildSet()`. Actualizada la suite `scripts/test-filters.js` para cargar la función real desde `app.js` mediante `vm` y validar filtros con aserciones sintéticas (Galicia 149, Empleo 138, Procedimiento 227).
-- **Manejo de Autenticación de 3 Niveles**:
-  - `setAuthState('authenticated')` exige obligatoriamente `data.session?.user`.
-  - Formularios de Inicio de Sesión y Crear Cuenta separados en UI sin auto-registro erróneo.
-  - Asignación explícita de `setAuthState('guest')` para perfil local/invitado y `unauthenticated` por defecto.
-  - Implementada suite automatizada `scripts/test-auth-states.js` validando los 3 estados con aserciones.
-- **Validación e Integración**: `validar-banco.js` OK (1.522 preguntas), `sync-public.js` sincronizó `./public` con verificación por hash SHA-256.
+- **Manejo de Autenticación de 3 Niveles**: `setAuthState('authenticated')` exige obligatoriamente `data.session?.user`. Formularios de Inicio de Sesión y Crear Cuenta separados en UI.
 
 Checkpoint: `7f0b4aa`
 
-## 19 de julio de 2026 - Checkpoint 96b9107: Porcentajes dinámicos y aislamiento de producción
+## 19 de julio de 2026 - Checkpoint 96b9107: Purificación de Galicia y Empleo y purga public/index.js
 
 Modelo: Antigravity (Google DeepMind)
 
 Trabajo realizado:
-- **Porcentajes de Cobertura Dinámicos**: Reemplazados los textos estáticos del 100% por cálculo exacto en tiempo de ejecución (`coverageTopic(q)`).
-- **Aislamiento de Producción**: Despliegue configurado en `wrangler.json` apuntando a `./public`, excluyendo código interno y documentación.
-- **Sincronización automatizada**: Script `scripts/sync-public.js` creado y verificado con paridad hash.
+- Purificación de contaje en filtros galicia (149) y empleo (138), suite de aserciones estricta y eliminación de `public/index.js`.
 
 Checkpoint: `96b9107`
 
-## 19 de julio de 2026 - Checkpoint ca11e54: Supabase Auth Recovery e inspección de hash
+## 19 de julio de 2026 - Checkpoint ca11e54: Sincronización de bundle ./public por SHA-256 y métricas dinámicas
 
 Modelo: Antigravity (Google DeepMind)
 
 Trabajo realizado:
-- Inspector de hash `#access_token` y `type=recovery` en `initSupabase()` abriendo modal de cambio de contraseña.
-- Mensaje en español adaptado para límites de velocidad (anti-spam) de Supabase.
+- Sincronización automatizada de los 9 activos principales y árbol de documentos en `./public` comprobados por hash SHA-256. Reemplazados textos estáticos por cálculo exacto dinámico de cobertura.
 
 Checkpoint: `ca11e54`
+
+## 19 de julio de 2026 - Checkpoint 0093fba: Recuperación de Contraseña Supabase e inspector de hash
+
+Modelo: Antigravity (Google DeepMind)
+
+Trabajo realizado:
+- Inspector de hash `#access_token` y `type=recovery` en `initSupabase()` abriendo modal de cambio de contraseña `resetPasswordModal`. Unificación del contaje total en 1.207 propias + 315 oficiales (1.522 total).
+
+Checkpoint: `0093fba`
 
 ## 19 de julio de 2026 - Cierre de Auditoría DAFO Codex y Protocolo Inter-IA
 

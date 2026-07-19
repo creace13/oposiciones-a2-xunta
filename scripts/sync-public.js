@@ -17,6 +17,8 @@ const filesToSync = [
   'og-image.jpg'
 ];
 
+const allowedPublicItems = new Set([...filesToSync, 'documentos']);
+
 function getHash(filePath) {
   if (!fs.existsSync(filePath)) return null;
   const fileBuffer = fs.readFileSync(filePath);
@@ -32,7 +34,7 @@ function syncDirectory(srcDir, destDir) {
   const srcEntries = fs.readdirSync(srcDir, { withFileTypes: true });
   const destEntries = fs.existsSync(destDir) ? fs.readdirSync(destDir, { withFileTypes: true }) : [];
 
-  // Remove files in dest that no longer exist in src
+  // Remove files/dirs in dest that no longer exist in src
   for (const destEntry of destEntries) {
     const srcPath = path.join(srcDir, destEntry.name);
     const destPath = path.join(destDir, destEntry.name);
@@ -63,12 +65,26 @@ function syncDirectory(srcDir, destDir) {
   }
 }
 
-console.log('--- SINCRONIZANDO RAÍZ -> PUBLIC ---');
+console.log('--- SINCRONIZANDO RAÍZ -> PUBLIC CON LISTA BLANCA ESTRICTA ---');
 
-// Remove public/index.js if present to keep public minimal
-const publicIndexJs = path.join(publicDir, 'index.js');
-if (fs.existsSync(publicIndexJs)) {
-  fs.unlinkSync(publicIndexJs);
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
+
+// Strict root-level whitelist enforcement for public/
+const currentPublicEntries = fs.readdirSync(publicDir, { withFileTypes: true });
+let purgedCount = 0;
+
+for (const entry of currentPublicEntries) {
+  if (!allowedPublicItems.has(entry.name)) {
+    const orphanPath = path.join(publicDir, entry.name);
+    if (entry.isDirectory()) {
+      fs.rmSync(orphanPath, { recursive: true, force: true });
+    } else {
+      fs.unlinkSync(orphanPath);
+    }
+    purgedCount++;
+  }
 }
 
 let syncCount = 0;
@@ -92,4 +108,4 @@ const docSrc = path.join(rootDir, 'documentos');
 const docDest = path.join(publicDir, 'documentos');
 syncDirectory(docSrc, docDest);
 
-console.log(`✅ SINCRONIZACIÓN EXITOSA: ${syncCount} activos principales + arbol documentos/ sincronizados y verificados por SHA-256.`);
+console.log(`✅ SINCRONIZACIÓN EXITOSA: ${syncCount} activos principales + árbol documentos/ sincronizados y verificados por SHA-256. (Huérfanos purgados a nivel raíz: ${purgedCount})`);

@@ -1,0 +1,22 @@
+{
+  "name": "oposiciones-a2-xunta",
+  "version": "1.0.0",
+  "description": "Plataforma de preparación inteligente para el Subgrupo A2 de la Xunta de Galicia",
+  "main": "app.js",
+  "scripts": {
+    "test": "node scripts/validar-banco.js && node scripts/test-filters.js && node scripts/test-auth-states.js && node scripts/test-browser-e2e.js",
+    "test:e2e": "node scripts/test-browser-e2e.js",
+    "sync": "node scripts/sync-public.js"
+  },
+  "keywords": [
+    "oposiciones",
+    "xunta",
+    "galicia",
+    "a2"
+  ],
+  "author": "creace13",
+  "license": "CC-BY-NC-SA-4.0",
+  "devDependencies": {
+    "jsdom": "^26.0.0"
+  }
+}
