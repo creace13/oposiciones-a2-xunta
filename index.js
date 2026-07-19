@@ -1,5 +1,19 @@
 export default {
   async fetch(request, env) {
-    return await env.ASSETS.fetch(request);
+    try {
+      const res = await env.ASSETS.fetch(request);
+      if (res.status === 404) {
+        return new Response('404 Not Found', {
+          status: 404,
+          headers: { 'content-type': 'text/plain; charset=utf-8' }
+        });
+      }
+      return res;
+    } catch (_) {
+      return new Response('404 Not Found', {
+        status: 404,
+        headers: { 'content-type': 'text/plain; charset=utf-8' }
+      });
+    }
   }
 };

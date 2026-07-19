@@ -13,15 +13,13 @@ Plataforma Web independiente de preparación inteligente para el Cuerpo de Gesti
 **VERSIÓN 1.0 (BETA PÚBLICA ABIERTA / RELEASE CANDIDATE)**.
 Plataforma 100% operativa y transparente abierta al público bajo licencia **CC BY-NC-SA 4.0 (No Comercial)**. Desplegada en **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`) vinculada a GitHub con backend en **Supabase** (0 €/mes).
 
-### Hitos completados (Auditoría Codex):
-- ✅ **Aisle de Producción (`/public`)**: Despliegue en Cloudflare Workers desde un directorio estático aislado (`./public`), garantizando respuesta 404 en archivos internos (`.ia/`, `scripts/`, `docs/`, `scratch/`, `*.md`).
-- ✅ **Fix de Regresión en Práctica**: `nextQuestion()` finaliza la práctica con pantalla de progreso y reserva la pantalla de simulacro exclusivamente para `quizMode === 'exam'`.
-- ✅ **Autenticación Estricta**: Los formularios de login y registro comprueban la respuesta de Supabase y no activan la sesión visual si hay errores de credenciales.
-- ✅ **Simulacro Oficial Profesional**: Temporizador regresivo en vivo (`⏱ M:SS`), opción de *"Dejar en blanco"* (0 penalización) y desglose neta.
-- ✅ **Banner de transparencia UI y Veracidad**: Identificación clara como *Versión 1.0 (Beta Pública Abierta)* y distintivo *"Progreso guardado localmente"*.
-- ✅ **Aleatorización real (`buildSet()`)**: Implementado algoritmo Fisher-Yates verdadero.
-- ✅ **Corrección jurídica P0**: Enmendados los 5 errores de citas normativas reportados (`gobierno-comisiones-delegadas-creacion-12`, `estatuto-xunta-organo-colegiado-17`, `troncal-discapacidad-114`, `consultivo-galicia-consejeros-duracion-mandato-10`, `consultivo-galicia-duracion-mandato-seis-anos-art8`).
-- ✅ **Protocolo Inter-IA y Puntos de Guardado**: Documentación en `.ia/auditorias/` y commits/checkpoints en Git.
+### Hitos completados (Auditoría Codex / Antigravity):
+- ✅ **Supabase URL & Redirect Configuration**: `Site URL` configurada a `https://oposiciones-xunta.opos-galicia.workers.dev` con `Redirect URLs` `https://oposiciones-xunta.opos-galicia.workers.dev/*`. Manejo de tasa de límite anti-spam traducido al español.
+- ✅ **Unificación del recuento de preguntas**: Cobertura corregida dinámicamente a 1.207 de temario propio + 315 oficiales (total 1.522). `validar-banco.js` verificado OK sin errores ni duplicados.
+- ✅ **Recuperación de Contraseña Bulletproof**: Captura inmediata de `#access_token` y `type=recovery` abriendo el modal de nueva contraseña.
+- ✅ **Despliegue directo en Workers**: `wrangler.json` sirviendo desde raíz con `index.js` delegation para `og-image.jpg` y assets estáticos.
+- ✅ **SEO y Redes Sociales**: Open Graph, Twitter Cards, Schema.org y verificado en Google Search Console.
+- ✅ **Licencia Open Source No Comercial**: `CC BY-NC-SA 4.0` configurada en `LICENSE`, `README.md` y `CONTRIBUTING.md`.
 
 ## Cifras canónicas
 
@@ -42,7 +40,7 @@ Plataforma 100% operativa y transparente abierta al público bajo licencia **CC 
 
 ## Archivos clave
 
-- Aplicación en producción: `./public/` (`index.html`, `styles.css`, `app.js`).
+- Aplicación en producción: `index.html`, `styles.css`, `app.js`, `index.js`, `wrangler.json`.
 - Script de validación: `scripts/validar-banco.js`.
 - Memoria del proyecto e IA: `.ia/ESTADO-PROYECTO.md`, `.ia/PROTOCOLO.md`, `AGENTS.md`.
 - Informes Inter-IA: `.ia/auditorias/`.
