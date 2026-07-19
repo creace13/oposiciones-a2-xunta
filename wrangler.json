@@ -2,7 +2,6 @@
   "name": "oposiciones-xunta",
   "compatibility_date": "2026-07-19",
   "assets": {
-    "directory": ".",
-    "binding": "ASSETS"
+    "directory": "./"
   }
 }
