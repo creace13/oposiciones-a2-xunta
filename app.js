@@ -28515,7 +28515,11 @@ if (authPageForgotPassBtn) {
         if (error) throw error;
         if (statusText) statusText.textContent = `Enlace enviado a ${email}. Revisa tu correo.`;
       } catch (err) {
-        if (statusText) statusText.textContent = `Error: ${err.message}`;
+        let msg = err.message;
+        if (msg.includes('rate limit')) {
+          msg = 'Has solicitado varios correos en muy poco tiempo. Por seguridad anti-spam, espera 2 o 3 minutos antes de volver a solicitarlo.';
+        }
+        if (statusText) statusText.textContent = msg;
       }
     } else {
       if (statusText) statusText.textContent = `Enlace enviado a ${email}. (Se activará al conectar Supabase).`;
@@ -28541,7 +28545,11 @@ if (forgotPassBtn) {
         if (error) throw error;
         if (statusText) statusText.textContent = `Enlace enviado a ${email}. Revisa tu bandeja de entrada.`;
       } catch (err) {
-        if (statusText) statusText.textContent = `Error al enviar correo: ${err.message}`;
+        let msg = err.message;
+        if (msg.includes('rate limit')) {
+          msg = 'Has solicitado varios correos en muy poco tiempo. Por seguridad anti-spam, espera 2 o 3 minutos antes de volver a solicitarlo.';
+        }
+        if (statusText) statusText.textContent = msg;
       }
     } else {
       if (statusText) statusText.textContent = `Enlace simulado para ${email}. (Se activará al conectar la base de datos).`;
