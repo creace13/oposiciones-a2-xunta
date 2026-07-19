@@ -1,3 +1,6 @@
+# Dependencias
+node_modules/
+
 # Archivos temporales y de desarrollo
 tmp/
 scratch/
@@ -11,3 +14,4 @@ docs/psw_ddbb.txt
 .idea/
 *.swp
 *.DS_Store
+
