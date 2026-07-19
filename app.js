@@ -28510,7 +28510,7 @@ if (authPageForgotPassBtn) {
     if (supabaseClient) {
       try {
         const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-          redirectTo: window.location.href,
+          redirectTo: 'https://oposiciones-xunta.opos-galicia.workers.dev',
         });
         if (error) throw error;
         if (statusText) statusText.textContent = `Enlace enviado a ${email}. Revisa tu correo.`;
@@ -28540,7 +28540,7 @@ if (forgotPassBtn) {
     if (supabaseClient) {
       try {
         const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-          redirectTo: window.location.href,
+          redirectTo: 'https://oposiciones-xunta.opos-galicia.workers.dev',
         });
         if (error) throw error;
         if (statusText) statusText.textContent = `Enlace enviado a ${email}. Revisa tu bandeja de entrada.`;
