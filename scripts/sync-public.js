@@ -9,7 +9,6 @@ const filesToSync = [
   'index.html',
   'styles.css',
   'app.js',
-  'index.js',
   'manifest.json',
   'robots.txt',
   'sitemap.xml',
@@ -26,22 +25,51 @@ function getHash(filePath) {
   return hashSum.digest('hex');
 }
 
-function copyRecursiveSync(src, dest) {
-  const exists = fs.existsSync(src);
-  const stats = exists && fs.statSync(src);
-  const isDirectory = exists && stats.isDirectory();
-  if (isDirectory) {
-    if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
-    fs.readdirSync(src).forEach((childItemName) => {
-      copyRecursiveSync(path.join(src, childItemName), path.join(dest, childItemName));
-    });
-  } else {
-    fs.mkdirSync(path.dirname(dest), { recursive: true });
-    fs.copyFileSync(src, dest);
+function syncDirectory(srcDir, destDir) {
+  if (!fs.existsSync(srcDir)) return;
+  if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
+
+  const srcEntries = fs.readdirSync(srcDir, { withFileTypes: true });
+  const destEntries = fs.existsSync(destDir) ? fs.readdirSync(destDir, { withFileTypes: true }) : [];
+
+  // Remove files in dest that no longer exist in src
+  for (const destEntry of destEntries) {
+    const srcPath = path.join(srcDir, destEntry.name);
+    const destPath = path.join(destDir, destEntry.name);
+    if (!fs.existsSync(srcPath)) {
+      if (destEntry.isDirectory()) {
+        fs.rmSync(destPath, { recursive: true, force: true });
+      } else {
+        fs.unlinkSync(destPath);
+      }
+    }
+  }
+
+  // Copy and verify files
+  for (const srcEntry of srcEntries) {
+    const srcPath = path.join(srcDir, srcEntry.name);
+    const destPath = path.join(destDir, srcEntry.name);
+    if (srcEntry.isDirectory()) {
+      syncDirectory(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+      const srcHash = getHash(srcPath);
+      const destHash = getHash(destPath);
+      if (srcHash !== destHash) {
+        console.error(`❌ ERROR: Hash mismatch for ${srcPath}`);
+        process.exit(1);
+      }
+    }
   }
 }
 
 console.log('--- SINCRONIZANDO RAÍZ -> PUBLIC ---');
+
+// Remove public/index.js if present to keep public minimal
+const publicIndexJs = path.join(publicDir, 'index.js');
+if (fs.existsSync(publicIndexJs)) {
+  fs.unlinkSync(publicIndexJs);
+}
 
 let syncCount = 0;
 filesToSync.forEach((fileName) => {
@@ -53,7 +81,7 @@ filesToSync.forEach((fileName) => {
     const srcHash = getHash(src);
     const destHash = getHash(dest);
     if (srcHash !== destHash) {
-      console.error(`❌ ERROR: Mismatch hash for ${fileName}`);
+      console.error(`❌ ERROR: Hash mismatch for ${fileName}`);
       process.exit(1);
     }
     syncCount += 1;
@@ -62,8 +90,6 @@ filesToSync.forEach((fileName) => {
 
 const docSrc = path.join(rootDir, 'documentos');
 const docDest = path.join(publicDir, 'documentos');
-if (fs.existsSync(docSrc)) {
-  copyRecursiveSync(docSrc, docDest);
-}
+syncDirectory(docSrc, docDest);
 
-console.log(`✅ SINCRONIZACIÓN EXITOSA: ${syncCount} archivos transferidos y verificados por SHA-256 en ./public`);
+console.log(`✅ SINCRONIZACIÓN EXITOSA: ${syncCount} activos principales + arbol documentos/ sincronizados y verificados por SHA-256.`);

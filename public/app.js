@@ -28037,11 +28037,11 @@ function coverageTopic(question) {
   if (id.includes('galicia-05') || source.includes('ley 16/2010')) return 'g2-16';
   if (id.includes('contratos') || source.includes('ley 9/2017')) return 'g2-17';
   if (id.includes('trebep')) return 'g2-18';
-  if (id.includes('empleo')) return 'g2-19';
   if (id.includes('incompatibilidades')) return 'g2-20';
   if (id.includes('igualdad')) return 'g2-21';
   if (id.includes('discapacidad')) return 'g2-22';
   if (id.includes('transparencia')) return 'g2-23';
+  if (id.includes('empleo')) return 'g2-19';
   return null;
 }
 
@@ -28238,11 +28238,11 @@ function buildSet(topic, length) {
       },
       galicia: q => {
         const c = coverageTopic(q);
-        return ['Organización y sector público autonómico', 'Organización de Galicia', 'Ley 16/2010', 'Xunta y Presidencia', 'Valedor del Pueblo', 'Consejo Consultivo de Galicia'].includes(q.topic) || (c && ['g1-06', 'g1-08', 'g1-09', 'g1-10'].includes(c)) || q.id.startsWith('organizacion-') || q.id.startsWith('xunta-') || q.id.startsWith('autonomia-');
+        return ['Organización y sector público autonómico', 'Organización de Galicia', 'Ley 16/2010', 'Xunta y Presidencia', 'Valedor del Pueblo', 'Consejo Consultivo de Galicia'].includes(q.topic) || (c && ['g1-06', 'g1-08', 'g1-09'].includes(c)) || q.id.startsWith('organizacion-') || q.id.startsWith('xunta-') || q.id.startsWith('autonomia-');
       },
       empleo: q => {
         const c = coverageTopic(q);
-        return ['Empleo público de Galicia', 'TREBEP', 'Ley 2/2015'].includes(q.topic) || (c && ['g2-18', 'g2-19'].includes(c)) || q.id.startsWith('trebep-') || q.id.startsWith('empleo-galicia-');
+        return (['Empleo público de Galicia', 'TREBEP', 'Ley 2/2015'].includes(q.topic) || (c && ['g2-18', 'g2-19'].includes(c)) || q.id.startsWith('trebep-') || q.id.startsWith('empleo-galicia-')) && !q.id.startsWith('igualdad-') && !q.id.startsWith('discapacidad-');
       }
     };
     if (categoryFilters[topic]) {
@@ -28426,8 +28426,12 @@ function applyUserProfile(name) {
   if (headerGreeting) headerGreeting.textContent = `Buenos días, ${name}.`;
 }
 
-function setAuthState(authenticated) {
-  document.documentElement.dataset.authState = authenticated ? 'authenticated' : 'unauthenticated';
+function setAuthState(mode) {
+  let stateStr = 'unauthenticated';
+  if (mode === true || mode === 'authenticated') stateStr = 'authenticated';
+  else if (mode === 'guest') stateStr = 'authenticated';
+  document.documentElement.dataset.authState = stateStr;
+  document.documentElement.dataset.authMode = mode === 'guest' ? 'guest' : (stateStr === 'authenticated' ? 'supabase' : 'none');
 }
 
 function loadSavedProfile() {
@@ -28435,7 +28439,8 @@ function loadSavedProfile() {
     const savedName = localStorage.getItem('opoA2UserName');
     if (savedName && savedName !== 'Invitado') {
       applyUserProfile(savedName);
-      setAuthState(true);
+      setAuthState('guest');
+      document.querySelectorAll('.profile small').forEach(el => el.textContent = 'Perfil local · Modo invitado');
     } else {
       localStorage.removeItem('opoA2UserName');
       setAuthState(false);
@@ -28488,19 +28493,23 @@ initSupabase('https://mquigtfqvznwnovzjudf.supabase.co', 'sb_publishable_lTjPgPW
 async function checkAuthUser() {
   const logoutBtn = document.getElementById('logoutBtn');
   if (logoutBtn) logoutBtn.classList.remove('hidden');
-  if (!supabaseClient) return;
+  if (!supabaseClient) { loadSavedProfile(); return; }
   try {
-    const { data: { user } } = await supabaseClient.auth.getUser();
-    if (user) {
+    const { data, error } = await supabaseClient.auth.getSession();
+    if (data && data.session && data.session.user) {
+      const user = data.session.user;
       const name = user.user_metadata?.name || user.email.split('@')[0];
       applyUserProfile(name);
-      setAuthState(true);
-      document.querySelectorAll('.profile small').forEach(el => el.textContent = 'Sesión activa · Guarda en navegador');
+      setAuthState('authenticated');
+      document.querySelectorAll('.profile small').forEach(el => el.textContent = 'Sesión remota Supabase activa');
       const statusText = document.getElementById('authStatusText');
-      if (statusText) statusText.textContent = `Conectado como ${user.email} · Sesión activa (Progreso local)`;
+      if (statusText) statusText.textContent = `Conectado como ${user.email} · Sesión remota activa`;
+    } else {
+      loadSavedProfile();
     }
   } catch (err) {
     console.warn('Supabase offline or unconfigured:', err);
+    loadSavedProfile();
   }
 }
 
