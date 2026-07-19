@@ -1,0 +1,37 @@
+{
+  "source": {
+    "title": "Convocatoria libre A2, DOG 228 de 25/11/2025",
+    "url": "https://www.xunta.gal/dog/Publicados/2025/20251125/AnuncioG0597-191125-0002_es.html",
+    "retrieved": "2026-07-10"
+  },
+  "general": {
+    "testExercise": true,
+    "blocks": [
+      {
+        "id": "general-i",
+        "name": "Bloque I",
+        "topics": [
+          "Constitución española", "Ley Orgánica 2/1979, del Tribunal Constitucional", "Ley Orgánica 3/1981, del Defensor del Pueblo", "Ley 50/1997, del Gobierno", "Ley Orgánica 1/1981, del Estatuto de autonomía para Galicia", "Ley 1/1983, reguladora de la Xunta y de su Presidencia", "Ley 8/1985, de elecciones al Parlamento de Galicia", "Ley 6/1984, del Valedor del Pueblo de Galicia", "Ley 3/2014, del Consejo Consultivo de Galicia", "Ley 29/1998, reguladora de la jurisdicción contencioso-administrativa"
+        ]
+      },
+      {
+        "id": "general-ii",
+        "name": "Bloque II",
+        "topics": [
+          "Ley 6/2023, del patrimonio de la Comunidad Autónoma de Galicia", "Ley 39/2015, del procedimiento administrativo común", "Ley 40/2015, de régimen jurídico del sector público", "Decreto legislativo 1/1999, Ley de régimen financiero y presupuestario de Galicia", "Ley 9/2007, de subvenciones de Galicia", "Ley 16/2010, de organización y funcionamiento de la Administración general y del sector público autonómico de Galicia", "Ley 9/2017, de contratos del sector público", "Real Decreto Legislativo 5/2015, Estatuto básico del empleado público", "Ley 2/2015, de empleo público de Galicia", "Ley 53/1984, de incompatibilidades", "Ley 7/2023, para la igualdad efectiva de mujeres y hombres de Galicia", "Real Decreto Legislativo 1/2013, derechos de las personas con discapacidad", "Ley 1/2016, de transparencia y buen gobierno"
+        ]
+      }
+    ]
+  },
+  "specific": {
+    "testExercise": false,
+    "blocks": [
+      { "name": "Teoría general del derecho y derecho administrativo general", "topics": 13 },
+      { "name": "Unión Europea", "topics": 5 },
+      { "name": "Derecho autonómico general y derecho local", "topics": 15 },
+      { "name": "Derecho presupuestario y derecho tributario, laboral y Seguridad Social", "topics": 14 }
+    ],
+    "totalTopics": 47,
+    "note": "La convocatoria lo evalúa mediante desarrollo escrito de un tema, no mediante test."
+  }
+}

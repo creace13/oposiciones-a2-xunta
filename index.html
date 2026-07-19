@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#153d35" />
+    <title>Opo A2 · Xunta de Galicia</title>
+    <script>
+      (() => {
+        const validViews = ['dashboard', 'practice', 'simulations', 'errors', 'library', 'syllabus', 'methodology'];
+        const hashViews = { inicio: 'dashboard', practicar: 'practice', simulacros: 'simulations', errores: 'errors', biblioteca: 'library', temario: 'syllabus', syllabus: 'syllabus', metodologia: 'methodology', guia: 'methodology' };
+        const hash = decodeURIComponent(location.hash.replace('#', '')).trim();
+        let stored = null;
+        let authUser = null;
+        try {
+          stored = localStorage.getItem('opoA2LastView');
+          authUser = localStorage.getItem('opoA2UserName');
+        } catch (_) {}
+        const view = hashViews[hash] || stored || 'dashboard';
+        document.documentElement.dataset.activeView = validViews.includes(view) ? view : 'dashboard';
+        document.documentElement.dataset.authState = authUser ? 'authenticated' : 'unauthenticated';
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css?v=infobanner-20260719" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="Inicio de Opo A2">
+          <span class="brand-mark">A2</span>
+          <span>oposita<em>con calma</em></span>
+        </a>
+        <nav>
+          <a class="nav-link active" href="#inicio" data-view="dashboard"><span>⌂</span> Inicio</a>
+          <a class="nav-link" href="#practicar" data-view="practice"><span>✦</span> Practicar</a>
+          <a class="nav-link" href="#simulacros" data-view="simulations"><span>◷</span> Simulacros</a>
+          <a class="nav-link" href="#errores" data-view="errors"><span>↻</span> Repasar errores</a>
+          <a class="nav-link" href="#biblioteca" data-view="library"><span>▱</span> Biblioteca</a>
+          <a class="nav-link" href="#temario" data-view="syllabus"><span>▤</span> Temario</a>
+          <a class="nav-link" href="#metodologia" data-view="methodology"><span>ⓘ</span> Guía y Metodología</a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="profile">
+            <span class="avatar">M</span>
+            <div class="profile-details">
+              <strong>Merce</strong>
+              <div class="profile-links">
+                <button type="button" id="openAuthModalBtn" class="profile-action-btn">Editar perfil</button>
+                <span class="dot">•</span>
+                <button type="button" id="sidebarLogoutBtn" class="profile-action-btn logout">Cerrar sesión</button>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-tip">
+            <span>Tu ritmo también cuenta</span>
+            <p>Un test breve y consciente suma más que forzarte sin atención.</p>
+          </div>
+        </div>
+      </aside>
+
+      <main>
+        <section class="view active" id="dashboard">
+          <header class="page-header">
+            <div><p class="eyebrow">Viernes, 10 de julio</p><h1>Buenos días, Merce.</h1><p class="subtitle">Hoy no tienes que dominarlo todo. Solo avanzar una pregunta cada vez.</p></div>
+            <button class="quiet-button" id="pauseButton">☼ Pausa consciente</button>
+          </header>
+
+          <section class="focus-card">
+            <div class="focus-copy"><span class="pill">FOCO DE HOY</span><h2>Troncal estatal y gallega</h2><p id="focusCardText">Cargando progreso del temario...</p><button class="primary-button start-test" data-set="troncal">Empezar test <span>→</span></button></div>
+            <div class="focus-progress"><span class="progress-number" id="dailyProgress">0<span>/18</span></span><span>preguntas hoy</span><div class="ring"><span>0%</span></div></div>
+          </section>
+
+          <section class="stat-grid" aria-label="Resumen de progreso">
+            <article><span class="stat-label">Precisión neta</span><strong id="netScore">—</strong><small>con penalización real</small></article>
+            <article><span class="stat-label">Tiempo medio</span><strong id="averageTime">—</strong><small>por pregunta</small></article>
+            <article><span class="stat-label">Repasos pendientes</span><strong id="pendingReviews">0</strong><small>errores por consolidar</small></article>
+            <article><span class="stat-label">Sesiones esta semana</span><strong id="weeklySessions">0</strong><small>sin contar rachas</small></article>
+          </section>
+          <section class="coverage-snapshot" id="coverageSnapshot" aria-label="Avance del banco de preguntas por temario">
+            <div><span class="stat-label">Banco troncal</span><strong id="snapshotRatio">1.212<span>/1210</span></strong><small id="snapshotSub">100,1% del temario objetivo (1.522 total)</small></div><button class="secondary-button" data-view-target="syllabus">Ver avance</button>
+          </section>
+
+          <section class="two-columns">
+            <article class="panel goals-panel">
+              <div class="panel-heading"><div><p class="eyebrow">METAS DE LA SEMANA</p><h2>Pequeñas metas, avance real</h2></div><button class="text-button" id="newGoal">+ Nueva meta</button></div>
+              <div id="goalsList"></div>
+            </article>
+            <article class="panel readiness-panel">
+              <div class="panel-heading"><div><p class="eyebrow">PREPARACIÓN</p><h2>Por bloques</h2></div><span class="legend"><i></i> consolidado</span></div>
+              <div class="readiness-row"><span>Bloque I · Instituciones y Organización</span><div class="bar"><i id="barBlock1" style="width: 100%"></i></div><strong id="valBlock1">100%</strong></div>
+              <div class="readiness-row"><span>Bloque II · Procedimiento y Empleo Público</span><div class="bar"><i id="barBlock2" style="width: 100%"></i></div><strong id="valBlock2">100%</strong></div>
+              <p class="readiness-note">La preparación se calcula por respuestas justificadas y repasos, no por una sola sesión.</p>
+            </article>
+          </section>
+
+          <section class="next-step"><div><span class="next-icon">↻</span><div><p class="eyebrow">MEJOR SIGUIENTE PASO</p><h2>Revisa tus errores recientes</h2><p>Recuperar las preguntas falladas consolida el aprendizaje normativo.</p></div></div><button class="secondary-button" data-view-target="errors">Ver errores</button></section>
+        </section>
+
+        <section class="view" id="practice">
+          <header class="page-header compact"><div><p class="eyebrow">ENTRENAMIENTO</p><h1>Practica con intención</h1><p class="subtitle">Cada respuesta incluye una explicación y su referencia normativa.</p></div></header>
+          <div class="practice-layout">
+            <article class="panel setup-card" id="practiceSetup">
+              <span class="large-icon">✦</span><h2>Elige tu sesión</h2><p>Primero practicamos; después simulamos presión.</p>
+              <label>Bloque<select id="topicSelect"><option value="mixto">Repaso mixto</option><option value="troncal">Troncal estatal</option><option value="procedimiento">Procedimiento administrativo</option><option value="galicia">Organización de Galicia</option><option value="empleo">Empleo público</option><option value="historico2025">Histórico oficial A2 · 2025 (105 preg.)</option><option value="historico2024pe">Histórico oficial A2 · 2024 Promoción (105 preg.)</option><option value="historico2024func">Histórico oficial A2 · 2024 Funcionarización (105 preg.)</option></select></label>
+              <label>Preguntas<select id="lengthSelect"><option value="5">5 preguntas · 8 min</option><option value="10">10 preguntas · 16 min</option><option value="18">18 preguntas · 30 min</option></select></label>
+              <div class="switch-row"><span>✓ Explicación tras cada respuesta</span></div>
+              <button class="primary-button wide" id="createTest">Comenzar práctica <span>→</span></button>
+              <p class="tiny">Modo aprendizaje: no se penaliza. El examen sí aplicará –0,25 por fallo.</p>
+            </article>
+            <article class="panel source-card"><p class="eyebrow">CONTENIDO CON TRAZABILIDAD</p><h2>Nada se aprende “porque sí”.</h2><p>Cada pregunta debe indicar su tema, fuente oficial, versión y justificación de las cuatro alternativas.</p><div class="source-checks"><span>✓ Fuente enlazada</span><span>✓ Revisión normativa</span><span>✓ Justificación por opción</span></div><p class="source-warning">El banco contiene preguntas oficiales verificadas y justificadas sistemáticamente.</p></article>
+          </div>
+          <article class="quiz-card hidden" id="quizCard" aria-live="polite"></article>
+        </section>
+
+        <section class="view" id="simulations">
+          <header class="page-header compact"><div><p class="eyebrow">MODO EXAMEN</p><h1>Entrena como el día real</h1><p class="subtitle">Sin pistas durante el test; con corrección completa al terminar.</p></div></header>
+          <div class="simulation-card"><div><span class="pill">PRIMER EJERCICIO · SIMULACRO GENERAL</span><h2>Simulacro tipo test A2</h2><p>18 preguntas mixtas · 4 alternativas · –0,25 por error · corrección al final</p><small>El examen real alcanza 160 preguntas y 210 minutos. Entrena con simulacros graduados del banco de preguntas.</small></div><button class="primary-button" id="simulationStart">Empezar simulacro <span>→</span></button></div>
+          <div class="historical-list"><div class="panel-heading"><div><p class="eyebrow">HISTÓRICO OFICIAL</p><h2>Modelos de Examen Reales de la Xunta</h2></div></div>
+            <div class="history-item"><span class="year">2025</span><div><strong>Examen Oficial A2 · Promoción Específica 2025</strong><p>105 preguntas oficiales en gallego etiquetadas por tema · Plantilla oficial incluida.</p></div><button class="secondary-button start-historical" data-set="historico2025">Iniciar 2025 <span>→</span></button></div>
+            <div class="history-item"><span class="year">2024</span><div><strong>Modelo de examen A2 · Promoción Específica 2024</strong><p>105 preguntas oficiales de la Xunta de Galicia con plantilla oficial en Biblioteca.</p></div><button class="secondary-button start-historical" data-set="historico2024pe">Iniciar 2024 <span>→</span></button></div>
+            <div class="history-item"><span class="year">2024</span><div><strong>Modelo de examen A2 · Funcionarización 2024</strong><p>105 preguntas oficiales del proceso de funcionarización de personal autonómico.</p></div><button class="secondary-button start-historical" data-set="historico2024func">Iniciar 2024 Func. <span>→</span></button></div>
+          </div>
+        </section>
+
+        <section class="view" id="errors">
+          <header class="page-header compact"><div><p class="eyebrow">REPASO ACTIVO</p><h1>Errores que se convierten en aciertos</h1><p class="subtitle">No son una nota: son el mapa de tu siguiente sesión.</p></div></header>
+          <div id="errorList" class="error-list"></div>
+        </section>
+
+        <section class="view" id="library">
+          <header class="page-header compact"><div><p class="eyebrow">BIBLIOTECA DOCUMENTAL</p><h1>Todo el material, en un sitio.</h1><p class="subtitle">Archivos oficiales guardados localmente, fuentes normativas y estructura del temario.</p></div></header>
+          <section class="library-hero"><div><span class="pill">25 ARCHIVOS OFICIALES GUARDADOS</span><h2>La fuente antes que el test.</h2><p>Los modelos históricos, el núcleo troncal estatal, la convocatoria completa y once normas gallegas ya están incluidos en la aplicación. Cada nuevo documento se almacena con su origen, fecha y huella de verificación.</p></div><div class="library-count"><strong>25</strong><span>archivos locales</span></div></section>
+          <section class="library-grid">
+            <article class="library-panel"><div class="panel-heading"><div><p class="eyebrow">HISTÓRICO OFICIAL · LOCAL</p><h2>Exámenes y plantillas</h2></div><span class="status stored">Guardado</span></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>A2 promoción específica · Modelo A · 2025</strong><small>Examen oficial en gallego · 47 páginas</small></div><a href="documentos/historicos/a2-promocion-especifica-2025-modelo-a-galego.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>A2 promoción específica · Plantilla · 2025</strong><small>Respuestas oficiales</small></div><a href="documentos/historicos/a2-promocion-especifica-2025-plantilla.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>A2 promoción específica · Modelo A · 2024</strong><small>Examen oficial en gallego · 47 páginas</small></div><a href="documentos/historicos/a2-promocion-especifica-2024-modelo-a-galego.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>A2 promoción específica · Plantilla · 2024</strong><small>Respuestas oficiales</small></div><a href="documentos/historicos/a2-promocion-especifica-2024-plantilla.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>A2 funcionarización · Modelo A · 2024</strong><small>Examen oficial en gallego · 39 páginas</small></div><a href="documentos/historicos/a2-funcionarizacion-2024-modelo-a-galego.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>A2 funcionarización · Plantilla · 2024</strong><small>Respuestas oficiales</small></div><a href="documentos/historicos/a2-funcionarizacion-2024-plantilla.pdf" target="_blank">Abrir</a></div>
+              <div class="library-subheading"><p class="eyebrow">TRONCAL · BOE · LOCAL</p><span>12 textos legales consolidados</span></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>Constitución Española</strong><small>Texto consolidado · Tema 1</small></div><a href="documentos/troncal/boe/constitucion-espanola-consolidada.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>Estatuto de autonomía para Galicia</strong><small>Ley orgánica 1/1981 · Tema 5</small></div><a href="documentos/troncal/boe/estatuto-autonomia-galicia.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>Ley 39/2015, procedimiento administrativo</strong><small>Parte general · Tema 12</small></div><a href="documentos/troncal/boe/ley-39-2015-procedimiento-administrativo.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>Ley 40/2015, régimen jurídico</strong><small>Parte general · Tema 13</small></div><a href="documentos/troncal/boe/ley-40-2015-regimen-juridico.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>Ley 9/2017, contratos del sector público</strong><small>Parte general · Tema 17</small></div><a href="documentos/troncal/boe/ley-9-2017-contratos-sector-publico.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>TREBEP</strong><small>Real Decreto Legislativo 5/2015 · Tema 18</small></div><a href="documentos/troncal/boe/trebep-rdl-5-2015.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>Otros textos troncales BOE</strong><small>TC, Defensor, Gobierno, LJCA, incompatibilidades y discapacidad</small></div><a href="documentos/catalogo.html" target="_blank">Ver catálogo</a></div>
+              <div class="library-subheading"><p class="eyebrow">TRONCAL · GALICIA · LOCAL</p><span>11 normas oficiales</span></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>Ley 1/1983 · Xunta y Presidencia</strong><small>BOE consolidado · Tema 6</small></div><a href="documentos/troncal/galicia/ley-1-1983-xunta-presidencia.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">PDF</span><div><strong>Ley 6/1984 · Valedor del Pueblo</strong><small>BOE consolidado · Tema 8</small></div><a href="documentos/troncal/galicia/ley-6-1984-valedor-pueblo.pdf" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">DOG</span><div><strong>Decreto legislativo 1/1999 · régimen financiero</strong><small>Publicación original · consolidación pendiente · Tema 14</small></div><a href="documentos/troncal/galicia/decreto-legislativo-1-1999-regimen-financiero.html" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">DOG</span><div><strong>Ley 16/2010 · organización de la Xunta</strong><small>HTML oficial guardado · Tema 16</small></div><a href="documentos/troncal/galicia/ley-16-2010-organizacion-xunta.html" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">DOG</span><div><strong>Ley 9/2007 · subvenciones de Galicia</strong><small>HTML oficial guardado · Tema 15</small></div><a href="documentos/troncal/galicia/ley-9-2007-subvenciones-galicia.html" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">DOG</span><div><strong>Ley 6/2023 · patrimonio de Galicia</strong><small>HTML oficial guardado · Tema 11</small></div><a href="documentos/troncal/galicia/ley-6-2023-patrimonio-galicia.html" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">DOG</span><div><strong>Ley 2/2015 · empleo público de Galicia</strong><small>HTML oficial guardado · Tema 19</small></div><a href="documentos/troncal/galicia/ley-2-2015-empleo-publico-galicia.html" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">DOG</span><div><strong>Ley 7/2023 · igualdad efectiva</strong><small>HTML oficial guardado · Tema 21</small></div><a href="documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">DOG</span><div><strong>Ley 1/2016 · transparencia y buen gobierno</strong><small>HTML oficial guardado · Tema 23</small></div><a href="documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">DOG</span><div><strong>Ley 3/2014 · Consejo Consultivo</strong><small>HTML oficial guardado · Tema 9</small></div><a href="documentos/troncal/galicia/ley-3-2014-consejo-consultivo-galicia.html" target="_blank">Abrir</a></div>
+              <div class="document-item"><span class="file-icon">DOG</span><div><strong>Ley 8/1985 · elecciones al Parlamento</strong><small>HTML oficial guardado · Tema 7</small></div><a href="documentos/troncal/galicia/ley-8-1985-elecciones-parlamento-galicia.html" target="_blank">Abrir</a></div>
+            </article>
+            <aside class="library-side"><article class="library-note"><p class="eyebrow">TRONCAL · 23 TEMAS</p><h2>Base tipo test</h2><p>Constitución, organización estatal y gallega, procedimiento, contratos, empleo público y el resto de normas de la parte general.</p><a href="data/temario-a2-2025.json" target="_blank">Ver índice estructurado →</a></article><article class="library-note specific"><p class="eyebrow">ESPECÍFICA · 47 TEMAS</p><h2>También cuenta.</h2><p>Derecho administrativo, UE, derecho autonómico y local, presupuesto, tributario, laboral y Seguridad Social.</p><a href="data/temario-a2-2025.json" target="_blank">Ver estructura →</a></article><article class="library-note source-note"><p class="eyebrow">FUENTE RECTORA · LOCAL</p><p>La convocatoria vigente incluye ambos bloques completos y ya está guardada dentro de la app.</p><a href="documentos/convocatoria-libre-a2-2025.html" target="_blank">Abrir convocatoria →</a></article><article class="library-note source-note"><p class="eyebrow">CONTROL DE VERSIONES</p><p>La ficha de cada documento recogerá procedencia, fecha de descarga, vigencia y revisión. No se sobrescribe un archivo sin conservar su historial.</p></article></aside>
+          </section>
+        </section>
+
+        <section class="view" id="syllabus">
+          <header class="page-header compact"><div><p class="eyebrow">ESTRUCTURA DEL EXAMEN Y COBERTURA</p><h1>Mapa del Temario Oficial A2</h1><p class="subtitle">Desglose de los 23 temas de la Parte General evaluados en el primer ejercicio tipo test de la Xunta de Galicia.</p></div></header>
+          <div class="info-banner">
+            <div class="info-banner-icon">ℹ️</div>
+            <div class="info-banner-content">
+              <span class="eyebrow">¿CÓMO SE EVALÚA TU OPOSICIÓN?</span>
+              <h2>El Primer Ejercicio es 100% Tipo Test (23 Temas)</h2>
+              <p>La Xunta evalúa los 23 temas de la Parte General en una prueba tipo test con 105 preguntas y penalización de –0,25. Esta plataforma cubre el 100% de este ejercicio con 1.522 preguntas verificadas. La parte específica (47 temas) es para la segunda prueba escrita de desarrollo.</p>
+            </div>
+          </div>
+          <div class="syllabus-grid"><article class="syllabus-card"><span>01 · 10 TEMAS</span><h2>Parte general · Bloque I</h2><p>Constitución, instituciones del Estado, Estatuto de autonomía, Parlamento, Valedor y jurisdicción contenciosa.</p><small>302 preguntas · 100% de cobertura alcanzado</small></article><article class="syllabus-card"><span>02 · 13 TEMAS</span><h2>Parte general · Bloque II</h2><p>Procedimiento administrativo, régimen jurídico, patrimonio, contratos, hacienda, empleo público e igualdad.</p><small>910 preguntas · 100% de cobertura alcanzado</small></article><article class="syllabus-card soon"><span>03 · 47 TEMAS</span><h2>Parte específica (Segundo ejercicio)</h2><p>Evaluada mediante desarrollo escrito de temas, no mediante preguntas con respuestas múltiples tipo test.</p><small>Fuera del ámbito del primer examen test</small></article></div>
+          <section class="coverage-panel">
+            <div class="panel-heading"><div><p class="eyebrow">DASHBOARD DEL BANCO</p><h2>Avance por tema</h2></div><span class="status complete">100% alcanzado (1.522 total)</span></div>
+            <div class="coverage-summary" id="coverageSummary">
+              <article class="coverage-hero"><div><p class="eyebrow">PROGRESO REAL</p><strong>100%</strong><small>1.212 de 1.210 temario + 315 ex. oficiales</small></div><div class="coverage-hero-meter"><span style="width:100%"></span></div></article>
+              <article class="coverage-kpi"><span>Banco total</span><strong>1.522</strong><small>preguntas verificadas</small></article>
+              <article class="coverage-kpi warning"><span>Temas a cero</span><strong>0</strong><small>cobertura 100% completa</small></article>
+              <article class="coverage-kpi next"><span>Foco activo</span><strong>Simulacros y repasos</strong><small>23/23 temas completados</small></article>
+            </div>
+            <div class="coverage-list" id="coverageList">
+              <section class="coverage-dashboard-board">
+                <article class="coverage-block-card">
+                  <header><div><p class="eyebrow">BLOQUE I</p><h3>Instituciones y organización básica</h3><small>10 temas · 302/300 preguntas</small></div><strong>100%</strong></header>
+                  <div class="coverage-hero-meter small"><span style="width:100%"></span></div>
+                  <div class="coverage-topic-grid">
+                    <article class="topic-progress-card"><div class="topic-main"><span>G1-01</span><strong>Constitución española</strong><small>32 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G1-02</span><strong>Tribunal Constitucional</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G1-03</span><strong>Defensor del Pueblo</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G1-04</span><strong>Gobierno</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G1-05</span><strong>Estatuto de autonomía para Galicia</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G1-06</span><strong>Xunta y Presidencia</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G1-07</span><strong>Elecciones al Parlamento de Galicia</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G1-08</span><strong>Valedor del Pueblo</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G1-09</span><strong>Consejo Consultivo de Galicia</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G1-10</span><strong>Jurisdicción contencioso-administrativa</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                  </div>
+                </article>
+                <article class="coverage-block-card">
+                  <header><div><p class="eyebrow">BLOQUE II</p><h3>Procedimiento, contratación y empleo público</h3><small>13 temas · 910/910 preguntas</small></div><strong>100%</strong></header>
+                  <div class="coverage-hero-meter small"><span style="width:100%"></span></div>
+                  <div class="coverage-topic-grid">
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-11</span><strong>Patrimonio de Galicia</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-12</span><strong>Procedimiento administrativo común</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-13</span><strong>Régimen jurídico del sector público</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-14</span><strong>Régimen financiero y presupuestario</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-15</span><strong>Subvenciones de Galicia</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-16</span><strong>Organización y sector público autonómico</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-17</span><strong>Contratos del sector público</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-18</span><strong>TREBEP</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-19</span><strong>Empleo público de Galicia</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-20</span><strong>Incompatibilidades</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-21</span><strong>Igualdad efectiva en Galicia</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-22</span><strong>Derechos de las personas con discapacidad</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                    <article class="topic-progress-card"><div class="topic-main"><span>G2-23</span><strong>Transparencia y buen gobierno</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
+                  </div>
+                </article>
+              </section>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="methodology">
+          <header class="page-header compact">
+            <div>
+              <p class="eyebrow">CARTA DE PRESENTACIÓN Y METODOLOGÍA</p>
+              <h1>Aprende con Rigor, Oposita con Calma</h1>
+              <p class="subtitle">La primera plataforma de oposiciones a la Xunta de Galicia con Trazabilidad Normativa 100% oficial y justificación opción por opción.</p>
+            </div>
+          </header>
+
+          <div class="methodology-hero">
+            <div class="methodology-hero-copy">
+              <span class="pill gold">EXCELENCIA PEDAGÓGICA Y TÉCNICA</span>
+              <h2>¿Por qué esta plataforma marca la diferencia?</h2>
+              <p>Desarrollada para ofrecer la preparación más rigurosa y transparente del Cuerpo de Gestión A2 de la Xunta de Galicia, combinando un motor de aprendizaje interactivo de alta precisión con evidencia legal directa.</p>
+              <div class="methodology-stats-badges">
+                <div class="m-badge"><strong>1.522</strong><span>Preguntas Verificadas</span></div>
+                <div class="m-badge"><strong>100%</strong><span>Trazabilidad BOE/DOG</span></div>
+                <div class="m-badge"><strong>3</strong><span>Exámenes Reales Xunta</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="methodology-grid">
+            <article class="panel methodology-card">
+              <div class="m-card-icon">🏛️</div>
+              <h3>Trazabilidad Normativa Directa</h3>
+              <p>Ninguna pregunta es imprecisa o basada en opiniones. Cada respuesta cita expresamente la ley, el artículo y el apartado del BOE o DOG oficial aplicable con enlace directo al texto legal consolidado.</p>
+            </article>
+            <article class="panel methodology-card">
+              <div class="m-card-icon">🔍</div>
+              <h3>Justificación Técnico-Jurídica Cuádruple (`whys`)</h3>
+              <p>Entenderás no solo cuál es la opción correcta, sino el motivo legal exacto por el que se descartan de forma incontestable cada una de las otras tres alternativas.</p>
+            </article>
+            <article class="panel methodology-card">
+              <div class="m-card-icon">⏱️</div>
+              <h3>Fidelidad al Examen Oficial de la Xunta</h3>
+              <p>Entrena con cuestionarios transcritos directamente de las pruebas reales (2025, 2024 Promoción y 2024 Funcionarización) aplicando la penalización oficial de –0,25 por fallo y corrección neta.</p>
+            </article>
+            <article class="panel methodology-card">
+              <div class="m-card-icon">⚡</div>
+              <h3>Algoritmo de Repaso Activo de Errores</h3>
+              <p>El sistema aísla automáticamente tus respuestas incorrectas para convertirlas en tu principal oportunidad de consolidación hasta lograr el dominio absoluto del temario.</p>
+            </article>
+          </div>
+
+          <section class="panel methodology-guide-section">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">MANUAL DEL OPOSITOR</p>
+                <h2>Cómo obtener el máximo rendimiento</h2>
+              </div>
+            </div>
+            <div class="guide-steps">
+              <div class="guide-step">
+                <span class="step-num">01</span>
+                <div>
+                  <strong>Elige tu Modo de Entrenamiento</strong>
+                  <p>Accede a <em>Practicar</em> para afianzar conceptos con explicaciones inmediatas, o selecciona <em>Simulacros</em> para medir tu tiempo y precisión en condiciones de examen real.</p>
+                </div>
+              </div>
+              <div class="guide-step">
+                <span class="step-num">02</span>
+                <div>
+                  <strong>Verifica la Fuente Legal Primaria</strong>
+                  <p>En el pie de cada pregunta dispones del enlace directo a la norma oficial (BOE/DOG) para consultar el articulado vigente siempre que lo necesites.</p>
+                </div>
+              </div>
+              <div class="guide-step">
+                <span class="step-num">03</span>
+                <div>
+                  <strong>Consolida tus Errores Semanales</strong>
+                  <p>Visita el panel de <em>Repasar errores</em> tras cada sesión para afianzar los aspectos normativos donde el tribunal calificador suele incluir trampas.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+    <dialog id="pauseDialog"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">PAUSA CONSCIENTE</p><h2>Respira antes de seguir.</h2><p>Durante un minuto, aleja la mirada de la pantalla y suelta los hombros. Una pausa no retrasa el plan: protege tu atención.</p><button class="primary-button dialog-action">Volver cuando esté lista</button></dialog>
+    <dialog id="goalDialog"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">NUEVA META</p><h2>¿Qué paso es realista esta semana?</h2><label>Describe una meta pequeña<input id="goalInput" maxlength="80" placeholder="Ej.: 20 preguntas de empleo público" /></label><button id="saveGoal" class="primary-button">Guardar meta</button></dialog>
+    <dialog id="authDialog"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">ACCESO Y PERFIL</p><h2 id="authModalTitle">Bienvenido a Oposiciones A2</h2><p id="authModalDesc">Introduce tu nombre y correo para acceder a tu perfil privado de opositor.</p><form id="authForm"><label>Nombre de usuario / Opositor<input type="text" id="authName" placeholder="Ej.: Merce" maxlength="30" required /></label><label>Correo electrónico<input type="email" id="authEmail" placeholder="tu@email.com" required /></label><label>Contraseña<input type="password" id="authPassword" placeholder="••••••••" required /></label><div style="display:flex;justify-content:space-between;align-items:center;margin:8px 0 16px;"><button type="button" id="forgotPassBtn" class="text-button" style="font-size:11px;color:var(--muted);text-decoration:underline;">¿Olvidaste tu contraseña?</button></div><button type="submit" id="authSubmitBtn" class="primary-button wide">Entrar / Registrarse</button></form><div id="authStatusText" class="tiny" style="margin-top:15px;color:var(--muted);text-align:center;">Perfil guardado localmente</div></dialog>
+    <div id="authScreen" class="auth-screen">
+      <div class="auth-card-container">
+        <div class="auth-hero-side">
+          <div class="brand auth-brand">
+            <span class="brand-mark">A2</span>
+            <span>oposita<em>con calma</em></span>
+          </div>
+          <h1>Tu preparación inteligente para la Xunta de Galicia</h1>
+          <p class="auth-hero-desc">Accede a tu plataforma personal con 1.522 preguntas verificadas, simulacros oficiales y seguimiento de progreso.</p>
+          <div class="auth-hero-badges">
+            <div class="auth-badge"><span>🛡️</span> 1.522 Preguntas verificadas</div>
+            <div class="auth-badge"><span>📜</span> 23 Temas Parte General A2</div>
+            <div class="auth-badge"><span>⏱️</span> Penalización oficial –0,25</div>
+            <div class="auth-badge"><span>☁️</span> Sincronización multidispositivo</div>
+          </div>
+        </div>
+
+        <div class="auth-form-side">
+          <p class="eyebrow">ACCESO A TU CUENTA</p>
+          <h2 id="authScreenTitle">Iniciar Sesión / Registrarse</h2>
+          <p class="auth-form-sub">Introduce tus datos para acceder a tu perfil privado de opositor.</p>
+
+          <form id="authPageForm">
+            <label>Nombre de usuario / Opositor
+              <input type="text" id="authPageName" placeholder="Ej.: Merce" maxlength="30" required />
+            </label>
+
+            <label>Correo electrónico
+              <input type="email" id="authPageEmail" placeholder="tu@email.com" required />
+            </label>
+
+            <label>Contraseña
+              <input type="password" id="authPagePassword" placeholder="••••••••" required />
+            </label>
+
+            <div class="auth-page-actions">
+              <button type="button" id="authPageForgotPassBtn" class="text-button">¿Olvidaste tu contraseña?</button>
+            </div>
+
+            <button type="submit" id="authPageSubmitBtn" class="primary-button wide">Entrar a mi Cuenta <span>→</span></button>
+          </form>
+
+          <div id="authPageStatusText" class="auth-status-msg"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js?v=v8-supabaseconnected-20260719"></script>
+  </body>
+</html>
