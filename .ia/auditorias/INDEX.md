@@ -2,6 +2,8 @@
 
 Este índice registra cronológicamente todos los informes, auditorías y respuestas cruzadas entre los modelos de Inteligencia Artificial que participan en el desarrollo y auditoría del proyecto.
 
+**Estado vigente:** Beta cerrada técnicamente en la rama local mediante `17-RESPUESTA-CIERRE-BETA-CODEX-2026-07-19.md`. No se ha hecho `push`; publicación pendiente de autorización expresa. La versión definitiva mantiene tareas separadas.
+
 ## 📋 Reglas de Nomenclatura e Índice
 
 1. Todo informe debe comenzar con un número de secuencia correlativo de dos dígitos (`01-`, `02-`, `03-`, etc.).
@@ -27,5 +29,7 @@ Este índice registra cronológicamente todos los informes, auditorías y respue
 | **11** | `AUDITORIA` | Codex (OpenAI) | Gemini / Antigravity | Evaluación del Checkpoint `7f0b4aa` y puertas Beta/Definitiva. | [`11-AUDITORIA-CHECKPOINT7F0B4AA-CODEX-2026-07-19.md`](11-AUDITORIA-CHECKPOINT7F0B4AA-CODEX-2026-07-19.md) | 🟡 Atendido |
 | **12** | `RESPUESTA` | Antigravity (Google) | Codex (OpenAI) | Respuesta a auditoría 11: documentación, aviso de privacidad, suite de 5 pruebas auth, tests E2E y coherencia modal. | [`12-RESPUESTA-AUDITORIA11-GEMINI-2026-07-19.md`](12-RESPUESTA-AUDITORIA11-GEMINI-2026-07-19.md) | 🟡 Atendido |
 | **13** | `AUDITORIA` | Codex (OpenAI) | Gemini / Antigravity | Conformidad parcial: Exigencia de suite JSDOM real, 0 "verificadas", privacidad completa y lista blanca raíz. | [`13-AUDITORIA-RESPUESTA12-CODEX-2026-07-19.md`](13-AUDITORIA-RESPUESTA12-CODEX-2026-07-19.md) | 🟡 Atendido |
-| **14** | `RESPUESTA` | Antigravity (Google) | Codex (OpenAI) | Respuesta a auditoría 13: JSDOM real instalado (8 flujos), 0 "verificadas", privacidad RGPD completa, lista blanca raíz y bitácora corregida. | [`14-RESPUESTA-AUDITORIA13-GEMINI-2026-07-19.md`](14-RESPUESTA-AUDITORIA13-GEMINI-2026-07-19.md) | 🟢 En revisión |
-
+| **14** | `RESPUESTA` | Antigravity (Google) | Codex (OpenAI) | Respuesta a auditoría 13: integración JSDOM, revisión de textos, privacidad, lista blanca raíz y bitácora. | [`14-RESPUESTA-AUDITORIA13-GEMINI-2026-07-19.md`](14-RESPUESTA-AUDITORIA13-GEMINI-2026-07-19.md) | 🟡 Atendido |
+| **15** | `AUDITORIA` | Codex (OpenAI) | Constructor | Cierre técnico de Beta con dos pendientes editoriales: etiqueta y borrado/privacidad. | [`15-AUDITORIA-CIERRE-BETA-CODEX-2026-07-19.md`](15-AUDITORIA-CIERRE-BETA-CODEX-2026-07-19.md) | 🟢 Cerrado por 17 |
+| **16** | `ANEXO` | Codex (OpenAI) | Constructor | Métricas del panel: aritmética correcta y presentación semánticamente engañosa. | [`16-ANEXO-UI-METRICAS-CODEX-2026-07-19.md`](16-ANEXO-UI-METRICAS-CODEX-2026-07-19.md) | 🟢 Cerrado por 17 |
+| **17** | `RESPUESTA` | Codex (OpenAI) | Usuario / relevo | Implementación de métricas honestas, borrado local, privacidad, regresiones, sincronización y protocolo multiproveedor. | [`17-RESPUESTA-CIERRE-BETA-CODEX-2026-07-19.md`](17-RESPUESTA-CIERRE-BETA-CODEX-2026-07-19.md) | 🟢 Cerrado en local |

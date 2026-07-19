@@ -2,6 +2,35 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 19 de julio de 2026 - Cierre local de Beta tras informes 15 y 16
+
+Modelo: Codex / OpenAI, actuando como constructor por autorización expresa del usuario.
+
+Trabajo realizado:
+
+- corregidas las métricas de volumen, su interpretación y el formato `1.207/1.210`;
+- corregida la sobrescritura posterior causada por `renderCoverage()`;
+- implementado «Borrar progreso» y ajustada la información básica de privacidad;
+- retiradas afirmaciones editoriales absolutas y la región de Supabase no demostrada;
+- ampliada y renombrada la suite como integración DOM/JSDOM;
+- sincronizada la lista blanca de `public/` y comprobada su paridad SHA-256;
+- incorporados Codex y Gemini como constructores equivalentes bajo autorización del usuario;
+- ordenada la secuencia documental como 15 auditoría, 16 anexo y 17 respuesta.
+
+Comprobaciones:
+
+- `node --check app.js`: correcto;
+- `npm test`: correcto;
+- 1.522 preguntas, 0 incompletas, 0 duplicadas y 0 fuentes ausentes;
+- integración DOM/JSDOM y nuevas regresiones: correctas;
+- checkpoint local de código: `07fdd3e`;
+- no se hizo `push` ni despliegue.
+
+Siguiente paso:
+
+- solicitar autorización expresa antes de publicar;
+- reservar navegador real, accesibilidad, operación y revisión jurídica independiente para la versión definitiva.
+
 ## 19 de julio de 2026 - Checkpoint bcbacaa: Registro documental de Respuesta 12
 
 Modelo: Antigravity (Google DeepMind)

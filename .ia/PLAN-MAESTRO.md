@@ -16,7 +16,7 @@ Condiciones de cierre:
 - versión y fecha conocidas;
 - cualquier ausencia o problema de consolidación registrado como bloqueo.
 
-Estado: avanzada, con bloqueo pendiente en la consolidación del Decreto legislativo 1/1999.
+Estado: **completada para la Beta según el registro interno**. El bloqueo inicial del Decreto legislativo 1/1999 figura resuelto en `.ia/AUDITORIA-CONTENIDO.md`; su vigencia debe volver a revisarse cuando cambie la norma.
 
 ## Fase 2. Auditoría de las preguntas existentes (Completada)
 
@@ -29,7 +29,7 @@ Condiciones de cierre:
 - las preguntas dudosas fueron corregidas o retiradas;
 - no quedan duplicados conceptuales claros.
 
-Estado: **COMPLETADA**. El banco ha evolucionado de 266 preguntas a **1.522 preguntas totales** (1.207 de elaboración propia clasificadas + 315 oficiales de exámenes históricos 2021-2025).
+Estado: **COMPLETADA COMO REVISIÓN INTERNA**. El banco ha evolucionado de 266 preguntas a **1.522 preguntas totales** (1.207 de elaboración propia clasificadas + 315 oficiales de exámenes históricos 2021-2025). Esta declaración no sustituye una revisión jurídica externa e independiente.
 
 ## Fase 3. Matriz real de cobertura
 
@@ -42,6 +42,8 @@ Condiciones de cierre:
 - identificación de huecos relevantes;
 - reparto de dificultad fácil, media y alta;
 - comparación con la frecuencia observada en exámenes oficiales.
+
+Estado: **parcial**. Existe recuento por 23 temas y objetivos internos de volumen, pero no debe confundirse con una matriz completa de artículo, submateria, dificultad y frecuencia oficial.
 
 ## Fase 4. Ampliación controlada
 
@@ -65,6 +67,8 @@ Condiciones de cierre:
 - corrección, preguntas en blanco y penalización validadas;
 - diferenciación clara entre formato oficial y test usados solo como aprendizaje.
 
+Estado Beta: **funcional en integración DOM/JSDOM**. La comprobación visual en navegador real se reserva para la puerta de versión definitiva.
+
 ## Fase 6. Calidad funcional
 
 Objetivo: asegurar que la aplicación no pierde ni presenta mal el progreso.
@@ -79,17 +83,19 @@ Pruebas mínimas:
 - enlaces a documentos locales;
 - manejo de datos antiguos al actualizar la aplicación.
 
+Estado Beta: **suite automatizada aprobada** para navegación, práctica, simulacro, filtros, autenticación, persistencia escrita, documentos, métricas y borrado local. Pendientes para definitiva: navegador gráfico real, recarga completa, móvil/escritorio y accesibilidad asistida.
+
 ## Fase 7. Preparación para compartir
 
-Decisiones pendientes:
+Estado Beta:
 
-- uso en un único dispositivo o cuentas sincronizadas;
-- alojamiento y dominio;
-- copias de seguridad;
-- privacidad y tratamiento de datos;
-- mecanismo de actualización normativa.
+- alojamiento existente en Cloudflare Workers y autenticación en Supabase;
+- progreso de estudio local, no sincronizado entre dispositivos;
+- información básica de privacidad publicada y borrado local implementado;
+- pendiente confirmar el control del canal de privacidad;
+- pendientes copias/restauración, rollback y mecanismo formal de actualización normativa para definitiva.
 
-## Puerta de despliegue
+## Puerta de despliegue y publicación
 
 Solo se despliega cuando se cumplan simultáneamente estas condiciones:
 
@@ -101,3 +107,5 @@ Solo se despliega cuando se cumplan simultáneamente estas condiciones:
 - prueba real en móvil y ordenador;
 - copia de seguridad y procedimiento de actualización definidos;
 - autorización expresa del usuario para desplegar.
+
+La Beta ya fue desplegada históricamente. Cualquier nueva revisión debe tratar el `push` como una posible publicación automática y pedir autorización expresa. La etiqueta «definitiva» no se utilizará hasta cerrar navegador real, accesibilidad, operación/recuperación y revisión jurídica independiente.
