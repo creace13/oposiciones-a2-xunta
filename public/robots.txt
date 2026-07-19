@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oposiciones-xunta.opos-galicia.workers.dev/sitemap.xml

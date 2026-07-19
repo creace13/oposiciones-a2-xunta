@@ -7,4 +7,5 @@ Si el contexto fue compactado o procede de otro modelo (Codex/OpenAI, Antigravit
 ## Protocolo de Trabajo Inter-IA:
 - Todo informe, auditoría o dictamen generado por una IA debe guardarse en `.ia/auditorias/` con formato `AUDITORIA-[ASUNTO]-[MODELO]-[FECHA].md`.
 - El modelo que tome el relevo debe responder con `RESPUESTA-[ASUNTO]-[MODELO]-[FECHA].md` documentando las correcciones y comandos ejecutados antes de dar por cerrada la tarea.
+- **Puntos de Guardado (Checkpoints)**: Al completar cada hito o corrección relevante, se debe validar el código, actualizar `.ia/ESTADO-PROYECTO.md` y realizar un commit/push en Git como punto de guardado oficial.
 

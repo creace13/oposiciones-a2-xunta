@@ -26,6 +26,13 @@ Si el chat ha sido compactado, resumido o heredado de otro modelo, volver a leer
 - Toda respuesta correcta y toda respuesta incorrecta deben permanecer justificadas.
 - Detectar duplicación conceptual, no solamente textos idénticos.
 
+## Protocolo de Puntos de Guardado e Hitos (Checkpoints)
+
+- Cada vez que se complete un hito o tarea considerable (por ejemplo, corregir un bug P0, aislar el directorio de producción, ajustar autenticación o unificar métricas), se debe:
+  1. Validar la integridad del código (`node --check app.js`, `node scripts/validar-banco.js`).
+  2. Registrar la actualización en `.ia/ESTADO-PROYECTO.md` y `.ia/BITACORA-IA.md`.
+  3. Realizar un commit y push en Git con un mensaje descriptivo que funcione como un punto de guardado oficial e identificable.
+
 ## Al terminar cualquier sesión de trabajo
 
 1. Ejecutar `node --check app.js` y `node scripts/validar-banco.js`, además de las comprobaciones específicas del cambio.
