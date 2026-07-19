@@ -28342,10 +28342,11 @@ function setAuthState(authenticated) {
 function loadSavedProfile() {
   try {
     const savedName = localStorage.getItem('opoA2UserName');
-    if (savedName) {
+    if (savedName && savedName !== 'Invitado') {
       applyUserProfile(savedName);
       setAuthState(true);
     } else {
+      localStorage.removeItem('opoA2UserName');
       setAuthState(false);
     }
   } catch (_) {
@@ -28423,7 +28424,6 @@ if (sidebarLogoutBtn) {
       try { await supabaseClient.auth.signOut(); } catch (err) { console.warn('Logout:', err); }
     }
     localStorage.removeItem('opoA2UserName');
-    applyUserProfile('Invitado');
     setAuthState(false);
   });
 }

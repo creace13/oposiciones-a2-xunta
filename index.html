@@ -18,7 +18,8 @@
         } catch (_) {}
         const view = hashViews[hash] || stored || 'dashboard';
         document.documentElement.dataset.activeView = validViews.includes(view) ? view : 'dashboard';
-        document.documentElement.dataset.authState = authUser ? 'authenticated' : 'unauthenticated';
+        const isAuth = Boolean(authUser && authUser !== 'Invitado');
+        document.documentElement.dataset.authState = isAuth ? 'authenticated' : 'unauthenticated';
       })();
     </script>
     <link rel="stylesheet" href="styles.css?v=infobanner-20260719" />
@@ -354,6 +355,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="app.js?v=v9-recoveryhandler-20260719"></script>
+    <script src="app.js?v=v10-strictauth-20260719"></script>
   </body>
 </html>
