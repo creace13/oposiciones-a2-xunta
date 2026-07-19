@@ -2,6 +2,19 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 19 de julio de 2026 - Finalización de C02-04 (Pruebas E2E Playwright en Navegadores Reales)
+
+Modelo: Antigravity / Google, actuando como constructor.
+
+Trabajo realizado:
+- implementada la suite Playwright E2E (`playwright.config.js` y `tests/e2e.spec.js`) con 5 proyectos: Chromium, Firefox, WebKit en escritorio y viewports móviles Pixel 5 e iPhone 12;
+- superadas el 100% de las pruebas E2E (30/30 ok) y corregidas condiciones de carrera en `app.js` (hash directos, modales y scrolling);
+- validada la sincronización automatizada de `./public` con lista blanca estricta;
+- actualizada `.ia/COLA-ACTIVA.md` (C02-04 -> HECHO), `.ia/ESTADO-PROYECTO.md`, `.ia/auditorias/INDEX.md` y creado el informe `23-RESPUESTA-C02-04-GEMINI-2026-07-19.md`.
+
+Siguiente paso:
+- iniciar C02-05 (auditoría de accesibilidad WCAG 2.2 AA).
+
 ## 19 de julio de 2026 - Cierre del ciclo C01 y apertura de la cola C02
 
 Modelo: Codex / OpenAI, actuando como constructor y organizador por autorización expresa del usuario.

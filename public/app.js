@@ -28080,7 +28080,7 @@ const viewHashes = {
 };
 const hashViews = {
   ...Object.fromEntries(Object.entries(viewHashes).map(([view, hash]) => [hash, view])),
-  syllabus: 'syllabus',
+  ...Object.fromEntries(validViews.map(view => [view, view])),
   guia: 'methodology'
 };
 
@@ -28114,7 +28114,7 @@ function showView(name, options = {}) {
   if (updateHash && viewHashes[name] && window.location.hash !== `#${viewHashes[name]}`) {
     window.location.hash = viewHashes[name];
   }
-  if (scroll) window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (scroll && typeof window.scrollTo === 'function') window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function updateDashboard() {
   const attempts = state.answered.length;
@@ -28440,6 +28440,8 @@ function loadSavedProfile() {
       applyUserProfile(savedName);
       setAuthState('guest');
       document.querySelectorAll('.profile small').forEach(el => el.textContent = 'Perfil local · Modo invitado');
+      const targetView = (window.location.hash || '#dashboard').replace('#', '').trim() || 'dashboard';
+      showView(targetView);
     } else {
       localStorage.removeItem('opoA2UserName');
       setAuthState('unauthenticated');
@@ -28503,6 +28505,8 @@ async function checkAuthUser() {
       document.querySelectorAll('.profile small').forEach(el => el.textContent = 'Sesión remota Supabase activa');
       const statusText = document.getElementById('authStatusText');
       if (statusText) statusText.textContent = `Conectado como ${user.email} · Sesión remota activa`;
+      const targetView = (window.location.hash || '#dashboard').replace('#', '').trim() || 'dashboard';
+      showView(targetView);
     } else {
       loadSavedProfile();
     }
@@ -28565,7 +28569,8 @@ if (deleteProgressBtn) {
   });
 }
 document.querySelectorAll('.dialog-close,.dialog-action').forEach(button => button.addEventListener('click', () => {
-  pauseDialog.close(); goalDialog.close(); if (authDialog) authDialog.close(); if (feedbackDialog) feedbackDialog.close(); if (resetPasswordModal) resetPasswordModal.close();
+  const privacyModal = document.getElementById('privacyModal');
+  pauseDialog.close(); goalDialog.close(); if (authDialog) authDialog.close(); if (feedbackDialog) feedbackDialog.close(); if (resetPasswordModal) resetPasswordModal.close(); if (privacyModal) privacyModal.close();
 }));
 document.getElementById('saveGoal').addEventListener('click', () => { const input = document.getElementById('goalInput'); const text = input.value.trim(); if (!text) return; state.goals.push({ id:`goal-${Date.now()}`, text, progress:'0/1', done:false }); input.value = ''; persist(); renderGoals(); goalDialog.close(); });
 

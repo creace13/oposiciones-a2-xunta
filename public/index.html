@@ -60,7 +60,7 @@
           stored = localStorage.getItem('opoA2LastView');
           authUser = localStorage.getItem('opoA2UserName');
         } catch (_) {}
-        const view = hashViews[hash] || stored || 'dashboard';
+        const view = hashViews[hash] || (validViews.includes(hash) ? hash : null) || stored || 'dashboard';
         document.documentElement.dataset.activeView = validViews.includes(view) ? view : 'dashboard';
         const isAuth = Boolean(authUser && authUser !== 'Invitado');
         document.documentElement.dataset.authState = isAuth ? 'authenticated' : 'unauthenticated';
@@ -98,6 +98,8 @@
                 <button type="button" id="sidebarLogoutBtn" class="profile-action-btn logout">Cerrar sesión</button>
                 <span class="dot">•</span>
                 <button type="button" id="deleteProgressBtn" class="profile-action-btn danger">Borrar progreso</button>
+                <span class="dot">•</span>
+                <button type="button" id="footerPrivacyLink" class="profile-action-btn" onclick="document.getElementById('privacyModal').showModal()">Privacidad</button>
               </div>
             </div>
           </div>

@@ -25,6 +25,7 @@ El ciclo **C01 — Construcción, auditoría y estabilización** está cerrado c
 - ✅ **Licencia Open Source No Comercial**: `CC BY-NC-SA 4.0` configurada en `LICENSE`, `README.md` y `CONTRIBUTING.md`.
 - ✅ **Cierre editorial y créditos**: la Guía y metodología explica la dirección humana, la colaboración de Gemini/Antigravity y Codex, muestra la tecnología empleada, enlaza discretamente el repositorio y termina con una frase motivadora original.
 - ✅ **Créditos visibles en GitHub**: el `README.md` incluye una sección específica de autoría humana y colaboración con Gemini/Antigravity y Codex/OpenAI, con sus funciones diferenciadas.
+- ✅ **Suite Playwright E2E en Navegadores Reales (C02-04)**: Pruebas automatizadas en Chromium, Firefox y WebKit (escritorio y visores móviles Pixel 5 e iPhone 12) pasando 30/30 (100% ok). Corregida la restauración de hash directos, modales de privacidad y scrolling en JSDOM.
 - ✅ **Validación manual multidispositivo**: el usuario declara funcionamiento visual satisfactorio en tableta, móvil y PC el 19 de julio de 2026.
 
 ## Cifras canónicas
@@ -38,7 +39,7 @@ El ciclo **C01 — Construcción, auditoría y estabilización** está cerrado c
 
 ## Siguiente tarea exacta
 
-- Ejecutar `C02-04`: pruebas automatizadas en Chromium, Firefox y WebKit sobre escritorio y viewport móvil.
+- Ejecutar `C02-05`: Auditoría de accesibilidad y corrección de teclado, foco, diálogos, contraste y semántica.
 - Mientras el titular está ausente pueden avanzarse también `C02-06`, `C02-07` y `C02-08`, respetando un único elemento `EN CURSO` en toda la cola.
 - Al regresar el titular, resolver las decisiones bloqueadas `C02-01` y `C02-02` antes de validar el ciclo remoto `C02-03`.
 
