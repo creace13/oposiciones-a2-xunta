@@ -1,5 +1,6 @@
 {
   "name": "oposiciones-xunta",
+  "main": "index.js",
   "compatibility_date": "2026-07-19",
   "assets": {
     "directory": "./"
