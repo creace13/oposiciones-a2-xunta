@@ -2,7 +2,7 @@
 
 Plataforma web independiente para la preparación del primer ejercicio tipo test de las oposiciones del **Cuerpo de Gestión de la Administración General de la Xunta de Galicia (Subgrupo A2)**.
 
-**Versión 1.1:** estable en modo local. El banco continúa en revisión normativa y las cuentas remotas permanecen en Beta hasta disponer de borrado autoservicio y un canal privado confirmado.
+**Versión 1.1.1:** publicada y estable en modo local. El banco continúa en revisión normativa y las cuentas remotas permanecen en Beta hasta disponer de borrado autoservicio y un canal privado confirmado.
 
 ---
 
@@ -16,6 +16,21 @@ Plataforma web independiente para la preparación del primer ejercicio tipo test
 - **Privacidad y Perfil de Usuario**: Persistencia local de fallos e historial en tu propio navegador. La autenticación opcional mediante **Supabase Auth** se mantiene como función Beta.
 - **Alojamiento en Producción**: Servido globalmente en **Cloudflare Workers** desde directorio estático aislado (`/public`).
 - **Filosofía 100% Abierta (Non-Commercial Open Source)**: Libre acceso para la comunidad de opositores bajo licencia CC BY-NC-SA 4.0.
+
+---
+
+## 🤝 Autoría humana y colaboración con IA
+
+Este proyecto ha sido dirigido por **creace13**, que ha definido su propósito, enfoque para opositores, criterios funcionales y decisiones finales.
+
+Su construcción se ha apoyado en una colaboración documentada entre distintas inteligencias artificiales:
+
+- **Gemini / Antigravity (Google)**: construcción y ampliación del banco, organización de fuentes, desarrollo funcional y documentación de continuidad.
+- **Codex (OpenAI)**: auditoría cruzada, revisión de experiencia de uso y transparencia, pruebas de regresión, correcciones técnicas y cierre de versiones.
+
+El trabajo se coordina mediante un protocolo Inter-IA con bitácora, auditorías correlativas y puntos de guardado reproducibles. La IA se utiliza como herramienta de construcción y revisión; la dirección del proyecto y las decisiones finales permanecen bajo responsabilidad humana.
+
+> «La constancia no hace ruido, pero el día del examen se nota.»
 
 ---
 

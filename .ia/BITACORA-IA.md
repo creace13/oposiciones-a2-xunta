@@ -2,6 +2,22 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 19 de julio de 2026 - Créditos Inter-IA ampliados en GitHub
+
+Modelo: Codex / OpenAI, actuando como constructor por autorización expresa del usuario.
+
+Trabajo realizado:
+
+- actualizada la versión visible del `README.md` a 1.1.1;
+- añadida una sección destacada de autoría humana y colaboración con IA;
+- descritas por separado las aportaciones de Gemini/Antigravity y Codex/OpenAI;
+- aclarado que la dirección y las decisiones finales son humanas;
+- incorporada al README la frase motivadora del proyecto.
+
+Siguiente paso:
+
+- subir el cambio a GitHub para que la mención sea visible en la portada del repositorio.
+
 ## 19 de julio de 2026 - Publicación verificada de la versión 1.1.1
 
 Modelo: Codex / OpenAI, actuando como constructor por autorización expresa del usuario.
