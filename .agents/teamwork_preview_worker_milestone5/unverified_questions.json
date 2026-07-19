@@ -1,0 +1,1906 @@
+[
+  {
+    "id": "troncal-incompatibilidades-23",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, art. 1",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "La Ley 53/1984 de incompatibilidades parte, con carácter general, de que el personal comprendido en su ámbito:",
+    "options": [
+      [
+        "A",
+        "No puede compatibilizar sus actividades con un segundo puesto público salvo en los supuestos previstos."
+      ],
+      [
+        "B",
+        "Puede ocupar libremente cualquier número de puestos públicos."
+      ],
+      [
+        "C",
+        "Queda excluido de toda limitación por razón de imparcialidad."
+      ],
+      [
+        "D",
+        "Solo está sujeto a incompatibilidades si trabaja fuera de España."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 53/1984 establece un régimen de incompatibilidades para proteger la imparcialidad y dedicación del personal público, con excepciones y autorizaciones tasadas.",
+    "whys": [
+      "Es correcta: expresa la regla general con posibilidad de excepciones legales.",
+      "La compatibilidad ilimitada contradice el régimen de incompatibilidades.",
+      "La imparcialidad es precisamente uno de los intereses protegidos.",
+      "La sujeción no depende de trabajar fuera de España."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-24",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023 de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "La Ley 7/2023 de Galicia se integra en el temario como norma vinculada principalmente a:",
+    "options": [
+      [
+        "A",
+        "La igualdad efectiva de mujeres y hombres de Galicia."
+      ],
+      [
+        "B",
+        "La jurisdicción contencioso-administrativa estatal."
+      ],
+      [
+        "C",
+        "La organización del Tribunal Constitucional."
+      ],
+      [
+        "D",
+        "La contratación mercantil internacional."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 7/2023 es la norma gallega de igualdad efectiva de mujeres y hombres y aparece en el bloque general del programa vigente.",
+    "whys": [
+      "Es correcta: identifica el objeto central de la norma.",
+      "La jurisdicción contencioso-administrativa se estudia por la Ley 29/1998.",
+      "El Tribunal Constitucional se estudia por la Ley Orgánica 2/1979.",
+      "La contratación mercantil internacional no es el objeto de esta ley gallega."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-25",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016 de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "La Ley 1/2016 de Galicia incluida en el temario se refiere principalmente a:",
+    "options": [
+      [
+        "A",
+        "Transparencia y buen gobierno."
+      ],
+      [
+        "B",
+        "Régimen electoral general del Estado."
+      ],
+      [
+        "C",
+        "Código Penal."
+      ],
+      [
+        "D",
+        "Propiedad intelectual."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 1/2016 regula la transparencia y el buen gobierno en Galicia, y forma parte del bloque troncal autonómico del programa.",
+    "whys": [
+      "Es correcta: coincide con el título y objeto general de la norma.",
+      "El régimen electoral general no es el objeto de esta ley.",
+      "El Código Penal pertenece a otro ámbito normativo.",
+      "La propiedad intelectual no es el contenido de esta norma gallega."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-33",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "El Real Decreto Legislativo 1/2013 incluido en el temario se refiere al texto refundido sobre:",
+    "options": [
+      [
+        "A",
+        "Derechos de las personas con discapacidad y su inclusión social."
+      ],
+      [
+        "B",
+        "Contratos del sector público."
+      ],
+      [
+        "C",
+        "Organización de la Administración general de Galicia."
+      ],
+      [
+        "D",
+        "Ley del Gobierno."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El Real Decreto Legislativo 1/2013 aprueba el texto refundido de la Ley General de derechos de las personas con discapacidad y de su inclusión social.",
+    "whys": [
+      "Es correcta: identifica la materia exacta de la norma.",
+      "La contratación pública corresponde a la Ley 9/2017.",
+      "La organización autonómica gallega se estudia con la Ley 16/2010.",
+      "La Ley del Gobierno es la Ley 50/1997."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-43",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "La finalidad del régimen de incompatibilidades del personal al servicio de las administraciones públicas se relaciona especialmente con:",
+    "options": [
+      [
+        "A",
+        "Garantizar imparcialidad, dedicación y servicio objetivo al interés público."
+      ],
+      [
+        "B",
+        "Permitir cualquier acumulación de empleos sin límites."
+      ],
+      [
+        "C",
+        "Eliminar todos los deberes del personal público."
+      ],
+      [
+        "D",
+        "Convertir todo empleo privado en empleo público."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El régimen de incompatibilidades limita determinadas actividades para proteger la imparcialidad, la dedicación y el correcto desempeño del servicio público.",
+    "whys": [
+      "Es correcta: recoge la finalidad esencial del régimen.",
+      "La compatibilidad ilimitada contradice la propia existencia de incompatibilidades.",
+      "La norma no elimina deberes, los refuerza.",
+      "No transforma empleos privados en públicos."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-44",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "En el temario, la Ley 7/2023 se conecta principalmente con políticas públicas de:",
+    "options": [
+      [
+        "A",
+        "Igualdad efectiva de mujeres y hombres en Galicia."
+      ],
+      [
+        "B",
+        "Contratación pública estatal exclusivamente."
+      ],
+      [
+        "C",
+        "Composición del Consejo de Ministros."
+      ],
+      [
+        "D",
+        "Recurso contencioso-administrativo abreviado."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 7/2023 es la norma gallega de igualdad efectiva de mujeres y hombres y se integra en el bloque general del programa.",
+    "whys": [
+      "Es correcta: identifica la materia de la ley.",
+      "La contratación pública se estudia con la Ley 9/2017.",
+      "El Consejo de Ministros se vincula a la Ley del Gobierno.",
+      "El recurso contencioso-administrativo se estudia con la Ley 29/1998."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-45",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "El texto refundido aprobado por el Real Decreto Legislativo 1/2013 tiene como eje:",
+    "options": [
+      [
+        "A",
+        "Los derechos de las personas con discapacidad y su inclusión social."
+      ],
+      [
+        "B",
+        "La Ley del Gobierno."
+      ],
+      [
+        "C",
+        "La contratación del sector público."
+      ],
+      [
+        "D",
+        "El régimen financiero de Galicia."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El Real Decreto Legislativo 1/2013 ordena la normativa general sobre derechos de las personas con discapacidad y su inclusión social.",
+    "whys": [
+      "Es correcta: coincide con el objeto de la norma.",
+      "La Ley del Gobierno es la Ley 50/1997.",
+      "La contratación del sector público se estudia mediante la Ley 9/2017.",
+      "El régimen financiero gallego pertenece al Decreto legislativo 1/1999."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-46",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "La transparencia y el buen gobierno, dentro del temario gallego, se relacionan especialmente con:",
+    "options": [
+      [
+        "A",
+        "Publicidad activa, acceso a la información pública y reglas de buen gobierno."
+      ],
+      [
+        "B",
+        "La sustitución de la Constitución por normas internas."
+      ],
+      [
+        "C",
+        "La eliminación de todo control ciudadano."
+      ],
+      [
+        "D",
+        "La reserva absoluta de toda información administrativa."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 1/2016 se orienta a transparencia, acceso a la información pública y buen gobierno en el ámbito autonómico gallego.",
+    "whys": [
+      "Es correcta: recoge los ejes principales de la norma.",
+      "Ninguna ley autonómica sustituye a la Constitución.",
+      "La transparencia refuerza el control ciudadano, no lo elimina.",
+      "La regla no es la reserva absoluta, sino publicidad y acceso con límites legales."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-56",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "La autorización o reconocimiento de compatibilidad, cuando proceda, implica que:",
+    "options": [
+      [
+        "A",
+        "Debe ajustarse a los límites y condiciones previstos por la normativa de incompatibilidades."
+      ],
+      [
+        "B",
+        "Permite cualquier actividad sin límite horario ni material."
+      ],
+      [
+        "C",
+        "Anula todos los deberes del puesto principal."
+      ],
+      [
+        "D",
+        "Convierte automáticamente una actividad privada en función pública."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La compatibilidad no es libertad absoluta: está condicionada por límites legales, imparcialidad, dedicación y ausencia de conflicto con el puesto público.",
+    "whys": [
+      "Es correcta: la compatibilidad está sometida a límites legales.",
+      "La autorización no elimina todos los límites.",
+      "Los deberes del puesto principal permanecen.",
+      "La actividad privada no se convierte por ello en función pública."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-57",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "En materia de igualdad, la transversalidad significa que la igualdad debe integrarse:",
+    "options": [
+      [
+        "A",
+        "En el conjunto de políticas públicas y actuaciones administrativas."
+      ],
+      [
+        "B",
+        "Solo en un acto simbólico anual."
+      ],
+      [
+        "C",
+        "Únicamente en expedientes de contratación privada internacional."
+      ],
+      [
+        "D",
+        "Fuera de toda actuación de la Administración."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La idea de transversalidad implica incorporar la perspectiva de igualdad en distintas políticas, planes, normas y actuaciones públicas.",
+    "whys": [
+      "Es correcta: refleja el sentido de la transversalidad de género.",
+      "No se reduce a un acto simbólico.",
+      "No se limita a contratación privada internacional.",
+      "Precisamente se integra en la actuación administrativa."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-58",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "La inclusión social de las personas con discapacidad se relaciona con:",
+    "options": [
+      [
+        "A",
+        "La garantía de derechos, accesibilidad y participación en igualdad de condiciones."
+      ],
+      [
+        "B",
+        "La exclusión automática de los servicios públicos."
+      ],
+      [
+        "C",
+        "La negación de ajustes razonables en todo caso."
+      ],
+      [
+        "D",
+        "La eliminación de cualquier medida de accesibilidad."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El texto refundido de discapacidad se orienta a derechos, igualdad de oportunidades, accesibilidad universal e inclusión social.",
+    "whys": [
+      "Es correcta: recoge los ejes de la norma.",
+      "La exclusión contradice la finalidad de inclusión.",
+      "Los ajustes razonables son una herramienta de igualdad, no algo negado siempre.",
+      "La accesibilidad es un principio central, no algo a eliminar."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-59",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "La publicidad activa en transparencia supone que la Administración debe:",
+    "options": [
+      [
+        "A",
+        "Publicar determinada información relevante sin necesidad de solicitud previa."
+      ],
+      [
+        "B",
+        "Responder solo si existe una sentencia penal firme."
+      ],
+      [
+        "C",
+        "Ocultar toda información institucional."
+      ],
+      [
+        "D",
+        "Sustituir los procedimientos por comunicaciones verbales secretas."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La publicidad activa exige poner a disposición de la ciudadanía información relevante de forma proactiva, sin esperar siempre a una solicitud individual.",
+    "whys": [
+      "Es correcta: define la lógica de publicidad activa.",
+      "No depende de una sentencia penal firme.",
+      "La transparencia persigue publicar información, no ocultarla toda.",
+      "No sustituye los procedimientos por comunicaciones secretas."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-84",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "El régimen de incompatibilidades también afecta a actividades privadas cuando estas:",
+    "options": [
+      [
+        "A",
+        "Pueden comprometer la imparcialidad, independencia o dedicación del personal público en los términos legales."
+      ],
+      [
+        "B",
+        "Son siempre irrelevantes para cualquier empleado público."
+      ],
+      [
+        "C",
+        "Eliminan automáticamente el puesto público."
+      ],
+      [
+        "D",
+        "Convierten toda autorización en innecesaria."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La compatibilidad de actividades privadas está sometida a límites para evitar conflictos con el puesto público, la imparcialidad y la dedicación.",
+    "whys": [
+      "Es correcta: señala la finalidad preventiva del régimen.",
+      "Las actividades privadas pueden ser relevantes si interfieren con el cargo.",
+      "No eliminan automáticamente el puesto público.",
+      "La autorización puede ser necesaria según el caso."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-85",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "Las medidas de igualdad en la Administración buscan evitar especialmente:",
+    "options": [
+      [
+        "A",
+        "Discriminaciones directas o indirectas por razón de sexo."
+      ],
+      [
+        "B",
+        "La aplicación de cualquier norma pública."
+      ],
+      [
+        "C",
+        "La participación de mujeres en la vida pública."
+      ],
+      [
+        "D",
+        "El acceso a servicios públicos en igualdad."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La normativa de igualdad se orienta a prevenir y corregir discriminaciones, promover igualdad efectiva y remover obstáculos en la vida pública y social.",
+    "whys": [
+      "Es correcta: identifica el objetivo antidiscriminatorio.",
+      "La igualdad se aplica mediante normas, no evitando toda norma.",
+      "La participación de mujeres se promueve, no se evita.",
+      "El acceso en igualdad es un objetivo positivo."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-86",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "La accesibilidad universal se entiende como una condición que permite:",
+    "options": [
+      [
+        "A",
+        "Que entornos, procesos, bienes y servicios puedan ser utilizados por todas las personas en condiciones de seguridad y autonomía."
+      ],
+      [
+        "B",
+        "Excluir a personas con discapacidad de los servicios públicos."
+      ],
+      [
+        "C",
+        "Eliminar cualquier adaptación razonable."
+      ],
+      [
+        "D",
+        "Reservar la información pública solo a personas sin discapacidad."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La accesibilidad universal es un eje de la inclusión y busca que entornos y servicios sean utilizables por todas las personas.",
+    "whys": [
+      "Es correcta: recoge la idea central de accesibilidad universal.",
+      "La exclusión contradice la norma.",
+      "Los ajustes razonables y medidas de accesibilidad son herramientas de igualdad.",
+      "La información pública debe ser accesible conforme a los principios aplicables."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-87",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "El derecho de acceso a la información pública permite a la ciudadanía:",
+    "options": [
+      [
+        "A",
+        "Solicitar información pública en los términos y con los límites previstos legalmente."
+      ],
+      [
+        "B",
+        "Obtener siempre datos protegidos sin límites."
+      ],
+      [
+        "C",
+        "Dictar resoluciones administrativas."
+      ],
+      [
+        "D",
+        "Sustituir a los órganos de control."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El derecho de acceso se ejerce dentro de un procedimiento y está sujeto a límites legales, pero permite solicitar información pública a la Administración.",
+    "whys": [
+      "Es correcta: define el derecho de acceso con sus límites.",
+      "Existen límites y protección de datos u otros intereses.",
+      "Solicitar información no equivale a resolver expedientes.",
+      "No sustituye a órganos administrativos o de control."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-112",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "Un conflicto de intereses en el empleo público aparece cuando:",
+    "options": [
+      [
+        "A",
+        "Intereses privados pueden influir indebidamente en el ejercicio imparcial de funciones públicas."
+      ],
+      [
+        "B",
+        "La persona empleada cumple correctamente su horario."
+      ],
+      [
+        "C",
+        "Se aplica una norma de transparencia."
+      ],
+      [
+        "D",
+        "Existe una convocatoria pública de selección."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El régimen de incompatibilidades busca prevenir situaciones donde intereses privados comprometan la imparcialidad o dedicación públicas.",
+    "whys": [
+      "Es correcta: define el problema que pretende evitarse.",
+      "Cumplir el horario no genera por sí mismo conflicto.",
+      "La transparencia no es un conflicto de intereses.",
+      "Una convocatoria pública no equivale a conflicto."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-113",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "La evaluación del impacto de género en normas y planes busca:",
+    "options": [
+      [
+        "A",
+        "Analizar efectos diferenciados sobre mujeres y hombres antes de aprobar medidas públicas."
+      ],
+      [
+        "B",
+        "Impedir cualquier política de igualdad."
+      ],
+      [
+        "C",
+        "Sustituir todos los informes jurídicos por encuestas privadas."
+      ],
+      [
+        "D",
+        "Eliminar el principio de igualdad."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La evaluación de impacto de género ayuda a integrar la perspectiva de igualdad en la elaboración de normas, planes y actuaciones públicas.",
+    "whys": [
+      "Es correcta: explica su función preventiva y analítica.",
+      "No impide políticas de igualdad; las mejora.",
+      "No sustituye automáticamente todos los informes jurídicos.",
+      "Busca hacer efectivo el principio de igualdad."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-114",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "Los ajustes razonables son medidas orientadas a:",
+    "options": [
+      [
+        "A",
+        "Evitar desventajas de personas con discapacidad cuando no supongan carga desproporcionada."
+      ],
+      [
+        "B",
+        "Crear barreras nuevas de acceso."
+      ],
+      [
+        "C",
+        "Excluir a personas con discapacidad de procedimientos públicos."
+      ],
+      [
+        "D",
+        "Eliminar toda accesibilidad universal."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "Los ajustes razonables permiten adaptar situaciones concretas para garantizar igualdad y participación de personas con discapacidad.",
+    "whys": [
+      "Es correcta: recoge la finalidad de los ajustes razonables.",
+      "No crean barreras, las reducen.",
+      "No buscan excluir sino incluir.",
+      "Complementan la accesibilidad, no la eliminan."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-115",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "Los límites al derecho de acceso a la información pública deben interpretarse:",
+    "options": [
+      [
+        "A",
+        "De forma justificada y conforme a la normativa aplicable."
+      ],
+      [
+        "B",
+        "Como prohibición absoluta de toda transparencia."
+      ],
+      [
+        "C",
+        "Como autorización para destruir expedientes."
+      ],
+      [
+        "D",
+        "Como sustitución del procedimiento por silencio verbal."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El derecho de acceso admite límites, pero su aplicación debe estar motivada y ajustada al marco legal.",
+    "whys": [
+      "Es correcta: los límites no son arbitrarios.",
+      "Los límites no anulan toda transparencia.",
+      "No autorizan destrucción de expedientes.",
+      "No sustituyen el procedimiento legal."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-125",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades del personal al servicio de las Administraciones Públicas",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "¿Cuál es la idea central del régimen de incompatibilidades del personal público?",
+    "options": [
+      [
+        "A",
+        "Evitar conflictos de interés y regular cuándo puede compatibilizarse otra actividad."
+      ],
+      [
+        "B",
+        "Permitir siempre dos puestos públicos sin autorización."
+      ],
+      [
+        "C",
+        "Eliminar cualquier deber de imparcialidad del personal público."
+      ],
+      [
+        "D",
+        "Convertir toda actividad privada en obligatoria."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La normativa de incompatibilidades protege la imparcialidad y dedicación del personal público, regulando los supuestos en que otra actividad puede ser compatible.",
+    "whys": [
+      "Es correcta: expresa el núcleo del régimen de incompatibilidades.",
+      "La compatibilidad no es automática ni ilimitada.",
+      "La imparcialidad es precisamente uno de los bienes protegidos.",
+      "La ley no impone actividades privadas obligatorias."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-126",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de mujeres y hombres de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "En políticas públicas de igualdad, ¿qué significa aplicar la perspectiva de género de forma transversal?",
+    "options": [
+      [
+        "A",
+        "Integrar la igualdad en el diseño, ejecución y evaluación de las actuaciones públicas."
+      ],
+      [
+        "B",
+        "Limitar la igualdad a una declaración simbólica sin efectos prácticos."
+      ],
+      [
+        "C",
+        "Excluir la igualdad de la actividad administrativa ordinaria."
+      ],
+      [
+        "D",
+        "Aplicarla solo cuando no exista presupuesto público."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La transversalidad implica incorporar la igualdad de mujeres y hombres en las políticas públicas, no tratarla como un elemento aislado o meramente declarativo.",
+    "whys": [
+      "Es correcta: define la transversalidad en clave administrativa.",
+      "Una declaración sin efectos no integra realmente la igualdad.",
+      "La transversalidad exige presencia en la actuación ordinaria.",
+      "No depende de la inexistencia de presupuesto."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-127",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013, derechos de las personas con discapacidad",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "¿Qué principio es coherente con el texto refundido sobre derechos de las personas con discapacidad?",
+    "options": [
+      [
+        "A",
+        "Accesibilidad universal."
+      ],
+      [
+        "B",
+        "Discriminación por razón de discapacidad."
+      ],
+      [
+        "C",
+        "Exclusión general de la participación social."
+      ],
+      [
+        "D",
+        "Supresión de ajustes razonables en todos los casos."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El texto refundido incorpora principios como igualdad de oportunidades, no discriminación, accesibilidad universal, vida independiente y participación.",
+    "whys": [
+      "Es correcta: la accesibilidad universal es un principio básico.",
+      "La norma combate la discriminación, no la legitima.",
+      "La participación e inclusión social son objetivos protegidos.",
+      "Los ajustes razonables forman parte de la garantía de igualdad."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-128",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "¿Qué diferencia básica hay entre publicidad activa y derecho de acceso a la información pública?",
+    "options": [
+      [
+        "A",
+        "La publicidad activa publica información de oficio; el derecho de acceso permite solicitar información."
+      ],
+      [
+        "B",
+        "Ambas significan exactamente que nunca se publica información."
+      ],
+      [
+        "C",
+        "El derecho de acceso solo existe para órganos administrativos, no para la ciudadanía."
+      ],
+      [
+        "D",
+        "La publicidad activa exige siempre una sentencia judicial previa."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La transparencia combina información que la Administración debe publicar de oficio con el derecho de las personas a solicitar acceso a información pública en los términos legales.",
+    "whys": [
+      "Es correcta: separa publicación de oficio y solicitud de acceso.",
+      "La transparencia busca precisamente facilitar información pública.",
+      "El derecho de acceso se reconoce a la ciudadanía en los términos establecidos.",
+      "La publicidad activa no depende con carácter general de una sentencia previa."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-157",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades del personal al servicio de las Administraciones Públicas",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "Si una segunda actividad puede comprometer la imparcialidad del personal público, ¿qué respuesta es más coherente con el régimen de incompatibilidades?",
+    "options": [
+      [
+        "A",
+        "Analizar su compatibilidad conforme a la normativa antes de autorizarla o ejercerla."
+      ],
+      [
+        "B",
+        "Permitirla siempre sin declaración ni control."
+      ],
+      [
+        "C",
+        "Convertirla automáticamente en obligatoria."
+      ],
+      [
+        "D",
+        "Ignorarla porque las incompatibilidades no afectan al personal público."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El régimen de incompatibilidades pretende prevenir conflictos de interés y exige valorar si una segunda actividad es compatible en los términos legales.",
+    "whys": [
+      "Es correcta: refleja el control previo o valoración de compatibilidad.",
+      "La compatibilidad no es ilimitada ni automática.",
+      "Una segunda actividad no se vuelve obligatoria por existir.",
+      "Las incompatibilidades precisamente afectan al personal al servicio de las Administraciones."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-158",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de mujeres y hombres de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "¿Qué actuación pública es más coherente con la igualdad efectiva?",
+    "options": [
+      [
+        "A",
+        "Detectar desigualdades, prevenir discriminaciones y evaluar el impacto de las medidas públicas."
+      ],
+      [
+        "B",
+        "Negar por sistema cualquier análisis de desigualdad."
+      ],
+      [
+        "C",
+        "Mantener prácticas discriminatorias si son tradicionales."
+      ],
+      [
+        "D",
+        "Excluir la igualdad de la planificación administrativa."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La igualdad efectiva exige políticas activas, prevención de discriminaciones, transversalidad y evaluación de impactos en la actuación pública.",
+    "whys": [
+      "Es correcta: integra prevención, análisis y evaluación.",
+      "Negar el análisis impide actuar sobre desigualdades reales.",
+      "La tradición no justifica prácticas discriminatorias.",
+      "La igualdad debe incorporarse a la planificación pública."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-159",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013, derechos de las personas con discapacidad",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "¿Qué son los ajustes razonables en materia de discapacidad?",
+    "options": [
+      [
+        "A",
+        "Medidas adecuadas para garantizar igualdad de oportunidades cuando no supongan una carga desproporcionada."
+      ],
+      [
+        "B",
+        "Privilegios arbitrarios prohibidos en todos los casos."
+      ],
+      [
+        "C",
+        "Medidas que siempre eliminan todos los procedimientos administrativos."
+      ],
+      [
+        "D",
+        "Actuaciones exclusivamente decorativas sin efecto práctico."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "Los ajustes razonables buscan remover barreras y garantizar igualdad efectiva, dentro de los límites previstos por la normativa.",
+    "whys": [
+      "Es correcta: recoge el sentido de los ajustes razonables.",
+      "No son privilegios arbitrarios, sino garantías de igualdad.",
+      "No eliminan todos los procedimientos administrativos.",
+      "Deben tener efecto práctico sobre la accesibilidad o igualdad."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-160",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "¿Qué finalidad persigue el buen gobierno en la actuación pública?",
+    "options": [
+      [
+        "A",
+        "Reforzar una actuación íntegra, responsable, transparente y orientada al interés general."
+      ],
+      [
+        "B",
+        "Permitir decisiones opacas sin rendición de cuentas."
+      ],
+      [
+        "C",
+        "Eliminar toda obligación ética de los cargos públicos."
+      ],
+      [
+        "D",
+        "Impedir que la ciudadanía conozca información pública."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La transparencia y el buen gobierno buscan mejorar la calidad institucional mediante publicidad, responsabilidad, integridad y control de la actuación pública.",
+    "whys": [
+      "Es correcta: resume la finalidad del buen gobierno.",
+      "La opacidad contradice la transparencia y la rendición de cuentas.",
+      "El buen gobierno refuerza exigencias éticas y de responsabilidad.",
+      "La normativa de transparencia facilita el conocimiento de información pública."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-180",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades del personal al servicio de las Administraciones Públicas",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "¿Por qué se exige autorización o reconocimiento de compatibilidad en ciertos casos?",
+    "options": [
+      [
+        "A",
+        "Para comprobar que otra actividad no compromete la imparcialidad, dedicación o intereses públicos protegidos."
+      ],
+      [
+        "B",
+        "Para permitir siempre cualquier actividad sin límites."
+      ],
+      [
+        "C",
+        "Para impedir que exista empleo público."
+      ],
+      [
+        "D",
+        "Para eliminar los deberes del personal público."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La compatibilidad se controla para evitar conflictos de interés y garantizar la dedicación y neutralidad exigibles al personal público.",
+    "whys": [
+      "Es correcta: explica la razón del control de compatibilidad.",
+      "No toda actividad es compatible sin límites.",
+      "El régimen no impide el empleo público.",
+      "No elimina los deberes del personal."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-181",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de mujeres y hombres de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "¿Qué herramienta ayuda a incorporar la igualdad en la actuación pública?",
+    "options": [
+      [
+        "A",
+        "La evaluación del impacto de género cuando proceda."
+      ],
+      [
+        "B",
+        "La prohibición de analizar desigualdades."
+      ],
+      [
+        "C",
+        "La eliminación de datos útiles para diagnosticar brechas."
+      ],
+      [
+        "D",
+        "La exclusión de la igualdad en normas y planes."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La evaluación de impacto de género es una herramienta para integrar la igualdad en normas, planes y actuaciones públicas cuando resulte exigible.",
+    "whys": [
+      "Es correcta: identifica una herramienta transversal.",
+      "Prohibir el análisis impide corregir desigualdades.",
+      "Sin datos es más difícil diagnosticar brechas.",
+      "La igualdad debe integrarse, no excluirse."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-182",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013, derechos de las personas con discapacidad",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "¿Qué persigue la accesibilidad universal?",
+    "options": [
+      [
+        "A",
+        "Que entornos, procesos, bienes y servicios puedan ser utilizados por todas las personas en condiciones de igualdad."
+      ],
+      [
+        "B",
+        "Restringir los servicios públicos a quien no tenga discapacidad."
+      ],
+      [
+        "C",
+        "Eliminar cualquier medida de inclusión."
+      ],
+      [
+        "D",
+        "Convertir la accesibilidad en una opción meramente estética."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La accesibilidad universal busca remover barreras y permitir el uso de entornos, bienes, productos y servicios en condiciones de igualdad.",
+    "whys": [
+      "Es correcta: resume el objetivo de accesibilidad.",
+      "La norma protege la igualdad, no la exclusión.",
+      "La inclusión es un objetivo del sistema.",
+      "La accesibilidad tiene efectos prácticos, no solo estéticos."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-183",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "¿Qué favorece la publicación de información pública de forma clara y accesible?",
+    "options": [
+      [
+        "A",
+        "La rendición de cuentas y el control ciudadano de la actuación pública."
+      ],
+      [
+        "B",
+        "La opacidad absoluta de las Administraciones."
+      ],
+      [
+        "C",
+        "La imposibilidad de conocer la actividad pública."
+      ],
+      [
+        "D",
+        "La sustitución de todas las leyes por notas de prensa."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La transparencia facilita que la ciudadanía conozca y controle la actuación pública, reforzando la rendición de cuentas y la confianza institucional.",
+    "whys": [
+      "Es correcta: conecta transparencia con control y rendición de cuentas.",
+      "La publicación clara combate la opacidad.",
+      "La transparencia busca facilitar conocimiento, no impedirlo.",
+      "Las notas de prensa no sustituyen las leyes."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-203",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades del personal al servicio de las Administraciones Públicas",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "¿Cuál es la regla general sobre el desempeño de un segundo puesto en el sector público?",
+    "options": [
+      [
+        "A",
+        "Está permitido siempre y sin declaración."
+      ],
+      [
+        "B",
+        "Depende únicamente de la voluntad de la persona empleada."
+      ],
+      [
+        "C",
+        "Es incompatible, salvo los supuestos expresamente previstos y autorizados conforme a la ley."
+      ],
+      [
+        "D",
+        "Es obligatorio para todo el personal funcionario."
+      ]
+    ],
+    "correct": 2,
+    "explanation": "La normativa parte de la dedicación a un puesto público y solo admite un segundo puesto o actividad pública en los casos legalmente contemplados.",
+    "whys": [
+      "No existe una autorización general e incondicionada.",
+      "La compatibilidad se rige por la ley, no solo por voluntad individual.",
+      "Es correcta: recoge la regla y sus excepciones legales.",
+      "Nadie está obligado con carácter general a desempeñar dos puestos."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-204",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de mujeres y hombres de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "¿Qué implica integrar transversalmente la perspectiva de género en las políticas públicas?",
+    "options": [
+      [
+        "A",
+        "Considerar sus posibles efectos sobre mujeres y hombres en el diseño, ejecución y evaluación."
+      ],
+      [
+        "B",
+        "Limitar la igualdad a una campaña aislada."
+      ],
+      [
+        "C",
+        "Evitar cualquier dato desagregado que permita detectar brechas."
+      ],
+      [
+        "D",
+        "Aplicarla solo cuando no tenga efecto práctico."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La transversalidad incorpora la perspectiva de género en todas las fases y áreas relevantes de la actuación pública.",
+    "whys": [
+      "Es correcta: describe la integración transversal durante todo el ciclo de la política.",
+      "Una acción aislada no equivale a transversalidad.",
+      "Los datos adecuados ayudan a diagnosticar y corregir desigualdades.",
+      "La perspectiva debe producir una consideración real y útil."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-205",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013, derechos de las personas con discapacidad",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "¿Cuándo puede ser necesario realizar un ajuste razonable?",
+    "options": [
+      [
+        "A",
+        "Solo como mejora estética sin relación con la igualdad."
+      ],
+      [
+        "B",
+        "Cuando una adaptación necesaria y adecuada permita garantizar derechos en igualdad sin imponer una carga desproporcionada."
+      ],
+      [
+        "C",
+        "Nunca en el acceso a servicios públicos."
+      ],
+      [
+        "D",
+        "Únicamente si elimina todas las reglas aplicables."
+      ]
+    ],
+    "correct": 1,
+    "explanation": "Los ajustes razonables son modificaciones necesarias y adecuadas para garantizar derechos, siempre que no supongan una carga desproporcionada o indebida.",
+    "whys": [
+      "Su finalidad es efectiva, no meramente estética.",
+      "Es correcta: reúne necesidad, adecuación, igualdad y proporcionalidad.",
+      "También pueden resultar necesarios en servicios y relaciones con la Administración.",
+      "Un ajuste adapta condiciones; no elimina indiscriminadamente las normas."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-206",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "¿Qué distingue la publicidad activa del derecho de acceso a la información pública?",
+    "options": [
+      [
+        "A",
+        "La publicidad activa solo existe después de una sentencia."
+      ],
+      [
+        "B",
+        "El derecho de acceso obliga a publicar absolutamente todos los datos personales."
+      ],
+      [
+        "C",
+        "Ambas figuras prohíben difundir información por internet."
+      ],
+      [
+        "D",
+        "La publicidad activa difunde información de oficio; el acceso permite solicitar información en los términos legales."
+      ]
+    ],
+    "correct": 3,
+    "explanation": "La publicidad activa exige publicar determinada información sin solicitud previa, mientras que el derecho de acceso se ejerce mediante una petición sujeta a límites y procedimiento.",
+    "whys": [
+      "La publicación activa no depende de una sentencia.",
+      "El acceso está sujeto a límites, incluida la protección de datos.",
+      "Ambas herramientas favorecen el conocimiento de la actividad pública.",
+      "Es correcta: resume la diferencia esencial entre difusión de oficio y solicitud."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-216",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades del personal al servicio de las Administraciones Públicas",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "¿Puede reconocerse una actividad privada si compromete la imparcialidad del personal público?",
+    "options": [
+      [
+        "A",
+        "Sí, siempre que se realice fuera del edificio administrativo."
+      ],
+      [
+        "B",
+        "Sí, si produce ingresos elevados."
+      ],
+      [
+        "C",
+        "Sí, sin necesidad de examinar el conflicto."
+      ],
+      [
+        "D",
+        "No, la compatibilidad no debe menoscabar la imparcialidad ni los deberes del puesto."
+      ]
+    ],
+    "correct": 3,
+    "explanation": "La actividad privada no puede impedir o menoscabar el estricto cumplimiento de los deberes ni comprometer la imparcialidad o independencia.",
+    "whys": [
+      "El lugar de realización no elimina por sí mismo un conflicto de intereses.",
+      "La cuantía de los ingresos no justifica comprometer la imparcialidad.",
+      "La posible conexión con el puesto debe examinarse.",
+      "Es correcta: expresa un límite esencial del régimen de incompatibilidades."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-217",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de mujeres y hombres de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "¿Qué caracteriza al acoso sexual?",
+    "options": [
+      [
+        "A",
+        "Cualquier evaluación objetiva del trabajo."
+      ],
+      [
+        "B",
+        "Una diferencia salarial debidamente justificada por funciones distintas."
+      ],
+      [
+        "C",
+        "Un comportamiento verbal, no verbal o físico de naturaleza sexual que atenta contra la dignidad y crea un entorno intimidatorio, degradante u ofensivo."
+      ],
+      [
+        "D",
+        "Toda conversación profesional entre dos personas."
+      ]
+    ],
+    "correct": 2,
+    "explanation": "El acoso sexual se vincula a conductas de naturaleza sexual no deseadas que lesionan la dignidad o generan un entorno intimidatorio, hostil, degradante u ofensivo.",
+    "whys": [
+      "Una evaluación objetiva no es por sí misma acoso sexual.",
+      "Una diferencia objetivamente justificada no define esta conducta.",
+      "Es correcta: recoge sus elementos esenciales.",
+      "La interacción profesional ordinaria no constituye automáticamente acoso."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-218",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013, derechos de las personas con discapacidad",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "¿Cuándo existe discriminación indirecta por razón de discapacidad?",
+    "options": [
+      [
+        "A",
+        "Cuando una regla aparentemente neutra ocasiona una desventaja particular sin justificación objetiva y proporcionada."
+      ],
+      [
+        "B",
+        "Siempre que se adopta una medida de accesibilidad."
+      ],
+      [
+        "C",
+        "Solo cuando la exclusión se declara expresamente por escrito."
+      ],
+      [
+        "D",
+        "Cuando se realiza un ajuste razonable."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La discriminación indirecta aparece cuando una disposición o práctica aparentemente neutra sitúa a personas con discapacidad en desventaja sin justificación legítima y proporcionada.",
+    "whys": [
+      "Es correcta: describe el efecto desfavorable de una medida aparentemente neutral.",
+      "La accesibilidad pretende corregir barreras, no discriminar.",
+      "La discriminación indirecta puede existir sin una declaración explícita.",
+      "Los ajustes razonables son instrumentos de igualdad."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-219",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "¿Cómo deben aplicarse los límites al derecho de acceso a la información pública?",
+    "options": [
+      [
+        "A",
+        "De manera automática para denegar cualquier solicitud."
+      ],
+      [
+        "B",
+        "Sin explicar el motivo de la decisión."
+      ],
+      [
+        "C",
+        "Atendiendo al caso concreto y justificando su aplicación de forma proporcionada."
+      ],
+      [
+        "D",
+        "Como una prohibición absoluta de transparencia."
+      ]
+    ],
+    "correct": 2,
+    "explanation": "Los límites no operan como cláusulas automáticas: deben aplicarse de forma justificada, proporcionada y atendiendo a las circunstancias del caso.",
+    "whys": [
+      "La existencia de un límite no permite denegar automáticamente toda petición.",
+      "La resolución debe motivar la aplicación del límite.",
+      "Es correcta: exige análisis concreto, justificación y proporcionalidad.",
+      "Los límites conviven con el principio general de transparencia."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-229",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades del personal al servicio de las Administraciones Públicas",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "¿Qué finalidad general persigue el régimen de incompatibilidades?",
+    "options": [
+      [
+        "A",
+        "Garantizar un segundo empleo a todo el personal público."
+      ],
+      [
+        "B",
+        "Asegurar la dedicación, imparcialidad e independencia exigibles en el servicio público."
+      ],
+      [
+        "C",
+        "Impedir cualquier actividad cultural o científica sin excepción."
+      ],
+      [
+        "D",
+        "Eliminar el control de conflictos de intereses."
+      ]
+    ],
+    "correct": 1,
+    "explanation": "Este régimen protege la dedicación al puesto público y evita que otras actividades comprometan la imparcialidad, independencia o cumplimiento de deberes.",
+    "whys": [
+      "No reconoce un derecho general a acumular puestos.",
+      "Es correcta: resume la finalidad protectora del sistema.",
+      "La ley contempla actividades exceptuadas y supuestos autorizables.",
+      "Precisamente trata de prevenir conflictos de intereses."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-230",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de mujeres y hombres de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "¿Cuándo existe discriminación directa por razón de sexo?",
+    "options": [
+      [
+        "A",
+        "Cuando una persona recibe un trato menos favorable por razón de sexo que otra en situación comparable."
+      ],
+      [
+        "B",
+        "Cuando se adopta una medida proporcionada para corregir una desigualdad real."
+      ],
+      [
+        "C",
+        "Cuando se evalúan méritos con criterios objetivos idénticos."
+      ],
+      [
+        "D",
+        "Siempre que dos personas obtienen resultados distintos."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La discriminación directa se produce cuando el sexo determina un trato menos favorable respecto de otra persona en una situación comparable.",
+    "whys": [
+      "Es correcta: recoge los elementos de trato desfavorable y comparación.",
+      "Las acciones positivas justificadas buscan igualdad efectiva.",
+      "Aplicar criterios objetivos iguales no constituye por sí mismo discriminación.",
+      "Un resultado diferente no prueba automáticamente un trato discriminatorio."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-231",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013, derechos de las personas con discapacidad",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "¿Qué persigue el diseño universal o diseño para todas las personas?",
+    "options": [
+      [
+        "A",
+        "Crear productos utilizables solo por especialistas."
+      ],
+      [
+        "B",
+        "Posponer la accesibilidad hasta que aparezca una reclamación."
+      ],
+      [
+        "C",
+        "Concebir entornos, productos y servicios utilizables por todas las personas en la mayor medida posible desde su origen."
+      ],
+      [
+        "D",
+        "Sustituir siempre cualquier apoyo individual."
+      ]
+    ],
+    "correct": 2,
+    "explanation": "El diseño universal integra desde el inicio condiciones de uso accesibles para el mayor número de personas, sin excluir apoyos o ajustes cuando sean necesarios.",
+    "whys": [
+      "Su objetivo es ampliar el uso, no restringirlo.",
+      "La accesibilidad debe incorporarse preventivamente.",
+      "Es correcta: expresa la idea de accesibilidad desde el diseño.",
+      "El diseño universal no elimina necesariamente productos de apoyo o ajustes individuales."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-232",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "Si un límite afecta solo a una parte de la información solicitada, ¿qué solución debe valorarse?",
+    "options": [
+      [
+        "A",
+        "Destruir el documento completo."
+      ],
+      [
+        "B",
+        "Denegar cualquier futura solicitud de la persona interesada."
+      ],
+      [
+        "C",
+        "Publicar también los datos protegidos sin análisis."
+      ],
+      [
+        "D",
+        "Conceder acceso parcial, omitiendo la parte afectada cuando sea posible y tenga sentido."
+      ]
+    ],
+    "correct": 3,
+    "explanation": "El acceso parcial permite facilitar la información no afectada por un límite, siempre que la parte restante sea comprensible y se justifique la omisión.",
+    "whys": [
+      "La conservación documental no se altera por una solicitud de acceso.",
+      "Cada solicitud debe resolverse conforme a sus circunstancias.",
+      "Los datos protegidos deben tratarse conforme a los límites aplicables.",
+      "Es correcta: preserva el máximo acceso compatible con la protección exigida."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-242",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades del personal al servicio de las Administraciones Públicas",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "¿Puede utilizarse la condición de empleado público para obtener una ventaja en una actividad privada?",
+    "options": [
+      [
+        "A",
+        "Sí, si la ventaja no supera una cantidad determinada."
+      ],
+      [
+        "B",
+        "Sí, fuera del horario laboral."
+      ],
+      [
+        "C",
+        "No, sería contrario a la imparcialidad y a los deberes del servicio público."
+      ],
+      [
+        "D",
+        "Sí, cuando la actividad privada tenga clientes públicos."
+      ]
+    ],
+    "correct": 2,
+    "explanation": "La condición pública no puede instrumentalizarse para beneficiar intereses privados ni comprometer la independencia e imparcialidad exigibles.",
+    "whys": [
+      "No existe una ventaja privada permitida por debajo de una cuantía general.",
+      "El conflicto puede existir aunque la actividad sea fuera de horario.",
+      "Es correcta: protege neutralidad e integridad.",
+      "Tener clientes públicos puede aumentar, no eliminar, el riesgo de conflicto."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-243",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de mujeres y hombres de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "¿Qué finalidad tienen las acciones positivas en materia de igualdad?",
+    "options": [
+      [
+        "A",
+        "Mantener indefinidamente una desigualdad."
+      ],
+      [
+        "B",
+        "Sustituir todos los criterios de mérito."
+      ],
+      [
+        "C",
+        "Excluir a un sexo de cualquier política pública."
+      ],
+      [
+        "D",
+        "Corregir situaciones patentes de desigualdad de hecho mediante medidas razonables y proporcionadas."
+      ]
+    ],
+    "correct": 3,
+    "explanation": "Las acciones positivas son medidas específicas, temporales y proporcionadas destinadas a corregir desigualdades reales y avanzar hacia la igualdad efectiva.",
+    "whys": [
+      "Su objetivo es reducir desigualdad, no conservarla.",
+      "No eliminan indiscriminadamente los requisitos objetivos aplicables.",
+      "No persiguen una exclusión general.",
+      "Es correcta: identifica finalidad y límites de estas medidas."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-244",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013, derechos de las personas con discapacidad",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "¿Qué exige el principio de igualdad de oportunidades respecto de la discapacidad?",
+    "options": [
+      [
+        "A",
+        "Prevenir y eliminar discriminaciones y compensar desventajas para una participación plena."
+      ],
+      [
+        "B",
+        "Aplicar reglas idénticas aunque generen barreras injustificadas."
+      ],
+      [
+        "C",
+        "Limitar la accesibilidad a edificios nuevos de uso privado."
+      ],
+      [
+        "D",
+        "Prescindir de medidas de acción positiva."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La igualdad de oportunidades requiere ausencia de discriminación y adopción de medidas que eliminen barreras y permitan participación plena y efectiva.",
+    "whys": [
+      "Es correcta: combina prevención, eliminación de barreras y participación.",
+      "La igualdad efectiva puede exigir ajustes frente a reglas aparentemente neutras.",
+      "La accesibilidad se proyecta sobre numerosos ámbitos y servicios.",
+      "Las acciones positivas pueden ser necesarias para compensar desventajas."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-245",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "¿Cómo debe presentarse la información sometida a publicidad activa?",
+    "options": [
+      [
+        "A",
+        "De forma deliberadamente técnica e incomprensible."
+      ],
+      [
+        "B",
+        "Solo en papel dentro de una oficina."
+      ],
+      [
+        "C",
+        "De manera clara, estructurada, comprensible y accesible, favoreciendo su reutilización cuando proceda."
+      ],
+      [
+        "D",
+        "Sin indicar cuándo fue actualizada."
+      ]
+    ],
+    "correct": 2,
+    "explanation": "La publicidad activa debe ofrecer información útil, accesible y actualizada, organizada para facilitar su comprensión y uso por la ciudadanía.",
+    "whys": [
+      "La claridad es una condición de transparencia efectiva.",
+      "La difusión electrónica facilita el acceso general.",
+      "Es correcta: reúne cualidades esenciales de la información publicada.",
+      "La actualización y referencia temporal ayudan a valorar su vigencia."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-249",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades del personal al servicio de las Administraciones Públicas",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "Cuando una actividad necesita reconocimiento de compatibilidad, ¿cuándo debe solicitarse?",
+    "options": [
+      [
+        "A",
+        "Solo después de una inspección."
+      ],
+      [
+        "B",
+        "Al finalizar definitivamente la actividad."
+      ],
+      [
+        "C",
+        "Nunca, porque la compatibilidad es automática."
+      ],
+      [
+        "D",
+        "Antes de iniciar su ejercicio, para que pueda comprobarse su adecuación legal."
+      ]
+    ],
+    "correct": 3,
+    "explanation": "El reconocimiento de compatibilidad es previo al ejercicio de la actividad sujeta a él, pues debe verificarse antes que no comprometa el puesto público.",
+    "whys": [
+      "El control no debe esperar necesariamente a una inspección.",
+      "Solicitarlo al terminar impediría el control previo.",
+      "La compatibilidad no es automática en los supuestos sometidos a reconocimiento.",
+      "Es correcta: la autorización o reconocimiento debe preceder a la actividad."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-250",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de mujeres y hombres de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "¿Para qué sirve analizar el impacto de género de un presupuesto público?",
+    "options": [
+      [
+        "A",
+        "Para valorar si ingresos y gastos pueden afectar de forma diferente a mujeres y hombres y orientar mejoras."
+      ],
+      [
+        "B",
+        "Para impedir cualquier control del gasto."
+      ],
+      [
+        "C",
+        "Para sustituir todas las políticas sectoriales."
+      ],
+      [
+        "D",
+        "Para ocultar las desigualdades detectadas."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El análisis presupuestario con perspectiva de género permite detectar efectos diferenciados y mejorar la asignación de recursos hacia la igualdad efectiva.",
+    "whys": [
+      "Es correcta: vincula recursos públicos, efectos e igualdad.",
+      "El análisis complementa y refuerza el control.",
+      "No sustituye todas las políticas, sino que incorpora una perspectiva transversal.",
+      "Su utilidad está precisamente en hacer visibles las brechas."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-251",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013, derechos de las personas con discapacidad",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "¿La accesibilidad se limita a eliminar barreras físicas?",
+    "options": [
+      [
+        "A",
+        "Sí, solo afecta a escaleras y edificios."
+      ],
+      [
+        "B",
+        "No; también comprende comunicación, información, tecnologías, procesos y comprensión, entre otros ámbitos."
+      ],
+      [
+        "C",
+        "Sí, los servicios digitales quedan siempre excluidos."
+      ],
+      [
+        "D",
+        "No, pero únicamente se aplica al transporte privado."
+      ]
+    ],
+    "correct": 1,
+    "explanation": "La accesibilidad universal es multidimensional e incluye entornos físicos, comunicación, información, tecnologías, productos y servicios.",
+    "whys": [
+      "Las barreras pueden ser físicas, sensoriales, cognitivas, tecnológicas o comunicativas.",
+      "Es correcta: refleja el alcance amplio de la accesibilidad.",
+      "Los entornos y servicios digitales también deben ser accesibles.",
+      "Su ámbito no se reduce al transporte privado."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-252",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "¿Por qué debe actualizarse periódicamente la información de publicidad activa?",
+    "options": [
+      [
+        "A",
+        "Para aumentar el número de documentos aunque sean contradictorios."
+      ],
+      [
+        "B",
+        "Para evitar que la ciudadanía pueda comparar datos."
+      ],
+      [
+        "C",
+        "Para que la información publicada conserve utilidad, exactitud y vigencia."
+      ],
+      [
+        "D",
+        "Para sustituir el archivo administrativo."
+      ]
+    ],
+    "correct": 2,
+    "explanation": "La transparencia efectiva exige información vigente y fiable; los datos desactualizados pueden inducir a error y dificultar la rendición de cuentas.",
+    "whys": [
+      "La calidad importa más que acumular versiones contradictorias sin contexto.",
+      "La comparabilidad favorece el control ciudadano.",
+      "Es correcta: explica la necesidad de mantener información útil y actual.",
+      "La publicidad activa no reemplaza la gestión y conservación documental."
+    ]
+  },
+  {
+    "id": "troncal-incompatibilidades-258",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 53/1984, incompatibilidades del personal al servicio de las Administraciones Públicas",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-151",
+    "text": "¿Qué debe ocurrir si una actividad privada se relaciona directamente con asuntos que gestiona el puesto público?",
+    "options": [
+      [
+        "A",
+        "Debe autorizarse automáticamente."
+      ],
+      [
+        "B",
+        "Debe examinarse como un posible conflicto incompatible con la imparcialidad y los deberes del puesto."
+      ],
+      [
+        "C",
+        "No importa mientras se realice por internet."
+      ],
+      [
+        "D",
+        "Solo debe comunicarse a las empresas competidoras."
+      ]
+    ],
+    "correct": 1,
+    "explanation": "La conexión directa entre una actividad privada y los asuntos gestionados públicamente puede comprometer independencia e imparcialidad y constituye un elemento esencial del control de compatibilidad.",
+    "whys": [
+      "La relación con asuntos del puesto exige especial cautela, no autorización automática.",
+      "Es correcta: identifica el riesgo de conflicto de intereses.",
+      "El canal utilizado no elimina el conflicto material.",
+      "La comprobación corresponde a la Administración mediante el procedimiento aplicable."
+    ]
+  },
+  {
+    "id": "troncal-igualdad-259",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 7/2023, igualdad efectiva de mujeres y hombres de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html",
+    "text": "¿Por qué son útiles los datos estadísticos desagregados por sexo?",
+    "options": [
+      [
+        "A",
+        "Porque garantizan por sí solos que no exista desigualdad."
+      ],
+      [
+        "B",
+        "Porque sustituyen cualquier evaluación cualitativa."
+      ],
+      [
+        "C",
+        "Porque ayudan a detectar diferencias, brechas e impactos que podrían quedar ocultos en datos agregados."
+      ],
+      [
+        "D",
+        "Porque impiden comparar la evolución temporal."
+      ]
+    ],
+    "correct": 2,
+    "explanation": "La información desagregada permite diagnosticar desigualdades, diseñar medidas y evaluar sus resultados con mayor precisión.",
+    "whys": [
+      "Los datos ayudan al diagnóstico, pero no eliminan por sí mismos las desigualdades.",
+      "Deben combinarse con análisis e indicadores adecuados.",
+      "Es correcta: explica su valor para visibilizar brechas.",
+      "Bien mantenidos, permiten precisamente observar cambios en el tiempo."
+    ]
+  },
+  {
+    "id": "troncal-discapacidad-260",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Real Decreto Legislativo 1/2013, derechos de las personas con discapacidad",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632",
+    "text": "¿Qué implica promover la vida independiente de las personas con discapacidad?",
+    "options": [
+      [
+        "A",
+        "Decidir siempre por ellas sin escuchar sus preferencias."
+      ],
+      [
+        "B",
+        "Limitar su participación a entornos separados."
+      ],
+      [
+        "C",
+        "Eliminar todos los apoyos personales."
+      ],
+      [
+        "D",
+        "Favorecer que puedan elegir y controlar su forma de vida, con los apoyos necesarios para participar en la comunidad."
+      ]
+    ],
+    "correct": 3,
+    "explanation": "La vida independiente se relaciona con autonomía, capacidad de elección, inclusión comunitaria y acceso a los apoyos que cada persona pueda necesitar.",
+    "whys": [
+      "La autonomía exige respetar voluntad y preferencias.",
+      "La inclusión busca participación en la comunidad.",
+      "Los apoyos pueden ser esenciales para ejercer derechos y tomar decisiones.",
+      "Es correcta: integra elección, control, apoyos e inclusión."
+    ]
+  },
+  {
+    "id": "troncal-transparencia-261",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 1/2016, transparencia y buen gobierno de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html",
+    "text": "¿Es obligatorio explicar para qué se solicita información pública al ejercer el derecho de acceso?",
+    "options": [
+      [
+        "A",
+        "No; la falta de motivación no impide por sí sola tramitar la solicitud, aunque pueda exponerse el motivo."
+      ],
+      [
+        "B",
+        "Sí, y debe acreditarse siempre un interés económico."
+      ],
+      [
+        "C",
+        "Sí, pero solo mediante escritura notarial."
+      ],
+      [
+        "D",
+        "No, porque la Administración tampoco debe identificar la información solicitada."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El ejercicio del derecho de acceso no exige motivar la solicitud, sin perjuicio de que la persona pueda explicar sus razones y de que deba identificar suficientemente la información.",
+    "whys": [
+      "Es correcta: la motivación no es un requisito general de admisión.",
+      "No se exige acreditar un interés económico.",
+      "Tampoco se requiere escritura notarial para explicar un motivo.",
+      "La información solicitada sí debe poder identificarse para tramitar la petición."
+    ]
+  }
+]

@@ -5459,11 +5459,11 @@ questions.push(
     whys: ['Es correcta: describe conceptualmente la discriminación múltiple e interseccional en el artículo 11.', 'El concurso de infracciones administrativas se rige por la Ley 40/2015.', 'La concurrencia normativa se resuelve por los principios de jerarquía y competencia.', 'El cambio de puesto de trabajo no caracteriza el concepto de discriminación interseccional.']
   },
   {
-    id: 'troncal-discapacidad-114', quality: 'Verificada y reformulada', topic: 'Troncal estatal', source: 'RDL 1/2013, art. 2.d', sourceUrl: officialSources.disability,
-    text: 'Conforme al artículo 2.d del Real Decreto Legislativo 1/2013, la discriminación directa por razón de discapacidad existe cuando:',
+    id: 'troncal-discapacidad-114', quality: 'Verificada y reformulada', topic: 'Troncal estatal', source: 'RDL 1/2013, art. 2.c', sourceUrl: officialSources.disability,
+    text: 'Conforme al artículo 2.c del Real Decreto Legislativo 1/2013, la discriminación directa por razón de discapacidad existe cuando:',
     options: [['A', 'Una persona sea tratada de manera menos favorable que otra en situación análoga por motivo de su discapacidad.'], ['B', 'Una regla aparentemente neutra sitúa a personas con discapacidad en desventaja sin fin legítimo.'], ['C', 'Se adoptan medidas de acción positiva para compensar desigualdades de hecho.'], ['D', 'Se realizan obras de accesibilidad exigidas por la inspección de vivienda.']], correct: 0,
-    explanation: 'El artículo 2.d define la discriminación directa como aquella situación en la que una persona recibe un trato menos favorable que otra en situación comparable por razón de su discapacidad.',
-    whys: ['Es correcta: define el trato desfavorable directo comparativo.', 'La regla aparentemente neutra define a la discriminación indirecta (artículo 2.e).', 'Las acciones positivas no discriminan, son medidas de compensación autorizadas.', 'Las obras de accesibilidad son el cumplimiento de un deber legal, no discriminación.']
+    explanation: 'El artículo 2.c define la discriminación directa como aquella situación en la que una persona recibe un trato menos favorable que otra en situación comparable por razón de su discapacidad.',
+    whys: ['Es correcta: define el trato desfavorable directo comparativo.', 'La regla aparentemente neutra define a la discriminación indirecta (artículo 2.d).', 'Las acciones positivas no discriminan, son medidas de compensación autorizadas.', 'Las obras de accesibilidad son el cumplimiento de un deber legal, no discriminación.']
   },
   {
     id: 'troncal-transparencia-115', quality: 'Verificada y reformulada', topic: 'Troncal estatal', source: 'Ley 1/2016, art. 25.2', sourceUrl: officialSources.transparencyGalicia,
@@ -16142,9 +16142,9 @@ questions.push(
     id: 'gobierno-comisiones-delegadas-creacion-12',
     quality: 'Verificada - Nueva',
     topic: 'Gobierno',
-    source: 'Ley 50/1997, art. 12.1',
+    source: 'Ley 50/1997, art. 6.1',
     sourceUrl: officialSources.government,
-    text: 'A tenor del artículo 12.1 de la Ley 50/1997, ¿cómo se acuerda la creación, modificación y supresión de las Comisiones Delegadas del Gobierno?',
+    text: 'A tenor del artículo 6.1 de la Ley 50/1997, ¿cómo se acuerda la creación, modificación y supresión de las Comisiones Delegadas del Gobierno?',
     options: [
       ['A', 'Por orden del Ministro de la Presidencia, previo informe favorable de la Abogacía del Estado.'],
       ['B', 'Por Real Decreto del Consejo de Ministros, a propuesta del Presidente del Gobierno.'],
@@ -16152,10 +16152,10 @@ questions.push(
       ['D', 'Mediante acuerdo informal adoptado por mayoría absoluta en las deliberaciones del Consejo de Ministros.']
     ],
     correct: 1,
-    explanation: 'El artículo 12.1 de la Ley 50/1997 dispone textualmente: "La creación, modificación y supresión de las Comisiones Delegadas del Gobierno se acordará por Real Decreto del Consejo de Ministros, a propuesta del Presidente del Gobierno".',
+    explanation: 'El artículo 6.1 de la Ley 50/1997 dispone textualmente: "La creación, modificación y supresión de las Comisiones Delegadas del Gobierno se acordará por Real Decreto del Consejo de Ministros, a propuesta del Presidente del Gobierno".',
     whys: [
       'Incorrecto. Una orden ministerial es una norma de rango inferior y no puede estructurar estos órganos colegiados del Gobierno.',
-      'Correcto. Expresa fielmente el instrumento formal (Real Decreto del Consejo de Ministros) y la iniciativa (propuesta del Presidente) exigidos por el artículo 12.1.',
+      'Correcto. Expresa fielmente el instrumento formal (Real Decreto del Consejo de Ministros) y la iniciativa (propuesta del Presidente) exigidos por el artículo 6.1.',
       'Incorrecto. La Comisión General es un órgano preparatorio y carece de facultades ejecutivas para crear otros órganos colegiados.',
       'Incorrecto. La creación de órganos de relevancia constitucional y administrativa exige publicidad y publicación formal por Real Decreto.'
     ]
@@ -16370,9 +16370,9 @@ questions.push(
     id: 'estatuto-xunta-organo-colegiado-17',
     quality: 'Verificada - Nueva',
     topic: 'Estatuto de autonomía para Galicia',
-    source: 'Estatuto de Autonomía para Galicia, art. 17.1',
+    source: 'Estatuto de Autonomía para Galicia, art. 16.1',
     sourceUrl: officialSources.statute,
-    text: 'De conformidad con el artículo 17.1 del Estatuto de Autonomía para Galicia, ¿cómo define el Estatuto a la Xunta de Galicia?',
+    text: 'De conformidad con el artículo 16.1 del Estatuto de Autonomía para Galicia, ¿cómo define el Estatuto a la Xunta de Galicia?',
     options: [
       ['A', 'Como una delegación administrativa dependiente y subordinada de la Delegación del Gobierno en Galicia.'],
       ['B', 'Como el órgano colegiado de gobierno de Galicia, al que corresponde la dirección de la política de la Comunidad Autónoma y las funciones ejecutiva y administrativa.'],
@@ -16380,10 +16380,10 @@ questions.push(
       ['D', 'Como un órgano de carácter meramente consultivo en materia económica y presupuestaria.']
     ],
     correct: 1,
-    explanation: 'El artículo 17.1 del Estatuto establece: "La Xunta es el órgano colegiado de gobierno de Galicia, al que corresponde la dirección de la política de la Comunidad Autónoma y el ejercicio de las funciones ejecutiva y administrativa de acuerdo con la Constitución, el presente Estatuto y las Leyes".',
+    explanation: 'El artículo 16.1 del Estatuto establece: "La Xunta es el órgano colegiado de gobierno de Galicia, al que corresponde la dirección de la política de la Comunidad Autónoma y el ejercicio de las funciones ejecutiva y administrativa de acuerdo con la Constitución, el presente Estatuto y las Leyes".',
     whys: [
       'Incorrecto. La Xunta es el gobierno autónomo y no un órgano periférico dependiente de la Administración General del Estado o del Delegado del Gobierno.',
-      'Correcto. Refleja fielmente la definición y funciones superiores de la Xunta de Galicia que consagra el artículo 17.1.',
+      'Correcto. Refleja fielmente la definición y funciones superiores de la Xunta de Galicia que consagra el artículo 16.1.',
       'Incorrecto. La Xunta ostenta la función ejecutiva y de gobierno, mientras que la legislativa y de control corresponden al Parlamento de Galicia.',
       'Incorrecto. No es un órgano consultivo, sino el órgano político y administrativo de dirección ejecutiva de la Comunidad Autónoma.'
     ]
@@ -16804,9 +16804,9 @@ questions.push(
     id: 'consultivo-galicia-consejeros-duracion-mandato-10',
     quality: 'Verificada - Nueva',
     topic: 'Consejo Consultivo de Galicia',
-    source: 'Ley 3/2014, art. 10.1',
+    source: 'Ley 3/2014, art. 4.1',
     sourceUrl: officialSources.consultivoGalicia,
-    text: 'A tenor del artículo 10.1 de la Ley 3/2014, ¿cuál es la duración ordinaria del mandato de los consejeros electivos del Consejo Consultivo de Galicia?',
+    text: 'A tenor del artículo 4.1 de la Ley 3/2014, ¿cuál es la duración ordinaria del mandato de los consejeros electivos del Consejo Consultivo de Galicia?',
     options: [
       ['A', 'Es de cuatro años, renovable indefinidamente por períodos iguales.'],
       ['B', 'Es de seis años, no pudiendo ser reelegidos de forma consecutiva.'],
@@ -16814,10 +16814,10 @@ questions.push(
       ['D', 'De tres años, coincidiendo con la renovación ordinaria del Consejo de Cuentas de Galicia.']
     ],
     correct: 1,
-    explanation: 'El artículo 10.1 de la Ley 3/2014 establece expresamente: "El mandato de los consejeros electivos será de seis años, no pudiendo ser reelegidos de forma consecutiva".',
+    explanation: 'El artículo 4.1 de la Ley 3/2014 establece expresamente: "Los consejeros electivos serán nombrados por un período de seis años, sin que puedan ser reelegidos consecutivamente".',
     whys: [
       'Incorrecto. El período de cuatro años es aplicable a legislaturas y corporaciones locales, pero no al mandato de este órgano consultivo.',
-      'Correcto. Señala la duración legal exacta de 6 años y el régimen de no reelección consecutiva previsto en el artículo 10.1.',
+      'Correcto. Señala la duración legal exacta de 6 años y el régimen de no reelección consecutiva previsto en el artículo 4.1.',
       'Incorrecto. Ningún miembro electivo del Consejo Consultivo tiene nombramiento vitalicio; el único cargo sin límite temporal es el de consejero nato.',
       'Incorrecto. El plazo de 3 años es ajeno a la duración legal del mandato de los miembros del Consejo Consultivo.'
     ]
@@ -19543,9 +19543,9 @@ questions.push(
     id: 'consultivo-galicia-duracion-mandato-seis-anos-art8',
     quality: 'Verificada - Nueva',
     topic: 'Consejo Consultivo de Galicia',
-    source: 'Ley 3/2014, art. 8.1',
+    source: 'Ley 3/2014, art. 4.1',
     sourceUrl: officialSources.consultivoGalicia,
-    text: 'A tenor del artículo 8.1 de la Ley 3/2014, ¿cuál es la duración del mandato de los Consejeros electivos del Consejo Consultivo de Galicia y cabe su reelección inmediata?',
+    text: 'A tenor del artículo 4.1 de la Ley 3/2014, ¿cuál es la duración del mandato de los Consejeros electivos del Consejo Consultivo de Galicia y cabe su reelección inmediata?',
     options: [
       ['A', 'Se nombran por un período de seis años, sin que puedan ser reelegidos consecutivamente.'],
       ['B', 'Mandato de cuatro años renovable indefinidamente.'],
@@ -19553,9 +19553,9 @@ questions.push(
       ['D', 'Mandato de nueve años coincidente con el Tribunal Constitucional.']
     ],
     correct: 0,
-    explanation: 'El artículo 8.1 de la Ley 3/2014 dispone que los Consejeros electivos desempeñarán su cargo por un periodo de seis años, no siendo reelegibles para el periodo inmediatamente posterior.',
+    explanation: 'El artículo 4.1 de la Ley 3/2014 dispone que los consejeros electivos serán nombrados por un período de seis años, sin que puedan ser reelegidos consecutivamente.',
     whys: [
-      'Correcto. Refleja fielmente los 6 años de mandato e imposibilidad de reelección consecutiva del art. 8.1.',
+      'Correcto. Refleja fielmente los 6 años de mandato e imposibilidad de reelección consecutiva del art. 4.1.',
       'Incorrecto. Su mandato es de 6 años (no de 4) y prohíbe la reelección consecutiva.',
       'Incorrecto. El mandato de 3 años es inferior al fijado normativamente.',
       'Incorrecto. El mandato de 9 años es propio del TC y no del Consejo Consultivo gallego.'
@@ -28193,13 +28193,20 @@ function renderCoverage() {
     list.innerHTML = `<section class="coverage-dashboard-board">${renderBlock('Bloque I', 'Instituciones y organización básica')}${renderBlock('Bloque II', 'Procedimiento, contratación y empleo público')}</section>`;
   }
 }
-function buildSet(topic, length) {
-  if (topic === 'troncal') {
-    const trunk = questions.filter(q => { const t = coverageTopic(q); return t && t.startsWith('g1-'); });
-    const pool = trunk.length ? trunk : questions;
-    return Array.from({ length: Math.min(Number(length), Math.max(1, pool.length)) }, (_, index) => pool[index % pool.length]);
+function shuffleArray(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
   }
-  if (topic.startsWith('historico')) {
+  return arr;
+}
+
+function buildSet(topic, length) {
+  let pool = [];
+  if (topic === 'troncal') {
+    pool = questions.filter(q => { const t = coverageTopic(q); return t && t.startsWith('g1-'); });
+  } else if (topic && topic.startsWith('historico')) {
     const targetTopicName = {
       historico2025: 'Histórico oficial 2025',
       historico2024: 'Histórico oficial 2024',
@@ -28215,14 +28222,23 @@ function buildSet(topic, length) {
       historico2021: 'h2024-func-'
     };
     const prefix = prefixMap[topic] || 'h202';
-    const match = questions.filter(q => q.topic === targetTopicName || q.id.startsWith(prefix));
-    const pool = match.length ? match : questions;
-    const count = length ? Number(length) : pool.length;
-    return pool.slice(0, Math.min(count, pool.length));
+    pool = questions.filter(q => q.topic === targetTopicName || q.id.startsWith(prefix));
+    if (!length) return pool; // Devuelve el examen oficial integro en su orden
+  } else if (topic === 'mixto') {
+    pool = questions;
+  } else {
+    const topicMap = {
+      procedimiento: 'Procedimiento administrativo común',
+      galicia: 'Organización y sector público autonómico',
+      empleo: 'Empleo público de Galicia'
+    };
+    const targetName = topicMap[topic] || topic;
+    pool = questions.filter(q => q.topic === targetName || coverageTopic(q) === targetName || q.id.includes(topic));
   }
-  const eligible = topic === 'mixto' ? questions : questions.filter(q => ({ procedimiento:'Procedimiento administrativo', galicia:'Organización de Galicia', empleo:'Empleo público' })[topic] === q.topic);
-  const pool = eligible.length ? eligible : questions;
-  return Array.from({ length: Math.min(Number(length), Math.max(1, pool.length)) }, (_, index) => pool[index % pool.length]);
+  if (!pool.length) pool = questions;
+  const shuffled = shuffleArray(pool);
+  const count = length ? Math.min(Number(length), shuffled.length) : Math.min(18, shuffled.length);
+  return shuffled.slice(0, count);
 }
 function startQuiz(set, mode = 'practice') {
   activeQuiz = set;

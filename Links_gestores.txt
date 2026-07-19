@@ -1,0 +1,3 @@
+CloudFlare (Gestor de la pagina web): https://dash.cloudflare.com/7380749e6e174680a0a2f7e337a7b735/workers/services/view/oposiciones-xunta/production
+
+SuperBase (Gestor de la BBDD): https://supabase.com/dashboard/org/uoypoyisclkqtpvqfbnw

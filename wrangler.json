@@ -3,6 +3,15 @@
   "main": "index.js",
   "compatibility_date": "2026-07-19",
   "assets": {
-    "directory": "./"
+    "directory": "./",
+    "exclude": [
+      ".ia/**",
+      ".agents/**",
+      "scripts/**",
+      "scratch/**",
+      "docs/**",
+      "*.md",
+      "*.txt"
+    ]
   }
 }

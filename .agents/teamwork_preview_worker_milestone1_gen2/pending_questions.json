@@ -1,0 +1,954 @@
+[
+  {
+    "id": "troncal-ljca-12",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 29/1998, art. 1",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1998-16718",
+    "text": "El orden jurisdiccional contencioso-administrativo conoce, con carácter general, de pretensiones relacionadas con:",
+    "options": [
+      [
+        "A",
+        "La actuación de las administraciones públicas sujeta al Derecho administrativo."
+      ],
+      [
+        "B",
+        "Los litigios penales entre particulares."
+      ],
+      [
+        "C",
+        "La nulidad canónica del matrimonio."
+      ],
+      [
+        "D",
+        "Los conflictos laborales privados sin intervención administrativa."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 29/1998 atribuye a este orden el conocimiento de pretensiones sobre actuación administrativa sujeta al Derecho administrativo, disposiciones generales de rango inferior a la ley y decretos legislativos en los términos legales.",
+    "whys": [
+      "Es correcta: resume el núcleo del artículo 1.",
+      "Los litigios penales pertenecen al orden penal.",
+      "La nulidad canónica no es el objeto propio del contencioso-administrativo.",
+      "Los conflictos laborales privados se encauzan, por regla general, en el orden social."
+    ]
+  },
+  {
+    "id": "troncal-elecciones-27",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 8/1985, elecciones al Parlamento de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-8-1985-elecciones-parlamento-galicia.html",
+    "text": "La Ley 8/1985 incluida en el temario regula principalmente:",
+    "options": [
+      [
+        "A",
+        "Las elecciones al Parlamento de Galicia."
+      ],
+      [
+        "B",
+        "La contratación del sector público estatal."
+      ],
+      [
+        "C",
+        "El procedimiento administrativo común."
+      ],
+      [
+        "D",
+        "La organización del Tribunal Constitucional."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 8/1985 es la norma gallega que regula las elecciones al Parlamento de Galicia y forma parte del bloque institucional autonómico.",
+    "whys": [
+      "Es correcta: coincide con el objeto de la norma.",
+      "La contratación pública se estudia a través de la Ley 9/2017.",
+      "El procedimiento administrativo común se estudia con la Ley 39/2015.",
+      "El Tribunal Constitucional se regula por la Ley Orgánica 2/1979."
+    ]
+  },
+  {
+    "id": "troncal-valedor-28",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 6/1984, Valedor del Pueblo",
+    "sourceUrl": "documentos/troncal/galicia/ley-6-1984-valedor-pueblo.pdf",
+    "text": "El Valedor del Pueblo se estudia en el temario como institución vinculada a:",
+    "options": [
+      [
+        "A",
+        "La defensa de los derechos y libertades en el ámbito de Galicia."
+      ],
+      [
+        "B",
+        "La aprobación de los Presupuestos Generales del Estado."
+      ],
+      [
+        "C",
+        "La dirección de la política exterior del Estado."
+      ],
+      [
+        "D",
+        "La adjudicación ordinaria de contratos públicos."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El Valedor del Pueblo es la institución autonómica de garantía y supervisión vinculada a la defensa de derechos y libertades en Galicia.",
+    "whys": [
+      "Es correcta: expresa la función institucional propia del Valedor.",
+      "La aprobación de presupuestos estatales corresponde a las Cortes Generales.",
+      "La política exterior corresponde al Gobierno del Estado.",
+      "La adjudicación de contratos no define la función del Valedor."
+    ]
+  },
+  {
+    "id": "troncal-consultivo-29",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 3/2014, Consejo Consultivo de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-3-2014-consejo-consultivo-galicia.html",
+    "text": "El Consejo Consultivo de Galicia se configura, con carácter general, como:",
+    "options": [
+      [
+        "A",
+        "El supremo órgano consultivo de la Xunta de Galicia y de las administraciones públicas gallegas en los términos legales."
+      ],
+      [
+        "B",
+        "Un órgano jurisdiccional que dicta sentencias penales."
+      ],
+      [
+        "C",
+        "Una consellería con potestad legislativa propia."
+      ],
+      [
+        "D",
+        "Un registro mercantil autonómico."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 3/2014 regula el Consejo Consultivo de Galicia como órgano consultivo superior dentro de su ámbito, no como órgano judicial ni legislativo.",
+    "whys": [
+      "Es correcta: resume su naturaleza consultiva institucional.",
+      "No es un tribunal penal ni dicta sentencias.",
+      "Una consellería no tiene potestad legislativa propia.",
+      "No es un registro mercantil."
+    ]
+  },
+  {
+    "id": "troncal-elecciones-66",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 8/1985, elecciones al Parlamento de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-8-1985-elecciones-parlamento-galicia.html",
+    "text": "La regulación de las elecciones al Parlamento de Galicia se conecta directamente con:",
+    "options": [
+      [
+        "A",
+        "La elección de los representantes de la ciudadanía gallega en la cámara autonómica."
+      ],
+      [
+        "B",
+        "La adjudicación de contratos de obras."
+      ],
+      [
+        "C",
+        "El régimen sancionador de subvenciones."
+      ],
+      [
+        "D",
+        "La composición del Tribunal Constitucional."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 8/1985 regula el proceso electoral al Parlamento de Galicia, esto es, la elección de representantes autonómicos.",
+    "whys": [
+      "Es correcta: identifica el objeto electoral de la norma.",
+      "La contratación de obras pertenece a contratación pública.",
+      "El régimen sancionador de subvenciones se estudia en su ley propia.",
+      "La composición del Tribunal Constitucional se regula en su ley orgánica."
+    ]
+  },
+  {
+    "id": "troncal-valedor-67",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 6/1984, Valedor del Pueblo",
+    "sourceUrl": "documentos/troncal/galicia/ley-6-1984-valedor-pueblo.pdf",
+    "text": "El Valedor del Pueblo se parece funcionalmente al Defensor del Pueblo en que ambos se orientan a:",
+    "options": [
+      [
+        "A",
+        "La protección y defensa de derechos frente a la actuación administrativa en su respectivo ámbito."
+      ],
+      [
+        "B",
+        "La adjudicación de contratos administrativos."
+      ],
+      [
+        "C",
+        "La dirección de la política exterior."
+      ],
+      [
+        "D",
+        "La aprobación de leyes estatales."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El Valedor del Pueblo es la institución gallega de garantía, con una función de protección y supervisión comparable al Defensor del Pueblo en el ámbito estatal.",
+    "whys": [
+      "Es correcta: señala su función de garantía institucional.",
+      "No adjudica contratos.",
+      "No dirige la política exterior.",
+      "No aprueba leyes estatales."
+    ]
+  },
+  {
+    "id": "troncal-consultivo-68",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 3/2014, Consejo Consultivo de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-3-2014-consejo-consultivo-galicia.html",
+    "text": "Los dictámenes del Consejo Consultivo de Galicia se insertan en una función principalmente:",
+    "options": [
+      [
+        "A",
+        "Consultiva y de asesoramiento jurídico-institucional."
+      ],
+      [
+        "B",
+        "Jurisdiccional penal."
+      ],
+      [
+        "C",
+        "Electoral parlamentaria."
+      ],
+      [
+        "D",
+        "Mercantil privada."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El Consejo Consultivo emite dictámenes en los casos legalmente previstos, actuando como órgano consultivo superior en su ámbito.",
+    "whys": [
+      "Es correcta: describe su función consultiva.",
+      "No es un órgano penal.",
+      "No organiza elecciones como función principal.",
+      "No es una entidad mercantil privada."
+    ]
+  },
+  {
+    "id": "troncal-ljca-69",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 29/1998, jurisdicción contencioso-administrativa",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1998-16718",
+    "text": "La jurisdicción contencioso-administrativa permite controlar judicialmente, entre otras cuestiones:",
+    "options": [
+      [
+        "A",
+        "La actuación de las administraciones públicas sujeta al Derecho administrativo."
+      ],
+      [
+        "B",
+        "Solo debates parlamentarios sin efectos jurídicos."
+      ],
+      [
+        "C",
+        "Exclusivamente contratos privados entre particulares."
+      ],
+      [
+        "D",
+        "La celebración de matrimonios civiles sin acto administrativo."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El orden contencioso-administrativo controla la actuación administrativa sujeta al Derecho administrativo y otras materias previstas legalmente.",
+    "whys": [
+      "Es correcta: recoge su objeto central.",
+      "No se limita a debates parlamentarios sin efectos jurídicos.",
+      "Los contratos privados entre particulares pertenecen al orden civil en general.",
+      "La celebración matrimonial no define este orden jurisdiccional."
+    ]
+  },
+  {
+    "id": "troncal-elecciones-94",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 8/1985, elecciones al Parlamento de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-8-1985-elecciones-parlamento-galicia.html",
+    "text": "La circunscripción electoral en las elecciones al Parlamento de Galicia se vincula tradicionalmente a:",
+    "options": [
+      [
+        "A",
+        "Las provincias gallegas."
+      ],
+      [
+        "B",
+        "Cada parroquia como circunscripción única."
+      ],
+      [
+        "C",
+        "Cada consellería de la Xunta."
+      ],
+      [
+        "D",
+        "Cada órgano judicial penal."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El sistema electoral gallego se organiza sobre circunscripciones provinciales, en línea con la regulación electoral autonómica.",
+    "whys": [
+      "Es correcta: las provincias son la referencia circunscripcional.",
+      "Las parroquias no son la circunscripción electoral parlamentaria.",
+      "Las consellerías no son circunscripciones electorales.",
+      "Los órganos judiciales no definen circunscripciones parlamentarias."
+    ]
+  },
+  {
+    "id": "troncal-valedor-95",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 6/1984, Valedor del Pueblo",
+    "sourceUrl": "documentos/troncal/galicia/ley-6-1984-valedor-pueblo.pdf",
+    "text": "La actuación del Valedor del Pueblo tiene naturaleza principalmente:",
+    "options": [
+      [
+        "A",
+        "Supervisora y de garantía, no jurisdiccional."
+      ],
+      [
+        "B",
+        "Penal sancionadora judicial."
+      ],
+      [
+        "C",
+        "Legislativa estatal."
+      ],
+      [
+        "D",
+        "Contractual mercantil."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El Valedor supervisa y formula actuaciones de garantía dentro de su ámbito, pero no dicta sentencias ni sustituye a los tribunales.",
+    "whys": [
+      "Es correcta: describe su función institucional.",
+      "No es un órgano judicial penal.",
+      "No ejerce potestad legislativa estatal.",
+      "No tiene naturaleza contractual mercantil."
+    ]
+  },
+  {
+    "id": "troncal-consultivo-96",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 3/2014, Consejo Consultivo de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-3-2014-consejo-consultivo-galicia.html",
+    "text": "Cuando una norma exige dictamen del Consejo Consultivo, dicho dictamen cumple una función de:",
+    "options": [
+      [
+        "A",
+        "Garantía y asesoramiento jurídico previo a la decisión administrativa correspondiente."
+      ],
+      [
+        "B",
+        "Sustitución automática de la decisión del órgano competente."
+      ],
+      [
+        "C",
+        "Ejecución penal de una sentencia."
+      ],
+      [
+        "D",
+        "Elección de representantes parlamentarios."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El dictamen consultivo aporta control y asesoramiento jurídico en supuestos legalmente previstos, sin convertir al Consejo en el órgano decisor ordinario.",
+    "whys": [
+      "Es correcta: refleja la utilidad del dictamen.",
+      "El dictamen no sustituye automáticamente al órgano competente.",
+      "No ejecuta sentencias penales.",
+      "No organiza elecciones parlamentarias."
+    ]
+  },
+  {
+    "id": "troncal-ljca-97",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 29/1998, jurisdicción contencioso-administrativa",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1998-16718",
+    "text": "En el proceso contencioso-administrativo, la persona recurrente impugna normalmente:",
+    "options": [
+      [
+        "A",
+        "Una actuación administrativa, disposición o inactividad susceptible de control jurisdiccional."
+      ],
+      [
+        "B",
+        "Una conversación privada sin relevancia jurídica."
+      ],
+      [
+        "C",
+        "Una mera opinión doctrinal sin efectos."
+      ],
+      [
+        "D",
+        "La composición de un equipo deportivo."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La jurisdicción contencioso-administrativa controla actuaciones administrativas y otros objetos procesales previstos por la Ley 29/1998.",
+    "whys": [
+      "Es correcta: recoge el objeto típico de impugnación.",
+      "Una conversación privada sin efectos jurídicos no es objeto normal del recurso.",
+      "Una opinión doctrinal sin efectos no es actuación impugnable.",
+      "La composición de un equipo deportivo no define este proceso."
+    ]
+  },
+  {
+    "id": "troncal-valedor-101",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 6/1984, Valedor del Pueblo",
+    "sourceUrl": "documentos/troncal/galicia/ley-6-1984-valedor-pueblo.pdf",
+    "text": "Las resoluciones o recomendaciones del Valedor del Pueblo tienen como finalidad principal:",
+    "options": [
+      [
+        "A",
+        "Impulsar la corrección de actuaciones administrativas que afecten a derechos o intereses protegidos."
+      ],
+      [
+        "B",
+        "Dictar sentencias firmes con efectos de cosa juzgada."
+      ],
+      [
+        "C",
+        "Aprobar leyes orgánicas estatales."
+      ],
+      [
+        "D",
+        "Adjudicar subvenciones nominativas."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El Valedor actúa como institución de garantía y supervisión, formulando recomendaciones o actuaciones dirigidas a corregir disfunciones administrativas.",
+    "whys": [
+      "Es correcta: describe su función de garantía.",
+      "No dicta sentencias judiciales.",
+      "No aprueba leyes orgánicas.",
+      "No adjudica subvenciones como función propia."
+    ]
+  },
+  {
+    "id": "troncal-ljca-102",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 29/1998, jurisdicción contencioso-administrativa",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1998-16718",
+    "text": "La inactividad de la Administración puede ser objeto de control contencioso-administrativo cuando:",
+    "options": [
+      [
+        "A",
+        "Se den los presupuestos previstos por la Ley reguladora de la jurisdicción contencioso-administrativa."
+      ],
+      [
+        "B",
+        "Lo decida libremente una empresa privada sin relación con el expediente."
+      ],
+      [
+        "C",
+        "Se trate de una conversación familiar sin Administración pública."
+      ],
+      [
+        "D",
+        "Siempre que exista un contrato privado verbal entre particulares."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 29/1998 contempla mecanismos para controlar determinadas formas de inactividad administrativa en los términos legalmente previstos.",
+    "whys": [
+      "Es correcta: la inactividad puede ser controlable si encaja en la Ley.",
+      "Una empresa privada ajena no decide la apertura del control jurisdiccional.",
+      "Sin actuación o inactividad administrativa no hay objeto contencioso ordinario.",
+      "Un contrato privado entre particulares no determina por sí solo la jurisdicción contenciosa."
+    ]
+  },
+  {
+    "id": "troncal-elecciones-135",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 8/1985, de elecciones al Parlamento de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-8-1985-elecciones-parlamento-galicia.html",
+    "text": "¿Qué materia regula la Ley 8/1985 incluida en el temario?",
+    "options": [
+      [
+        "A",
+        "Las elecciones al Parlamento de Galicia."
+      ],
+      [
+        "B",
+        "La contratación del sector público estatal."
+      ],
+      [
+        "C",
+        "El régimen de incompatibilidades del personal público estatal."
+      ],
+      [
+        "D",
+        "La jurisdicción contencioso-administrativa."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 8/1985 se refiere al régimen electoral del Parlamento de Galicia, uno de los temas del Bloque I del programa troncal.",
+    "whys": [
+      "Es correcta: es la materia propia de la Ley 8/1985.",
+      "La contratación pública se estudia en la Ley 9/2017.",
+      "Las incompatibilidades se estudian en la Ley 53/1984.",
+      "La jurisdicción contencioso-administrativa se estudia en la Ley 29/1998."
+    ]
+  },
+  {
+    "id": "troncal-valedor-136",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 6/1984, del Valedor del Pueblo de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-6-1984-valedor-pueblo.pdf",
+    "text": "¿Qué figura institucional gallega guarda una relación funcional semejante al Defensor del Pueblo en el ámbito autonómico?",
+    "options": [
+      [
+        "A",
+        "El Valedor del Pueblo."
+      ],
+      [
+        "B",
+        "El Consejo de Ministros."
+      ],
+      [
+        "C",
+        "El Tribunal Supremo."
+      ],
+      [
+        "D",
+        "La Mesa de contratación."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El Valedor del Pueblo es la institución gallega de garantía y supervisión vinculada a la defensa de derechos en el ámbito de la Comunidad Autónoma.",
+    "whys": [
+      "Es correcta: es la institución autonómica correspondiente.",
+      "El Consejo de Ministros es órgano del Gobierno estatal.",
+      "El Tribunal Supremo es órgano jurisdiccional.",
+      "Una mesa de contratación no es una institución de defensa de derechos."
+    ]
+  },
+  {
+    "id": "troncal-consultivo-137",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 3/2014, del Consejo Consultivo de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-3-2014-consejo-consultivo-galicia.html",
+    "text": "¿Cuál es la naturaleza básica del Consejo Consultivo de Galicia?",
+    "options": [
+      [
+        "A",
+        "Órgano consultivo superior de la Xunta de Galicia y de las administraciones públicas gallegas en los términos legales."
+      ],
+      [
+        "B",
+        "Órgano judicial encargado de dictar sentencias penales."
+      ],
+      [
+        "C",
+        "Empresa pública dedicada exclusivamente a contratar obras."
+      ],
+      [
+        "D",
+        "Órgano electoral encargado de elegir directamente a la Presidencia de la Xunta."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 3/2014 configura el Consejo Consultivo de Galicia como órgano consultivo superior, con emisión de dictámenes en los supuestos previstos.",
+    "whys": [
+      "Es correcta: describe su función consultiva superior.",
+      "No es un órgano judicial penal.",
+      "No es una empresa pública contratista.",
+      "No elige directamente a la Presidencia de la Xunta."
+    ]
+  },
+  {
+    "id": "troncal-ljca-138",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 29/1998, jurisdicción contencioso-administrativa",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1998-16718",
+    "text": "¿Qué tipo de actuación se controla de forma característica ante la jurisdicción contencioso-administrativa?",
+    "options": [
+      [
+        "A",
+        "La actuación de las administraciones públicas sujeta al Derecho administrativo."
+      ],
+      [
+        "B",
+        "Las controversias penales entre particulares por delitos."
+      ],
+      [
+        "C",
+        "La validez sacramental de un matrimonio religioso."
+      ],
+      [
+        "D",
+        "La composición de una obra musical privada."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La Ley 29/1998 atribuye al orden contencioso-administrativo el conocimiento de pretensiones relativas a la actuación administrativa sujeta al Derecho administrativo.",
+    "whys": [
+      "Es correcta: recoge el núcleo del orden contencioso-administrativo.",
+      "Los delitos pertenecen al orden penal.",
+      "Esa materia no es propia del orden contencioso-administrativo.",
+      "La creación musical privada no es una actuación administrativa."
+    ]
+  },
+  {
+    "id": "troncal-elecciones-167",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 8/1985, de elecciones al Parlamento de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-8-1985-elecciones-parlamento-galicia.html",
+    "text": "¿Qué principio resulta esencial en unas elecciones parlamentarias autonómicas?",
+    "options": [
+      [
+        "A",
+        "La elección de representantes mediante sufragio en los términos previstos por la ley."
+      ],
+      [
+        "B",
+        "La designación secreta de diputados por empresas privadas."
+      ],
+      [
+        "C",
+        "La ausencia total de censo y procedimiento electoral."
+      ],
+      [
+        "D",
+        "La sustitución permanente del Parlamento por una mesa de contratación."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La legislación electoral ordena el procedimiento para elegir representantes al Parlamento de Galicia conforme a reglas públicas y garantías electorales.",
+    "whys": [
+      "Es correcta: expresa la finalidad electoral esencial.",
+      "Los diputados no se designan por empresas privadas.",
+      "El procedimiento electoral exige reglas y garantías.",
+      "Una mesa de contratación no sustituye al Parlamento."
+    ]
+  },
+  {
+    "id": "troncal-valedor-168",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 6/1984, del Valedor del Pueblo de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-6-1984-valedor-pueblo.pdf",
+    "text": "¿Qué tipo de institución es el Valedor del Pueblo de Galicia?",
+    "options": [
+      [
+        "A",
+        "Una institución de garantía y supervisión vinculada a la defensa de derechos en Galicia."
+      ],
+      [
+        "B",
+        "Un órgano de contratación mercantil privada."
+      ],
+      [
+        "C",
+        "Una sala del Tribunal Constitucional."
+      ],
+      [
+        "D",
+        "Una consellería encargada de dictar sentencias."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El Valedor del Pueblo se configura como institución autonómica de garantía, con funciones de supervisión de la actividad administrativa en defensa de derechos.",
+    "whys": [
+      "Es correcta: describe su naturaleza funcional.",
+      "No es un órgano mercantil privado.",
+      "No forma parte del Tribunal Constitucional.",
+      "Una consellería no dicta sentencias."
+    ]
+  },
+  {
+    "id": "troncal-consultivo-169",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 3/2014, del Consejo Consultivo de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-3-2014-consejo-consultivo-galicia.html",
+    "text": "¿Qué valor tienen los dictámenes de un órgano consultivo como el Consejo Consultivo de Galicia?",
+    "options": [
+      [
+        "A",
+        "Informan jurídicamente expedientes en los supuestos previstos, con el alcance que establezca la ley."
+      ],
+      [
+        "B",
+        "Son siempre sentencias penales ejecutables."
+      ],
+      [
+        "C",
+        "Sustituyen automáticamente cualquier ley autonómica."
+      ],
+      [
+        "D",
+        "Eliminan la necesidad de tramitar expedientes."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "El Consejo Consultivo emite dictámenes jurídicos en los casos previstos por su normativa, como garantía de control y asesoramiento jurídico.",
+    "whys": [
+      "Es correcta: recoge su función consultiva.",
+      "Un dictamen no es una sentencia penal.",
+      "No sustituye las leyes.",
+      "No elimina por sí mismo la tramitación del expediente."
+    ]
+  },
+  {
+    "id": "troncal-ljca-170",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 29/1998, jurisdicción contencioso-administrativa",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1998-16718",
+    "text": "¿Qué puede impugnarse ante el orden contencioso-administrativo, con carácter general?",
+    "options": [
+      [
+        "A",
+        "Actuaciones administrativas sujetas al Derecho administrativo."
+      ],
+      [
+        "B",
+        "Opiniones privadas sin relevancia jurídica administrativa."
+      ],
+      [
+        "C",
+        "Delitos investigados exclusivamente por la jurisdicción penal."
+      ],
+      [
+        "D",
+        "Confesiones religiosas como materia interna de fe."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "La jurisdicción contencioso-administrativa controla la actuación administrativa sometida al Derecho administrativo, según la Ley 29/1998.",
+    "whys": [
+      "Es correcta: resume el ámbito característico del orden contencioso.",
+      "Una opinión privada no es por sí misma actuación administrativa.",
+      "Los delitos corresponden al orden penal.",
+      "Las cuestiones internas de fe no son el objeto típico de este orden."
+    ]
+  },
+  {
+    "id": "troncal-elecciones-190",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 8/1985, de elecciones al Parlamento de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-8-1985-elecciones-parlamento-galicia.html",
+    "text": "¿Cuál es la circunscripción electoral en las elecciones al Parlamento de Galicia?",
+    "options": [
+      [
+        "A",
+        "El municipio."
+      ],
+      [
+        "B",
+        "La comarca."
+      ],
+      [
+        "C",
+        "La provincia."
+      ],
+      [
+        "D",
+        "La comunidad autónoma como circunscripción única en todo caso."
+      ]
+    ],
+    "correct": 2,
+    "explanation": "La circunscripción electoral para las elecciones al Parlamento de Galicia es la provincia.",
+    "whys": [
+      "El municipio no es la circunscripción de estas elecciones parlamentarias.",
+      "La comarca tampoco actúa como circunscripción electoral parlamentaria.",
+      "Es correcta: cada provincia constituye una circunscripción.",
+      "La normativa gallega adopta circunscripciones provinciales, no una única autonómica."
+    ]
+  },
+  {
+    "id": "troncal-valedor-191",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 6/1984, del Valedor del Pueblo de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-6-1984-valedor-pueblo.pdf",
+    "text": "¿Ante qué institución rinde cuenta de su actividad el Valedor del Pueblo?",
+    "options": [
+      [
+        "A",
+        "Ante una empresa auditora privada."
+      ],
+      [
+        "B",
+        "Ante el Parlamento de Galicia."
+      ],
+      [
+        "C",
+        "Exclusivamente ante el Defensor del Pueblo europeo."
+      ],
+      [
+        "D",
+        "Ante cada ayuntamiento por separado."
+      ]
+    ],
+    "correct": 1,
+    "explanation": "El Valedor es un alto comisionado del Parlamento de Galicia y le informa de su actuación mediante los instrumentos previstos legalmente.",
+    "whys": [
+      "Su rendición institucional no se encomienda a una empresa privada.",
+      "Es correcta: la vinculación y rendición de cuentas se producen ante el Parlamento gallego.",
+      "No depende exclusivamente de una institución europea.",
+      "No rinde cuenta de su actividad general ante cada municipio por separado."
+    ]
+  },
+  {
+    "id": "troncal-consultivo-192",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 3/2014, del Consejo Consultivo de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-3-2014-consejo-consultivo-galicia.html",
+    "text": "¿Qué debe preservar el Consejo Consultivo al ejercer su función de asesoramiento jurídico?",
+    "options": [
+      [
+        "A",
+        "Su autonomía orgánica y funcional."
+      ],
+      [
+        "B",
+        "La obediencia a intereses privados."
+      ],
+      [
+        "C",
+        "La sustitución de los órganos que deben resolver."
+      ],
+      [
+        "D",
+        "La ausencia de fundamentación jurídica."
+      ]
+    ],
+    "correct": 0,
+    "explanation": "Su configuración legal garantiza autonomía orgánica y funcional para ejercer con objetividad su función consultiva.",
+    "whys": [
+      "Es correcta: la autonomía refuerza la objetividad del asesoramiento.",
+      "Los intereses privados no deben dirigir su actuación.",
+      "El Consejo dictamina, pero no sustituye con carácter general al órgano competente para resolver.",
+      "Sus dictámenes son jurídicos y han de estar fundamentados."
+    ]
+  },
+  {
+    "id": "troncal-ljca-193",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 29/1998, jurisdicción contencioso-administrativa",
+    "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-1998-16718",
+    "text": "¿Qué finalidad cumple el control contencioso-administrativo?",
+    "options": [
+      [
+        "A",
+        "Evitar que los tribunales revisen cualquier actuación pública."
+      ],
+      [
+        "B",
+        "Convertir toda controversia administrativa en un delito."
+      ],
+      [
+        "C",
+        "Permitir que la Administración actúe sin sometimiento a la ley."
+      ],
+      [
+        "D",
+        "Controlar judicialmente la legalidad de la actuación administrativa sometida al Derecho administrativo."
+      ]
+    ],
+    "correct": 3,
+    "explanation": "Este orden jurisdiccional hace efectivo el control judicial de las Administraciones respecto de su actuación sujeta al Derecho administrativo.",
+    "whys": [
+      "Precisamente permite el control judicial en su ámbito.",
+      "Una controversia administrativa no se convierte por ello en penal.",
+      "La Administración está sometida a la Constitución y al resto del ordenamiento.",
+      "Es correcta: resume la función propia de esta jurisdicción."
+    ]
+  },
+  {
+    "id": "troncal-elecciones-265",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 8/1985, de elecciones al Parlamento de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-8-1985-elecciones-parlamento-galicia.html",
+    "text": "¿Qué busca el sistema electoral al transformar votos en escaños?",
+    "options": [
+      [
+        "A",
+        "Excluir cualquier regla previa de reparto."
+      ],
+      [
+        "B",
+        "Designar diputados por decisión del Gobierno."
+      ],
+      [
+        "C",
+        "Sustituir las candidaturas por nombramientos administrativos."
+      ],
+      [
+        "D",
+        "Articular una representación proporcional conforme a las reglas establecidas legalmente."
+      ]
+    ],
+    "correct": 3,
+    "explanation": "La elección del Parlamento gallego se basa en representación proporcional, aplicada por circunscripciones y conforme a las reglas electorales previstas.",
+    "whys": [
+      "El reparto se somete a reglas legales conocidas.",
+      "El Gobierno no designa a los diputados electos.",
+      "Los escaños proceden del proceso electoral y las candidaturas.",
+      "Es correcta: identifica el principio representativo del sistema."
+    ]
+  },
+  {
+    "id": "troncal-consultivo-266",
+    "quality": "Redacción propia · pendiente de revisión",
+    "topic": "Troncal estatal",
+    "source": "Ley 3/2014, del Consejo Consultivo de Galicia",
+    "sourceUrl": "documentos/troncal/galicia/ley-3-2014-consejo-consultivo-galicia.html",
+    "text": "¿Son vinculantes todos los dictámenes del Consejo Consultivo de Galicia?",
+    "options": [
+      [
+        "A",
+        "Sí, sustituyen siempre la decisión del órgano competente."
+      ],
+      [
+        "B",
+        "No; solo tienen carácter vinculante cuando una norma lo establece expresamente."
+      ],
+      [
+        "C",
+        "Sí, pero únicamente si son verbales."
+      ],
+      [
+        "D",
+        "No, porque carecen siempre de cualquier relevancia jurídica."
+      ]
+    ],
+    "correct": 1,
+    "explanation": "Los dictámenes asesoran jurídicamente al órgano competente y no son vinculantes con carácter general, salvo previsión normativa expresa.",
+    "whys": [
+      "El órgano competente conserva normalmente la decisión final.",
+      "Es correcta: distingue obligatoriedad de solicitar y fuerza vinculante.",
+      "Los dictámenes se formalizan conforme al procedimiento, no adquieren fuerza por ser verbales.",
+      "Aunque no vinculen siempre, tienen relevancia como garantía de legalidad y asesoramiento."
+    ]
+  }
+]
