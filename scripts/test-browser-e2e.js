@@ -63,6 +63,12 @@ async function runE2ESuite() {
   assert.strictEqual(document.getElementById('snapshotRatio').textContent, '1.207/1.210', '❌ DOM 0 Fallido: el total no mantiene formato es-ES');
   assert.strictEqual(htmlContent.includes('Preguntas Verificadas'), false, '❌ DOM 0 Fallido: reapareció una afirmación editorial retirada');
   assert.strictEqual(htmlContent.includes('servidores alojados en la Unión Europea'), false, '❌ DOM 0 Fallido: reapareció una región de Supabase no demostrada');
+  assert.strictEqual(htmlContent.includes('oposiciones.a2.xunta@gmail.com'), false, '❌ DOM 0 Fallido: reapareció un contacto no reconocido por el titular');
+  assert.strictEqual(document.querySelector('.repository-link').href, 'https://github.com/creace13/oposiciones-a2-xunta', '❌ DOM 0 Fallido: enlace al repositorio incorrecto');
+  assert.strictEqual(document.getElementById('projectCreditsTitle').textContent.includes('colaboración entre inteligencias artificiales'), true, '❌ DOM 0 Fallido: créditos Inter-IA ausentes');
+  assert.strictEqual(document.querySelector('.closing-quote').textContent.includes('La constancia no hace ruido'), true, '❌ DOM 0 Fallido: cierre motivador ausente');
+  assert.strictEqual(htmlContent.includes('Versión 1.1 (Estable en modo local)'), true, '❌ DOM 0 Fallido: versión estable local no publicada en la interfaz');
+  assert.strictEqual(htmlContent.includes('Cuentas remotas en Beta'), true, '❌ DOM 0 Fallido: falta advertencia sobre cuentas remotas');
   console.log('  PASADO: Métricas y textos de transparencia verificados.');
 
   // Flow 1: Carga de la aplicación e inicio en modo invitado

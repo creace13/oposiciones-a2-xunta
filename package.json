@@ -1,6 +1,6 @@
 {
   "name": "oposiciones-a2-xunta",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Plataforma de preparación inteligente para el Subgrupo A2 de la Xunta de Galicia",
   "main": "app.js",
   "scripts": {
