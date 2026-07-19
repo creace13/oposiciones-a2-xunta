@@ -25,5 +25,6 @@ Formato obligatorio: `NN-TIPO-ASUNTO-MODELO-AAAA-MM-DD.md`.
 - `17`: respuesta de implementación de Codex como constructor.
 - `18`: respuesta de cierre editorial y declaración de versión 1.1 estable local.
 - `19`: respuesta correctiva que retira definitivamente las metas internas y porcentajes engañosos de la interfaz.
+- `20`: cierre de publicación de la versión 1.1.1 en GitHub y Cloudflare Workers.
 
-La versión 1.1.1 está cerrada como estable en modo local: suite automatizada aprobada, métricas visibles corregidas y validación manual del usuario en tableta, móvil y PC. No se ha hecho `push`; la publicación queda pendiente de autorización expresa. Las cuentas remotas permanecen en Beta hasta disponer de borrado remoto autoservicio o un canal privado controlado. La garantía definitiva ampliada conserva accesibilidad, backup/rollback y revisión jurídica independiente.
+La versión 1.1.1 está publicada: suite automatizada aprobada, métricas visibles corregidas, validación manual del usuario en tableta, móvil y PC y comprobación HTTP de producción. Las cuentas remotas permanecen en Beta hasta disponer de borrado remoto autoservicio o un canal privado controlado. La garantía definitiva ampliada conserva accesibilidad, backup/rollback y revisión jurídica independiente.

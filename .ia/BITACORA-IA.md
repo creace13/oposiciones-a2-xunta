@@ -2,6 +2,24 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 19 de julio de 2026 - Publicación verificada de la versión 1.1.1
+
+Modelo: Codex / OpenAI, actuando como constructor por autorización expresa del usuario.
+
+Trabajo realizado:
+
+- interpretada la petición del usuario como autorización expresa para publicar;
+- subidos a `origin/main` los seis checkpoints locales acumulados, desde `07fdd3e` hasta `13171a0`;
+- esperado el despliegue automático de Cloudflare Workers;
+- comprobada directamente la página pública con respuesta HTTP 200;
+- confirmado en producción el identificador `v19-stable-local-20260719`, la etiqueta «Banco disponible» y los créditos Inter-IA;
+- confirmada la ausencia en producción de `1.207/1.210`.
+
+Resultado:
+
+- GitHub, paquete público y Cloudflare Workers alineados con la versión 1.1.1;
+- publicación cerrada correctamente.
+
 ## 19 de julio de 2026 - Corrección definitiva de métricas visibles 1.1.1
 
 Modelo: Codex / OpenAI, actuando como constructor por autorización expresa del usuario.

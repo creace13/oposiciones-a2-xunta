@@ -11,7 +11,7 @@ Plataforma Web independiente de preparación inteligente para el Cuerpo de Gesti
 ## Decisión actual
 
 **VERSIÓN 1.1.1 (ESTABLE EN MODO LOCAL / CUENTAS REMOTAS EN BETA / AUDITORÍA DE CONTENIDO CONTINUA)**.
-La rama local corrige los pendientes de los informes 15 y 16, incorpora el cierre editorial del informe 18 y elimina en el informe 19 las antiguas metas internas de producción que todavía podían interpretarse como progreso real. Supera la suite automatizada. El usuario confirma además una prueba manual satisfactoria de interfaz y experiencia de uso en tableta, móvil y PC. La versión pública de **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`) sigue vinculada a GitHub y no debe considerarse actualizada hasta un `push` autorizado expresamente por el usuario. Licencia **CC BY-NC-SA 4.0 (No Comercial)**.
+La versión corrige los pendientes de los informes 15 y 16, incorpora el cierre editorial del informe 18 y elimina en el informe 19 las antiguas metas internas de producción que todavía podían interpretarse como progreso real. Supera la suite automatizada. El usuario confirma además una prueba manual satisfactoria de interfaz y experiencia de uso en tableta, móvil y PC. La versión pública de **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`) fue actualizada desde GitHub y verificada por HTTP el 19 de julio de 2026, según el cierre 20. Licencia **CC BY-NC-SA 4.0 (No Comercial)**.
 
 ### Hitos completados (Auditoría Codex / Antigravity):
 - ✅ **Aislamiento físico y Lista Blanca en `./public`**: Despliegue en Cloudflare Workers desde `./public`, aislado de archivos internos. Sincronización automatizada con lista blanca estricta en `scripts/sync-public.js` (paridad comprobada por SHA-256 y purga de huérfanos raíz probada).
@@ -37,14 +37,13 @@ La rama local corrige los pendientes de los informes 15 y 16, incorpora el cierr
 
 ## Siguiente tarea exacta
 
-- Solo con autorización expresa del usuario, hacer `push` para publicar la versión 1.1.1 estable en modo local.
 - Para declarar también estable el servicio de cuentas remotas: ofrecer borrado remoto autoservicio o confirmar un canal privado controlado por el titular; después validar ese ciclo de vida extremo a extremo.
 - Para una versión definitiva con garantías ampliadas: completar accesibilidad asistida, documentar backup/rollback y obtener revisión jurídica independiente.
 
 ## Bloqueos activos
 
 - **Versión 1.1.1 estable en modo local:** ninguno conocido tras la suite automatizada y la validación manual multidispositivo del usuario.
-- **Publicación:** pendiente de autorización expresa para `push`/despliegue.
+- **Publicación:** versión 1.1.1 publicada y verificada en Cloudflare Workers el 19 de julio de 2026.
 - **Cuentas remotas:** permanecen en Beta porque no existe borrado remoto autoservicio ni un canal privado de privacidad confirmado por el titular. El correo no reconocido `oposiciones.a2.xunta@gmail.com` se ha retirado de la aplicación.
 - **Versión definitiva ampliada:** pendientes accesibilidad asistida, backup/rollback, ciclo remoto completo y revisión jurídica independiente.
 
