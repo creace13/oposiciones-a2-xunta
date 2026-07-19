@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://oposiciones-a2-xunta.pages.dev/sitemap.xml
+Sitemap: https://oposiciones-xunta.opos-galicia.workers.dev/sitemap.xml
