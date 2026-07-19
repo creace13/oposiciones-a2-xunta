@@ -14,10 +14,10 @@ Plataforma Web independiente de preparación inteligente para el Cuerpo de Gesti
 Plataforma 100% operativa y transparente abierta al público bajo licencia **CC BY-NC-SA 4.0 (No Comercial)**. Desplegada en **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`) vinculada a GitHub con backend en **Supabase** (0 €/mes).
 
 ### Hitos completados (Auditoría Codex / Antigravity):
-- ✅ **Supabase URL & Redirect Configuration**: `Site URL` configurada a `https://oposiciones-xunta.opos-galicia.workers.dev` con `Redirect URLs` `https://oposiciones-xunta.opos-galicia.workers.dev/*`. Manejo de tasa de límite anti-spam traducido al español.
-- ✅ **Unificación del recuento de preguntas**: Cobertura corregida dinámicamente a 1.207 de temario propio + 315 oficiales (total 1.522). `validar-banco.js` verificado OK sin errores ni duplicados.
-- ✅ **Recuperación de Contraseña Bulletproof**: Captura inmediata de `#access_token` y `type=recovery` abriendo el modal de nueva contraseña.
-- ✅ **Despliegue directo en Workers**: `wrangler.json` sirviendo desde raíz con `index.js` delegation para `og-image.jpg` y assets estáticos.
+- ✅ **Aislamiento físico y sincronización `./public`**: Despliegue en Cloudflare Workers desde `./public`, aislado de archivos internos (`.ia/`, `scripts/`, `scratch/`). Sincronización automatizada con script `scripts/sync-public.js` y paridad comprobada por hash SHA-256.
+- ✅ **Porcentajes de Cobertura Dinámicos**: Cálculo exacto en vivo sin textos estáticos de 100% (Bloque I al 100,7% [302/300], Bloque II al 99,5% [905/910], Total propio al 99,8% [1.207/1.210]).
+- ✅ **Filtros Temáticos Inequívocos**: Selección refinada para `procedimiento` (227 preg.), `galicia` (179 preg.) y `empleo` (140 preg.) eliminando falsos positivos.
+- ✅ **Recuperación de Contraseña Supabase**: Inspector de hash `#access_token` / `type=recovery` abriendo el modal de nueva contraseña.
 - ✅ **SEO y Redes Sociales**: Open Graph, Twitter Cards, Schema.org y verificado en Google Search Console.
 - ✅ **Licencia Open Source No Comercial**: `CC BY-NC-SA 4.0` configurada en `LICENSE`, `README.md` y `CONTRIBUTING.md`.
 
@@ -26,13 +26,13 @@ Plataforma 100% operativa y transparente abierta al público bajo licencia **CC 
 - Preguntas totales: **1.522** (1.207 de elaboración propia + 315 de 3 exámenes oficiales históricos).
 - Incompletas o errores de validación: **0** (`node scripts/validar-banco.js` -> RESULTADO: OK).
 - Temas troncales inventariados: **23**.
-- Despliegue en producción: Cloudflare Workers (`https://oposiciones-xunta.opos-galicia.workers.dev`).
+- Despliegue en producción: Cloudflare Workers desde `./public` (`https://oposiciones-xunta.opos-galicia.workers.dev`).
 - Autenticación y DB: Supabase (`mquigtfqvznwnovzjudf.supabase.co`).
 - Licencia: CC BY-NC-SA 4.0 (Atribución - No Comercial - Compartir Igual).
 
 ## Siguiente tarea exacta
 
-- Mantener la plataforma en producción en Cloudflare Workers, supervisar reportes de usuarios y realizar mantenimiento normativo periódico.
+- Mantener la plataforma en producción en Cloudflare Workers, supervisar reportes de usuarios y someter a revisión la respuesta 07 por Codex.
 
 ## Bloqueos activos
 
@@ -40,7 +40,8 @@ Plataforma 100% operativa y transparente abierta al público bajo licencia **CC 
 
 ## Archivos clave
 
-- Aplicación en producción: `index.html`, `styles.css`, `app.js`, `index.js`, `wrangler.json`.
+- Aplicación en producción: `./public/` (`index.html`, `styles.css`, `app.js`, `manifest.json`, `robots.txt`, `sitemap.xml`, `favicon.svg`, `og-image.jpg`).
+- Script de sincronización: `scripts/sync-public.js`.
 - Script de validación: `scripts/validar-banco.js`.
 - Memoria del proyecto e IA: `.ia/ESTADO-PROYECTO.md`, `.ia/PROTOCOLO.md`, `AGENTS.md`.
 - Informes Inter-IA: `.ia/auditorias/`.

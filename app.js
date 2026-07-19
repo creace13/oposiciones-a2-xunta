@@ -28128,7 +28128,9 @@ function updateDashboard() {
   if (focusText) {
     const block1Count = questions.filter(q => { const t = coverageTopic(q); return !q.id.startsWith('h202') && t && t.startsWith('g1-'); }).length;
     const block2Count = questions.filter(q => { const t = coverageTopic(q); return !q.id.startsWith('h202') && t && t.startsWith('g2-'); }).length;
-    focusText.textContent = `${questions.length} preguntas en el banco (1.207 de temario oficial + 315 de exámenes históricos). Bloque I al 100% (${block1Count}/300) y Bloque II al 100% (${block2Count}/910).`;
+    const b1Pct = ((block1Count / 300) * 100).toFixed(1);
+    const b2Pct = ((block2Count / 910) * 100).toFixed(1);
+    focusText.textContent = `${questions.length} preguntas en el banco (1.207 de temario propio + 315 de exámenes históricos). Bloque I al ${b1Pct}% (${block1Count}/300) y Bloque II al ${b2Pct}% (${block2Count}/910).`;
   }
   const snapRatio = document.getElementById('snapshotRatio');
   if (snapRatio) {
@@ -28180,7 +28182,8 @@ function renderCoverage() {
   const summary = document.getElementById('coverageSummary');
   if (summary) {
     const emptyTopics = rows.filter(row => row.current === 0);
-    summary.innerHTML = `<article class="coverage-hero"><div><p class="eyebrow">PROGRESO REAL</p><strong>100%</strong><small>${current} de ${target} preguntas temario propias + ${historicalCount} ex. oficiales</small></div><div class="coverage-hero-meter"><span style="width:100%"></span></div></article><article class="coverage-kpi"><span>Banco total</span><strong>${questions.length}</strong><small>preguntas verificadas</small></article><article class="coverage-kpi warning"><span>Temas a cero</span><strong>${emptyTopics.length}</strong><small>cobertura 100% completa</small></article><article class="coverage-kpi next"><span>Foco activo</span><strong>Simulacros y repasos</strong><small>23/23 temas completados</small></article>`;
+    const exactPct = ((current / target) * 100).toFixed(1);
+    summary.innerHTML = `<article class="coverage-hero"><div><p class="eyebrow">PROGRESO REAL</p><strong>${exactPct}%</strong><small>${current} de ${target} preguntas temario propias + ${historicalCount} ex. oficiales</small></div><div class="coverage-hero-meter"><span style="width:${exactPct}%"></span></div></article><article class="coverage-kpi"><span>Banco total</span><strong>${questions.length}</strong><small>preguntas en catálogo</small></article><article class="coverage-kpi warning"><span>Temas sin cubrir</span><strong>${emptyTopics.length}</strong><small>${emptyTopics.length === 0 ? 'todos los temas iniciados' : 'temas pendientes'}</small></article><article class="coverage-kpi next"><span>Foco activo</span><strong>Simulacros y repasos</strong><small>23/23 temas con banco propio</small></article>`;
   }
   const list = document.getElementById('coverageList');
   if (list) {
@@ -28228,13 +28231,25 @@ function buildSet(topic, length) {
   } else if (topic === 'mixto') {
     pool = questions;
   } else {
-    const topicMap = {
-      procedimiento: 'Procedimiento administrativo común',
-      galicia: 'Organización y sector público autonómico',
-      empleo: 'Empleo público de Galicia'
+    const categoryFilters = {
+      procedimiento: q => {
+        const c = coverageTopic(q);
+        return ['Procedimiento administrativo común', 'Procedimiento administrativo', 'LPAC 39/2015', 'Ley 39/2015', 'Régimen jurídico del sector público'].includes(q.topic) || (c && ['g2-12', 'g2-13'].includes(c)) || q.id.startsWith('lpac-') || q.id.startsWith('procedimiento-');
+      },
+      galicia: q => {
+        const c = coverageTopic(q);
+        return ['Organización y sector público autonómico', 'Organización de Galicia', 'Ley 16/2010', 'Xunta y Presidencia', 'Valedor del Pueblo', 'Consejo Consultivo de Galicia'].includes(q.topic) || (c && ['g1-06', 'g1-08', 'g1-09', 'g1-10'].includes(c)) || q.id.startsWith('organizacion-') || q.id.startsWith('xunta-') || q.id.startsWith('autonomia-');
+      },
+      empleo: q => {
+        const c = coverageTopic(q);
+        return ['Empleo público de Galicia', 'TREBEP', 'Ley 2/2015'].includes(q.topic) || (c && ['g2-18', 'g2-19'].includes(c)) || q.id.startsWith('trebep-') || q.id.startsWith('empleo-galicia-');
+      }
     };
-    const targetName = topicMap[topic] || topic;
-    pool = questions.filter(q => q.topic === targetName || coverageTopic(q) === targetName || q.id.includes(topic));
+    if (categoryFilters[topic]) {
+      pool = questions.filter(categoryFilters[topic]);
+    } else {
+      pool = questions.filter(q => q.topic === topic || coverageTopic(q) === topic);
+    }
   }
   if (!pool.length) pool = questions;
   const shuffled = shuffleArray(pool);
