@@ -2,6 +2,30 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 19 de julio de 2026 - Cierre del ciclo C01 y apertura de la cola C02
+
+Modelo: Codex / OpenAI, actuando como constructor y organizador por autorización expresa del usuario.
+
+Trabajo realizado:
+
+- revisados y clasificados los informes 01–21 como ciclo C01 cerrado;
+- conservados todos los archivos en su ubicación original para no romper referencias históricas;
+- creado `.ia/auditorias/CICLOS.md` para la agrupación lógica por etapas;
+- creado `.ia/COLA-ACTIVA.md` como único backlog ejecutable;
+- abierta la cola C02 con diez entregables priorizados y sus dependencias;
+- documentadas en `.ia/PROTOCOLO.md` y `AGENTS.md` las reglas de ciclos, estados, prioridades y cierre;
+- fijado `C02-04` como siguiente trabajo ejecutable mientras el titular está ausente.
+
+Bloqueos identificados:
+
+- decisión sobre mantener o retirar temporalmente las cuentas remotas;
+- canal privado de privacidad controlado por el titular;
+- designación de revisor jurídico independiente.
+
+Siguiente paso:
+
+- iniciar C02-04 y emitir su respuesta correlativa con evidencia de navegadores reales.
+
 ## 19 de julio de 2026 - Créditos Inter-IA ampliados en GitHub
 
 Modelo: Codex / OpenAI, actuando como constructor por autorización expresa del usuario.

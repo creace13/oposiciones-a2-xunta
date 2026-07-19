@@ -4,10 +4,11 @@ Esta carpeta conserva la trazabilidad cronológica entre modelos. Los informes p
 
 ## Cómo orientarse
 
-1. Leer `INDEX.md`: contiene el estado actual y la secuencia completa.
-2. Revisar el último `AUDITORIA` o `ANEXO` abierto.
-3. Leer su `RESPUESTA` correlativa y comprobar las pruebas indicadas.
-4. Confirmar el estado canónico en `../ESTADO-PROYECTO.md`.
+1. Leer `../ESTADO-PROYECTO.md`: estado canónico.
+2. Leer `../COLA-ACTIVA.md`: único backlog ejecutable.
+3. Consultar `CICLOS.md`: agrupación de informes por etapa.
+4. Usar `INDEX.md`: secuencia completa y estado de cada informe.
+5. Leer el último informe del ciclo activo y comprobar su evidencia.
 
 ## Nomenclatura
 
@@ -17,15 +18,15 @@ Formato obligatorio: `NN-TIPO-ASUNTO-MODELO-AAAA-MM-DD.md`.
 - `TIPO`: `AUDITORIA`, `RESPUESTA`, `ANEXO` o `CIERRE`;
 - no se reutilizan números;
 - todo archivo se registra inmediatamente en `INDEX.md`.
+- la numeración no se reinicia al abrir un ciclo;
+- los informes cerrados no se mueven ni renombran.
 
-## Estado actual
+## Ciclo C01 — cerrado
 
-- `15`: auditoría de cierre técnico de la Beta;
-- `16`: anexo sobre métricas y presentación del panel;
-- `17`: respuesta de implementación de Codex como constructor.
-- `18`: respuesta de cierre editorial y declaración de versión 1.1 estable local.
-- `19`: respuesta correctiva que retira definitivamente las metas internas y porcentajes engañosos de la interfaz.
-- `20`: cierre de publicación de la versión 1.1.1 en GitHub y Cloudflare Workers.
-- `21`: respuesta de ampliación de los créditos humanos e Inter-IA en el README de GitHub.
+Informes `01–21`: construcción, auditorías cruzadas, estabilización, publicación 1.1.1 y créditos públicos.
 
-La versión 1.1.1 está publicada: suite automatizada aprobada, métricas visibles corregidas, validación manual del usuario en tableta, móvil y PC y comprobación HTTP de producción. Las cuentas remotas permanecen en Beta hasta disponer de borrado remoto autoservicio o un canal privado controlado. La garantía definitiva ampliada conserva accesibilidad, backup/rollback y revisión jurídica independiente.
+## Ciclo C02 — abierto
+
+Desde el informe `22`: cuentas remotas y privacidad, navegadores reales, accesibilidad, recuperación operativa, seguridad, rendimiento y gobernanza jurídica.
+
+La versión 1.1.1 ya publicada permanece utilizable. El trabajo de C02 busca cerrar la garantía ampliada sin mezclarla con los informes históricos.

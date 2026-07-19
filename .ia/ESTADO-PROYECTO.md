@@ -11,7 +11,7 @@ Plataforma Web independiente de preparación inteligente para el Cuerpo de Gesti
 ## Decisión actual
 
 **VERSIÓN 1.1.1 (ESTABLE EN MODO LOCAL / CUENTAS REMOTAS EN BETA / AUDITORÍA DE CONTENIDO CONTINUA)**.
-La versión corrige los pendientes de los informes 15 y 16, incorpora el cierre editorial del informe 18 y elimina en el informe 19 las antiguas metas internas de producción que todavía podían interpretarse como progreso real. Supera la suite automatizada. El usuario confirma además una prueba manual satisfactoria de interfaz y experiencia de uso en tableta, móvil y PC. La versión pública de **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`) fue actualizada desde GitHub y verificada por HTTP el 19 de julio de 2026, según el cierre 20. Licencia **CC BY-NC-SA 4.0 (No Comercial)**.
+El ciclo **C01 — Construcción, auditoría y estabilización** está cerrado con los informes 01–21. La versión supera la suite automatizada, fue validada manualmente por el usuario en tableta, móvil y PC y está publicada en **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`). El ciclo **C02 — Versión plenamente funcional** queda abierto mediante el informe 22 y su única cola ejecutable es `.ia/COLA-ACTIVA.md`. Licencia **CC BY-NC-SA 4.0 (No Comercial)**.
 
 ### Hitos completados (Auditoría Codex / Antigravity):
 - ✅ **Aislamiento físico y Lista Blanca en `./public`**: Despliegue en Cloudflare Workers desde `./public`, aislado de archivos internos. Sincronización automatizada con lista blanca estricta en `scripts/sync-public.js` (paridad comprobada por SHA-256 y purga de huérfanos raíz probada).
@@ -38,15 +38,17 @@ La versión corrige los pendientes de los informes 15 y 16, incorpora el cierre 
 
 ## Siguiente tarea exacta
 
-- Para declarar también estable el servicio de cuentas remotas: ofrecer borrado remoto autoservicio o confirmar un canal privado controlado por el titular; después validar ese ciclo de vida extremo a extremo.
-- Para una versión definitiva con garantías ampliadas: completar accesibilidad asistida, documentar backup/rollback y obtener revisión jurídica independiente.
+- Ejecutar `C02-04`: pruebas automatizadas en Chromium, Firefox y WebKit sobre escritorio y viewport móvil.
+- Mientras el titular está ausente pueden avanzarse también `C02-06`, `C02-07` y `C02-08`, respetando un único elemento `EN CURSO` en toda la cola.
+- Al regresar el titular, resolver las decisiones bloqueadas `C02-01` y `C02-02` antes de validar el ciclo remoto `C02-03`.
 
 ## Bloqueos activos
 
 - **Versión 1.1.1 estable en modo local:** ninguno conocido tras la suite automatizada y la validación manual multidispositivo del usuario.
 - **Publicación:** versión 1.1.1 publicada y verificada en Cloudflare Workers el 19 de julio de 2026.
 - **Cuentas remotas:** permanecen en Beta porque no existe borrado remoto autoservicio ni un canal privado de privacidad confirmado por el titular. El correo no reconocido `oposiciones.a2.xunta@gmail.com` se ha retirado de la aplicación.
-- **Versión definitiva ampliada:** pendientes accesibilidad asistida, backup/rollback, ciclo remoto completo y revisión jurídica independiente.
+- **Revisión jurídica externa:** `C02-09` requiere un profesional independiente designado por el titular.
+- **Cola ejecutable:** el resto de pendientes y sus dependencias constan exclusivamente en `.ia/COLA-ACTIVA.md`.
 
 ## Archivos clave
 
@@ -54,4 +56,5 @@ La versión corrige los pendientes de los informes 15 y 16, incorpora el cierre 
 - Script de sincronización: `scripts/sync-public.js`.
 - Script de validación: `scripts/validar-banco.js`.
 - Memoria del proyecto e IA: `.ia/ESTADO-PROYECTO.md`, `.ia/PROTOCOLO.md`, `AGENTS.md`.
-- Informes Inter-IA: `.ia/auditorias/`.
+- Cola activa: `.ia/COLA-ACTIVA.md`.
+- Informes Inter-IA: `.ia/auditorias/INDEX.md` y agrupación en `.ia/auditorias/CICLOS.md`.

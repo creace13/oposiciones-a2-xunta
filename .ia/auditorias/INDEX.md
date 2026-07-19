@@ -2,7 +2,7 @@
 
 Este índice registra cronológicamente todos los informes, auditorías y respuestas cruzadas entre los modelos de Inteligencia Artificial que participan en el desarrollo y auditoría del proyecto.
 
-**Estado vigente:** versión 1.1.1 publicada y verificada mediante `20-CIERRE-PUBLICACION-VERSION-1.1.1-CODEX-2026-07-19.md`. Suite automatizada, validación manual en tableta, móvil y PC y comprobación HTTP de producción aprobadas. Las cuentas remotas permanecen en Beta y la garantía definitiva mantiene tareas separadas.
+**Estado vigente:** ciclo C01 cerrado en los informes 01–21 y ciclo C02 abierto mediante `22-AUDITORIA-APERTURA-COLA-DEFINITIVA-CODEX-2026-07-19.md`. La versión 1.1.1 está publicada; la cola canónica de garantía ampliada es `../COLA-ACTIVA.md`.
 
 ## 📋 Reglas de Nomenclatura e Índice
 
@@ -13,6 +13,8 @@ Este índice registra cronológicamente todos los informes, auditorías y respue
 ---
 
 ## 📑 Historial de Auditorías e Informes
+
+### Ciclo C01 — construcción, auditoría y estabilización (cerrado)
 
 | Secuencia | Tipo | Emisor | Destinatario | Asunto Principal | Archivo | Estado |
 | :---: | :---: | :---: | :---: | :--- | :--- | :---: |
@@ -36,4 +38,10 @@ Este índice registra cronológicamente todos los informes, auditorías y respue
 | **18** | `RESPUESTA` | Codex (OpenAI) | Usuario / relevo | Créditos Inter-IA, transparencia de creación, repositorio, cita, retirada de correo ajeno y declaración 1.1 estable local. | [`18-RESPUESTA-VERSION-1.1-ESTABLE-LOCAL-CODEX-2026-07-19.md`](18-RESPUESTA-VERSION-1.1-ESTABLE-LOCAL-CODEX-2026-07-19.md) | 🟢 Cerrado en local |
 | **19** | `RESPUESTA` | Codex (OpenAI) | Usuario / relevo | Eliminación definitiva de metas internas, porcentajes engañosos y etiquetas de progreso aplicadas al volumen del banco. | [`19-RESPUESTA-METRICAS-REALES-CODEX-2026-07-19.md`](19-RESPUESTA-METRICAS-REALES-CODEX-2026-07-19.md) | 🟢 Cerrado en local |
 | **20** | `CIERRE` | Codex (OpenAI) | Usuario / relevo | Publicación de la versión 1.1.1 en GitHub y verificación del despliegue automático en Cloudflare Workers. | [`20-CIERRE-PUBLICACION-VERSION-1.1.1-CODEX-2026-07-19.md`](20-CIERRE-PUBLICACION-VERSION-1.1.1-CODEX-2026-07-19.md) | 🟢 Publicado |
-| **21** | `RESPUESTA` | Codex (OpenAI) | Usuario / relevo | Ampliación de la autoría humana y los créditos de Gemini/Antigravity y Codex/OpenAI en el README público. | [`21-RESPUESTA-CREDITOS-README-CODEX-2026-07-19.md`](21-RESPUESTA-CREDITOS-README-CODEX-2026-07-19.md) | 🟢 Cerrado en local |
+| **21** | `RESPUESTA` | Codex (OpenAI) | Usuario / relevo | Ampliación de la autoría humana y los créditos de Gemini/Antigravity y Codex/OpenAI en el README público. | [`21-RESPUESTA-CREDITOS-README-CODEX-2026-07-19.md`](21-RESPUESTA-CREDITOS-README-CODEX-2026-07-19.md) | 🟢 Publicado |
+
+### Ciclo C02 — versión plenamente funcional (abierto)
+
+| Secuencia | Tipo | Emisor | Destinatario | Asunto Principal | Archivo | Estado |
+| :---: | :---: | :---: | :---: | :--- | :--- | :---: |
+| **22** | `AUDITORIA` | Codex (OpenAI) | Constructor / titular | Cierre lógico de C01 y apertura de una cola priorizada hacia la versión plenamente funcional. | [`22-AUDITORIA-APERTURA-COLA-DEFINITIVA-CODEX-2026-07-19.md`](22-AUDITORIA-APERTURA-COLA-DEFINITIVA-CODEX-2026-07-19.md) | 🟡 Abierto |

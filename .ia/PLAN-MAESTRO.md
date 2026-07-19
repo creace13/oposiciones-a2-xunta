@@ -109,3 +109,23 @@ Solo se despliega cuando se cumplan simultáneamente estas condiciones:
 - autorización expresa del usuario para desplegar.
 
 La Beta ya fue desplegada históricamente. La versión 1.1 puede considerarse estable para uso local porque la suite automatizada y la prueba manual multidispositivo están aprobadas. Cualquier nueva revisión debe tratar el `push` como una posible publicación automática y pedir autorización expresa. Las cuentas remotas conservarán la etiqueta Beta hasta cerrar su ciclo de privacidad; la etiqueta «definitiva» con garantías ampliadas no se utilizará hasta cerrar accesibilidad, operación/recuperación y revisión jurídica independiente.
+
+## Fase 8. Ciclo C02 — versión plenamente funcional
+
+Objetivo: transformar los pendientes de garantía ampliada en una cola cerrable, con evidencia y dependencias explícitas.
+
+Fuente operativa única: `.ia/COLA-ACTIVA.md`.
+
+Puertas de cierre:
+
+- decisión y ciclo completo de cuentas remotas, o retirada coherente de esa función;
+- responsable y canal privado de privacidad confirmados;
+- recorridos críticos aprobados en Chromium, Firefox y WebKit;
+- accesibilidad aplicable contrastada con pruebas automáticas y manuales;
+- backup, restauración y rollback documentados y ensayados;
+- auditoría de seguridad y rendimiento sin riesgos P0/P1 abiertos;
+- procedimiento de actualización normativa probado;
+- revisión jurídica independiente registrada;
+- aceptación final y smoke test posterior al despliegue.
+
+Estado: **ABIERTO** mediante el informe 22. Los bloqueos del titular no impiden avanzar los elementos independientes definidos en la cola.

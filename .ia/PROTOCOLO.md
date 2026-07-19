@@ -15,10 +15,11 @@ Estas instrucciones se aplican por igual a Gemini/Antigravity (Google), Codex (O
 Leer, en este orden:
 
 1. `.ia/ESTADO-PROYECTO.md`: fotografía canónica del estado actual y siguiente tarea.
-2. `.ia/PLAN-MAESTRO.md`: fases, prioridades y condiciones de cierre.
-3. `.ia/AUDITORIA-CONTENIDO.md`: registro jurídico y temas auditados.
-4. `.ia/BITACORA-IA.md`: últimas decisiones y traspasos entre modelos.
-5. `.ia/auditorias/INDEX.md` y los últimos informes correlativos: revisar las observaciones abiertas y sus respuestas.
+2. `.ia/COLA-ACTIVA.md`: único listado ejecutable de trabajo pendiente, dependencias y bloqueos.
+3. `.ia/PLAN-MAESTRO.md`: fases, prioridades y condiciones de cierre.
+4. `.ia/AUDITORIA-CONTENIDO.md`: registro jurídico y temas auditados.
+5. `.ia/BITACORA-IA.md`: últimas decisiones y traspasos entre modelos.
+6. `.ia/auditorias/CICLOS.md`, `.ia/auditorias/INDEX.md` y los últimos informes correlativos: reconstruir el ciclo vigente y revisar observaciones abiertas.
 
 Si el chat ha sido compactado, resumido o heredado de otro modelo, volver a leer estos cuatro archivos. No reconstruir el estado desde la memoria del chat.
 
@@ -48,17 +49,31 @@ Si el chat ha sido compactado, resumido o heredado de otro modelo, volver a leer
 - Tipos admitidos: `AUDITORIA`, `RESPUESTA`, `ANEXO` y `CIERRE`.
 - No se reutiliza un número, aunque dos documentos pertenezcan al mismo asunto.
 - Todo informe se registra inmediatamente en `.ia/auditorias/INDEX.md` con su estado: `ABIERTO`, `ATENDIDO`, `CERRADO` o `HISTÓRICO`.
-- `INDEX.md` y `README.md` son los únicos documentos de navegación de esa carpeta. Los informes conservan su nombre para no romper la trazabilidad.
+- Los informes cerrados no se mueven ni se renombran: permanecen en la raíz de `.ia/auditorias/` para conservar enlaces y trazabilidad.
+- `README.md` explica cómo orientarse, `INDEX.md` conserva la secuencia completa y `CICLOS.md` agrupa rangos por etapa sin duplicar informes.
 - El constructor que atienda una auditoría debe emitir una `RESPUESTA` con los archivos cambiados, pruebas ejecutadas, limitaciones y siguiente paso.
+
+## Ciclos y cola activa
+
+- La secuencia numérica de informes es global y nunca se reinicia al abrir un ciclo nuevo.
+- Un ciclo agrupa una finalidad concreta y se identifica como `C01`, `C02`, etc. Su alcance y rango de informes se registran en `.ia/auditorias/CICLOS.md`.
+- El único backlog operativo es `.ia/COLA-ACTIVA.md`. No se deben ejecutar listas antiguas de informes cerrados como si siguieran pendientes.
+- Cada elemento de cola usa un identificador estable `CXX-NN`, prioridad `P0`, `P1` o `P2`, estado, dependencias y evidencia exigida para cerrarlo.
+- Estados admitidos: `PENDIENTE`, `EN CURSO`, `BLOQUEADO` y `HECHO`. Solo puede haber un elemento `EN CURSO` en toda la cola para evitar trabajo duplicado entre modelos.
+- Si un elemento está bloqueado por una decisión, credencial o revisión externa, debe indicarse quién puede desbloquearlo. Mientras tanto se continúa con el siguiente elemento ejecutable de mayor prioridad.
+- Un elemento pasa a `HECHO` únicamente cuando existe evidencia reproducible y su `RESPUESTA` correlativa está registrada en `INDEX.md`.
+- Un ciclo se cierra mediante un informe `CIERRE` cuando todos sus elementos están en `HECHO` o han sido trasladados justificadamente a otro ciclo.
+- La expresión «100 % funcional y lista» se interpreta como una puerta operativa verificable definida en la cola; nunca como garantía absoluta de ausencia futura de fallos o cambios normativos.
 
 ## Al terminar cualquier sesión de trabajo
 
 1. Ejecutar `node --check app.js` y `node scripts/validar-banco.js`, además de las comprobaciones específicas del cambio.
 2. Actualizar `.ia/AUDITORIA-CONTENIDO.md` si se revisó contenido.
 3. Actualizar `.ia/ESTADO-PROYECTO.md` con cifras, bloqueos y siguiente tarea exacta.
-4. Añadir una entrada breve a `.ia/BITACORA-IA.md` usando su plantilla.
-5. Emitir y registrar el informe correlativo en `.ia/auditorias/`.
-6. No declarar una fase terminada si queda alguna comprobación pendiente.
+4. Actualizar el estado del elemento correspondiente en `.ia/COLA-ACTIVA.md`.
+5. Añadir una entrada breve a `.ia/BITACORA-IA.md` usando su plantilla.
+6. Emitir y registrar el informe correlativo en `.ia/auditorias/`.
+7. No declarar una fase o ciclo terminado si queda alguna comprobación pendiente.
 
 ## Regla para discrepancias
 
