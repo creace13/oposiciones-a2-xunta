@@ -10,7 +10,8 @@ Plataforma Web Open-Source de preparación inteligente para el Cuerpo de Gestió
 
 ## Decisión actual
 
-Proyecto 100% en producción y abierto al público bajo licencia **CC BY-NC-SA 4.0 (No Comercial)**. Desplegado en **Cloudflare Workers / Pages** (`https://oposiciones-xunta.opos-galicia.workers.dev`) vinculado a GitHub con backend de usuarios en **Supabase** (0 €/mes). Verificado en **Google Search Console** con `sitemap.xml`, `robots.txt`, tarjetas Open Graph sociales para WhatsApp y PWA installable.
+**PROYECTO OFICIALMENTE FINALIZADO (v1.0 EN PRODUCCIÓN)**.
+Plataforma 100% operativa y abierta al público bajo licencia **CC BY-NC-SA 4.0 (No Comercial)**. Desplegada en **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`) vinculada automáticamente a GitHub, con autenticación y base de datos en **Supabase** (0 €/mes). Verificada en **Google Search Console** con `sitemap.xml`, `robots.txt`, tarjetas de previsualización social para WhatsApp y PWA instalable en dispositivos móviles.
 
 ## Cifras canónicas
 
