@@ -28240,6 +28240,15 @@ function buildSet(topic, length) {
   const count = length ? Math.min(Number(length), shuffled.length) : Math.min(18, shuffled.length);
   return shuffled.slice(0, count);
 }
+let examTimerInterval = null;
+let examTimeSeconds = 0;
+
+function formatTimer(sec) {
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  return `${m}:${s < 10 ? '0' : ''}${s}`;
+}
+
 function startQuiz(set, mode = 'practice') {
   activeQuiz = set;
   questionIndex = 0;
@@ -28247,12 +28256,28 @@ function startQuiz(set, mode = 'practice') {
   examAnswers = [];
   state.sessions += 1;
   persist();
+
+  if (examTimerInterval) clearInterval(examTimerInterval);
+  if (quizMode === 'exam') {
+    examTimeSeconds = activeQuiz.length * 60; // 1 minuto por pregunta
+    examTimerInterval = setInterval(() => {
+      examTimeSeconds--;
+      const timerEl = document.getElementById('examTimerDisplay');
+      if (timerEl) timerEl.textContent = `⏱ ${formatTimer(examTimeSeconds)}`;
+      if (examTimeSeconds <= 0) {
+        clearInterval(examTimerInterval);
+        renderExamResults();
+      }
+    }, 1000);
+  }
+
   showView('practice');
   document.getElementById('practiceSetup').parentElement.classList.add('hidden');
   document.getElementById('quizCard').classList.remove('hidden');
   renderQuestion();
   updateDashboard();
 }
+
 function renderQuestion() {
   const q = activeQuiz[questionIndex]; const card = document.getElementById('quizCard');
   const isExam = quizMode === 'exam';
@@ -28268,17 +28293,32 @@ function renderQuestion() {
     q._shuffledFor = questionIndex;
   }
 
-  card.innerHTML = `<div class="quiz-meta"><span>${isExam ? 'Simulacro' : q.topic}</span><span>Pregunta ${questionIndex + 1} de ${activeQuiz.length}</span></div><div class="quiz-body"><div class="question-topic">${isExam ? 'Modo examen · corrección al final' : q.quality || 'Redacción propia · pendiente de revisión'}</div><h2 class="question-text">${q.text}</h2><div class="answers">${q._shuffledOptions.map(([letter, text, origIdx]) => `<button class="answer" data-answer="${origIdx}"><span class="answer-letter">${letter}</span><span>${text}</span></button>`).join('')}</div><div class="feedback hidden"></div></div><div class="quiz-footer"><span>${isExam ? 'Sin pistas durante el simulacro · -0,25 por fallo' : '4 alternativas · aprendizaje con explicación'}</span><button class="primary-button next-question hidden">${questionIndex === activeQuiz.length - 1 ? 'Finalizar' : 'Siguiente'} <span>→</span></button></div>`;
+  const selectedAns = examAnswers[questionIndex];
+
+  card.innerHTML = `<div class="quiz-meta"><span>${isExam ? 'Simulacro Oficial' : q.topic}</span>${isExam ? `<span id="examTimerDisplay" style="font-weight:bold;color:var(--primary);">⏱ ${formatTimer(examTimeSeconds)}</span>` : ''}<span>Pregunta ${questionIndex + 1} de ${activeQuiz.length}</span></div><div class="quiz-body"><div class="question-topic">${isExam ? 'Modo examen · corrección al final' : q.quality || 'Redacción propia · pendiente de revisión'}</div><h2 class="question-text">${q.text}</h2><div class="answers">${q._shuffledOptions.map(([letter, text, origIdx]) => `<button class="answer ${selectedAns === origIdx ? 'selected' : ''}" data-answer="${origIdx}"><span class="answer-letter">${letter}</span><span>${text}</span></button>`).join('')}</div><div class="feedback hidden"></div></div><div class="quiz-footer"><span>${isExam ? 'Sin pistas · -0,25 por fallo · 0 en blanco' : '4 alternativas · aprendizaje con explicación'}</span><div style="display:flex;gap:8px;align-items:center;">${isExam ? `<button class="secondary-button leave-blank-btn">${selectedAns === -1 ? '✓ Dejada en blanco' : 'Dejar en blanco'}</button>` : ''}<button class="primary-button next-question ${isExam || selectedAns !== undefined ? '' : 'hidden'}">${questionIndex === activeQuiz.length - 1 ? 'Finalizar Examen' : 'Siguiente'} <span>→</span></button></div></div>`;
+
   card.querySelectorAll('.answer').forEach(button => button.addEventListener('click', () => answerQuestion(Number(button.dataset.answer))));
+  
+  const blankBtn = card.querySelector('.leave-blank-btn');
+  if (blankBtn) {
+    blankBtn.addEventListener('click', () => {
+      examAnswers[questionIndex] = -1;
+      nextQuestion();
+    });
+  }
+  const nextBtn = card.querySelector('.next-question');
+  if (nextBtn) {
+    nextBtn.addEventListener('click', nextQuestion);
+  }
 }
+
 function answerQuestion(index) {
   const q = activeQuiz[questionIndex]; const isCorrect = index === q.correct;
   if (quizMode === 'exam') {
     examAnswers[questionIndex] = index;
     document.querySelectorAll('.answer').forEach((button) => button.classList.toggle('selected', Number(button.dataset.answer) === index));
     const next = document.querySelector('.next-question');
-    next.classList.remove('hidden');
-    next.onclick = nextQuestion;
+    if (next) next.classList.remove('hidden');
     return;
   }
   state.answered.push({ id:q.id, correct:isCorrect });
@@ -28294,39 +28334,44 @@ function answerQuestion(index) {
   const feedback = document.querySelector('.feedback');
   feedback.classList.remove('hidden');
   feedback.innerHTML = `<h3>${isCorrect ? 'Correcta. Buen criterio.' : 'Aquí está la clave.'}</h3><p>${q.explanation}</p><ul class="why-list">${q.options.map(([letter], i) => `<li><strong>${letter}.</strong> ${q.whys[i]}</li>`).join('')}</ul><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px;"><a class="source-link" href="${q.sourceUrl}" target="_blank" rel="noreferrer">Base legal: ${q.source} ↗</a>${q.originUrl ? `<a class="source-link" href="${q.originUrl}" target="_blank" rel="noreferrer">Examen original ↗</a>` : ''}<button type="button" class="text-button" onclick="window.openFeedbackDialog('${q.id}')" style="font-size:12px;color:var(--muted);text-decoration:underline;">💬 Reportar errata o sugerencia</button></div>`;
-  const next = document.querySelector('.next-question'); next.classList.remove('hidden'); next.addEventListener('click', nextQuestion); updateDashboard(); renderErrors();
+  const next = document.querySelector('.next-question'); next.classList.remove('hidden'); updateDashboard(); renderErrors();
 }
+
 function renderExamResults() {
-  const results = activeQuiz.map((q, index) => ({ q, selected: examAnswers[index], correct: examAnswers[index] === q.correct }));
-  const correct = results.filter(result => result.correct).length;
-  const wrong = results.length - correct;
-  const net = Math.max(0, correct - wrong * 0.25);
-  results.forEach(({ q, correct }) => {
-    state.answered.push({ id: q.id, correct });
-    if (!correct && !state.errors.includes(q.id)) state.errors.push(q.id);
-    if (correct) state.errors = state.errors.filter(id => id !== q.id);
+  if (examTimerInterval) { clearInterval(examTimerInterval); examTimerInterval = null; }
+  const results = activeQuiz.map((q, index) => {
+    const selected = examAnswers[index];
+    const isBlank = selected === undefined || selected === null || selected === -1;
+    const isCorrect = !isBlank && selected === q.correct;
+    return { q, selected, isBlank, correct: isCorrect };
+  });
+  const correct = results.filter(r => r.correct).length;
+  const blank = results.filter(r => r.isBlank).length;
+  const wrong = results.length - correct - blank;
+  const net = Math.max(0, correct - (wrong * 0.25));
+
+  results.forEach(({ q, isBlank, correct }) => {
+    if (!isBlank) {
+      state.answered.push({ id: q.id, correct });
+      if (!correct && !state.errors.includes(q.id)) state.errors.push(q.id);
+      if (correct) state.errors = state.errors.filter(id => id !== q.id);
+    }
   });
   persist();
   updateDashboard();
   renderErrors();
   const card = document.getElementById('quizCard');
-  card.innerHTML = `<div class="quiz-meta"><span>Resultado del simulacro</span><span>${activeQuiz.length} preguntas</span></div><div class="quiz-body"><div class="exam-summary"><div><span class="stat-label">Aciertos</span><strong>${correct}</strong></div><div><span class="stat-label">Fallos</span><strong>${wrong}</strong></div><div><span class="stat-label">Nota neta</span><strong>${net.toFixed(2)}</strong></div></div><div class="exam-review">${results.map(({ q, selected, correct }) => `<article class="exam-review-item ${correct ? 'correct' : 'incorrect'}"><p class="eyebrow">${q.topic}</p><h3>${q.text}</h3><p><strong>Tu respuesta:</strong> ${q.options[selected]?.[0] || '—'} · ${q.options[selected]?.[1] || 'Sin responder'}</p><p><strong>Correcta:</strong> ${q.options[q.correct][0]} · ${q.options[q.correct][1]}</p><p>${q.explanation}</p><ul class="why-list">${q.options.map(([letter], i) => `<li><strong>${letter}.</strong> ${q.whys[i]}</li>`).join('')}</ul><a class="source-link" href="${q.sourceUrl}" target="_blank" rel="noreferrer">Base legal: ${q.source} ↗</a></article>`).join('')}</div></div><div class="quiz-footer"><span>Corrección completa guardada en tu progreso</span><button class="primary-button finish-exam">Volver al inicio <span>→</span></button></div>`;
+  card.innerHTML = `<div class="quiz-meta"><span>Resultado del simulacro</span><span>${activeQuiz.length} preguntas</span></div><div class="quiz-body"><div class="exam-summary"><div><span class="stat-label">Aciertos (+1,00)</span><strong>${correct}</strong></div><div><span class="stat-label">En blanco (0,00)</span><strong>${blank}</strong></div><div><span class="stat-label">Fallos (-0,25)</span><strong>${wrong}</strong></div><div><span class="stat-label">Nota neta</span><strong>${net.toFixed(2)}</strong></div></div><div class="exam-review">${results.map(({ q, selected, isBlank, correct }) => `<article class="exam-review-item ${isBlank ? 'blank' : (correct ? 'correct' : 'incorrect')}"><p class="eyebrow">${q.topic}</p><h3>${q.text}</h3><p><strong>Tu respuesta:</strong> ${isBlank ? '⚪ Dejada en blanco (0 puntos)' : `${q.options[selected]?.[0] || '—'} · ${q.options[selected]?.[1] || ''}`}</p><p><strong>Correcta:</strong> ${q.options[q.correct][0]} · ${q.options[q.correct][1]}</p><p>${q.explanation}</p><ul class="why-list">${q.options.map(([letter], i) => `<li><strong>${letter}.</strong> ${q.whys[i]}</li>`).join('')}</ul><a class="source-link" href="${q.sourceUrl}" target="_blank" rel="noreferrer">Base legal: ${q.source} ↗</a></article>`).join('')}</div></div><div class="quiz-footer"><span>Resultados consolidados en tu perfil local</span><button class="primary-button finish-exam">Volver al inicio <span>→</span></button></div>`;
   card.querySelector('.finish-exam').addEventListener('click', () => { card.classList.add('hidden'); document.getElementById('practiceSetup').parentElement.classList.remove('hidden'); showView('dashboard'); });
 }
+
 function nextQuestion() {
-  if (quizMode === 'exam' && examAnswers[questionIndex] === undefined) return;
   if (questionIndex < activeQuiz.length - 1) {
     questionIndex += 1;
     renderQuestion();
-    return;
-  }
-  if (quizMode === 'exam') {
+  } else {
     renderExamResults();
-    return;
   }
-  document.getElementById('quizCard').classList.add('hidden');
-  document.getElementById('practiceSetup').parentElement.classList.remove('hidden');
-  showView('dashboard');
 }
 
 window.addEventListener('hashchange', () => {
@@ -28420,9 +28465,9 @@ async function checkAuthUser() {
       const name = user.user_metadata?.name || user.email.split('@')[0];
       applyUserProfile(name);
       setAuthState(true);
-      document.querySelectorAll('.profile small').forEach(el => el.textContent = 'Sincronizado en la nube');
+      document.querySelectorAll('.profile small').forEach(el => el.textContent = 'Sesión activa · Guarda en navegador');
       const statusText = document.getElementById('authStatusText');
-      if (statusText) statusText.textContent = `Conectado como ${user.email} · Sincronización activa`;
+      if (statusText) statusText.textContent = `Conectado como ${user.email} · Sesión activa (Progreso local)`;
     }
   } catch (err) {
     console.warn('Supabase offline or unconfigured:', err);
