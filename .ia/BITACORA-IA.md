@@ -2,6 +2,32 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 19 de julio de 2026 - Corrección definitiva de métricas visibles 1.1.1
+
+Modelo: Codex / OpenAI, actuando como constructor por autorización expresa del usuario.
+
+Trabajo realizado:
+
+- atendidas dos capturas del usuario que demostraban que seguían visibles `1.207/1.210` y `99,8 %`;
+- eliminadas de toda la interfaz las metas internas de producción y la etiqueta «progreso real»;
+- sustituidas por cantidades objetivas: 1.522 disponibles, 1.207 propias, 315 oficiales, 302 del Bloque I y 905 del Bloque II;
+- transformado «Avance por tema» en «Distribución por tema» y retirados objetivos y porcentajes de cada tarjeta;
+- eliminadas afirmaciones de «100 % de cobertura» basadas únicamente en volumen;
+- elevada la versión de parche a `1.1.1` y actualizado el identificador de caché;
+- sincronizado `public/` mediante la lista blanca.
+
+Comprobaciones:
+
+- `node --check app.js`: correcto;
+- `npm test`: correcto;
+- regresiones explícitas contra `99,8 %`, `1.207/1.210` y «objetivo interno de volumen»: correctas;
+- checkpoint local de implementación: `44188e2`;
+- no se hizo `push` ni despliegue.
+
+Siguiente paso:
+
+- publicar únicamente con autorización expresa del usuario.
+
 ## 19 de julio de 2026 - Versión 1.1 estable local y cierre editorial
 
 Modelo: Codex / OpenAI, actuando como constructor por autorización expresa del usuario.

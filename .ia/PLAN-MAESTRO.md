@@ -43,7 +43,7 @@ Condiciones de cierre:
 - reparto de dificultad fácil, media y alta;
 - comparación con la frecuencia observada en exámenes oficiales.
 
-Estado: **parcial**. Existe recuento por 23 temas y objetivos internos de volumen, pero no debe confundirse con una matriz completa de artículo, submateria, dificultad y frecuencia oficial.
+Estado: **parcial**. Existe recuento por 23 temas y una matriz interna de trabajo, pero la interfaz pública ya no presenta metas de producción como progreso. Esto no debe confundirse con una matriz completa de artículo, submateria, dificultad y frecuencia oficial.
 
 ## Fase 4. Ampliación controlada
 
