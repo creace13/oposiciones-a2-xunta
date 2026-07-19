@@ -57,10 +57,15 @@ async function runE2ESuite() {
   // Regression: métricas cuantitativas honestas y formato español
   console.log('Test DOM 0: Verificando presentación honesta de métricas...');
   window.updateDashboard();
-  assert.strictEqual(document.querySelector('.readiness-panel .legend').textContent.includes('cantidad clasificada'), true, '❌ DOM 0 Fallido: la leyenda no explica que mide cantidad');
-  assert.strictEqual(document.getElementById('valBlock1').textContent, '302/300 · 100%', '❌ DOM 0 Fallido: Bloque I no muestra recuento y porcentaje');
-  assert.strictEqual(document.getElementById('valBlock2').textContent, '905/910 · 99%', '❌ DOM 0 Fallido: Bloque II no muestra recuento y porcentaje');
-  assert.strictEqual(document.getElementById('snapshotRatio').textContent, '1.207/1.210', '❌ DOM 0 Fallido: el total no mantiene formato es-ES');
+  assert.strictEqual(document.querySelector('.readiness-panel .legend').textContent.includes('preguntas por bloque'), true, '❌ DOM 0 Fallido: la leyenda no describe la distribución');
+  assert.strictEqual(document.getElementById('valBlock1').textContent, '302 preguntas', '❌ DOM 0 Fallido: Bloque I no muestra su recuento real');
+  assert.strictEqual(document.getElementById('valBlock2').textContent, '905 preguntas', '❌ DOM 0 Fallido: Bloque II no muestra su recuento real');
+  assert.strictEqual(document.getElementById('snapshotRatio').textContent, '1.522', '❌ DOM 0 Fallido: el banco disponible no muestra el total real');
+  assert.strictEqual(document.getElementById('snapshotSub').textContent, '1.207 propias de temario + 315 oficiales', '❌ DOM 0 Fallido: el desglose del banco no es correcto');
+  assert.strictEqual(document.getElementById('coverageSummary').textContent.includes('BANCO PROPIO1.207'), true, '❌ DOM 0 Fallido: el resumen no muestra el banco propio real');
+  assert.strictEqual(document.getElementById('coverageSummary').textContent.includes('99.8%'), false, '❌ DOM 0 Fallido: reapareció el porcentaje engañoso');
+  assert.strictEqual(document.body.textContent.includes('1.207/1.210'), false, '❌ DOM 0 Fallido: reapareció la comparación con la meta interna');
+  assert.strictEqual(document.body.textContent.includes('OBJETIVO INTERNO DE VOLUMEN'), false, '❌ DOM 0 Fallido: reapareció una meta de producción interna');
   assert.strictEqual(htmlContent.includes('Preguntas Verificadas'), false, '❌ DOM 0 Fallido: reapareció una afirmación editorial retirada');
   assert.strictEqual(htmlContent.includes('servidores alojados en la Unión Europea'), false, '❌ DOM 0 Fallido: reapareció una región de Supabase no demostrada');
   assert.strictEqual(htmlContent.includes('oposiciones.a2.xunta@gmail.com'), false, '❌ DOM 0 Fallido: reapareció un contacto no reconocido por el titular');

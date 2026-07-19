@@ -126,7 +126,7 @@ html[data-auth-state="unauthenticated"] .app-shell { display:none!important; }
 .coverage-block-card header small { color:var(--muted);font-size:11px; }
 .coverage-block-card header>strong { background:#edf2e6;border-radius:9px;color:var(--pine);font:600 18px Newsreader,serif;padding:9px 10px;white-space:nowrap; }
 .coverage-topic-grid { display:grid;gap:8px; }
-.topic-progress-card { display:grid;grid-template-columns:minmax(0,1fr) 92px;gap:12px;align-items:center;border:1px solid #e8eee6;border-radius:10px;background:#fffefb;padding:11px 12px; }
+.topic-progress-card { display:grid;grid-template-columns:1fr;gap:12px;align-items:center;border:1px solid #e8eee6;border-radius:10px;background:#fffefb;padding:11px 12px; }
 .topic-progress-card.empty { background:#fbf7eb;border-style:dashed; }
 .topic-main { min-width:0; }
 .topic-main span { display:block;color:#78906f;font:500 9px "DM Mono";letter-spacing:.6px;margin-bottom:3px; }

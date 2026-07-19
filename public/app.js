@@ -28131,32 +28131,32 @@ function updateDashboard() {
   if (focusText) {
     const block1Count = questions.filter(q => { const t = coverageTopic(q); return !q.id.startsWith('h202') && t && t.startsWith('g1-'); }).length;
     const block2Count = questions.filter(q => { const t = coverageTopic(q); return !q.id.startsWith('h202') && t && t.startsWith('g2-'); }).length;
-    const b1Pct = ((block1Count / 300) * 100).toFixed(1);
-    const b2Pct = ((block2Count / 910) * 100).toFixed(1);
-    focusText.textContent = `${formatCount(questions.length)} preguntas en el banco (${formatCount(block1Count + block2Count)} propias + 315 de exámenes históricos). Objetivo interno de volumen: Bloque I ${formatCount(block1Count)}/300 (${b1Pct}%) y Bloque II ${formatCount(block2Count)}/910 (${b2Pct}%).`;
+    focusText.textContent = `${formatCount(questions.length)} preguntas disponibles: ${formatCount(block1Count + block2Count)} propias distribuidas entre los 23 temas y 315 de exámenes históricos.`;
   }
   const snapRatio = document.getElementById('snapshotRatio');
   if (snapRatio) {
     const syllabusCount = questions.filter(q => !q.id.startsWith('h202') && Boolean(coverageTopic(q))).length;
-    snapRatio.innerHTML = `${formatCount(syllabusCount)}<span>/${formatCount(1210)}</span>`;
+    snapRatio.textContent = formatCount(questions.length);
     const snapSub = document.getElementById('snapshotSub');
-    if (snapSub) snapSub.textContent = `Objetivo interno: ${formatCount(1210)} · +315 oficiales (${formatCount(questions.length)} total)`;
+    if (snapSub) snapSub.textContent = `${formatCount(syllabusCount)} propias de temario + 315 oficiales`;
   }
   const b1Val = document.getElementById('valBlock1');
   if (b1Val) {
     const b1Count = questions.filter(q => { const t = coverageTopic(q); return !q.id.startsWith('h202') && t && t.startsWith('g1-'); }).length;
-    const b1Pct = Math.min(100, Math.round((b1Count / 300) * 100));
-    b1Val.textContent = `${formatCount(b1Count)}/300 · ${b1Pct}%`;
+    const ownCount = questions.filter(q => !q.id.startsWith('h202') && Boolean(coverageTopic(q))).length;
+    const b1Share = ownCount ? Math.round((b1Count / ownCount) * 100) : 0;
+    b1Val.textContent = `${formatCount(b1Count)} preguntas`;
     const b1Bar = document.getElementById('barBlock1');
-    if (b1Bar) b1Bar.style.width = `${b1Pct}%`;
+    if (b1Bar) b1Bar.style.width = `${b1Share}%`;
   }
   const b2Val = document.getElementById('valBlock2');
   if (b2Val) {
     const b2Count = questions.filter(q => { const t = coverageTopic(q); return !q.id.startsWith('h202') && t && t.startsWith('g2-'); }).length;
-    const b2Pct = Math.min(100, Math.round((b2Count / 910) * 100));
-    b2Val.textContent = `${formatCount(b2Count)}/910 · ${b2Pct}%`;
+    const ownCount = questions.filter(q => !q.id.startsWith('h202') && Boolean(coverageTopic(q))).length;
+    const b2Share = ownCount ? Math.round((b2Count / ownCount) * 100) : 0;
+    b2Val.textContent = `${formatCount(b2Count)} preguntas`;
     const b2Bar = document.getElementById('barBlock2');
-    if (b2Bar) b2Bar.style.width = `${b2Pct}%`;
+    if (b2Bar) b2Bar.style.width = `${b2Share}%`;
   }
 }
 function renderGoals() {
@@ -28173,28 +28173,23 @@ function renderErrors() {
 function renderCoverage() {
   const rows = coverageRows();
   const current = rows.reduce((sum, row) => sum + row.current, 0);
-  const target = rows.reduce((sum, row) => sum + row.target, 0);
-  const percent = Math.min(100, Math.round((current / target) * 100));
   const historicalCount = questions.filter(q => q.id.startsWith('h202')).length;
   const dashboard = document.getElementById('coverageSnapshot');
   if (dashboard) {
-    dashboard.innerHTML = `<div><span class="stat-label">Banco propio clasificado</span><strong id="snapshotRatio">${formatCount(current)}<span>/${formatCount(target)}</span></strong><small id="snapshotSub">Objetivo interno: ${formatCount(target)} · +${formatCount(historicalCount)} oficiales (${formatCount(questions.length)} total)</small></div><button class="secondary-button" data-view-target="syllabus">Ver avance</button>`;
+    dashboard.innerHTML = `<div><span class="stat-label">Banco disponible</span><strong id="snapshotRatio">${formatCount(questions.length)}</strong><small id="snapshotSub">${formatCount(current)} propias de temario + ${formatCount(historicalCount)} oficiales</small></div><button class="secondary-button" data-view-target="syllabus">Ver distribución</button>`;
     dashboard.querySelector('[data-view-target]').addEventListener('click', () => showView('syllabus'));
   }
   const summary = document.getElementById('coverageSummary');
   if (summary) {
-    const emptyTopics = rows.filter(row => row.current === 0);
-    const exactPct = ((current / target) * 100).toFixed(1);
-    summary.innerHTML = `<article class="coverage-hero"><div><p class="eyebrow">OBJETIVO INTERNO DE VOLUMEN</p><strong>${exactPct}%</strong><small>${formatCount(current)} de ${formatCount(target)} preguntas propias clasificadas + ${formatCount(historicalCount)} oficiales</small></div><div class="coverage-hero-meter"><span style="width:${Math.min(100, Number(exactPct))}%"></span></div></article><article class="coverage-kpi"><span>Banco total</span><strong>${formatCount(questions.length)}</strong><small>preguntas en catálogo</small></article><article class="coverage-kpi warning"><span>Temas sin iniciar</span><strong>${emptyTopics.length}</strong><small>${emptyTopics.length === 0 ? 'todos los temas tienen preguntas' : 'temas pendientes'}</small></article><article class="coverage-kpi next"><span>Interpretación</span><strong>Cantidad, no calidad jurídica</strong><small>la revisión normativa se documenta por separado</small></article>`;
+    const topicsWithQuestions = rows.filter(row => row.current > 0).length;
+    summary.innerHTML = `<article class="coverage-hero"><div><p class="eyebrow">BANCO PROPIO</p><strong>${formatCount(current)}</strong><small>preguntas clasificadas en los ${rows.length} temas</small></div></article><article class="coverage-kpi"><span>Exámenes oficiales</span><strong>${formatCount(historicalCount)}</strong><small>preguntas históricas</small></article><article class="coverage-kpi warning"><span>Temas incluidos</span><strong>${topicsWithQuestions}/${rows.length}</strong><small>${topicsWithQuestions === rows.length ? 'todos contienen preguntas' : 'hay temas todavía sin preguntas'}</small></article><article class="coverage-kpi next"><span>Estado editorial</span><strong>Revisión continua</strong><small>la cantidad no acredita calidad jurídica</small></article>`;
   }
   const list = document.getElementById('coverageList');
   if (list) {
     const renderBlock = (blockName, subtitle) => {
       const blockRows = rows.filter(row => row.block === blockName);
       const blockCurrent = blockRows.reduce((sum, row) => sum + row.current, 0);
-      const blockTarget = blockRows.reduce((sum, row) => sum + row.target, 0);
-      const blockPercent = Math.min(100, Math.round((blockCurrent / blockTarget) * 100));
-      return `<article class="coverage-block-card"><header><div><p class="eyebrow">${blockName.toUpperCase()}</p><h3>${subtitle}</h3><small>${blockRows.length} temas · ${blockCurrent}/${blockTarget} preguntas</small></div><strong>${blockPercent}%</strong></header><div class="coverage-hero-meter small"><span style="width:${blockPercent}%"></span></div><div class="coverage-topic-grid">${blockRows.map(row => `<article class="topic-progress-card ${row.current ? '' : 'empty'}"><div class="topic-main"><span>${row.id.toUpperCase()}</span><strong>${row.title}</strong><small>${row.current ? `${row.current} creadas` : 'Sin arrancar'} · objetivo ${row.target}</small></div><div class="topic-progress"><b>${row.percent}%</b><i><span style="width:${row.percent}%"></span></i></div></article>`).join('')}</div></article>`;
+      return `<article class="coverage-block-card"><header><div><p class="eyebrow">${blockName.toUpperCase()}</p><h3>${subtitle}</h3><small>${blockRows.length} temas</small></div><strong>${formatCount(blockCurrent)} preguntas</strong></header><div class="coverage-topic-grid">${blockRows.map(row => `<article class="topic-progress-card ${row.current ? '' : 'empty'}"><div class="topic-main"><span>${row.id.toUpperCase()}</span><strong>${row.title}</strong><small>${row.current ? `${formatCount(row.current)} preguntas` : 'Sin preguntas'}</small></div></article>`).join('')}</div></article>`;
     };
     list.innerHTML = `<section class="coverage-dashboard-board">${renderBlock('Bloque I', 'Instituciones y organización básica')}${renderBlock('Bloque II', 'Procedimiento, contratación y empleo público')}</section>`;
   }

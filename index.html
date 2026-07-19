@@ -126,8 +126,8 @@
             <article><span class="stat-label">Repasos pendientes</span><strong id="pendingReviews">0</strong><small>errores por consolidar</small></article>
             <article><span class="stat-label">Sesiones esta semana</span><strong id="weeklySessions">0</strong><small>sin contar rachas</small></article>
           </section>
-          <section class="coverage-snapshot" id="coverageSnapshot" aria-label="Avance del banco de preguntas por temario">
-            <div><span class="stat-label">Banco propio clasificado</span><strong id="snapshotRatio">1.207<span>/1.210</span></strong><small id="snapshotSub">Objetivo interno: 1.210 · +315 oficiales (1.522 total)</small></div><button class="secondary-button" data-view-target="syllabus">Ver avance</button>
+          <section class="coverage-snapshot" id="coverageSnapshot" aria-label="Resumen del banco de preguntas">
+            <div><span class="stat-label">Banco disponible</span><strong id="snapshotRatio">1.522</strong><small id="snapshotSub">1.207 propias de temario + 315 oficiales</small></div><button class="secondary-button" data-view-target="syllabus">Ver distribución</button>
           </section>
 
           <section class="two-columns">
@@ -136,10 +136,10 @@
               <div id="goalsList"></div>
             </article>
             <article class="panel readiness-panel">
-              <div class="panel-heading"><div><p class="eyebrow">BANCO DE PREGUNTAS</p><h2>Objetivo de volumen por bloques</h2></div><span class="legend"><i></i> cantidad clasificada</span></div>
-              <div class="readiness-row"><span>Bloque I · Instituciones y Organización</span><div class="bar"><i id="barBlock1" style="width: 100%"></i></div><strong id="valBlock1">302/300 · 100%</strong></div>
-              <div class="readiness-row"><span>Bloque II · Procedimiento y Empleo Público</span><div class="bar"><i id="barBlock2" style="width: 99%"></i></div><strong id="valBlock2">905/910 · 99%</strong></div>
-              <p class="readiness-note">Son objetivos internos de cantidad. No miden por sí solos tu preparación ni acreditan validación jurídica.</p>
+              <div class="panel-heading"><div><p class="eyebrow">BANCO DE PREGUNTAS</p><h2>Distribución del banco propio</h2></div><span class="legend"><i></i> preguntas por bloque</span></div>
+              <div class="readiness-row"><span>Bloque I · Instituciones y Organización</span><div class="bar"><i id="barBlock1" style="width: 25%"></i></div><strong id="valBlock1">302 preguntas</strong></div>
+              <div class="readiness-row"><span>Bloque II · Procedimiento y Empleo Público</span><div class="bar"><i id="barBlock2" style="width: 75%"></i></div><strong id="valBlock2">905 preguntas</strong></div>
+              <p class="readiness-note">Estos recuentos describen el catálogo; tu preparación se mide mediante prácticas, simulacros y repasos.</p>
             </article>
           </section>
 
@@ -220,57 +220,19 @@
             <div class="info-banner-content">
               <span class="eyebrow">¿CÓMO SE EVALÚA TU OPOSICIÓN?</span>
               <h2>El Primer Ejercicio es 100% Tipo Test (23 Temas)</h2>
-              <p>La Xunta evalúa los 23 temas de la Parte General en una prueba tipo test con 105 preguntas y penalización de –0,25. Esta plataforma cubre el 100% de este ejercicio con 1.522 preguntas clasificadas en revisión continua. La parte específica (47 temas) es para la segunda prueba escrita de desarrollo.</p>
+              <p>La Xunta evalúa los 23 temas de la Parte General en una prueba tipo test con 105 preguntas y penalización de –0,25. Esta plataforma incluye preguntas de los 23 temas y mantiene 1.522 preguntas clasificadas en revisión continua. La parte específica (47 temas) es para la segunda prueba escrita de desarrollo.</p>
             </div>
           </div>
-          <div class="syllabus-grid"><article class="syllabus-card"><span>01 · 10 TEMAS</span><h2>Parte general · Bloque I</h2><p>Constitución, instituciones del Estado, Estatuto de autonomía, Parlamento, Valedor y jurisdicción contenciosa.</p><small>302 preguntas · 100% de cobertura alcanzado</small></article><article class="syllabus-card"><span>02 · 13 TEMAS</span><h2>Parte general · Bloque II</h2><p>Procedimiento administrativo, régimen jurídico, patrimonio, contratos, hacienda, empleo público e igualdad.</p><small>910 preguntas · 100% de cobertura alcanzado</small></article><article class="syllabus-card soon"><span>03 · 47 TEMAS</span><h2>Parte específica (Segundo ejercicio)</h2><p>Evaluada mediante desarrollo escrito de temas, no mediante preguntas con respuestas múltiples tipo test.</p><small>Fuera del ámbito del primer examen test</small></article></div>
+          <div class="syllabus-grid"><article class="syllabus-card"><span>01 · 10 TEMAS</span><h2>Parte general · Bloque I</h2><p>Constitución, instituciones del Estado, Estatuto de autonomía, Parlamento, Valedor y jurisdicción contenciosa.</p><small>302 preguntas clasificadas</small></article><article class="syllabus-card"><span>02 · 13 TEMAS</span><h2>Parte general · Bloque II</h2><p>Procedimiento administrativo, régimen jurídico, patrimonio, contratos, hacienda, empleo público e igualdad.</p><small>905 preguntas clasificadas</small></article><article class="syllabus-card soon"><span>03 · 47 TEMAS</span><h2>Parte específica (Segundo ejercicio)</h2><p>Evaluada mediante desarrollo escrito de temas, no mediante preguntas con respuestas múltiples tipo test.</p><small>Fuera del ámbito del primer examen test</small></article></div>
           <section class="coverage-panel">
-            <div class="panel-heading"><div><p class="eyebrow">DASHBOARD DEL BANCO</p><h2>Avance por tema</h2></div><span class="status complete">100% alcanzado (1.522 total)</span></div>
+            <div class="panel-heading"><div><p class="eyebrow">DASHBOARD DEL BANCO</p><h2>Distribución por tema</h2></div><span class="status complete">1.522 preguntas</span></div>
             <div class="coverage-summary" id="coverageSummary">
-              <article class="coverage-hero"><div><p class="eyebrow">PROGRESO REAL</p><strong>100%</strong><small>1.212 de 1.210 temario + 315 ex. oficiales</small></div><div class="coverage-hero-meter"><span style="width:100%"></span></div></article>
-              <article class="coverage-kpi"><span>Banco total</span><strong>1.522</strong><small>preguntas clasificadas</small></article>
-              <article class="coverage-kpi warning"><span>Temas a cero</span><strong>0</strong><small>cobertura 100% completa</small></article>
-              <article class="coverage-kpi next"><span>Foco activo</span><strong>Simulacros y repasos</strong><small>23/23 temas completados</small></article>
+              <article class="coverage-hero"><div><p class="eyebrow">BANCO PROPIO</p><strong>1.207</strong><small>preguntas clasificadas en los 23 temas</small></div></article>
+              <article class="coverage-kpi"><span>Exámenes oficiales</span><strong>315</strong><small>preguntas históricas</small></article>
+              <article class="coverage-kpi warning"><span>Temas incluidos</span><strong>23/23</strong><small>todos contienen preguntas</small></article>
+              <article class="coverage-kpi next"><span>Estado editorial</span><strong>Revisión continua</strong><small>la cantidad no acredita calidad jurídica</small></article>
             </div>
-            <div class="coverage-list" id="coverageList">
-              <section class="coverage-dashboard-board">
-                <article class="coverage-block-card">
-                  <header><div><p class="eyebrow">BLOQUE I</p><h3>Instituciones y organización básica</h3><small>10 temas · 302/300 preguntas</small></div><strong>100%</strong></header>
-                  <div class="coverage-hero-meter small"><span style="width:100%"></span></div>
-                  <div class="coverage-topic-grid">
-                    <article class="topic-progress-card"><div class="topic-main"><span>G1-01</span><strong>Constitución española</strong><small>32 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G1-02</span><strong>Tribunal Constitucional</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G1-03</span><strong>Defensor del Pueblo</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G1-04</span><strong>Gobierno</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G1-05</span><strong>Estatuto de autonomía para Galicia</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G1-06</span><strong>Xunta y Presidencia</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G1-07</span><strong>Elecciones al Parlamento de Galicia</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G1-08</span><strong>Valedor del Pueblo</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G1-09</span><strong>Consejo Consultivo de Galicia</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G1-10</span><strong>Jurisdicción contencioso-administrativa</strong><small>30 creadas · objetivo 30</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                  </div>
-                </article>
-                <article class="coverage-block-card">
-                  <header><div><p class="eyebrow">BLOQUE II</p><h3>Procedimiento, contratación y empleo público</h3><small>13 temas · 910/910 preguntas</small></div><strong>100%</strong></header>
-                  <div class="coverage-hero-meter small"><span style="width:100%"></span></div>
-                  <div class="coverage-topic-grid">
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-11</span><strong>Patrimonio de Galicia</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-12</span><strong>Procedimiento administrativo común</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-13</span><strong>Régimen jurídico del sector público</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-14</span><strong>Régimen financiero y presupuestario</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-15</span><strong>Subvenciones de Galicia</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-16</span><strong>Organización y sector público autonómico</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-17</span><strong>Contratos del sector público</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-18</span><strong>TREBEP</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-19</span><strong>Empleo público de Galicia</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-20</span><strong>Incompatibilidades</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-21</span><strong>Igualdad efectiva en Galicia</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-22</span><strong>Derechos de las personas con discapacidad</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                    <article class="topic-progress-card"><div class="topic-main"><span>G2-23</span><strong>Transparencia y buen gobierno</strong><small>70 creadas · objetivo 70</small></div><div class="topic-progress"><b>100%</b><i><span style="width:100%"></span></i></div></article>
-                  </div>
-                </article>
-              </section>
-            </div>
+            <div class="coverage-list" id="coverageList"><p class="readiness-note">Cargando distribución del banco por tema…</p></div>
           </section>
         </section>
 
@@ -445,6 +407,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="app.js?v=v18-stable-local-20260719"></script>
+    <script src="app.js?v=v19-stable-local-20260719"></script>
   </body>
 </html>
