@@ -16,7 +16,8 @@ Plataforma 100% operativa y transparente abierta al público bajo licencia **CC 
 ### Hitos completados (Auditoría Codex / Antigravity):
 - ✅ **Aislamiento físico y sincronización `./public`**: Despliegue en Cloudflare Workers desde `./public`, aislado de archivos internos (`.ia/`, `scripts/`, `scratch/`). Sincronización automatizada con script `scripts/sync-public.js` y paridad comprobada por hash SHA-256.
 - ✅ **Porcentajes de Cobertura Dinámicos**: Cálculo exacto en vivo sin textos estáticos de 100% (Bloque I al 100,7% [302/300], Bloque II al 99,5% [905/910], Total propio al 99,8% [1.207/1.210]).
-- ✅ **Filtros Temáticos Inequívocos**: Selección purificada para `procedimiento` (227 preg.), `galicia` (149 preg., 0 LJCA) y `empleo` (138 preg., 0 igualdad/discapacidad) respaldados por suite de aserciones en `scripts/test-filters.js`.
+- ✅ **Filtros Temáticos Inequívocos y Extraídos**: `filterQuestionsByCategory` extraída globalmente en `app.js`, ejercitada por `scripts/test-filters.js` con aserciones reales y sintéticas pasando 100% OK.
+- ✅ **Gestión de Estados de Autenticación de 3 Niveles**: Diferenciación estricta entre `authenticated` (Supabase `session.user`), `guest` (local sin sesión remota) y `unauthenticated`. Formularios separados de Inicio de Sesión y Crear Cuenta Nueva sin auto-registro erróneo. Validadas 3 aserciones automatizadas en `scripts/test-auth-states.js`.
 - ✅ **Recuperación de Contraseña Supabase**: Inspector de hash `#access_token` / `type=recovery` abriendo el modal de nueva contraseña.
 - ✅ **SEO y Redes Sociales**: Open Graph, Twitter Cards, Schema.org y verificado en Google Search Console.
 - ✅ **Licencia Open Source No Comercial**: `CC BY-NC-SA 4.0` configurada en `LICENSE`, `README.md` y `CONTRIBUTING.md`.
@@ -32,7 +33,7 @@ Plataforma 100% operativa y transparente abierta al público bajo licencia **CC 
 
 ## Siguiente tarea exacta
 
-- Mantener la plataforma en producción en Cloudflare Workers, supervisar reportes de usuarios y someter a revisión la respuesta 07 por Codex.
+- Mantener la plataforma en producción en Cloudflare Workers y dar entrada a la siguiente iteración de revisión Codex.
 
 ## Bloqueos activos
 

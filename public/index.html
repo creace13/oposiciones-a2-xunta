@@ -390,11 +390,13 @@
               <input type="password" id="authPagePassword" placeholder="••••••••" required />
             </label>
 
-            <div class="auth-page-actions">
+            <div class="auth-page-actions" style="display:flex;justify-content:space-between;align-items:center;margin:8px 0 16px;">
               <button type="button" id="authPageForgotPassBtn" class="text-button">¿Olvidaste tu contraseña?</button>
+              <button type="button" id="authPageSignUpBtn" class="text-button" style="color:var(--accent,#153d35);font-weight:600;">Crear cuenta nueva</button>
             </div>
 
             <button type="submit" id="authPageSubmitBtn" class="primary-button wide">Entrar a mi Cuenta <span>→</span></button>
+            <button type="button" id="guestAccessBtn" class="quiet-button wide" style="margin-top:10px;width:100%;text-align:center;">Entrar sin cuenta (Modo Invitado / Local)</button>
           </form>
 
           <div id="authPageStatusText" class="auth-status-msg"></div>

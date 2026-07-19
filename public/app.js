@@ -28206,6 +28206,28 @@ function shuffleArray(array) {
   return arr;
 }
 
+function filterQuestionsByCategory(topic, questionsPool) {
+  const pool = questionsPool || questions;
+  const categoryFilters = {
+    procedimiento: q => {
+      const c = coverageTopic(q);
+      return ['Procedimiento administrativo común', 'Procedimiento administrativo', 'LPAC 39/2015', 'Ley 39/2015', 'Régimen jurídico del sector público'].includes(q.topic) || (c && ['g2-12', 'g2-13'].includes(c)) || q.id.startsWith('lpac-') || q.id.startsWith('procedimiento-');
+    },
+    galicia: q => {
+      const c = coverageTopic(q);
+      return ['Organización y sector público autonómico', 'Organización de Galicia', 'Ley 16/2010', 'Xunta y Presidencia', 'Valedor del Pueblo', 'Consejo Consultivo de Galicia'].includes(q.topic) || (c && ['g1-06', 'g1-08', 'g1-09'].includes(c)) || q.id.startsWith('organizacion-') || q.id.startsWith('xunta-') || q.id.startsWith('autonomia-');
+    },
+    empleo: q => {
+      const c = coverageTopic(q);
+      return (['Empleo público de Galicia', 'TREBEP', 'Ley 2/2015'].includes(q.topic) || (c && ['g2-18', 'g2-19'].includes(c)) || q.id.startsWith('trebep-') || q.id.startsWith('empleo-galicia-')) && !q.id.startsWith('igualdad-') && !q.id.startsWith('discapacidad-');
+    }
+  };
+  if (categoryFilters[topic]) {
+    return pool.filter(categoryFilters[topic]);
+  }
+  return pool.filter(q => q.topic === topic || coverageTopic(q) === topic);
+}
+
 function buildSet(topic, length) {
   let pool = [];
   if (topic === 'troncal') {
@@ -28231,25 +28253,7 @@ function buildSet(topic, length) {
   } else if (topic === 'mixto') {
     pool = questions;
   } else {
-    const categoryFilters = {
-      procedimiento: q => {
-        const c = coverageTopic(q);
-        return ['Procedimiento administrativo común', 'Procedimiento administrativo', 'LPAC 39/2015', 'Ley 39/2015', 'Régimen jurídico del sector público'].includes(q.topic) || (c && ['g2-12', 'g2-13'].includes(c)) || q.id.startsWith('lpac-') || q.id.startsWith('procedimiento-');
-      },
-      galicia: q => {
-        const c = coverageTopic(q);
-        return ['Organización y sector público autonómico', 'Organización de Galicia', 'Ley 16/2010', 'Xunta y Presidencia', 'Valedor del Pueblo', 'Consejo Consultivo de Galicia'].includes(q.topic) || (c && ['g1-06', 'g1-08', 'g1-09'].includes(c)) || q.id.startsWith('organizacion-') || q.id.startsWith('xunta-') || q.id.startsWith('autonomia-');
-      },
-      empleo: q => {
-        const c = coverageTopic(q);
-        return (['Empleo público de Galicia', 'TREBEP', 'Ley 2/2015'].includes(q.topic) || (c && ['g2-18', 'g2-19'].includes(c)) || q.id.startsWith('trebep-') || q.id.startsWith('empleo-galicia-')) && !q.id.startsWith('igualdad-') && !q.id.startsWith('discapacidad-');
-      }
-    };
-    if (categoryFilters[topic]) {
-      pool = questions.filter(categoryFilters[topic]);
-    } else {
-      pool = questions.filter(q => q.topic === topic || coverageTopic(q) === topic);
-    }
+    pool = filterQuestionsByCategory(topic, questions);
   }
   if (!pool.length) pool = questions;
   const shuffled = shuffleArray(pool);
@@ -28427,11 +28431,9 @@ function applyUserProfile(name) {
 }
 
 function setAuthState(mode) {
-  let stateStr = 'unauthenticated';
-  if (mode === true || mode === 'authenticated') stateStr = 'authenticated';
-  else if (mode === 'guest') stateStr = 'authenticated';
-  document.documentElement.dataset.authState = stateStr;
-  document.documentElement.dataset.authMode = mode === 'guest' ? 'guest' : (stateStr === 'authenticated' ? 'supabase' : 'none');
+  const isAuthenticatedOrGuest = mode === 'authenticated' || mode === 'guest' || mode === true;
+  document.documentElement.dataset.authState = isAuthenticatedOrGuest ? 'authenticated' : 'unauthenticated';
+  document.documentElement.dataset.authMode = mode === 'guest' ? 'guest' : (mode === 'authenticated' || mode === true ? 'supabase' : 'none');
 }
 
 function loadSavedProfile() {
@@ -28443,10 +28445,10 @@ function loadSavedProfile() {
       document.querySelectorAll('.profile small').forEach(el => el.textContent = 'Perfil local · Modo invitado');
     } else {
       localStorage.removeItem('opoA2UserName');
-      setAuthState(false);
+      setAuthState('unauthenticated');
     }
   } catch (_) {
-    setAuthState(false);
+    setAuthState('unauthenticated');
   }
 }
 
@@ -28474,13 +28476,13 @@ function initSupabase(url, key) {
       if (pageStatus) pageStatus.textContent = msg;
       if (modalStatus) modalStatus.textContent = msg;
     } else if (hash.includes('type=recovery') || hash.includes('access_token=')) {
-      setAuthState(true);
+      setAuthState('authenticated');
       setTimeout(openResetPasswordModal, 300);
     }
 
     supabaseClient.auth.onAuthStateChange((event, session) => {
       if (event === 'PASSWORD_RECOVERY') {
-        setAuthState(true);
+        setAuthState('authenticated');
         setTimeout(openResetPasswordModal, 300);
       }
     });
@@ -28588,19 +28590,16 @@ if (authForm) {
 
     if (supabaseClient && email && pass) {
       try {
-        let { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pass });
-        if (error && (error.message.includes('Invalid') || error.status === 400)) {
-          const signUpRes = await supabaseClient.auth.signUp({ email, password: pass, options: { data: { name } } });
-          if (signUpRes.error) throw signUpRes.error;
-          data = signUpRes.data;
-        } else if (error) {
-          throw error;
-        }
-        if (data && data.user) {
-          const uName = name || data.user.user_metadata?.name || data.user.email.split('@')[0];
+        const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pass });
+        if (error) throw error;
+        if (data && data.session && data.session.user) {
+          const uName = name || data.session.user.user_metadata?.name || data.session.user.email.split('@')[0];
           applyUserProfile(uName);
-          setAuthState(true);
+          setAuthState('authenticated');
           if (authDialog) authDialog.close();
+          return;
+        } else if (data && data.user && !data.session) {
+          if (statusText) statusText.textContent = 'Registro recibido. Comprueba tu correo para confirmar tu cuenta antes de acceder.';
           return;
         }
       } catch (err) {
@@ -28610,7 +28609,7 @@ if (authForm) {
     }
     if (name) {
       applyUserProfile(name);
-      setAuthState(true);
+      setAuthState('guest');
       if (authDialog) authDialog.close();
     }
   });
@@ -28630,28 +28629,63 @@ if (authPageForm) {
 
     if (supabaseClient && email && pass) {
       try {
-        let { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pass });
-        if (error && (error.message.includes('Invalid') || error.status === 400)) {
-          const signUpRes = await supabaseClient.auth.signUp({ email, password: pass, options: { data: { name } } });
-          if (signUpRes.error) throw signUpRes.error;
-          data = signUpRes.data;
-        } else if (error) {
-          throw error;
-        }
-        if (data && data.user) {
-          const uName = name || data.user.user_metadata?.name || data.user.email.split('@')[0];
+        const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pass });
+        if (error) throw error;
+        if (data && data.session && data.session.user) {
+          const uName = name || data.session.user.user_metadata?.name || data.session.user.email.split('@')[0];
           applyUserProfile(uName);
-          setAuthState(true);
+          setAuthState('authenticated');
+          return;
+        } else if (data && data.user && !data.session) {
+          if (statusText) statusText.textContent = 'Por favor, comprueba tu correo electrónico para confirmar el registro antes de acceder.';
           return;
         }
       } catch (err) {
-        if (statusText) statusText.textContent = `Error de autenticación: ${err.message}`;
+        if (statusText) statusText.textContent = `Error de inicio de sesión: ${err.message}`;
         return;
       }
     }
     if (name) {
       applyUserProfile(name);
-      setAuthState(true);
+      setAuthState('guest');
+    }
+  });
+}
+
+const authPageSignUpBtn = document.getElementById('authPageSignUpBtn');
+if (authPageSignUpBtn) {
+  authPageSignUpBtn.addEventListener('click', async () => {
+    const nameInput = document.getElementById('authPageName');
+    const emailInput = document.getElementById('authPageEmail');
+    const passInput = document.getElementById('authPagePassword');
+    const statusText = document.getElementById('authPageStatusText');
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const pass = passInput ? passInput.value.trim() : '';
+
+    if (!email || !pass) {
+      if (statusText) statusText.textContent = 'Introduce correo y contraseña para crear tu cuenta.';
+      return;
+    }
+
+    if (supabaseClient) {
+      try {
+        const { data, error } = await supabaseClient.auth.signUp({
+          email,
+          password: pass,
+          options: { data: { name: name || 'Opositor' } }
+        });
+        if (error) throw error;
+        if (data && data.session && data.session.user) {
+          const uName = name || data.session.user.user_metadata?.name || data.session.user.email.split('@')[0];
+          applyUserProfile(uName);
+          setAuthState('authenticated');
+        } else {
+          if (statusText) statusText.textContent = 'Cuenta registrada con éxito. Comprueba tu correo electrónico para confirmar tu acceso.';
+        }
+      } catch (err) {
+        if (statusText) statusText.textContent = `Error de registro: ${err.message}`;
+      }
     }
   });
 }
@@ -28660,7 +28694,7 @@ const guestAccessBtn = document.getElementById('guestAccessBtn');
 if (guestAccessBtn) {
   guestAccessBtn.addEventListener('click', () => {
     applyUserProfile('Merce');
-    setAuthState(true);
+    setAuthState('guest');
   });
 }
 

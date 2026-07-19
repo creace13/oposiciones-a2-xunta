@@ -5,7 +5,7 @@ const vm = require('vm');
 
 const appPath = path.resolve(__dirname, '../app.js');
 let code = fs.readFileSync(appPath, 'utf8');
-code += '\nthis.questions = questions;\nthis.coverageTopic = coverageTopic;\n';
+code += '\nthis.questions = questions;\nthis.coverageTopic = coverageTopic;\nthis.filterQuestionsByCategory = filterQuestionsByCategory;\n';
 
 const mockElement = {
   textContent: '',
@@ -44,26 +44,14 @@ vm.runInContext(code, sandbox);
 
 const questions = sandbox.questions;
 const coverageTopic = sandbox.coverageTopic;
+const filterQuestionsByCategory = sandbox.filterQuestionsByCategory;
 
-const categoryFilters = {
-  procedimiento: q => {
-    const c = coverageTopic(q);
-    return ['Procedimiento administrativo común', 'Procedimiento administrativo', 'LPAC 39/2015', 'Ley 39/2015', 'Régimen jurídico del sector público'].includes(q.topic) || (c && ['g2-12', 'g2-13'].includes(c)) || q.id.startsWith('lpac-') || q.id.startsWith('procedimiento-');
-  },
-  galicia: q => {
-    const c = coverageTopic(q);
-    return ['Organización y sector público autonómico', 'Organización de Galicia', 'Ley 16/2010', 'Xunta y Presidencia', 'Valedor del Pueblo', 'Consejo Consultivo de Galicia'].includes(q.topic) || (c && ['g1-06', 'g1-08', 'g1-09'].includes(c)) || q.id.startsWith('organizacion-') || q.id.startsWith('xunta-') || q.id.startsWith('autonomia-');
-  },
-  empleo: q => {
-    const c = coverageTopic(q);
-    return (['Empleo público de Galicia', 'TREBEP', 'Ley 2/2015'].includes(q.topic) || (c && ['g2-18', 'g2-19'].includes(c)) || q.id.startsWith('trebep-') || q.id.startsWith('empleo-galicia-')) && !q.id.startsWith('igualdad-') && !q.id.startsWith('discapacidad-');
-  }
-};
+assert.strictEqual(typeof filterQuestionsByCategory, 'function', '❌ ERROR: filterQuestionsByCategory no está definida en app.js');
 
-console.log('--- TEST DE FILTROS TEMÁTICOS CON ASERCIONES ---');
+console.log('--- TEST DE FILTROS TEMÁTICOS CON ASERCIONES (EJECUTANDO REAL filterQuestionsByCategory DE app.js) ---');
 
 // Test Galicia
-const galiciaSet = questions.filter(categoryFilters.galicia);
+const galiciaSet = filterQuestionsByCategory('galicia', questions);
 console.log(`Filtro 'galicia': ${galiciaSet.length} preguntas.`);
 for (const q of galiciaSet) {
   const c = coverageTopic(q);
@@ -74,7 +62,7 @@ assert.strictEqual(galiciaSet.length, 149, `❌ ERROR: Esperadas 149 preguntas e
 console.log('✅ Filtro galicia: ASERCIONES PASADAS (149 preguntas puras de organización autonómica, 0 LJCA)');
 
 // Test Empleo
-const empleoSet = questions.filter(categoryFilters.empleo);
+const empleoSet = filterQuestionsByCategory('empleo', questions);
 console.log(`Filtro 'empleo': ${empleoSet.length} preguntas.`);
 for (const q of empleoSet) {
   assert.strictEqual(q.id.startsWith('igualdad-'), false, `❌ ERROR: Pregunta ${q.id} de igualdad incluida en empleo`);
@@ -84,9 +72,23 @@ assert.strictEqual(empleoSet.length, 138, `❌ ERROR: Esperadas 138 preguntas en
 console.log('✅ Filtro empleo: ASERCIONES PASADAS (138 preguntas puras de TREBEP y Empleo Galicia, 0 igualdad/discapacidad)');
 
 // Test Procedimiento
-const procSet = questions.filter(categoryFilters.procedimiento);
+const procSet = filterQuestionsByCategory('procedimiento', questions);
 console.log(`Filtro 'procedimiento': ${procSet.length} preguntas.`);
 assert.strictEqual(procSet.length, 227, `❌ ERROR: Esperadas 227 preguntas en procedimiento, obtenidas ${procSet.length}`);
 console.log('✅ Filtro procedimiento: ASERCIONES PASADAS (227 preguntas puras de procedimiento y régimen jurídico)');
 
-console.log('\n✅ TODAS LAS ASERCIONES DE FILTROS PASADAS CON ÉXITO.');
+// Test de Regresión con preguntas sintéticas trampas
+const syntheticQuestions = [
+  { id: 'ljca-test-1', topic: 'Jurisdicción contencioso-administrativa', source: 'Ley 29/1998' },
+  { id: 'igualdad-empleo-test-2', topic: 'Igualdad', source: 'Ley 7/2023' },
+  { id: 'discapacidad-empleo-test-3', topic: 'Discapacidad', source: 'RDL 1/2013' }
+];
+
+const galiciaSynthetic = filterQuestionsByCategory('galicia', syntheticQuestions);
+assert.strictEqual(galiciaSynthetic.length, 0, '❌ ERROR: La pregunta trampa de LJCA entró en el filtro galicia');
+
+const empleoSynthetic = filterQuestionsByCategory('empleo', syntheticQuestions);
+assert.strictEqual(empleoSynthetic.length, 0, '❌ ERROR: Las preguntas trampas de igualdad/discapacidad entraron en empleo');
+
+console.log('✅ TEST SINTÉTICO DE REGRESIÓN: Preguntas trampas de LJCA e Igualdad excluidas correctamente.');
+console.log('\n✅ TODAS LAS ASERCIONES DE FILTROS PASADAS CON ÉXITO SOBRE LA IMPLEMENTACIÓN REAL.');
