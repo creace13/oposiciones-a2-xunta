@@ -1,0 +1,13 @@
+# Archivos temporales y de desarrollo
+tmp/
+scratch/
+.tempmediaStorage/
+*.bin
+Links_gestores.txt
+docs/psw_ddbb.txt
+
+# Configuración de editores e IDEs
+.vscode/
+.idea/
+*.swp
+*.DS_Store
