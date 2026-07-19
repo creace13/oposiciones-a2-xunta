@@ -10,8 +10,8 @@ Plataforma Web independiente de preparación inteligente para el Cuerpo de Gesti
 
 ## Decisión actual
 
-**VERSIÓN 1.0 (BETA TÉCNICAMENTE CERRADA EN LOCAL / AUDITORÍA DE CONTENIDO CONTINUA)**.
-La rama local corrige los pendientes de los informes 15 y 16 y supera la suite automatizada. La versión pública de **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`) sigue vinculada a GitHub y no debe considerarse actualizada hasta un `push` autorizado expresamente por el usuario. Licencia **CC BY-NC-SA 4.0 (No Comercial)**.
+**VERSIÓN 1.1 (ESTABLE EN MODO LOCAL / CUENTAS REMOTAS EN BETA / AUDITORÍA DE CONTENIDO CONTINUA)**.
+La rama local corrige los pendientes de los informes 15 y 16, incorpora el cierre editorial y de transparencia del informe 18 y supera la suite automatizada. El usuario confirma además una prueba manual satisfactoria de interfaz y experiencia de uso en tableta, móvil y PC. La versión pública de **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`) sigue vinculada a GitHub y no debe considerarse actualizada hasta un `push` autorizado expresamente por el usuario. Licencia **CC BY-NC-SA 4.0 (No Comercial)**.
 
 ### Hitos completados (Auditoría Codex / Antigravity):
 - ✅ **Aislamiento físico y Lista Blanca en `./public`**: Despliegue en Cloudflare Workers desde `./public`, aislado de archivos internos. Sincronización automatizada con lista blanca estricta en `scripts/sync-public.js` (paridad comprobada por SHA-256 y purga de huérfanos raíz probada).
@@ -23,6 +23,8 @@ La rama local corrige los pendientes de los informes 15 y 16 y supera la suite a
 - ✅ **Recuperación de Contraseña Supabase**: Inspector de hash `#access_token` / `type=recovery` abriendo el modal de nueva contraseña.
 - ✅ **SEO y Redes Sociales**: Open Graph, Twitter Cards, Schema.org y verificado en Google Search Console.
 - ✅ **Licencia Open Source No Comercial**: `CC BY-NC-SA 4.0` configurada en `LICENSE`, `README.md` y `CONTRIBUTING.md`.
+- ✅ **Cierre editorial y créditos**: la Guía y metodología explica la dirección humana, la colaboración de Gemini/Antigravity y Codex, muestra la tecnología empleada, enlaza discretamente el repositorio y termina con una frase motivadora original.
+- ✅ **Validación manual multidispositivo**: el usuario declara funcionamiento visual satisfactorio en tableta, móvil y PC el 19 de julio de 2026.
 
 ## Cifras canónicas
 
@@ -35,15 +37,16 @@ La rama local corrige los pendientes de los informes 15 y 16 y supera la suite a
 
 ## Siguiente tarea exacta
 
-- Revisar el diff y, solo con autorización expresa del usuario, hacer `push` para actualizar la Beta publicada.
-- Para una versión definitiva: ejecutar pruebas en navegador gráfico real, móvil y escritorio; completar accesibilidad; documentar backup/rollback y obtener revisión jurídica independiente.
+- Solo con autorización expresa del usuario, hacer `push` para publicar la versión 1.1 estable en modo local.
+- Para declarar también estable el servicio de cuentas remotas: ofrecer borrado remoto autoservicio o confirmar un canal privado controlado por el titular; después validar ese ciclo de vida extremo a extremo.
+- Para una versión definitiva con garantías ampliadas: completar accesibilidad asistida, documentar backup/rollback y obtener revisión jurídica independiente.
 
 ## Bloqueos activos
 
-- **Beta local:** ninguno conocido tras la suite automatizada.
+- **Versión 1.1 estable en modo local:** ninguno conocido tras la suite automatizada y la validación manual multidispositivo del usuario.
 - **Publicación:** pendiente de autorización expresa para `push`/despliegue.
-- **Privacidad:** el titular debe confirmar que controla y atiende `oposiciones.a2.xunta@gmail.com`.
-- **Versión definitiva:** pendientes navegador real, dispositivos, accesibilidad, backup/rollback y revisión jurídica independiente.
+- **Cuentas remotas:** permanecen en Beta porque no existe borrado remoto autoservicio ni un canal privado de privacidad confirmado por el titular. El correo no reconocido `oposiciones.a2.xunta@gmail.com` se ha retirado de la aplicación.
+- **Versión definitiva ampliada:** pendientes accesibilidad asistida, backup/rollback, ciclo remoto completo y revisión jurídica independiente.
 
 ## Archivos clave
 

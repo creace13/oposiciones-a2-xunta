@@ -2,6 +2,33 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 19 de julio de 2026 - Versión 1.1 estable local y cierre editorial
+
+Modelo: Codex / OpenAI, actuando como constructor por autorización expresa del usuario.
+
+Trabajo realizado:
+
+- añadida al final de Guía y metodología una explicación de la dirección humana y la colaboración entre Gemini/Antigravity y Codex;
+- añadidos la tecnología principal, un enlace discreto al repositorio oficial y una frase motivadora original;
+- retirado de la aplicación el correo `oposiciones.a2.xunta@gmail.com`, que el titular declara no reconocer ni controlar;
+- aclarado en privacidad y acceso que el modo local es estable y que las cuentas remotas siguen en Beta;
+- registrada la validación manual satisfactoria del usuario en tableta, móvil y PC;
+- elevada la versión de aplicación a `1.1.0` y actualizado el identificador de caché;
+- sincronizado el paquete público de lista blanca.
+
+Comprobaciones:
+
+- `node --check app.js`: correcto;
+- `npm test`: correcto con 1.522 preguntas, 0 incompletas, 0 duplicadas y 0 fuentes ausentes;
+- regresiones de créditos, repositorio, privacidad, versión y aviso de cuentas remotas: correctas;
+- checkpoint local de código: `e176942`;
+- no se hizo `push` ni despliegue.
+
+Siguiente paso:
+
+- solicitar autorización expresa antes de publicar la versión 1.1;
+- para cerrar también las cuentas remotas, implementar borrado autoservicio o confirmar un canal privado controlado por el titular.
+
 ## 19 de julio de 2026 - Cierre local de Beta tras informes 15 y 16
 
 Modelo: Codex / OpenAI, actuando como constructor por autorización expresa del usuario.

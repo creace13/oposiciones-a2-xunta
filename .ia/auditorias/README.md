@@ -23,5 +23,6 @@ Formato obligatorio: `NN-TIPO-ASUNTO-MODELO-AAAA-MM-DD.md`.
 - `15`: auditoría de cierre técnico de la Beta;
 - `16`: anexo sobre métricas y presentación del panel;
 - `17`: respuesta de implementación de Codex como constructor.
+- `18`: respuesta de cierre editorial y declaración de versión 1.1 estable local.
 
-La Beta está cerrada técnicamente en la rama local. No se ha hecho `push`; la publicación queda pendiente de autorización expresa. La versión definitiva conserva tareas propias: navegador gráfico real, dispositivos, accesibilidad, backup/rollback y revisión jurídica independiente.
+La versión 1.1 está cerrada como estable en modo local: suite automatizada aprobada y validación manual del usuario en tableta, móvil y PC. No se ha hecho `push`; la publicación queda pendiente de autorización expresa. Las cuentas remotas permanecen en Beta hasta disponer de borrado remoto autoservicio o un canal privado controlado. La garantía definitiva ampliada conserva accesibilidad, backup/rollback y revisión jurídica independiente.

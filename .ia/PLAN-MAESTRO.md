@@ -67,7 +67,7 @@ Condiciones de cierre:
 - corrección, preguntas en blanco y penalización validadas;
 - diferenciación clara entre formato oficial y test usados solo como aprendizaje.
 
-Estado Beta: **funcional en integración DOM/JSDOM**. La comprobación visual en navegador real se reserva para la puerta de versión definitiva.
+Estado 1.1: **funcional en integración DOM/JSDOM y validado visualmente por el usuario** en tableta, móvil y PC. Esta evidencia cierra la puerta visual multidispositivo de la versión estable local; no equivale a una auditoría formal de accesibilidad.
 
 ## Fase 6. Calidad funcional
 
@@ -83,16 +83,16 @@ Pruebas mínimas:
 - enlaces a documentos locales;
 - manejo de datos antiguos al actualizar la aplicación.
 
-Estado Beta: **suite automatizada aprobada** para navegación, práctica, simulacro, filtros, autenticación, persistencia escrita, documentos, métricas y borrado local. Pendientes para definitiva: navegador gráfico real, recarga completa, móvil/escritorio y accesibilidad asistida.
+Estado 1.1: **suite automatizada aprobada** para navegación, práctica, simulacro, filtros, autenticación, persistencia escrita, documentos, métricas y borrado local. El usuario confirma prueba manual satisfactoria en tableta, móvil y PC. Pendientes para la garantía ampliada: accesibilidad asistida y pruebas operativas de recuperación.
 
 ## Fase 7. Preparación para compartir
 
-Estado Beta:
+Estado 1.1:
 
 - alojamiento existente en Cloudflare Workers y autenticación en Supabase;
 - progreso de estudio local, no sincronizado entre dispositivos;
 - información básica de privacidad publicada y borrado local implementado;
-- pendiente confirmar el control del canal de privacidad;
+- cuentas remotas etiquetadas como Beta mientras no exista borrado remoto autoservicio o un canal privado controlado por el titular;
 - pendientes copias/restauración, rollback y mecanismo formal de actualización normativa para definitiva.
 
 ## Puerta de despliegue y publicación
@@ -108,4 +108,4 @@ Solo se despliega cuando se cumplan simultáneamente estas condiciones:
 - copia de seguridad y procedimiento de actualización definidos;
 - autorización expresa del usuario para desplegar.
 
-La Beta ya fue desplegada históricamente. Cualquier nueva revisión debe tratar el `push` como una posible publicación automática y pedir autorización expresa. La etiqueta «definitiva» no se utilizará hasta cerrar navegador real, accesibilidad, operación/recuperación y revisión jurídica independiente.
+La Beta ya fue desplegada históricamente. La versión 1.1 puede considerarse estable para uso local porque la suite automatizada y la prueba manual multidispositivo están aprobadas. Cualquier nueva revisión debe tratar el `push` como una posible publicación automática y pedir autorización expresa. Las cuentas remotas conservarán la etiqueta Beta hasta cerrar su ciclo de privacidad; la etiqueta «definitiva» con garantías ampliadas no se utilizará hasta cerrar accesibilidad, operación/recuperación y revisión jurídica independiente.

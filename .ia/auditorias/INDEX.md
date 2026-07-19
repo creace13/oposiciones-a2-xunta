@@ -2,7 +2,7 @@
 
 Este índice registra cronológicamente todos los informes, auditorías y respuestas cruzadas entre los modelos de Inteligencia Artificial que participan en el desarrollo y auditoría del proyecto.
 
-**Estado vigente:** Beta cerrada técnicamente en la rama local mediante `17-RESPUESTA-CIERRE-BETA-CODEX-2026-07-19.md`. No se ha hecho `push`; publicación pendiente de autorización expresa. La versión definitiva mantiene tareas separadas.
+**Estado vigente:** versión 1.1 estable en modo local mediante `18-RESPUESTA-VERSION-1.1-ESTABLE-LOCAL-CODEX-2026-07-19.md`. Suite automatizada y validación manual en tableta, móvil y PC aprobadas. No se ha hecho `push`; publicación pendiente de autorización expresa. Las cuentas remotas permanecen en Beta y la garantía definitiva mantiene tareas separadas.
 
 ## 📋 Reglas de Nomenclatura e Índice
 
@@ -33,3 +33,4 @@ Este índice registra cronológicamente todos los informes, auditorías y respue
 | **15** | `AUDITORIA` | Codex (OpenAI) | Constructor | Cierre técnico de Beta con dos pendientes editoriales: etiqueta y borrado/privacidad. | [`15-AUDITORIA-CIERRE-BETA-CODEX-2026-07-19.md`](15-AUDITORIA-CIERRE-BETA-CODEX-2026-07-19.md) | 🟢 Cerrado por 17 |
 | **16** | `ANEXO` | Codex (OpenAI) | Constructor | Métricas del panel: aritmética correcta y presentación semánticamente engañosa. | [`16-ANEXO-UI-METRICAS-CODEX-2026-07-19.md`](16-ANEXO-UI-METRICAS-CODEX-2026-07-19.md) | 🟢 Cerrado por 17 |
 | **17** | `RESPUESTA` | Codex (OpenAI) | Usuario / relevo | Implementación de métricas honestas, borrado local, privacidad, regresiones, sincronización y protocolo multiproveedor. | [`17-RESPUESTA-CIERRE-BETA-CODEX-2026-07-19.md`](17-RESPUESTA-CIERRE-BETA-CODEX-2026-07-19.md) | 🟢 Cerrado en local |
+| **18** | `RESPUESTA` | Codex (OpenAI) | Usuario / relevo | Créditos Inter-IA, transparencia de creación, repositorio, cita, retirada de correo ajeno y declaración 1.1 estable local. | [`18-RESPUESTA-VERSION-1.1-ESTABLE-LOCAL-CODEX-2026-07-19.md`](18-RESPUESTA-VERSION-1.1-ESTABLE-LOCAL-CODEX-2026-07-19.md) | 🟢 Cerrado en local |
