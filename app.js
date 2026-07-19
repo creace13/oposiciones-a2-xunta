@@ -28358,6 +28358,20 @@ let supabaseClient = null;
 function initSupabase(url, key) {
   if (window.supabase && url && key) {
     supabaseClient = window.supabase.createClient(url, key);
+    supabaseClient.auth.onAuthStateChange((event, session) => {
+      if (event === 'PASSWORD_RECOVERY') {
+        setAuthState(true);
+        setTimeout(() => {
+          const newPassword = prompt('Introduce tu nueva contraseña para tu cuenta de opositor:');
+          if (newPassword && newPassword.trim().length >= 6) {
+            supabaseClient.auth.updateUser({ password: newPassword.trim() }).then(({ error }) => {
+              if (error) alert('Error al actualizar contraseña: ' + error.message);
+              else alert('¡Contraseña actualizada con éxito! Ya puedes iniciar sesión con tu nueva clave.');
+            });
+          }
+        }, 500);
+      }
+    });
     checkAuthUser();
   }
 }
