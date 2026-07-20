@@ -14,6 +14,8 @@ AGENTS.md
 .env.*
 Links_gestores.txt
 docs/psw_ddbb.txt
+docs/OPERACION-RECUPERACION.md
+docs/ACEPTACION-VERSION-1.2.0.md
 
 # Configuración de editores e IDEs
 .vscode/

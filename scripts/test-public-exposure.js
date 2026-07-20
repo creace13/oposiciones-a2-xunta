@@ -17,6 +17,8 @@ const tracked = execSync('git ls-files', { cwd: root, encoding: 'utf8' })
 [
   'Links_gestores.txt',
   'docs/psw_ddbb.txt',
+  'docs/OPERACION-RECUPERACION.md',
+  'docs/ACEPTACION-VERSION-1.2.0.md',
   '.agents/',
   '.ia/',
   'AGENTS.md',
@@ -42,7 +44,9 @@ const gitignore = read('.gitignore');
   '.ia/',
   'AGENTS.md',
   'Links_gestores.txt',
-  'docs/psw_ddbb.txt'
+  'docs/psw_ddbb.txt',
+  'docs/OPERACION-RECUPERACION.md',
+  'docs/ACEPTACION-VERSION-1.2.0.md'
 ].forEach(rule => {
   assert.ok(gitignore.includes(rule), `Falta regla de privacidad en .gitignore: ${rule}`);
 });

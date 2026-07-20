@@ -36,6 +36,8 @@ El repositorio puede funcionar como escaparate técnico y archivo de transparenc
 - `AGENTS.md`
 - `Links_gestores.txt`
 - `docs/psw_ddbb.txt`
+- `docs/OPERACION-RECUPERACION.md` (manual interno local)
+- `docs/ACEPTACION-VERSION-1.2.0.md` (acta interna local)
 - `tmp/`
 - `scratch/`
 - `test-results/`
