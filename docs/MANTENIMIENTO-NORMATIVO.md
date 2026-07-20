@@ -6,7 +6,7 @@ Este procedimiento evita que el banco de preguntas envejezca sin control cuando 
 
 ## Responsable y alcance
 
-- Responsable operativo: titular del proyecto, con apoyo de Codex/OpenAI como gestor técnico y documental autorizado.
+- Responsable operativo: titular del proyecto, con apoyo técnico cuando sea necesario.
 - Revisión jurídica independiente: queda fuera de este procedimiento y corresponde a `C02-09`.
 - Alcance: preguntas de elaboración propia, preguntas oficiales históricas, explicaciones, distractores, citas, enlaces y documentos locales usados por la app.
 - Fuente de verdad técnica del banco: `app.js`.
@@ -51,14 +51,14 @@ No se debe usar memoria general de una IA como fuente jurídica. Si una norma no
    - cambia la respuesta correcta o hace ambiguos los distractores;
    - afecta a todo un tema o bloque.
 4. Si afecta a respuesta, distractores o explicación, no publicar la pregunta hasta corregirla.
-5. Documentar la incidencia en `.ia/AUDITORIA-CONTENIDO.md` o en un informe correlativo si forma parte de un checkpoint.
+5. Documentar la incidencia en el registro de mantenimiento del proyecto o en un informe de versión si forma parte de un checkpoint.
 6. Corregir o retirar temporalmente las preguntas afectadas.
 7. Ejecutar como mínimo:
    - `node --check app.js`
    - `node scripts/validar-banco.js`
    - `node scripts/test-normative-maintenance.js`
    - `npm test` cuando el cambio sea publicable.
-8. Actualizar `.ia/ESTADO-PROYECTO.md`, `.ia/COLA-ACTIVA.md`, `.ia/BITACORA-IA.md` y `.ia/auditorias/INDEX.md`.
+8. Actualizar el registro de cambios, la cola de mantenimiento y el informe de versión correspondiente.
 9. Hacer commit y, si procede, push autorizado.
 
 ## Retirada segura de preguntas
@@ -88,4 +88,3 @@ La simulación sirve para demostrar que el procedimiento es accionable. Si maña
 - método de retirada/corrección;
 - simulación automatizada de norma modificada;
 - evidencia de pruebas ejecutadas.
-
