@@ -38,4 +38,4 @@ No incluyas datos personales. Si puedes, indica el ID de pregunta, la fuente ofi
 
 ## Qué no se publica
 
-El repositorio público no incluye la sala de máquinas interna del proyecto: bitácoras completas, colas de trabajo, informes internos de IA, protocolos de relevo o instrucciones locales de agentes. Esa documentación se conserva localmente para mantener el proyecto, pero no forma parte de la versión pública.
+El repositorio público no incluye la sala de máquinas interna del proyecto: bitácoras completas, colas de trabajo, informes internos de IA, protocolos de relevo, instrucciones locales de agentes ni artefactos `.agents/` con briefings, handoffs o progresos internos. Esa documentación se conserva localmente para mantener el proyecto, pero no forma parte de la versión pública.

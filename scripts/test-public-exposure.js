@@ -17,6 +17,7 @@ const tracked = execSync('git ls-files', { cwd: root, encoding: 'utf8' })
 [
   'Links_gestores.txt',
   'docs/psw_ddbb.txt',
+  '.agents/',
   '.ia/',
   'AGENTS.md',
   '.wrangler',
@@ -37,6 +38,7 @@ const gitignore = read('.gitignore');
   '.wrangler/',
   '.env',
   '.env.*',
+  '.agents/',
   '.ia/',
   'AGENTS.md',
   'Links_gestores.txt',
@@ -49,7 +51,7 @@ const exposureDoc = read(path.join('docs', 'EXPOSICION-GITHUB.md'));
 assert.ok(exposureDoc.includes('Qué no debe subirse nunca'), 'Falta política de no publicación.');
 assert.ok(exposureDoc.includes('Tokens de Cloudflare'), 'Falta mención a tokens.');
 assert.ok(exposureDoc.includes('GitHub Issues'), 'Falta canal de erratas.');
-assert.ok(exposureDoc.includes('La carpeta `.ia/` y `AGENTS.md` quedan como documentación interna local'), 'La política debe proteger la sala de máquinas interna.');
+assert.ok(exposureDoc.includes('Las carpetas `.ia/`, `.agents/` y `AGENTS.md` quedan como documentación interna local'), 'La política debe proteger la sala de máquinas interna.');
 
 const publicMethodology = read(path.join('docs', 'METODOLOGIA-PUBLICA.md'));
 assert.ok(publicMethodology.includes('protocolos internos completos'), 'Falta metodología pública resumida.');

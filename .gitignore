@@ -6,6 +6,7 @@ tmp/
 scratch/
 .tempmediaStorage/
 *.bin
+.agents/
 .ia/
 AGENTS.md
 .wrangler/

@@ -24,12 +24,14 @@ El repositorio puede funcionar como escaparate técnico y archivo de transparenc
 - Exportaciones de base de datos con usuarios reales.
 - Protocolos internos de IA, bitácoras de trabajo, colas operativas y auditorías completas de relevo.
 - Instrucciones locales de agentes (`AGENTS.md`) o documentación que revele el flujo interno de coordinación.
+- Artefactos de ejecución de agentes (`.agents/`), briefings, handoffs, scripts temporales y progresos internos.
 
 ## Archivos protegidos por `.gitignore`
 
 - `.wrangler/`
 - `.env`
 - `.env.*`
+- `.agents/`
 - `.ia/`
 - `AGENTS.md`
 - `Links_gestores.txt`
@@ -46,7 +48,7 @@ El repositorio puede funcionar como escaparate técnico y archivo de transparenc
 - `docs/psw_ddbb.txt` está ignorado y no está versionado.
 - `.wrangler/` queda ignorado.
 - No se han detectado credenciales privadas versionadas en el barrido automatizado.
-- La carpeta `.ia/` y `AGENTS.md` quedan como documentación interna local. No se publican porque contienen protocolos, decisiones operativas, colas, auditorías completas y flujo de trabajo propio del titular.
+- Las carpetas `.ia/`, `.agents/` y `AGENTS.md` quedan como documentación interna local. No se publican porque contienen protocolos, decisiones operativas, colas, auditorías completas, briefings/handoffs de agentes y flujo de trabajo propio del titular.
 - La transparencia pública se mantiene mediante `README.md`, esta política de exposición y `docs/METODOLOGIA-PUBLICA.md`.
 
 ## Canal de erratas
