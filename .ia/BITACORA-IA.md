@@ -2,6 +2,25 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Avance C02-05: UIX móvil y sidebar sin scroll horizontal
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+- iniciada `C02-05` tras capturas del titular en Redmi Note 13 y navegador de escritorio;
+- corregido el desborde horizontal interno en móvil mediante `minmax(0,1fr)`, `min-width:0` y límites de ancho;
+- eliminada la barra horizontal de la sidebar de escritorio envolviendo los enlaces de perfil y ocultando separadores;
+- refinada la navegación móvil para ser deslizable sin scrollbar visible y sin ensanchar la página;
+- añadidos estados `:focus-visible` visibles para navegación, botones, enlaces e inputs.
+
+Comprobaciones:
+- medición Playwright local móvil: documento 393px / ventana 393px;
+- medición Playwright local escritorio: sidebar 250px / 250px, sin overflow horizontal;
+- captura local generada en `tmp/c02-05-mobile-after.png` como evidencia visual temporal no versionada.
+
+Siguiente paso:
+- continuar `C02-05` con auditoría de teclado, modales, contraste y lector de pantalla.
+
 ## 20 de julio de 2026 - Cierre C02-11 y ajuste del aviso de cuentas remotas
 
 Modelo: Codex / OpenAI, actuando como titular operativo.

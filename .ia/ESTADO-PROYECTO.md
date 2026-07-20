@@ -41,7 +41,7 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 
 ## Siguiente tarea exacta
 
-- Ejecutar `C02-05`: auditoría de accesibilidad y corrección de teclado, foco, diálogos, contraste y semántica.
+- Continuar `C02-05`: iniciada auditoría de accesibilidad/UIX. Ya corregidos el desborde móvil del layout, el scrollbar horizontal de la barra lateral de escritorio, la navegación móvil deslizante visible y el foco de teclado básico. Falta auditoría completa de teclado, modales, contraste y lector de pantalla.
 - Mientras el titular está ausente pueden avanzarse también `C02-06`, `C02-07` y `C02-08`, respetando un único elemento `EN CURSO` en toda la cola.
 - Al regresar el titular, resolver las decisiones bloqueadas `C02-01` y `C02-02` antes de validar el ciclo remoto `C02-03`.
 
@@ -53,7 +53,8 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - **Login remoto:** `C02-11` cerrado. El titular confirma el 20 de julio de 2026 que el acceso entra correctamente en modo incógnito tras desplegar el mensaje guiado y normalizar correo. La causa práctica queda compatible con caché/autorrelleno/estado local de navegador, no con rotura del login remoto.
 - **Revisión jurídica externa:** `C02-09` requiere un profesional independiente designado por el titular.
 - **Cola ejecutable:** el resto de pendientes y sus dependencias constan exclusivamente en `.ia/COLA-ACTIVA.md`.
-- **GitHub:** el repositorio local está por delante de `origin/main` desde el checkpoint `913f0c6` de Gemini (C02-04). Cualquier `push` puede activar publicación y exige autorización expresa del titular.
+- **GitHub:** existen cambios locales pendientes de publicar tras el cierre `C02-11` y el avance `C02-05`. Cualquier `push` puede activar publicación y exige autorización expresa del titular.
+- **Accesibilidad/UIX:** `C02-05` está en curso. El titular reporta capturas de Redmi Note 13 y navegador de escritorio; se corrige el scroll horizontal no deseado de sidebar y el ancho real móvil.
 
 ## Archivos clave
 
