@@ -2,6 +2,19 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Cierre C02-11 y ajuste del aviso de cuentas remotas
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+- tras el despliegue del commit `827c5e1`, el titular prueba el login en modo incógnito y confirma que ya entra correctamente;
+- se cierra `C02-11` como fallo práctico compatible con caché/autorrelleno/estado local del navegador, mitigado con normalización de correo y mensaje guiado;
+- se conserva el aviso de cuentas remotas en Beta, pero se actualiza para no sugerir que login/recuperación estén sin validar;
+- el aviso mantiene pendientes reales: borrado remoto autoservicio y canal privado confirmado.
+
+Siguiente paso:
+- iniciar `C02-05` accesibilidad.
+
 ## 20 de julio de 2026 - Avance C02-11: mitigación de login remoto entre dispositivos
 
 Modelo: Codex / OpenAI, actuando como titular operativo.

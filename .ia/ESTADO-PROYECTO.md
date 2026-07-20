@@ -41,8 +41,7 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 
 ## Siguiente tarea exacta
 
-- Continuar `C02-11`: el flujo remoto funciona para el titular tras recuperación de contraseña, pero a veces falla al cambiar de dispositivo. Se ha aplicado una mitigación local: normalización del correo antes de login/registro/recuperación y mensajes guiados ante credenciales inválidas. Falta prueba real del titular en otro dispositivo para cerrar la causa.
-- Después de cerrar `C02-11`, ejecutar `C02-05`: auditoría de accesibilidad y corrección de teclado, foco, diálogos, contraste y semántica.
+- Ejecutar `C02-05`: auditoría de accesibilidad y corrección de teclado, foco, diálogos, contraste y semántica.
 - Mientras el titular está ausente pueden avanzarse también `C02-06`, `C02-07` y `C02-08`, respetando un único elemento `EN CURSO` en toda la cola.
 - Al regresar el titular, resolver las decisiones bloqueadas `C02-01` y `C02-02` antes de validar el ciclo remoto `C02-03`.
 
@@ -51,7 +50,7 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - **Versión 1.1.1 estable en modo local:** ninguno conocido tras la suite automatizada y la validación manual multidispositivo del usuario.
 - **Publicación:** versión 1.1.1 publicada y verificada en Cloudflare Workers el 19 de julio de 2026.
 - **Cuentas remotas:** permanecen en Beta porque no existe borrado remoto autoservicio ni un canal privado de privacidad confirmado por el titular. El correo no reconocido `oposiciones.a2.xunta@gmail.com` se ha retirado de la aplicación.
-- **Login remoto:** `C02-11` está en curso. El titular confirma que su cuenta de prueba inicia sesión y recupera contraseña, pero a veces falla al cambiar de dispositivo hasta restablecer la contraseña. Mitigación aplicada pendiente de prueba real multidispositivo.
+- **Login remoto:** `C02-11` cerrado. El titular confirma el 20 de julio de 2026 que el acceso entra correctamente en modo incógnito tras desplegar el mensaje guiado y normalizar correo. La causa práctica queda compatible con caché/autorrelleno/estado local de navegador, no con rotura del login remoto.
 - **Revisión jurídica externa:** `C02-09` requiere un profesional independiente designado por el titular.
 - **Cola ejecutable:** el resto de pendientes y sus dependencias constan exclusivamente en `.ia/COLA-ACTIVA.md`.
 - **GitHub:** el repositorio local está por delante de `origin/main` desde el checkpoint `913f0c6` de Gemini (C02-04). Cualquier `push` puede activar publicación y exige autorización expresa del titular.
