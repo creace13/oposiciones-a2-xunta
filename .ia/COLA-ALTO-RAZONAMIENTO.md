@@ -22,4 +22,4 @@ Esta cola sirve para proteger cuota sin perder calidad. No sustituye a `.ia/COLA
 
 ## Decisión actual
 
-No se solicita todavía modelo superior. La siguiente tarea ejecutable, `C02-11`, debe empezar con diagnóstico ordinario, sin credenciales reales en repositorio y sin exponer datos personales.
+No se solicita todavía modelo superior. `C02-07` se cerró con pruebas objetivas en razonamiento medio. La siguiente tarea ejecutable, `C02-08`, debe empezar con procedimiento ordinario; solo se valorará elevar razonamiento si hay contraste jurídico masivo o ambigüedad normativa relevante.

@@ -30,6 +30,7 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - ✅ **Suite Playwright E2E en Navegadores Reales (C02-04)**: Pruebas automatizadas en Chromium, Firefox y WebKit (escritorio y visores móviles Pixel 5 e iPhone 12) pasando 30/30 (100% ok). Corregida la restauración de hash directos, modales de privacidad y scrolling en JSDOM.
 - ✅ **Accesibilidad básica y UIX (C02-05)**: Corregidos overflow móvil/escritorio, sidebar sin scroll horizontal, navegación semántica con `aria-current`, diálogos con nombre/descripción accesible, foco visible, contraste básico AA y prueba de teclado. No sustituye una auditoría humana especializada con lector de pantalla real.
 - ✅ **Decisión sin nuevas suscripciones (C02-01/C02-02/C02-03/C02-06)**: el titular decide no pagar Supabase Pro ni otra suscripción. Las cuentas remotas quedan pausadas y el producto principal pasa a ser estable local. Se reducen riesgos de backup, privacidad y soporte, y se conserva el código remoto como opción futura no pública.
+- ✅ **Seguridad técnica básica y rendimiento (C02-07)**: retirado el CDN público, la URL y la clave pública de Supabase al estar las cuentas remotas pausadas, añadidas cabeceras de seguridad en Cloudflare Worker, protegidas metas locales frente a HTML inyectado, auditadas dependencias de producción con 0 vulnerabilidades y añadida `scripts/test-security-basics.js` al flujo de pruebas.
 - ✅ **Validación manual multidispositivo**: el usuario declara funcionamiento visual satisfactorio en tableta, móvil y PC el 19 de julio de 2026.
 
 ## Cifras canónicas
@@ -43,14 +44,13 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 
 ## Siguiente tarea exacta
 
-- Ejecutar `C02-07`: revisión de seguridad, privacidad técnica, dependencias, cabeceras, errores y rendimiento de producción.
-- Después ejecutar `C02-08`: mantenimiento normativo.
-- Con `C02-07` y `C02-08` cerrados, preparar `C02-10` como aceptación final de la versión estable local.
+- Ejecutar `C02-08`: mantenimiento normativo, inventario de vigencia, cadencia de revisión, alerta de cambios y retirada de preguntas afectadas.
+- Con `C02-08` cerrado y `C02-09` mantenido como bloqueo externo documentado, preparar `C02-10` como aceptación final de la versión estable local.
 
 ## Bloqueos activos
 
-- **Versión 1.1.1 estable en modo local:** ninguno conocido tras la suite automatizada y la validación manual multidispositivo del usuario.
-- **Publicación:** versión 1.1.1 publicada y verificada en Cloudflare Workers el 19 de julio de 2026.
+- **Versión 1.2 candidata estable en modo local:** ninguno conocido tras la suite automatizada y la validación manual multidispositivo del usuario.
+- **Publicación:** versión 1.2 candidata publicada en Cloudflare Workers; cada `push` autorizado debe comprobar respuesta pública y, si procede, cabeceras.
 - **Cuentas remotas:** pausadas en la interfaz pública por decisión del titular para evitar nuevas suscripciones, backups frágiles y complejidad de privacidad. El modo local es el camino principal.
 - **Login remoto:** `C02-11` cerrado. El titular confirma el 20 de julio de 2026 que el acceso entra correctamente en modo incógnito tras desplegar el mensaje guiado y normalizar correo. La causa práctica queda compatible con caché/autorrelleno/estado local de navegador, no con rotura del login remoto.
 - **Revisión jurídica externa:** `C02-09` requiere un profesional independiente designado por el titular.

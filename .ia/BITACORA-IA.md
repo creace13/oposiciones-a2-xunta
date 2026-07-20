@@ -2,6 +2,31 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Cierre C02-07: seguridad técnica básica y rendimiento
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+
+- retirada la carga pública del CDN de Supabase y de la URL/clave pública embebida porque las cuentas remotas están pausadas;
+- añadidas cabeceras de seguridad en el Worker: CSP para la app principal, `nosniff`, `Referrer-Policy`, `X-Frame-Options`, `Permissions-Policy`, COOP y HSTS;
+- protegidas las metas locales frente a HTML inyectado desde datos del navegador;
+- añadido `scripts/test-security-basics.js` e incorporado a `npm test`;
+- actualizado `README.md` para reflejar versión 1.2 candidata local first y Supabase pausado;
+- corregida la versión del `package-lock.json`.
+
+Comprobaciones:
+
+- `node --check app.js`: OK.
+- `node --check index.js`: OK.
+- `node scripts/validar-banco.js`: OK, 1.522 preguntas, 0 incompletas, 0 duplicados.
+- `npm audit --omit=dev --audit-level=high`: 0 vulnerabilidades.
+- `npm test`: OK, incluyendo seguridad, accesibilidad, integración DOM/JSDOM y 24/24 pruebas Playwright en Chromium/WebKit/móvil.
+
+Siguiente paso:
+
+- ejecutar `C02-08`: mantenimiento normativo y procedimiento de actualización/retirada de preguntas afectadas.
+
 ## 20 de julio de 2026 - Decisión local first y pausa de cuentas remotas
 
 Modelo: Codex / OpenAI, actuando como titular operativo.

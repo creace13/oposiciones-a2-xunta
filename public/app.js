@@ -28103,6 +28103,15 @@ function persist() {
 function formatCount(value) {
   return String(Math.trunc(Number(value))).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 }
+function escapeHTML(value) {
+  return String(value ?? '').replace(/[&<>"']/g, char => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[char]));
+}
 function showView(name, options = {}) {
   const { updateHash = true, scroll = true } = options;
   if (!validViews.includes(name)) name = 'dashboard';
@@ -28169,7 +28178,7 @@ function updateDashboard() {
 }
 function renderGoals() {
   const list = document.getElementById('goalsList');
-  list.innerHTML = state.goals.map(goal => `<label class="goal ${goal.done ? 'done' : ''}"><input type="checkbox" data-goal="${goal.id}" ${goal.done ? 'checked' : ''}><span>${goal.text}</span><small>${goal.done ? 'hecha' : goal.progress}</small></label>`).join('');
+  list.innerHTML = state.goals.map(goal => `<label class="goal ${goal.done ? 'done' : ''}"><input type="checkbox" data-goal="${escapeHTML(goal.id)}" ${goal.done ? 'checked' : ''}><span>${escapeHTML(goal.text)}</span><small>${goal.done ? 'hecha' : escapeHTML(goal.progress)}</small></label>`).join('');
   list.querySelectorAll('[data-goal]').forEach(box => box.addEventListener('change', e => { const goal = state.goals.find(g => g.id === e.target.dataset.goal); goal.done = e.target.checked; persist(); renderGoals(); }));
 }
 function renderErrors() {
@@ -28527,7 +28536,7 @@ function initSupabase(url, key) {
   }
 }
 
-initSupabase('https://mquigtfqvznwnovzjudf.supabase.co', 'sb_publishable_lTjPgPWghN-fPVwBm7yyRA_ekPeh7PF');
+initSupabase();
 
 async function checkAuthUser() {
   const logoutBtn = document.getElementById('logoutBtn');

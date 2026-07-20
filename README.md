@@ -2,7 +2,7 @@
 
 Plataforma web independiente para la preparación del primer ejercicio tipo test de las oposiciones del **Cuerpo de Gestión de la Administración General de la Xunta de Galicia (Subgrupo A2)**.
 
-**Versión 1.1.1:** publicada y estable en modo local. El banco continúa en revisión normativa y las cuentas remotas permanecen en Beta hasta disponer de borrado autoservicio y un canal privado confirmado.
+**Versión 1.2 candidata:** publicada como estable en modo local. El banco continúa en revisión normativa y las cuentas remotas están pausadas para evitar prometer sincronización, backups o soporte que todavía no forman parte de esta versión.
 
 ---
 
@@ -46,7 +46,8 @@ Este repositorio utiliza el sistema de persistencia y continuidad en `.ia/`:
 ## 🛠️ Tecnologías y Despliegue
 
 - **Frontend**: HTML5 Semántico, Vanilla CSS (Design System nativo) y JavaScript ES6+.
-- **Backend / Auth**: Supabase (`@supabase/supabase-js` v2).
+- **Persistencia principal**: modo local del navegador (`localStorage`), sin sincronización entre dispositivos.
+- **Backend / Auth**: Supabase queda conservado solo como opción técnica futura; las cuentas remotas están pausadas en la interfaz pública.
 - **Hosting**: Cloudflare Workers (Assets en `./public`).
 - **Validación del Banco**: `node scripts/validar-banco.js`.
 
