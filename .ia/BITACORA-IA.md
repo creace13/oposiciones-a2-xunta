@@ -2,6 +2,19 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Autorización permanente de push para Codex
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+- el titular concede autorización permanente para que Codex haga `push` a `origin/main` cuando complete checkpoints validados y documentados;
+- la regla se incorpora al protocolo y a `AGENTS.md`;
+- se mantienen límites de seguridad: nada destructivo, secretos, credenciales, reescritura de historial, despliegues temporales ajenos o configuración sensible sin justificación específica;
+- se subieron previamente a GitHub los commits `8d00d7e` y `5d11067`.
+
+Siguiente paso:
+- registrar este cambio como informe 28 y subirlo también a GitHub.
+
 ## 20 de julio de 2026 - Avance C02-05: UIX móvil y sidebar sin scroll horizontal
 
 Modelo: Codex / OpenAI, actuando como titular operativo.

@@ -51,7 +51,14 @@ Si el chat ha sido compactado, resumido o heredado de otro modelo, volver a leer
   1. Validar la integridad del código (`node --check app.js`, `node scripts/validar-banco.js`).
   2. Registrar la actualización en `.ia/ESTADO-PROYECTO.md` y `.ia/BITACORA-IA.md`.
   3. Realizar un commit local con un mensaje descriptivo que funcione como punto de guardado oficial e identificable.
-  4. Hacer `push` o desplegar únicamente con autorización expresa del usuario, especialmente cuando la rama esté conectada a despliegue automático.
+  4. Hacer `push` o desplegar conforme a la autorización vigente del titular.
+
+### Autorización vigente de publicación
+
+- Desde el 20 de julio de 2026, el titular concede a Codex/OpenAI autorización permanente para hacer `push` a `origin/main` tras checkpoints validados y documentados, aunque el push active publicación automática en Cloudflare Workers.
+- Esta autorización cubre cambios ordinarios del proyecto: código, UIX, documentación, pruebas, informes, sincronización de `public/` y correcciones verificadas.
+- No cubre acciones destructivas o de alto riesgo fuera del alcance normal: borrar repositorios, reescribir historial remoto, exponer secretos, crear despliegues temporales en otra cuenta, cambiar credenciales, eliminar datos de Supabase o modificar configuración sensible sin evidencia y justificación.
+- Tras cada `push`, Codex debe comprobar el estado de Git y, cuando sea razonable, verificar que la web pública responde o indicar por qué no pudo comprobarse.
 
 ## Informes Inter-IA y orden documental
 
