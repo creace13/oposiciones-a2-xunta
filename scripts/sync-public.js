@@ -13,7 +13,6 @@ const filesToSync = [
   'robots.txt',
   'sitemap.xml',
   'favicon.svg',
-  'google418592490c331f5b.html',
   'og-image.jpg',
   '_headers'
 ];
