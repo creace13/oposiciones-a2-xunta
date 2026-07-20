@@ -73,7 +73,9 @@
       🟢 <strong>Versión 1.2.0 estable local</strong> · Banco de 1.522 preguntas en revisión continua · Cuentas remotas pausadas. <a href="#metodologia" style="color:#ffffff;text-decoration:underline;margin-left:8px;">Ver metodología y transparencia</a>
     </div>
     <div class="app-shell">
-      <aside class="sidebar" aria-label="Navegación principal">
+      <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-expanded="false" aria-controls="primarySidebar" aria-label="Abrir menu de navegacion"><span aria-hidden="true">☰</span><span class="sr-only">Abrir menu</span></button>
+      <button type="button" class="sidebar-overlay" id="sidebarOverlay" aria-label="Cerrar menu de navegacion"></button>
+      <aside class="sidebar" id="primarySidebar" aria-label="Navegación principal">
         <a class="brand" href="#inicio" aria-label="Inicio de Opo A2">
           <span class="brand-mark">A2</span>
           <span>oposita<em>con calma</em></span>
@@ -93,11 +95,7 @@
             <div class="profile-details">
               <strong>Merce</strong>
               <div class="profile-links">
-                <button type="button" id="openAuthModalBtn" class="profile-action-btn">Editar perfil</button>
-                <span class="dot">•</span>
                 <button type="button" id="sidebarLogoutBtn" class="profile-action-btn logout">Cerrar sesión</button>
-                <span class="dot">•</span>
-                <button type="button" id="deleteProgressBtn" class="profile-action-btn danger">Borrar progreso</button>
                 <span class="dot">•</span>
                 <button type="button" id="footerPrivacyLink" class="profile-action-btn" onclick="document.getElementById('privacyModal').showModal()">Privacidad</button>
               </div>
@@ -408,6 +406,7 @@
         <p><strong>5. Acceso y eliminación:</strong> La acción <strong>«Borrar progreso»</strong> elimina de este navegador las respuestas, errores, sesiones y metas. «Cerrar sesión» elimina el nombre local, pero no borra el progreso salvo que uses la opción específica de borrado.</p>
         <p><strong>6. Uso responsable:</strong> Esta app es una herramienta gratuita de práctica y refuerzo. No es academia, temario oficial, fuente oficial ni asesoramiento jurídico. No está vinculada a la Xunta de Galicia. Ante cualquier duda de contenido, prevalecen BOE/DOG, la convocatoria vigente y el criterio profesional correspondiente.</p>
       </div>
+      <button type="button" id="deleteProgressBtn" class="secondary-button privacy-delete-button">Borrar progreso local</button>
       <button type="button" class="primary-button dialog-action" style="margin-top:16px;width:100%;">Entendido y cerrar</button>
     </dialog>
     <div id="authScreen" class="auth-screen">

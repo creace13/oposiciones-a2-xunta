@@ -28427,7 +28427,27 @@ window.addEventListener('hashchange', () => {
   if (hashView) showView(hashView, { updateHash: false });
 });
 
-document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', e => { e.preventDefault(); showView(link.dataset.view); }));
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
+function closeMobileMenu() {
+  document.body.classList.remove('sidebar-open');
+  if (mobileMenuToggle) {
+    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+    mobileMenuToggle.setAttribute('aria-label', 'Abrir menu de navegacion');
+  }
+}
+function toggleMobileMenu() {
+  const open = !document.body.classList.contains('sidebar-open');
+  document.body.classList.toggle('sidebar-open', open);
+  if (mobileMenuToggle) {
+    mobileMenuToggle.setAttribute('aria-expanded', String(open));
+    mobileMenuToggle.setAttribute('aria-label', open ? 'Cerrar menu de navegacion' : 'Abrir menu de navegacion');
+  }
+}
+if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeMobileMenu);
+document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMobileMenu(); });
+document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', e => { e.preventDefault(); showView(link.dataset.view); closeMobileMenu(); }));
 document.querySelectorAll('[data-view-target]').forEach(button => button.addEventListener('click', () => showView(button.dataset.viewTarget)));
 document.querySelectorAll('.start-test').forEach(button => button.addEventListener('click', () => startQuiz(buildSet(button.dataset.set, 5))));
 document.querySelectorAll('.start-historical').forEach(button => button.addEventListener('click', e => startQuiz(buildSet(e.currentTarget.dataset.set), 'exam')));

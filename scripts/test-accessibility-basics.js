@@ -32,6 +32,11 @@ console.log('--- TEST DE ACCESIBILIDAD BÁSICA ---');
 
 const navLinks = [...document.querySelectorAll('.nav-link')];
 assert(navLinks.length >= 7, '❌ No se encontraron todos los enlaces de navegación principal');
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
+assert(mobileMenuToggle, '❌ Falta el botón de menú móvil');
+assert.strictEqual(mobileMenuToggle.getAttribute('aria-expanded'), 'false', '❌ El menú móvil debe comenzar cerrado');
+assert(sidebarOverlay, '❌ Falta la capa de cierre del menú móvil');
 assert.strictEqual(
   document.querySelectorAll('.nav-link[aria-current="page"]').length,
   1,

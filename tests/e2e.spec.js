@@ -105,4 +105,21 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
     expect(response.status()).toBe(200);
   });
 
+  test('7. Menú lateral móvil y acciones de privacidad simplificadas', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto('/');
+
+    await expect(page.locator('#mobileMenuToggle')).toHaveAttribute('aria-expanded', 'false');
+    await expect(page.locator('#openAuthModalBtn')).toHaveCount(0);
+    await expect(page.locator('#deleteProgressBtn')).toHaveCount(1);
+
+    await page.click('#mobileMenuToggle');
+    await expect(page.locator('body')).toHaveClass(/sidebar-open/);
+    await expect(page.locator('#mobileMenuToggle')).toHaveAttribute('aria-expanded', 'true');
+
+    await page.click('.nav-link[data-view="library"]');
+    await expect(page.locator('#library')).toBeVisible();
+    await expect(page.locator('body')).not.toHaveClass(/sidebar-open/);
+  });
+
 });

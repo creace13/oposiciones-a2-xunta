@@ -25,6 +25,7 @@ function assertIncludes(text, expected, label) {
 
 const runbook = fs.readFileSync(runbookPath, "utf8");
 const wrangler = JSON.parse(fs.readFileSync(wranglerPath, "utf8"));
+assert(fs.existsSync(runbookPath), "El runbook interno debe conservarse localmente aunque no se publique");
 
 assertIncludes(runbook, "GitHub", "GitHub");
 assertIncludes(runbook, "Cloudflare Workers", "Cloudflare Workers");
@@ -56,8 +57,7 @@ const criticalFiles = [
   "index.js",
   "wrangler.json",
   "package.json",
-  ".ia/ESTADO-PROYECTO.md",
-  ".ia/COLA-ACTIVA.md",
+  "docs/EXPOSICION-GITHUB.md",
 ];
 
 for (const file of criticalFiles) {
