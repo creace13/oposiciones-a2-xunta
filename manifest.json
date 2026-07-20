@@ -1,7 +1,7 @@
 {
   "name": "Oposita con Calma · A2 Xunta de Galicia",
   "short_name": "Opo A2 Xunta",
-  "description": "Plataforma gratuita con 1.522 preguntas tipo test verificadas para las oposiciones del Subgrupo A2 de la Xunta de Galicia.",
+  "description": "Plataforma gratuita con 1.522 preguntas tipo test clasificadas en revisión continua para las oposiciones del Subgrupo A2 de la Xunta de Galicia.",
   "start_url": "./#inicio",
   "display": "standalone",
   "background_color": "#153d35",

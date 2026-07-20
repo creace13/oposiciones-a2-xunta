@@ -2,7 +2,7 @@
 
 Plataforma web independiente para la preparación del primer ejercicio tipo test de las oposiciones del **Cuerpo de Gestión de la Administración General de la Xunta de Galicia (Subgrupo A2)**.
 
-**Versión 1.2 candidata:** publicada como estable en modo local. El banco continúa en revisión normativa y las cuentas remotas están pausadas para evitar prometer sincronización, backups o soporte que todavía no forman parte de esta versión.
+**Versión 1.2.0 estable local:** publicada como herramienta estable en modo local. El banco continúa en revisión normativa y las cuentas remotas están pausadas para evitar prometer sincronización, backups o soporte que no forman parte de esta versión.
 
 ---
 
@@ -13,7 +13,7 @@ Plataforma web independiente para la preparación del primer ejercicio tipo test
   - **315 preguntas oficiales** de 3 exámenes reales completos (2025 PE, 2024 PE, 2024 Funcionarización).
 - **Explicaciones Razonadas**: Cada pregunta incluye 4 justificaciones legales individuales ("por qués") y enlace directo al BOE/DOG oficial.
 - **Simulacros Oficiales**: Temporizador regresivo en vivo (`⏱ M:SS`), opción de *"Dejar en blanco"* (0 penalización) y penalización de –0,25 puntos por fallo.
-- **Privacidad y Perfil de Usuario**: Persistencia local de fallos e historial en tu propio navegador. La autenticación opcional mediante **Supabase Auth** se mantiene como función Beta.
+- **Privacidad y Perfil de Usuario**: Persistencia local de fallos e historial en tu propio navegador. La autenticación remota queda pausada; el progreso no se sincroniza entre dispositivos.
 - **Alojamiento en Producción**: Servido globalmente en **Cloudflare Workers** desde directorio estático aislado (`/public`).
 - **Filosofía 100% Abierta (Non-Commercial Open Source)**: Libre acceso para la comunidad de opositores bajo licencia CC BY-NC-SA 4.0.
 
@@ -50,6 +50,7 @@ Este repositorio utiliza el sistema de persistencia y continuidad en `.ia/`:
 - **Backend / Auth**: Supabase queda conservado solo como opción técnica futura; las cuentas remotas están pausadas en la interfaz pública.
 - **Hosting**: Cloudflare Workers (Assets en `./public`).
 - **Validación del Banco**: `node scripts/validar-banco.js`.
+- **Mantenimiento normativo**: `docs/MANTENIMIENTO-NORMATIVO.md` y `node scripts/test-normative-maintenance.js`.
 
 ---
 

@@ -72,7 +72,7 @@ async function runE2ESuite() {
   assert.strictEqual(document.querySelector('.repository-link').href, 'https://github.com/creace13/oposiciones-a2-xunta', '❌ DOM 0 Fallido: enlace al repositorio incorrecto');
   assert.strictEqual(document.getElementById('projectCreditsTitle').textContent.includes('colaboración entre inteligencias artificiales'), true, '❌ DOM 0 Fallido: créditos Inter-IA ausentes');
   assert.strictEqual(document.querySelector('.closing-quote').textContent.includes('La constancia no hace ruido'), true, '❌ DOM 0 Fallido: cierre motivador ausente');
-  assert.strictEqual(htmlContent.includes('Versión 1.2 candidata (Estable en modo local)'), true, '❌ DOM 0 Fallido: versión estable local no publicada en la interfaz');
+  assert.strictEqual(htmlContent.includes('Versión 1.2.0 estable local'), true, '❌ DOM 0 Fallido: versión estable local no publicada en la interfaz');
   assert.strictEqual(htmlContent.includes('Cuentas remotas pausadas'), true, '❌ DOM 0 Fallido: falta advertencia sobre cuentas remotas pausadas');
   console.log('  PASADO: Métricas y textos de transparencia verificados.');
 
