@@ -29,6 +29,7 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - ✅ **Créditos visibles en GitHub**: el `README.md` incluye una sección específica de autoría humana y colaboración con Gemini/Antigravity y Codex/OpenAI, con sus funciones diferenciadas.
 - ✅ **Suite Playwright E2E en Navegadores Reales (C02-04)**: Pruebas automatizadas en Chromium, Firefox y WebKit (escritorio y visores móviles Pixel 5 e iPhone 12) pasando 30/30 (100% ok). Corregida la restauración de hash directos, modales de privacidad y scrolling en JSDOM.
 - ✅ **Accesibilidad básica y UIX (C02-05)**: Corregidos overflow móvil/escritorio, sidebar sin scroll horizontal, navegación semántica con `aria-current`, diálogos con nombre/descripción accesible, foco visible, contraste básico AA y prueba de teclado. No sustituye una auditoría humana especializada con lector de pantalla real.
+- 🟡 **Backup y rollback (C02-06)**: creado `docs/OPERACION-RECUPERACION.md` y ensayo no destructivo de recuperación Git mediante `scripts/test-recovery-runbook.js`. La puerta queda bloqueada para cierre total hasta confirmar backup/restauración real en paneles de Cloudflare y Supabase con el titular.
 - ✅ **Validación manual multidispositivo**: el usuario declara funcionamiento visual satisfactorio en tableta, móvil y PC el 19 de julio de 2026.
 
 ## Cifras canónicas
@@ -42,8 +43,9 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 
 ## Siguiente tarea exacta
 
-- Ejecutar `C02-06`: documentar y ensayar backup, restauración y rollback de GitHub, Cloudflare y Supabase.
-- Mientras el titular está ausente pueden avanzarse también `C02-06`, `C02-07` y `C02-08`, respetando un único elemento `EN CURSO` en toda la cola.
+- Ejecutar `C02-07`: revisión de seguridad, privacidad técnica, dependencias, cabeceras, errores y rendimiento de producción.
+- `C02-06` queda bloqueado para cierre completo hasta revisar con el titular los paneles de Cloudflare y Supabase.
+- Mientras el titular está ausente puede avanzarse `C02-07` y `C02-08`, respetando un único elemento `EN CURSO` en toda la cola.
 - Al regresar el titular, resolver las decisiones bloqueadas `C02-01` y `C02-02` antes de validar el ciclo remoto `C02-03`.
 
 ## Bloqueos activos
@@ -56,6 +58,7 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - **Cola ejecutable:** el resto de pendientes y sus dependencias constan exclusivamente en `.ia/COLA-ACTIVA.md`.
 - **GitHub/publicación:** desde el 20 de julio de 2026 el titular autoriza a Codex/OpenAI a hacer `push` a `origin/main` tras checkpoints validados y documentados. La autorización no cubre acciones destructivas, secretos, reescritura de historial ni configuración sensible.
 - **Accesibilidad/UIX:** `C02-05` cerrado con correcciones y pruebas de accesibilidad básica. Queda como mejora futura opcional una auditoría humana especializada con lector de pantalla real.
+- **Backup/rollback:** `C02-06` tiene runbook y ensayo local seguro, pero no se cierra completamente hasta comprobar backup/restauración real en Cloudflare/Supabase con acceso del titular.
 
 ## Archivos clave
 

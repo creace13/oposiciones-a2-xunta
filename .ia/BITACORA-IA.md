@@ -2,6 +2,35 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Avance C02-06: runbook de recuperación y bloqueo honesto
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+
+- creado `docs/OPERACION-RECUPERACION.md` como manual de rescate de GitHub, Cloudflare Workers y Supabase;
+- añadido `scripts/test-recovery-runbook.js` para comprobar runbook, remoto GitHub, archivos críticos en `HEAD`, configuración Cloudflare `./public` y ensayo no destructivo de `git archive`;
+- añadido script `test:ops` en `package.json`;
+- registrado `C02-06` como bloqueado parcialmente, no como cerrado, porque falta evidencia real de backup/restauración en paneles Cloudflare/Supabase;
+- registrado informe 30 en `.ia/auditorias/INDEX.md`.
+
+Comprobaciones:
+
+- `node --check app.js`: OK.
+- `node scripts/validar-banco.js`: OK, 1.522 preguntas, 0 incompletas, 0 duplicados.
+- `node scripts/test-recovery-runbook.js`: OK.
+- `node scripts/test-auth-states.js`: OK.
+- `node scripts/test-accessibility-basics.js`: OK.
+- `node scripts/test-browser-e2e.js`: OK.
+
+Bloqueos:
+
+- Cierre total de `C02-06` requiere acceso o acompañamiento del titular en Cloudflare y Supabase.
+
+Siguiente paso:
+
+- ejecutar `C02-07` seguridad, privacidad técnica, dependencias, cabeceras, errores y rendimiento.
+
 ## 20 de julio de 2026 - Cierre C02-05: accesibilidad básica y UIX
 
 Modelo: Codex / OpenAI, actuando como titular operativo.

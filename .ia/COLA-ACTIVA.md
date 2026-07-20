@@ -37,7 +37,7 @@ Cerrar una versión que pueda considerarse plenamente funcional y lista con crit
 | **C02-04** | P1 | Incorporar pruebas automatizadas en navegadores reales para navegación, práctica, simulacro, persistencia, recuperación y actualización. | `HECHO` (Antigravity) | Cerrada. | Playwright E2E (30/30 ok): Chromium, Firefox, WebKit en escritorio (1280x720) y móvil (Pixel 5, iPhone 12). |
 | **C02-11** | P0 | Diagnosticar el fallo de inicio de sesión remoto visto en equipos externos y decidir si es cuenta inexistente/no confirmada, contraseña incorrecta, configuración Supabase o UX de error insuficiente. | `HECHO` (Codex) | Cerrada con prueba real del titular en modo incógnito tras despliegue del mensaje guiado. Relacionada con C02-01, C02-02 y C02-03. | Login remoto operativo; causa práctica compatible con caché/autorrelleno/estado de navegador; mensaje de error mejorado y prueba real satisfactoria del titular. |
 | **C02-05** | P1 | Ejecutar auditoría de accesibilidad y corregir teclado, foco, diálogos, contraste, semántica y lector de pantalla. | `HECHO` (Codex) | Cerrada para accesibilidad básica aplicable; no sustituye una auditoría humana especializada con lector de pantalla real. | UIX móvil/escritorio sin overflow, foco visible, navegación con `aria-current`, diálogos con nombre/descripción, contraste AA básico, prueba de teclado y `scripts/test-accessibility-basics.js` OK. |
-| **C02-06** | P1 | Documentar y ensayar backup, restauración y rollback de GitHub, Cloudflare y Supabase. | `PENDIENTE` | Acceso operativo a los servicios para el ensayo final. | Runbook y simulacro de restauración/rollback con tiempos y resultado. |
+| **C02-06** | P1 | Documentar y ensayar backup, restauración y rollback de GitHub, Cloudflare y Supabase. | `BLOQUEADO` (Codex) | Runbook y ensayo local seguro realizados. Falta acceso/confirmación del titular en paneles de Cloudflare y Supabase para backup/restauración real. | `docs/OPERACION-RECUPERACION.md` creado, `scripts/test-recovery-runbook.js` OK, `git archive` no destructivo OK y web pública HTTP 200. Pendiente: evidencia de backup real Supabase/Cloudflare. |
 | **C02-07** | P1 | Revisar seguridad, privacidad técnica, dependencias, cabeceras, errores y rendimiento de producción. | `PENDIENTE` | Ninguna para la auditoría inicial. | Informe sin secretos, riesgos clasificados y cero P0/P1 abiertos. |
 | **C02-08** | P1 | Establecer mantenimiento normativo: inventario de vigencia, cadencia de revisión, alerta de cambios y retirada de preguntas afectadas. | `PENDIENTE` | Ninguna. | Procedimiento reproducible con responsable, fechas y simulación de una norma modificada. |
 | **C02-09** | P1 | Obtener una revisión jurídica independiente del banco y registrar muestra, alcance, incidencias y resolución. | `BLOQUEADO` | Revisor humano jurídicamente competente designado por el titular. | Dictamen externo identificado y todas las incidencias críticas resueltas. |
@@ -45,9 +45,9 @@ Cerrar una versión que pueda considerarse plenamente funcional y lista con crit
 
 ## Orden recomendado mientras el titular está ausente
 
-1. C02-06 — runbook de backup y rollback.
-2. C02-07 — seguridad y rendimiento.
-3. C02-08 — mantenimiento normativo.
+1. C02-07 — seguridad y rendimiento.
+2. C02-08 — mantenimiento normativo.
+3. C02-06 — cerrar ensayo real en paneles Cloudflare/Supabase cuando el titular esté disponible.
 4. Resolver C02-01 y C02-02 antes de validar C02-03.
 
 ## Bloqueos que requieren al titular
