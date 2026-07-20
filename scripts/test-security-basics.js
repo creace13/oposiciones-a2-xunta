@@ -19,6 +19,7 @@ function assertNotIncludes(file, needle, message) {
 const indexHtml = read('index.html');
 const publicIndexHtml = read(path.join('public', 'index.html'));
 const worker = read('index.js');
+const headersFile = read('_headers');
 const app = read('app.js');
 const pkg = JSON.parse(read('package.json'));
 
@@ -37,6 +38,16 @@ assertNotIncludes(app, 'supabase.co', 'No debe exponerse URL de Supabase si el r
   'Strict-Transport-Security',
   'Cross-Origin-Opener-Policy'
 ].forEach(header => assertIncludes(worker, header, `Falta cabecera de seguridad: ${header}`));
+
+[
+  'Content-Security-Policy',
+  'X-Content-Type-Options',
+  'Referrer-Policy',
+  'X-Frame-Options',
+  'Permissions-Policy',
+  'Strict-Transport-Security',
+  'Cross-Origin-Opener-Policy'
+].forEach(header => assertIncludes(headersFile, header, `Falta cabecera de seguridad en _headers: ${header}`));
 
 [
   "default-src 'self'",

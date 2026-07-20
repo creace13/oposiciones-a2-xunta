@@ -6,6 +6,13 @@ Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PRO
 
 Modelo: Codex / OpenAI, actuando como titular operativo.
 
+Actualización posterior:
+
+- el panel de Cloudflare muestra activa la implementación del último commit documental;
+- la comprobación pública confirma que el HTML nuevo ya se sirve y que desaparece el CDN de Supabase;
+- las cabeceras no aparecen porque Cloudflare sirve assets estáticos directamente y no ejecuta `index.js` para esas rutas por defecto;
+- se corrige el enfoque añadiendo `_headers` al paquete público, que es el mecanismo documentado por Cloudflare para cabeceras en Static Assets.
+
 Trabajo realizado:
 
 - subido el checkpoint `caa052f` a `origin/main`;

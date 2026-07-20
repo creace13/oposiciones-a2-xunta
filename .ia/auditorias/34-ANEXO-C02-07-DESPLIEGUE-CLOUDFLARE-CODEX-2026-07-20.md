@@ -10,7 +10,18 @@ Destinatario: Usuario / relevo Inter-IA.
 
 El checkpoint de seguridad `caa052f` se subió correctamente a `origin/main`.
 
-Sin embargo, la URL pública `https://oposiciones-xunta.opos-galicia.workers.dev/` sigue sirviendo el HTML anterior:
+Actualización tras captura del panel del titular:
+
+- Cloudflare muestra activa una implementación reciente.
+- La URL pública ya sirve el HTML nuevo con `app.js?v=v20-security-20260720`.
+- Ya no aparece el CDN de Supabase en el HTML público.
+- Las cabeceras de seguridad aún no aparecen porque los assets estáticos se sirven directamente y no pasan por `index.js` por defecto.
+
+El mecanismo correcto para cabeceras en Static Assets es publicar un archivo `_headers` dentro de `public/`.
+
+## Situación anterior
+
+La URL pública `https://oposiciones-xunta.opos-galicia.workers.dev/` seguía sirviendo el HTML anterior:
 
 - mantiene la carga de `https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2`;
 - mantiene `app.js?v=v19-stable-local-20260719`;

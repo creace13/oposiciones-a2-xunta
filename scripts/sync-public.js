@@ -14,7 +14,8 @@ const filesToSync = [
   'sitemap.xml',
   'favicon.svg',
   'google418592490c331f5b.html',
-  'og-image.jpg'
+  'og-image.jpg',
+  '_headers'
 ];
 
 const allowedPublicItems = new Set([...filesToSync, 'documentos']);
