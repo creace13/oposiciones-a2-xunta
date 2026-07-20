@@ -2,6 +2,31 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Cierre C03: exposición GitHub y canal de erratas
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+
+- ejecutados los puntos 2 y 4 autorizados por el titular;
+- documentada la separación entre documentación pública, documentación interna publicable y secretos/no publicables en `docs/EXPOSICION-GITHUB.md`;
+- reforzado `.gitignore` para excluir `.wrangler/`, `.env`, `.env.*`, `Links_gestores.txt` y `docs/psw_ddbb.txt`;
+- creada plantilla pública de GitHub Issues para reportar erratas o sugerencias sin datos personales;
+- añadido botón de reporte en Guía/Metodología y flujo de feedback por GitHub Issues desde cada pregunta;
+- eliminado el uso operativo de Supabase para feedback en esta versión local;
+- sincronizado `public/`.
+
+Comprobaciones:
+
+- `node --check app.js`: OK.
+- `node scripts/validar-banco.js`: OK.
+- `node scripts/test-public-exposure.js`: OK.
+- `npm test`: OK, incluyendo 24/24 pruebas Playwright en Chromium/WebKit/móvil.
+
+Siguiente paso:
+
+- publicar el checkpoint C03 y verificar en producción que se sirve `v22-feedback-20260720`.
+
 ## 20 de julio de 2026 - Anexo post-release: límites de uso y no equivalencia a academia
 
 Modelo: Codex / OpenAI, actuando como titular operativo.

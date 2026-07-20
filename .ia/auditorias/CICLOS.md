@@ -31,3 +31,15 @@ Objetivo: cerrar las cuentas remotas o retirarlas, diagnosticar el fallo de logi
 Cola canónica: `../COLA-ACTIVA.md`.
 
 Resultado: versión `1.2.0` aceptada como **estable local**, publicada y verificada en producción. Las cuentas remotas quedan pausadas y `C02-09` queda trasladado como garantía jurídica externa futura, porque requiere un revisor humano jurídicamente competente designado por el titular.
+
+## C03 — Post-release público y feedback
+
+Estado: **CERRADO**.
+
+Rango: informe `38`.
+
+Objetivo: ejecutar los puntos 2 y 4 autorizados por el titular tras la versión 1.2.0 estable local: barrido de exposición pública/privada de GitHub y canal sencillo de erratas/sugerencias.
+
+Cola canónica: `../COLA-ACTIVA.md`.
+
+Resultado: se documenta la política de exposición pública en `docs/EXPOSICION-GITHUB.md`, se refuerza `.gitignore`, se crea plantilla de GitHub Issues para erratas y la aplicación abre reportes públicos sin depender de Supabase ni de nuevas suscripciones. Los puntos 1, 3 y 6 quedan fuera del ciclo por decisión expresa del titular.

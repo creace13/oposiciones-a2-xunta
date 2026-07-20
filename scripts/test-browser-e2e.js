@@ -31,6 +31,11 @@ async function runE2ESuite() {
 
   window.scrollTo = () => {};
   window.confirm = () => true;
+  window.openedUrls = [];
+  window.open = (url) => {
+    window.openedUrls.push(String(url));
+    return null;
+  };
   window.HTMLDialogElement = HTMLDialogElementPolyfill;
 
   document.querySelectorAll('dialog').forEach(d => {
@@ -175,6 +180,21 @@ async function runE2ESuite() {
   privacyModal.close();
   assert.strictEqual(privacyModal.open, false, '❌ E2E 7 Fallido: Modal de privacidad no cerró');
   console.log('  PASADO: Modal de privacidad abre y cierra correctamente.');
+
+  // Flow 7b: Probar canal público de erratas sin Supabase
+  console.log('Test E2E 7b: Probando reporte de erratas por GitHub Issues...');
+  const feedbackDialog = document.getElementById('feedbackDialog');
+  assert.strictEqual(!!feedbackDialog, true, '❌ E2E 7b Fallido: feedbackDialog no existe');
+  window.openFeedbackDialog('procedimiento-1');
+  assert.strictEqual(feedbackDialog.open, true, '❌ E2E 7b Fallido: el modal de feedback no abrió');
+  const feedbackText = document.getElementById('feedbackText');
+  assert.strictEqual(feedbackText.value.includes('[Pregunta procedimiento-1]'), true, '❌ E2E 7b Fallido: no precarga ID de pregunta');
+  feedbackText.value += ' Revisar posible errata con fuente oficial.';
+  document.getElementById('feedbackForm').dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
+  assert.strictEqual(window.openedUrls.some(url => url.includes('github.com/creace13/oposiciones-a2-xunta/issues/new')), true, '❌ E2E 7b Fallido: no abre GitHub Issues');
+  assert.strictEqual(window.openedUrls.some(url => url.includes('procedimiento-1')), true, '❌ E2E 7b Fallido: no incluye el ID de pregunta en el reporte');
+  feedbackDialog.close();
+  console.log('  PASADO: Canal de erratas abre GitHub Issues sin depender de base de datos.');
 
   // Flow 8: Comprobar existencia en disco de todos los enlaces de la Biblioteca
   console.log('Test E2E 8: Verificando integridad de enlaces a documentos en disco...');

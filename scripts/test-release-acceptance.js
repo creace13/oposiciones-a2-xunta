@@ -35,8 +35,8 @@ assert.strictEqual(lock.packages[''].version, '1.2.0', 'package-lock debe alinea
   assert.ok(!content.includes('Versión 1.2 candidata'), `Sigue apareciendo etiqueta candidata en documento de salida ${index}.`);
 });
 
-assert.ok(indexHtml.includes('v21-stable-local-20260720'), 'index.html debe usar el identificador de caché estable.');
-assert.ok(publicIndexHtml.includes('v21-stable-local-20260720'), 'public/index.html debe usar el identificador de caché estable.');
+assert.ok(indexHtml.includes('v22-feedback-20260720'), 'index.html debe usar el identificador de caché vigente.');
+assert.ok(publicIndexHtml.includes('v22-feedback-20260720'), 'public/index.html debe usar el identificador de caché vigente.');
 assert.ok(readme.includes('estable local'), 'README debe declarar claramente la estabilidad local.');
 assert.ok(readme.includes('No es una academia'), 'README debe aclarar que la app no sustituye una academia.');
 assert.ok(readme.includes('asesoramiento jurídico profesional'), 'README debe aclarar que la app no sustituye asesoramiento jurídico profesional.');

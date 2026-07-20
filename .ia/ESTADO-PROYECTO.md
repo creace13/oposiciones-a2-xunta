@@ -34,6 +34,7 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - ✅ **Mantenimiento normativo (C02-08)**: creado `docs/MANTENIMIENTO-NORMATIVO.md` con responsable, fuentes, cadencia, estados de vigencia, protocolo de cambio y retirada segura; añadida `scripts/test-normative-maintenance.js` a la suite. Simulación Ley 39/2015: 153 preguntas localizadas para revisión sin modificar el banco.
 - ✅ **Aceptación final 1.2.0 estable local (C02-10)**: versión elevada de `1.2.0-candidate` a `1.2.0`, etiqueta pública actualizada a «Versión 1.2.0 estable local», `public/` sincronizado, `scripts/test-release-acceptance.js` añadido y producción verificada con `v21-stable-local-20260720`.
 - ✅ **Claridad pública de límites de uso**: añadido aviso visible de uso responsable para evitar equívocos: la app es herramienta gratuita de práctica y refuerzo, no academia, temario oficial, fuente oficial ni asesoramiento jurídico. La aclaración queda también en `README.md` y protegida por pruebas.
+- ✅ **C03 post-release público y feedback**: ejecutados los puntos 2 y 4 autorizados por el titular. Se documenta qué puede publicarse en GitHub y qué debe quedar fuera, se refuerza `.gitignore`, se crea plantilla pública de erratas y la app abre reportes en GitHub Issues sin depender de Supabase ni de costes mensuales.
 - ✅ **Validación manual multidispositivo**: el usuario declara funcionamiento visual satisfactorio en tableta, móvil y PC el 19 de julio de 2026.
 
 ## Cifras canónicas
@@ -42,19 +43,19 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - Incompletas o errores de validación: **0** (`node scripts/validar-banco.js` -> RESULTADO: OK).
 - Fuentes normativas usadas por el banco: **25** (`node scripts/test-normative-maintenance.js` -> RESULTADO: OK).
 - Temas troncales inventariados: **23**.
-- Despliegue en producción: Cloudflare Workers desde `./public` (`https://oposiciones-xunta.opos-galicia.workers.dev`), versión pública `v21-stable-local-20260720`.
+- Despliegue en producción: Cloudflare Workers desde `./public` (`https://oposiciones-xunta.opos-galicia.workers.dev`), versión pública `v22-feedback-20260720`.
 - Autenticación y DB: Supabase (`mquigtfqvznwnovzjudf.supabase.co`).
 - Licencia: CC BY-NC-SA 4.0 (Atribución - No Comercial - Compartir Igual).
 
 ## Siguiente tarea exacta
 
-- No quedan tareas ejecutables abiertas para la versión 1.2.0 estable local.
-- Próxima decisión opcional: abrir un nuevo ciclo para revisión pública/GitHub, donaciones sin suscripción mensual o revisión jurídica externa (`C02-09`) si el titular designa revisor.
+- No quedan tareas ejecutables abiertas para el ciclo C03 post-release.
+- Próxima decisión opcional: revisión jurídica humana externa, donaciones sin suscripción mensual o auditoría IA avanzada final cuando el titular quiera preparar una versión definitiva.
 
 ## Bloqueos activos
 
 - **Versión 1.2.0 estable local:** ninguno conocido tras la suite automatizada, la validación manual multidispositivo del usuario y el smoke test público.
-- **Publicación:** GitHub y Cloudflare Workers alineados tras `4c85a61`. Producción responde HTTP 200, sirve el HTML nuevo (`v21-stable-local-20260720`) y aplica cabeceras de seguridad desde `public/_headers`.
+- **Publicación:** GitHub y Cloudflare Workers alineados tras el último checkpoint validado. Producción debe servir el HTML nuevo (`v22-feedback-20260720`) y aplicar cabeceras de seguridad desde `public/_headers`.
 - **Cuentas remotas:** pausadas en la interfaz pública por decisión del titular para evitar nuevas suscripciones, backups frágiles y complejidad de privacidad. El modo local es el camino principal.
 - **Login remoto:** `C02-11` cerrado. El titular confirma el 20 de julio de 2026 que el acceso entra correctamente en modo incógnito tras desplegar el mensaje guiado y normalizar correo. La causa práctica queda compatible con caché/autorrelleno/estado local de navegador, no con rotura del login remoto.
 - **Revisión jurídica externa:** `C02-09` requiere un profesional independiente designado por el titular.

@@ -2,7 +2,7 @@
 
 Este índice registra cronológicamente todos los informes, auditorías y respuestas cruzadas entre los modelos de Inteligencia Artificial que participan en el desarrollo y auditoría del proyecto.
 
-**Estado vigente:** ciclo C01 cerrado en los informes 01–21 y ciclo C02 abierto mediante `22-AUDITORIA-APERTURA-COLA-DEFINITIVA-CODEX-2026-07-19.md`. La versión 1.1.1 está publicada; la cola canónica de garantía ampliada es `../COLA-ACTIVA.md`.
+**Estado vigente:** ciclos C01 y C02 cerrados. El ciclo C03 post-release público y feedback queda cerrado mediante el informe 38. La versión 1.2.0 estable local está publicada; la cola canónica vigente es `../COLA-ACTIVA.md`.
 
 ## 📋 Reglas de Nomenclatura e Índice
 
@@ -60,3 +60,9 @@ Este índice registra cronológicamente todos los informes, auditorías y respue
 | **35** | `RESPUESTA` | Codex (OpenAI) | Usuario / relevo | Cierre C02-08: mantenimiento normativo, cadencia, retirada segura y simulación de norma modificada. | [`35-RESPUESTA-C02-08-MANTENIMIENTO-NORMATIVO-CODEX-2026-07-20.md`](35-RESPUESTA-C02-08-MANTENIMIENTO-NORMATIVO-CODEX-2026-07-20.md) | 🟢 Cerrado |
 | **36** | `CIERRE` | Codex (OpenAI) | Usuario / relevo | Cierre C02-10 y ciclo C02: versión 1.2.0 estable local publicada y verificada. | [`36-CIERRE-C02-10-VERSION-1.2.0-ESTABLE-LOCAL-CODEX-2026-07-20.md`](36-CIERRE-C02-10-VERSION-1.2.0-ESTABLE-LOCAL-CODEX-2026-07-20.md) | 🟢 Cerrado |
 | **37** | `ANEXO` | Codex (OpenAI) | Usuario / relevo | Aclaración pública post-release: la app no equivale a academia, temario oficial ni asesoramiento jurídico. | [`37-ANEXO-TRANSPARENCIA-USO-RESPONSABLE-CODEX-2026-07-20.md`](37-ANEXO-TRANSPARENCIA-USO-RESPONSABLE-CODEX-2026-07-20.md) | 🟢 Cerrado |
+
+### Ciclo C03 — post-release público y feedback (cerrado)
+
+| Secuencia | Tipo | Emisor | Destinatario | Asunto Principal | Archivo | Estado |
+| :---: | :---: | :---: | :---: | :--- | :--- | :---: |
+| **38** | `RESPUESTA` | Codex (OpenAI) | Usuario / relevo | Cierre C03: barrido GitHub público/privado y canal de erratas mediante GitHub Issues sin Supabase. | [`38-RESPUESTA-C03-EXPOSICION-GITHUB-FEEDBACK-CODEX-2026-07-20.md`](38-RESPUESTA-C03-EXPOSICION-GITHUB-FEEDBACK-CODEX-2026-07-20.md) | 🟢 Cerrado |

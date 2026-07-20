@@ -313,6 +313,7 @@
                 </div>
               </div>
             </div>
+            <button type="button" class="secondary-button" id="generalFeedbackBtn" onclick="window.openFeedbackDialog()" style="margin-top:16px;">Reportar errata o sugerencia</button>
           </section>
 
           <section class="panel methodology-guide-section">
@@ -373,6 +374,28 @@
     <dialog id="goalDialog" aria-labelledby="goalDialogTitle"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">NUEVA META</p><h2 id="goalDialogTitle">¿Qué paso es realista esta semana?</h2><label>Describe una meta pequeña<input id="goalInput" maxlength="80" placeholder="Ej.: 20 preguntas de empleo público" /></label><button id="saveGoal" class="primary-button">Guardar meta</button></dialog>
     <dialog id="authDialog" aria-labelledby="authModalTitle" aria-describedby="authModalDesc"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">PERFIL LOCAL</p><h2 id="authModalTitle">Editar tu perfil de estudio</h2><p id="authModalDesc">Este nombre solo se guarda en este navegador. No crea cuenta remota ni sincroniza entre dispositivos.</p><form id="authForm"><label>Nombre de usuario / Opositor<input type="text" id="authName" placeholder="Ej.: Merce" maxlength="30" required /></label><button type="submit" id="authSubmitBtn" class="primary-button wide">Guardar perfil local</button></form><div id="authStatusText" class="tiny" style="margin-top:15px;color:var(--muted);text-align:center;">Perfil guardado localmente en este navegador</div></dialog>
     <dialog id="resetPasswordModal" aria-labelledby="resetPasswordTitle" aria-describedby="resetPasswordDesc"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">RECUPERACIÓN DE CUENTA</p><h2 id="resetPasswordTitle">Cambiar Contraseña</h2><p id="resetPasswordDesc">Introduce tu nueva contraseña para tu cuenta de opositor.</p><form id="resetPasswordForm"><label>Nueva Contraseña<input type="password" id="newPasswordInput" placeholder="Mínimo 6 caracteres" minlength="6" required /></label><button type="submit" class="primary-button wide" style="margin-top:12px;">Guardar Nueva Contraseña</button></form><div id="resetPasswordStatus" class="tiny" style="margin-top:15px;color:var(--muted);text-align:center;"></div></dialog>
+    <dialog id="feedbackDialog" aria-labelledby="feedbackDialogTitle" aria-describedby="feedbackDialogDesc" style="max-width:560px;padding:24px;border-radius:16px;border:1px solid var(--border,#e0e5e2);">
+      <button class="dialog-close" aria-label="Cerrar">×</button>
+      <p class="eyebrow" style="color:var(--accent,#153d35);font-size:12px;font-weight:700;">ERRATAS Y SUGERENCIAS</p>
+      <h2 id="feedbackDialogTitle" style="margin-top:4px;font-size:20px;color:var(--text,#1e2923);">Reportar una posible errata</h2>
+      <p id="feedbackDialogDesc" style="font-size:13px;line-height:1.6;color:var(--text-secondary,#4a5550);margin-top:12px;">Se abrirá una incidencia pública en GitHub para revisar el contenido. No incluyas datos personales, contraseñas, correos, teléfonos ni información sensible.</p>
+      <form id="feedbackForm">
+        <label>Tipo de reporte
+          <select id="feedbackType">
+            <option value="errata">Posible errata jurídica</option>
+            <option value="fuente">Fuente o enlace roto</option>
+            <option value="explicacion">Explicación mejorable</option>
+            <option value="sugerencia">Sugerencia general</option>
+          </select>
+        </label>
+        <label>Detalle
+          <textarea id="feedbackText" rows="5" maxlength="900" placeholder="Ej.: [Pregunta procedimiento-1] Creo que la respuesta debería revisarse por el artículo..."></textarea>
+        </label>
+        <p class="tiny" style="margin-top:8px;">No incluyas datos personales. Si puedes, añade ID de pregunta y enlace BOE/DOG o convocatoria.</p>
+        <button type="submit" class="primary-button wide" style="margin-top:12px;">Abrir reporte en GitHub</button>
+      </form>
+      <div id="feedbackThanks" class="tiny hidden" style="margin-top:12px;color:var(--muted);text-align:center;">Abriendo GitHub para registrar el reporte…</div>
+    </dialog>
     <dialog id="privacyModal" aria-labelledby="privacyModalTitle" aria-describedby="privacyModalDesc" style="max-width:580px;padding:24px;border-radius:16px;border:1px solid var(--border,#e0e5e2);">
       <button class="dialog-close" aria-label="Cerrar">×</button>
       <p class="eyebrow" style="color:var(--accent,#153d35);font-size:12px;font-weight:700;">INFORMACIÓN BÁSICA DE PRIVACIDAD · BETA</p>
@@ -428,6 +451,6 @@
       </div>
     </div>
 
-    <script src="app.js?v=v21-stable-local-20260720"></script>
+    <script src="app.js?v=v22-feedback-20260720"></script>
   </body>
 </html>

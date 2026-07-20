@@ -28843,23 +28843,56 @@ if (forgotPassBtn) {
 }
 
 const feedbackForm = document.getElementById('feedbackForm');
+const feedbackIssueBaseUrl = 'https://github.com/creace13/oposiciones-a2-xunta/issues/new';
+
+function buildFeedbackIssueUrl(type, text) {
+  const typeLabels = {
+    errata: 'Posible errata jurídica',
+    fuente: 'Fuente o enlace roto',
+    explicacion: 'Explicación mejorable',
+    sugerencia: 'Sugerencia general'
+  };
+  const label = typeLabels[type] || typeLabels.sugerencia;
+  const questionMatch = text.match(/\[Pregunta ([^\]]+)\]/);
+  const title = questionMatch
+    ? `[${label}] ${questionMatch[1]}`
+    : `[${label}] Revisión solicitada`;
+  const body = [
+    '## Aviso',
+    'No incluyas datos personales. Este reporte se abrirá como incidencia pública en GitHub.',
+    '',
+    '## Tipo de reporte',
+    label,
+    '',
+    '## Detalle',
+    text,
+    '',
+    '## Fuente oficial o referencia',
+    'Añade enlace BOE/DOG o convocatoria si procede.',
+    '',
+    '## Contexto técnico',
+    `Versión pública: 1.2.0 estable local · ${new Date().toISOString().slice(0, 10)}`
+  ].join('\n');
+  const params = new URLSearchParams({
+    template: 'errata.md',
+    title,
+    labels: 'errata,contenido',
+    body
+  });
+  return `${feedbackIssueBaseUrl}?${params.toString()}`;
+}
+
 if (feedbackForm) {
-  feedbackForm.addEventListener('submit', async (e) => {
+  feedbackForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const type = document.getElementById('feedbackType').value;
     const text = document.getElementById('feedbackText').value.trim();
-    const userName = localStorage.getItem('opoA2UserName') || 'Anónimo';
     if (!text) return;
 
-    if (supabaseClient) {
-      try {
-        await supabaseClient.from('user_feedback').insert([{ user_name: userName, feedback_type: type, content: text }]);
-      } catch (err) {
-        console.warn('Supabase feedback save:', err);
-      }
-    }
+    const issueUrl = buildFeedbackIssueUrl(type, text);
     const thanks = document.getElementById('feedbackThanks');
     if (thanks) thanks.classList.remove('hidden');
+    window.open(issueUrl, '_blank', 'noopener,noreferrer');
     setTimeout(() => {
       if (thanks) thanks.classList.add('hidden');
       document.getElementById('feedbackText').value = '';
@@ -28871,7 +28904,7 @@ if (feedbackForm) {
 window.openFeedbackDialog = function(prefill = '') {
   if (feedbackDialog) {
     const textarea = document.getElementById('feedbackText');
-    if (textarea && prefill) textarea.value = `[Pregunta ${prefill}]: `;
+    if (textarea) textarea.value = prefill ? `[Pregunta ${prefill}]: ` : '';
     feedbackDialog.showModal();
   }
 };

@@ -52,3 +52,33 @@ No quedan tareas ejecutables abiertas para la versión 1.2.0 estable local. `C02
 - Si en el futuro se reactivan cuentas remotas, decidir entre Plan Pro, backup externo o ciclo completo de privacidad antes de ofrecerlas al público.
 - Facilitar, si procede, una cuenta remota de prueba controlada para diagnosticar login sin usar credenciales personales.
 - Designar, si desea la garantía ampliada, un revisor jurídico independiente.
+
+---
+
+## Ciclo C03 — post-release público y feedback
+
+Fecha de apertura: 20 de julio de 2026.
+
+Objetivo: ejecutar únicamente los puntos autorizados por el titular tras el cierre de la versión 1.2.0 estable local:
+
+- **Punto 2:** barrido GitHub público/privado.
+- **Punto 4:** canal de reporte de erratas y sugerencias.
+
+Quedan expresamente fuera de este ciclo por decisión del titular:
+
+- **Punto 1:** revisión jurídica humana externa.
+- **Punto 3:** donaciones.
+- **Punto 6:** auditoría IA avanzada final, reservada para la última fase.
+
+| ID | Prioridad | Entregable | Estado | Dependencias / desbloqueo | Evidencia de cierre |
+| :--- | :---: | :--- | :---: | :--- | :--- |
+| **C03-01** | P1 | Barrido de documentación pública/privada en GitHub y reglas de no publicación. | `HECHO` (Codex) | Autorización del titular para ejecutar punto 2. | `.gitignore` protege secretos/locales, `docs/EXPOSICION-GITHUB.md` define política pública/privada y `scripts/test-public-exposure.js` valida que no se versionen rutas sensibles. |
+| **C03-02** | P1 | Canal público de erratas y sugerencias sin depender de Supabase ni de coste mensual. | `HECHO` (Codex) | Autorización del titular para ejecutar punto 4. | Plantilla `.github/ISSUE_TEMPLATE/errata.md`, diálogo `feedbackDialog`, botón en Guía/Metodología, apertura de GitHub Issues y pruebas `test-public-exposure`, `test-browser-e2e` y `npm test` OK. |
+
+## Orden recomendado tras C03
+
+No quedan tareas ejecutables abiertas en este ciclo. Los siguientes puntos se mantienen como decisiones futuras del titular:
+
+- revisión jurídica humana externa;
+- donaciones sin suscripción mensual;
+- auditoría IA avanzada final antes de una hipotética versión definitiva.

@@ -37,6 +37,18 @@ El trabajo se coordina mediante un protocolo Inter-IA con bitácora, auditorías
 
 ---
 
+## 🐞 Reportar erratas o sugerencias
+
+Si detectas una posible errata, una fuente rota o una explicación mejorable, puedes abrir una incidencia pública en GitHub:
+
+[Reportar errata o sugerencia](https://github.com/creace13/oposiciones-a2-xunta/issues/new?template=errata.md)
+
+No incluyas datos personales, correos, teléfonos, contraseñas ni información sensible. Si es posible, indica el ID de la pregunta y enlaza la fuente oficial BOE/DOG o la convocatoria aplicable.
+
+La política de qué se publica y qué se mantiene fuera del repositorio está documentada en [`docs/EXPOSICION-GITHUB.md`](docs/EXPOSICION-GITHUB.md).
+
+---
+
 ## 🧠 Continuidad y Memoria entre Modelos de IA (AGENTS.md)
 
 Este repositorio utiliza el sistema de persistencia y continuidad en `.ia/`:

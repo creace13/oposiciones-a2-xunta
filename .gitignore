@@ -6,6 +6,9 @@ tmp/
 scratch/
 .tempmediaStorage/
 *.bin
+.wrangler/
+.env
+.env.*
 Links_gestores.txt
 docs/psw_ddbb.txt
 
