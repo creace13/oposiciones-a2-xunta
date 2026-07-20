@@ -120,6 +120,12 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
     await page.click('.nav-link[data-view="library"]');
     await expect(page.locator('#library')).toBeVisible();
     await expect(page.locator('body')).not.toHaveClass(/sidebar-open/);
+
+    await page.setViewportSize({ width: 1024, height: 768 });
+    await page.reload();
+    await page.click('#mobileMenuToggle');
+    await expect(page.locator('body')).toHaveClass(/sidebar-open/);
+    await expect(page.locator('#primarySidebar')).toBeVisible();
   });
 
 });

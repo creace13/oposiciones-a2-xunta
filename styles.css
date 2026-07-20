@@ -5,7 +5,8 @@
 html,body { overflow-x:hidden; }
 body { margin:0; background:var(--cream); color:var(--ink); font-family:"DM Sans",system-ui,sans-serif; }
 button,select,input { font:inherit; } button { cursor:pointer; } .app-shell { display:grid; grid-template-columns:250px minmax(0,1fr); min-height:100vh; width:100%; min-width:0; }
-.sidebar { background:var(--pine); color:#f7f8ed; padding:28px 18px 24px; display:flex; flex-direction:column; position:sticky; top:0; height:100vh; overflow-y:auto; overflow-x:hidden; }
+.sidebar { background:var(--pine); color:#f7f8ed; padding:28px 18px 24px; display:flex; flex-direction:column; position:sticky; top:0; height:100dvh; min-height:100vh; overflow-y:auto; overflow-x:hidden; scrollbar-width:none; }
+.sidebar::-webkit-scrollbar { display:none; }
 .brand { display:flex; align-items:center; gap:10px; color:inherit; font-family:Newsreader,serif; font-size:23px; font-weight:600; text-decoration:none; margin:0 10px 36px; letter-spacing:-.5px; }.brand em { display:block; font:12px "DM Mono"; letter-spacing:.2px; color:#bacbb3; font-style:normal; margin-top:1px; }.brand-mark { width:34px; height:34px; border-radius:50%; display:grid; place-items:center; background:var(--lime); color:var(--pine); font:500 13px "DM Mono"; }
 nav { display:grid; gap:4px; }.nav-link { color:#cfdbd0; text-decoration:none; padding:11px 12px; border-radius:9px; display:flex; align-items:center; gap:12px; font-size:14px; transition:all .2s ease; }.nav-link span { width:17px; text-align:center; font-size:17px; }.nav-link:hover,.nav-link.active { color:white; background:rgba(255,255,255,.12); font-weight:600; }
 html[data-active-view] .nav-link.active { color:#cfdbd0; background:transparent; font-weight:400; }
@@ -202,3 +203,29 @@ html[data-auth-state="unauthenticated"] .app-shell { display:none!important; }
 
 .readiness-row { grid-template-columns:1.7fr 1.1fr 95px; }
 @media (max-width:580px) { .readiness-row { grid-template-columns:1fr; } }
+
+/* Ventanas estrechas de escritorio: el panel se comporta igual que el menú móvil. */
+@media (min-width:901px) and (max-width:1200px) {
+  .app-shell { display:block; }
+  .mobile-menu-toggle { display:flex; align-items:center; justify-content:center; position:fixed; top:14px; right:16px; z-index:1101; width:44px; height:44px; border:1px solid rgba(255,255,255,.22); border-radius:12px; background:var(--pine); color:#fff; box-shadow:0 8px 20px rgba(0,0,0,.2); font-size:23px; }
+  .mobile-menu-toggle:hover { background:#0d3029; }
+  .sidebar-overlay { position:fixed; inset:0; z-index:1090; border:0; background:rgba(9,31,27,.48); opacity:0; pointer-events:none; transition:opacity .2s ease; }
+  .sidebar { position:fixed; inset:0 auto 0 0; z-index:1100; width:min(86vw,320px); max-width:320px; height:100dvh; padding:24px 18px; display:flex; flex-direction:column; overflow-y:auto; overflow-x:hidden; scrollbar-width:none; transform:translateX(-105%); transition:transform .24s ease; box-shadow:10px 0 30px rgba(0,0,0,.18); }
+  .sidebar::-webkit-scrollbar { display:none; }
+  .sidebar .brand { margin:0 10px 30px; }
+  .sidebar nav { display:grid; gap:4px; overflow:visible; max-width:none; }
+  .sidebar .nav-link { white-space:normal; padding:12px; }
+  .sidebar .nav-link span { display:block; }
+  .sidebar-footer { display:flex; margin-top:auto; }
+  .sidebar .profile,.sidebar .sidebar-tip { display:flex; }
+  .sidebar .sidebar-tip { display:block; }
+  .sidebar-open .sidebar { transform:translateX(0); }
+  .sidebar-open .sidebar-overlay { opacity:1; pointer-events:auto; }
+  .sidebar-open .mobile-menu-toggle { right:auto; left:min(86vw,276px); background:transparent; border-color:transparent; box-shadow:none; }
+  .sidebar-open .mobile-menu-toggle span:first-child { font-size:0; }
+  .sidebar-open .mobile-menu-toggle span:first-child::after { content:'×'; font-size:28px; }
+  main { padding:76px 5% 60px; max-width:100%; }
+  .stat-grid,.syllabus-grid,.coverage-summary,.methodology-grid,.guide-steps { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .two-columns,.practice-layout,.library-grid,.coverage-board,.coverage-dashboard-board { grid-template-columns:minmax(0,1fr); }
+  .project-credits { grid-template-columns:1fr; }
+}
