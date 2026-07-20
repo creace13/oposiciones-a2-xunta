@@ -17,6 +17,8 @@ const tracked = execSync('git ls-files', { cwd: root, encoding: 'utf8' })
 [
   'Links_gestores.txt',
   'docs/psw_ddbb.txt',
+  '.ia/',
+  'AGENTS.md',
   '.wrangler',
   '.env',
   'tmp/',
@@ -35,6 +37,8 @@ const gitignore = read('.gitignore');
   '.wrangler/',
   '.env',
   '.env.*',
+  '.ia/',
+  'AGENTS.md',
   'Links_gestores.txt',
   'docs/psw_ddbb.txt'
 ].forEach(rule => {
@@ -45,6 +49,11 @@ const exposureDoc = read(path.join('docs', 'EXPOSICION-GITHUB.md'));
 assert.ok(exposureDoc.includes('Qué no debe subirse nunca'), 'Falta política de no publicación.');
 assert.ok(exposureDoc.includes('Tokens de Cloudflare'), 'Falta mención a tokens.');
 assert.ok(exposureDoc.includes('GitHub Issues'), 'Falta canal de erratas.');
+assert.ok(exposureDoc.includes('La carpeta `.ia/` y `AGENTS.md` quedan como documentación interna local'), 'La política debe proteger la sala de máquinas interna.');
+
+const publicMethodology = read(path.join('docs', 'METODOLOGIA-PUBLICA.md'));
+assert.ok(publicMethodology.includes('protocolos internos completos'), 'Falta metodología pública resumida.');
+assert.ok(publicMethodology.includes('no forma parte de la versión pública'), 'La metodología pública debe aclarar que la documentación interna no se publica.');
 
 const issueTemplate = read(path.join('.github', 'ISSUE_TEMPLATE', 'errata.md'));
 assert.ok(issueTemplate.includes('No incluyas datos personales'), 'La plantilla de erratas debe prohibir datos personales.');
@@ -59,4 +68,3 @@ assert.ok(app.includes('No incluyas datos personales'), 'El flujo de feedback de
 console.log('EXPOSICIÓN PÚBLICA / GITHUB');
 console.log('Archivos privados no versionados y canal de erratas configurado.');
 console.log('RESULTADO: OK');
-

@@ -11,8 +11,8 @@ El repositorio puede funcionar como escaparate técnico y archivo de transparenc
 - Código de la aplicación.
 - Banco de preguntas y referencias normativas.
 - Documentación de uso, licencia y despliegue.
-- Informes Inter-IA en `.ia/auditorias/`, siempre que no incluyan secretos ni datos personales.
-- Protocolos de continuidad de IA, porque explican cómo se mantiene el proyecto.
+- Metodología pública resumida, sin exponer la sala de máquinas interna.
+- Plantillas de erratas y contribución.
 - Pruebas automatizadas.
 
 ## Qué no debe subirse nunca
@@ -22,12 +22,16 @@ El repositorio puede funcionar como escaparate técnico y archivo de transparenc
 - Datos personales de usuarios o correos privados.
 - Enlaces internos de gestor si revelan cuentas o paneles privados.
 - Exportaciones de base de datos con usuarios reales.
+- Protocolos internos de IA, bitácoras de trabajo, colas operativas y auditorías completas de relevo.
+- Instrucciones locales de agentes (`AGENTS.md`) o documentación que revele el flujo interno de coordinación.
 
 ## Archivos protegidos por `.gitignore`
 
 - `.wrangler/`
 - `.env`
 - `.env.*`
+- `.ia/`
+- `AGENTS.md`
 - `Links_gestores.txt`
 - `docs/psw_ddbb.txt`
 - `tmp/`
@@ -42,9 +46,9 @@ El repositorio puede funcionar como escaparate técnico y archivo de transparenc
 - `docs/psw_ddbb.txt` está ignorado y no está versionado.
 - `.wrangler/` queda ignorado.
 - No se han detectado credenciales privadas versionadas en el barrido automatizado.
-- La carpeta `.ia/` sigue pública por decisión operativa: aporta transparencia, trazabilidad y continuidad entre modelos.
+- La carpeta `.ia/` y `AGENTS.md` quedan como documentación interna local. No se publican porque contienen protocolos, decisiones operativas, colas, auditorías completas y flujo de trabajo propio del titular.
+- La transparencia pública se mantiene mediante `README.md`, esta política de exposición y `docs/METODOLOGIA-PUBLICA.md`.
 
 ## Canal de erratas
 
 Las erratas y sugerencias se canalizan mediante GitHub Issues con plantilla pública. El usuario debe evitar incluir datos personales y, si es posible, aportar ID de pregunta y fuente oficial.
-

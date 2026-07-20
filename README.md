@@ -49,12 +49,13 @@ La política de qué se publica y qué se mantiene fuera del repositorio está d
 
 ---
 
-## 🧠 Continuidad y Memoria entre Modelos de IA (AGENTS.md)
+## 🧠 Metodología y continuidad del proyecto
 
-Este repositorio utiliza el sistema de persistencia y continuidad en `.ia/`:
-- Antes de continuar el proyecto, cualquier modelo de IA debe leer `AGENTS.md` y `.ia/PROTOCOLO.md`.
-- El estado canónico, la arquitectura del banco y los informes de auditorías cruzadas se encuentran en `.ia/ESTADO-PROYECTO.md` y `.ia/auditorias/`.
-- Gemini / Antigravity (Google) y Codex (OpenAI) han colaborado en construcción, auditoría, pruebas y documentación bajo dirección humana.
+La metodología pública del proyecto se resume en [`docs/METODOLOGIA-PUBLICA.md`](docs/METODOLOGIA-PUBLICA.md).
+
+El proyecto mantiene documentación interna de coordinación, auditoría y continuidad, pero esa sala de máquinas no forma parte del repositorio público. La decisión busca equilibrar transparencia con protección del flujo de trabajo propio del titular.
+
+Gemini / Antigravity (Google) y Codex (OpenAI) han colaborado en construcción, auditoría, pruebas y documentación bajo dirección humana.
 
 ---
 

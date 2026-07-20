@@ -6,6 +6,8 @@ tmp/
 scratch/
 .tempmediaStorage/
 *.bin
+.ia/
+AGENTS.md
 .wrangler/
 .env
 .env.*
