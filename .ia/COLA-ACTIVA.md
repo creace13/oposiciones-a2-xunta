@@ -39,14 +39,13 @@ Cerrar una versión que pueda considerarse plenamente funcional y lista con crit
 | **C02-05** | P1 | Ejecutar auditoría de accesibilidad y corregir teclado, foco, diálogos, contraste, semántica y lector de pantalla. | `HECHO` (Codex) | Cerrada para accesibilidad básica aplicable; no sustituye una auditoría humana especializada con lector de pantalla real. | UIX móvil/escritorio sin overflow, foco visible, navegación con `aria-current`, diálogos con nombre/descripción, contraste AA básico, prueba de teclado y `scripts/test-accessibility-basics.js` OK. |
 | **C02-06** | P1 | Documentar y ensayar backup, restauración y rollback de GitHub, Cloudflare y Supabase. | `HECHO` (Codex) | Cerrado para la versión local sin suscripciones: Supabase deja de ser dependencia operativa de usuarios. | `docs/OPERACION-RECUPERACION.md` creado/ampliado, `scripts/test-recovery-runbook.js` OK, `git archive` no destructivo OK, rollback Git/Cloudflare documentado y Supabase tratado como función pausada. |
 | **C02-07** | P1 | Revisar seguridad, privacidad técnica, dependencias, cabeceras, errores y rendimiento de producción. | `HECHO` (Codex) | Cerrada en producción. Cloudflare aplica cabeceras desde `public/_headers`, mecanismo correcto para Workers Static Assets. | `scripts/test-security-basics.js` OK, `npm audit --omit=dev --audit-level=high` con 0 vulnerabilidades, `npm test` OK, Supabase CDN retirado, HTML público actualizado y cabeceras CSP/nosniff/referrer/x-frame/permissions/HSTS comprobadas con `curl -D -`. |
-| **C02-08** | P1 | Establecer mantenimiento normativo: inventario de vigencia, cadencia de revisión, alerta de cambios y retirada de preguntas afectadas. | `PENDIENTE` | Ninguna. | Procedimiento reproducible con responsable, fechas y simulación de una norma modificada. |
+| **C02-08** | P1 | Establecer mantenimiento normativo: inventario de vigencia, cadencia de revisión, alerta de cambios y retirada de preguntas afectadas. | `HECHO` (Codex) | Cerrada con procedimiento y simulación automatizada. | `docs/MANTENIMIENTO-NORMATIVO.md`, `scripts/test-normative-maintenance.js`, `npm test` OK; simulación Ley 39/2015 localiza 153 preguntas a revisión. |
 | **C02-09** | P1 | Obtener una revisión jurídica independiente del banco y registrar muestra, alcance, incidencias y resolución. | `BLOQUEADO` | Revisor humano jurídicamente competente designado por el titular. | Dictamen externo identificado y todas las incidencias críticas resueltas. |
 | **C02-10** | P2 | Ejecutar aceptación final, etiquetar la versión definitiva, publicar y realizar smoke test posterior al despliegue. | `PENDIENTE` | C02-01 a C02-09 cerrados. | Checklist final completo, tag/versionado, despliegue verificado y ciclo C02 cerrado. |
 
 ## Orden recomendado mientras el titular está ausente
 
-1. C02-08 — mantenimiento normativo.
-2. C02-10 — aceptación final cuando C02-08 esté cerrada y C02-09 siga tratado como bloqueo externo documentado.
+1. C02-10 — aceptación final de versión estable local, dejando C02-09 como bloqueo externo documentado si el titular no designa revisor jurídico independiente.
 
 ## Bloqueos que requieren al titular
 

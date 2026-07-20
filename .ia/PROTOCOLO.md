@@ -57,6 +57,7 @@ Si el chat ha sido compactado, resumido o heredado de otro modelo, volver a leer
 
 - Desde el 20 de julio de 2026, el titular concede a Codex/OpenAI autorización permanente para hacer `push` a `origin/main` tras checkpoints validados y documentados, aunque el push active publicación automática en Cloudflare Workers.
 - Esta autorización cubre cambios ordinarios del proyecto: código, UIX, documentación, pruebas, informes, sincronización de `public/` y correcciones verificadas.
+- Ajuste operativo del 20 de julio de 2026: no se hará `push` por cada microcambio. Se agruparán cambios locales y se hará `push` al cerrar bloques, segmentos o checkpoints importantes, para reducir ruido, coste operativo y despliegues innecesarios.
 - No cubre acciones destructivas o de alto riesgo fuera del alcance normal: borrar repositorios, reescribir historial remoto, exponer secretos, crear despliegues temporales en otra cuenta, cambiar credenciales, eliminar datos de Supabase o modificar configuración sensible sin evidencia y justificación.
 - Tras cada `push`, Codex debe comprobar el estado de Git y, cuando sea razonable, verificar que la web pública responde o indicar por qué no pudo comprobarse.
 

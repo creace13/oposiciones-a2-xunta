@@ -31,12 +31,14 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - ✅ **Accesibilidad básica y UIX (C02-05)**: Corregidos overflow móvil/escritorio, sidebar sin scroll horizontal, navegación semántica con `aria-current`, diálogos con nombre/descripción accesible, foco visible, contraste básico AA y prueba de teclado. No sustituye una auditoría humana especializada con lector de pantalla real.
 - ✅ **Decisión sin nuevas suscripciones (C02-01/C02-02/C02-03/C02-06)**: el titular decide no pagar Supabase Pro ni otra suscripción. Las cuentas remotas quedan pausadas y el producto principal pasa a ser estable local. Se reducen riesgos de backup, privacidad y soporte, y se conserva el código remoto como opción futura no pública.
 - ✅ **Seguridad técnica básica y rendimiento (C02-07)**: retirado el CDN público, la URL y la clave pública de Supabase; añadidas cabeceras de seguridad mediante `public/_headers`; protegidas metas locales frente a HTML inyectado; auditadas dependencias de producción con 0 vulnerabilidades; añadida `scripts/test-security-basics.js`; producción verificada con HTML nuevo y cabeceras CSP/nosniff/referrer/x-frame/permissions/HSTS.
+- ✅ **Mantenimiento normativo (C02-08)**: creado `docs/MANTENIMIENTO-NORMATIVO.md` con responsable, fuentes, cadencia, estados de vigencia, protocolo de cambio y retirada segura; añadida `scripts/test-normative-maintenance.js` a la suite. Simulación Ley 39/2015: 153 preguntas localizadas para revisión sin modificar el banco.
 - ✅ **Validación manual multidispositivo**: el usuario declara funcionamiento visual satisfactorio en tableta, móvil y PC el 19 de julio de 2026.
 
 ## Cifras canónicas
 
 - Preguntas totales: **1.522** (1.207 de elaboración propia + 315 de 3 exámenes oficiales históricos).
 - Incompletas o errores de validación: **0** (`node scripts/validar-banco.js` -> RESULTADO: OK).
+- Fuentes normativas usadas por el banco: **25** (`node scripts/test-normative-maintenance.js` -> RESULTADO: OK).
 - Temas troncales inventariados: **23**.
 - Despliegue en producción: Cloudflare Workers desde `./public` (`https://oposiciones-xunta.opos-galicia.workers.dev`).
 - Autenticación y DB: Supabase (`mquigtfqvznwnovzjudf.supabase.co`).
@@ -44,8 +46,8 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 
 ## Siguiente tarea exacta
 
-- Ejecutar `C02-08`: mantenimiento normativo, inventario de vigencia, cadencia de revisión, alerta de cambios y retirada de preguntas afectadas.
-- Con `C02-08` cerrado y `C02-09` mantenido como bloqueo externo documentado, preparar `C02-10` como aceptación final de la versión estable local.
+- Preparar `C02-10`: aceptación final de la versión estable local, checklist de cierre, versionado/tag si procede y smoke test posterior a publicación.
+- Mantener `C02-09` como bloqueo externo documentado salvo que el titular designe un revisor jurídico independiente.
 
 ## Bloqueos activos
 

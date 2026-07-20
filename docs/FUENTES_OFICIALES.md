@@ -1,6 +1,6 @@
 # Fuentes oficiales y alcance documental
 
-Actualizado: 10 de julio de 2026.
+Actualizado: 20 de julio de 2026.
 
 ## Fuente rectora
 
@@ -44,3 +44,7 @@ Una pregunta no podrá pasar a estado `revisada` sin:
 3. Fecha de revisión y responsable.
 4. Justificación de la respuesta correcta y de cada distractor.
 5. Etiqueta clara: `oficial histórica`, `redacción propia revisada` o `pendiente de revisión`.
+
+## Mantenimiento normativo
+
+El procedimiento operativo de vigilancia, revisión, retirada temporal y simulación de cambios normativos queda documentado en [`MANTENIMIENTO-NORMATIVO.md`](MANTENIMIENTO-NORMATIVO.md).

@@ -2,6 +2,28 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Cierre C02-08: mantenimiento normativo
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+
+- creado `docs/MANTENIMIENTO-NORMATIVO.md` con responsable, fuentes a vigilar, cadencia, estados de vigencia, protocolo ante cambios normativos y retirada segura de preguntas;
+- actualizado `docs/FUENTES_OFICIALES.md` para enlazar el procedimiento de mantenimiento;
+- añadido `scripts/test-normative-maintenance.js` e integrado en `npm test`;
+- ejecutada simulación de modificación de la Ley 39/2015: 153 preguntas localizadas para revisión, sin alterar el banco.
+
+Comprobaciones:
+
+- `node --check app.js`: OK.
+- `node scripts/validar-banco.js`: OK, 1.522 preguntas, 0 incompletas, 0 duplicados.
+- `node scripts/test-normative-maintenance.js`: OK.
+- `npm test`: OK, incluyendo 24/24 pruebas Playwright en Chromium/WebKit/móvil.
+
+Siguiente paso:
+
+- preparar `C02-10`: aceptación final de versión estable local, manteniendo `C02-09` como bloqueo externo si no hay revisor jurídico independiente.
+
 ## 20 de julio de 2026 - Anexo C02-07: GitHub actualizado, Cloudflare pendiente
 
 Modelo: Codex / OpenAI, actuando como titular operativo.
