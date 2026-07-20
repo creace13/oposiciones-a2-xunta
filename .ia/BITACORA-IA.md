@@ -13,6 +13,7 @@ Trabajo realizado:
 - indicado que ante duda prevalecen BOE/DOG, convocatoria vigente y criterio profesional;
 - suavizada la expresión «dominio absoluto del temario» a «dominio progresivo del temario»;
 - actualizado `README.md` con la misma advertencia;
+- añadido también el aviso dentro de la Política de Privacidad y Protección de Datos para que conste en la zona de privacidad/uso;
 - actualizadas pruebas de aceptación e integración para impedir que desaparezca este aviso;
 - sincronizado `public/`.
 

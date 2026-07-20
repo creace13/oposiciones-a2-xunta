@@ -170,6 +170,8 @@ async function runE2ESuite() {
   const privacyModal = document.getElementById('privacyModal');
   privacyModal.showModal();
   assert.strictEqual(privacyModal.open, true, '❌ E2E 7 Fallido: Modal de privacidad no abrió');
+  assert.strictEqual(privacyModal.textContent.includes('Uso responsable'), true, '❌ E2E 7 Fallido: falta uso responsable en privacidad');
+  assert.strictEqual(privacyModal.textContent.includes('No es academia, temario oficial, fuente oficial ni asesoramiento jurídico'), true, '❌ E2E 7 Fallido: privacidad no aclara límites de uso');
   privacyModal.close();
   assert.strictEqual(privacyModal.open, false, '❌ E2E 7 Fallido: Modal de privacidad no cerró');
   console.log('  PASADO: Modal de privacidad abre y cierra correctamente.');

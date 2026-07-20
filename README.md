@@ -4,7 +4,7 @@ Plataforma web independiente para la preparación del primer ejercicio tipo test
 
 **Versión 1.2.0 estable local:** publicada como herramienta estable en modo local. El banco continúa en revisión normativa y las cuentas remotas están pausadas para evitar prometer sincronización, backups o soporte que no forman parte de esta versión.
 
-> **Uso responsable:** esta plataforma es una herramienta gratuita de práctica y refuerzo. No es una academia, no está vinculada a la Xunta de Galicia, no sustituye preparadores, temarios actualizados, boletines oficiales ni asesoramiento jurídico profesional. Ante cualquier duda, prevalecen siempre BOE/DOG, la convocatoria vigente y el criterio profesional correspondiente.
+> **Privacidad y uso responsable:** esta plataforma es una herramienta gratuita de práctica y refuerzo. No es una academia, no está vinculada a la Xunta de Galicia, no sustituye preparadores, temarios actualizados, boletines oficiales ni asesoramiento jurídico profesional. Ante cualquier duda, prevalecen siempre BOE/DOG, la convocatoria vigente y el criterio profesional correspondiente. La misma advertencia queda visible dentro de la Política de Privacidad y Protección de Datos de la app.
 
 ---
 

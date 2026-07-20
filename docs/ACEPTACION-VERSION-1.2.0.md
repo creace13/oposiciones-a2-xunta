@@ -18,7 +18,7 @@ Esta aceptación no declara el banco como jurídicamente definitivo. La revisió
 - Biblioteca documental local.
 - Métricas honestas de uso y de catálogo.
 - Transparencia sobre creación, créditos, licencia y limitaciones.
-- Aviso explícito de uso responsable: apoyo al estudio, no academia, no fuente oficial ni asesoramiento jurídico.
+- Aviso explícito de uso responsable en Guía/metodología y Privacidad: apoyo al estudio, no academia, no fuente oficial ni asesoramiento jurídico.
 - Seguridad técnica básica y cabeceras de producción.
 - Procedimiento de mantenimiento normativo.
 

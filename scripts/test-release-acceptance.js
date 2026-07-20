@@ -41,6 +41,8 @@ assert.ok(readme.includes('estable local'), 'README debe declarar claramente la 
 assert.ok(readme.includes('No es una academia'), 'README debe aclarar que la app no sustituye una academia.');
 assert.ok(readme.includes('asesoramiento jurídico profesional'), 'README debe aclarar que la app no sustituye asesoramiento jurídico profesional.');
 assert.ok(indexHtml.includes('No es academia, temario oficial ni asesoramiento jurídico'), 'La web debe mostrar límites de uso responsables.');
+assert.ok(indexHtml.includes('Política de Privacidad y Protección de Datos'), 'La web debe enlazar privacidad.');
+assert.ok(indexHtml.includes('No es academia, temario oficial, fuente oficial ni asesoramiento jurídico'), 'Privacidad debe repetir los límites de uso responsables.');
 
 assert.ok(
   manifest.description.includes('clasificadas en revisión continua'),

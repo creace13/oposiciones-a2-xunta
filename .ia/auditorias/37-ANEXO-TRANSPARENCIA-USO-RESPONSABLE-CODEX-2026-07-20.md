@@ -16,6 +16,7 @@ La observación se considera correcta. La versión estable local debe ser útil 
   - no está vinculada a la Xunta de Galicia;
   - no sustituye BOE/DOG, convocatoria vigente, preparadores ni asesoramiento jurídico profesional.
 - Añadido el mismo criterio al `README.md`.
+- Añadido el aviso dentro de la Política de Privacidad y Protección de Datos.
 - Suavizada la frase “dominio absoluto del temario” a “dominio progresivo del temario”.
 - Actualizadas pruebas para exigir esta advertencia.
 - Sincronizado `public/`.
@@ -34,4 +35,3 @@ La suite completa incluye Playwright en Chromium, WebKit, mobile Chrome y mobile
 La aclaración mejora la calidad ética y editorial del proyecto.
 
 La app sigue siendo válida como herramienta de estudio, pero queda explícitamente presentada como apoyo práctico con revisión continua, no como sustituto de fuentes oficiales ni de preparación profesional.
-
