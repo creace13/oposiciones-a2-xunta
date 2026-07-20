@@ -33,6 +33,9 @@ assertIncludes(runbook, "git revert", "rollback seguro con git revert");
 assertIncludes(runbook, "curl -I https://oposiciones-xunta.opos-galicia.workers.dev", "smoke test público");
 assertIncludes(runbook, "Nunca subir a GitHub", "protección de secretos");
 assertIncludes(runbook, "Estado actual: **parcial y seguro**", "estado honesto de C02-06");
+assertIncludes(runbook, "El plan gratuito no incluye copias de seguridad", "limitación Supabase Free");
+assertIncludes(runbook, "Cómo suplir la falta de backups en Supabase Free", "plan compensatorio Supabase Free");
+assertIncludes(runbook, "Subir Supabase a Pro", "opción Supabase Pro");
 
 assert.strictEqual(wrangler.name, "oposiciones-xunta", "Nombre Cloudflare inesperado");
 assert.strictEqual(wrangler.assets.directory, "./public", "Cloudflare debe publicar ./public");

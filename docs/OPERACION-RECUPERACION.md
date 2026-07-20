@@ -161,13 +161,44 @@ Este identificador no es secreto. Las contraseñas, tokens privados, service rol
 
 ### Backup de Supabase pendiente de ensayo real
 
+El titular ha confirmado el 20 de julio de 2026, mediante captura del panel de Supabase, que el plan gratuito muestra este aviso operativo:
+
+```text
+El plan gratuito no incluye copias de seguridad de los proyectos.
+Actualiza al Plan Pro para obtener hasta 7 días de copias de seguridad programadas.
+```
+
+Esto cambia el criterio de cierre: en plan gratuito no se puede tratar Supabase como un sistema con recuperación automática garantizada. Para Beta es aceptable si las cuentas remotas siguen etiquetadas como Beta y se limita el riesgo; para una versión definitiva con usuarios reales, la recomendación fuerte es usar Plan Pro o implementar un mecanismo externo de exportación verificado.
+
 Para cerrar del todo esta puerta, el titular debe entrar al panel de Supabase y confirmar:
 
 1. Nombre del proyecto correcto.
-2. Exportación disponible de base de datos o backup automático del plan usado.
+2. Exportación manual disponible de base de datos o backup automático del plan usado.
 3. Tablas relevantes existentes, especialmente perfiles/progreso si se activan datos remotos.
 4. Políticas de seguridad activas.
 5. Procedimiento para restaurar o descargar copia.
+
+### Cómo suplir la falta de backups en Supabase Free
+
+Medidas mínimas mientras se mantenga el plan gratuito:
+
+1. **Mantener las cuentas remotas en Beta**: no venderlas como almacenamiento definitivo ni garantizado.
+2. **Priorizar el modo local/invitado**: el usuario conserva su progreso en su navegador, sin depender de restauración remota.
+3. **Exportación manual antes de cambios importantes**: antes de modificar autenticación, tablas o políticas, descargar una copia desde Supabase y guardarla fuera del repositorio.
+4. **No guardar exports con datos personales en GitHub**: si hay emails o identificadores de usuarios, la copia debe quedar en almacenamiento privado del titular.
+5. **Crear una cuenta de prueba controlada**: usarla para comprobar login, recuperación y borrado sin tocar cuentas personales.
+6. **Registrar fecha y responsable de cada copia**: una copia que nadie sabe cuándo se hizo casi no sirve.
+
+Opciones para la versión definitiva:
+
+| Opción | Coste | Ventaja | Inconveniente | Recomendación |
+| :--- | :---: | :--- | :--- | :--- |
+| Seguir en Supabase Free con copias manuales | 0 € | Mantiene el proyecto barato. | Riesgo si se olvida exportar o aparece un fallo con datos reales. | Aceptable solo para Beta o pocos usuarios de confianza. |
+| Subir Supabase a Pro | Pago mensual | Backups programados y menos improvisación. | Coste fijo. | Recomendado si habrá usuarios reales y progreso remoto. |
+| Desactivar cuentas remotas temporalmente | 0 € | Reduce privacidad, soporte y riesgo de pérdida remota. | Se pierde sincronización entre dispositivos. | Muy prudente si no quieres pagar todavía. |
+| Crear exportación externa automatizada | Variable | Independiente del plan, si se configura bien. | Más complejidad técnica y manejo de secretos. | Solo si compensa mantener Free con más ingeniería. |
+
+Mi criterio operativo: si la app va a compartirse con opositores reales, o se paga Pro o se desactiva/limita lo remoto hasta tener un backup fiable. Lo contrario sería barato, sí, pero frágil.
 
 Si hay usuarios reales, antes de tocar tablas:
 

@@ -2,6 +2,26 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Anexo C02-06: Supabase Free sin backups programados
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+
+- incorporada la evidencia del titular: Supabase Free no incluye copias de seguridad programadas;
+- ampliado `docs/OPERACION-RECUPERACION.md` con opciones para suplir el problema;
+- actualizados `C02-06`, Estado e Índice;
+- creado informe 31 como anexo del bloqueo operativo.
+
+Decisión recomendada:
+
+- Beta: mantener remoto en Beta y hacer copias manuales privadas antes de cambios sensibles.
+- Definitiva con usuarios reales: Plan Pro o retirada temporal de cuentas remotas.
+
+Siguiente paso:
+
+- continuar `C02-07` sin necesidad de modelo superior.
+
 ## 20 de julio de 2026 - Avance C02-06: runbook de recuperación y bloqueo honesto
 
 Modelo: Codex / OpenAI, actuando como titular operativo.
