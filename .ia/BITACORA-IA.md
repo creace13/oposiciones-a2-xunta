@@ -2,6 +2,20 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Codex asume titularidad operativa y abre gestión de cuota
+
+Modelo: Codex / OpenAI, actuando como titular operativo por instrucción expresa del usuario.
+
+Trabajo realizado:
+- registrada la nueva función de Codex como auditor, constructor y gestor documental del proyecto;
+- creada la cola interna `.ia/COLA-ALTO-RAZONAMIENTO.md` para reservar tareas que puedan justificar pedir un modelo o razonamiento superior;
+- incorporado a `.ia/COLA-ACTIVA.md` el nuevo elemento `C02-11` para diagnosticar el fallo de inicio de sesión remoto observado en equipos externos;
+- actualizado el protocolo para trabajar por defecto en razonamiento medio y pedir autorización antes de elevar modelo/razonamiento;
+- detectado que el repositorio local está un commit por delante de GitHub por el checkpoint `913f0c6` de C02-04.
+
+Siguiente paso:
+- iniciar `C02-11` antes de accesibilidad, sin guardar credenciales reales y usando una cuenta de prueba controlada si el titular la facilita.
+
 ## 19 de julio de 2026 - Finalización de C02-04 (Pruebas E2E Playwright en Navegadores Reales)
 
 Modelo: Antigravity / Google, actuando como constructor.

@@ -5,10 +5,19 @@ Estas instrucciones se aplican por igual a Gemini/Antigravity (Google), Codex (O
 ## Roles y autorización de modelos
 
 - El rol depende de la tarea y de la autorización del usuario, no de la marca del modelo.
+- Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/OpenAI queda designado como titular operativo del proyecto**: puede actuar como auditor, constructor y gestor documental mientras respete este protocolo y las autorizaciones de publicación.
 - **Gemini/Antigravity y Codex/OpenAI pueden actuar como constructores**: leer, editar, probar y documentar el proyecto cuando el usuario lo autorice.
 - Cualquiera de ellos puede actuar también como auditor. Si un modelo pasa de auditor a constructor, debe declararlo en la bitácora y en su informe de cierre.
 - Un modelo constructor debe atender los hallazgos abiertos igual que cualquier relevo: no puede dar por resuelto un punto sin evidencia reproducible.
 - La revisión cruzada entre proveedores es recomendable para una versión definitiva, pero no bloquea correcciones de Beta autorizadas expresamente por el usuario.
+
+## Gestión de cuota, modelos y razonamiento
+
+- El modo operativo normal será trabajar con el modelo disponible en razonamiento medio, optimizando contexto, lecturas y pruebas para no consumir cuota de forma innecesaria.
+- Antes de solicitar o recomendar un modelo/razonamiento superior, Codex debe explicar al titular por qué la tarea lo justifica y qué riesgo se reduce al hacerlo.
+- Las tareas candidatas a razonamiento alto se registran en `.ia/COLA-ALTO-RAZONAMIENTO.md`. Esta cola no sustituye a `.ia/COLA-ACTIVA.md`: solo sirve para reservar trabajos que pueden requerir más capacidad.
+- Si una tarea de la cola activa puede resolverse con razonamiento medio y pruebas objetivas, se ejecuta sin elevar modelo.
+- Ejemplos de tareas que pueden justificar razonamiento superior: revisión de seguridad/autenticación con impacto en datos reales, cierre final de versión definitiva, auditoría jurídica compleja de muchas normas, rediseños de arquitectura o fallos no reproducibles tras varios intentos razonables.
 
 ## Antes de realizar cualquier cambio
 
@@ -16,12 +25,13 @@ Leer, en este orden:
 
 1. `.ia/ESTADO-PROYECTO.md`: fotografía canónica del estado actual y siguiente tarea.
 2. `.ia/COLA-ACTIVA.md`: único listado ejecutable de trabajo pendiente, dependencias y bloqueos.
-3. `.ia/PLAN-MAESTRO.md`: fases, prioridades y condiciones de cierre.
-4. `.ia/AUDITORIA-CONTENIDO.md`: registro jurídico y temas auditados.
-5. `.ia/BITACORA-IA.md`: últimas decisiones y traspasos entre modelos.
-6. `.ia/auditorias/CICLOS.md`, `.ia/auditorias/INDEX.md` y los últimos informes correlativos: reconstruir el ciclo vigente y revisar observaciones abiertas.
+3. `.ia/COLA-ALTO-RAZONAMIENTO.md`: cola interna para decidir cuándo conviene pedir al titular usar un modelo o razonamiento superior.
+4. `.ia/PLAN-MAESTRO.md`: fases, prioridades y condiciones de cierre.
+5. `.ia/AUDITORIA-CONTENIDO.md`: registro jurídico y temas auditados.
+6. `.ia/BITACORA-IA.md`: últimas decisiones y traspasos entre modelos.
+7. `.ia/auditorias/CICLOS.md`, `.ia/auditorias/INDEX.md` y los últimos informes correlativos: reconstruir el ciclo vigente y revisar observaciones abiertas.
 
-Si el chat ha sido compactado, resumido o heredado de otro modelo, volver a leer estos cuatro archivos. No reconstruir el estado desde la memoria del chat.
+Si el chat ha sido compactado, resumido o heredado de otro modelo, volver a leer estos archivos. No reconstruir el estado desde la memoria del chat.
 
 ## Reglas no negociables
 
@@ -58,6 +68,7 @@ Si el chat ha sido compactado, resumido o heredado de otro modelo, volver a leer
 - La secuencia numérica de informes es global y nunca se reinicia al abrir un ciclo nuevo.
 - Un ciclo agrupa una finalidad concreta y se identifica como `C01`, `C02`, etc. Su alcance y rango de informes se registran en `.ia/auditorias/CICLOS.md`.
 - El único backlog operativo es `.ia/COLA-ACTIVA.md`. No se deben ejecutar listas antiguas de informes cerrados como si siguieran pendientes.
+- `.ia/COLA-ALTO-RAZONAMIENTO.md` no es backlog operativo: es un registro de tareas donde Codex debe valorar si conviene pedir más razonamiento antes de ejecutarlas.
 - Cada elemento de cola usa un identificador estable `CXX-NN`, prioridad `P0`, `P1` o `P2`, estado, dependencias y evidencia exigida para cerrarlo.
 - Estados admitidos: `PENDIENTE`, `EN CURSO`, `BLOQUEADO` y `HECHO`. Solo puede haber un elemento `EN CURSO` en toda la cola para evitar trabajo duplicado entre modelos.
 - Si un elemento está bloqueado por una decisión, credencial o revisión externa, debe indicarse quién puede desbloquearlo. Mientras tanto se continúa con el siguiente elemento ejecutable de mayor prioridad.

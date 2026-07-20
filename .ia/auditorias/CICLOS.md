@@ -26,8 +26,8 @@ Estado: **ABIERTO**.
 
 Rango: desde el informe `22` hasta su futuro informe `CIERRE`.
 
-Objetivo: cerrar las cuentas remotas o retirarlas, privacidad, navegadores reales, accesibilidad, operación/recuperación, seguridad, rendimiento y gobernanza jurídica.
+Objetivo: cerrar las cuentas remotas o retirarlas, diagnosticar el fallo de login remoto reportado por el titular, privacidad, navegadores reales, accesibilidad, operación/recuperación, seguridad, rendimiento y gobernanza jurídica.
 
 Cola canónica: `../COLA-ACTIVA.md`.
 
-Regla de cierre: todos los elementos `C02-01` a `C02-10` deben estar en `HECHO` o trasladados justificadamente a un ciclo posterior mediante un informe de cierre.
+Regla de cierre: todos los elementos `C02-01` a `C02-11` deben estar en `HECHO` o trasladados justificadamente a un ciclo posterior mediante un informe de cierre.

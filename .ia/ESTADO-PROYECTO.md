@@ -1,6 +1,6 @@
 # Estado actual del proyecto
 
-Última actualización: 19 de julio de 2026.
+Última actualización: 20 de julio de 2026.
 
 Este archivo es la fotografía canónica y breve del proyecto. Debe actualizarse al finalizar cada sesión relevante.
 
@@ -12,6 +12,8 @@ Plataforma Web independiente de preparación inteligente para el Cuerpo de Gesti
 
 **VERSIÓN 1.1.1 (ESTABLE EN MODO LOCAL / CUENTAS REMOTAS EN BETA / AUDITORÍA DE CONTENIDO CONTINUA)**.
 El ciclo **C01 — Construcción, auditoría y estabilización** está cerrado con los informes 01–21. La versión supera la suite automatizada, fue validada manualmente por el usuario en tableta, móvil y PC y está publicada en **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`). El ciclo **C02 — Versión plenamente funcional** queda abierto mediante el informe 22 y su única cola ejecutable es `.ia/COLA-ACTIVA.md`. Licencia **CC BY-NC-SA 4.0 (No Comercial)**.
+
+Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/OpenAI queda como titular operativo del proyecto**: auditor, constructor y gestor documental. El modo normal de trabajo será razonamiento medio para optimizar cuota; las tareas que puedan justificar un modelo o razonamiento superior se registran en `.ia/COLA-ALTO-RAZONAMIENTO.md` y se consultan previamente con el titular.
 
 ### Hitos completados (Auditoría Codex / Antigravity):
 - ✅ **Aislamiento físico y Lista Blanca en `./public`**: Despliegue en Cloudflare Workers desde `./public`, aislado de archivos internos. Sincronización automatizada con lista blanca estricta en `scripts/sync-public.js` (paridad comprobada por SHA-256 y purga de huérfanos raíz probada).
@@ -39,7 +41,8 @@ El ciclo **C01 — Construcción, auditoría y estabilización** está cerrado c
 
 ## Siguiente tarea exacta
 
-- Ejecutar `C02-05`: Auditoría de accesibilidad y corrección de teclado, foco, diálogos, contraste y semántica.
+- Ejecutar `C02-11`: diagnosticar el fallo de inicio de sesión remoto reportado por el titular en equipos externos. La captura muestra el mensaje "Invalid login credentials"; debe comprobarse si se trata de cuenta inexistente/no confirmada, contraseña incorrecta, configuración de Supabase o UX de error insuficiente.
+- Después, ejecutar `C02-05`: auditoría de accesibilidad y corrección de teclado, foco, diálogos, contraste y semántica.
 - Mientras el titular está ausente pueden avanzarse también `C02-06`, `C02-07` y `C02-08`, respetando un único elemento `EN CURSO` en toda la cola.
 - Al regresar el titular, resolver las decisiones bloqueadas `C02-01` y `C02-02` antes de validar el ciclo remoto `C02-03`.
 
@@ -48,8 +51,10 @@ El ciclo **C01 — Construcción, auditoría y estabilización** está cerrado c
 - **Versión 1.1.1 estable en modo local:** ninguno conocido tras la suite automatizada y la validación manual multidispositivo del usuario.
 - **Publicación:** versión 1.1.1 publicada y verificada en Cloudflare Workers el 19 de julio de 2026.
 - **Cuentas remotas:** permanecen en Beta porque no existe borrado remoto autoservicio ni un canal privado de privacidad confirmado por el titular. El correo no reconocido `oposiciones.a2.xunta@gmail.com` se ha retirado de la aplicación.
+- **Login remoto:** el titular reporta el 20 de julio de 2026 un fallo en equipos externos con mensaje genérico de credenciales inválidas. Queda incorporado como `C02-11` en la cola activa.
 - **Revisión jurídica externa:** `C02-09` requiere un profesional independiente designado por el titular.
 - **Cola ejecutable:** el resto de pendientes y sus dependencias constan exclusivamente en `.ia/COLA-ACTIVA.md`.
+- **GitHub:** el repositorio local está por delante de `origin/main` desde el checkpoint `913f0c6` de Gemini (C02-04). Cualquier `push` puede activar publicación y exige autorización expresa del titular.
 
 ## Archivos clave
 
@@ -58,4 +63,5 @@ El ciclo **C01 — Construcción, auditoría y estabilización** está cerrado c
 - Script de validación: `scripts/validar-banco.js`.
 - Memoria del proyecto e IA: `.ia/ESTADO-PROYECTO.md`, `.ia/PROTOCOLO.md`, `AGENTS.md`.
 - Cola activa: `.ia/COLA-ACTIVA.md`.
+- Cola de alto razonamiento: `.ia/COLA-ALTO-RAZONAMIENTO.md`.
 - Informes Inter-IA: `.ia/auditorias/INDEX.md` y agrupación en `.ia/auditorias/CICLOS.md`.

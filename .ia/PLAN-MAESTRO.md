@@ -119,6 +119,7 @@ Fuente operativa única: `.ia/COLA-ACTIVA.md`.
 Puertas de cierre:
 
 - decisión y ciclo completo de cuentas remotas, o retirada coherente de esa función;
+- diagnóstico cerrado del fallo de inicio de sesión remoto reportado el 20 de julio de 2026;
 - responsable y canal privado de privacidad confirmados;
 - recorridos críticos aprobados en Chromium, Firefox y WebKit;
 - accesibilidad aplicable contrastada con pruebas automáticas y manuales;
