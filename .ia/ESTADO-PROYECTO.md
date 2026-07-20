@@ -10,8 +10,8 @@ Plataforma Web independiente de preparación inteligente para el Cuerpo de Gesti
 
 ## Decisión actual
 
-**VERSIÓN 1.2 CANDIDATA (ESTABLE EN MODO LOCAL / CUENTAS REMOTAS PAUSADAS / AUDITORÍA DE CONTENIDO CONTINUA)**.
-El ciclo **C01 — Construcción, auditoría y estabilización** está cerrado con los informes 01–21. La versión supera la suite automatizada, fue validada manualmente por el usuario en tableta, móvil y PC y está publicada en **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`). El ciclo **C02 — Versión plenamente funcional** queda abierto mediante el informe 22 y su única cola ejecutable es `.ia/COLA-ACTIVA.md`. Licencia **CC BY-NC-SA 4.0 (No Comercial)**.
+**VERSIÓN 1.2.0 ESTABLE LOCAL (CUENTAS REMOTAS PAUSADAS / AUDITORÍA DE CONTENIDO CONTINUA)**.
+El ciclo **C01 — Construcción, auditoría y estabilización** está cerrado con los informes 01–21. La versión 1.2.0 supera la suite automatizada, fue validada manualmente por el usuario en tableta, móvil y PC y está publicada en **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`). El ciclo **C02 — Versión plenamente funcional local** queda cerrado operativamente mediante el informe 36, manteniendo `C02-09` como garantía jurídica externa futura. Licencia **CC BY-NC-SA 4.0 (No Comercial)**.
 
 Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/OpenAI queda como titular operativo del proyecto**: auditor, constructor y gestor documental. El modo normal de trabajo será razonamiento medio para optimizar cuota; las tareas que puedan justificar un modelo o razonamiento superior se registran en `.ia/COLA-ALTO-RAZONAMIENTO.md` y se consultan previamente con el titular.
 
@@ -32,6 +32,7 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - ✅ **Decisión sin nuevas suscripciones (C02-01/C02-02/C02-03/C02-06)**: el titular decide no pagar Supabase Pro ni otra suscripción. Las cuentas remotas quedan pausadas y el producto principal pasa a ser estable local. Se reducen riesgos de backup, privacidad y soporte, y se conserva el código remoto como opción futura no pública.
 - ✅ **Seguridad técnica básica y rendimiento (C02-07)**: retirado el CDN público, la URL y la clave pública de Supabase; añadidas cabeceras de seguridad mediante `public/_headers`; protegidas metas locales frente a HTML inyectado; auditadas dependencias de producción con 0 vulnerabilidades; añadida `scripts/test-security-basics.js`; producción verificada con HTML nuevo y cabeceras CSP/nosniff/referrer/x-frame/permissions/HSTS.
 - ✅ **Mantenimiento normativo (C02-08)**: creado `docs/MANTENIMIENTO-NORMATIVO.md` con responsable, fuentes, cadencia, estados de vigencia, protocolo de cambio y retirada segura; añadida `scripts/test-normative-maintenance.js` a la suite. Simulación Ley 39/2015: 153 preguntas localizadas para revisión sin modificar el banco.
+- ✅ **Aceptación final 1.2.0 estable local (C02-10)**: versión elevada de `1.2.0-candidate` a `1.2.0`, etiqueta pública actualizada a «Versión 1.2.0 estable local», `public/` sincronizado, `scripts/test-release-acceptance.js` añadido y producción verificada con `v21-stable-local-20260720`.
 - ✅ **Validación manual multidispositivo**: el usuario declara funcionamiento visual satisfactorio en tableta, móvil y PC el 19 de julio de 2026.
 
 ## Cifras canónicas
@@ -40,19 +41,19 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - Incompletas o errores de validación: **0** (`node scripts/validar-banco.js` -> RESULTADO: OK).
 - Fuentes normativas usadas por el banco: **25** (`node scripts/test-normative-maintenance.js` -> RESULTADO: OK).
 - Temas troncales inventariados: **23**.
-- Despliegue en producción: Cloudflare Workers desde `./public` (`https://oposiciones-xunta.opos-galicia.workers.dev`).
+- Despliegue en producción: Cloudflare Workers desde `./public` (`https://oposiciones-xunta.opos-galicia.workers.dev`), versión pública `v21-stable-local-20260720`.
 - Autenticación y DB: Supabase (`mquigtfqvznwnovzjudf.supabase.co`).
 - Licencia: CC BY-NC-SA 4.0 (Atribución - No Comercial - Compartir Igual).
 
 ## Siguiente tarea exacta
 
-- Preparar `C02-10`: aceptación final de la versión estable local, checklist de cierre, versionado/tag si procede y smoke test posterior a publicación.
-- Mantener `C02-09` como bloqueo externo documentado salvo que el titular designe un revisor jurídico independiente.
+- No quedan tareas ejecutables abiertas para la versión 1.2.0 estable local.
+- Próxima decisión opcional: abrir un nuevo ciclo para revisión pública/GitHub, donaciones sin suscripción mensual o revisión jurídica externa (`C02-09`) si el titular designa revisor.
 
 ## Bloqueos activos
 
-- **Versión 1.2 candidata estable en modo local:** ninguno conocido tras la suite automatizada y la validación manual multidispositivo del usuario.
-- **Publicación:** GitHub y Cloudflare Workers alineados tras `55f7da9`. Producción responde HTTP 200, sirve el HTML nuevo (`v20-security-20260720`) y aplica cabeceras de seguridad desde `public/_headers`.
+- **Versión 1.2.0 estable local:** ninguno conocido tras la suite automatizada, la validación manual multidispositivo del usuario y el smoke test público.
+- **Publicación:** GitHub y Cloudflare Workers alineados tras `4c85a61`. Producción responde HTTP 200, sirve el HTML nuevo (`v21-stable-local-20260720`) y aplica cabeceras de seguridad desde `public/_headers`.
 - **Cuentas remotas:** pausadas en la interfaz pública por decisión del titular para evitar nuevas suscripciones, backups frágiles y complejidad de privacidad. El modo local es el camino principal.
 - **Login remoto:** `C02-11` cerrado. El titular confirma el 20 de julio de 2026 que el acceso entra correctamente en modo incógnito tras desplegar el mensaje guiado y normalizar correo. La causa práctica queda compatible con caché/autorrelleno/estado local de navegador, no con rotura del login remoto.
 - **Revisión jurídica externa:** `C02-09` requiere un profesional independiente designado por el titular.

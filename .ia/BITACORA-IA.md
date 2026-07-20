@@ -2,6 +2,36 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Cierre C02-10: aceptación final 1.2.0 estable local
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+
+- elevada la versión de `1.2.0-candidate` a `1.2.0`;
+- actualizada la etiqueta pública a «Versión 1.2.0 estable local»;
+- sustituida en el manifiesto la promesa «verificadas» por «clasificadas en revisión continua»;
+- creado `docs/ACEPTACION-VERSION-1.2.0.md`;
+- creado `scripts/test-release-acceptance.js` e integrado en `npm test`;
+- sincronizado `public/` desde la raíz;
+- subido commit `4c85a61` a `origin/main`;
+- comprobada producción: HTTP 200, `v21-stable-local-20260720`, ausencia de `v20` y cabeceras de seguridad activas.
+
+Comprobaciones:
+
+- `node --check app.js`: OK.
+- `node scripts/validar-banco.js`: OK, 1.522 preguntas, 0 incompletas, 0 duplicados.
+- `node scripts/test-release-acceptance.js`: OK.
+- `npm test`: OK, incluyendo 24/24 pruebas Playwright en Chromium/WebKit/móvil.
+
+Limitación explícita:
+
+- `C02-09` continúa bloqueado como revisión jurídica externa futura. La versión se declara estable local, no definitiva jurídica.
+
+Siguiente paso:
+
+- no quedan tareas ejecutables abiertas para la versión 1.2.0 estable local. Las próximas mejoras deberían abrir un ciclo nuevo.
+
 ## 20 de julio de 2026 - Cierre C02-08: mantenimiento normativo
 
 Modelo: Codex / OpenAI, actuando como titular operativo.

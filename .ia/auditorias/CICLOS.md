@@ -20,14 +20,14 @@ Resultado: versión 1.1.1 publicada, estable en modo local, con cuentas remotas 
 
 Informe de transición: `22-AUDITORIA-APERTURA-COLA-DEFINITIVA-CODEX-2026-07-19.md`.
 
-## C02 — Versión plenamente funcional
+## C02 — Versión plenamente funcional local
 
-Estado: **ABIERTO**.
+Estado: **CERRADO OPERATIVO**.
 
-Rango: desde el informe `22` hasta su futuro informe `CIERRE`.
+Rango: informes `22` a `36`.
 
 Objetivo: cerrar las cuentas remotas o retirarlas, diagnosticar el fallo de login remoto reportado por el titular, privacidad, navegadores reales, accesibilidad, operación/recuperación, seguridad, rendimiento y gobernanza jurídica.
 
 Cola canónica: `../COLA-ACTIVA.md`.
 
-Regla de cierre: todos los elementos `C02-01` a `C02-11` deben estar en `HECHO` o trasladados justificadamente a un ciclo posterior mediante un informe de cierre.
+Resultado: versión `1.2.0` aceptada como **estable local**, publicada y verificada en producción. Las cuentas remotas quedan pausadas y `C02-09` queda trasladado como garantía jurídica externa futura, porque requiere un revisor humano jurídicamente competente designado por el titular.
