@@ -2,6 +2,26 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Anexo C02-07: GitHub actualizado, Cloudflare pendiente
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+
+- subido el checkpoint `caa052f` a `origin/main`;
+- comprobada la URL pública tras el push;
+- detectado que Cloudflare sigue sirviendo el HTML anterior con `@supabase/supabase-js` y sin cabeceras nuevas;
+- intentado despliegue por Wrangler, bloqueado porque la sesión no tiene `CLOUDFLARE_API_TOKEN`.
+
+Estado:
+
+- Código, pruebas y documentación de seguridad: OK en GitHub.
+- Producción Cloudflare: pendiente de despliegue real desde panel o token del titular.
+
+Siguiente paso:
+
+- el titular puede abrir Cloudflare y lanzar/reintentar el despliegue desde el panel, o facilitar un token de despliegue controlado; mientras tanto puede avanzarse `C02-08` porque no depende de modificar producción.
+
 ## 20 de julio de 2026 - Cierre C02-07: seguridad técnica básica y rendimiento
 
 Modelo: Codex / OpenAI, actuando como titular operativo.
@@ -22,6 +42,9 @@ Comprobaciones:
 - `node scripts/validar-banco.js`: OK, 1.522 preguntas, 0 incompletas, 0 duplicados.
 - `npm audit --omit=dev --audit-level=high`: 0 vulnerabilidades.
 - `npm test`: OK, incluyendo seguridad, accesibilidad, integración DOM/JSDOM y 24/24 pruebas Playwright en Chromium/WebKit/móvil.
+- `git push origin main`: OK, commit `caa052f`.
+- `curl -I https://oposiciones-xunta.opos-galicia.workers.dev/`: HTTP 200, pero Cloudflare sirve HTML anterior.
+- `npx wrangler deploy`: bloqueado por falta de `CLOUDFLARE_API_TOKEN`.
 
 Siguiente paso:
 

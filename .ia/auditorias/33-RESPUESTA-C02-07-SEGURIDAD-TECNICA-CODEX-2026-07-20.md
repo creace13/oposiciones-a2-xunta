@@ -64,10 +64,12 @@ No se revisa contenido jurídico en este informe. La vigencia normativa queda pa
 
 ## Resultado
 
-`C02-07` queda cerrado sin P0/P1 abiertos para la versión local first.
+La implementación técnica de `C02-07` queda cerrada en repositorio sin P0/P1 abiertos para la versión local first.
+
+Tras subir el commit `caa052f` a `origin/main`, Cloudflare siguió sirviendo el HTML anterior. Por tanto, el cierre público de producción queda pendiente del anexo 34 hasta que se active el despliegue real en Cloudflare.
 
 Queda como mejora futura no bloqueante estudiar la partición del banco para reducir peso inicial si la app crece mucho más.
 
 ## Siguiente paso
 
-Ejecutar `C02-08`: mantenimiento normativo, cadencia de revisión, alerta de cambios y retirada de preguntas afectadas.
+Desbloquear la publicación Cloudflare de `caa052f` y después continuar con `C02-08`: mantenimiento normativo, cadencia de revisión, alerta de cambios y retirada de preguntas afectadas.
