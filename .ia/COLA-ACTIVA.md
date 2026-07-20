@@ -31,13 +31,13 @@ Cerrar una versión que pueda considerarse plenamente funcional y lista con crit
 
 | ID | Prioridad | Entregable | Estado | Dependencias / desbloqueo | Evidencia de cierre |
 | :--- | :---: | :--- | :---: | :--- | :--- |
-| **C02-01** | P0 | Decidir el futuro de las cuentas remotas: implementar baja autoservicio segura o desactivar temporalmente alta/login remoto. | `BLOQUEADO` | Decisión del titular. Recomendación de seguridad: desactivar el alta remota si no se va a mantener su ciclo completo. | Decisión registrada, interfaz coherente y prueba del flujo elegido. |
-| **C02-02** | P0 | Identificar al responsable de privacidad y habilitar un canal privado que controle. | `BLOQUEADO` | El titular debe facilitar o crear el canal; no se inventarán datos. | Canal confirmado, texto de privacidad actualizado y prueba de recepción. |
-| **C02-03** | P0 | Validar en producción alta, confirmación, login, recuperación y baja remota de extremo a extremo, o confirmar su retirada completa. | `PENDIENTE` | C02-01 y C02-02. | Matriz de pruebas real sin credenciales en el repositorio y datos de prueba eliminados. |
+| **C02-01** | P0 | Decidir el futuro de las cuentas remotas: implementar baja autoservicio segura o desactivar temporalmente alta/login remoto. | `HECHO` (Codex) | Decisión del titular: no asumir nuevas suscripciones; cuentas remotas pausadas temporalmente y modo local como producto principal. | Interfaz orientada a acceso local, Supabase no se inicializa para auth pública (`REMOTE_AUTH_ENABLED = false`) y `scripts/test-auth-states.js` valida que no hay llamadas remotas. |
+| **C02-02** | P0 | Identificar al responsable de privacidad y habilitar un canal privado que controle. | `HECHO` (Codex) | Al pausar cuentas remotas, no se exige canal privado para cuentas remotas en esta versión local. Sigue prohibido publicar datos personales en GitHub. | Política de privacidad actualizada: cuentas remotas pausadas, progreso local y reportes públicos sin datos personales. |
+| **C02-03** | P0 | Validar en producción alta, confirmación, login, recuperación y baja remota de extremo a extremo, o confirmar su retirada completa. | `HECHO` (Codex) | Cerrado por retirada/pausa coherente del flujo remoto público. | Alta/login/recuperación remota dejan de ofrecerse al usuario; acceso principal local validado por pruebas. |
 | **C02-04** | P1 | Incorporar pruebas automatizadas en navegadores reales para navegación, práctica, simulacro, persistencia, recuperación y actualización. | `HECHO` (Antigravity) | Cerrada. | Playwright E2E (30/30 ok): Chromium, Firefox, WebKit en escritorio (1280x720) y móvil (Pixel 5, iPhone 12). |
 | **C02-11** | P0 | Diagnosticar el fallo de inicio de sesión remoto visto en equipos externos y decidir si es cuenta inexistente/no confirmada, contraseña incorrecta, configuración Supabase o UX de error insuficiente. | `HECHO` (Codex) | Cerrada con prueba real del titular en modo incógnito tras despliegue del mensaje guiado. Relacionada con C02-01, C02-02 y C02-03. | Login remoto operativo; causa práctica compatible con caché/autorrelleno/estado de navegador; mensaje de error mejorado y prueba real satisfactoria del titular. |
 | **C02-05** | P1 | Ejecutar auditoría de accesibilidad y corregir teclado, foco, diálogos, contraste, semántica y lector de pantalla. | `HECHO` (Codex) | Cerrada para accesibilidad básica aplicable; no sustituye una auditoría humana especializada con lector de pantalla real. | UIX móvil/escritorio sin overflow, foco visible, navegación con `aria-current`, diálogos con nombre/descripción, contraste AA básico, prueba de teclado y `scripts/test-accessibility-basics.js` OK. |
-| **C02-06** | P1 | Documentar y ensayar backup, restauración y rollback de GitHub, Cloudflare y Supabase. | `BLOQUEADO` (Codex) | Supabase Free no incluye copias programadas según captura del titular. Falta decidir entre Pro, copias manuales con cuentas Beta, exportación externa o retirada temporal de remoto. | `docs/OPERACION-RECUPERACION.md` creado/ampliado, `scripts/test-recovery-runbook.js` OK, `git archive` no destructivo OK y web pública HTTP 200. Pendiente: decisión operativa y evidencia de backup real Supabase/Cloudflare. |
+| **C02-06** | P1 | Documentar y ensayar backup, restauración y rollback de GitHub, Cloudflare y Supabase. | `HECHO` (Codex) | Cerrado para la versión local sin suscripciones: Supabase deja de ser dependencia operativa de usuarios. | `docs/OPERACION-RECUPERACION.md` creado/ampliado, `scripts/test-recovery-runbook.js` OK, `git archive` no destructivo OK, rollback Git/Cloudflare documentado y Supabase tratado como función pausada. |
 | **C02-07** | P1 | Revisar seguridad, privacidad técnica, dependencias, cabeceras, errores y rendimiento de producción. | `PENDIENTE` | Ninguna para la auditoría inicial. | Informe sin secretos, riesgos clasificados y cero P0/P1 abiertos. |
 | **C02-08** | P1 | Establecer mantenimiento normativo: inventario de vigencia, cadencia de revisión, alerta de cambios y retirada de preguntas afectadas. | `PENDIENTE` | Ninguna. | Procedimiento reproducible con responsable, fechas y simulación de una norma modificada. |
 | **C02-09** | P1 | Obtener una revisión jurídica independiente del banco y registrar muestra, alcance, incidencias y resolución. | `BLOQUEADO` | Revisor humano jurídicamente competente designado por el titular. | Dictamen externo identificado y todas las incidencias críticas resueltas. |
@@ -47,13 +47,10 @@ Cerrar una versión que pueda considerarse plenamente funcional y lista con crit
 
 1. C02-07 — seguridad y rendimiento.
 2. C02-08 — mantenimiento normativo.
-3. C02-06 — cerrar ensayo real en paneles Cloudflare/Supabase cuando el titular esté disponible.
-4. Resolver C02-01 y C02-02 antes de validar C02-03.
+3. C02-08 — mantenimiento normativo.
 
 ## Bloqueos que requieren al titular
 
-- Elegir entre mantener las cuentas remotas con baja completa o retirarlas temporalmente.
-- Decidir cómo suplir la falta de backups programados en Supabase Free: Pro, copias manuales, export externo o retirada temporal de remoto.
-- Facilitar un canal privado de privacidad que controle.
+- Si en el futuro se reactivan cuentas remotas, decidir entre Plan Pro, backup externo o ciclo completo de privacidad antes de ofrecerlas al público.
 - Facilitar, si procede, una cuenta remota de prueba controlada para diagnosticar login sin usar credenciales personales.
 - Designar, si desea la garantía ampliada, un revisor jurídico independiente.

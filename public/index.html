@@ -70,7 +70,7 @@
   </head>
   <body>
     <div class="version-banner" style="background:#10332c;color:#f7e6a8;padding:8px 16px;text-align:center;font-size:12px;border-bottom:1px solid rgba(230,200,117,0.3);position:relative;z-index:100;">
-      🟢 <strong>Versión 1.1 (Estable en modo local)</strong> · Banco de 1.522 preguntas en revisión continua · Cuentas remotas en Beta. <a href="#metodologia" style="color:#ffffff;text-decoration:underline;margin-left:8px;">Ver metodología y transparencia</a>
+      🟢 <strong>Versión 1.2 candidata (Estable en modo local)</strong> · Banco de 1.522 preguntas en revisión continua · Cuentas remotas pausadas. <a href="#metodologia" style="color:#ffffff;text-decoration:underline;margin-left:8px;">Ver metodología y transparencia</a>
     </div>
     <div class="app-shell">
       <aside class="sidebar" aria-label="Navegación principal">
@@ -323,7 +323,7 @@
               <div class="project-stack" aria-label="Tecnologías y metodología empleadas">
                 <span>HTML · CSS · JavaScript</span>
                 <span>Cloudflare Workers</span>
-                <span>Supabase</span>
+                <span>Modo local sin suscripciones</span>
                 <span>Fuentes BOE/DOG</span>
                 <span>Auditoría Inter-IA</span>
               </div>
@@ -339,7 +339,7 @@
     </div>
     <dialog id="pauseDialog" aria-labelledby="pauseDialogTitle" aria-describedby="pauseDialogDesc"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">PAUSA CONSCIENTE</p><h2 id="pauseDialogTitle">Respira antes de seguir.</h2><p id="pauseDialogDesc">Durante un minuto, aleja la mirada de la pantalla y suelta los hombros. Una pausa no retrasa el plan: protege tu atención.</p><button class="primary-button dialog-action">Volver cuando esté lista</button></dialog>
     <dialog id="goalDialog" aria-labelledby="goalDialogTitle"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">NUEVA META</p><h2 id="goalDialogTitle">¿Qué paso es realista esta semana?</h2><label>Describe una meta pequeña<input id="goalInput" maxlength="80" placeholder="Ej.: 20 preguntas de empleo público" /></label><button id="saveGoal" class="primary-button">Guardar meta</button></dialog>
-    <dialog id="authDialog" aria-labelledby="authModalTitle" aria-describedby="authModalDesc"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">ACCESO Y PERFIL</p><h2 id="authModalTitle">Bienvenido a Oposiciones A2</h2><p id="authModalDesc">Introduce tu nombre y correo para acceder a tu perfil privado de opositor.</p><form id="authForm"><label>Nombre de usuario / Opositor<input type="text" id="authName" placeholder="Ej.: Merce" maxlength="30" required /></label><label>Correo electrónico<input type="email" id="authEmail" placeholder="tu@email.com" required /></label><label>Contraseña<input type="password" id="authPassword" placeholder="••••••••" required /></label><div style="display:flex;justify-content:space-between;align-items:center;margin:8px 0 16px;"><button type="button" id="forgotPassBtn" class="text-button" style="font-size:11px;color:var(--muted);text-decoration:underline;">¿Olvidaste tu contraseña?</button></div><button type="submit" id="authSubmitBtn" class="primary-button wide">Entrar a mi Cuenta</button></form><div id="authStatusText" class="tiny" style="margin-top:15px;color:var(--muted);text-align:center;">Perfil guardado localmente</div></dialog>
+    <dialog id="authDialog" aria-labelledby="authModalTitle" aria-describedby="authModalDesc"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">PERFIL LOCAL</p><h2 id="authModalTitle">Editar tu perfil de estudio</h2><p id="authModalDesc">Este nombre solo se guarda en este navegador. No crea cuenta remota ni sincroniza entre dispositivos.</p><form id="authForm"><label>Nombre de usuario / Opositor<input type="text" id="authName" placeholder="Ej.: Merce" maxlength="30" required /></label><button type="submit" id="authSubmitBtn" class="primary-button wide">Guardar perfil local</button></form><div id="authStatusText" class="tiny" style="margin-top:15px;color:var(--muted);text-align:center;">Perfil guardado localmente en este navegador</div></dialog>
     <dialog id="resetPasswordModal" aria-labelledby="resetPasswordTitle" aria-describedby="resetPasswordDesc"><button class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">RECUPERACIÓN DE CUENTA</p><h2 id="resetPasswordTitle">Cambiar Contraseña</h2><p id="resetPasswordDesc">Introduce tu nueva contraseña para tu cuenta de opositor.</p><form id="resetPasswordForm"><label>Nueva Contraseña<input type="password" id="newPasswordInput" placeholder="Mínimo 6 caracteres" minlength="6" required /></label><button type="submit" class="primary-button wide" style="margin-top:12px;">Guardar Nueva Contraseña</button></form><div id="resetPasswordStatus" class="tiny" style="margin-top:15px;color:var(--muted);text-align:center;"></div></dialog>
     <dialog id="privacyModal" aria-labelledby="privacyModalTitle" aria-describedby="privacyModalDesc" style="max-width:580px;padding:24px;border-radius:16px;border:1px solid var(--border,#e0e5e2);">
       <button class="dialog-close" aria-label="Cerrar">×</button>
@@ -347,10 +347,10 @@
       <h2 id="privacyModalTitle" style="margin-top:4px;font-size:20px;color:var(--text,#1e2923);">Tratamiento transparente de tus datos</h2>
       <div id="privacyModalDesc" style="font-size:13px;line-height:1.6;color:var(--text-secondary,#4a5550);margin-top:12px;display:flex;flex-direction:column;gap:10px;">
         <p><strong>1. Responsable operativo y contacto general:</strong> Titular del proyecto comunitario y del repositorio público <a href="https://github.com/creace13/oposiciones-a2-xunta" target="_blank" rel="noopener noreferrer"><code>creace13/oposiciones-a2-xunta</code></a>. Las incidencias públicas de GitHub sirven para cuestiones generales y erratas; no publiques allí datos personales. Actualmente no hay un canal privado de privacidad confirmado.</p>
-        <p><strong>2. Datos remotos tratados y proveedor:</strong> En caso de inicio de sesión o registro remoto voluntario, se procesan el correo electrónico y el identificador de cuenta mediante <strong>Supabase</strong>. La ubicación concreta del tratamiento depende de la región configurada en ese servicio y no se afirma aquí. Al enviar sugerencias o reportar erratas se transfieren a <code>user_feedback</code> el nombre asignado (<code>user_name</code>), el tipo (<code>feedback_type</code>) y el texto del reporte (<code>content</code>), que puede incluir el ID de pregunta.</p>
-        <p><strong>3. Progreso de Estudio 100% Local:</strong> Tus respuestas de prácticas, exámenes, simulacros, historial de fallos y metas personales se guardan de forma estricta en el almacenamiento local de tu propio navegador (<code>localStorage</code>). No se envían ni almacenan en servidores remotos.</p>
-        <p><strong>4. Finalidad y conservación:</strong> La cuenta remota se utiliza para el acceso voluntario. Los reportes se usan para revisar posibles erratas. Las cuentas permanecen activas hasta su supresión y los reportes solo deben conservarse mientras sean necesarios para revisar y documentar la incidencia.</p>
-        <p><strong>5. Acceso y eliminación:</strong> La acción <strong>«Borrar progreso»</strong> elimina del navegador las respuestas, errores, sesiones y metas, pero no elimina la cuenta remota ni los reportes enviados. «Cerrar sesión» tampoco borra el progreso. La eliminación remota autoservicio y un canal privado todavía no están disponibles; hasta resolverlo, utiliza el modo invitado si no deseas crear una cuenta remota.</p>
+        <p><strong>2. Cuentas remotas pausadas:</strong> El registro, el inicio de sesión remoto y la recuperación de contraseña quedan desactivados temporalmente. No se ofrecen cuentas remotas mientras no exista una estrategia de backup y privacidad adecuada sin añadir suscripciones.</p>
+        <p><strong>3. Progreso de estudio 100% local:</strong> Tus respuestas de prácticas, exámenes, simulacros, historial de fallos y metas personales se guardan en el almacenamiento local de tu propio navegador (<code>localStorage</code>). No se sincronizan entre dispositivos y se pierden si borras los datos del navegador.</p>
+        <p><strong>4. Reportes e incidencias:</strong> Si comunicas erratas por canales públicos como GitHub, no incluyas datos personales. La app no debe usarse para enviar información sensible.</p>
+        <p><strong>5. Acceso y eliminación:</strong> La acción <strong>«Borrar progreso»</strong> elimina de este navegador las respuestas, errores, sesiones y metas. «Cerrar sesión» elimina el nombre local, pero no borra el progreso salvo que uses la opción específica de borrado.</p>
       </div>
       <button type="button" class="primary-button dialog-action" style="margin-top:16px;width:100%;">Entendido y cerrar</button>
     </dialog>
@@ -372,33 +372,20 @@
         </div>
 
         <div class="auth-form-side">
-          <p class="eyebrow">ACCESO A TU CUENTA</p>
-          <h2 id="authScreenTitle">Iniciar Sesión / Registrarse</h2>
-          <p class="auth-form-sub">Introduce tus datos para acceder a tu perfil privado de opositor.</p>
+          <p class="eyebrow">ACCESO LOCAL</p>
+          <h2 id="authScreenTitle">Entrar en modo local</h2>
+          <p class="auth-form-sub">Elige un nombre para personalizar la experiencia. Tu progreso se guarda solo en este navegador.</p>
 
           <form id="authPageForm">
             <label>Nombre de usuario / Opositor
               <input type="text" id="authPageName" placeholder="Ej.: Merce" maxlength="30" required />
             </label>
 
-            <label>Correo electrónico
-              <input type="email" id="authPageEmail" placeholder="tu@email.com" required />
-            </label>
-
-            <label>Contraseña
-              <input type="password" id="authPagePassword" placeholder="••••••••" required />
-            </label>
-
-            <div class="auth-page-actions" style="display:flex;justify-content:space-between;align-items:center;margin:8px 0 16px;">
-              <button type="button" id="authPageForgotPassBtn" class="text-button">¿Olvidaste tu contraseña?</button>
-              <button type="button" id="authPageSignUpBtn" class="text-button" style="color:var(--accent,#153d35);font-weight:600;">Crear cuenta nueva</button>
-            </div>
-
-            <button type="submit" id="authPageSubmitBtn" class="primary-button wide">Entrar a mi Cuenta <span>→</span></button>
-            <button type="button" id="guestAccessBtn" class="quiet-button wide" style="margin-top:10px;width:100%;text-align:center;">Entrar sin cuenta (Modo Invitado / Local)</button>
+            <button type="submit" id="authPageSubmitBtn" class="primary-button wide">Entrar en modo local <span>→</span></button>
+            <button type="button" id="guestAccessBtn" class="quiet-button wide" style="margin-top:10px;width:100%;text-align:center;">Entrar sin personalizar</button>
           </form>
 
-          <p class="remote-beta-note"><strong>Cuentas remotas en Beta:</strong> el inicio de sesión y la recuperación ya funcionan, pero aún falta cerrar el borrado autoservicio y un canal privado confirmado. El modo invitado mantiene el progreso únicamente en este navegador.</p>
+          <p class="remote-beta-note"><strong>Cuentas remotas pausadas:</strong> para no depender de una suscripción de base de datos ni de backups automáticos, esta versión funciona como estable local. Si cambias de navegador o dispositivo, el progreso no se sincroniza.</p>
 
           <div id="authPageStatusText" class="auth-status-msg"></div>
           <div style="text-align:center;margin-top:14px;">

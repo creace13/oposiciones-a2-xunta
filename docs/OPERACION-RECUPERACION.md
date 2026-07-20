@@ -232,9 +232,11 @@ Este ensayo no toca usuarios, bases de datos ni configuración sensible.
 
 ## Estado de cierre de C02-06
 
-Estado actual: **parcial y seguro**.
+Estado actual: **cerrado para versión local sin suscripciones**.
 
-Queda pendiente para cerrar completamente C02-06:
+La decisión del titular es no contratar Supabase Pro ni añadir nuevas suscripciones. Por tanto, la versión de cierre semanal no tratará Supabase como dependencia operativa de usuarios.
+
+Queda pendiente solo si en el futuro se reactivan cuentas remotas:
 
 - ensayo real o confirmación documentada de backup/restauración en Supabase;
 - revisión del panel de Cloudflare si se quiere documentar rollback desde la interfaz;

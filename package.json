@@ -1,12 +1,13 @@
 {
   "name": "oposiciones-a2-xunta",
-  "version": "1.1.1",
+  "version": "1.2.0-candidate",
   "description": "Plataforma de preparación inteligente para el Subgrupo A2 de la Xunta de Galicia",
   "main": "app.js",
   "scripts": {
-    "test": "node scripts/validar-banco.js && node scripts/test-filters.js && node scripts/test-auth-states.js && node scripts/test-accessibility-basics.js && node scripts/test-recovery-runbook.js && node scripts/test-browser-e2e.js && npx playwright test",
+    "test": "node scripts/validar-banco.js && node scripts/test-filters.js && node scripts/test-auth-states.js && node scripts/test-accessibility-basics.js && node scripts/test-recovery-runbook.js && node scripts/test-browser-e2e.js && npm run test:playwright",
     "test:e2e": "node scripts/test-browser-e2e.js",
-    "test:playwright": "npx playwright test",
+    "test:playwright": "npx playwright test --project=chromium-desktop --project=webkit-desktop --project=mobile-chrome --project=mobile-safari",
+    "test:firefox": "npx playwright test --project=firefox-desktop --workers=1",
     "test:ops": "node scripts/test-recovery-runbook.js",
     "sync": "node scripts/sync-public.js"
   },

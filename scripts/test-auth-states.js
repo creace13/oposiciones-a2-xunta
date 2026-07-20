@@ -1,43 +1,46 @@
 const fs = require('fs');
 const path = require('path');
-const assert = require('assert');
 const vm = require('vm');
+const assert = require('assert');
 
-const appPath = path.resolve(__dirname, '../app.js');
-let code = fs.readFileSync(appPath, 'utf8');
-code += '\nthis.setAuthState = setAuthState;\nthis.checkAuthUser = checkAuthUser;\n';
+const rootDir = path.resolve(__dirname, '..');
+const code = fs.readFileSync(path.join(rootDir, 'app.js'), 'utf8');
 
-function createMockSandbox(supabaseMock) {
+function createMockElement(id) {
+  return {
+    id,
+    value: '',
+    textContent: '',
+    classList: { add: () => {}, remove: () => {}, contains: () => false },
+    dataset: {},
+    style: {},
+    listeners: {},
+    addEventListener(event, handler) { this.listeners[event] = handler; },
+    setAttribute() {},
+    removeAttribute() {},
+    querySelector() { return this; },
+    querySelectorAll() { return []; },
+    showModal() { this.open = true; },
+    close() { this.open = false; },
+    click() { if (this.listeners.click) return this.listeners.click({ preventDefault() {}, stopPropagation() {} }); }
+  };
+}
+
+function createMockSandbox(supabaseMock = null) {
   const elements = {};
-  
-  function getOrCreateElement(id) {
-    if (!elements[id]) {
-      elements[id] = {
-        id,
-        value: '',
-        textContent: '',
-        innerHTML: '',
-        style: {},
-        dataset: {},
-        listeners: {},
-        classList: { add: () => {}, remove: () => {} },
-        addEventListener: function(evt, fn) { this.listeners[evt] = fn; },
-        querySelector: () => mockElement,
-        querySelectorAll: () => []
-      };
-    }
+  const mockElement = createMockElement('mock');
+  const getOrCreateElement = (id) => {
+    if (!elements[id]) elements[id] = createMockElement(id);
     return elements[id];
-  }
-
-  const mockElement = getOrCreateElement('mockDefault');
+  };
 
   const sandbox = {
     window: {
       location: { hash: '' },
+      supabase: supabaseMock ? { createClient: () => supabaseMock } : null,
+      confirm: () => true,
       addEventListener: () => {},
-      supabase: {
-        createClient: () => supabaseMock
-      }
+      scrollTo: () => {}
     },
     document: {
       documentElement: {
@@ -50,149 +53,109 @@ function createMockSandbox(supabaseMock) {
     },
     localStorage: {
       storage: {},
-      getItem: function(k) { return this.storage[k] || null; },
-      setItem: function(k, v) { this.storage[k] = String(v); },
-      removeItem: function(k) { delete this.storage[k]; }
+      getItem(k) { return this.storage[k] || null; },
+      setItem(k, v) { this.storage[k] = String(v); },
+      removeItem(k) { delete this.storage[k]; }
     },
     console,
     setTimeout,
     clearTimeout
   };
 
+  sandbox.window.localStorage = sandbox.localStorage;
   vm.createContext(sandbox);
   vm.runInContext(code, sandbox);
-  sandbox.supabaseClient = supabaseMock;
   sandbox.elements = elements;
   return sandbox;
 }
 
-console.log('--- SUITE DE 6 PRUEBAS DE ESTADOS DE AUTENTICACIÓN CON ASERCIONES ---');
+console.log('--- SUITE DE 6 PRUEBAS DE AUTENTICACIÓN LOCAL ---');
 
 async function runTests() {
-  // Test 1: Sesión Supabase válida -> authMode = 'supabase'
+  // Test 1: la autenticación remota queda pausada por decisión de producto.
   {
-    const sb = createMockSandbox({
-      auth: {
-        getSession: async () => ({ data: { session: { user: { email: 'test@example.com', user_metadata: { name: 'TestUser' } } } }, error: null }),
-        onAuthStateChange: () => {}
-      }
-    });
-    await sb.checkAuthUser();
-    assert.strictEqual(sb.document.documentElement.dataset.authState, 'authenticated', '❌ Test 1 Fallido: authState no es authenticated');
-    assert.strictEqual(sb.document.documentElement.dataset.authMode, 'supabase', '❌ Test 1 Fallido: authMode no es supabase');
-    console.log('✅ Test 1 Pasado: Sesión Supabase válida activa authMode = supabase');
+    const sb = createMockSandbox();
+    assert.strictEqual(vm.runInContext('REMOTE_AUTH_ENABLED', sb), false, '❌ Test 1 Fallido: REMOTE_AUTH_ENABLED debe estar desactivado');
+    console.log('✅ Test 1 Pasado: cuentas remotas pausadas por configuración.');
   }
 
-  // Test 2: Alta con user y session nula -> NUNCA authMode = 'supabase' y muestra aviso de confirmación
+  // Test 2: aunque exista Supabase, no se inicializa cliente remoto.
   {
-    let signUpCalled = false;
+    let createClientCalled = false;
     const sb = createMockSandbox({
-      auth: {
-        getSession: async () => ({ data: { session: null }, error: null }),
-        signUp: async () => {
-          signUpCalled = true;
-          return { data: { user: { id: 'usr-123', email: 'novo@opos.gal' }, session: null }, error: null };
-        },
-        onAuthStateChange: () => {}
-      }
+      auth: { getSession: async () => ({ data: { session: null }, error: null }) }
     });
-
-    const emailInput = sb.document.getElementById('authPageEmail'); emailInput.value = 'novo@opos.gal';
-    const passInput = sb.document.getElementById('authPagePassword'); passInput.value = 'Secret123!';
-    const nameInput = sb.document.getElementById('authPageName'); nameInput.value = 'OpositorNovo';
-    const signUpBtn = sb.document.getElementById('authPageSignUpBtn');
-    
-    assert.strictEqual(typeof signUpBtn.listeners['click'], 'function', '❌ Handler de authPageSignUpBtn no asignado');
-    await signUpBtn.listeners['click']();
-
-    assert.strictEqual(signUpCalled, true, '❌ signUp de Supabase no fue invocado');
-    assert.strictEqual(sb.document.documentElement.dataset.authMode, 'none', '❌ Test 2 Fallido: Registro sin confirmación no debe activar modo remoto');
-    const statusText = sb.document.getElementById('authPageStatusText').textContent;
-    assert.strictEqual(statusText.includes('correo') || statusText.includes('confirmar'), true, '❌ Mensaje de confirmación de email no mostrado');
-    console.log('✅ Test 2 Pasado: Alta sin sesión no declara modo supabase y muestra aviso de confirmación por email');
+    sb.window.supabase = { createClient: () => { createClientCalled = true; return {}; } };
+    sb.initSupabase('https://demo.supabase.co', 'public-key');
+    assert.strictEqual(createClientCalled, false, '❌ Test 2 Fallido: se intentó crear cliente Supabase con remoto pausado');
+    assert.strictEqual(vm.runInContext('supabaseClient', sb), null, '❌ Test 2 Fallido: supabaseClient debe quedar null');
+    console.log('✅ Test 2 Pasado: Supabase no se inicializa cuando remoto está pausado.');
   }
 
-  // Test 3: Perfil guardado localmente -> authMode = 'guest'
+  // Test 3: perfil guardado localmente -> authMode = guest.
   {
-    const sb = createMockSandbox({
-      auth: {
-        getSession: async () => ({ data: { session: null }, error: null }),
-        onAuthStateChange: () => {}
-      }
-    });
+    const sb = createMockSandbox();
     sb.localStorage.setItem('opoA2UserName', 'Merce');
     await sb.checkAuthUser();
     assert.strictEqual(sb.document.documentElement.dataset.authState, 'authenticated', '❌ Test 3 Fallido: Perfil local debe ocultar authScreen');
     assert.strictEqual(sb.document.documentElement.dataset.authMode, 'guest', '❌ Test 3 Fallido: authMode no es guest');
-    console.log('✅ Test 3 Pasado: Perfil local guardado activa authMode = guest');
+    console.log('✅ Test 3 Pasado: perfil local guardado activa modo local.');
   }
 
-  // Test 4: Botón de acceso invitado -> authMode = 'guest'
+  // Test 4: botón de acceso local usa el nombre elegido y activa guest.
   {
-    const sb = createMockSandbox({
-      auth: {
-        getSession: async () => ({ data: { session: null }, error: null }),
-        onAuthStateChange: () => {}
-      }
-    });
+    const sb = createMockSandbox();
+    sb.document.getElementById('authPageName').value = 'Ricardo';
     const guestBtn = sb.document.getElementById('guestAccessBtn');
-    assert.strictEqual(typeof guestBtn.listeners['click'], 'function', '❌ Handler de guestAccessBtn no asignado');
-    guestBtn.listeners['click']();
-    assert.strictEqual(sb.document.documentElement.dataset.authState, 'authenticated', '❌ Test 4 Fallido: Botón invitado debe dar acceso');
+    assert.strictEqual(typeof guestBtn.listeners.click, 'function', '❌ Test 4 Fallido: Handler de guestAccessBtn no asignado');
+    guestBtn.listeners.click();
+    assert.strictEqual(sb.document.documentElement.dataset.authState, 'authenticated', '❌ Test 4 Fallido: Botón local debe dar acceso');
     assert.strictEqual(sb.document.documentElement.dataset.authMode, 'guest', '❌ Test 4 Fallido: authMode no es guest');
-    console.log('✅ Test 4 Pasado: Acceso por botón invitado activa authMode = guest');
+    assert.strictEqual(sb.localStorage.getItem('opoA2UserName'), 'Ricardo', '❌ Test 4 Fallido: no guardó el nombre local elegido');
+    console.log('✅ Test 4 Pasado: acceso local guarda nombre y activa modo invitado/local.');
   }
 
-  // Test 5: Credenciales inválidas en signInWithPassword -> NO dispara automáticamente signUp()
+  // Test 5: el submit principal no llama a login remoto.
   {
-    let autoSignUpDispatched = false;
+    let signInCalled = false;
     const sb = createMockSandbox({
       auth: {
-        getSession: async () => ({ data: { session: null }, error: null }),
-        signInWithPassword: async () => ({ data: null, error: { message: 'Invalid login credentials', status: 400 } }),
-        signUp: async () => { autoSignUpDispatched = true; return { data: null, error: null }; },
-        onAuthStateChange: () => {}
+        signInWithPassword: async () => { signInCalled = true; return { data: null, error: null }; },
+        getSession: async () => ({ data: { session: null }, error: null })
       }
     });
-
-    const emailInput = sb.document.getElementById('authPageEmail'); emailInput.value = ' INVALID@Test.COM ';
-    const passInput = sb.document.getElementById('authPagePassword'); passInput.value = 'wrongpass';
+    sb.document.getElementById('authPageName').value = 'Opositora';
     const form = sb.document.getElementById('authPageForm');
+    assert.strictEqual(typeof form.listeners.submit, 'function', '❌ Test 5 Fallido: Handler de authPageForm no asignado');
+    await form.listeners.submit({ preventDefault() {} });
+    assert.strictEqual(signInCalled, false, '❌ Test 5 Fallido: se llamó a signInWithPassword con remoto pausado');
+    assert.strictEqual(sb.document.documentElement.dataset.authMode, 'guest', '❌ Test 5 Fallido: no activó modo local');
+    console.log('✅ Test 5 Pasado: submit entra localmente sin llamar a Supabase.');
+  }
 
-    assert.strictEqual(typeof form.listeners['submit'], 'function', '❌ Handler de submit de authPageForm no asignado');
-    await form.listeners['submit']({ preventDefault: () => {} });
-
-    assert.strictEqual(autoSignUpDispatched, false, '❌ Test 5 Fallido: Fallo en login disparó signUp involuntario');
-    assert.strictEqual(sb.document.documentElement.dataset.authMode, 'none', '❌ Test 5 Fallido: authMode alterado tras login fallido');
+  // Test 6: crear cuenta y recuperación informan de pausa, sin llamar a Supabase.
+  {
+    let signUpCalled = false;
+    let recoveryCalled = false;
+    const sb = createMockSandbox({
+      auth: {
+        signUp: async () => { signUpCalled = true; return { data: null, error: null }; },
+        resetPasswordForEmail: async () => { recoveryCalled = true; return { error: null }; },
+        getSession: async () => ({ data: { session: null }, error: null })
+      }
+    });
+    const signUpBtn = sb.document.getElementById('authPageSignUpBtn');
+    const forgotBtn = sb.document.getElementById('authPageForgotPassBtn');
+    if (signUpBtn.listeners.click) await signUpBtn.listeners.click();
+    if (forgotBtn.listeners.click) await forgotBtn.listeners.click();
+    assert.strictEqual(signUpCalled, false, '❌ Test 6 Fallido: se llamó a signUp con remoto pausado');
+    assert.strictEqual(recoveryCalled, false, '❌ Test 6 Fallido: se llamó a resetPasswordForEmail con remoto pausado');
     const statusText = sb.document.getElementById('authPageStatusText').textContent;
-    assert.strictEqual(statusText.includes('recupera contraseña') || statusText.includes('Olvidaste tu contraseña'), true, '❌ Error de credenciales no orienta a recuperación/confirmación');
-    console.log('✅ Test 5 Pasado: Credenciales inválidas orientan a confirmación/recuperación sin llamar a signUp()');
+    assert.strictEqual(statusText.includes('pausada') || statusText.includes('pausadas'), true, '❌ Test 6 Fallido: no informa de la pausa remota');
+    console.log('✅ Test 6 Pasado: registro/recuperación remotos quedan pausados sin llamadas externas.');
   }
 
-  // Test 6: El correo se normaliza antes de llamar a Supabase
-  {
-    let emailSentToSupabase = '';
-    const sb = createMockSandbox({
-      auth: {
-        getSession: async () => ({ data: { session: null }, error: null }),
-        signInWithPassword: async ({ email }) => {
-          emailSentToSupabase = email;
-          return { data: null, error: { message: 'Invalid login credentials', status: 400 } };
-        },
-        onAuthStateChange: () => {}
-      }
-    });
-
-    const emailInput = sb.document.getElementById('authPageEmail'); emailInput.value = ' Opositor.Test@Example.COM ';
-    const passInput = sb.document.getElementById('authPagePassword'); passInput.value = 'Secret123!';
-    const form = sb.document.getElementById('authPageForm');
-    await form.listeners['submit']({ preventDefault: () => {} });
-
-    assert.strictEqual(emailSentToSupabase, 'opositor.test@example.com', '❌ Test 6 Fallido: email no normalizado antes de login');
-    console.log('✅ Test 6 Pasado: Email normalizado antes de enviar login remoto');
-  }
-
-  console.log('\n✅ LAS 6 ASERCIONES DE AUTENTICACIÓN PASADAS CON ÉXITO.');
+  console.log('\n✅ LAS 6 ASERCIONES DE AUTENTICACIÓN LOCAL PASADAS CON ÉXITO.');
 }
 
 runTests().catch(err => {

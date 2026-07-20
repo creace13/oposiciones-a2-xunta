@@ -28460,6 +28460,7 @@ function loadSavedProfile() {
 }
 
 let supabaseClient = null;
+const REMOTE_AUTH_ENABLED = false;
 
 const resetPasswordModal = document.getElementById('resetPasswordModal');
 
@@ -28491,6 +28492,16 @@ function openResetPasswordModal() {
 }
 
 function initSupabase(url, key) {
+  if (!REMOTE_AUTH_ENABLED) {
+    supabaseClient = null;
+    loadSavedProfile();
+    const pageStatus = document.getElementById('authPageStatusText');
+    const modalStatus = document.getElementById('authStatusText');
+    const msg = 'Cuentas remotas pausadas: usa el modo local en este navegador.';
+    if (pageStatus) pageStatus.textContent = msg;
+    if (modalStatus) modalStatus.textContent = msg;
+    return;
+  }
   if (window.supabase && url && key) {
     supabaseClient = window.supabase.createClient(url, key);
 
@@ -28576,7 +28587,7 @@ const deleteProgressBtn = document.getElementById('deleteProgressBtn');
 if (deleteProgressBtn) {
   deleteProgressBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    const confirmed = window.confirm('¿Borrar de este navegador todas las respuestas, errores, sesiones y metas? La cuenta remota no se eliminará.');
+    const confirmed = window.confirm('¿Borrar de este navegador todas las respuestas, errores, sesiones y metas? Esta acción no afecta a otros dispositivos.');
     if (!confirmed) return;
     localStorage.removeItem('opoA2State');
     localStorage.removeItem('opoA2LastView');
@@ -28633,14 +28644,14 @@ if (authForm) {
   authForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const nameInput = document.getElementById('authName');
-    const emailInput = document.getElementById('authEmail');
-    const passInput = document.getElementById('authPassword');
     const statusText = document.getElementById('authStatusText');
     const name = nameInput ? nameInput.value.trim() : '';
-    const email = normalizeAuthEmail(emailInput ? emailInput.value : '');
-    const pass = passInput ? passInput.value.trim() : '';
 
-    if (supabaseClient && email && pass) {
+    if (REMOTE_AUTH_ENABLED && supabaseClient) {
+      const emailInput = document.getElementById('authEmail');
+      const passInput = document.getElementById('authPassword');
+      const email = normalizeAuthEmail(emailInput ? emailInput.value : '');
+      const pass = passInput ? passInput.value.trim() : '';
       if (statusText) statusText.textContent = 'Comprobando cuenta remota...';
       try {
         const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pass });
@@ -28663,6 +28674,7 @@ if (authForm) {
     if (name) {
       applyUserProfile(name);
       setAuthState('guest');
+      if (statusText) statusText.textContent = 'Perfil local guardado en este navegador.';
       if (authDialog) authDialog.close();
     }
   });
@@ -28673,14 +28685,14 @@ if (authPageForm) {
   authPageForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const nameInput = document.getElementById('authPageName');
-    const emailInput = document.getElementById('authPageEmail');
-    const passInput = document.getElementById('authPagePassword');
     const statusText = document.getElementById('authPageStatusText');
     const name = nameInput ? nameInput.value.trim() : '';
-    const email = normalizeAuthEmail(emailInput ? emailInput.value : '');
-    const pass = passInput ? passInput.value.trim() : '';
 
-    if (supabaseClient && email && pass) {
+    if (REMOTE_AUTH_ENABLED && supabaseClient) {
+      const emailInput = document.getElementById('authPageEmail');
+      const passInput = document.getElementById('authPagePassword');
+      const email = normalizeAuthEmail(emailInput ? emailInput.value : '');
+      const pass = passInput ? passInput.value.trim() : '';
       if (statusText) statusText.textContent = 'Comprobando cuenta remota...';
       try {
         const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pass });
@@ -28702,6 +28714,7 @@ if (authPageForm) {
     if (name) {
       applyUserProfile(name);
       setAuthState('guest');
+      if (statusText) statusText.textContent = 'Modo local activado. Tu progreso se guardará en este navegador.';
     }
   });
 }
@@ -28709,10 +28722,14 @@ if (authPageForm) {
 const authPageSignUpBtn = document.getElementById('authPageSignUpBtn');
 if (authPageSignUpBtn) {
   authPageSignUpBtn.addEventListener('click', async () => {
+    const statusText = document.getElementById('authPageStatusText');
+    if (!REMOTE_AUTH_ENABLED) {
+      if (statusText) statusText.textContent = 'Las cuentas remotas están pausadas. Entra en modo local para estudiar sin depender de una base de datos.';
+      return;
+    }
     const nameInput = document.getElementById('authPageName');
     const emailInput = document.getElementById('authPageEmail');
     const passInput = document.getElementById('authPagePassword');
-    const statusText = document.getElementById('authPageStatusText');
     const name = nameInput ? nameInput.value.trim() : '';
     const email = normalizeAuthEmail(emailInput ? emailInput.value : '');
     const pass = passInput ? passInput.value.trim() : '';
@@ -28747,7 +28764,9 @@ if (authPageSignUpBtn) {
 const guestAccessBtn = document.getElementById('guestAccessBtn');
 if (guestAccessBtn) {
   guestAccessBtn.addEventListener('click', () => {
-    applyUserProfile('Merce');
+    const nameInput = document.getElementById('authPageName');
+    const name = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Opositor';
+    applyUserProfile(name);
     setAuthState('guest');
   });
 }
@@ -28755,6 +28774,11 @@ if (guestAccessBtn) {
 const authPageForgotPassBtn = document.getElementById('authPageForgotPassBtn');
 if (authPageForgotPassBtn) {
   authPageForgotPassBtn.addEventListener('click', async () => {
+    if (!REMOTE_AUTH_ENABLED) {
+      const statusText = document.getElementById('authPageStatusText');
+      if (statusText) statusText.textContent = 'La recuperación remota está pausada. El modo local no necesita contraseña.';
+      return;
+    }
     const emailInput = document.getElementById('authPageEmail');
     const email = normalizeAuthEmail(emailInput ? emailInput.value : '');
     const statusText = document.getElementById('authPageStatusText');
@@ -28781,6 +28805,11 @@ if (authPageForgotPassBtn) {
 const forgotPassBtn = document.getElementById('forgotPassBtn');
 if (forgotPassBtn) {
   forgotPassBtn.addEventListener('click', async () => {
+    if (!REMOTE_AUTH_ENABLED) {
+      const statusText = document.getElementById('authStatusText');
+      if (statusText) statusText.textContent = 'La recuperación remota está pausada. El perfil local no necesita contraseña.';
+      return;
+    }
     const emailInput = document.getElementById('authEmail');
     const email = normalizeAuthEmail(emailInput ? emailInput.value : '');
     const statusText = document.getElementById('authStatusText');

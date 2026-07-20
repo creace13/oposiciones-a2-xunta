@@ -72,8 +72,8 @@ async function runE2ESuite() {
   assert.strictEqual(document.querySelector('.repository-link').href, 'https://github.com/creace13/oposiciones-a2-xunta', '❌ DOM 0 Fallido: enlace al repositorio incorrecto');
   assert.strictEqual(document.getElementById('projectCreditsTitle').textContent.includes('colaboración entre inteligencias artificiales'), true, '❌ DOM 0 Fallido: créditos Inter-IA ausentes');
   assert.strictEqual(document.querySelector('.closing-quote').textContent.includes('La constancia no hace ruido'), true, '❌ DOM 0 Fallido: cierre motivador ausente');
-  assert.strictEqual(htmlContent.includes('Versión 1.1 (Estable en modo local)'), true, '❌ DOM 0 Fallido: versión estable local no publicada en la interfaz');
-  assert.strictEqual(htmlContent.includes('Cuentas remotas en Beta'), true, '❌ DOM 0 Fallido: falta advertencia sobre cuentas remotas');
+  assert.strictEqual(htmlContent.includes('Versión 1.2 candidata (Estable en modo local)'), true, '❌ DOM 0 Fallido: versión estable local no publicada en la interfaz');
+  assert.strictEqual(htmlContent.includes('Cuentas remotas pausadas'), true, '❌ DOM 0 Fallido: falta advertencia sobre cuentas remotas pausadas');
   console.log('  PASADO: Métricas y textos de transparencia verificados.');
 
   // Flow 1: Carga de la aplicación e inicio en modo invitado
@@ -140,28 +140,27 @@ async function runE2ESuite() {
   // Flow 5: Probar escritura de persistencia local
   console.log('Test DOM 5: Verificando escritura de persistencia en localStorage...');
   const savedName = window.localStorage.getItem('opoA2UserName');
-  assert.strictEqual(savedName, 'Merce', '❌ E2E 5 Fallido: opoA2UserName no persistido en localStorage');
+  assert.strictEqual(savedName, 'Opositor', '❌ E2E 5 Fallido: opoA2UserName no persistido en localStorage');
   const savedState = JSON.parse(window.localStorage.getItem('opoA2State'));
   assert.strictEqual(Array.isArray(savedState.answered), true, '❌ DOM 5 Fallido: el progreso no se serializó');
   assert.strictEqual(savedState.answered.length > 0, true, '❌ DOM 5 Fallido: no se guardaron respuestas');
   console.log('  PASADO: Escritura de persistencia local verificada.');
 
-  // Flow 6: Probar alta pendiente de confirmación sin falso estado autenticado
-  console.log('Test E2E 6: Probando alta de usuario pendiente de confirmación...');
+  // Flow 6: Probar que el acceso principal es local y no remoto
+  console.log('Test E2E 6: Probando acceso local sin cuenta remota...');
   window.localStorage.clear();
   window.setAuthState('unauthenticated');
 
-  const emailInput = document.getElementById('authPageEmail'); emailInput.value = 'novo@opos.gal';
-  const passInput = document.getElementById('authPagePassword'); passInput.value = 'Secret123!';
-  const signUpBtn = document.getElementById('authPageSignUpBtn');
-
-  signUpBtn.click();
+  const nameInput = document.getElementById('authPageName');
+  nameInput.value = 'Ricardo';
+  const authForm = document.getElementById('authPageForm');
+  authForm.dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
   await new Promise(r => setTimeout(r, 100));
 
-  assert.strictEqual(document.documentElement.dataset.authMode, 'none', '❌ E2E 6 Fallido: Alta pendiente activó modo remoto');
+  assert.strictEqual(document.documentElement.dataset.authMode, 'guest', '❌ E2E 6 Fallido: el acceso local no activó modo guest');
   const statusMsg = document.getElementById('authPageStatusText').textContent;
-  assert.strictEqual(statusMsg.includes('correo') || statusMsg.includes('confirmar') || statusMsg.includes('éxito'), true, '❌ E2E 6 Fallido: Mensaje de confirmación no mostrado');
-  console.log('  PASADO: Alta pendiente no autentica falsamente y muestra aviso.');
+  assert.strictEqual(statusMsg.includes('Modo local') || statusMsg.includes('guardará en este navegador'), true, '❌ E2E 6 Fallido: no muestra aviso local');
+  console.log('  PASADO: Acceso local verificado sin cuenta remota.');
 
   // Flow 7: Probar apertura y cierre del modal de privacidad
   console.log('Test E2E 7: Probando apertura de modal de privacidad...');

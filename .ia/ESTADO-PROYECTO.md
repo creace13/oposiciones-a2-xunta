@@ -10,7 +10,7 @@ Plataforma Web independiente de preparación inteligente para el Cuerpo de Gesti
 
 ## Decisión actual
 
-**VERSIÓN 1.1.1 (ESTABLE EN MODO LOCAL / CUENTAS REMOTAS EN BETA / AUDITORÍA DE CONTENIDO CONTINUA)**.
+**VERSIÓN 1.2 CANDIDATA (ESTABLE EN MODO LOCAL / CUENTAS REMOTAS PAUSADAS / AUDITORÍA DE CONTENIDO CONTINUA)**.
 El ciclo **C01 — Construcción, auditoría y estabilización** está cerrado con los informes 01–21. La versión supera la suite automatizada, fue validada manualmente por el usuario en tableta, móvil y PC y está publicada en **Cloudflare Workers** (`https://oposiciones-xunta.opos-galicia.workers.dev`). El ciclo **C02 — Versión plenamente funcional** queda abierto mediante el informe 22 y su única cola ejecutable es `.ia/COLA-ACTIVA.md`. Licencia **CC BY-NC-SA 4.0 (No Comercial)**.
 
 Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/OpenAI queda como titular operativo del proyecto**: auditor, constructor y gestor documental. El modo normal de trabajo será razonamiento medio para optimizar cuota; las tareas que puedan justificar un modelo o razonamiento superior se registran en `.ia/COLA-ALTO-RAZONAMIENTO.md` y se consultan previamente con el titular.
@@ -29,7 +29,7 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - ✅ **Créditos visibles en GitHub**: el `README.md` incluye una sección específica de autoría humana y colaboración con Gemini/Antigravity y Codex/OpenAI, con sus funciones diferenciadas.
 - ✅ **Suite Playwright E2E en Navegadores Reales (C02-04)**: Pruebas automatizadas en Chromium, Firefox y WebKit (escritorio y visores móviles Pixel 5 e iPhone 12) pasando 30/30 (100% ok). Corregida la restauración de hash directos, modales de privacidad y scrolling en JSDOM.
 - ✅ **Accesibilidad básica y UIX (C02-05)**: Corregidos overflow móvil/escritorio, sidebar sin scroll horizontal, navegación semántica con `aria-current`, diálogos con nombre/descripción accesible, foco visible, contraste básico AA y prueba de teclado. No sustituye una auditoría humana especializada con lector de pantalla real.
-- 🟡 **Backup y rollback (C02-06)**: creado `docs/OPERACION-RECUPERACION.md` y ensayo no destructivo de recuperación Git mediante `scripts/test-recovery-runbook.js`. El titular confirma por captura que Supabase Free no incluye copias programadas; la puerta queda bloqueada para cierre total hasta elegir estrategia: Pro, copias manuales, exportación externa o retirada temporal de remoto.
+- ✅ **Decisión sin nuevas suscripciones (C02-01/C02-02/C02-03/C02-06)**: el titular decide no pagar Supabase Pro ni otra suscripción. Las cuentas remotas quedan pausadas y el producto principal pasa a ser estable local. Se reducen riesgos de backup, privacidad y soporte, y se conserva el código remoto como opción futura no pública.
 - ✅ **Validación manual multidispositivo**: el usuario declara funcionamiento visual satisfactorio en tableta, móvil y PC el 19 de julio de 2026.
 
 ## Cifras canónicas
@@ -44,21 +44,21 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 ## Siguiente tarea exacta
 
 - Ejecutar `C02-07`: revisión de seguridad, privacidad técnica, dependencias, cabeceras, errores y rendimiento de producción.
-- `C02-06` queda bloqueado para cierre completo hasta decidir cómo suplir la falta de backups programados de Supabase Free y revisar Cloudflare/Supabase con el titular.
-- Mientras el titular está ausente puede avanzarse `C02-07` y `C02-08`, respetando un único elemento `EN CURSO` en toda la cola.
-- Al regresar el titular, resolver las decisiones bloqueadas `C02-01` y `C02-02` antes de validar el ciclo remoto `C02-03`.
+- Después ejecutar `C02-08`: mantenimiento normativo.
+- Con `C02-07` y `C02-08` cerrados, preparar `C02-10` como aceptación final de la versión estable local.
 
 ## Bloqueos activos
 
 - **Versión 1.1.1 estable en modo local:** ninguno conocido tras la suite automatizada y la validación manual multidispositivo del usuario.
 - **Publicación:** versión 1.1.1 publicada y verificada en Cloudflare Workers el 19 de julio de 2026.
-- **Cuentas remotas:** permanecen en Beta porque no existe borrado remoto autoservicio ni un canal privado de privacidad confirmado por el titular. El correo no reconocido `oposiciones.a2.xunta@gmail.com` se ha retirado de la aplicación.
+- **Cuentas remotas:** pausadas en la interfaz pública por decisión del titular para evitar nuevas suscripciones, backups frágiles y complejidad de privacidad. El modo local es el camino principal.
 - **Login remoto:** `C02-11` cerrado. El titular confirma el 20 de julio de 2026 que el acceso entra correctamente en modo incógnito tras desplegar el mensaje guiado y normalizar correo. La causa práctica queda compatible con caché/autorrelleno/estado local de navegador, no con rotura del login remoto.
 - **Revisión jurídica externa:** `C02-09` requiere un profesional independiente designado por el titular.
 - **Cola ejecutable:** el resto de pendientes y sus dependencias constan exclusivamente en `.ia/COLA-ACTIVA.md`.
 - **GitHub/publicación:** desde el 20 de julio de 2026 el titular autoriza a Codex/OpenAI a hacer `push` a `origin/main` tras checkpoints validados y documentados. La autorización no cubre acciones destructivas, secretos, reescritura de historial ni configuración sensible.
 - **Accesibilidad/UIX:** `C02-05` cerrado con correcciones y pruebas de accesibilidad básica. Queda como mejora futura opcional una auditoría humana especializada con lector de pantalla real.
-- **Backup/rollback:** `C02-06` tiene runbook y ensayo local seguro. Supabase Free no incluye backups programados; no se cierra completamente hasta decidir la estrategia y comprobar backup/restauración real en Cloudflare/Supabase con acceso del titular.
+- **Backup/rollback:** `C02-06` cerrado para versión local sin suscripciones. Supabase Free no incluye backups programados y por eso no se usa como dependencia operativa de usuarios.
+- **Playwright Firefox local:** en la sesión del 20 de julio de 2026, Firefox falla antes de cargar la app con `browserContext.newPage: Cannot read properties of undefined (reading '_page')`. La suite de cierre usa Chromium, WebKit y visores móviles; Firefox queda como diagnóstico opcional `npm run test:firefox`.
 
 ## Archivos clave
 

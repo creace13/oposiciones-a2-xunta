@@ -2,6 +2,30 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Decisión local first y pausa de cuentas remotas
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+
+- registrada la decisión del titular de no asumir nuevas suscripciones;
+- pausado el flujo público de cuentas remotas para cerrar la semana con una versión estable local;
+- orientada la portada a acceso local;
+- actualizada la política de privacidad para no prometer cuentas remotas ni sincronización;
+- cerrado el bloqueo de Supabase Free mediante retirada coherente de la dependencia remota;
+- separada la prueba Firefox como diagnóstico opcional porque falla antes de cargar la app en este entorno Playwright;
+- creado informe 32.
+
+Nota de producto:
+
+- Cada usuario conserva su progreso en su propio navegador/dispositivo.
+- No hay sincronización entre dispositivos.
+- En un mismo navegador no hay multicuentas locales completas todavía; queda como mejora opcional si fuese necesaria.
+
+Siguiente paso:
+
+- ejecutar `C02-07` seguridad, privacidad técnica, dependencias, cabeceras, errores y rendimiento.
+
 ## 20 de julio de 2026 - Anexo C02-06: Supabase Free sin backups programados
 
 Modelo: Codex / OpenAI, actuando como titular operativo.
