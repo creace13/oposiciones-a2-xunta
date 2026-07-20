@@ -6,6 +6,14 @@ Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PRO
 
 Modelo: Codex / OpenAI, actuando como titular operativo.
 
+Actualización de cierre:
+
+- añadido `_headers` a raíz y `public/_headers`;
+- actualizado `scripts/sync-public.js` para incluirlo en la lista blanca;
+- subido commit `55f7da9`;
+- producción verificada con `curl -D -`: aparecen `Content-Security-Policy`, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, `Permissions-Policy`, `Strict-Transport-Security` y `Cross-Origin-Opener-Policy`;
+- `C02-07` queda cerrado en producción.
+
 Actualización posterior:
 
 - el panel de Cloudflare muestra activa la implementación del último commit documental;

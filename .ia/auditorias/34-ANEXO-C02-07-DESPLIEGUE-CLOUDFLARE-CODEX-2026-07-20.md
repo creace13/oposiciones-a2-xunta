@@ -10,6 +10,22 @@ Destinatario: Usuario / relevo Inter-IA.
 
 El checkpoint de seguridad `caa052f` se subió correctamente a `origin/main`.
 
+Actualización de cierre:
+
+- Se añadió `_headers` a la raíz y a `public/_headers`.
+- Se actualizó `scripts/sync-public.js` para incluir `_headers` en la lista blanca.
+- Se subió el commit `55f7da9`.
+- Cloudflare publicó la versión y `curl -D -` confirmó las cabeceras:
+  - `Content-Security-Policy`;
+  - `X-Content-Type-Options`;
+  - `Referrer-Policy`;
+  - `X-Frame-Options`;
+  - `Permissions-Policy`;
+  - `Strict-Transport-Security`;
+  - `Cross-Origin-Opener-Policy`.
+
+`C02-07` queda cerrado en producción.
+
 Actualización tras captura del panel del titular:
 
 - Cloudflare muestra activa una implementación reciente.
