@@ -2,6 +2,32 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Cierre C02-05: accesibilidad básica y UIX
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+- cerrada `C02-05` tras corregir overflow móvil/escritorio y ampliar semántica accesible;
+- añadidos iconos decorativos ocultos a lector de pantalla en navegación;
+- añadida actualización dinámica de `aria-current` al cambiar de sección;
+- añadidos `aria-labelledby` y `aria-describedby` en diálogos principales;
+- reforzado contraste del color secundario `--muted` de 3.95:1 a 4.53:1 sobre fondo crema;
+- creado `scripts/test-accessibility-basics.js` y añadido al flujo `npm test`.
+
+Comprobaciones:
+- `node --check app.js`: correcto;
+- `node scripts/validar-banco.js`: correcto;
+- `node scripts/test-auth-states.js`: correcto;
+- `node scripts/test-accessibility-basics.js`: correcto;
+- `node scripts/test-browser-e2e.js`: correcto;
+- Playwright local Chromium: móvil 393/393 sin overflow, sidebar escritorio 250/250, `aria-current` dinámico y Escape cierra modal.
+
+Limitación:
+- cierre válido para accesibilidad básica aplicable; no sustituye una auditoría humana especializada con lector de pantalla real.
+
+Siguiente paso:
+- iniciar `C02-06` backup, restauración y rollback.
+
 ## 20 de julio de 2026 - Autorización permanente de push para Codex
 
 Modelo: Codex / OpenAI, actuando como titular operativo.

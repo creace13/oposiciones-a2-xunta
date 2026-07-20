@@ -28108,7 +28108,15 @@ function showView(name, options = {}) {
   if (!validViews.includes(name)) name = 'dashboard';
   document.documentElement.dataset.activeView = name;
   document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id === name));
-  document.querySelectorAll('.nav-link').forEach(a => a.classList.toggle('active', a.dataset.view === name));
+  document.querySelectorAll('.nav-link').forEach(a => {
+    const isCurrent = a.dataset.view === name;
+    a.classList.toggle('active', isCurrent);
+    if (isCurrent) {
+      a.setAttribute('aria-current', 'page');
+    } else {
+      a.removeAttribute('aria-current');
+    }
+  });
   setLastView(name);
   if (name === 'syllabus') renderCoverage();
   if (updateHash && viewHashes[name] && window.location.hash !== `#${viewHashes[name]}`) {

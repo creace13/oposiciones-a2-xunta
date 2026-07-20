@@ -4,7 +4,7 @@
   "description": "Plataforma de preparación inteligente para el Subgrupo A2 de la Xunta de Galicia",
   "main": "app.js",
   "scripts": {
-    "test": "node scripts/validar-banco.js && node scripts/test-filters.js && node scripts/test-auth-states.js && node scripts/test-browser-e2e.js && npx playwright test",
+    "test": "node scripts/validar-banco.js && node scripts/test-filters.js && node scripts/test-auth-states.js && node scripts/test-accessibility-basics.js && node scripts/test-browser-e2e.js && npx playwright test",
     "test:e2e": "node scripts/test-browser-e2e.js",
     "test:playwright": "npx playwright test",
     "sync": "node scripts/sync-public.js"
