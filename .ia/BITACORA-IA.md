@@ -2,6 +2,31 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Anexo post-release: límites de uso y no equivalencia a academia
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+
+- añadido en `index.html` un bloque visible de uso responsable en Guía y metodología;
+- aclarado que la plataforma es herramienta de práctica y refuerzo, no academia, temario oficial, fuente oficial ni asesoramiento jurídico;
+- indicado que ante duda prevalecen BOE/DOG, convocatoria vigente y criterio profesional;
+- suavizada la expresión «dominio absoluto del temario» a «dominio progresivo del temario»;
+- actualizado `README.md` con la misma advertencia;
+- actualizadas pruebas de aceptación e integración para impedir que desaparezca este aviso;
+- sincronizado `public/`.
+
+Comprobaciones:
+
+- `node --check app.js`: OK.
+- `node scripts/validar-banco.js`: OK.
+- `node scripts/test-release-acceptance.js`: OK.
+- `npm test`: OK, incluyendo 24/24 pruebas Playwright en Chromium/WebKit/móvil.
+
+Siguiente paso:
+
+- publicar este anexo editorial como ajuste importante de transparencia post-release.
+
 ## 20 de julio de 2026 - Cierre C02-10: aceptación final 1.2.0 estable local
 
 Modelo: Codex / OpenAI, actuando como titular operativo.

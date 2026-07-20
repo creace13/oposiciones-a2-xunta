@@ -18,6 +18,7 @@ Esta aceptación no declara el banco como jurídicamente definitivo. La revisió
 - Biblioteca documental local.
 - Métricas honestas de uso y de catálogo.
 - Transparencia sobre creación, créditos, licencia y limitaciones.
+- Aviso explícito de uso responsable: apoyo al estudio, no academia, no fuente oficial ni asesoramiento jurídico.
 - Seguridad técnica básica y cabeceras de producción.
 - Procedimiento de mantenimiento normativo.
 
@@ -61,4 +62,3 @@ La publicación de `1.2.0` es aceptable si:
 Versión aceptada como **1.2.0 estable local**.
 
 La app queda lista para uso ordinario como herramienta de estudio local, manteniendo avisos claros sobre revisión continua, cuentas remotas pausadas y ausencia de garantía jurídica externa completa.
-

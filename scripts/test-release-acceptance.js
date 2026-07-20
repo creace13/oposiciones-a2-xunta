@@ -38,6 +38,9 @@ assert.strictEqual(lock.packages[''].version, '1.2.0', 'package-lock debe alinea
 assert.ok(indexHtml.includes('v21-stable-local-20260720'), 'index.html debe usar el identificador de caché estable.');
 assert.ok(publicIndexHtml.includes('v21-stable-local-20260720'), 'public/index.html debe usar el identificador de caché estable.');
 assert.ok(readme.includes('estable local'), 'README debe declarar claramente la estabilidad local.');
+assert.ok(readme.includes('No es una academia'), 'README debe aclarar que la app no sustituye una academia.');
+assert.ok(readme.includes('asesoramiento jurídico profesional'), 'README debe aclarar que la app no sustituye asesoramiento jurídico profesional.');
+assert.ok(indexHtml.includes('No es academia, temario oficial ni asesoramiento jurídico'), 'La web debe mostrar límites de uso responsables.');
 
 assert.ok(
   manifest.description.includes('clasificadas en revisión continua'),
@@ -53,4 +56,3 @@ console.log('ACEPTACIÓN FINAL');
 console.log('Versión: 1.2.0 estable local');
 console.log('C02-09: bloqueo externo documentado');
 console.log('RESULTADO: OK');
-

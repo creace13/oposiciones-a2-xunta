@@ -4,6 +4,8 @@ Plataforma web independiente para la preparación del primer ejercicio tipo test
 
 **Versión 1.2.0 estable local:** publicada como herramienta estable en modo local. El banco continúa en revisión normativa y las cuentas remotas están pausadas para evitar prometer sincronización, backups o soporte que no forman parte de esta versión.
 
+> **Uso responsable:** esta plataforma es una herramienta gratuita de práctica y refuerzo. No es una academia, no está vinculada a la Xunta de Galicia, no sustituye preparadores, temarios actualizados, boletines oficiales ni asesoramiento jurídico profesional. Ante cualquier duda, prevalecen siempre BOE/DOG, la convocatoria vigente y el criterio profesional correspondiente.
+
 ---
 
 ## 🌟 Características Principales
@@ -14,6 +16,7 @@ Plataforma web independiente para la preparación del primer ejercicio tipo test
 - **Explicaciones Razonadas**: Cada pregunta incluye 4 justificaciones legales individuales ("por qués") y enlace directo al BOE/DOG oficial.
 - **Simulacros Oficiales**: Temporizador regresivo en vivo (`⏱ M:SS`), opción de *"Dejar en blanco"* (0 penalización) y penalización de –0,25 puntos por fallo.
 - **Privacidad y Perfil de Usuario**: Persistencia local de fallos e historial en tu propio navegador. La autenticación remota queda pausada; el progreso no se sincroniza entre dispositivos.
+- **Uso como apoyo al estudio**: La app ayuda a practicar y razonar respuestas, pero no debe usarse como única fuente ni como garantía jurídica absoluta.
 - **Alojamiento en Producción**: Servido globalmente en **Cloudflare Workers** desde directorio estático aislado (`/public`).
 - **Filosofía 100% Abierta (Non-Commercial Open Source)**: Libre acceso para la comunidad de opositores bajo licencia CC BY-NC-SA 4.0.
 
