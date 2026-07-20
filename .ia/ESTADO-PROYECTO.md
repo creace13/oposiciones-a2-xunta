@@ -19,7 +19,7 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - ✅ **Aislamiento físico y Lista Blanca en `./public`**: Despliegue en Cloudflare Workers desde `./public`, aislado de archivos internos. Sincronización automatizada con lista blanca estricta en `scripts/sync-public.js` (paridad comprobada por SHA-256 y purga de huérfanos raíz probada).
 - ✅ **Inventario del banco sin metas engañosas**: La interfaz muestra únicamente cantidades reales: 1.522 disponibles, 1.207 propias, 315 oficiales, 302 del Bloque I y 905 del Bloque II. Se retiraron `1.207/1.210`, `99,8 %`, porcentajes por objetivo y la expresión «progreso real».
 - ✅ **Filtros Temáticos Inequívocos y Extraídos**: `filterQuestionsByCategory` extraída globalmente en `app.js`, ejercitada por `scripts/test-filters.js` con aserciones reales y sintéticas pasando 100% OK.
-- ✅ **Gestión de Estados de Autenticación de 3 Niveles (5 Aserciones)**: Diferenciación estricta entre `authenticated` (Supabase `session.user`), `guest` (local sin sesión remota) y `unauthenticated`. Formularios separados de Inicio de Sesión y Crear Cuenta Nueva. Validadas 5 aserciones automatizadas en `scripts/test-auth-states.js`.
+- ✅ **Gestión de Estados de Autenticación de 3 Niveles (6 Aserciones)**: Diferenciación estricta entre `authenticated` (Supabase `session.user`), `guest` (local sin sesión remota) y `unauthenticated`. Formularios separados de Inicio de Sesión y Crear Cuenta Nueva. Validadas 6 aserciones automatizadas en `scripts/test-auth-states.js`, incluyendo normalización de correo y mensaje guiado ante credenciales inválidas.
 - ✅ **Suite de integración DOM/JSDOM**: `scripts/test-browser-e2e.js` ejercita HTML y `app.js` reales, navegación, práctica, simulacro, persistencia escrita, alta pendiente, privacidad, documentos, métricas y borrado local. No se presenta como navegador gráfico real.
 - ✅ **Privacidad y transparencia de Beta**: Información básica coherente con `localStorage`, Supabase y `user_feedback`; función real «Borrar progreso»; retirada de la afirmación no comprobada sobre servidores en la UE y de promesas editoriales absolutas.
 - ✅ **Recuperación de Contraseña Supabase**: Inspector de hash `#access_token` / `type=recovery` abriendo el modal de nueva contraseña.
@@ -41,8 +41,8 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 
 ## Siguiente tarea exacta
 
-- Ejecutar `C02-11`: diagnosticar el fallo de inicio de sesión remoto reportado por el titular en equipos externos. La captura muestra el mensaje "Invalid login credentials"; debe comprobarse si se trata de cuenta inexistente/no confirmada, contraseña incorrecta, configuración de Supabase o UX de error insuficiente.
-- Después, ejecutar `C02-05`: auditoría de accesibilidad y corrección de teclado, foco, diálogos, contraste y semántica.
+- Continuar `C02-11`: el flujo remoto funciona para el titular tras recuperación de contraseña, pero a veces falla al cambiar de dispositivo. Se ha aplicado una mitigación local: normalización del correo antes de login/registro/recuperación y mensajes guiados ante credenciales inválidas. Falta prueba real del titular en otro dispositivo para cerrar la causa.
+- Después de cerrar `C02-11`, ejecutar `C02-05`: auditoría de accesibilidad y corrección de teclado, foco, diálogos, contraste y semántica.
 - Mientras el titular está ausente pueden avanzarse también `C02-06`, `C02-07` y `C02-08`, respetando un único elemento `EN CURSO` en toda la cola.
 - Al regresar el titular, resolver las decisiones bloqueadas `C02-01` y `C02-02` antes de validar el ciclo remoto `C02-03`.
 
@@ -51,7 +51,7 @@ Desde el 20 de julio de 2026, por instrucción expresa del titular, **Codex/Open
 - **Versión 1.1.1 estable en modo local:** ninguno conocido tras la suite automatizada y la validación manual multidispositivo del usuario.
 - **Publicación:** versión 1.1.1 publicada y verificada en Cloudflare Workers el 19 de julio de 2026.
 - **Cuentas remotas:** permanecen en Beta porque no existe borrado remoto autoservicio ni un canal privado de privacidad confirmado por el titular. El correo no reconocido `oposiciones.a2.xunta@gmail.com` se ha retirado de la aplicación.
-- **Login remoto:** el titular reporta el 20 de julio de 2026 un fallo en equipos externos con mensaje genérico de credenciales inválidas. Queda incorporado como `C02-11` en la cola activa.
+- **Login remoto:** `C02-11` está en curso. El titular confirma que su cuenta de prueba inicia sesión y recupera contraseña, pero a veces falla al cambiar de dispositivo hasta restablecer la contraseña. Mitigación aplicada pendiente de prueba real multidispositivo.
 - **Revisión jurídica externa:** `C02-09` requiere un profesional independiente designado por el titular.
 - **Cola ejecutable:** el resto de pendientes y sus dependencias constan exclusivamente en `.ia/COLA-ACTIVA.md`.
 - **GitHub:** el repositorio local está por delante de `origin/main` desde el checkpoint `913f0c6` de Gemini (C02-04). Cualquier `push` puede activar publicación y exige autorización expresa del titular.

@@ -28455,6 +28455,25 @@ let supabaseClient = null;
 
 const resetPasswordModal = document.getElementById('resetPasswordModal');
 
+function normalizeAuthEmail(email) {
+  return (email || '').trim().toLowerCase();
+}
+
+function explainAuthError(error) {
+  const rawMessage = error?.message || String(error || '');
+  const normalized = rawMessage.toLowerCase();
+  if (normalized.includes('invalid login credentials')) {
+    return 'No se ha podido iniciar sesión con ese correo y contraseña. Comprueba que el correo sea el mismo con el que creaste la cuenta; si acabas de registrarte, confirma el email. Si en otro dispositivo sigue fallando, usa "¿Olvidaste tu contraseña?" para sincronizar una nueva contraseña.';
+  }
+  if (normalized.includes('email not confirmed') || normalized.includes('not confirmed')) {
+    return 'La cuenta todavía no está confirmada. Revisa el correo de confirmación antes de iniciar sesión en otro dispositivo.';
+  }
+  if (normalized.includes('rate limit')) {
+    return 'Has hecho varios intentos en poco tiempo. Espera 2 o 3 minutos y vuelve a intentarlo.';
+  }
+  return rawMessage ? `Error de autenticación: ${rawMessage}` : 'No se ha podido completar la autenticación. Vuelve a intentarlo en unos minutos.';
+}
+
 function openResetPasswordModal() {
   if (resetPasswordModal) {
     const status = document.getElementById('resetPasswordStatus');
@@ -28610,10 +28629,11 @@ if (authForm) {
     const passInput = document.getElementById('authPassword');
     const statusText = document.getElementById('authStatusText');
     const name = nameInput ? nameInput.value.trim() : '';
-    const email = emailInput ? emailInput.value.trim() : '';
+    const email = normalizeAuthEmail(emailInput ? emailInput.value : '');
     const pass = passInput ? passInput.value.trim() : '';
 
     if (supabaseClient && email && pass) {
+      if (statusText) statusText.textContent = 'Comprobando cuenta remota...';
       try {
         const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pass });
         if (error) throw error;
@@ -28628,7 +28648,7 @@ if (authForm) {
           return;
         }
       } catch (err) {
-        if (statusText) statusText.textContent = `Error de autenticación: ${err.message}`;
+        if (statusText) statusText.textContent = explainAuthError(err);
         return;
       }
     }
@@ -28649,10 +28669,11 @@ if (authPageForm) {
     const passInput = document.getElementById('authPagePassword');
     const statusText = document.getElementById('authPageStatusText');
     const name = nameInput ? nameInput.value.trim() : '';
-    const email = emailInput ? emailInput.value.trim() : '';
+    const email = normalizeAuthEmail(emailInput ? emailInput.value : '');
     const pass = passInput ? passInput.value.trim() : '';
 
     if (supabaseClient && email && pass) {
+      if (statusText) statusText.textContent = 'Comprobando cuenta remota...';
       try {
         const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pass });
         if (error) throw error;
@@ -28666,7 +28687,7 @@ if (authPageForm) {
           return;
         }
       } catch (err) {
-        if (statusText) statusText.textContent = `Error de inicio de sesión: ${err.message}`;
+        if (statusText) statusText.textContent = explainAuthError(err);
         return;
       }
     }
@@ -28685,7 +28706,7 @@ if (authPageSignUpBtn) {
     const passInput = document.getElementById('authPagePassword');
     const statusText = document.getElementById('authPageStatusText');
     const name = nameInput ? nameInput.value.trim() : '';
-    const email = emailInput ? emailInput.value.trim() : '';
+    const email = normalizeAuthEmail(emailInput ? emailInput.value : '');
     const pass = passInput ? passInput.value.trim() : '';
 
     if (!email || !pass) {
@@ -28709,7 +28730,7 @@ if (authPageSignUpBtn) {
           if (statusText) statusText.textContent = 'Cuenta registrada con éxito. Comprueba tu correo electrónico para confirmar tu acceso.';
         }
       } catch (err) {
-        if (statusText) statusText.textContent = `Error de registro: ${err.message}`;
+        if (statusText) statusText.textContent = explainAuthError(err);
       }
     }
   });
@@ -28727,7 +28748,7 @@ const authPageForgotPassBtn = document.getElementById('authPageForgotPassBtn');
 if (authPageForgotPassBtn) {
   authPageForgotPassBtn.addEventListener('click', async () => {
     const emailInput = document.getElementById('authPageEmail');
-    const email = emailInput ? emailInput.value.trim() : '';
+    const email = normalizeAuthEmail(emailInput ? emailInput.value : '');
     const statusText = document.getElementById('authPageStatusText');
     if (!email) {
       if (statusText) statusText.textContent = 'Escribe tu correo arriba para enviarte el enlace de recuperación.';
@@ -28741,11 +28762,7 @@ if (authPageForgotPassBtn) {
         if (error) throw error;
         if (statusText) statusText.textContent = `Enlace enviado a ${email}. Revisa tu correo.`;
       } catch (err) {
-        let msg = err.message;
-        if (msg.includes('rate limit')) {
-          msg = 'Has solicitado varios correos en muy poco tiempo. Por seguridad anti-spam, espera 2 o 3 minutos antes de volver a solicitarlo.';
-        }
-        if (statusText) statusText.textContent = msg;
+        if (statusText) statusText.textContent = explainAuthError(err);
       }
     } else {
       if (statusText) statusText.textContent = `Enlace enviado a ${email}. (Se activará al conectar Supabase).`;
@@ -28757,7 +28774,7 @@ const forgotPassBtn = document.getElementById('forgotPassBtn');
 if (forgotPassBtn) {
   forgotPassBtn.addEventListener('click', async () => {
     const emailInput = document.getElementById('authEmail');
-    const email = emailInput ? emailInput.value.trim() : '';
+    const email = normalizeAuthEmail(emailInput ? emailInput.value : '');
     const statusText = document.getElementById('authStatusText');
     if (!email) {
       if (statusText) statusText.textContent = 'Escribe tu correo arriba para enviarte el enlace de recuperación.';
@@ -28771,11 +28788,7 @@ if (forgotPassBtn) {
         if (error) throw error;
         if (statusText) statusText.textContent = `Enlace enviado a ${email}. Revisa tu bandeja de entrada.`;
       } catch (err) {
-        let msg = err.message;
-        if (msg.includes('rate limit')) {
-          msg = 'Has solicitado varios correos en muy poco tiempo. Por seguridad anti-spam, espera 2 o 3 minutos antes de volver a solicitarlo.';
-        }
-        if (statusText) statusText.textContent = msg;
+        if (statusText) statusText.textContent = explainAuthError(err);
       }
     } else {
       if (statusText) statusText.textContent = `Enlace simulado para ${email}. (Se activará al conectar la base de datos).`;

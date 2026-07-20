@@ -2,6 +2,26 @@
 
 Este archivo es un historial breve y acumulativo. No sustituye a `.ia/ESTADO-PROYECTO.md`.
 
+## 20 de julio de 2026 - Avance C02-11: mitigación de login remoto entre dispositivos
+
+Modelo: Codex / OpenAI, actuando como titular operativo.
+
+Trabajo realizado:
+- el titular aclara que la cuenta de prueba funciona, incluida recuperación de contraseña, pero a veces falla al cambiar de dispositivo hasta restablecer contraseña;
+- marcado `C02-11` como `EN CURSO`;
+- añadida normalización de correo antes de login, registro y recuperación para evitar fallos por mayúsculas/espacios;
+- sustituido el mensaje crudo `Invalid login credentials` por una explicación accionable sobre correo, confirmación y recuperación;
+- ampliada la suite de autenticación de 5 a 6 aserciones.
+
+Comprobaciones:
+- `node --check app.js`: correcto;
+- `node scripts/validar-banco.js`: correcto;
+- `node scripts/test-auth-states.js`: correcto, 6/6;
+- `npm test`: ejecutó correctamente banco, filtros, auth y JSDOM; Playwright Firefox falló y la ejecución quedó colgada, por lo que se cerraron los procesos locales de esa tanda. No se usa esta pasada como cierre de C02-11.
+
+Siguiente paso:
+- prueba real del titular desde otro dispositivo con la misma cuenta de test; si vuelve a fallar, diagnosticar Supabase/configuración con evidencia adicional.
+
 ## 20 de julio de 2026 - Codex asume titularidad operativa y abre gestión de cuota
 
 Modelo: Codex / OpenAI, actuando como titular operativo por instrucción expresa del usuario.

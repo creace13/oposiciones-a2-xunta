@@ -66,7 +66,7 @@ function createMockSandbox(supabaseMock) {
   return sandbox;
 }
 
-console.log('--- SUITE DE 5 PRUEBAS DE ESTADOS DE AUTENTICACIÓN CON ASERCIONES ---');
+console.log('--- SUITE DE 6 PRUEBAS DE ESTADOS DE AUTENTICACIÓN CON ASERCIONES ---');
 
 async function runTests() {
   // Test 1: Sesión Supabase válida -> authMode = 'supabase'
@@ -155,7 +155,7 @@ async function runTests() {
       }
     });
 
-    const emailInput = sb.document.getElementById('authPageEmail'); emailInput.value = 'invalid@test.com';
+    const emailInput = sb.document.getElementById('authPageEmail'); emailInput.value = ' INVALID@Test.COM ';
     const passInput = sb.document.getElementById('authPagePassword'); passInput.value = 'wrongpass';
     const form = sb.document.getElementById('authPageForm');
 
@@ -165,11 +165,34 @@ async function runTests() {
     assert.strictEqual(autoSignUpDispatched, false, '❌ Test 5 Fallido: Fallo en login disparó signUp involuntario');
     assert.strictEqual(sb.document.documentElement.dataset.authMode, 'none', '❌ Test 5 Fallido: authMode alterado tras login fallido');
     const statusText = sb.document.getElementById('authPageStatusText').textContent;
-    assert.strictEqual(statusText.includes('Error'), true, '❌ Error de credenciales no mostrado al usuario');
-    console.log('✅ Test 5 Pasado: Credenciales inválidas devuelven error de login sin llamar a signUp()');
+    assert.strictEqual(statusText.includes('recupera contraseña') || statusText.includes('Olvidaste tu contraseña'), true, '❌ Error de credenciales no orienta a recuperación/confirmación');
+    console.log('✅ Test 5 Pasado: Credenciales inválidas orientan a confirmación/recuperación sin llamar a signUp()');
   }
 
-  console.log('\n✅ LAS 5 ASERCIONES DE AUTENTICACIÓN PASADAS CON ÉXITO.');
+  // Test 6: El correo se normaliza antes de llamar a Supabase
+  {
+    let emailSentToSupabase = '';
+    const sb = createMockSandbox({
+      auth: {
+        getSession: async () => ({ data: { session: null }, error: null }),
+        signInWithPassword: async ({ email }) => {
+          emailSentToSupabase = email;
+          return { data: null, error: { message: 'Invalid login credentials', status: 400 } };
+        },
+        onAuthStateChange: () => {}
+      }
+    });
+
+    const emailInput = sb.document.getElementById('authPageEmail'); emailInput.value = ' Opositor.Test@Example.COM ';
+    const passInput = sb.document.getElementById('authPagePassword'); passInput.value = 'Secret123!';
+    const form = sb.document.getElementById('authPageForm');
+    await form.listeners['submit']({ preventDefault: () => {} });
+
+    assert.strictEqual(emailSentToSupabase, 'opositor.test@example.com', '❌ Test 6 Fallido: email no normalizado antes de login');
+    console.log('✅ Test 6 Pasado: Email normalizado antes de enviar login remoto');
+  }
+
+  console.log('\n✅ LAS 6 ASERCIONES DE AUTENTICACIÓN PASADAS CON ÉXITO.');
 }
 
 runTests().catch(err => {
