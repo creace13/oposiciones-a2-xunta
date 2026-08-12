@@ -19,7 +19,7 @@ const questions = context.auditQuestions;
 const reviewedIds = [
   ...Array.from({ length: 105 }, (_, index) => `h2025-${String(index + 1).padStart(3, '0')}`),
   ...Array.from({ length: 105 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`),
-  ...Array.from({ length: 10 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)
+  ...Array.from({ length: 30 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)
 ];
 const genericPhrases = [
   'No coincide con la solución oficial',
@@ -205,11 +205,33 @@ for (const id of Array.from({ length: 5 }, (_, index) => `h2024-pe-${String(inde
   }
 }
 
-for (const id of Array.from({ length: 10 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)) {
+for (const id of Array.from({ length: 18 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)) {
   const question = questions.find(item => item.id === id);
   if (!question.sourceUrl.includes('BOE-A-2015-10565')) {
     throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 39/2015.`);
   }
+}
+
+for (const id of Array.from({ length: 11 }, (_, index) => `h2024-func-${String(index + 19).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2015-10566')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 40/2015.`);
+  }
+}
+
+const currentCooperationThreshold = questions.find(item => item.id === 'h2024-func-030');
+if (!currentCooperationThreshold.sourceUrl.includes('BOE-A-2017-12902') || !currentCooperationThreshold.explanation.includes('20 %')) {
+  throw new Error('h2024-func-030 no conserva el umbral vigente ni el enlace consolidado de la Ley 9/2017.');
+}
+
+const prescriptionTrap = questions.find(item => item.id === 'h2024-func-017');
+if (!prescriptionTrap.explanation.includes('prescripción') || !prescriptionTrap.explanation.includes('caducidad')) {
+  throw new Error('h2024-func-017 no explica la diferencia entre prescripción y caducidad.');
+}
+
+const reusableApplicationCost = questions.find(item => item.id === 'h2024-func-029');
+if (!reusableApplicationCost.explanation.includes('permite expresamente') || !reusableApplicationCost.explanation.includes('coste')) {
+  throw new Error('h2024-func-029 no explica la posible repercusión del coste de la aplicación cedida.');
 }
 
 const currentHistoricalWorksSolvency = questions.find(item => item.id === 'h2024-pe-102');

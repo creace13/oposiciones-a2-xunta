@@ -29006,6 +29006,107 @@ const historical2024ExpandedReview = {
     quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
     explanation: 'La opción C es correcta. El artículo 78.1 de la Ley 39/2015 exige comunicar a las personas interesadas, con antelación suficiente, el inicio de las actuaciones necesarias para practicar las pruebas admitidas.',
     whys: ['Opción descartada (A). La ley no fija un plazo cerrado de cuarenta y ocho horas.', 'Opción descartada (B). Tampoco establece un mínimo general de tres días.', 'Opción correcta (C). Reproduce la expresión flexible utilizada por el artículo 78.1.', 'Opción suplementaria (D). Fue añadida por la app y no pertenecía al examen oficial.']
+  },
+  'h2024-func-011': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 81.2 de la Ley 39/2015 concede al Consejo de Estado o al órgano consultivo autonómico un plazo de dos meses para emitir el dictamen preceptivo de responsabilidad patrimonial.',
+    whys: ['Opción descartada (A). Un mes no es el plazo establecido para este dictamen.', 'Opción correcta (B). Reproduce el plazo legal de dos meses.', 'Opción descartada (C). El artículo no amplía el plazo ordinario a tres meses.', 'Opción suplementaria (D). No formaba parte del examen oficial de tres alternativas.']
+  },
+  'h2024-func-012': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 84.1 de la Ley 39/2015 incluye el desistimiento entre las formas que ponen fin al procedimiento.',
+    whys: ['Opción descartada (A). La renuncia solo termina el procedimiento cuando no está prohibida por el ordenamiento; la opción afirma lo contrario.', 'Opción correcta (B). El desistimiento aparece expresamente como forma de terminación.', 'Opción descartada (C). El artículo habla de declaración de caducidad, no de prescripción.', 'Opción suplementaria (D). Fue añadida por la app y no pertenecía a la prueba.']
+  },
+  'h2024-func-013': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 89.1.a de la Ley 39/2015 ordena al instructor finalizar y archivar el procedimiento sancionador, sin propuesta de resolución, cuando se comprueba que los hechos no existieron.',
+    whys: ['Opción descartada (A). Acierta en el archivo, pero exige una propuesta de resolución que la ley declara innecesaria.', 'Opción correcta (B). Reúne la finalización, el archivo y la ausencia de propuesta.', 'Opción descartada (C). La inexistencia de los hechos conduce al archivo, no a una declaración de caducidad.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-014': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 96.1 de la Ley 39/2015 permite acordar la tramitación simplificada tanto de oficio como a solicitud de la persona interesada.',
+    whys: ['Opción correcta (A). Contiene las dos vías admitidas por el artículo.', 'Opción descartada (B). Excluye indebidamente la solicitud del interesado.', 'Opción descartada (C). Excluye indebidamente la iniciativa de oficio de la Administración.', 'Opción suplementaria (D). No pertenecía al examen de tres alternativas.']
+  },
+  'h2024-func-015': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 96.6.d de la Ley 39/2015 limita el trámite de audiencia del procedimiento simplificado a los casos en que la resolución vaya a ser desfavorable para el interesado.',
+    whys: ['Opción descartada (A). La audiencia no se reserva para resoluciones favorables.', 'Opción descartada (B). Tampoco depende de una resolución favorable por caducidad.', 'Opción correcta (C). Reproduce la condición establecida para celebrar la audiencia.', 'Opción suplementaria (D). No formaba parte de la prueba oficial.']
+  },
+  'h2024-func-016': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 98.2.a de la Ley 39/2015 incluye la tarjeta de crédito y débito entre los medios electrónicos preferentes para pagar una sanción pecuniaria, salvo imposibilidad justificada.',
+    whys: ['Opción correcta (A). La tarjeta aparece expresamente entre los medios electrónicos admitidos.', 'Opción descartada (B). El cheque personal no figura en la enumeración de medios electrónicos preferentes.', 'Opción descartada (C). El pago en especie tampoco forma parte de esa lista.', 'Opción suplementaria (D). Fue añadida para completar el formato de la app.']
+  },
+  'h2024-func-017': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es la incorrecta y, por ello, la respuesta. El artículo 109.1 de la Ley 39/2015 permite revocar actos desfavorables mientras no haya transcurrido el plazo de prescripción, no el de caducidad.',
+    whys: ['Opción correcta (A, por ser la incorrecta). Sustituye el plazo de prescripción por uno de caducidad.', 'Opción descartada (B). Reproduce los límites legales de la revocación: igualdad, interés público y ordenamiento jurídico.', 'Opción descartada (C). La rectificación de errores materiales, de hecho o aritméticos puede hacerse en cualquier momento.', 'Opción suplementaria (D). No pertenecía al examen oficial.']
+  },
+  'h2024-func-018': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 118.1 de la Ley 39/2015 concede un plazo no inferior a diez días ni superior a quince para alegar sobre hechos o documentos nuevos en un recurso.',
+    whys: ['Opción correcta (A). Coincide con los límites mínimo y máximo del artículo.', 'Opción descartada (B). Eleva ambos límites a quince y veinte días.', 'Opción descartada (C). Veinte a treinta días tampoco es el intervalo previsto.', 'Opción suplementaria (D). No formaba parte de la prueba oficial.']
+  },
+  'h2024-func-019': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 11.2 de la Ley 40/2015 atribuye a la entidad u órgano encomendado la condición de encargado del tratamiento de los datos personales a los que acceda al ejecutar la encomienda.',
+    whys: ['Opción correcta (A). Reproduce la condición jurídica fijada por el artículo.', 'Opción descartada (B). El encomendado no pasa a ser responsable del tratamiento por esta regla.', 'Opción descartada (C). Tampoco adquiere la condición de delegado de protección de datos.', 'Opción suplementaria (D). No pertenecía al examen oficial.']
+  },
+  'h2024-func-020': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 3.1.h de la Ley 40/2015 enumera literalmente la eficacia en el cumplimiento de los objetivos fijados como principio de actuación de las administraciones públicas.',
+    whys: ['Opción descartada (A). La ley habla de servicio efectivo a los ciudadanos, no de servicio eficiente.', 'Opción descartada (B). La formulación legal es planificación y dirección por objetivos y evaluación de resultados, no por resultados y evaluación de medios.', 'Opción correcta (C). Coincide literalmente con uno de los principios del artículo 3.1.', 'Opción suplementaria (D). Fue añadida por la app y no pertenecía a la prueba.']
+  },
+  'h2024-func-021': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 28.2 de la Ley 40/2015 permite exigir conjuntamente al infractor la reposición de la situación alterada a su estado original y la indemnización de los daños y perjuicios.',
+    whys: ['Opción descartada (A). Limita indebidamente la consecuencia al lucro cesante.', 'Opción descartada (B). Presenta reposición e indemnización como alternativas, pero la ley permite exigir ambas.', 'Opción correcta (C). Une las dos consecuencias mediante «así como», igual que el artículo.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-022': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 34.3 de la Ley 40/2015 actualiza la indemnización hasta el final del procedimiento conforme al Índice de Garantía de la Competitividad fijado por el Instituto Nacional de Estadística.',
+    whys: ['Opción descartada (A). La actualización no se vincula al IPC en esta regla.', 'Opción descartada (B). El IPREM tampoco es el indicador previsto.', 'Opción correcta (C). Identifica exactamente el índice y el organismo citados por la ley.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-023': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 37.2 de la Ley 40/2015 establece que el proceso penal no suspende normalmente el procedimiento patrimonial, salvo cuando sea necesario que el orden penal determine los hechos.',
+    whys: ['Opción correcta (A). Reproduce la regla de no suspensión y su excepción basada en la determinación de los hechos.', 'Opción descartada (B). Convierte la suspensión en automática, en contra de la regla legal.', 'Opción descartada (C). Sustituye los hechos por los fundamentos de derecho, que no es la excepción prevista.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-024': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 47.2.a de la Ley 40/2015 denomina convenios interadministrativos a los firmados entre dos o más administraciones o entre entidades dependientes de administraciones distintas.',
+    whys: ['Opción descartada (A). Los convenios intraadministrativos vinculan entidades dependientes de una misma Administración.', 'Opción correcta (B). Es la denominación legal para acuerdos entre administraciones distintas.', 'Opción descartada (C). Convenio marco no es la categoría definida por este supuesto.', 'Opción suplementaria (D). No pertenecía al examen oficial.']
+  },
+  'h2024-func-025': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es la incorrecta y, por ello, la respuesta. El artículo 49 de la Ley 40/2015 exige varios contenidos para los convenios, pero la suscripción de un convenio no puede ceder la titularidad de una competencia.',
+    whys: ['Opción descartada (A). El régimen de modificación y la unanimidad supletoria sí son contenido obligatorio.', 'Opción descartada (B). Los mecanismos de seguimiento, vigilancia y control también deben incluirse.', 'Opción correcta (C, por ser la incorrecta). La cesión de la titularidad de la competencia está prohibida y no es contenido del convenio.', 'Opción suplementaria (D). Fue añadida para el formato de cuatro opciones de la app.']
+  },
+  'h2024-func-026': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 147.1 de la Ley 40/2015 define la conferencia sectorial como un órgano de cooperación de composición multilateral y ámbito sectorial determinado.',
+    whys: ['Opción descartada (A). La conferencia no tiene composición unilateral.', 'Opción descartada (B). Su composición sí es multilateral, pero su ámbito sectorial está determinado.', 'Opción correcta (C). Reúne las dos características exactas de la definición legal.', 'Opción suplementaria (D). No formaba parte de la prueba oficial.']
+  },
+  'h2024-func-027': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 152.1 de la Ley 40/2015 compone la comisión sectorial con el secretario de Estado u órgano superior designado por el ministro, un representante de cada comunidad autónoma y representantes de Ceuta y Melilla.',
+    whys: ['Opción correcta (A). Coinciden la presidencia, quién la designa y las administraciones representadas.', 'Opción descartada (B). No la preside necesariamente el secretario de Estado de Presidencia ni incorpora en su lugar a la federación de municipios.', 'Opción descartada (C). La designación corresponde al ministro competente, no al presidente del Gobierno, y no se sustituyen Ceuta y Melilla por diputaciones.', 'Opción suplementaria (D). No pertenecía al examen oficial.']
+  },
+  'h2024-func-028': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 153.1 de la Ley 40/2015 define las comisiones bilaterales de cooperación como órganos de cooperación de composición bilateral.',
+    whys: ['Opción correcta (A). Reproduce literalmente su naturaleza y composición.', 'Opción descartada (B). La representación autonómica procede del consejo de gobierno, no del parlamento autonómico.', 'Opción descartada (C). No solo asesoran: también consultan y adoptan acuerdos de coordinación.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-029': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es la incorrecta y, por ello, la respuesta. El artículo 157.1 de la Ley 40/2015 permite expresamente que las administraciones cedente y cesionaria acuerden repercutir el coste de adquisición o fabricación de la aplicación cedida.',
+    whys: ['Opción descartada (A). La regla general obliga a poner las aplicaciones disponibles a disposición de otra Administración, con la excepción de información especialmente protegida.', 'Opción correcta (B, por ser la incorrecta). Niega una repercusión de costes que el artículo sí permite acordar.', 'Opción descartada (C). La consulta previa del directorio general de aplicaciones para buscar soluciones reutilizables es obligatoria.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-030': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción A es correcta. El artículo 6.1.a de la Ley 9/2017 presume vocación de mercado cuando las entidades realizan en el mercado abierto un porcentaje igual o superior al 20 % de las actividades objeto de colaboración.',
+    whys: ['Opción correcta (A). Reproduce el umbral legal del 20 %.', 'Opción descartada (B). El artículo no eleva la presunción al 30 %.', 'Opción descartada (C). Tampoco exige alcanzar el 50 % de las actividades.', 'Opción suplementaria (D). Fue añadida por la app y no formaba parte del examen oficial.']
   }
 };
 
