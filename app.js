@@ -27,6 +27,7 @@ const officialSources = {
   grantsGalicia: 'documentos/troncal/galicia/ley-9-2007-subvenciones-galicia.html',
   subventionsGalicia: 'documentos/troncal/galicia/ley-9-2007-subvenciones-galicia.html',
   equalityGalicia: 'documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html',
+  equalityGaliciaHistorical: 'https://www.boe.es/buscar/act.php?id=DOG-g-2015-90667&p=20231211&tn=2',
   transparencyGalicia: 'documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html',
   orgGalicia: 'documentos/troncal/galicia/ley-16-2010-organizacion-xunta.html'
 };
@@ -28052,6 +28053,126 @@ function coverageRows() {
     const percent = Math.min(100, Math.round((current / target.target) * 100));
     return { ...target, current, percent, pending: Math.max(0, target.target - current) };
   });
+}
+
+const historical2025ExpandedReview = {
+  'h2025-061': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 11.3 del Real Decreto Legislativo 1/2013 ordena que los planes de prevención de deficiencias y de intensificación de discapacidades contemplen de modo específico las actuaciones destinadas a las zonas rurales.',
+    whys: ['Opción correcta (A). Reproduce la previsión específica del artículo 11.3 para las zonas rurales.', 'Opción descartada (B). El artículo 11.2 incluye expresamente la seguridad y salud en el trabajo entre los ámbitos de estos planes; no la excluye.', 'Opción descartada (C). El artículo 11.1 define la prevención a la vez como derecho y deber de todo ciudadano, además de obligación prioritaria del Estado.', 'Opción descartada (D). El artículo 11.2 también incluye la atención geriátrica dentro de los campos de actuación.']
+  },
+  'h2025-062': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 18.3 del Real Decreto Legislativo 1/2013 permite esta escolarización sólo de forma excepcional, cuando las necesidades no puedan atenderse en centros ordinarios, y exige tomar en consideración la opinión de los padres o tutores legales.',
+    whys: ['Opción correcta (A). Es la opinión que el artículo 18.3 manda considerar expresamente.', 'Opción descartada (B). El precepto no sustituye la opinión familiar por informes del consejo escolar.', 'Opción descartada (C). Ni el consejo escolar ni los equipos multiprofesionales aparecen en esta regla concreta del artículo 18.3.', 'Opción descartada (D). Añade al equipo docente, que el precepto no incluye en la respuesta solicitada.']
+  },
+  'h2025-063': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    source: 'RDL 1/2013, art. 23',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción A es correcta. El artículo 23.1 del Real Decreto Legislativo 1/2013 atribuye al Gobierno la regulación de las condiciones básicas de accesibilidad y no discriminación, sin perjuicio de las competencias autonómicas y locales. También se corrige aquí la referencia documental, que antes apuntaba por error a otra ley.',
+    whys: ['Opción correcta (A). Identifica al Gobierno y conserva expresamente las competencias de comunidades autónomas y entidades locales.', 'Opción descartada (B). Las comunidades autónomas conservan sus competencias, pero el artículo 23.1 atribuye esta regulación básica al Gobierno.', 'Opción descartada (C). Además de atribuirla al sujeto equivocado, omite las competencias locales.', 'Opción descartada (D). La ley nombra al Gobierno como titular de esta potestad reglamentaria, no genéricamente a toda la Administración General del Estado.']
+  },
+  'h2025-064': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 35.5 del Real Decreto Legislativo 1/2013 declara nulos y sin efecto los preceptos, cláusulas, pactos y decisiones empresariales que produzcan discriminación directa o indirecta desfavorable por razón de discapacidad en el empleo.',
+    whys: ['Opción correcta (A). Es la consecuencia jurídica literal establecida por el artículo 35.5.', 'Opción descartada (B). Una decisión discriminatoria es nula, pero no se convierte automáticamente por ello en acoso.', 'Opción descartada (C). El precepto no introduce una excepción de proporcionalidad para admitir estas condiciones discriminatorias.', 'Opción descartada (D). No son meramente anulables: la ley las califica como nulas y sin efecto.']
+  },
+  'h2025-065': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción A es la incorrecta y, por eso, la respuesta del test. El artículo 49.1 del Real Decreto Legislativo 1/2013 permite que los servicios sociales sean prestados tanto por las administraciones públicas como por entidades sin ánimo de lucro; no reserva su prestación exclusivamente al sector público.',
+    whys: ['Opción correcta (A, por ser la incorrecta). Excluye indebidamente a las entidades sin ánimo de lucro admitidas por el artículo 49.1.', 'Opción descartada (B). El artículo 49.2 exige respetar al máximo la permanencia en el medio familiar y el entorno geográfico.', 'Opción descartada (C). El artículo 49.2 ordena tener en cuenta las barreras específicas de quienes viven en zonas rurales.', 'Opción descartada (D). El artículo 49.3 promueve la participación de las personas con discapacidad en la convivencia, dirección y control de los servicios.']
+  },
+  'h2025-066': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción D es correcta. El artículo 54.2 del Real Decreto Legislativo 1/2013 reconoce la participación de las personas con discapacidad, incluidos niños y niñas y sus familias, a través de sus organizaciones representativas, en las decisiones, normas y estrategias que les conciernen.',
+    whys: ['Opción descartada (A). Añade la participación directa, mientras que esta regla concreta la articula a través de las organizaciones representativas.', 'Opción descartada (B). Excluye indebidamente a menores con discapacidad, mencionados expresamente en el artículo 54.2.', 'Opción descartada (C). Omite a los niños y niñas y a las familias, que la norma incluye de forma expresa.', 'Opción correcta (D). Reúne todos los sujetos indicados y el cauce representativo previsto por el artículo 54.2.']
+  },
+  'h2025-067': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 2 de la Ley 1/2016 incluye, entre sus principios rectores, la transparencia, la accesibilidad universal y la integridad, honestidad, imparcialidad, objetividad y respeto al marco jurídico y a la ciudadanía.',
+    whys: ['Opción descartada (A). Introduce la jerarquía y omite el respeto a la ciudadanía en la enumeración relevante del artículo 2.', 'Opción correcta (B). Reúne sin alteraciones los principios que enumera la ley para esta respuesta.', 'Opción descartada (C). Sustituye honestidad e imparcialidad por legalidad y, por tanto, modifica la lista legal.', 'Opción descartada (D). Añade sostenibilidad y vuelve a omitir el respeto a la ciudadanía.']
+  },
+  'h2025-068': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción C es la que no se publicará con esa denominación y, por ello, es la respuesta. El artículo 7 de la Ley 1/2016 exige publicar el plan estratégico o de gobierno, no un denominado «plan de acción del Gobierno»; las otras tres materias sí aparecen expresamente en el precepto.',
+    whys: ['Opción descartada (A). El artículo 7.1.b exige publicar las delegaciones de competencias vigentes.', 'Opción descartada (B). El artículo 7.1.c incluye la localización, los medios de contacto y el horario de atención al público.', 'Opción correcta (C, por no figurar). La ley habla de plan estratégico o de gobierno, no de plan de acción del Gobierno.', 'Opción descartada (D). El artículo 7.1.e ordena publicar las agendas de actividad institucional pública de miembros de la Xunta y altos cargos.']
+  },
+  'h2025-069': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 13 de la Ley 1/2016 obliga a facilitar datos de los contratos celebrados, incluidos los contratos menores, y a publicar los criterios interpretativos de los órganos consultivos en materia de contratación.',
+    whys: ['Opción descartada (A). Excluye los contratos menores, que el artículo 13 incluye expresamente.', 'Opción correcta (B). Contiene las dos obligaciones preguntadas: contratos, también los menores, y criterios interpretativos consultivos.', 'Opción descartada (C). Es incompleta porque omite la publicación de los criterios interpretativos de los órganos consultivos.', 'Opción descartada (D). Sí existe una respuesta completa y conforme al artículo 13: la B.']
+  },
+  'h2025-070': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 29.3 de la Ley 1/2016 dispone que el acceso ciudadano al Portal de transparencia y Gobierno abierto respetará los principios de gratuidad, accesibilidad, interoperabilidad y reutilización.',
+    whys: ['Opción correcta (A). Recoge conjuntamente los cuatro principios exigidos por el artículo 29.3.', 'Opción descartada (B). Omite la interoperabilidad.', 'Opción descartada (C). Omite la reutilización.', 'Opción descartada (D). Omite accesibilidad y reutilización y añade buena fe, que no integra esta enumeración.']
+  },
+  'h2025-071': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 45.1 de la Ley 1/2016 impide durante los dos años siguientes al cese que los altos cargos realicen actividades o presten servicios en entidades privadas relacionadas con expedientes sobre los que hubiesen dictado resolución durante el cargo.',
+    whys: ['Opción descartada (A). Eleva el período a tres años, pero el artículo 45.1 fija dos.', 'Opción descartada (B). Cuatro años no es el plazo previsto por la ley.', 'Opción correcta (C). Reproduce el plazo de dos años y la prohibición exacta del artículo 45.1.', 'Opción descartada (D). Cinco años tampoco corresponde al período legal posterior al cese.']
+  },
+  'h2025-072': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 48.1 de la Ley 1/2016 atribuye la gestión del régimen de incompatibilidades y el conocimiento de las denuncias por posibles incumplimientos a la Oficina de Incompatibilidades y Buenas Prácticas de la Xunta de Galicia.',
+    whys: ['Opción correcta (A). Es la denominación completa y literal del órgano competente en el artículo 48.1.', 'Opción descartada (B). Omite «y Buenas Prácticas» y, por ello, no reproduce el nombre legal.', 'Opción descartada (C). La norma crea una Oficina, no un Organismo con esa denominación.', 'Opción descartada (D). Cambia «Incompatibilidades» por «Compatibilidades», alterando el nombre oficial.']
+  },
+  'h2025-073': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada contrastada 12/08/2026',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 2',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción C era la respuesta conforme al artículo 2 del Decreto Legislativo 2/2015 citado por la pregunta: una disposición, criterio o práctica aparentemente neutros que coloca a un sexo en desventaja particular define la discriminación indirecta. Esta norma está derogada desde el 31 de diciembre de 2023; se conserva y se explica únicamente por fidelidad al examen histórico oficial.',
+    whys: ['Opción descartada (A). La discriminación directa suponía un trato menos favorable por razón de sexo, no una regla aparentemente neutra con desventaja particular.', 'Opción descartada (B). El artículo 2 no denominaba esta situación acoso moral por razón de género.', 'Opción correcta (C). Es la definición de discriminación indirecta que contenía el artículo 2 de la norma hoy derogada.', 'Opción descartada (D). «Discriminación sexual» no era la categoría técnica definida para este supuesto en el artículo citado.']
+  },
+  'h2025-074': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada contrastada 12/08/2026',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 50',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción B era la respuesta conforme al artículo 50 del Decreto Legislativo 2/2015: en los cursos, jornadas y demás actividades formativas organizadas o financiadas por la Administración pública gallega se reservaba un 50 % de las plazas a mujeres que reuniesen los requisitos. La norma está derogada desde el 31 de diciembre de 2023 y se mantiene aquí sólo como contenido del examen histórico.',
+    whys: ['Opción descartada (A). El porcentaje previsto no era el 25 %.', 'Opción correcta (B). El artículo 50 de la norma derogada fijaba expresamente una reserva del 50 %.', 'Opción descartada (C). El precepto no establecía una reserva del 33 %.', 'Opción descartada (D). Tampoco fijaba el porcentaje en el 20 %.']
+  },
+  'h2025-075': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada contrastada 12/08/2026',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 54',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción C era la respuesta conforme al artículo 54 del Decreto Legislativo 2/2015: las valoraciones técnicas podían encargarse a los órganos competentes de gestión de recursos humanos de la Administración pública gallega. El precepto también permitía solicitar colaboración de la inspección de trabajo y, excepcionalmente, de especialistas externos. La norma está derogada desde el 31 de diciembre de 2023.',
+    whys: ['Opción descartada (A). El Instituto de Seguridad y Salud Laboral de Galicia no era el órgano al que el artículo 54 atribuía directamente este encargo.', 'Opción descartada (B). El Consejo Gallego de Relaciones Laborales tampoco figuraba como destinatario directo del encargo.', 'Opción correcta (C). Reproduce los órganos de gestión de recursos humanos mencionados expresamente en el artículo 54 de la norma derogada.', 'Opción descartada (D). El Servicio Público de Empleo no era el órgano designado por ese precepto.']
+  },
+  'h2025-076': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada contrastada 12/08/2026',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 58',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción A era la respuesta conforme al artículo 58 del Decreto Legislativo 2/2015: sin perjuicio de otra publicidad útil para prevenir el acoso sexual, la declaración de principios debía publicarse en el tablón de anuncios de cada centro de trabajo y unidad administrativa. La norma está derogada desde el 31 de diciembre de 2023 y se identifica como referencia histórica.',
+    whys: ['Opción correcta (A). Es el lugar de publicación exigido expresamente por el artículo 58 de la norma derogada.', 'Opción descartada (B). El precepto no sustituía los tablones de cada centro y unidad por una publicación en el Diario Oficial de Galicia.', 'Opción descartada (C). Una página web de la consejería no era el medio obligatorio indicado en esta regla.', 'Opción descartada (D). La publicación conjunta en BOE y DOG no aparecía en el artículo 58.']
+  },
+  'h2025-077': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada contrastada 12/08/2026',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 61',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción A era la respuesta conforme al artículo 61 del Decreto Legislativo 2/2015: el chantaje sexual se consideraba un incumplimiento muy grave del personal funcionario, estatutario o laboral al servicio de la Administración general de la Comunidad Autónoma. La norma está derogada desde el 31 de diciembre de 2023 y se conserva sólo por fidelidad al examen histórico.',
+    whys: ['Opción correcta (A). Coincide con la calificación de incumplimiento muy grave establecida en el artículo 61 de la norma derogada.', 'Opción descartada (B). La conducta no se calificaba simplemente como grave.', 'Opción descartada (C). Tampoco tenía la consideración de incumplimiento leve.', 'Opción descartada (D). Sí existe una respuesta conforme al precepto histórico: la A.']
+  },
+  'h2025-078': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 21 de la Ley 2/2015 define al personal funcionario de carrera como quien está vinculado a una Administración pública por una relación estatutaria regulada por el derecho administrativo para desempeñar servicios profesionales retribuidos de carácter permanente.',
+    whys: ['Opción correcta (A). «Relación estatutaria» es la expresión utilizada por el artículo 21.', 'Opción descartada (B). «Relación legal» no es la categoría completa con la que la ley define este vínculo.', 'Opción descartada (C). El derecho administrativo regula la relación, pero la denominación del vínculo es estatutaria.', 'Opción descartada (D). Una relación contractual corresponde al ámbito laboral y no define al personal funcionario de carrera.']
+  },
+  'h2025-079': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 32.1 de la Ley 2/2015 dispone que, en la Administración general de la Comunidad Autónoma de Galicia, sólo las personas integrantes del Consejo de la Xunta pueden nombrar personal eventual dentro de los límites presupuestarios establecidos.',
+    whys: ['Opción correcta (A). Limita el nombramiento a quienes integran el Consejo de la Xunta, tal como establece el artículo 32.1.', 'Opción descartada (B). Añade a las personas titulares de todas las entidades públicas instrumentales, que no están incluidas en esta regla.', 'Opción descartada (C). Las personas titulares de las agencias públicas autonómicas tampoco se añaden a la habilitación del artículo 32.1.', 'Opción descartada (D). La referencia genérica a titulares de entes públicos autonómicos amplía indebidamente los sujetos autorizados.']
+  },
+  'h2025-080': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 34.3 de la Ley 2/2015 permite que, en las entidades públicas instrumentales indicadas por la pregunta, los puestos directivos también puedan proveerse excepcionalmente con personas que todavía no tengan la condición de personal directivo, respetando los principios de mérito, capacidad, idoneidad, publicidad y concurrencia.',
+    whys: ['Opción descartada (A). Describe de forma incompleta el acceso ordinario del apartado 1, pero no la excepción específica preguntada para estas entidades instrumentales.', 'Opción correcta (B). Reproduce la posibilidad excepcional establecida en el segundo párrafo del artículo 34.3.', 'Opción descartada (C). Restringe la provisión al personal funcionario de carrera y omite tanto al personal laboral fijo como la excepción aplicable.', 'Opción descartada (D). El artículo 34.3 no autoriza una provisión reglamentaria con personal eventual.']
+  }
+};
+
+for (const [questionId, review] of Object.entries(historical2025ExpandedReview)) {
+  const question = questions.find(item => item.id === questionId);
+  if (question) Object.assign(question, review);
 }
 
 const defaults = [

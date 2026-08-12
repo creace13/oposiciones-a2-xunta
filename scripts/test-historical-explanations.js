@@ -16,7 +16,7 @@ vm.runInContext(
 );
 
 const questions = context.auditQuestions;
-const reviewedIds = Array.from({ length: 60 }, (_, index) =>
+const reviewedIds = Array.from({ length: 80 }, (_, index) =>
   `h2025-${String(index + 1).padStart(3, '0')}`
 );
 const genericPhrases = [
@@ -41,6 +41,21 @@ for (const id of reviewedIds) {
     if (reviewedText.includes(phrase)) {
       throw new Error(`${id} todavía contiene una justificación automática genérica.`);
     }
+  }
+}
+
+const correctedDisabilityReference = questions.find(item => item.id === 'h2025-063');
+if (correctedDisabilityReference.source !== 'RDL 1/2013, art. 23' || !correctedDisabilityReference.sourceUrl.includes('BOE-A-2013-12632')) {
+  throw new Error('h2025-063 no conserva la referencia corregida al RDL 1/2013.');
+}
+
+for (const id of ['h2025-073', 'h2025-074', 'h2025-075', 'h2025-076', 'h2025-077']) {
+  const question = questions.find(item => item.id === id);
+  if (!question.quality.includes('Norma derogada') || !question.source.includes('Decreto legislativo 2/2015 (derogado)')) {
+    throw new Error(`${id} no advierte de forma expresa que su norma histórica está derogada.`);
+  }
+  if (!question.sourceUrl.includes('DOG-g-2015-90667')) {
+    throw new Error(`${id} no enlaza el texto histórico oficial correcto.`);
   }
 }
 
