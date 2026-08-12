@@ -28063,12 +28063,36 @@ function getStoredState() {
   try { return JSON.parse(localStorage.getItem('opoA2State') || 'null'); } catch (_) { return null; }
 }
 
-const state = getStoredState() || { goals: defaults, answered: [], errors: [], sessions: 0, current: [] };
+function normalizeStoredState(stored) {
+  const source = stored && typeof stored === 'object' ? stored : {};
+  const validQuestionIds = new Set(questions.map(question => question.id));
+  const answered = Array.isArray(source.answered)
+    ? source.answered.filter(attempt => attempt && validQuestionIds.has(attempt.id) && typeof attempt.correct === 'boolean').map(attempt => ({
+        id: attempt.id,
+        correct: attempt.correct,
+        ...(typeof attempt.answeredAt === 'string' ? { answeredAt: attempt.answeredAt } : {})
+      }))
+    : [];
+  const errors = Array.isArray(source.errors)
+    ? [...new Set(source.errors.filter(id => validQuestionIds.has(id)))]
+    : [];
+  return {
+    version: 2,
+    goals: Array.isArray(source.goals) ? source.goals : defaults.map(goal => ({ ...goal })),
+    answered,
+    errors,
+    sessions: Number.isFinite(source.sessions) && source.sessions >= 0 ? source.sessions : 0,
+    current: Array.isArray(source.current) ? source.current : []
+  };
+}
+
+const state = normalizeStoredState(getStoredState());
 let activeQuiz = [];
 let questionIndex = 0;
 let quizMode = 'practice';
 let examAnswers = [];
 let practiceAnsweredCount = 0;
+let historyFilter = 'pending';
 const validViews = ['dashboard', 'practice', 'simulations', 'errors', 'library', 'syllabus', 'methodology'];
 const viewHashes = {
   dashboard: 'inicio',
@@ -28182,10 +28206,55 @@ function renderGoals() {
   list.innerHTML = state.goals.map(goal => `<label class="goal ${goal.done ? 'done' : ''}"><input type="checkbox" data-goal="${escapeHTML(goal.id)}" ${goal.done ? 'checked' : ''}><span>${escapeHTML(goal.text)}</span><small>${goal.done ? 'hecha' : escapeHTML(goal.progress)}</small></label>`).join('');
   list.querySelectorAll('[data-goal]').forEach(box => box.addEventListener('change', e => { const goal = state.goals.find(g => g.id === e.target.dataset.goal); goal.done = e.target.checked; persist(); renderGoals(); }));
 }
+function recordAttempt(questionId, correct) {
+  state.answered.push({ id: questionId, correct, answeredAt: new Date().toISOString() });
+}
+function getHistoryRows() {
+  const rowsById = new Map();
+  state.answered.forEach((attempt, index) => {
+    const question = questions.find(item => item.id === attempt.id);
+    if (!question) return;
+    const row = rowsById.get(attempt.id) || { question, attempts: 0, correct: 0, incorrect: 0, lastCorrect: false, lastIndex: -1 };
+    row.attempts += 1;
+    if (attempt.correct) row.correct += 1; else row.incorrect += 1;
+    row.lastCorrect = attempt.correct;
+    row.lastIndex = index;
+    rowsById.set(attempt.id, row);
+  });
+  return [...rowsById.values()].sort((a, b) => b.lastIndex - a.lastIndex);
+}
 function renderErrors() {
   const target = document.getElementById('errorList');
-  if (!state.errors.length) { target.innerHTML = '<article class="error-card empty"><p class="eyebrow">TODO DESPEJADO</p><h2>Aún no hay errores que repasar.</h2><p>Cuando una respuesta necesite consolidación, aparecerá aquí con su explicación y su fuente.</p></article>'; return; }
-  target.innerHTML = state.errors.map(id => { const q = questions.find(question => question.id === id); return `<article class="error-card"><div><p class="eyebrow">${q.topic.toUpperCase()}</p><h2>${q.text}</h2><p>${q.source}</p></div><button class="secondary-button review-one" data-id="${q.id}">Repasar</button></article>`; }).join('');
+  const allRows = getHistoryRows();
+  const pendingIds = new Set(state.errors);
+  const pendingRows = allRows.filter(row => pendingIds.has(row.question.id));
+  const correctRows = allRows.filter(row => row.correct > 0);
+  const summary = document.getElementById('historySummary');
+  if (summary) {
+    summary.innerHTML = `<article><span>Preguntas realizadas</span><strong>${allRows.length}</strong></article><article class="success"><span>Con algún acierto</span><strong>${correctRows.length}</strong></article><article class="attention"><span>Pendientes de repaso</span><strong>${pendingRows.length}</strong></article>`;
+  }
+  document.querySelectorAll('[data-history-filter]').forEach(button => {
+    const active = button.dataset.historyFilter === historyFilter;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-selected', String(active));
+  });
+  const rows = historyFilter === 'pending' ? pendingRows : (historyFilter === 'correct' ? correctRows : allRows);
+  if (!rows.length) {
+    const emptyMessages = {
+      pending: ['TODO DESPEJADO', 'No tienes preguntas pendientes de repaso.', 'Cuando falles una pregunta, aparecerá aquí hasta que vuelvas a acertarla.'],
+      correct: ['PRIMEROS PASOS', 'Aún no hay aciertos registrados.', 'Las preguntas acertadas aparecerán aquí con el número de intentos realizados.'],
+      all: ['SIN ACTIVIDAD TODAVÍA', 'Aún no has respondido preguntas.', 'Empieza una práctica y este espacio irá formando tu historial.']
+    };
+    const [label, title, copy] = emptyMessages[historyFilter];
+    target.innerHTML = `<article class="error-card empty"><p class="eyebrow">${label}</p><h2>${title}</h2><p>${copy}</p></article>`;
+    return;
+  }
+  target.innerHTML = rows.map(row => {
+    const q = row.question;
+    const pending = pendingIds.has(q.id);
+    const attemptsLabel = `${row.attempts} ${row.attempts === 1 ? 'intento' : 'intentos'}`;
+    return `<article class="error-card history-card"><div><div class="history-card-heading"><p class="eyebrow">${escapeHTML(q.topic.toUpperCase())}</p><span class="history-status ${pending ? 'pending-review' : 'learned'}">${pending ? 'Pendiente' : 'Última correcta'}</span></div><h2>${escapeHTML(q.text)}</h2><p>${escapeHTML(q.source)}</p><p class="attempt-summary"><strong>${row.correct}</strong> ${row.correct === 1 ? 'acierto' : 'aciertos'} · <strong>${row.incorrect}</strong> ${row.incorrect === 1 ? 'fallo' : 'fallos'} · ${attemptsLabel}</p></div><button class="secondary-button review-one" data-id="${escapeHTML(q.id)}">Practicar</button></article>`;
+  }).join('');
   target.querySelectorAll('.review-one').forEach(button => button.addEventListener('click', () => startQuiz([questions.find(q => q.id === button.dataset.id)])));
 }
 function renderCoverage() {
@@ -28372,7 +28441,7 @@ function answerQuestion(index) {
     if (next) next.classList.remove('hidden');
     return;
   }
-  state.answered.push({ id:q.id, correct:isCorrect });
+  recordAttempt(q.id, isCorrect);
   practiceAnsweredCount += 1;
   if (!isCorrect && !state.errors.includes(q.id)) state.errors.push(q.id);
   if (isCorrect) state.errors = state.errors.filter(id => id !== q.id);
@@ -28404,7 +28473,7 @@ function renderExamResults() {
 
   results.forEach(({ q, isBlank, correct }) => {
     if (!isBlank) {
-      state.answered.push({ id: q.id, correct });
+      recordAttempt(q.id, correct);
       if (!correct && !state.errors.includes(q.id)) state.errors.push(q.id);
       if (correct) state.errors = state.errors.filter(id => id !== q.id);
     }
@@ -28471,6 +28540,10 @@ if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeMobileMenu);
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMobileMenu(); });
 document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', e => { e.preventDefault(); showView(link.dataset.view); closeMobileMenu(); }));
 document.querySelectorAll('[data-view-target]').forEach(button => button.addEventListener('click', () => showView(button.dataset.viewTarget)));
+document.querySelectorAll('[data-history-filter]').forEach(button => button.addEventListener('click', () => {
+  historyFilter = button.dataset.historyFilter;
+  renderErrors();
+}));
 document.querySelectorAll('.start-test').forEach(button => button.addEventListener('click', () => startQuiz(buildSet(button.dataset.set, 5))));
 document.querySelectorAll('.start-historical').forEach(button => button.addEventListener('click', e => startQuiz(buildSet(e.currentTarget.dataset.set), 'exam')));
 document.querySelectorAll('.study-historical').forEach(button => button.addEventListener('click', e => startQuiz(buildSet(e.currentTarget.dataset.set, 'full'), 'practice')));

@@ -84,7 +84,7 @@
           <a class="nav-link active" href="#inicio" data-view="dashboard" aria-current="page"><span aria-hidden="true">⌂</span> Inicio</a>
           <a class="nav-link" href="#practicar" data-view="practice"><span aria-hidden="true">✦</span> Practicar</a>
           <a class="nav-link" href="#simulacros" data-view="simulations"><span aria-hidden="true">◷</span> Simulacros</a>
-          <a class="nav-link" href="#errores" data-view="errors"><span aria-hidden="true">↻</span> Repasar errores</a>
+          <a class="nav-link" href="#errores" data-view="errors"><span aria-hidden="true">↻</span> Historial y repaso</a>
           <a class="nav-link" href="#biblioteca" data-view="library"><span aria-hidden="true">▱</span> Biblioteca</a>
           <a class="nav-link" href="#temario" data-view="syllabus"><span aria-hidden="true">▤</span> Temario</a>
           <a class="nav-link" href="#metodologia" data-view="methodology"><span aria-hidden="true">ⓘ</span> Guía y Metodología</a>
@@ -173,7 +173,13 @@
         </section>
 
         <section class="view" id="errors">
-          <header class="page-header compact"><div><p class="eyebrow">REPASO ACTIVO</p><h1>Errores que se convierten en aciertos</h1><p class="subtitle">No son una nota: son el mapa de tu siguiente sesión.</p></div></header>
+          <header class="page-header compact"><div><p class="eyebrow">HISTORIAL DE APRENDIZAJE</p><h1>Tus aciertos y errores, juntos</h1><p class="subtitle">Consulta lo que ya dominas y lo que conviene volver a practicar.</p></div></header>
+          <div class="history-summary" id="historySummary" aria-label="Resumen del historial"></div>
+          <div class="history-tabs" role="tablist" aria-label="Filtrar historial">
+            <button type="button" class="history-tab active" role="tab" aria-selected="true" data-history-filter="pending">Pendientes de repaso</button>
+            <button type="button" class="history-tab" role="tab" aria-selected="false" data-history-filter="correct">Aciertos</button>
+            <button type="button" class="history-tab" role="tab" aria-selected="false" data-history-filter="all">Todas</button>
+          </div>
           <div id="errorList" class="error-list"></div>
         </section>
 
@@ -340,7 +346,7 @@
                 <span class="step-num">03</span>
                 <div>
                   <strong>Consolida tus Errores Semanales</strong>
-                  <p>Visita el panel de <em>Repasar errores</em> tras cada sesión para afianzar los aspectos normativos donde el tribunal calificador suele incluir trampas.</p>
+                  <p>Visita <em>Historial y repaso</em> tras cada sesión para consultar tus aciertos y reforzar los aspectos que todavía están pendientes.</p>
                 </div>
               </div>
             </div>

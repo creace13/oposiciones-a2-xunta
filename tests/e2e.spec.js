@@ -113,6 +113,39 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
     await expect(page.locator('#quizCard')).toBeVisible();
   });
 
+  test('4b. El historial conserva aciertos y errores anteriores', async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('opoA2State', JSON.stringify({
+        goals: [],
+        answered: [
+          { id: 'procedimiento-1', correct: false },
+          { id: 'procedimiento-1', correct: true },
+          { id: 'procedimiento-2', correct: false },
+          { id: 'identificador-inexistente', correct: true }
+        ],
+        errors: ['procedimiento-2', 'identificador-inexistente'],
+        sessions: 2,
+        current: []
+      }));
+    });
+    await page.goto('/#errores');
+
+    await expect(page.locator('#historySummary')).toContainText('Preguntas realizadas2');
+    await expect(page.locator('#historySummary')).toContainText('Con algún acierto1');
+    await expect(page.locator('#historySummary')).toContainText('Pendientes de repaso1');
+    await expect(page.locator('.history-card')).toHaveCount(1);
+    await expect(page.locator('.history-card')).toContainText('1 fallo');
+
+    await page.locator('[data-history-filter="correct"]').click();
+    await expect(page.locator('.history-card')).toHaveCount(1);
+    await expect(page.locator('.history-card')).toContainText('1 acierto');
+    await expect(page.locator('.history-card')).toContainText('1 fallo');
+    await expect(page.locator('.history-card')).toContainText('2 intentos');
+
+    await page.locator('[data-history-filter="all"]').click();
+    await expect(page.locator('.history-card')).toHaveCount(2);
+  });
+
   test('5. Apertura y cierre del Modal de Política de Privacidad', async ({ page }) => {
     await page.goto('/');
 

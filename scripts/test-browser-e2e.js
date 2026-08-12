@@ -190,6 +190,27 @@ async function runE2ESuite() {
   assert.strictEqual(!!summaryHeading, true, '❌ E2E 4 Fallido: Resumen de examen no mostrado');
   console.log('  PASADO: Simulacro con penalización y nota neta verificado.');
 
+  // Flow 4b: Historial conjunto de aciertos y errores
+  console.log('Test E2E 4b: Verificando historial conjunto y migración segura...');
+  const migrated = window.normalizeStoredState({
+    answered: [
+      { id: 'procedimiento-1', correct: false },
+      { id: 'procedimiento-1', correct: true },
+      { id: 'identificador-inexistente', correct: true }
+    ],
+    errors: ['procedimiento-1', 'identificador-inexistente'],
+    sessions: 2
+  });
+  assert.strictEqual(migrated.version, 2, '❌ E2E 4b Fallido: el progreso no se migró a la versión actual');
+  assert.strictEqual(migrated.answered.length, 2, '❌ E2E 4b Fallido: no se descartó un intento huérfano');
+  assert.strictEqual(Array.from(migrated.errors).join(','), 'procedimiento-1', '❌ E2E 4b Fallido: no se descartó un error huérfano');
+  window.showView('errors');
+  document.querySelector('[data-history-filter="all"]').click();
+  assert.strictEqual(document.querySelectorAll('.history-card').length > 0, true, '❌ E2E 4b Fallido: el historial no muestra preguntas realizadas');
+  assert.strictEqual(document.getElementById('historySummary').textContent.includes('Preguntas realizadas'), true, '❌ E2E 4b Fallido: falta el resumen del historial');
+  assert.strictEqual(document.querySelectorAll('.history-tab').length, 3, '❌ E2E 4b Fallido: faltan filtros del historial');
+  console.log('  PASADO: Historial conjunto, filtros y migración segura verificados.');
+
   // Flow 5: Probar escritura de persistencia local
   console.log('Test DOM 5: Verificando escritura de persistencia en localStorage...');
   const savedName = window.localStorage.getItem('opoA2UserName');
