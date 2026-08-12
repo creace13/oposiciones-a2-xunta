@@ -29587,6 +29587,20 @@ for (const [questionId, review] of Object.entries(historical2024ExpandedReview))
   if (question) Object.assign(question, review);
 }
 
+const fullQuestionBank = [...questions];
+const normativeMaintenanceHolds = Array.isArray(globalThis.NORMATIVE_MAINTENANCE_HOLDS)
+  ? globalThis.NORMATIVE_MAINTENANCE_HOLDS
+  : [];
+const activeNormativeHoldIds = new Set(
+  normativeMaintenanceHolds
+    .filter(hold => hold && hold.status === 'HELD' && typeof hold.questionId === 'string')
+    .map(hold => hold.questionId)
+);
+if (activeNormativeHoldIds.size) {
+  const availableQuestions = questions.filter(question => !activeNormativeHoldIds.has(question.id));
+  questions.splice(0, questions.length, ...availableQuestions);
+}
+
 const defaults = [
   { id: 'goal-1', text: 'Completar 3 prácticas de procedimiento', progress: '0/3', done: false },
   { id: 'goal-2', text: 'Revisar los errores de la semana', progress: '0/8', done: false },
@@ -29599,7 +29613,7 @@ function getStoredState() {
 
 function normalizeStoredState(stored) {
   const source = stored && typeof stored === 'object' ? stored : {};
-  const validQuestionIds = new Set(questions.map(question => question.id));
+  const validQuestionIds = new Set(fullQuestionBank.map(question => question.id));
   const answered = Array.isArray(source.answered)
     ? source.answered.filter(attempt => attempt && validQuestionIds.has(attempt.id) && typeof attempt.correct === 'boolean').map(attempt => ({
         id: attempt.id,

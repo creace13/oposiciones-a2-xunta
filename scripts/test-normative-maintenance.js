@@ -33,7 +33,7 @@ const officialSourcesDoc = read(path.join('docs', 'FUENTES_OFICIALES.md'));
   'Cadencia de revisión',
   'Estados de una fuente o pregunta',
   'Protocolo ante una norma modificada',
-  'Retirada segura de preguntas',
+  'Retirada temporal reversible',
   'Simulación de control'
 ].forEach(section => {
   assert.ok(maintenanceDoc.includes(section), `Falta sección obligatoria en mantenimiento normativo: ${section}`);
@@ -107,4 +107,3 @@ console.log(`Fuentes usadas por el banco: ${sourceUsage.size}`);
 console.log(`Simulación: ${simulationPlan.norma} -> ${simulationPlan.preguntasAfectadas.length} preguntas en revisión.`);
 console.log(`Primeros IDs afectados: ${simulationPlan.preguntasAfectadas.slice(0, 8).join(', ')}`);
 console.log('RESULTADO: OK');
-
