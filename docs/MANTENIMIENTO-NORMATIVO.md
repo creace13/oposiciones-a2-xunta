@@ -26,6 +26,22 @@ El inventario actual cubre las 1.522 preguntas y las 32 fuentes diferenciadas:
 
 Los tres estados del índice son `EXACT`, `WHOLE_SOURCE` y `MANUAL_REVIEW`. Un estado `EXACT` solo significa que la referencia se pudo interpretar con seguridad; no certifica la vigencia ni la corrección jurídica del contenido.
 
+## Lista selectiva ante un cambio confirmado
+
+Cuando una fuente oficial confirme una modificación, `npm run impacto:normativa` convierte la norma y los artículos afectados en una lista de revisión. La herramienta no descubre ni interpreta por sí sola reformas jurídicas: el aviso oficial debe identificarse primero.
+
+1. Consultar las 32 fuentes seleccionables con `npm run impacto:normativa -- --list-sources`.
+2. Para una norma completa, ejecutar por ejemplo `npm run impacto:normativa -- --source law39`.
+3. Para artículos concretos, ejecutar por ejemplo `npm run impacto:normativa -- --source law39 --articles 14.2,16`.
+4. Si se necesita conservar el resultado, añadir `--output ruta-del-informe.json`; `--json` permite mostrar el informe estructurado completo.
+
+La selección entiende artículos, apartados, subapartados, rangos, anexos y disposiciones. Una cita al artículo 14 cubre un cambio del 14.2 y un rango 55-57 cubre un cambio del 56.2. También incorpora siempre:
+
+- las preguntas que solo citan la fuente completa, cuando pertenecen a la norma afectada;
+- las 6 citas combinadas actualmente existentes, como pequeña lista preventiva para que una segunda norma citada no quede oculta.
+
+Cada candidata explica si aparece por coincidencia directa, por citar la fuente completa o por necesitar revisión manual. Una candidata no se considera incorrecta: solo queda pendiente de contraste humano con el aviso y el texto oficial consolidado.
+
 ## Fuentes que deben vigilarse
 
 1. Convocatoria vigente del proceso selectivo y sus bases.
@@ -72,6 +88,7 @@ No se debe usar memoria general de una IA como fuente jurídica. Si una norma no
    - `node scripts/validar-banco.js`
    - `node scripts/test-normative-maintenance.js`
    - `node scripts/test-normative-index.js`
+   - `node scripts/test-normative-impact.js`
    - `npm test` cuando el cambio sea publicable.
 8. Actualizar el registro de cambios, la cola de mantenimiento y el informe de versión correspondiente.
 9. Hacer commit y, si procede, push autorizado.
@@ -93,6 +110,8 @@ La prueba `scripts/test-normative-maintenance.js` simula una modificación de la
 La simulación sirve para demostrar que el procedimiento es accionable. Si mañana cambia una norma real, el mismo patrón permite saber rápidamente qué parte del banco queda bajo sospecha antes de tocar nada.
 
 La prueba `scripts/test-normative-index.js` verifica además que ninguna pregunta se pierde, que todos los registros conservan su fuente, que las referencias complejas no se interpretan a la fuerza y que un cambio de artículo genera un subconjunto menor que la norma completa. Por ejemplo, el artículo 14.2 de la Ley 39/2015 selecciona 2 preguntas frente a las 122 vinculadas al conjunto de esa ley.
+
+La prueba `scripts/test-normative-impact.js` ensaya cambios de norma completa, artículo, apartado y rango en las 32 fuentes. En la simulación del artículo 14.2 de la Ley 39/2015 obtiene 2 coincidencias directas, añade las 6 citas combinadas por seguridad y evita revisar las otras 120 preguntas de esa ley.
 
 ## Criterio de cierre
 
