@@ -1,6 +1,6 @@
 # Mantenimiento normativo del banco A2 Xunta
 
-Actualizado: 20 de julio de 2026.
+Actualizado: 12 de agosto de 2026.
 
 Este procedimiento evita que el banco de preguntas envejezca sin control cuando cambia una norma, una convocatoria o una plantilla oficial. No sustituye una revisión jurídica independiente: define cómo detectar, aislar, corregir y documentar los cambios de forma reproducible.
 
@@ -11,6 +11,20 @@ Este procedimiento evita que el banco de preguntas envejezca sin control cuando 
 - Alcance: preguntas de elaboración propia, preguntas oficiales históricas, explicaciones, distractores, citas, enlaces y documentos locales usados por la app.
 - Fuente de verdad técnica del banco: `app.js`.
 - Inventario documental de fuentes: `docs/FUENTES_OFICIALES.md` y `officialSources` en `app.js`.
+- Índice selectivo generado: `docs/INDICE-NORMATIVO-PREGUNTAS.json`.
+
+## Índice selectivo de preguntas
+
+El comando `npm run index:normativa` reconstruye, siempre desde el banco real, la relación entre cada pregunta, su fuente y los artículos o disposiciones citados. El archivo generado no decide si una norma está vigente ni modifica preguntas: sirve exclusivamente para reducir la lista que debe revisar una persona.
+
+El inventario actual cubre las 1.522 preguntas y las 32 fuentes diferenciadas:
+
+- 1.514 preguntas tienen una referencia concreta interpretable;
+- 2 citan una norma completa sin indicar artículo;
+- 6 combinan varias normas en una misma cita y quedan apartadas para revisión manual;
+- 296 incluyen una fecha de contraste jurídico documentada; la fecha de publicación de una norma no se confunde con una fecha de revisión.
+
+Los tres estados del índice son `EXACT`, `WHOLE_SOURCE` y `MANUAL_REVIEW`. Un estado `EXACT` solo significa que la referencia se pudo interpretar con seguridad; no certifica la vigencia ni la corrección jurídica del contenido.
 
 ## Fuentes que deben vigilarse
 
@@ -43,7 +57,7 @@ No se debe usar memoria general de una IA como fuente jurídica. Si una norma no
 ## Protocolo ante una norma modificada
 
 1. Identificar la fuente oficial modificada: URL, fecha, norma y artículos afectados.
-2. Localizar preguntas dependientes por `sourceUrl`, texto de fuente y tema.
+2. Regenerar el índice con `npm run index:normativa` y localizar por `sourceUrl` y artículo las preguntas potencialmente dependientes. Los casos `WHOLE_SOURCE` y `MANUAL_REVIEW` de esa fuente se incluyen siempre en la revisión.
 3. Clasificar el impacto:
    - sin impacto material;
    - solo cambia cita/enlace;
@@ -57,6 +71,7 @@ No se debe usar memoria general de una IA como fuente jurídica. Si una norma no
    - `node --check app.js`
    - `node scripts/validar-banco.js`
    - `node scripts/test-normative-maintenance.js`
+   - `node scripts/test-normative-index.js`
    - `npm test` cuando el cambio sea publicable.
 8. Actualizar el registro de cambios, la cola de mantenimiento y el informe de versión correspondiente.
 9. Hacer commit y, si procede, push autorizado.
@@ -76,6 +91,8 @@ La retirada no debe hacerse borrando a ciegas. La opción preferente es:
 La prueba `scripts/test-normative-maintenance.js` simula una modificación de la Ley 39/2015. No cambia el banco: localiza las preguntas afectadas, comprueba que tienen cita y explicación completa, y genera en consola un plan mínimo de revisión.
 
 La simulación sirve para demostrar que el procedimiento es accionable. Si mañana cambia una norma real, el mismo patrón permite saber rápidamente qué parte del banco queda bajo sospecha antes de tocar nada.
+
+La prueba `scripts/test-normative-index.js` verifica además que ninguna pregunta se pierde, que todos los registros conservan su fuente, que las referencias complejas no se interpretan a la fuerza y que un cambio de artículo genera un subconjunto menor que la norma completa. Por ejemplo, el artículo 14.2 de la Ley 39/2015 selecciona 2 preguntas frente a las 122 vinculadas al conjunto de esa ley.
 
 ## Criterio de cierre
 
