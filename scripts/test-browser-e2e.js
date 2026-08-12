@@ -143,6 +143,35 @@ async function runE2ESuite() {
   document.querySelector('.finish-practice').click();
   console.log('  PASADO: Cierre anticipado y conservación de progreso verificados.');
 
+  // Flow 3c: Estudiar un histórico completo con explicación inmediata
+  console.log('Test E2E 3c: Estudiando un histórico completo con explicación inmediata...');
+  const topicSelect = document.getElementById('topicSelect');
+  const lengthSelect = document.getElementById('lengthSelect');
+  const fullHistoricalOption = document.getElementById('fullHistoricalOption');
+  topicSelect.value = 'historico2025';
+  topicSelect.dispatchEvent(new window.Event('change'));
+  assert.strictEqual(fullHistoricalOption.hidden, false, '❌ E2E 3c Fallido: no se habilitó el histórico completo');
+  assert.strictEqual(fullHistoricalOption.disabled, false, '❌ E2E 3c Fallido: el histórico completo continúa deshabilitado');
+  lengthSelect.value = 'full';
+  createTestBtn.click();
+  assert.strictEqual(quizCard.textContent.includes('Pregunta 1 de 105'), true, '❌ E2E 3c Fallido: no se cargaron las 105 preguntas');
+  document.querySelector('.answer').click();
+  assert.strictEqual(document.querySelector('.feedback').classList.contains('hidden'), false, '❌ E2E 3c Fallido: no apareció la explicación inmediata');
+  document.querySelector('.finish-practice-early').click();
+  document.querySelector('.finish-practice').click();
+  console.log('  PASADO: Histórico completo en modo aprendizaje verificado.');
+
+  // Flow 3d: Acceso directo a estudiar desde la lista de históricos
+  console.log('Test E2E 3d: Abriendo el modo estudiar desde la lista de históricos...');
+  document.querySelector('.study-historical[data-set="historico2025"]').click();
+  assert.strictEqual(quizCard.textContent.includes('Pregunta 1 de 105'), true, '❌ E2E 3d Fallido: el botón Estudiar no abrió el examen completo');
+  assert.strictEqual(quizCard.textContent.includes('aprendizaje con explicación'), true, '❌ E2E 3d Fallido: el botón Estudiar abrió el modo incorrecto');
+  document.querySelector('.answer').click();
+  assert.strictEqual(document.querySelector('.feedback').classList.contains('hidden'), false, '❌ E2E 3d Fallido: Estudiar no mostró la explicación');
+  document.querySelector('.finish-practice-early').click();
+  document.querySelector('.finish-practice').click();
+  console.log('  PASADO: Acceso directo a estudiar verificado.');
+
   // Flow 4: Iniciar simulacro con penalización –0.25 y calcular nota neta
   console.log('Test E2E 4: Iniciando simulacro oficial de 18 preguntas...');
   window.location.hash = '#simulations';
@@ -153,6 +182,7 @@ async function runE2ESuite() {
   // Answer 1 question, leave rest blank by finishing exam
   const firstOption = document.querySelector('.answer');
   if (firstOption) firstOption.click();
+  assert.strictEqual(document.querySelector('.feedback').classList.contains('hidden'), true, '❌ E2E 4 Fallido: el simulacro mostró una corrección antes de terminar');
 
   // Trigger end of exam / render results
   window.renderExamResults();

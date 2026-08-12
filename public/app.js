@@ -28264,7 +28264,7 @@ function buildSet(topic, length) {
     };
     const prefix = prefixMap[topic] || 'h202';
     pool = questions.filter(q => q.topic === targetTopicName || q.id.startsWith(prefix));
-    if (!length) return pool; // Devuelve el examen oficial integro en su orden
+    if (!length || length === 'full') return pool; // El histórico completo conserva el orden oficial
   } else if (topic === 'mixto') {
     pool = questions;
   } else {
@@ -28350,6 +28350,17 @@ function renderQuestion() {
   if (finishEarlyBtn) {
     finishEarlyBtn.addEventListener('click', () => finishPractice(true));
   }
+}
+
+function updatePracticeLengthOptions() {
+  const topicSelect = document.getElementById('topicSelect');
+  const lengthSelect = document.getElementById('lengthSelect');
+  const fullOption = document.getElementById('fullHistoricalOption');
+  if (!topicSelect || !lengthSelect || !fullOption) return;
+  const isHistorical = String(topicSelect.value || '').startsWith('historico');
+  fullOption.hidden = !isHistorical;
+  fullOption.disabled = !isHistorical;
+  if (!isHistorical && lengthSelect.value === 'full') lengthSelect.value = '5';
 }
 
 function answerQuestion(index) {
@@ -28462,6 +28473,9 @@ document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('cl
 document.querySelectorAll('[data-view-target]').forEach(button => button.addEventListener('click', () => showView(button.dataset.viewTarget)));
 document.querySelectorAll('.start-test').forEach(button => button.addEventListener('click', () => startQuiz(buildSet(button.dataset.set, 5))));
 document.querySelectorAll('.start-historical').forEach(button => button.addEventListener('click', e => startQuiz(buildSet(e.currentTarget.dataset.set), 'exam')));
+document.querySelectorAll('.study-historical').forEach(button => button.addEventListener('click', e => startQuiz(buildSet(e.currentTarget.dataset.set, 'full'), 'practice')));
+document.getElementById('topicSelect').addEventListener('change', updatePracticeLengthOptions);
+updatePracticeLengthOptions();
 document.getElementById('createTest').addEventListener('click', () => startQuiz(buildSet(document.getElementById('topicSelect').value, document.getElementById('lengthSelect').value)));
 document.getElementById('simulationStart').addEventListener('click', () => startQuiz(buildSet('mixto', 18), 'exam'));
 

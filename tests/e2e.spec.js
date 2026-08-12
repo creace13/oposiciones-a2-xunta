@@ -71,6 +71,28 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
     expect(savedState.answered).toHaveLength(1);
   });
 
+  test('3c. Estudiar un histórico completo muestra explicación inmediata', async ({ page }) => {
+    await page.goto('/#practice');
+    await page.selectOption('#topicSelect', 'historico2025');
+    await expect(page.locator('#fullHistoricalOption')).toBeEnabled();
+    await page.selectOption('#lengthSelect', 'full');
+    await page.click('#createTest');
+
+    await expect(page.locator('#quizCard')).toContainText('Pregunta 1 de 105');
+    await page.locator('.answer').first().click();
+    await expect(page.locator('.feedback')).toBeVisible();
+    await expect(page.locator('.feedback')).toContainText('Base legal');
+    await expect(page.locator('.finish-practice-early')).toBeVisible();
+  });
+
+  test('3d. Los históricos ofrecen estudiar o simular', async ({ page }) => {
+    await page.goto('/#simulations');
+    await expect(page.locator('.study-historical')).toHaveCount(3);
+    await expect(page.locator('.start-historical')).toHaveCount(3);
+    await expect(page.locator('.historical-mode-help')).toContainText('explicación después de cada respuesta');
+    await expect(page.locator('.historical-mode-help')).toContainText('correcciones ocultas hasta el final');
+  });
+
   test('4. Iniciar simulacro con regla de penalización –0.25 y calcular nota neta', async ({ page }) => {
     await page.goto('/#simulations');
     await expect(page.locator('#simulations')).toBeVisible();
@@ -84,6 +106,7 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
     // Responder 1 opción
     const firstAnswer = page.locator('.answer').first();
     await firstAnswer.click();
+    await expect(page.locator('.feedback')).toBeHidden();
 
     // Finalizar examen
     await page.evaluate(() => window.renderExamResults());
