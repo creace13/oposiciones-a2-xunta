@@ -18,7 +18,8 @@ vm.runInContext(
 const questions = context.auditQuestions;
 const reviewedIds = [
   ...Array.from({ length: 105 }, (_, index) => `h2025-${String(index + 1).padStart(3, '0')}`),
-  ...Array.from({ length: 95 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`)
+  ...Array.from({ length: 105 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`),
+  ...Array.from({ length: 10 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)
 ];
 const genericPhrases = [
   'No coincide con la solución oficial',
@@ -195,6 +196,30 @@ if (!expandedBirthLeave.quality.includes('Regla vigente ampliada') || !expandedB
 const modifiedOtherParentLeave = questions.find(item => item.id === 'h2024-pe-094');
 if (!modifiedOtherParentLeave.quality.includes('Regla modificada') || !modifiedOtherParentLeave.explanation.includes('1 de enero de 2026') || !modifiedOtherParentLeave.explanation.includes('diecinueve semanas')) {
   throw new Error('h2024-pe-094 no distingue la respuesta histórica de la regulación vigente desde 2026.');
+}
+
+for (const id of Array.from({ length: 5 }, (_, index) => `h2024-pe-${String(index + 96).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2015-5677')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 2/2015.`);
+  }
+}
+
+for (const id of Array.from({ length: 10 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2015-10565')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 39/2015.`);
+  }
+}
+
+const currentHistoricalWorksSolvency = questions.find(item => item.id === 'h2024-pe-102');
+if (!currentHistoricalWorksSolvency.sourceUrl.includes('BOE-A-2017-12902')) {
+  throw new Error('h2024-pe-102 no enlaza la versión oficial consolidada de la Ley 9/2017.');
+}
+
+const currentHistoricalGalicianOrganization = questions.find(item => item.id === 'h2024-pe-105');
+if (!currentHistoricalGalicianOrganization.sourceUrl.includes('BOE-A-2011-2544')) {
+  throw new Error('h2024-pe-105 no enlaza la versión oficial consolidada de la Ley 16/2010.');
 }
 
 console.log('REVISIÓN JURÍDICA DE HISTÓRICOS OFICIALES');

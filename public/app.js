@@ -28899,6 +28899,113 @@ const historical2024ExpandedReview = {
     sourceUrl: officialSources.employmentCurrent,
     explanation: 'La opción C es correcta. El artículo 131 de la Ley 2/2015 concede al personal funcionario una licencia sin retribución de hasta un mes en los supuestos de hospitalización prolongada o enfermedad grave descritos.',
     whys: ['Opción descartada (A). Habla de todo el personal y convierte el límite legal de un mes en treinta días naturales.', 'Opción descartada (B). La licencia sí está expresamente regulada.', 'Opción correcta (C). Identifica al personal funcionario, la ausencia de retribución y la duración máxima de un mes.', 'Opción descartada (D). La licencia regulada por este artículo no es retribuida.']
+  },
+  'h2024-pe-096': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 141.3 de la Ley 2/2015 establece que, si las prácticas se realizan desempeñando un puesto, paga las retribuciones la Administración pública en la que se encuentre ese puesto.',
+    whys: ['Opción descartada (A). La Administración convocante paga como regla general, pero aquí se aplica la excepción por desempeñar un puesto.', 'Opción correcta (B). Reproduce la regla especial del artículo 141.3.', 'Opción descartada (C). La ley no atribuye automáticamente el pago a la consejería de función pública.', 'Opción descartada (D). Tampoco lo atribuye de forma general a la consejería de presupuestos.']
+  },
+  'h2024-pe-097': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 146.1 de la Ley 2/2015 remite el régimen de Seguridad Social y derechos pasivos del personal a la normativa estatal que resulte aplicable.',
+    whys: ['Opción correcta (A). Mantiene la remisión abierta a la normativa estatal aplicable.', 'Opción descartada (B). La ley no encuadra necesariamente a todo el personal en el régimen general.', 'Opción descartada (C). Tampoco impone universalmente un régimen especial de funcionarios.', 'Opción descartada (D). La remisión se hace a normativa estatal, no autonómica.']
+  },
+  'h2024-pe-098': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 149.2 de la Ley 2/2015 exige que el sindicato haya obtenido un 10 % o más de representación en las elecciones para delegados y juntas de personal del ámbito correspondiente.',
+    whys: ['Opción correcta (A). Coinciden el umbral del 10 % y los órganos de representación citados por la ley.', 'Opción descartada (B). Reduce indebidamente el umbral al 5 % y añade los comités de empresa.', 'Opción descartada (C). Mantiene el 10 %, pero incorpora los comités de empresa a esta concreta regla.', 'Opción descartada (D). Eleva el umbral al 20 % y altera también los órganos enumerados.']
+  },
+  'h2024-pe-099': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 156.2.a de la Ley 2/2015 dispone que se elige un delegado de personal cuando el número de funcionarios no es superior a treinta; exactamente treinta entra en esta regla.',
+    whys: ['Opción correcta (A). Treinta es el límite incluido en el tramo de un delegado.', 'Opción descartada (B). Los tres delegados corresponden al tramo superior a treinta e inferior a cincuenta.', 'Opción descartada (C). Las juntas de personal se constituyen desde cincuenta funcionarios.', 'Opción descartada (D). El comité de empresa representa al personal laboral, no es el órgano preguntado para funcionarios.']
+  },
+  'h2024-pe-100': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 161.1.d de la Ley 2/2015 ordena elegir las juntas de personal mediante listas cerradas y un sistema proporcional corregido.',
+    whys: ['Opción correcta (A). Reproduce las dos características legales: listas cerradas y sistema proporcional corregido.', 'Opción descartada (B). Las listas abiertas y el sistema mayoritario corresponden a los delegados de personal.', 'Opción descartada (C). Sustituye incorrectamente el sistema proporcional por uno mayoritario.', 'Opción descartada (D). Además de mezclar el sistema, el texto de reserva no forma parte de una respuesta jurídica.']
+  },
+  'h2024-pe-101': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 131 de la Ley 39/2015 exige publicar en el diario oficial las normas con rango de ley, los reglamentos y las disposiciones administrativas para que entren en vigor y produzcan efectos jurídicos.',
+    whys: ['Opción descartada (A). Incluye todos los actos administrativos, aunque el artículo se refiere a normas y disposiciones generales.', 'Opción descartada (B). Omite las disposiciones administrativas.', 'Opción correcta (C). Reúne las tres categorías enumeradas por el artículo.', 'Opción descartada (D). Añade las instrucciones de servicio, que no figuran en esa enumeración.']
+  },
+  'h2024-pe-102': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción A es correcta. El artículo 88.1.a de la Ley 9/2017 permite acreditar la solvencia técnica en contratos de obras con la relación de las ejecutadas durante los cinco últimos años.',
+    whys: ['Opción correcta (A). Cinco años es el periodo ordinario previsto para obras.', 'Opción descartada (B). La regla general no establece seis años.', 'Opción descartada (C). Tres años aparece en otros tipos de contratos, no en esta regla para obras.', 'Opción descartada (D). Dos años queda por debajo del periodo legal.']
+  },
+  'h2024-pe-103': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 53.1 de la Ley 40/2015 obliga a remitir electrónicamente, dentro de los tres meses siguientes a la firma, los convenios cuyos compromisos económicos superen los 600.000 euros.',
+    whys: ['Opción correcta (A). Reproduce el umbral superior a 600.000 euros.', 'Opción descartada (B). El umbral no se sitúa en 300.000 euros.', 'Opción descartada (C). Tampoco basta con superar 200.000 euros.', 'Opción descartada (D). La cifra legal no es 400.000 euros.']
+  },
+  'h2024-pe-104': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es la incorrecta y, por ello, la respuesta. El artículo 53.1.e de la Ley 39/2015 permite formular alegaciones y aportar documentos antes del trámite de audiencia, no en cualquier fase sin límite.',
+    whys: ['Opción descartada (A). El artículo reconoce el derecho a identificar al personal responsable de la tramitación.', 'Opción descartada (B). También permite no presentar originales salvo excepción normativa.', 'Opción correcta (C, por ser la incorrecta). Elimina el límite temporal anterior al trámite de audiencia.', 'Opción descartada (D). El artículo reconoce el derecho a actuar asistido de asesor.']
+  },
+  'h2024-pe-105': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción A es correcta. El artículo 31.4.a de la Ley 16/2010 atribuye a los delegados territoriales, dentro de su territorio, la competencia de representar a la Xunta de Galicia.',
+    whys: ['Opción correcta (A). Es una competencia expresamente enumerada en el artículo 31.4.', 'Opción descartada (B). Amplía indebidamente la competencia sobre recursos a las entidades del sector público autonómico.', 'Opción descartada (C). La estructura territorial se determina mediante decreto de la Xunta.', 'Opción descartada (D). La competencia contractual incluye los contratos menores; la excepción añadida es falsa.']
+  },
+  'h2024-func-001': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 1.2 de la Ley 39/2015 reserva a una ley la inclusión motivada de trámites adicionales o distintos de los previstos en la propia norma.',
+    whys: ['Opción correcta (A). Es la materia que el artículo reserva expresamente a una ley.', 'Opción descartada (B). Las formas de iniciación y terminación pueden concretarse reglamentariamente.', 'Opción descartada (C). La publicación también figura entre las especialidades que pueden establecerse reglamentariamente.', 'Opción suplementaria (D). No pertenecía al examen oficial de tres alternativas y no aporta una respuesta jurídica.']
+  },
+  'h2024-func-002': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 27.1 de la Ley 39/2015 permite que las comunidades autónomas realicen copias auténticas mediante funcionario habilitado o mediante actuación administrativa automatizada.',
+    whys: ['Opción correcta (A). Incluye los dos medios admitidos por el artículo.', 'Opción descartada (B). Excluye indebidamente la actuación automatizada.', 'Opción descartada (C). El funcionario debe estar habilitado para expedir copias auténticas.', 'Opción suplementaria (D). Fue añadida por la app para completar cuatro opciones y no pertenecía al examen.']
+  },
+  'h2024-func-003': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 24.1 de la Ley 39/2015 establece como regla general que la solicitud se entiende estimada por silencio, salvo que una ley o una norma europea o internacional aplicable disponga lo contrario.',
+    whys: ['Opción descartada (A). Invierte la regla general y convierte el silencio en desestimatorio.', 'Opción correcta (B). Reproduce la regla general y sus posibles excepciones normativas.', 'Opción descartada (C). Niega que puedan existir excepciones establecidas por las normas citadas.', 'Opción suplementaria (D). No formaba parte de la prueba oficial de tres alternativas.']
+  },
+  'h2024-func-004': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 29 de la Ley 39/2015 obliga a respetar los términos y plazos tanto a las autoridades y al personal que tramita como a las personas interesadas.',
+    whys: ['Opción descartada (A). Omite a los interesados, que también quedan obligados.', 'Opción descartada (B). Omite a las autoridades y al personal de la Administración.', 'Opción correcta (C). Incluye a los dos grupos mencionados por la ley.', 'Opción suplementaria (D). No pertenecía al examen oficial.']
+  },
+  'h2024-func-005': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es la incorrecta y, por ello, la respuesta. El artículo 13.c de la Ley 39/2015 reconoce el derecho a utilizar las lenguas oficiales, mientras la asistencia prevista por el artículo se refiere al uso de medios electrónicos.',
+    whys: ['Opción descartada (A). El acceso a la información pública, archivos y registros sí es un derecho reconocido.', 'Opción correcta (B, por ser la incorrecta). Confunde el derecho a usar lenguas oficiales con la asistencia en medios electrónicos.', 'Opción descartada (C). La comunicación mediante el Punto de Acceso General electrónico sí aparece en el artículo 13.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-006': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 6.6 de la Ley 39/2015 fija para cada prórroga del poder una validez máxima de cinco años desde su inscripción.',
+    whys: ['Opción descartada (A). Un año no es el máximo legal.', 'Opción correcta (B). Coinciden la duración máxima de cinco años y el inicio del cómputo.', 'Opción descartada (C). Dos años tampoco es el máximo previsto.', 'Opción suplementaria (D). Fue añadida para el formato de la app y no pertenece al examen.']
+  },
+  'h2024-func-007': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 17.1 de la Ley 39/2015 obliga a cada Administración a mantener un archivo electrónico único de los documentos electrónicos correspondientes a procedimientos finalizados.',
+    whys: ['Opción correcta (A). Reproduce el carácter obligatorio, electrónico y único del archivo para procedimientos finalizados.', 'Opción descartada (B). Sustituye los procedimientos finalizados por los que aún están en tramitación.', 'Opción descartada (C). Convierte una obligación en posibilidad y altera el alcance del archivo único.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-008': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 69.1 de la Ley 39/2015 define la declaración responsable como el documento en que la persona afirma, bajo su responsabilidad, que cumple los requisitos y dispone de la documentación acreditativa.',
+    whys: ['Opción correcta (A). Contiene los elementos esenciales de la definición legal.', 'Opción descartada (B). Esa descripción corresponde a la comunicación, regulada en el apartado siguiente.', 'Opción descartada (C). La declaración responsable no se define como una asunción genérica de daños y perjuicios.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-009': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 70 de la Ley 39/2015 incluye en el expediente los documentos y actuaciones que sirven de antecedente y fundamento, como las notificaciones, y excluye la información meramente auxiliar o de apoyo.',
+    whys: ['Opción correcta (A). Las notificaciones a las personas interesadas documentan actuaciones del procedimiento.', 'Opción descartada (B). Las notas de apoyo tienen carácter auxiliar y quedan fuera del expediente.', 'Opción descartada (C). Los informes internos auxiliares también se excluyen, salvo los informes formales previstos por la ley.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-010': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 78.1 de la Ley 39/2015 exige comunicar a las personas interesadas, con antelación suficiente, el inicio de las actuaciones necesarias para practicar las pruebas admitidas.',
+    whys: ['Opción descartada (A). La ley no fija un plazo cerrado de cuarenta y ocho horas.', 'Opción descartada (B). Tampoco establece un mínimo general de tres días.', 'Opción correcta (C). Reproduce la expresión flexible utilizada por el artículo 78.1.', 'Opción suplementaria (D). Fue añadida por la app y no pertenecía al examen oficial.']
   }
 };
 
