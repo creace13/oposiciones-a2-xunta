@@ -11,12 +11,14 @@ const officialSources = {
   law40: 'https://www.boe.es/buscar/act.php?id=BOE-A-2015-10566',
   digitalGalicia: 'https://www.xunta.gal/dog/Publicados/2019/20190726/AnuncioC3B0-180719-0001_gl.html',
   lcsp: 'documentos/troncal/boe/ley-9-2017-contratos-sector-publico.pdf',
+  lcspCurrent: 'https://www.boe.es/buscar/act.php?id=BOE-A-2017-12902',
   trebep: 'documentos/troncal/boe/trebep-rdl-5-2015.pdf',
   incompatibilities: 'https://www.boe.es/buscar/act.php?id=BOE-A-1985-151',
   disability: 'https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632',
   employment: 'documentos/troncal/galicia/ley-2-2015-empleo-publico-galicia.html',
   employmentCurrent: 'https://www.boe.es/buscar/act.php?id=BOE-A-2015-5677',
   law16: 'https://www.xunta.gal/dog/Publicados/2010/20101231/Anuncio3C07E_es.html',
+  law16Current: 'https://www.boe.es/buscar/act.php?id=BOE-A-2011-2544',
   xuntaPresidency: 'documentos/troncal/galicia/ley-1-1983-xunta-presidencia.pdf',
   xunta: 'documentos/troncal/galicia/ley-1-1983-xunta-presidencia.pdf',
   electionsGalicia: 'documentos/troncal/galicia/ley-8-1985-elecciones-parlamento-galicia.html',
@@ -28288,10 +28290,120 @@ const historical2025ExpandedReview = {
     sourceUrl: officialSources.employmentCurrent,
     explanation: 'La opción A es la que no está legitimada y, por eso, es la respuesta. El artículo 163.1 de la Ley 2/2015 enumera organizaciones y delegados sindicales, delegados y juntas de personal, comités de empresa y un 40 % de los empleados públicos, pero no a los delegados de prevención.',
     whys: ['Opción correcta (A, por no estar legitimada). Los delegados de prevención no aparecen en la lista del artículo 163.1.', 'Opción descartada (B). Los comités de empresa sí están legitimados expresamente para convocar una reunión.', 'Opción descartada (C). El artículo permite convocarla a los empleados públicos cuando alcanzan al menos el 40 % del colectivo convocado.', 'Opción descartada (D). Es falsa porque la opción A no forma parte de la enumeración legal, mientras B y C sí.']
+  },
+  'h2025-101': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 131 de la Ley 39/2015 exige la publicación en el diario oficial correspondiente de las normas con rango de ley, los reglamentos y las disposiciones administrativas para que entren en vigor y produzcan efectos jurídicos.',
+    whys: ['Opción descartada (A). Incluye todos los actos administrativos, pero el artículo 131 se refiere a normas y disposiciones generales, no a cualquier acto particular.', 'Opción descartada (B). Es incompleta porque omite las disposiciones administrativas mencionadas expresamente por el artículo.', 'Opción correcta (C). Reúne las tres categorías que enumera el artículo 131.', 'Opción descartada (D). Añade las instrucciones de servicio, que no integran esta enumeración legal.']
+  },
+  'h2025-102': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción A es correcta. El artículo 88.1.a de la Ley 9/2017 permite acreditar la solvencia técnica en contratos de obras mediante una relación de las obras ejecutadas durante los cinco últimos años, avalada por certificados de buena ejecución.',
+    whys: ['Opción correcta (A). Cinco años es el periodo ordinario indicado en el artículo 88.1.a.', 'Opción descartada (B). El artículo no fija con carácter general un periodo de seis años.', 'Opción descartada (C). Tres años es una referencia utilizada en otros tipos de contratos, pero no la regla preguntada para obras.', 'Opción descartada (D). Dos años queda por debajo del periodo previsto para esta relación de obras.']
+  },
+  'h2025-103': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 53.1 de la Ley 40/2015 obliga a remitir electrónicamente, dentro de los tres meses siguientes a su firma, los convenios cuyos compromisos económicos asumidos superen los 600.000 euros.',
+    whys: ['Opción correcta (A). Reproduce el umbral superior a 600.000 euros establecido en el artículo 53.1.', 'Opción descartada (B). El artículo no sitúa el umbral en 300.000 euros.', 'Opción descartada (C). Tampoco exige esta remisión por el mero hecho de superar 200.000 euros.', 'Opción descartada (D). La cifra legal no es 400.000 euros.']
+  },
+  'h2025-104': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es la incorrecta y, por ello, la respuesta. El artículo 53.1.e de la Ley 39/2015 permite formular alegaciones, usar medios de defensa y aportar documentos en cualquier fase anterior al trámite de audiencia, no en cualquier fase sin límite.',
+    whys: ['Opción descartada (A). El artículo 53.1.b reconoce el derecho a identificar a las autoridades y al personal responsable de la tramitación.', 'Opción descartada (B). El artículo 53.1.c permite no presentar originales salvo que excepcionalmente la normativa aplicable disponga lo contrario.', 'Opción correcta (C, por ser la incorrecta). Elimina el límite temporal anterior al trámite de audiencia establecido en el artículo 53.1.e.', 'Opción descartada (D). El artículo 53.1.g reconoce el derecho a actuar asistido de asesor cuando se considere conveniente.']
+  },
+  'h2025-105': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción A es correcta. El artículo 31.4.a de la Ley 16/2010 atribuye a los delegados territoriales, dentro de su ámbito territorial, la competencia de representar a la Xunta de Galicia.',
+    whys: ['Opción correcta (A). Es la primera competencia enumerada expresamente en el artículo 31.4.', 'Opción descartada (B). La competencia sobre recursos no se extiende con esa formulación general a las entidades del sector público autonómico.', 'Opción descartada (C). La estructura y las jefaturas territoriales no las establece unilateralmente el delegado territorial.', 'Opción descartada (D). El artículo permite celebrar los contratos correspondientes a la delegación, incluidos los contratos menores, por lo que la excepción añadida es falsa.']
   }
 };
 
 for (const [questionId, review] of Object.entries(historical2025ExpandedReview)) {
+  const question = questions.find(item => item.id === questionId);
+  if (question) Object.assign(question, review);
+}
+
+const historical2024ExpandedReview = {
+  'h2024-pe-001': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 6.6 de la Ley 39/2015 fija para los poderes inscritos en los registros electrónicos de apoderamientos una validez máxima de cinco años desde la fecha de inscripción.',
+    whys: ['Opción correcta (A). Reproduce tanto el máximo de cinco años como el inicio del cómputo establecidos en el artículo 6.6.', 'Opción descartada (B). Cuatro años no es el límite máximo legal.', 'Opción descartada (C). El artículo tampoco reduce la validez máxima a tres años.', 'Opción descartada (D). Un año no corresponde al periodo máximo previsto.']
+  },
+  'h2024-pe-002': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 15.2 de la Ley 39/2015 establece que, si varios interesados discrepan sobre la lengua, el procedimiento se tramita en castellano, aunque cada uno puede obtener los documentos o testimonios que solicite en la lengua que elija.',
+    whys: ['Opción correcta (A). Reúne la lengua común de tramitación y el derecho individual de elección para documentos y testimonios.', 'Opción descartada (B). No procede tramitar simultáneamente todo el procedimiento en cada lengua cooficial solicitada.', 'Opción descartada (C). Introduce una tramitación multilingüe condicionada que el artículo 15.2 no contempla.', 'Opción descartada (D). Limita artificialmente la regla a la fase de instrucción anterior a la audiencia.']
+  },
+  'h2024-pe-003': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 21.2 de la Ley 39/2015 dispone que el plazo máximo para notificar resolución expresa no puede exceder de seis meses, salvo que una ley establezca uno mayor o así lo prevea el Derecho de la Unión Europea.',
+    whys: ['Opción descartada (A). Tres meses es el plazo supletorio cuando la norma reguladora no fija otro, no el máximo general preguntado.', 'Opción correcta (B). Reproduce el límite de seis meses y sus dos excepciones legales.', 'Opción descartada (C). Nueve meses solo sería posible si concurriera una excepción con cobertura legal o europea, no como regla general.', 'Opción descartada (D). Un año tampoco es el máximo ordinario establecido por el artículo 21.2.']
+  },
+  'h2024-pe-004': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 23.2 de la Ley 39/2015 establece que contra el acuerdo que resuelve la ampliación del plazo máximo para resolver y notificar no cabe recurso alguno.',
+    whys: ['Opción descartada (A). El artículo 23.2 excluye cualquier recurso, incluido el de reposición.', 'Opción descartada (B). Tampoco cabe recurso de alzada contra ese acuerdo.', 'Opción correcta (C). Reproduce literalmente la irrecurribilidad prevista por el artículo 23.2.', 'Opción descartada (D). La ley no reserva para este acuerdo un recurso extraordinario de revisión.']
+  },
+  'h2024-pe-005': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 24.1 de la Ley 39/2015 establece como regla general que, en procedimientos iniciados a solicitud del interesado, la falta de resolución expresa en plazo permite entender estimada la solicitud, con las excepciones fijadas por ley o por normas de la Unión Europea o de Derecho internacional aplicables en España.',
+    whys: ['Opción descartada (A). Invierte la regla general: el silencio en estos procedimientos es estimatorio, sin perjuicio de las excepciones.', 'Opción correcta (B). Reproduce la regla de estimación y las fuentes normativas capaces de establecer una excepción.', 'Opción descartada (C). Ignora que sí pueden existir excepciones legales, europeas o internacionales.', 'Opción descartada (D). Añade cualquier norma reglamentaria como fuente suficiente para cambiar el sentido del silencio, posibilidad que el artículo 24.1 no reconoce.']
+  },
+  'h2024-pe-006': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 30.2 de la Ley 39/2015 exige indicar en las notificaciones cuándo un plazo se expresa en días naturales porque así lo declara una ley o el Derecho de la Unión Europea.',
+    whys: ['Opción descartada (A). Si no existe día equivalente en el mes de vencimiento, el artículo 30.4 hace expirar el plazo el último día del mes, no el primero del siguiente.', 'Opción correcta (B). Reproduce el deber de advertencia previsto en el artículo 30.2 para los plazos señalados en días naturales.', 'Opción descartada (C). Cuando la consideración del día difiere entre el lugar del interesado y la sede del órgano, el artículo 30.6 lo considera inhábil en todo caso.', 'Opción descartada (D). La consideración de día inhábil opera por mandato legal y no depende de una solicitud motivada.']
+  },
+  'h2024-pe-007': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 37.1 de la Ley 39/2015 impide que una resolución administrativa particular vulnere una disposición de carácter general, aunque proceda de un órgano de igual o superior jerarquía al que aprobó esa disposición.',
+    whys: ['Opción descartada (A). Invierte las categorías al hablar de una resolución general frente a una disposición particular.', 'Opción descartada (B). Introduce una excepción jerárquica que el artículo 37.1 rechaza expresamente.', 'Opción correcta (C). Reproduce la inderogabilidad singular del reglamento establecida por el artículo 37.1.', 'Opción descartada (D). Usa la expresión impropia «resoluciones reglamentarias de carácter particular» y cambia el objeto de comparación legal.']
+  },
+  'h2024-pe-008': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 56.2 de la Ley 39/2015 exige que las medidas provisionales adoptadas antes de iniciar el procedimiento sean confirmadas, modificadas o levantadas en el acuerdo de iniciación, que debe dictarse dentro de los quince días siguientes a su adopción.',
+    whys: ['Opción correcta (A). Quince días es el plazo exacto establecido en el artículo 56.2.', 'Opción descartada (B). Veinte días excede el plazo legal.', 'Opción descartada (C). El artículo no concede treinta días para adoptar el acuerdo de iniciación.', 'Opción descartada (D). Diez días tampoco es el plazo previsto para esta confirmación, modificación o levantamiento.']
+  },
+  'h2024-pe-009': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción D es correcta. El artículo 62.2 de la Ley 39/2015 exige que la denuncia identifique a quien la presenta y relate los hechos; si estos pueden constituir una infracción, debe indicar la fecha y, cuando sea posible, identificar a los presuntos responsables.',
+    whys: ['Opción descartada (A). Omite la identidad del denunciante y el relato de los hechos, y convierte en obligatoria la identificación del responsable aunque no siempre sea posible.', 'Opción descartada (B). Confunde la identificación opcional de los presuntos responsables con la del denunciante, que debe constar.', 'Opción descartada (C). Presenta la fecha como eventual y omite la identidad del denunciante y el relato de los hechos.', 'Opción correcta (D). Reúne todo el contenido exigido por el artículo 62.2 y conserva el matiz «cuando sea posible».']
+  },
+  'h2024-pe-010': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es la incorrecta y, por ello, la respuesta. El artículo 66.1 de la Ley 39/2015 exige expresar los hechos, razones y petición con claridad, pero no obliga a incluir los fundamentos jurídicos de la pretensión; la fecha y la firma sí deben constar.',
+    whys: ['Opción descartada (A). El artículo 66.1.a exige el nombre y apellidos del interesado y, en su caso, de su representante.', 'Opción correcta (B, por ser la incorrecta). Añade unos fundamentos jurídicos que no forman parte del contenido obligatorio enumerado en el artículo 66.1.', 'Opción descartada (C). El artículo 66.1.b exige identificar el medio electrónico o, en su defecto, el lugar físico para las notificaciones.', 'Opción descartada (D). El artículo 66.1.f exige el órgano, centro o unidad destinataria y su código de identificación.']
+  },
+  'h2024-pe-011': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 72.2 de la Ley 39/2015 dispone que, al solicitar a otros órganos la realización de trámites, debe consignarse en la comunicación el plazo legal establecido para cumplirlos.',
+    whys: ['Opción descartada (A). Describe la concentración de trámites del apartado 1, no el contenido de la comunicación dirigida a otro órgano.', 'Opción correcta (B). Reproduce exactamente la obligación específica del artículo 72.2.', 'Opción descartada (C). La acumulación de expedientes pertenece a otra figura y no es el dato que debe contener esta comunicación.', 'Opción descartada (D). Mezcla la regla general del apartado 1 con la obligación concreta del apartado 2 y añade información no exigida en esa comunicación.']
+  },
+  'h2024-pe-012': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 77.2 de la Ley 39/2015 permite al instructor, cuando lo considere necesario y a petición de los interesados, abrir un periodo extraordinario de prueba por un plazo no superior a diez días.',
+    whys: ['Opción correcta (A). Identifica el máximo de diez días del periodo extraordinario previsto en el artículo 77.2.', 'Opción descartada (B). El intervalo de diez a treinta días corresponde al periodo ordinario de prueba.', 'Opción descartada (C). El artículo no establece para la prueba extraordinaria un mínimo de veinte días.', 'Opción descartada (D). Quince días supera el límite especial de diez días.']
+  },
+  'h2024-pe-013': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 84.1 de la Ley 39/2015 enumera expresamente el desistimiento entre las formas que ponen fin al procedimiento.',
+    whys: ['Opción descartada (A). La renuncia solo termina el procedimiento cuando no está prohibida por el ordenamiento jurídico.', 'Opción correcta (B). El desistimiento aparece expresamente en el artículo 84.1 como forma de terminación.', 'Opción descartada (C). El artículo habla de declaración de caducidad, no de declaración de prescripción.', 'Opción descartada (D). La terminación procede por imposibilidad material sobrevenida, no por una supuesta imposibilidad «inmaterial».']
+  },
+  'h2024-pe-014': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 87 de la Ley 39/2015 fija un plazo no superior a quince días para practicar las actuaciones complementarias indispensables antes de dictar resolución.',
+    whys: ['Opción descartada (A). Cinco días no es el plazo máximo de las actuaciones complementarias.', 'Opción descartada (B). Diez días tampoco coincide con el máximo legal.', 'Opción correcta (C). Reproduce el límite de quince días establecido en el artículo 87.', 'Opción descartada (D). Veinte días excede el plazo permitido.']
+  },
+  'h2024-pe-015': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 95.3 de la Ley 39/2015 aclara que la caducidad no produce por sí sola la prescripción, pero los procedimientos caducados no interrumpen el plazo de prescripción.',
+    whys: ['Opción correcta (A). Reproduce el efecto expresamente establecido por el artículo 95.3.', 'Opción descartada (B). Afirma justamente lo contrario de la regla legal.', 'Opción descartada (C). La duración superior a un año no crea una excepción a esta consecuencia.', 'Opción descartada (D). Una norma reglamentaria no puede introducir por sí sola la excepción general que la opción propone.']
+  }
+};
+
+for (const [questionId, review] of Object.entries(historical2024ExpandedReview)) {
   const question = questions.find(item => item.id === questionId);
   if (question) Object.assign(question, review);
 }
