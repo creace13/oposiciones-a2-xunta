@@ -21,6 +21,8 @@ La app nace como una herramienta gratuita de práctica y refuerzo para opositore
 
 El proyecto incorpora pruebas automatizadas sobre funcionamiento, filtros, accesibilidad básica, seguridad técnica, mantenimiento normativo y recorridos en Chromium y WebKit. Los perfiles móviles emulan tamaño y comportamiento de dispositivos, pero no sustituyen una prueba manual en hardware real. El alcance y los límites de cada puerta se detallan en `docs/PRUEBAS-Y-ALCANCE.md`.
 
+La deuda técnica conocida no se oculta ni se aborda con una reescritura arriesgada. El tamaño del archivo principal, la política de seguridad del navegador y los restos históricos están clasificados en `docs/PLAN-MANTENIMIENTO-TECNICO.md`.
+
 Eso mejora la fiabilidad técnica, pero no convierte la app en una garantía jurídica absoluta. Ante cualquier duda, prevalecen siempre:
 
 - BOE;

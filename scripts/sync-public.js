@@ -7,6 +7,7 @@ const publicDir = path.resolve(rootDir, 'public');
 
 const filesToSync = [
   'index.html',
+  'bootstrap.js',
   'styles.css',
   'app.js',
   'maintenance-holds.js',

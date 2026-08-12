@@ -49,23 +49,7 @@
     }
     </script>
 
-    <script>
-      (() => {
-        const validViews = ['dashboard', 'practice', 'simulations', 'errors', 'library', 'syllabus', 'methodology'];
-        const hashViews = { inicio: 'dashboard', practicar: 'practice', simulacros: 'simulations', errores: 'errors', biblioteca: 'library', temario: 'syllabus', syllabus: 'syllabus', metodologia: 'methodology', guia: 'methodology' };
-        const hash = decodeURIComponent(location.hash.replace('#', '')).trim();
-        let stored = null;
-        let authUser = null;
-        try {
-          stored = localStorage.getItem('opoA2LastView');
-          authUser = localStorage.getItem('opoA2UserName');
-        } catch (_) {}
-        const view = hashViews[hash] || (validViews.includes(hash) ? hash : null) || stored || 'dashboard';
-        document.documentElement.dataset.activeView = validViews.includes(view) ? view : 'dashboard';
-        const isAuth = Boolean(authUser && authUser !== 'Invitado');
-        document.documentElement.dataset.authState = isAuth ? 'authenticated' : 'unauthenticated';
-      })();
-    </script>
+    <script src="bootstrap.js?v=1"></script>
     <link rel="stylesheet" href="styles.css?v=infobanner-20260719" />
   </head>
   <body>
@@ -97,7 +81,7 @@
               <div class="profile-links">
                 <button type="button" id="sidebarLogoutBtn" class="profile-action-btn logout">Cerrar sesión</button>
                 <span class="dot">•</span>
-                <button type="button" id="footerPrivacyLink" class="profile-action-btn" onclick="document.getElementById('privacyModal').showModal()">Privacidad</button>
+                <button type="button" id="footerPrivacyLink" class="profile-action-btn">Privacidad</button>
               </div>
             </div>
           </div>
@@ -317,7 +301,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="secondary-button" id="generalFeedbackBtn" onclick="window.openFeedbackDialog()" style="margin-top:16px;">Reportar errata o sugerencia</button>
+            <button type="button" class="secondary-button" id="generalFeedbackBtn" style="margin-top:16px;">Reportar errata o sugerencia</button>
           </section>
 
           <section class="panel methodology-guide-section">
@@ -450,7 +434,7 @@
 
           <div id="authPageStatusText" class="auth-status-msg"></div>
           <div style="text-align:center;margin-top:14px;">
-            <button type="button" onclick="document.getElementById('privacyModal').showModal()" class="text-button" style="font-size:12px;color:var(--muted);text-decoration:underline;">🔒 Política de Privacidad y Protección de Datos</button>
+            <button type="button" id="authPrivacyButton" class="text-button" style="font-size:12px;color:var(--muted);text-decoration:underline;">🔒 Política de Privacidad y Protección de Datos</button>
           </div>
         </div>
       </div>

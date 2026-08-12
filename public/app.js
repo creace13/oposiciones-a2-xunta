@@ -30055,7 +30055,8 @@ function answerQuestion(index) {
   });
   const feedback = document.querySelector('.feedback');
   feedback.classList.remove('hidden');
-  feedback.innerHTML = `<h3>${isCorrect ? 'Correcta. Buen criterio.' : 'Aquí está la clave.'}</h3><p>${q.explanation}</p><ul class="why-list">${q.options.map(([letter], i) => `<li><strong>${letter}.</strong> ${q.whys[i]}</li>`).join('')}</ul><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px;"><a class="source-link" href="${q.sourceUrl}" target="_blank" rel="noreferrer">Base legal: ${q.source} ↗</a>${q.originUrl ? `<a class="source-link" href="${q.originUrl}" target="_blank" rel="noreferrer">Examen original ↗</a>` : ''}<button type="button" class="text-button" onclick="window.openFeedbackDialog('${q.id}')" style="font-size:12px;color:var(--muted);text-decoration:underline;">💬 Reportar errata o sugerencia</button></div>`;
+  feedback.innerHTML = `<h3>${isCorrect ? 'Correcta. Buen criterio.' : 'Aquí está la clave.'}</h3><p>${escapeHTML(q.explanation)}</p><ul class="why-list">${q.options.map(([letter], i) => `<li><strong>${escapeHTML(letter)}.</strong> ${escapeHTML(q.whys[i])}</li>`).join('')}</ul><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px;"><a class="source-link" href="${escapeHTML(q.sourceUrl)}" target="_blank" rel="noreferrer">Base legal: ${escapeHTML(q.source)} ↗</a>${q.originUrl ? `<a class="source-link" href="${escapeHTML(q.originUrl)}" target="_blank" rel="noreferrer">Examen original ↗</a>` : ''}<button type="button" class="text-button feedback-report-button" data-feedback-id="${escapeHTML(q.id)}" style="font-size:12px;color:var(--muted);text-decoration:underline;">💬 Reportar errata o sugerencia</button></div>`;
+  feedback.querySelector('.feedback-report-button').addEventListener('click', buttonEvent => window.openFeedbackDialog(buttonEvent.currentTarget.dataset.feedbackId));
   const next = document.querySelector('.next-question'); next.classList.remove('hidden'); updateDashboard(); renderErrors();
 }
 
@@ -30628,6 +30629,13 @@ window.openFeedbackDialog = function(prefill = '') {
     feedbackDialog.showModal();
   }
 };
+
+const privacyModalTrigger = document.getElementById('privacyModal');
+[document.getElementById('footerPrivacyLink'), document.getElementById('authPrivacyButton')].filter(Boolean).forEach(button => {
+  button.addEventListener('click', () => privacyModalTrigger?.showModal());
+});
+const generalFeedbackBtn = document.getElementById('generalFeedbackBtn');
+if (generalFeedbackBtn) generalFeedbackBtn.addEventListener('click', () => window.openFeedbackDialog());
 
 const initialView = viewFromHash() || getLastView() || 'dashboard';
 loadSavedProfile(); updateDashboard(); renderGoals(); renderErrors(); renderCoverage(); showView(initialView, { scroll: false });

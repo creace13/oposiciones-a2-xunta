@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
+const crypto = require('crypto');
 
 const root = path.resolve(__dirname, '..');
 
@@ -21,6 +22,8 @@ const publicIndexHtml = read(path.join('public', 'index.html'));
 const worker = read('index.js');
 const headersFile = read('_headers');
 const app = read('app.js');
+const bootstrap = read('bootstrap.js');
+const publicBootstrap = read(path.join('public', 'bootstrap.js'));
 const pkg = JSON.parse(read('package.json'));
 
 assertNotIncludes(indexHtml, 'cdn.jsdelivr.net/npm/@supabase/supabase-js', 'El HTML raíz no debe cargar Supabase desde CDN si remoto está pausado.');
@@ -28,6 +31,19 @@ assertNotIncludes(publicIndexHtml, 'cdn.jsdelivr.net/npm/@supabase/supabase-js',
 assertIncludes(app, 'const REMOTE_AUTH_ENABLED = false;', 'Las cuentas remotas deben permanecer pausadas explícitamente.');
 assertNotIncludes(app, 'sb_publishable_', 'No debe exponerse clave pública de Supabase si el remoto está pausado.');
 assertNotIncludes(app, 'supabase.co', 'No debe exponerse URL de Supabase si el remoto está pausado.');
+assertNotIncludes(indexHtml, '<script>\n', 'El arranque no debe depender de un script ejecutable inline.');
+assertNotIncludes(indexHtml, 'onclick=', 'El HTML no debe depender de controladores de eventos inline.');
+assertNotIncludes(app, 'onclick=', 'La interfaz dinámica no debe crear controladores de eventos inline.');
+assertNotIncludes(worker, "script-src 'self' 'unsafe-inline'", 'La CSP de scripts no debe permitir ejecución inline general.');
+assertNotIncludes(headersFile, "script-src 'self' 'unsafe-inline'", 'La CSP pública no debe permitir ejecución inline general.');
+assertIncludes(indexHtml, 'bootstrap.js?v=1', 'El arranque temprano debe cargarse desde un archivo propio.');
+assertIncludes(bootstrap, "localStorage.getItem('opoA2LastView')", 'El arranque externo debe conservar la restauración de vista.');
+assert.strictEqual(publicBootstrap, bootstrap, 'El arranque público debe coincidir con la raíz.');
+const jsonLd = indexHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+assert.ok(jsonLd, 'Faltan los datos estructurados JSON-LD.');
+const jsonLdHash = crypto.createHash('sha256').update(jsonLd[1], 'utf8').digest('base64');
+assertIncludes(headersFile, `'sha256-${jsonLdHash}'`, 'La CSP debe autorizar exclusivamente el JSON-LD inline por su hash actual.');
+assertIncludes(worker, `'sha256-${jsonLdHash}'`, 'La CSP del worker debe autorizar exclusivamente el JSON-LD inline por su hash actual.');
 
 [
   'Content-Security-Policy',
