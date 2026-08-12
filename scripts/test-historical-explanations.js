@@ -19,7 +19,7 @@ const questions = context.auditQuestions;
 const reviewedIds = [
   ...Array.from({ length: 105 }, (_, index) => `h2025-${String(index + 1).padStart(3, '0')}`),
   ...Array.from({ length: 105 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`),
-  ...Array.from({ length: 90 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)
+  ...Array.from({ length: 105 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)
 ];
 const genericPhrases = [
   'No coincide con la solución oficial',
@@ -325,6 +325,43 @@ for (const id of Array.from({ length: 6 }, (_, index) => `h2024-func-${String(in
   if (!question.sourceUrl.includes('BOE-A-2016-3190')) {
     throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 1/2016.`);
   }
+}
+
+const currentIncompatibilitiesOffice = questions.find(item => item.id === 'h2024-func-091');
+if (!currentIncompatibilitiesOffice.sourceUrl.includes('BOE-A-2016-3190')) {
+  throw new Error('h2024-func-091 no enlaza la versión consolidada de la Ley 1/2016.');
+}
+
+for (const id of Array.from({ length: 9 }, (_, index) => `h2024-func-${String(index + 92).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.quality.includes('Norma derogada desde 31/12/2023') || !question.source.includes('Decreto legislativo 2/2015 (derogado)') || !question.sourceUrl.includes('DOG-g-2015-90667')) {
+    throw new Error(`${id} no advierte correctamente que su norma histórica está derogada.`);
+  }
+}
+
+const negativeInteradministrativePrinciple = questions.find(item => item.id === 'h2024-func-101');
+if (!negativeInteradministrativePrinciple.explanation.includes('se pide señalar la incorrecta') || !negativeInteradministrativePrinciple.explanation.includes('eficiencia') || !negativeInteradministrativePrinciple.sourceUrl.includes('BOE-A-2015-10566')) {
+  throw new Error('h2024-func-101 no explica la diferencia entre eficacia y eficiencia en la pregunta negativa.');
+}
+
+const finalProcurementQuestion = questions.find(item => item.id === 'h2024-func-102');
+if (!finalProcurementQuestion.sourceUrl.includes('BOE-A-2017-12902')) {
+  throw new Error('h2024-func-102 no enlaza la Ley 9/2017 consolidada.');
+}
+
+const finalOrganizationQuestion = questions.find(item => item.id === 'h2024-func-103');
+if (!finalOrganizationQuestion.sourceUrl.includes('BOE-A-2011-2544')) {
+  throw new Error('h2024-func-103 no enlaza la Ley 16/2010 consolidada.');
+}
+
+const correctedFinalDigitalQuestion = questions.find(item => item.id === 'h2024-func-104');
+if (correctedFinalDigitalQuestion.source !== 'Ley 4/2019, art. 16.2' || !correctedFinalDigitalQuestion.sourceUrl.includes('BOE-A-2019-13518')) {
+  throw new Error('h2024-func-104 no conserva la referencia corregida a la Ley 4/2019.');
+}
+
+const negativeFinalEmploymentQuestion = questions.find(item => item.id === 'h2024-func-105');
+if (!negativeFinalEmploymentQuestion.explanation.includes('se pregunta cuál no es un principio') || !negativeFinalEmploymentQuestion.sourceUrl.includes('BOE-A-2015-5677')) {
+  throw new Error('h2024-func-105 no explica correctamente su formulación negativa ni enlaza la Ley 2/2015 consolidada.');
 }
 
 const currentHistoricalWorksSolvency = questions.find(item => item.id === 'h2024-pe-102');

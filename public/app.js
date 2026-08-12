@@ -29479,6 +29479,106 @@ const historical2024ExpandedReview = {
     sourceUrl: officialSources.transparencyGaliciaCurrent,
     explanation: 'La opción B es correcta. El artículo 42.1 de la Ley 1/2016 permite determinadas actividades privadas enumeradas por la ley, siempre que no comprometan la imparcialidad o independencia del alto cargo.',
     whys: ['Opción descartada (A). No existe una incompatibilidad absoluta con cualquier actividad privada.', 'Opción correcta (B). Resume correctamente que solo algunas actividades privadas son compatibles y bajo esa condición.', 'Opción descartada (C). No se permite toda actividad privada; únicamente las modalidades concretas enumeradas por el artículo.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-091': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción A es correcta. El artículo 48.1 de la Ley 1/2016 denomina Oficina de Incompatibilidades y Buenas Prácticas de la Xunta de Galicia al órgano que gestiona el régimen de incompatibilidades de los altos cargos.',
+    whys: ['Opción correcta (A). Reproduce la denominación oficial completa del órgano.', 'Opción descartada (B). Omite la referencia a las Buenas Prácticas.', 'Opción descartada (C). La ley lo configura como una oficina, no como un organismo con esa denominación.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-092': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada desde 31/12/2023',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 50',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción B era correcta conforme al artículo 50 del Decreto legislativo 2/2015: reservaba el 50 % de las plazas formativas a mujeres que cumplieran los requisitos. La norma completa quedó derogada con efectos de 31 de diciembre de 2023, por lo que esta regla se conserva solo como respuesta histórica del examen.',
+    whys: ['Opción descartada (A). El texto histórico no fijaba una reserva del 25 %.', 'Opción correcta histórica (B). Coincidía con la reserva del 50 % establecida por el artículo derogado.', 'Opción descartada (C). Tampoco señalaba un 33 %.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-093': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada desde 31/12/2023',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 51',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción A era correcta según el artículo 51 del Decreto legislativo 2/2015, que valoraba el uso de derechos de conciliación durante los cinco años anteriores. El decreto legislativo fue derogado desde el 31 de diciembre de 2023 y esta formulación debe estudiarse únicamente como contenido histórico.',
+    whys: ['Opción correcta histórica (A). El período previsto por el artículo derogado era de cinco años.', 'Opción descartada (B). No se limitaba a los tres años anteriores.', 'Opción descartada (C). Tampoco establecía un período de dos años.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-094': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada desde 31/12/2023',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 1.2',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción A era correcta conforme al artículo 1.2 del Decreto legislativo 2/2015: la Xunta debía considerar el trabajo de la Comisión para la Igualdad y para los Derechos de las Mujeres del Parlamento gallego. La norma quedó derogada desde el 31 de diciembre de 2023.',
+    whys: ['Opción correcta histórica (A). Era el órgano citado literalmente por el texto derogado.', 'Opción descartada (B). El artículo no señalaba al Consejo Gallego de las Mujeres.', 'Opción descartada (C). Tampoco atribuía esta referencia a la Secretaría General de Igualdad.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-095': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada desde 31/12/2023',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 3.1',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción C era correcta. El artículo 3.1 del Decreto legislativo 2/2015 vinculaba la excepción de buena fe ocupacional con la Directiva 2006/54/CE del Parlamento Europeo y del Consejo. El texto gallego fue derogado desde el 31 de diciembre de 2023.',
+    whys: ['Opción descartada (A). La pregunta no remitía directamente a la Constitución española.', 'Opción descartada (B). Tampoco situaba la excepción en el Estatuto de autonomía de Galicia.', 'Opción correcta histórica (C). El artículo derogado citaba expresamente una directiva del Parlamento Europeo y del Consejo.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-096': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada desde 31/12/2023',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 11',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción B era correcta. El artículo 11 del Decreto legislativo 2/2015 definía como uso no sexista la sustitución de expresiones que invisibilizaban lo femenino o lo situaban en un plano secundario. La norma fue derogada desde el 31 de diciembre de 2023.',
+    whys: ['Opción descartada (A). La definición histórica calificaba precisamente esa sustitución como uso no sexista.', 'Opción correcta histórica (B). Coincidía con la denominación del propio artículo derogado.', 'Opción descartada (C). El precepto ofrecía una definición lingüística concreta, no la etiqueta genérica de discriminación.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-097': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada desde 31/12/2023',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 61.2.a',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción A era correcta. El artículo 61.2.a del Decreto legislativo 2/2015 calificaba el chantaje sexual como incumplimiento muy grave del personal indicado. El decreto legislativo quedó derogado desde el 31 de diciembre de 2023.',
+    whys: ['Opción correcta histórica (A). Coincidía con la calificación expresa de incumplimiento muy grave.', 'Opción descartada (B). La ley derogada no rebajaba el chantaje sexual a incumplimiento grave.', 'Opción descartada (C). Mucho menos lo consideraba un incumplimiento leve.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-098': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada desde 31/12/2023',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 58',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción A era correcta. El artículo 58 del Decreto legislativo 2/2015 ordenaba publicar la declaración de principios en el tablón de anuncios de cada centro de trabajo y unidad administrativa. Esta norma fue derogada desde el 31 de diciembre de 2023.',
+    whys: ['Opción correcta histórica (A). Era el lugar de publicación exigido por el artículo derogado.', 'Opción descartada (B). El precepto no establecía como publicación principal el Diario Oficial de Galicia.', 'Opción descartada (C). Tampoco sustituía los tablones por la página web de la consellería.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-099': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada desde 31/12/2023',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 54',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción C era correcta. El artículo 54 del Decreto legislativo 2/2015 permitía encargar las valoraciones técnicas a los órganos competentes de gestión de recursos humanos de la Administración pública gallega. El texto fue derogado desde el 31 de diciembre de 2023.',
+    whys: ['Opción descartada (A). El Instituto de Seguridad y Salud Laboral no era el destinatario general indicado por el artículo.', 'Opción descartada (B). Tampoco lo era el Consejo Gallego de Relaciones Laborales.', 'Opción correcta histórica (C). Coincidía con los órganos de recursos humanos señalados por la norma derogada.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-100': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada desde 31/12/2023',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 57',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción B era correcta. El artículo 57.b del Decreto legislativo 2/2015 exigía incluir en la declaración de principios una definición del acoso sexual mediante ejemplos fáciles de comprender. La norma quedó derogada desde el 31 de diciembre de 2023.',
+    whys: ['Opción descartada (A). La norma exigía tratamiento serio y confidencial, no publicidad de las denuncias formales.', 'Opción correcta histórica (B). Reproduce uno de los contenidos expresos de la declaración.', 'Opción descartada (C). La protección de denunciantes y testigos no era incondicional: se exceptuaba la mala fe.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-101': {
+    quality: 'Verificada y ampliada · Histórica oficial · Pregunta negativa explicada · BOE 12/08/2026',
+    sourceUrl: officialSources.law40,
+    explanation: 'La opción C es correcta porque se pide señalar la incorrecta. El artículo 140.1 de la Ley 40/2015 incluye lealtad institucional y colaboración entre sus principios interadministrativos, pero enumera eficiencia, no eficacia.',
+    whys: ['Opción descartada (A). La lealtad institucional sí figura expresamente como principio.', 'Opción descartada (B). La colaboración y su definición como deber para lograr fines comunes también aparecen en el artículo.', 'Opción correcta (C, por ser incorrecta). El listado contiene eficiencia en la gestión de recursos públicos, no eficacia.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-102': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción C es correcta. El artículo 96.1 de la Ley 9/2017 atribuye a la inscripción en el Registro Oficial de Licitadores y Empresas Clasificadas del Sector Público la acreditación general de las condiciones de aptitud del empresario.',
+    whys: ['Opción descartada (A). El Registro de Contratos del Sector Público no es el registro de aptitud empresarial citado por el artículo.', 'Opción descartada (B). Esa denominación no corresponde al registro oficial estatal previsto en la ley.', 'Opción correcta (C). Reproduce el nombre completo del registro y su alcance frente a los órganos de contratación.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-103': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción A es correcta. El artículo 1.1 de la Ley 16/2010 incluye en su objeto la regulación del ejercicio de la potestad reglamentaria y del procedimiento de elaboración de reglamentos.',
+    whys: ['Opción correcta (A). Es uno de los contenidos expresos del objeto legal.', 'Opción descartada (B). La ley no se presenta como regulación general del ejercicio de todos los poderes de la comunidad autónoma.', 'Opción descartada (C). La participación ciudadana no aparece formulada así como objeto de este artículo.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-104': {
+    quality: 'Verificada y ampliada · Histórica oficial · Referencia corregida · BOE 12/08/2026',
+    source: 'Ley 4/2019, art. 16.2',
+    sourceUrl: officialSources.digitalGaliciaCurrent,
+    explanation: 'La opción B es correcta. El artículo 16.2 de la Ley 4/2019 extiende la sede electrónica de la Xunta al conjunto de órganos y entidades que configuran el sector público autonómico de Galicia.',
+    whys: ['Opción descartada (A). La sede de la Xunta no abarca al sector público estatal.', 'Opción correcta (B). Reproduce exactamente el ámbito institucional y territorial de la sede.', 'Opción descartada (C). La ley no incorpora al sector privado dentro del ámbito de aplicación de esta sede.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-105': {
+    quality: 'Verificada y ampliada · Histórica oficial · Pregunta negativa explicada · BOE 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción C es correcta porque se pregunta cuál no es un principio. El artículo 3.1 de la Ley 2/2015 sí incluye la igualdad de trato entre mujeres y hombres y la evaluación y responsabilidad en la gestión, pero no contiene la seguridad ciudadana y la deferencia de autoridades y empleados.',
+    whys: ['Opción descartada (A). La igualdad de trato entre mujeres y hombres sí es un principio informador expreso.', 'Opción descartada (B). La evaluación y responsabilidad en la gestión también figura en el listado.', 'Opción correcta (C, por no ser principio). Esa formulación no aparece en el artículo 3 de la Ley 2/2015.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
   }
 };
 
