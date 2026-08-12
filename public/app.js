@@ -342,7 +342,7 @@ questions.push(
   },
   {
     id: "h2025-021",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 40/2015, art. 9",
     sourceUrl: officialSources.law40,
@@ -350,12 +350,12 @@ questions.push(
     text: "O artigo 9 da Lei 40/2015, do 1 de outubro, de réxime xurídico do sector público recolle que en ningún caso poderán ser obxecto de delegación as competencias relativas:",
     options: [["A", "Á elaboración de actos administrativos."], ["B", "Á resolución de recursos nos órganos administrativos que ditasen os actos obxecto de recurso."], ["C", "Ás materias en que así se determine por norma regulamentaria."], ["D", "A adopción de disposicións de carácter particular."]],
     correct: 1,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción B (\"Á resolución de recursos nos órganos administrativos que ditasen os actos obxecto de recurso.\"). Pregunta oficial 21 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (B). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción B es correcta. El artículo 9.2.c de la Ley 40/2015 prohíbe delegar la resolución de recursos en los órganos administrativos que hayan dictado los actos recurridos.",
+    whys: ["Opción descartada (A). La elaboración de actos administrativos no aparece, con carácter general, entre las competencias indelegables del artículo 9.2.", "Opción correcta (B). Reproduce la prohibición del artículo 9.2.c: el mismo órgano que dictó el acto no puede recibir por delegación la competencia para resolver su recurso.", "Opción descartada (C). La ley exige que la prohibición se establezca por una norma con rango de ley, no por una simple norma reglamentaria.", "Opción descartada (D). El artículo 9.2 prohíbe delegar la adopción de disposiciones de carácter general, no de disposiciones particulares."]
   },
   {
     id: "h2025-022",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 40/2015, art. 17",
     sourceUrl: officialSources.law40,
@@ -363,12 +363,12 @@ questions.push(
     text: "De conformidade co previsto no artigo 17 da Lei 40/2015, do 1 de outubro, de réxime xurídico do sector público, para a válida constitución do órgano colexiado, para os efectos da celebración de sesións, deliberacións e toma de acordos:",
     options: [["A", "Requirirase da asistencia, presencial ou a distancia, do presidente e a metade dos seus membros ou, se é o caso, de quen os supla."], ["B", "Requirirase da asistencia presencial do presidente e do secretario e, presencial ou a distancia, de todos os seus membros."], ["C", "Requirirase da asistencia, presencial ou a distancia, do presidente e secretario ou, se é o caso, de quen os supla, e a da metade, polo menos, dos seus membros."], ["D", "Requirirase sempre da asistencia, presencial, do presidente e secretario ou, se é o caso, de quen os supla, e a da metade, polo menos, dos seus membros."]],
     correct: 2,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción C (\"Requirirase da asistencia, presencial ou a distancia, do presidente e secretario ou, se é o caso, de quen os supla, e a da metade, polo menos, dos seus membros.\"). Pregunta oficial 22 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (C). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción C es correcta. El artículo 17.2 de la Ley 40/2015 exige la asistencia, presencial o a distancia, del presidente y del secretario —o de sus suplentes— y de, al menos, la mitad de los miembros.",
+    whys: ["Opción descartada (A). Omite la asistencia necesaria del secretario o de quien lo supla.", "Opción descartada (B). Ni presidente y secretario tienen que asistir necesariamente en persona ni se exige la presencia de todos los miembros.", "Opción correcta (C). Incluye las tres exigencias del artículo 17.2: presidente, secretario y al menos la mitad de los miembros, con asistencia presencial o a distancia.", "Opción descartada (D). La ley permite expresamente que la asistencia sea presencial o a distancia; no impone siempre la presencia física."]
   },
   {
     id: "h2025-023",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 40/2015, art. 28",
     sourceUrl: officialSources.law40,
@@ -376,12 +376,12 @@ questions.push(
     text: "De conformidade co disposto no artigo 28 da Lei 40/2015, do 1 de outubro, de réxime xurídico do sector público, as responsabilidades administrativas que se deriven da comisión dunha infracción serán compatibles coa esixencia ao infractor da:",
     options: [["A", "Indemnización polo lucro cesante."], ["B", "Reposición da situación alterada ao seu estado orixinario ou a indemnización polos danos e perdas causados."], ["C", "Só coa indemnización polos danos causados."], ["D", "Reposición da situación alterada por el ao seu estado orixinario, así como a indemnización polos danos e perdas causados."]],
     correct: 3,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción D (\"Reposición da situación alterada por el ao seu estado orixinario, así como a indemnización polos danos e perdas causados.\"). Pregunta oficial 23 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (D). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia."]
+    explanation: "La opción D es correcta. El artículo 28.2 de la Ley 40/2015 permite acumular a la responsabilidad administrativa tanto la reposición de la situación alterada como la indemnización de los daños y perjuicios causados.",
+    whys: ["Opción descartada (A). La ley no limita la consecuencia al lucro cesante: habla de los daños y perjuicios causados y también de restaurar la situación.", "Opción descartada (B). Emplea una alternativa entre reposición o indemnización, pero el artículo 28.2 las declara compatibles y acumulables.", "Opción descartada (C). Reduce la consecuencia a la indemnización y omite la posible reposición al estado originario.", "Opción correcta (D). Recoge conjuntamente las dos consecuencias previstas en el artículo 28.2."]
   },
   {
     id: "h2025-024",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 40/2015, art. 34",
     sourceUrl: officialSources.law40,
@@ -389,12 +389,12 @@ questions.push(
     text: "Nos supostos de responsabilidade patrimonial, de conformidade co disposto no artigo 34 da Lei 40/2015, do 1 de outubro, de réxime xurídico do sector público, e sen prexuízo da súa posible actualización, a contía da indemnización calcularase con referencia:",
     options: [["A", "O día en que a lesión efectivamente produciuse, sen prexuízo da súa actualización á data en que se poña fin ao procedemento de responsabilidade con arranxo ao Índice de Garantía da Competitividade, fixado polo Centro de Investigacións Sociolóxicas, e dos intereses que procedan por demora no pago da indemnización fixada."], ["B", "A data en que se poña fin ao procedemento de responsabilidade, sen prexuízo da súa actualización ao día en que a lesión efectivamente produciuse con arranxo ao Índice de Garantía da Competitividade, fixado polo Centro de Investigacións Sociolóxicas, e dos intereses que procedan por demora no pago da indemnización fixada."], ["C", "O día en que a lesión efectivamente produciuse, sen prexuízo da súa actualización á data en que se poña fin ao procedemento de responsabilidade con arranxo ao Índice de Garantía da Competitividade, fixado polo Instituto Nacional de Estatística, e dos intereses que procedan por demora no pago da indemnización fixada."], ["D", "A data en que se poña fin ao procedemento de responsabilidade, sen prexuízo da súa actualización ao día en que a lesión efectivamente produciuse con arranxo ao Índice de Garantía da Competitividade, fixado polo Instituto Nacional de Estatística, e dos intereses que procedan por demora no pago da indemnización fixada."]],
     correct: 2,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción C (\"O día en que a lesión efectivamente produciuse, sen prexuízo da súa actualización á data en que se poña fin ao procedemento de responsabilidade con arranxo ao Índice de Garantía da Competitividade, fixado polo Instituto Nacional de Estatística, e dos intereses que procedan por demora no pago da indemnización fixada.\"). Pregunta oficial 24 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (C). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción C es correcta. El artículo 34.3 de la Ley 40/2015 toma como referencia el día en que se produjo efectivamente la lesión y permite actualizar la cuantía hasta el final del procedimiento mediante el Índice de Garantía de la Competitividad fijado por el INE, además de los intereses de demora que procedan.",
+    whys: ["Opción descartada (A). Acertaría en las fechas, pero atribuye el índice al Centro de Investigaciones Sociológicas; el artículo 34.3 lo atribuye al Instituto Nacional de Estadística.", "Opción descartada (B). Invierte la fecha de referencia y la de actualización, y además menciona erróneamente al CIS.", "Opción correcta (C). Reproduce correctamente la fecha del daño, la actualización al cierre del procedimiento, el índice del INE y los intereses de demora.", "Opción descartada (D). Aunque identifica correctamente al INE, invierte la fecha de cálculo y la fecha de actualización previstas por el artículo 34.3."]
   },
   {
     id: "h2025-025",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 40/2015, art. 43",
     sourceUrl: officialSources.law40,
@@ -402,12 +402,12 @@ questions.push(
     text: "O artigo 43 da Lei 40/2015, do 1 de outubro, de réxime xurídico do sector público prevé que os sistemas de sinatura electrónica do persoal ao servizo das administracións públicas:",
     options: [["A", "Poderán referirse, por razóns de seguridade pública, soamente ao número de identificación profesional do empregado público."], ["B", "Deberán incluír sempre o NIF do empregado público para garantir a identidade do asinante."], ["C", "Deberán identificar de forma conxunta o titular do posto de traballo ou cargo e a Administración ou órgano en que presta os seus servizos."], ["D", "Poderán referirse, por razóns de seguridade pública, soamente ao documento nacional de identidade e iniciais do empregado público."]],
     correct: 0,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción A (\"Poderán referirse, por razóns de seguridade pública, soamente ao número de identificación profesional do empregado público.\"). Pregunta oficial 25 del examen Histórico oficial 2025.",
-    whys: ["Opción correcta (A). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción A es correcta. El artículo 43.2 de la Ley 40/2015 permite que, por razones de seguridad pública, la firma electrónica se refiera solo al número de identificación profesional del empleado público.",
+    whys: ["Opción correcta (A). Es la excepción de seguridad pública prevista literalmente en el artículo 43.2.", "Opción descartada (B). La ley no exige que la firma incluya siempre el NIF del empleado.", "Opción descartada (C). La identificación conjunta del puesto y la Administración es una posibilidad, no una obligación absoluta, y admite la excepción de seguridad pública.", "Opción descartada (D). La excepción legal se refiere al número profesional, no al DNI acompañado de iniciales."]
   },
   {
     id: "h2025-026",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 40/2015, art. 145",
     sourceUrl: officialSources.law40,
@@ -415,12 +415,12 @@ questions.push(
     text: "Os órganos de cooperación previstos no artigo 145 da Lei 40/2015, do 1 de outubro, de réxime xurídico do sector público (sinale a resposta incorrecta):",
     options: [["A", "Son órganos de composición unicamente bilateral, de ámbito xeral ou especial."], ["B", "Os órganos de cooperación entre distintas administracións públicas nos que participe a Administración xeral do Estado deberán inscribirse no Rexistro Estatal de Órganos e Instrumentos de Cooperación para que resulte válida a súa sesión constitutiva."], ["C", "Os órganos de cooperación rexeranse polo disposto nesta lei e polas disposicións específicas que lles sexan de aplicación."], ["D", "Os órganos de cooperación acordan voluntariamente actuacións que melloren o exercicio das competencias que cada Administración Pública ten."]],
     correct: 0,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción A (\"Son órganos de composición unicamente bilateral, de ámbito xeral ou especial.\"). Pregunta oficial 26 del examen Histórico oficial 2025.",
-    whys: ["Opción correcta (A). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción A es la respuesta que debe señalarse porque la pregunta pide la afirmación incorrecta. El artículo 145.1 de la Ley 40/2015 dice que los órganos de cooperación pueden ser multilaterales o bilaterales, no únicamente bilaterales.",
+    whys: ["Opción correcta (A). Es la afirmación incorrecta: elimina la composición multilateral que el artículo 145.1 admite expresamente.", "Opción descartada (B). Es verdadera: cuando participa la Administración General del Estado, la inscripción en el registro estatal es necesaria para la validez de la sesión constitutiva.", "Opción descartada (C). Es verdadera: el artículo 145.2 remite a la propia ley y a las disposiciones específicas aplicables.", "Opción descartada (D). Es verdadera: estos órganos acuerdan voluntariamente actuaciones que mejoren el ejercicio de las competencias de cada Administración."]
   },
   {
     id: "h2025-027",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 40/2015, art. 149",
     sourceUrl: officialSources.law40,
@@ -428,12 +428,12 @@ questions.push(
     text: "O artigo 149 da Lei 40/2015, do 1 de outubro, de réxime xurídico do sector público establece que lle corresponde ao ministro que presida a conferencia sectorial acordar a convocatoria das reunións por iniciativa propia:",
     options: [["A", "Polo menos dúas veces ao ano ou cando o soliciten, polo menos, a terceira parte dos seus membros."], ["B", "Polo menos unha vez ao ano ou cando o soliciten, polo menos, a metade dos seus membros."], ["C", "Polo menos unha vez cada tres meses ou cando o soliciten, polo menos, a terceira parte dos seus membros."], ["D", "Polo menos unha vez ao ano ou cando o soliciten, polo menos, a terceira parte dos seus membros."]],
     correct: 3,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción D (\"Polo menos unha vez ao ano ou cando o soliciten, polo menos, a terceira parte dos seus membros.\"). Pregunta oficial 27 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (D). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia."]
+    explanation: "La opción D es correcta. El artículo 149.1 de la Ley 40/2015 atribuye la convocatoria al ministro que preside la conferencia, por iniciativa propia al menos una vez al año o cuando lo pida, como mínimo, un tercio de sus miembros.",
+    whys: ["Opción descartada (A). Eleva la frecuencia mínima a dos reuniones anuales, mientras la ley exige al menos una.", "Opción descartada (B). Acertaría en la frecuencia anual, pero exige la mitad de los miembros cuando basta un tercio.", "Opción descartada (C). La ley no fija una convocatoria trimestral; establece una frecuencia mínima anual.", "Opción correcta (D). Coincide con los dos umbrales del artículo 149.1: una vez al año y solicitud de al menos un tercio."]
   },
   {
     id: "h2025-028",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 40/2015, art. 154",
     sourceUrl: officialSources.law40,
@@ -441,12 +441,12 @@ questions.push(
     text: "Cando a proximidade territorial ou a concorrencia de funcións administrativas así o requira, o artigo 154 da Lei 40/2015, do 1 de outubro, de réxime xurídico do sector público prevé que poderán crearse comisións territoriais de coordinación:",
     options: [["A", "De composición bilateral."], ["B", "Entre administracións cuxos territorios non sexan coincidentes ou limítrofes."], ["C", "Para mellorar a coordinación da prestación de servizos."], ["D", "Para mellorar a eficacia e calidade dos servizos."]],
     correct: 2,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción C (\"Para mellorar a coordinación da prestación de servizos.\"). Pregunta oficial 28 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (C). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción C es correcta. El artículo 154.1 de la Ley 40/2015 permite crear comisiones territoriales de coordinación multilaterales entre Administraciones con territorios coincidentes o limítrofes para mejorar la coordinación de los servicios, evitar duplicidades y elevar su eficiencia y calidad.",
+    whys: ["Opción descartada (A). El artículo 154.1 define estas comisiones como órganos de composición multilateral, no bilateral.", "Opción descartada (B). Las Administraciones participantes deben tener territorios coincidentes o limítrofes; la opción afirma lo contrario.", "Opción correcta (C). Recoge literalmente una de las finalidades legales: mejorar la coordinación de la prestación de servicios.", "Opción descartada (D). La ley habla de mejorar la eficiencia y la calidad, no de la eficacia; cambiar ese término impide que reproduzca la previsión legal."]
   },
   {
     id: "h2025-029",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 9/2017, art. 1",
     sourceUrl: officialSources.lcsp,
@@ -454,12 +454,12 @@ questions.push(
     text: "De acordo co artigo 1 da Lei 9/2017, do 8 de novembro, de Contratos do Sector Público, pola que se traspoñen ao ordenamento xurídico español as Directivas do Parlamento Europeo e do Consello 2014/23/UE e 2014/24/UE, do 26 de febreiro de 2014, cal dos seguintes non é un principio ao que debe axustarse a contratación do sector público:",
     options: [["A", "Liberdade de acceso ás licitacións."], ["B", "Publicidade e transparencia dos procedementos."], ["C", "Igualdade de trato entre los licitadores."], ["D", "Racionalización na contratación."]],
     correct: 3,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción D (\"Racionalización na contratación.\"). Pregunta oficial 29 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (D). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia."]
+    explanation: "La opción D es la respuesta correcta porque la pregunta pide el concepto que no figura entre los principios enumerados en el artículo 1.1 de la Ley 9/2017. Ese precepto no menciona la \"racionalización en la contratación\".",
+    whys: ["Opción descartada (A). La libertad de acceso a las licitaciones aparece expresamente en el artículo 1.1.", "Opción descartada (B). La publicidad y la transparencia de los procedimientos son principios expresamente enumerados.", "Opción descartada (C). La no discriminación y la igualdad de trato entre licitadores forman parte de la enumeración legal.", "Opción correcta (D). La racionalización en la contratación no es uno de los principios que el artículo 1.1 cita en esta lista."]
   },
   {
     id: "h2025-030",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 9/2017, art. 9.1",
     sourceUrl: officialSources.lcsp,
@@ -467,12 +467,12 @@ questions.push(
     text: "Segundo o artigo 9.1 da Lei 9/2017, do 8 de novembro, de Contratos do Sector Público, pola que se traspoñen ao ordenamento xurídico español as Directivas do Parlamento Europeo e do Consello 2014/23/UE e 2014/24/UE, do 26 de febreiro de 2014, atópanse excluídas da presente lei:",
     options: [["A", "As autorizacións e concesións sobre bens de dominio público."], ["B", "Só as autorizacións sobre bens de dominio público."], ["C", "Só as concesións sobre bens de dominio público."], ["D", "Todos os contratos de explotación de bens patrimoniais."]],
     correct: 0,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción A (\"As autorizacións e concesións sobre bens de dominio público.\"). Pregunta oficial 30 del examen Histórico oficial 2025.",
-    whys: ["Opción correcta (A). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción A es correcta. El artículo 9.1 de la Ley 9/2017 excluye tanto las autorizaciones como las concesiones sobre bienes de dominio público, que se rigen por su legislación específica salvo remisión expresa a la ley contractual.",
+    whys: ["Opción correcta (A). Incluye las dos figuras de dominio público excluidas por el artículo 9.1: autorizaciones y concesiones.", "Opción descartada (B). Es incompleta porque también se excluyen las concesiones sobre bienes de dominio público.", "Opción descartada (C). Es incompleta porque también se excluyen las autorizaciones sobre esos bienes.", "Opción descartada (D). No se excluyen todos los contratos de explotación patrimonial: el artículo 9.1 exceptúa los definidos en el artículo 14."]
   },
   {
     id: "h2025-031",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 9/2017, art. 15.1",
     sourceUrl: officialSources.lcsp,
@@ -480,12 +480,12 @@ questions.push(
     text: "Segundo o artigo 15.1 da Lei 9/2017, do 8 de novembro, de Contratos do Sector Público, pola que se traspoñen ao ordenamento xurídico español as Directivas do Parlamento Europeo e do Consello 2014/23/UE e 2014/24/UE, do 26 de febreiro de 2014, que tipo de contrato é aquel en cuxa virtude un ou varios poderes adxudicadores encomendan a título oneroso a unha ou varias persoas, naturais ou xurídicas, a xestión dun servizo cuxa prestación sexa da súa titularidade ou competencia?::",
     options: [["A", "O contrato de concesión de servizos."], ["B", "O contrato de obra."], ["C", "O contrato de servizos."], ["D", "O contrato de subministración."]],
     correct: 0,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción A (\"O contrato de concesión de servizos.\"). Pregunta oficial 31 del examen Histórico oficial 2025.",
-    whys: ["Opción correcta (A). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción A es correcta. El artículo 15 de la Ley 9/2017 define la concesión de servicios como el encargo oneroso de gestionar un servicio de titularidad o competencia del poder adjudicador, a cambio del derecho de explotarlo, solo o acompañado de un precio, y con transferencia del riesgo operacional.",
+    whys: ["Opción correcta (A). La descripción reproduce la figura definida por el artículo 15: el contrato de concesión de servicios.", "Opción descartada (B). El contrato de obras tiene por objeto una obra o trabajos de construcción, no la gestión de un servicio.", "Opción descartada (C). En el contrato ordinario de servicios no aparece como rasgo definitorio el derecho de explotación con transferencia del riesgo operacional al contratista.", "Opción descartada (D). El contrato de suministro se refiere principalmente a la adquisición o arrendamiento de productos o bienes muebles."]
   },
   {
     id: "h2025-032",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 9/2017, art. 18",
     sourceUrl: officialSources.lcsp,
@@ -493,12 +493,12 @@ questions.push(
     text: "Cando un contrato conteña prestacións correspondentes a outro ou outros de distinta clase e conteña en concreto prestacións propias de dous ou máis contratos de obras, subministracións ou servizos, atenderase ao carácter da prestación principal (artigo 18 Lei 9/2017, do 8 de novembro, de Contratos do Sector Público, pola que se traspoñen ao ordenamento xurídico español as Directivas do Parlamento Europeo e do Consello 2014/23/UE e 2014/24/UE, do 26 de febreiro de 2014):",
     options: [["A", "Para a determinación do órgano competente para a súa adxudicación."], ["B", "Para a determinación das normas que rexerán a súa adxudicación."], ["C", "Para a determinación de se lle é esixible a clasificación ao contratista."], ["D", "Para a determinación das normas que rexerán a súa tramitación e resolución."]],
     correct: 1,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción B (\"Para a determinación das normas que rexerán a súa adxudicación.\"). Pregunta oficial 32 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (B). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción B es correcta. El artículo 18.1.a de la Ley 9/2017 ordena atender a la prestación principal para determinar las normas que regirán la adjudicación de un contrato mixto que combine obras, suministros o servicios.",
+    whys: ["Opción descartada (A). La regla citada no determina qué órgano es competente para adjudicar, sino qué normas se aplican a la adjudicación.", "Opción correcta (B). Expresa exactamente la finalidad que el artículo 18 atribuye al criterio de la prestación principal.", "Opción descartada (C). La exigencia de clasificación del contratista se regula por otras reglas y no es el objeto de este inciso del artículo 18.", "Opción descartada (D). El precepto habla de las normas de adjudicación; no formula una regla conjunta sobre tramitación y resolución."]
   },
   {
     id: "h2025-033",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 9/2017, art. 29",
     sourceUrl: officialSources.lcsp,
@@ -506,12 +506,12 @@ questions.push(
     text: "De acordo co sinalado polo artigo 29 da Lei 9/2017, do 8 de novembro, de Contratos do Sector Público, pola que se transpoñen ao ordenamento xurídico español as Directivas do Parlamento Europeo e do Consello 2014/23/UE e 2014/24/UE, do 26 de febreiro de 2014, a duración dos contratos de arrendamento de bens mobles non poderá exceder, incluíndo as posibles prórrogas que acorde o órgano de contratación, de:",
     options: [["A", "Un ano"], ["B", "Dous anos"], ["C", "Tres anos"], ["D", "Cinco anos"]],
     correct: 3,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción D (\"Cinco anos\"). Pregunta oficial 33 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (D). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia."]
+    explanation: "La opción D es correcta. El artículo 29.5 de la Ley 9/2017 fija en cinco años la duración máxima de los contratos de arrendamiento de bienes muebles, incluidas las posibles prórrogas.",
+    whys: ["Opción descartada (A). Un año es el límite general de los contratos menores, no el previsto aquí para arrendar bienes muebles.", "Opción descartada (B). El artículo 29.5 no establece un máximo de dos años.", "Opción descartada (C). Tampoco fija un límite de tres años para este tipo de arrendamiento.", "Opción correcta (D). Cinco años, contando las prórrogas, es el máximo expresamente establecido por el artículo 29.5."]
   },
   {
     id: "h2025-034",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 9/2017, art. 29",
     sourceUrl: officialSources.lcsp,
@@ -519,12 +519,12 @@ questions.push(
     text: "A prórroga acordarase polo órgano de contratación e será obrigatoria para o empresario, sempre que o seu aviso previo se produza (artigo 29 Lei 9/2017, do 8 de novembro, de Contratos do Sector Público, pola que se traspoñen ao ordenamento xurídico español as Directivas do Parlamento Europeo e do Consello 2014/23/UE e 2014/24/UE, do 26 de febreiro de 2014)",
     options: [["A", "Polo menos con catro meses de antelación á finalización do prazo de duración do contrato."], ["B", "Polo menos con dous meses de antelación á finalización do prazo de duración do contrato, agás que o prego estableza un maior."], ["C", "Polo menos con seis meses de antelación á finalización do prazo de duración do contrato."], ["D", "Polo menos con dous meses de antelación á finalización do prazo de execución do contrato."]],
     correct: 1,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción B (\"Polo menos con dous meses de antelación á finalización do prazo de duración do contrato, agás que o prego estableza un maior.\"). Pregunta oficial 34 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (B). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción B es correcta. Conforme al artículo 29.2 de la Ley 9/2017, la prórroga es obligatoria para el empresario si se avisa al menos dos meses antes de que finalice la duración del contrato, salvo que el pliego establezca un plazo mayor.",
+    whys: ["Opción descartada (A). La ley no exige con carácter general cuatro meses de preaviso.", "Opción correcta (B). Recoge el plazo mínimo de dos meses y la posibilidad de que el pliego fije uno superior.", "Opción descartada (C). Seis meses no es el plazo general establecido en el artículo 29.2.", "Opción descartada (D). La referencia legal es la finalización del plazo de duración del contrato, no la del plazo de ejecución."]
   },
   {
     id: "h2025-035",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 9/2017, art. 34",
     sourceUrl: officialSources.lcsp,
@@ -532,12 +532,12 @@ questions.push(
     text: "A teor do disposto polo artigo 34 Lei 9/2017, do 8 de novembro, de Contratos do Sector Público, pola que se traspoñen ao ordenamento xurídico español as Directivas do Parlamento Europeo e do Consello 2014/23/UE e 2014/24/UE, do 26 de febreiro de 2014, nos contratos do sector público poderán incluírse:",
     options: [["A", "Calquera pacto, cláusula e condición."], ["B", "Calquera pacto, cláusula e condición que libremente acorden as partes que interveñen no contrato e que cumpra coa normativa aplicable."], ["C", "Calquera pacto, cláusula e condición, sempre que non sexan contrarios ao interese público, ao ordenamento xurídico e aos principios de boa administración."], ["D", "Calquera pacto, cláusula e condición, sempre que non sexan contrarios ao interese público, á boa fe e aos principios de boa xestión."]],
     correct: 2,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción C (\"Calquera pacto, cláusula e condición, sempre que non sexan contrarios ao interese público, ao ordenamento xurídico e aos principios de boa administración.\"). Pregunta oficial 35 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (C). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción C es correcta. El artículo 34.1 de la Ley 9/2017 permite incluir cualesquiera pactos, cláusulas y condiciones, con tres límites expresos: el interés público, el ordenamiento jurídico y los principios de buena administración.",
+    whys: ["Opción descartada (A). Presenta una libertad sin límites y omite las tres condiciones que impone el artículo 34.1.", "Opción descartada (B). La voluntad de las partes y una referencia genérica a la normativa no reproducen los límites concretos exigidos por la ley.", "Opción correcta (C). Enumera de forma completa los tres límites legales a la libertad de pactos.", "Opción descartada (D). Sustituye el ordenamiento jurídico y la buena administración por buena fe y buena gestión, conceptos distintos de los empleados por el artículo 34.1."]
   },
   {
     id: "h2025-036",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 9/2017, art. 39",
     sourceUrl: officialSources.lcsp,
@@ -545,12 +545,12 @@ questions.push(
     text: "Sinala o artigo 39 da Lei 9/2017, do 8 de novembro, de Contratos do Sector Público, pola que se traspoñen ao ordenamento xurídico español as Directivas do Parlamento Europeo e do Consello 2014/23/UE e 2014/24/UE, do 26 de febreiro de 2014, que, salvo nos supostos de emerxencia, a carencia ou insuficiencia de crédito será:",
     options: [["A", "Unha causa de nulidade de dereito administrativo."], ["B", "Unha causa de anulabilidade de dereito administrativo."], ["C", "Unha causa de invalidez de dereito civil."], ["D", "Unha causa de nulidade de dereito civil."]],
     correct: 0,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción A (\"Unha causa de nulidade de dereito administrativo.\"). Pregunta oficial 36 del examen Histórico oficial 2025.",
-    whys: ["Opción correcta (A). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción A es correcta. El artículo 39.2.b de la Ley 9/2017 considera causa de nulidad de derecho administrativo la carencia o insuficiencia de crédito, salvo en los supuestos de emergencia.",
+    whys: ["Opción correcta (A). Es la calificación que el artículo 39.2.b atribuye expresamente a la falta de crédito suficiente.", "Opción descartada (B). No es una mera causa de anulabilidad: la ley la incluye entre los supuestos de nulidad administrativa.", "Opción descartada (C). La invalidez se encuadra en el derecho administrativo contractual, no como invalidez de derecho civil.", "Opción descartada (D). Aunque emplea la palabra nulidad, la califica erróneamente como civil; el artículo 39 habla de nulidad de derecho administrativo."]
   },
   {
     id: "h2025-037",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 9/2017, art. 50",
     sourceUrl: officialSources.lcsp,
@@ -558,12 +558,12 @@ questions.push(
     text: "De acordo co artigo 50 da 50 Lei 9/2017, do 8 de novembro, de Contratos do Sector Público, pola que se traspoñen ao ordenamento xurídico español as Directivas do Parlamento Europeo e do Consello 2014/23/UE e 2014/24/UE, do 26 de febreiro de 2014, o prazo para a presentación do recurso contra os pregos e demais documentos contractuais, será de:",
     options: [["A", "Dez días hábiles contados desde o día seguinte á remisión da invitación, no caso dos procedementos negociados sen publicidade."], ["B", "Quince días hábiles contados a partir do día seguinte a aquel en que se publicou no perfil de contratante o anuncio de licitación, sempre que neste indicouse a forma en que os interesados poden acceder a eles."], ["C", "Quince días hábiles contados desde o día en que se entregaron os pregos ao recorrente no caso de que os pregos non puidesen ser postos ao dispor por medios electrónicos."], ["D", "Quince días hábiles contados desde que o interesado puidese acceder ao contido destes a través do perfil de contratante."]],
     correct: 1,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción B (\"Quince días hábiles contados a partir do día seguinte a aquel en que se publicou no perfil de contratante o anuncio de licitación, sempre que neste indicouse a forma en que os interesados poden acceder a eles.\"). Pregunta oficial 37 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (B). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción B es correcta. El artículo 50.1.b de la Ley 9/2017 fija quince días hábiles y, si el anuncio explica cómo acceder a los pliegos, empieza a contarlos desde el día siguiente a la publicación del anuncio en el perfil de contratante.",
+    whys: ["Opción descartada (A). En el procedimiento negociado sin publicidad el plazo también es de quince días hábiles, no de diez.", "Opción correcta (B). Contiene tanto la duración del plazo como el momento inicial y la condición de acceso previstos en el artículo 50.1.b.", "Opción descartada (C). Cuando no hay acceso electrónico, el cómputo empieza el día siguiente a la entrega, no el mismo día de la entrega.", "Opción descartada (D). Es incompleta: omite que el plazo comienza al día siguiente y no distingue la regla aplicable según el anuncio o la entrega de los documentos."]
   },
   {
     id: "h2025-038",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 9/2017, art. 68",
     sourceUrl: officialSources.lcsp,
@@ -571,12 +571,12 @@ questions.push(
     text: "Para celebrar que tipo de contratos poderán adicionalmente os pregos de cláusulas administrativas particulares esixir que as empresas non comunitarias que resulten adxudicatarias abran unha sucursal en España, con designación de apoderados ou representantes para as súas operacións, e que estean inscritas no Rexistro Mercantil? (artigo 68 Lei 9/2017, do 8 de novembro, de Contratos do Sector Público, pola que se traspoñen ao ordenamento xurídico español as Directivas do Parlamento Europeo e do Consello 2014/23/UE e 2014/24/UE, do 26 de febreiro de 2014):",
     options: [["A", "De obras."], ["B", "De subministración."], ["C", "De concesión de obras."], ["D", "De obras y de concesión de obras."]],
     correct: 0,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción A (\"De obras.\"). Pregunta oficial 38 del examen Histórico oficial 2025.",
-    whys: ["Opción correcta (A). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción A es correcta. El artículo 68.2 de la Ley 9/2017 permite exigir a las empresas no comunitarias adjudicatarias que abran sucursal en España, designen representantes y se inscriban en el Registro Mercantil cuando se trate de contratos de obras.",
+    whys: ["Opción correcta (A). El artículo 68.2 limita expresamente esta exigencia adicional a los contratos de obras.", "Opción descartada (B). El precepto no extiende esta exigencia especial a los contratos de suministro.", "Opción descartada (C). La concesión de obras es una categoría contractual distinta y no aparece en la regla examinada.", "Opción descartada (D). Añade indebidamente las concesiones de obras a la única categoría mencionada por el artículo 68.2."]
   },
   {
     id: "h2025-039",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 9/2017, art. 71",
     sourceUrl: officialSources.lcsp,
@@ -584,12 +584,12 @@ questions.push(
     text: "Cal das seguintes prohibicións previstas no artigo 71 da Lei 9/2017, do 8 de novembro, de Contratos do Sector Público, pola que se traspoñen ao ordenamento xurídico español as Directivas do Parlamento Europeo e do Consello 2014/23/UE e 2014/24/UE, do 26 de febreiro de 2014, se estende tamén aos cónxuxes, persoas vinculadas con análoga relación de convivencia afectiva, ascendentes e descendentes?:",
     options: [["A", "Estar incursa nalgún dos supostos da Lei 53/1984, do 26 de decembro, de incompatibilidades do persoal ao servizo das administracións públicas."], ["B", "Non atoparse ao corrente no cumprimento das obrigacións tributarias ou de seguridade social impostas polas disposicións vixentes, nos termos que regulamentariamente se determinen."], ["C", "Ser condenada mediante sentenza firme por delitos contra a facenda pública e a seguridade social."], ["D", "Solicitar a declaración de concurso."]],
     correct: 0,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción A (\"Estar incursa nalgún dos supostos da Lei 53/1984, do 26 de decembro, de incompatibilidades do persoal ao servizo das administracións públicas.\"). Pregunta oficial 39 del examen Histórico oficial 2025.",
-    whys: ["Opción correcta (A). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción A es correcta. El artículo 71.1.g de la Ley 9/2017 incluye determinados supuestos de incompatibilidad y extiende esa prohibición a cónyuges, parejas análogas, ascendientes, descendientes y ciertos parientes cuando exista el conflicto de intereses descrito por la ley.",
+    whys: ["Opción correcta (A). La extensión familiar está vinculada, entre otros casos, a las incompatibilidades de la Ley 53/1984 citadas en el artículo 71.1.g.", "Opción descartada (B). El incumplimiento de obligaciones tributarias o con la Seguridad Social es otra prohibición, pero no la que el precepto extiende mediante esta regla familiar.", "Opción descartada (C). La condena por delitos contra la Hacienda Pública o la Seguridad Social pertenece a otro supuesto del artículo 71 y no es objeto de esta extensión concreta.", "Opción descartada (D). La solicitud de concurso aparece en otro apartado y no constituye el supuesto de incompatibilidad al que se asocia la extensión familiar."]
   },
   {
     id: "h2025-040",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 9/2017, art. 74",
     sourceUrl: officialSources.lcsp,
@@ -597,8 +597,8 @@ questions.push(
     text: "Os requisitos mínimos de solvencia que deba reunir o empresario e a documentación requirida para acreditar estes indicaranse (artigo 74 Lei 9/2017, do 8 de novembro, de Contratos do Sector Público, pola que se traspoñen ao ordenamento xurídico español as Directivas do Parlamento Europeo e do Consello 2014/23/UE e 2014/24/UE, do 26 de febreiro de 2014):",
     options: [["A", "No anuncio de información previa."], ["B", "Nos pregos de cláusulas administrativas xerais."], ["C", "No anuncio de licitación."], ["D", "Nos pregos de prescricións técnicas."]],
     correct: 2,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción C (\"No anuncio de licitación.\"). Pregunta oficial 40 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (C). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La opción C es correcta. El artículo 74.2 de la Ley 9/2017 exige indicar los requisitos mínimos de solvencia y la documentación acreditativa en el anuncio de licitación, además de especificarlos en el pliego del contrato y vincularlos proporcionalmente a su objeto.",
+    whys: ["Opción descartada (A). El anuncio de información previa no es el lugar que el artículo 74.2 señala para esta indicación.", "Opción descartada (B). La ley exige especificarlos en el pliego concreto del contrato, no en unos pliegos de cláusulas administrativas generales.", "Opción correcta (C). Es el documento en el que el artículo 74.2 ordena indicar los requisitos y la documentación de solvencia.", "Opción descartada (D). Los pliegos de prescripciones técnicas describen las exigencias técnicas de la prestación; no sustituyen el anuncio y el pliego del contrato previstos en el artículo 74.2."]
   },
   {
     id: "h2025-041",

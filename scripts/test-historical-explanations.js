@@ -16,7 +16,7 @@ vm.runInContext(
 );
 
 const questions = context.auditQuestions;
-const reviewedIds = Array.from({ length: 20 }, (_, index) =>
+const reviewedIds = Array.from({ length: 40 }, (_, index) =>
   `h2025-${String(index + 1).padStart(3, '0')}`
 );
 const genericPhrases = [
