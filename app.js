@@ -29787,8 +29787,24 @@ function renderErrors() {
     const q = row.question;
     const pending = pendingIds.has(q.id);
     const attemptsLabel = `${row.attempts} ${row.attempts === 1 ? 'intento' : 'intentos'}`;
-    return `<article class="error-card history-card"><div><div class="history-card-heading"><p class="eyebrow">${escapeHTML(q.topic.toUpperCase())}</p><span class="history-status ${pending ? 'pending-review' : 'learned'}">${pending ? 'Pendiente' : 'Última correcta'}</span></div><h2>${escapeHTML(q.text)}</h2><p>${escapeHTML(q.source)}</p><p class="attempt-summary"><strong>${row.correct}</strong> ${row.correct === 1 ? 'acierto' : 'aciertos'} · <strong>${row.incorrect}</strong> ${row.incorrect === 1 ? 'fallo' : 'fallos'} · ${attemptsLabel}</p></div><button class="secondary-button review-one" data-id="${escapeHTML(q.id)}">Practicar</button></article>`;
+    const detailId = `history-detail-${q.id}`;
+    const correctOption = q.options[q.correct];
+    return `<article class="error-card history-card"><div class="history-card-summary"><div class="history-card-heading"><p class="eyebrow">${escapeHTML(q.topic.toUpperCase())}</p><span class="history-status ${pending ? 'pending-review' : 'learned'}">${pending ? 'Pendiente' : 'Última correcta'}</span></div><h2>${escapeHTML(q.text)}</h2><p>${escapeHTML(q.source)}</p><p class="attempt-summary"><strong>${row.correct}</strong> ${row.correct === 1 ? 'acierto' : 'aciertos'} · <strong>${row.incorrect}</strong> ${row.incorrect === 1 ? 'fallo' : 'fallos'} · ${attemptsLabel}</p></div><div class="history-card-actions"><button type="button" class="secondary-button history-explanation-toggle" data-id="${escapeHTML(q.id)}" aria-expanded="false" aria-controls="${escapeHTML(detailId)}">Ver explicación</button><button type="button" class="secondary-button review-one" data-id="${escapeHTML(q.id)}">Practicar</button></div><div class="history-explanation hidden" id="${escapeHTML(detailId)}"><p class="eyebrow">RESPUESTA CORRECTA</p><p class="history-correct-answer"><strong>${escapeHTML(correctOption[0])}.</strong> ${escapeHTML(correctOption[1])}</p><h3>Explicación</h3><p>${escapeHTML(q.explanation)}</p><h3>Por qué cada alternativa</h3><ul class="why-list">${q.options.map(([letter], optionIndex) => `<li><strong>${escapeHTML(letter)}.</strong> ${escapeHTML(q.whys[optionIndex])}</li>`).join('')}</ul><div class="history-source-links"><a class="source-link" href="${escapeHTML(q.sourceUrl)}" target="_blank" rel="noreferrer">Base legal: ${escapeHTML(q.source)} ↗</a>${q.originUrl ? `<a class="source-link" href="${escapeHTML(q.originUrl)}" target="_blank" rel="noreferrer">Examen original ↗</a>` : ''}</div></div></article>`;
   }).join('');
+  target.querySelectorAll('.history-explanation-toggle').forEach(button => button.addEventListener('click', () => {
+    const detail = document.getElementById(button.getAttribute('aria-controls'));
+    const willOpen = detail.classList.contains('hidden');
+    target.querySelectorAll('.history-explanation-toggle').forEach(otherButton => {
+      otherButton.setAttribute('aria-expanded', 'false');
+      otherButton.textContent = 'Ver explicación';
+    });
+    target.querySelectorAll('.history-explanation').forEach(otherDetail => otherDetail.classList.add('hidden'));
+    if (willOpen) {
+      detail.classList.remove('hidden');
+      button.setAttribute('aria-expanded', 'true');
+      button.textContent = 'Ocultar explicación';
+    }
+  }));
   target.querySelectorAll('.review-one').forEach(button => button.addEventListener('click', () => startQuiz([questions.find(q => q.id === button.dataset.id)])));
 }
 function renderCoverage() {

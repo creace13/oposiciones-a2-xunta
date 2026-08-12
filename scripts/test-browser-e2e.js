@@ -123,7 +123,7 @@ async function runE2ESuite() {
   assert.strictEqual(renderedAnswers.map(button => button.querySelector('.answer-letter').textContent).join(','), 'A,B,C,D', '❌ E2E 2b Fallido: las letras dejaron de coincidir con el examen');
   assert.strictEqual(JSON.stringify(officialSet[0].options), originalOptions, '❌ E2E 2b Fallido: la pregunta fue modificada durante el renderizado');
   renderedAnswers[0].click();
-  assert.strictEqual([...document.querySelectorAll('.why-list strong')].map(item => item.textContent).join(','), 'A.,B.,C.,D.', '❌ E2E 2b Fallido: las explicaciones no conservan las mismas letras');
+  assert.strictEqual([...document.querySelectorAll('#quizCard .feedback .why-list strong')].map(item => item.textContent).join(','), 'A.,B.,C.,D.', '❌ E2E 2b Fallido: las explicaciones no conservan las mismas letras');
   document.querySelector('.next-question').click();
   document.querySelector('.finish-practice').click();
   console.log('  PASADO: Barajado, ausencia de duplicados y correspondencia A-D verificados.');
@@ -232,6 +232,16 @@ async function runE2ESuite() {
   assert.strictEqual(document.querySelectorAll('.history-card').length > 0, true, '❌ E2E 4b Fallido: el historial no muestra preguntas realizadas');
   assert.strictEqual(document.getElementById('historySummary').textContent.includes('Preguntas realizadas'), true, '❌ E2E 4b Fallido: falta el resumen del historial');
   assert.strictEqual(document.querySelectorAll('.history-tab').length, 3, '❌ E2E 4b Fallido: faltan filtros del historial');
+  const historyExplanationToggle = document.querySelector('.history-explanation-toggle');
+  historyExplanationToggle.click();
+  const historyExplanation = document.getElementById(historyExplanationToggle.getAttribute('aria-controls'));
+  assert.strictEqual(historyExplanationToggle.getAttribute('aria-expanded'), 'true', '❌ E2E 4b Fallido: el control no comunica que la explicación está abierta');
+  assert.strictEqual(historyExplanation.classList.contains('hidden'), false, '❌ E2E 4b Fallido: la explicación no se desplegó');
+  assert.strictEqual(historyExplanation.querySelectorAll('.why-list li').length, 4, '❌ E2E 4b Fallido: la explicación no justifica las cuatro alternativas');
+  assert.strictEqual(!!historyExplanation.querySelector('.source-link'), true, '❌ E2E 4b Fallido: falta el enlace a la base legal');
+  historyExplanationToggle.click();
+  assert.strictEqual(historyExplanation.classList.contains('hidden'), true, '❌ E2E 4b Fallido: la explicación no se pudo cerrar');
+  assert.strictEqual(!!document.querySelector('.history-card .review-one'), true, '❌ E2E 4b Fallido: el acceso independiente a practicar desapareció');
   console.log('  PASADO: Historial conjunto, filtros y migración segura verificados.');
 
   // Flow 5: Probar escritura de persistencia local

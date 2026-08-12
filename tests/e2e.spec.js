@@ -58,7 +58,7 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
     const answerIndexes = await page.locator('.answer').evaluateAll(buttons => buttons.map(button => button.dataset.answer));
     expect(answerIndexes).toEqual(['0', '1', '2', '3']);
     await page.locator('.answer').first().click();
-    await expect(page.locator('.why-list strong')).toHaveText(['A.', 'B.', 'C.', 'D.']);
+    await expect(page.locator('#quizCard .feedback .why-list strong')).toHaveText(['A.', 'B.', 'C.', 'D.']);
   });
 
   test('3. Realizar y completar una sesión de práctica de 5 preguntas', async ({ page }) => {
@@ -181,6 +181,20 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
 
     await page.locator('[data-history-filter="all"]').click();
     await expect(page.locator('.history-card')).toHaveCount(2);
+    const firstCard = page.locator('.history-card').first();
+    const secondCard = page.locator('.history-card').nth(1);
+    await firstCard.locator('.history-explanation-toggle').click();
+    await expect(firstCard.locator('.history-explanation-toggle')).toHaveAttribute('aria-expanded', 'true');
+    await expect(firstCard.locator('.history-explanation')).toBeVisible();
+    await expect(firstCard.locator('.history-correct-answer')).toBeVisible();
+    await expect(firstCard.locator('.why-list li')).toHaveCount(4);
+    await expect(firstCard.locator('.source-link')).toBeVisible();
+    await expect(firstCard.locator('.review-one')).toBeVisible();
+
+    await secondCard.locator('.history-explanation-toggle').click();
+    await expect(firstCard.locator('.history-explanation')).toBeHidden();
+    await expect(firstCard.locator('.history-explanation-toggle')).toHaveAttribute('aria-expanded', 'false');
+    await expect(secondCard.locator('.history-explanation')).toBeVisible();
   });
 
   test('5. Apertura y cierre del Modal de Política de Privacidad', async ({ page }) => {
