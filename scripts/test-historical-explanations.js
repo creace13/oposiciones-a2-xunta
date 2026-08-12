@@ -19,7 +19,7 @@ const questions = context.auditQuestions;
 const reviewedIds = [
   ...Array.from({ length: 105 }, (_, index) => `h2025-${String(index + 1).padStart(3, '0')}`),
   ...Array.from({ length: 105 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`),
-  ...Array.from({ length: 70 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)
+  ...Array.from({ length: 90 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)
 ];
 const genericPhrases = [
   'No coincide con la solución oficial',
@@ -287,6 +287,44 @@ if (!negativeMeetingQuestion.explanation.includes('quién no está legitimado') 
 const bereavementLeave = questions.find(item => item.id === 'h2024-func-067');
 if (!bereavementLeave.explanation.includes('cinco días hábiles') || !bereavementLeave.explanation.includes('consecutivos')) {
   throw new Error('h2024-func-067 no conserva la duración y forma de disfrute vigentes del permiso por fallecimiento.');
+}
+
+for (const id of Array.from({ length: 3 }, (_, index) => `h2024-func-${String(index + 71).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2015-5677')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 2/2015.`);
+  }
+}
+
+for (const id of Array.from({ length: 3 }, (_, index) => `h2024-func-${String(index + 74).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.source.startsWith('Ley 53/1984, art.') || !question.sourceUrl.includes('BOE-A-1985-151')) {
+    throw new Error(`${id} no conserva la referencia correcta a la Ley 53/1984.`);
+  }
+}
+
+const currentA2CompatibilityLimit = questions.find(item => item.id === 'h2024-func-074');
+if (!currentA2CompatibilityLimit.quality.includes('Equivalencia de grupos explicada') || !currentA2CompatibilityLimit.explanation.includes('antiguo grupo B') || !currentA2CompatibilityLimit.explanation.includes('subgrupo A2')) {
+  throw new Error('h2024-func-074 no explica la equivalencia necesaria para aplicar el límite del 35 % al subgrupo A2.');
+}
+
+for (const id of Array.from({ length: 8 }, (_, index) => `h2024-func-${String(index + 77).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2013-12632')) {
+    throw new Error(`${id} no enlaza el texto consolidado del RDL 1/2013.`);
+  }
+}
+
+const correctedAccessibilityAuthority = questions.find(item => item.id === 'h2024-func-081');
+if (correctedAccessibilityAuthority.source !== 'RDL 1/2013, art. 23.1' || !correctedAccessibilityAuthority.quality.includes('Referencia corregida')) {
+  throw new Error('h2024-func-081 no conserva la referencia corregida sobre condiciones básicas de accesibilidad.');
+}
+
+for (const id of Array.from({ length: 6 }, (_, index) => `h2024-func-${String(index + 85).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2016-3190')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 1/2016.`);
+  }
 }
 
 const currentHistoricalWorksSolvency = questions.find(item => item.id === 'h2024-pe-102');

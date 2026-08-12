@@ -29355,6 +29355,130 @@ const historical2024ExpandedReview = {
     sourceUrl: officialSources.employmentCurrent,
     explanation: 'La opción B es correcta. El artículo 89.2 de la Ley 2/2015 excluye de los concursos los puestos con personal adscrito por salud o rehabilitación, violencia de género o violencia sexual.',
     whys: ['Opción descartada (A). Omite la rehabilitación y la violencia sexual, por lo que la relación queda incompleta.', 'Opción correcta (B). Reúne todos los motivos de adscripción que producen la exclusión del puesto.', 'Opción descartada (C). Solo menciona la rehabilitación y omite el resto de supuestos legales.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-071': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 59.2.d de la Ley 2/2015 impide formar parte de un órgano de selección a quien haya preparado aspirantes o colaborado con centros de preparación durante los cinco años anteriores a la convocatoria.',
+    whys: ['Opción correcta (A). Coincide con el período legal de cinco años.', 'Opción descartada (B). Amplía el período de exclusión a siete años sin respaldo legal.', 'Opción descartada (C). La ley tampoco establece una prohibición de nueve años.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-072': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 71.ñ de la Ley 2/2015 reconoce como derecho individual recibir una protección eficaz en materia de seguridad y salud en el trabajo.',
+    whys: ['Opción descartada (A). Confunde este derecho laboral con las prestaciones de la Seguridad Social, reguladas separadamente.', 'Opción correcta (B). Reproduce literalmente el ámbito de protección indicado por el artículo.', 'Opción descartada (C). La prevención de riesgos está relacionada, pero no es la formulación exacta del derecho enumerado.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-073': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 80.1 de la Ley 2/2015 reserva a la promoción interna vertical un mínimo del 25 % de las plazas convocadas, salvo los procesos de estabilización y consolidación temporal mencionados.',
+    whys: ['Opción correcta (A). Expresa que el 25 % es un mínimo y no una cifra rígida.', 'Opción descartada (B). Al eliminar la palabra «mínimo», convierte indebidamente la reserva en un porcentaje exacto.', 'Opción descartada (C). La ley no formula esta reserva como un máximo de hasta el 50 %.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-074': {
+    quality: 'Verificada y ampliada · Histórica oficial · Equivalencia de grupos explicada · BOE 12/08/2026',
+    source: 'Ley 53/1984, art. 7.1; TREBEP, disposición transitoria 3.2',
+    sourceUrl: officialSources.incompatibilities,
+    explanation: 'La opción A es correcta. El artículo 7.1 de la Ley 53/1984 fija un incremento del 35 % para el antiguo grupo B, que la disposición transitoria tercera.2 del TREBEP hace equivalente al actual subgrupo A2.',
+    whys: ['Opción correcta (A). El 35 % corresponde al antiguo grupo B y, por equivalencia, al subgrupo A2.', 'Opción descartada (B). El 40 % se asigna en la tabla legal al antiguo grupo C, equivalente al actual C1.', 'Opción descartada (C). El 30 % corresponde al antiguo grupo A, equivalente al actual A1.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-075': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 53/1984, art. 12.1.a',
+    sourceUrl: officialSources.incompatibilities,
+    explanation: 'La opción A es correcta. El artículo 12.1.a de la Ley 53/1984 prohíbe intervenir privadamente en asuntos en los que la persona esté interviniendo, deba intervenir o haya intervenido durante los dos últimos años por razón de su puesto público.',
+    whys: ['Opción correcta (A). Coincide con el período retrospectivo legal de dos años.', 'Opción descartada (B). La prohibición no se extiende con carácter general a los cinco últimos años.', 'Opción descartada (C). Tampoco se establece un período de tres años.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-076': {
+    quality: 'Verificada y ampliada · Histórica oficial · Pregunta negativa explicada · BOE 12/08/2026',
+    source: 'Ley 53/1984, art. 2.1',
+    sourceUrl: officialSources.incompatibilities,
+    explanation: 'La opción A es correcta porque se pregunta a quién no se aplica la ley. El artículo 2.1.h incluye al personal de empresas con participación pública superior al 50 %; por tanto, una participación no superior al 50 % queda fuera de ese supuesto.',
+    whys: ['Opción correcta (A, por quedar fuera). La ley exige que la participación pública sea superior al 50 % para incluir a este personal.', 'Opción descartada (B). El personal que ejerce funciones públicas y cobra mediante arancel sí aparece expresamente en el ámbito legal.', 'Opción descartada (C). El personal al servicio de la Seguridad Social también está incluido expresamente.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-077': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción A es correcta. El artículo 18.3 del Real Decreto Legislativo 1/2013 exige tomar en consideración la opinión de los padres o tutores legales antes de la escolarización excepcional en centros de educación especial.',
+    whys: ['Opción correcta (A). Identifica la opinión que la ley ordena considerar expresamente.', 'Opción descartada (B). El artículo no sustituye esa opinión por un informe del consejo escolar.', 'Opción descartada (C). Tampoco establece como respuesta la suma de informes del consejo escolar y equipos multiprofesionales.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-078': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción C es correcta. El artículo 26.1 del Real Decreto Legislativo 1/2013 exige que las normas técnicas contemplen las condiciones mínimas de accesibilidad de los edificios de cualquier tipo.',
+    whys: ['Opción descartada (A). Limita indebidamente la obligación a edificios públicos e instalaciones administrativas.', 'Opción descartada (B). Añade las vías públicas, mientras que este artículo concreto regula las normas técnicas de edificación.', 'Opción correcta (C). Reproduce el alcance general a edificios de cualquier tipo.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-079': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción C es correcta. El artículo 2.d del Real Decreto Legislativo 1/2013 define la discriminación indirecta como la desventaja causada por una regla, práctica o elemento aparentemente neutro que carece de justificación objetiva legítima y proporcionada.',
+    whys: ['Opción descartada (A). Habla de un trato diferente genérico y no de una medida aparentemente neutra con efecto desfavorable.', 'Opción descartada (B). Describe la discriminación directa: trato menos favorable en situación análoga.', 'Opción correcta (C). Contiene los elementos esenciales de la discriminación indirecta y su posible justificación.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-080': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción C es correcta. El artículo 2.f del Real Decreto Legislativo 1/2013 define el acoso como una conducta no deseada relacionada con la discapacidad que atenta contra la dignidad o crea un entorno intimidatorio, hostil, degradante, humillante u ofensivo.',
+    whys: ['Opción descartada (A). La desventaja causada por una regla aparentemente neutra pertenece a la discriminación indirecta, no al acoso.', 'Opción descartada (B). Esa distinción, exclusión o restricción describe la falta de igualdad de oportunidades de forma general.', 'Opción correcta (C). Reproduce los elementos legales de conducta no deseada, relación con la discapacidad y lesión de dignidad o entorno hostil.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-081': {
+    quality: 'Verificada y ampliada · Histórica oficial · Referencia corregida · BOE 12/08/2026',
+    source: 'RDL 1/2013, art. 23.1',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción A es correcta. El artículo 23.1 del Real Decreto Legislativo 1/2013 atribuye al Gobierno la regulación de las condiciones básicas de accesibilidad y no discriminación, sin perjuicio de las competencias autonómicas y locales.',
+    whys: ['Opción correcta (A). Identifica al Gobierno y conserva la salvaguarda de las competencias autonómicas y locales.', 'Opción descartada (B). Traslada la competencia principal a las comunidades autónomas y omite al Gobierno.', 'Opción descartada (C). Además de atribuirla exclusivamente a las comunidades autónomas, elimina toda referencia a las entidades locales.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-082': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción C es correcta. El artículo 12.2 del Real Decreto Legislativo 1/2013 encarga a los equipos multiprofesionales valorar y calificar las situaciones de discapacidad para su reconocimiento oficial por el órgano administrativo competente.',
+    whys: ['Opción descartada (A). La incapacidad permanente laboral no es la función definida en este apartado.', 'Opción descartada (B). No son unidades estatales únicas para todo el territorio ni se limitan a rehabilitación profesional.', 'Opción correcta (C). Reproduce la función de valoración y calificación para el reconocimiento oficial.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-083': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción C es correcta. El artículo 54.2 del Real Decreto Legislativo 1/2013 reconoce la participación de las personas con discapacidad, incluidos niños y niñas, y de sus familias a través de sus organizaciones representativas.',
+    whys: ['Opción descartada (A). Excluye indebidamente a las personas menores de edad.', 'Opción descartada (B). Omite tanto la inclusión expresa de niños y niñas como la participación de las familias.', 'Opción correcta (C). Reúne todos los sujetos y el cauce representativo previstos en el artículo.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-084': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción A es correcta. El artículo 11.3 del Real Decreto Legislativo 1/2013 ordena contemplar específicamente en estos planes las acciones destinadas a las zonas rurales.',
+    whys: ['Opción correcta (A). Reproduce el mandato específico relativo a las zonas rurales.', 'Opción descartada (B). La seguridad y salud en el trabajo sí debe recibir especial importancia dentro de los planes.', 'Opción descartada (C). La asistencia geriátrica también aparece expresamente entre sus contenidos relevantes.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-085': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción B es correcta. El artículo 13.2 y 13.3 de la Ley 1/2016 exige publicar información sobre los contratos menores y también los acuerdos y criterios interpretativos de los órganos consultivos en contratación.',
+    whys: ['Opción descartada (A). Excluye precisamente los contratos menores, que sí están sometidos a publicación.', 'Opción correcta (B). Incluye las dos categorías de información exigidas por los apartados 2 y 3.', 'Opción descartada (C). Aunque incluye los contratos menores, omite los criterios interpretativos de los órganos consultivos.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-086': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción A es correcta. El artículo 27.4 de la Ley 1/2016 fija un máximo de un mes para notificar la resolución, contado desde que el órgano competente para resolver recibe la solicitud.',
+    whys: ['Opción correcta (A). Contiene tanto el plazo de un mes como el momento inicial correcto.', 'Opción descartada (B). Duplica indebidamente el plazo máximo hasta dos meses.', 'Opción descartada (C). Dice «desde la solicitud» y omite que el cómputo comienza con su recepción por el órgano competente.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-087': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción A es correcta. El artículo 29.3 de la Ley 1/2016 garantiza un acceso gratuito al Portal de transparencia conforme a los principios de accesibilidad, interoperabilidad y reutilización.',
+    whys: ['Opción correcta (A). Reúne la gratuidad y los tres principios exigidos por el artículo.', 'Opción descartada (B). Omite la interoperabilidad.', 'Opción descartada (C). Omite la reutilización de la información.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-088': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción C es correcta. El artículo 38.3 de la Ley 1/2016 exige que la adhesión al Código ético institucional figure expresamente en el propio acto de nombramiento del alto cargo.',
+    whys: ['Opción descartada (A). La ley no presenta la adhesión como una decisión voluntaria posterior.', 'Opción descartada (B). No se limita a ordenar que la Xunta fomente la adhesión.', 'Opción correcta (C). Reproduce la exigencia y el documento en el que debe constar.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-089': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción A es correcta. El artículo 5.2 de la Ley 1/2016 ordena publicar cada año, en el Portal de transparencia y Gobierno abierto, un informe aprobado por la Comisión Interdepartamental de Información y Evaluación.',
+    whys: ['Opción correcta (A). Coincide en periodicidad, lugar de publicación y órgano que aprueba el informe.', 'Opción descartada (B). Cambia tanto el portal como la denominación de la comisión.', 'Opción descartada (C). La publicación es anual, no semestral.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-090': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción B es correcta. El artículo 42.1 de la Ley 1/2016 permite determinadas actividades privadas enumeradas por la ley, siempre que no comprometan la imparcialidad o independencia del alto cargo.',
+    whys: ['Opción descartada (A). No existe una incompatibilidad absoluta con cualquier actividad privada.', 'Opción correcta (B). Resume correctamente que solo algunas actividades privadas son compatibles y bajo esa condición.', 'Opción descartada (C). No se permite toda actividad privada; únicamente las modalidades concretas enumeradas por el artículo.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
   }
 };
 
