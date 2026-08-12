@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, WebKit)', () => {
+test.describe('Recorridos E2E en Chromium y WebKit (escritorio y perfiles móviles)', () => {
 
   test.beforeEach(async ({ context, page }) => {
     // Establecer perfil guardado para mantener sesión autenticada en navegación

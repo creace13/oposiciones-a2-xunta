@@ -1,0 +1,34 @@
+name: Quality gates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Banco, interfaz y navegadores
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Descargar el proyecto
+        uses: actions/checkout@v4
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Instalar dependencias reproducibles
+        run: npm ci
+      - name: Instalar Chromium y WebKit
+        run: npx playwright install --with-deps chromium webkit
+      - name: Ejecutar todas las puertas obligatorias
+        run: npm run test:ci
