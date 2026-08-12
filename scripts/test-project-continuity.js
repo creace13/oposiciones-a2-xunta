@@ -32,8 +32,12 @@ const gitignore = read('.gitignore');
 
 assert.ok(protocol.includes('.ia/REANUDACION-RAPIDA.md'), 'El protocolo debe incluir el mapa de reanudación.');
 assert.ok(resume.includes('No asumir que la memoria del chat es completa'), 'Falta la regla de reconstrucción independiente del chat.');
-assert.ok(resume.includes('4f19c03'), 'La fotografía de reentrada debe conservar el último checkpoint anterior a C09.');
-assert.ok(state.includes('4f19c03'), 'El estado canónico debe conservar el cierre de C07.');
+const resumeCheckpoint = resume.match(/Último checkpoint publicado: `([0-9a-f]{7,40})`/);
+assert.ok(resumeCheckpoint, 'La fotografía de reentrada debe identificar el último checkpoint publicado.');
+assert.ok(
+  state.includes(resumeCheckpoint[1]),
+  'El checkpoint de reentrada debe aparecer también en el estado canónico.'
+);
 
 const inProgressItems = queue
   .split(/\r?\n/)
