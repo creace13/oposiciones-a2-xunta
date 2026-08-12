@@ -11,7 +11,7 @@ Este documento explica qué comprueban las pruebas del proyecto y qué no puede 
 1. `npm run test:core`: revisa estructura del banco, explicaciones históricas, filtros, modo local, accesibilidad básica, recuperación, cabeceras de seguridad, mantenimiento normativo, continuidad, exposición pública e integración de la interfaz en un DOM simulado.
 2. `npm run test:playwright`: recorre la aplicación servida de verdad con Chromium y WebKit en escritorio y con perfiles Pixel e iPhone.
 
-La automatización de GitHub repite `npm test` en cada cambio propuesto y en cada publicación sobre `main`. No necesita secretos ni modifica datos de usuarias.
+La automatización de GitHub ejecuta `npm run test:ci` en cada cambio propuesto y en cada publicación sobre `main`. Repite todas las puertas que dependen únicamente de archivos públicos y los recorridos Playwright. Las pruebas de recuperación, aceptación y continuidad privada se ejecutan localmente con `npm test`, porque usan documentos que se excluyen deliberadamente del repositorio público. La automatización no necesita secretos ni modifica datos de usuarias.
 
 ## Qué significa cada nombre
 
