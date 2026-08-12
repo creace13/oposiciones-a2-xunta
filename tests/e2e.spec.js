@@ -56,6 +56,21 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
     await expect(page.locator('.results-card, #quizCard')).toBeVisible();
   });
 
+  test('3b. Terminar una práctica antes de tiempo conserva lo respondido', async ({ page }) => {
+    await page.goto('/#practice');
+    await page.selectOption('#topicSelect', 'historico2025');
+    await page.selectOption('#lengthSelect', '5');
+    await page.click('#createTest');
+
+    await page.locator('.answer').first().click();
+    await page.locator('.finish-practice-early').click();
+
+    await expect(page.locator('#quizCard')).toContainText('Práctica terminada por hoy');
+    await expect(page.locator('#quizCard')).toContainText('1 de 5 respondidas');
+    const savedState = await page.evaluate(() => JSON.parse(localStorage.getItem('opoA2State')));
+    expect(savedState.answered).toHaveLength(1);
+  });
+
   test('4. Iniciar simulacro con regla de penalización –0.25 y calcular nota neta', async ({ page }) => {
     await page.goto('/#simulations');
     await expect(page.locator('#simulations')).toBeVisible();

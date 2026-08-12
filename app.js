@@ -28068,6 +28068,7 @@ let activeQuiz = [];
 let questionIndex = 0;
 let quizMode = 'practice';
 let examAnswers = [];
+let practiceAnsweredCount = 0;
 const validViews = ['dashboard', 'practice', 'simulations', 'errors', 'library', 'syllabus', 'methodology'];
 const viewHashes = {
   dashboard: 'inicio',
@@ -28288,6 +28289,7 @@ function startQuiz(set, mode = 'practice') {
   questionIndex = 0;
   quizMode = mode;
   examAnswers = [];
+  practiceAnsweredCount = 0;
   state.sessions += 1;
   persist();
 
@@ -28329,7 +28331,7 @@ function renderQuestion() {
 
   const selectedAns = examAnswers[questionIndex];
 
-  card.innerHTML = `<div class="quiz-meta"><span>${isExam ? 'Simulacro Oficial' : q.topic}</span>${isExam ? `<span id="examTimerDisplay" style="font-weight:bold;color:var(--primary);">⏱ ${formatTimer(examTimeSeconds)}</span>` : ''}<span>Pregunta ${questionIndex + 1} de ${activeQuiz.length}</span></div><div class="quiz-body"><div class="question-topic">${isExam ? 'Modo examen · corrección al final' : q.quality || 'Redacción propia · pendiente de revisión'}</div><h2 class="question-text">${q.text}</h2><div class="answers">${q._shuffledOptions.map(([letter, text, origIdx]) => `<button class="answer ${selectedAns === origIdx ? 'selected' : ''}" data-answer="${origIdx}"><span class="answer-letter">${letter}</span><span>${text}</span></button>`).join('')}</div><div class="feedback hidden"></div></div><div class="quiz-footer"><span>${isExam ? 'Sin pistas · -0,25 por fallo · 0 en blanco' : '4 alternativas · aprendizaje con explicación'}</span><div style="display:flex;gap:8px;align-items:center;">${isExam ? `<button class="secondary-button leave-blank-btn">${selectedAns === -1 ? '✓ Dejada en blanco' : 'Dejar en blanco'}</button>` : ''}<button class="primary-button next-question ${isExam || selectedAns !== undefined ? '' : 'hidden'}">${questionIndex === activeQuiz.length - 1 ? 'Finalizar Examen' : 'Siguiente'} <span>→</span></button></div></div>`;
+  card.innerHTML = `<div class="quiz-meta"><span>${isExam ? 'Simulacro Oficial' : q.topic}</span>${isExam ? `<span id="examTimerDisplay" style="font-weight:bold;color:var(--primary);">⏱ ${formatTimer(examTimeSeconds)}</span>` : ''}<span>Pregunta ${questionIndex + 1} de ${activeQuiz.length}</span></div><div class="quiz-body"><div class="question-topic">${isExam ? 'Modo examen · corrección al final' : q.quality || 'Redacción propia · pendiente de revisión'}</div><h2 class="question-text">${q.text}</h2><div class="answers">${q._shuffledOptions.map(([letter, text, origIdx]) => `<button class="answer ${selectedAns === origIdx ? 'selected' : ''}" data-answer="${origIdx}"><span class="answer-letter">${letter}</span><span>${text}</span></button>`).join('')}</div><div class="feedback hidden"></div></div><div class="quiz-footer"><span>${isExam ? 'Sin pistas · -0,25 por fallo · 0 en blanco' : '4 alternativas · aprendizaje con explicación'}</span><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">${isExam ? `<button class="secondary-button leave-blank-btn">${selectedAns === -1 ? '✓ Dejada en blanco' : 'Dejar en blanco'}</button>` : '<button class="secondary-button finish-practice-early">Terminar por hoy</button>'}<button class="primary-button next-question ${isExam || selectedAns !== undefined ? '' : 'hidden'}">${questionIndex === activeQuiz.length - 1 ? (isExam ? 'Finalizar examen' : 'Finalizar práctica') : 'Siguiente'} <span>→</span></button></div></div>`;
 
   card.querySelectorAll('.answer').forEach(button => button.addEventListener('click', () => answerQuestion(Number(button.dataset.answer))));
   
@@ -28344,6 +28346,10 @@ function renderQuestion() {
   if (nextBtn) {
     nextBtn.addEventListener('click', nextQuestion);
   }
+  const finishEarlyBtn = card.querySelector('.finish-practice-early');
+  if (finishEarlyBtn) {
+    finishEarlyBtn.addEventListener('click', () => finishPractice(true));
+  }
 }
 
 function answerQuestion(index) {
@@ -28356,6 +28362,7 @@ function answerQuestion(index) {
     return;
   }
   state.answered.push({ id:q.id, correct:isCorrect });
+  practiceAnsweredCount += 1;
   if (!isCorrect && !state.errors.includes(q.id)) state.errors.push(q.id);
   if (isCorrect) state.errors = state.errors.filter(id => id !== q.id);
   persist();
@@ -28399,9 +28406,13 @@ function renderExamResults() {
   card.querySelector('.finish-exam').addEventListener('click', () => { card.classList.add('hidden'); document.getElementById('practiceSetup').parentElement.classList.remove('hidden'); showView('dashboard'); });
 }
 
-function finishPractice() {
+function finishPractice(endedEarly = false) {
   const card = document.getElementById('quizCard');
-  card.innerHTML = `<div class="quiz-meta"><span>Sesión de Práctica Completada</span><span>${activeQuiz.length} preguntas</span></div><div class="quiz-body"><div class="exam-summary" style="grid-template-columns: 1fr;"><div><span class="stat-label">🎉 Sesión finalizada</span><strong>¡Buen trabajo de estudio!</strong></div></div><p style="margin-top:16px;color:var(--text);line-height:1.6;">Tus respuestas e identificadores de errores han sido guardados en tu perfil local para reforzar en futuros repasos.</p></div><div class="quiz-footer"><span>Progreso actualizado</span><button class="primary-button finish-practice">Volver al panel <span>→</span></button></div>`;
+  const heading = endedEarly ? 'Práctica terminada por hoy' : 'Sesión de práctica completada';
+  const message = endedEarly
+    ? `Has respondido ${practiceAnsweredCount} de ${activeQuiz.length} preguntas. Lo realizado queda guardado y puedes empezar otra práctica cuando quieras.`
+    : `Has respondido las ${activeQuiz.length} preguntas. Tus aciertos y errores quedan guardados para futuros repasos.`;
+  card.innerHTML = `<div class="quiz-meta"><span>${heading}</span><span>${practiceAnsweredCount} de ${activeQuiz.length} respondidas</span></div><div class="quiz-body"><div class="exam-summary" style="grid-template-columns: 1fr;"><div><span class="stat-label">${endedEarly ? 'Sesión cerrada a tu ritmo' : '🎉 Sesión finalizada'}</span><strong>¡Buen trabajo de estudio!</strong></div></div><p style="margin-top:16px;color:var(--text);line-height:1.6;">${message}</p></div><div class="quiz-footer"><span>Progreso actualizado</span><button class="primary-button finish-practice">Volver al panel <span>→</span></button></div>`;
   card.querySelector('.finish-practice').addEventListener('click', () => {
     card.classList.add('hidden');
     document.getElementById('practiceSetup').parentElement.classList.remove('hidden');

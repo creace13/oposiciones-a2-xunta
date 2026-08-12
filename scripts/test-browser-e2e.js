@@ -126,7 +126,22 @@ async function runE2ESuite() {
       nextBtn.click();
     }
   }
+  document.querySelector('.next-question').click();
   console.log('  PASADO: Práctica de 5 preguntas completada y respondida.');
+
+  // Flow 3b: Terminar una práctica antes de completar todas las preguntas
+  console.log('Test E2E 3b: Finalizando una práctica de forma anticipada...');
+  document.querySelector('.finish-practice').click();
+  document.getElementById('lengthSelect').value = '5';
+  createTestBtn.click();
+  document.querySelector('.answer').click();
+  document.querySelector('.finish-practice-early').click();
+  assert.strictEqual(quizCard.textContent.includes('Práctica terminada por hoy'), true, '❌ E2E 3b Fallido: no se mostró el cierre anticipado');
+  assert.strictEqual(quizCard.textContent.includes('1 de 5 respondidas'), true, '❌ E2E 3b Fallido: el resumen no conserva el número respondido');
+  const earlySavedState = JSON.parse(window.localStorage.getItem('opoA2State'));
+  assert.strictEqual(earlySavedState.answered.length >= 6, true, '❌ E2E 3b Fallido: la respuesta realizada antes de terminar no quedó guardada');
+  document.querySelector('.finish-practice').click();
+  console.log('  PASADO: Cierre anticipado y conservación de progreso verificados.');
 
   // Flow 4: Iniciar simulacro con penalización –0.25 y calcular nota neta
   console.log('Test E2E 4: Iniciando simulacro oficial de 18 preguntas...');
