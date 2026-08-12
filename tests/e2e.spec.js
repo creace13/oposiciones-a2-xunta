@@ -29,6 +29,38 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
     }
   });
 
+  test('2b. El barajado no duplica preguntas ni cambia las opciones oficiales', async ({ page }) => {
+    await page.goto('/#practice');
+    const integrity = await page.evaluate(() => {
+      const source = [1, 2, 3, 4];
+      const shuffled = window.shuffleArray(source, () => 0);
+      const mixed = window.buildSet('mixto', 18);
+      const official = window.buildSet('historico2025', 'full');
+      return {
+        source,
+        shuffled,
+        mixedCount: mixed.length,
+        mixedUnique: new Set(mixed.map(question => question.id)).size,
+        officialCount: official.length,
+        firstOfficialId: official[0].id
+      };
+    });
+    expect(integrity.source).toEqual([1, 2, 3, 4]);
+    expect(integrity.shuffled).toEqual([2, 3, 4, 1]);
+    expect(integrity.mixedUnique).toBe(integrity.mixedCount);
+    expect(integrity.officialCount).toBe(105);
+    expect(integrity.firstOfficialId).toBe('h2025-001');
+
+    await page.selectOption('#topicSelect', 'historico2025');
+    await page.selectOption('#lengthSelect', 'full');
+    await page.click('#createTest');
+    await expect(page.locator('.answer-letter')).toHaveText(['A', 'B', 'C', 'D']);
+    const answerIndexes = await page.locator('.answer').evaluateAll(buttons => buttons.map(button => button.dataset.answer));
+    expect(answerIndexes).toEqual(['0', '1', '2', '3']);
+    await page.locator('.answer').first().click();
+    await expect(page.locator('.why-list strong')).toHaveText(['A.', 'B.', 'C.', 'D.']);
+  });
+
   test('3. Realizar y completar una sesión de práctica de 5 preguntas', async ({ page }) => {
     await page.goto('/#practice');
     await expect(page.locator('#practice')).toBeVisible();

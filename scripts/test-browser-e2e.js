@@ -105,6 +105,29 @@ async function runE2ESuite() {
   }
   console.log('  PASADO: Navegación por todas las secciones verificada.');
 
+  // Flow 2b: Integridad del barajado y de las letras de respuesta
+  console.log('Test E2E 2b: Verificando barajado sin duplicados y opciones estables...');
+  const sourceOrder = [1, 2, 3, 4];
+  const deterministicShuffle = Array.from(window.shuffleArray(sourceOrder, () => 0));
+  assert.strictEqual(sourceOrder.join(','), '1,2,3,4', '❌ E2E 2b Fallido: el barajado modificó la lista original');
+  assert.strictEqual(deterministicShuffle.join(','), '2,3,4,1', '❌ E2E 2b Fallido: Fisher-Yates no produjo la permutación esperada');
+  const mixedSet = Array.from(window.buildSet('mixto', 18));
+  assert.strictEqual(new Set(mixedSet.map(question => question.id)).size, mixedSet.length, '❌ E2E 2b Fallido: aparecieron preguntas duplicadas');
+  const officialSet = Array.from(window.buildSet('historico2025', 'full'));
+  assert.strictEqual(officialSet.length, 105, '❌ E2E 2b Fallido: el histórico completo no contiene 105 preguntas');
+  assert.strictEqual(officialSet[0].id, 'h2025-001', '❌ E2E 2b Fallido: se alteró el orden oficial del histórico');
+  const originalOptions = JSON.stringify(officialSet[0].options);
+  window.startQuiz([officialSet[0]], 'practice');
+  const renderedAnswers = [...document.querySelectorAll('.answer')];
+  assert.strictEqual(renderedAnswers.map(button => button.dataset.answer).join(','), '0,1,2,3', '❌ E2E 2b Fallido: las respuestas cambiaron de posición');
+  assert.strictEqual(renderedAnswers.map(button => button.querySelector('.answer-letter').textContent).join(','), 'A,B,C,D', '❌ E2E 2b Fallido: las letras dejaron de coincidir con el examen');
+  assert.strictEqual(JSON.stringify(officialSet[0].options), originalOptions, '❌ E2E 2b Fallido: la pregunta fue modificada durante el renderizado');
+  renderedAnswers[0].click();
+  assert.strictEqual([...document.querySelectorAll('.why-list strong')].map(item => item.textContent).join(','), 'A.,B.,C.,D.', '❌ E2E 2b Fallido: las explicaciones no conservan las mismas letras');
+  document.querySelector('.next-question').click();
+  document.querySelector('.finish-practice').click();
+  console.log('  PASADO: Barajado, ausencia de duplicados y correspondencia A-D verificados.');
+
   // Flow 3: Iniciar práctica de 5 preguntas y responder
   console.log('Test E2E 3: Iniciando práctica de 5 preguntas...');
   const createTestBtn = document.getElementById('createTest');

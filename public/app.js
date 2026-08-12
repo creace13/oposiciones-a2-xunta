@@ -28281,10 +28281,10 @@ function renderCoverage() {
     list.innerHTML = `<section class="coverage-dashboard-board">${renderBlock('Bloque I', 'Instituciones y organización básica')}${renderBlock('Bloque II', 'Procedimiento, contratación y empleo público')}</section>`;
   }
 }
-function shuffleArray(array) {
+function shuffleArray(array, random = Math.random) {
   const arr = [...array];
   for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
@@ -28386,21 +28386,9 @@ function startQuiz(set, mode = 'practice') {
 function renderQuestion() {
   const q = activeQuiz[questionIndex]; const card = document.getElementById('quizCard');
   const isExam = quizMode === 'exam';
-
-  if (!q._shuffled || q._shuffledFor !== questionIndex) {
-    const indices = [0, 1, 2, 3].slice(0, q.options.length);
-    for (let i = indices.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [indices[i], indices[j]] = [indices[j], indices[i]];
-    }
-    const letters = ['A', 'B', 'C', 'D'];
-    q._shuffledOptions = indices.map((origIdx, displayIdx) => [letters[displayIdx], q.options[origIdx][1], origIdx]);
-    q._shuffledFor = questionIndex;
-  }
-
   const selectedAns = examAnswers[questionIndex];
 
-  card.innerHTML = `<div class="quiz-meta"><span>${isExam ? 'Simulacro Oficial' : q.topic}</span>${isExam ? `<span id="examTimerDisplay" style="font-weight:bold;color:var(--primary);">⏱ ${formatTimer(examTimeSeconds)}</span>` : ''}<span>Pregunta ${questionIndex + 1} de ${activeQuiz.length}</span></div><div class="quiz-body"><div class="question-topic">${isExam ? 'Modo examen · corrección al final' : q.quality || 'Redacción propia · pendiente de revisión'}</div><h2 class="question-text">${q.text}</h2><div class="answers">${q._shuffledOptions.map(([letter, text, origIdx]) => `<button class="answer ${selectedAns === origIdx ? 'selected' : ''}" data-answer="${origIdx}"><span class="answer-letter">${letter}</span><span>${text}</span></button>`).join('')}</div><div class="feedback hidden"></div></div><div class="quiz-footer"><span>${isExam ? 'Sin pistas · -0,25 por fallo · 0 en blanco' : '4 alternativas · aprendizaje con explicación'}</span><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">${isExam ? `<button class="secondary-button leave-blank-btn">${selectedAns === -1 ? '✓ Dejada en blanco' : 'Dejar en blanco'}</button>` : '<button class="secondary-button finish-practice-early">Terminar por hoy</button>'}<button class="primary-button next-question ${isExam || selectedAns !== undefined ? '' : 'hidden'}">${questionIndex === activeQuiz.length - 1 ? (isExam ? 'Finalizar examen' : 'Finalizar práctica') : 'Siguiente'} <span>→</span></button></div></div>`;
+  card.innerHTML = `<div class="quiz-meta"><span>${isExam ? 'Simulacro Oficial' : q.topic}</span>${isExam ? `<span id="examTimerDisplay" style="font-weight:bold;color:var(--primary);">⏱ ${formatTimer(examTimeSeconds)}</span>` : ''}<span>Pregunta ${questionIndex + 1} de ${activeQuiz.length}</span></div><div class="quiz-body"><div class="question-topic">${isExam ? 'Modo examen · corrección al final' : q.quality || 'Redacción propia · pendiente de revisión'}</div><h2 class="question-text">${q.text}</h2><div class="answers">${q.options.map(([letter, text], optionIndex) => `<button class="answer ${selectedAns === optionIndex ? 'selected' : ''}" data-answer="${optionIndex}"><span class="answer-letter">${escapeHTML(letter)}</span><span>${escapeHTML(text)}</span></button>`).join('')}</div><div class="feedback hidden"></div></div><div class="quiz-footer"><span>${isExam ? 'Sin pistas · -0,25 por fallo · 0 en blanco' : '4 alternativas · aprendizaje con explicación'}</span><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">${isExam ? `<button class="secondary-button leave-blank-btn">${selectedAns === -1 ? '✓ Dejada en blanco' : 'Dejar en blanco'}</button>` : '<button class="secondary-button finish-practice-early">Terminar por hoy</button>'}<button class="primary-button next-question ${isExam || selectedAns !== undefined ? '' : 'hidden'}">${questionIndex === activeQuiz.length - 1 ? (isExam ? 'Finalizar examen' : 'Finalizar práctica') : 'Siguiente'} <span>→</span></button></div></div>`;
 
   card.querySelectorAll('.answer').forEach(button => button.addEventListener('click', () => answerQuestion(Number(button.dataset.answer))));
   
