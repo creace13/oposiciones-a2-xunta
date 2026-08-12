@@ -15,6 +15,7 @@ const officialSources = {
   incompatibilities: 'https://www.boe.es/buscar/act.php?id=BOE-A-1985-151',
   disability: 'https://www.boe.es/buscar/act.php?id=BOE-A-2013-12632',
   employment: 'documentos/troncal/galicia/ley-2-2015-empleo-publico-galicia.html',
+  employmentCurrent: 'https://www.boe.es/buscar/act.php?id=BOE-A-2015-5677',
   law16: 'https://www.xunta.gal/dog/Publicados/2010/20101231/Anuncio3C07E_es.html',
   xuntaPresidency: 'documentos/troncal/galicia/ley-1-1983-xunta-presidencia.pdf',
   xunta: 'documentos/troncal/galicia/ley-1-1983-xunta-presidencia.pdf',
@@ -28167,6 +28168,126 @@ const historical2025ExpandedReview = {
     quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
     explanation: 'La opción B es correcta. El artículo 34.3 de la Ley 2/2015 permite que, en las entidades públicas instrumentales indicadas por la pregunta, los puestos directivos también puedan proveerse excepcionalmente con personas que todavía no tengan la condición de personal directivo, respetando los principios de mérito, capacidad, idoneidad, publicidad y concurrencia.',
     whys: ['Opción descartada (A). Describe de forma incompleta el acceso ordinario del apartado 1, pero no la excepción específica preguntada para estas entidades instrumentales.', 'Opción correcta (B). Reproduce la posibilidad excepcional establecida en el segundo párrafo del artículo 34.3.', 'Opción descartada (C). Restringe la provisión al personal funcionario de carrera y omite tanto al personal laboral fijo como la excepción aplicable.', 'Opción descartada (D). El artículo 34.3 no autoriza una provisión reglamentaria con personal eventual.']
+  },
+  'h2025-081': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 57.2 de la Ley 2/2015 permite seleccionar al personal laboral fijo mediante oposición o concurso-oposición y, excepcionalmente, mediante concurso de valoración de méritos.',
+    whys: ['Opción descartada (A). Omite el concurso de valoración de méritos que el artículo 57.2 admite con carácter excepcional.', 'Opción correcta (B). Reúne los dos sistemas ordinarios y la excepción previstos expresamente en el artículo 57.2.', 'Opción descartada (C). Presenta el concurso como un sistema ordinario, cuando el artículo exige que sea excepcional y de valoración de méritos.', 'Opción descartada (D). La contratación laboral no sustituye los sistemas selectivos sujetos a igualdad, mérito, capacidad y publicidad.']
+  },
+  'h2025-082': {
+    quality: 'Verificada y ampliada · Histórica oficial · Regla matizada contrastada 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es la respuesta oficial y recoge la regla general del artículo 60.e de la Ley 2/2015: tomar posesión dentro del mes siguiente a la publicación del nombramiento. Debe estudiarse con una precisión: desde 2022 el mismo artículo también permite tomar posesión dentro del plazo que establezca la convocatoria del proceso selectivo.',
+    whys: ['Opción descartada (A). El artículo 60.e expresa el plazo general en un mes, no en treinta días.', 'Opción correcta (B). Reproduce la primera posibilidad del artículo 60.e, aunque debe recordarse la alternativa del plazo fijado por la convocatoria.', 'Opción descartada (C). Añade que el cómputo comienza al día siguiente, detalle que no forma parte de la redacción de este requisito.', 'Opción descartada (D). El artículo 60.e no establece un plazo general de veinte días.']
+  },
+  'h2025-083': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 68.3 de la Ley 2/2015 dispone que la prolongación de la permanencia en servicio activo se concede, cuando proceda, por periodos de un año renovables anualmente a petición de la persona interesada, hasta la edad máxima legal.',
+    whys: ['Opción descartada (A). La prolongación no se concede de una sola vez por todo el tiempo restante hasta la edad máxima.', 'Opción correcta (B). Reproduce la duración anual, la renovación a solicitud y el límite que fija el artículo 68.3.', 'Opción descartada (C). El artículo no establece periodos iniciales de dos años.', 'Opción descartada (D). No limita la prolongación a una sola renovación; puede renovarse anualmente hasta la edad máxima.']
+  },
+  'h2025-084': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 75.1.b de la Ley 2/2015 define la promoción interna horizontal como el acceso a otro cuerpo o escala del mismo subgrupo o, si no existe subgrupo, del mismo grupo de clasificación profesional.',
+    whys: ['Opción descartada (A). Describe la carrera horizontal, es decir, el avance de grado y categoría sin cambiar de puesto, no la promoción interna horizontal.', 'Opción correcta (B). Coincide con la definición del artículo 75.1.b: acceso a otro cuerpo o escala del mismo nivel de clasificación.', 'Opción descartada (C). Describe la carrera vertical mediante provisión de puestos, una figura distinta.', 'Opción descartada (D). El acceso a un subgrupo o grupo diferente corresponde a la promoción interna vertical.']
+  },
+  'h2025-085': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 80.1 de la Ley 2/2015 reserva a la promoción interna vertical un mínimo del 25 % de las plazas convocadas, salvo en los procesos de estabilización y consolidación indicados por la pregunta.',
+    whys: ['Opción correcta (A). Conserva la palabra decisiva del artículo 80.1: la reserva es como mínimo del 25 %.', 'Opción descartada (B). Fija exactamente el 25 % y elimina la posibilidad legal de reservar un porcentaje superior.', 'Opción descartada (C). El artículo no establece un máximo del 50 % para esta reserva.', 'Opción descartada (D). Tampoco impone que la mitad de todas las plazas deba reservarse.']
+  },
+  'h2025-086': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 83.2 de la Ley 2/2015 exige que las organizaciones sindicales sean oídas al diseñar y establecer los sistemas de evaluación del desempeño.',
+    whys: ['Opción descartada (A). El artículo 83.2 menciona a las organizaciones sindicales, no limita la audiencia a las juntas de personal.', 'Opción correcta (B). Utiliza exactamente el grado de intervención previsto: las organizaciones sindicales serán oídas.', 'Opción descartada (C). Participar en el diseño atribuiría una intervención más intensa que la audiencia prevista por el artículo.', 'Opción descartada (D). La norma no exige un informe preceptivo de las organizaciones sindicales.']
+  },
+  'h2025-087': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 89.2 de la Ley 2/2015 excluye de los concursos los puestos que tengan adscrito personal funcionario de carrera por salud o rehabilitación, por violencia de género o por violencia sexual.',
+    whys: ['Opción descartada (A). Omite la rehabilitación y la violencia sexual incluidas expresamente en el artículo 89.2.', 'Opción correcta (B). Reúne todos los motivos de exclusión enumerados en el artículo 89.2.', 'Opción descartada (C). Reduce la protección a la rehabilitación y omite los demás supuestos legales.', 'Opción descartada (D). Invierte la regla: esos puestos no se incluyen en los concursos.']
+  },
+  'h2025-088': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción C es correcta. El artículo 91.2 de la Ley 2/2015 exige una antigüedad mínima de tres años como personal funcionario de carrera para participar en un concurso específico.',
+    whys: ['Opción descartada (A). Dos años es el periodo mínimo de permanencia en determinados puestos, pero no la antigüedad exigida aquí.', 'Opción descartada (B). Omite que los tres años deben haberse cumplido como personal funcionario de carrera.', 'Opción correcta (C). Reproduce tanto los tres años como la condición profesional que exige el artículo 91.2.', 'Opción descartada (D). Un año queda por debajo de la antigüedad mínima legal.']
+  },
+  'h2025-089': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 95.2 de la Ley 2/2015 reconoce a la persona cesada de un puesto de libre designación el derecho a que se le asigne otro mediante la adscripción provisional regulada en el artículo 97.',
+    whys: ['Opción correcta (A). Identifica la adscripción provisional que el artículo 95.2 remite expresamente al artículo 97.', 'Opción descartada (B). La ley no garantiza una adscripción definitiva tras el cese de libre designación.', 'Opción descartada (C). Es imprecisa porque omite el carácter provisional del procedimiento.', 'Opción descartada (D). Habla genéricamente de procedimientos de provisión y no identifica el derecho concreto reconocido por el artículo 95.2.']
+  },
+  'h2025-090': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción C es correcta. El artículo 103.5 de la Ley 2/2015 mantiene el complemento personal y transitorio hasta que la persona obtenga otro puesto con carácter definitivo mediante los procedimientos ordinarios de provisión del capítulo VI.',
+    whys: ['Opción descartada (A). El artículo 103.5 no extingue el complemento al transcurrir tres meses.', 'Opción descartada (B). Una adjudicación provisional no es el hecho que pone fin al complemento según el precepto.', 'Opción correcta (C). Reúne las dos condiciones legales: nuevo puesto definitivo y obtención por un procedimiento ordinario de provisión.', 'Opción descartada (D). La mera participación en un concurso no equivale a obtener definitivamente otro puesto.']
+  },
+  'h2025-091': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 108.1.a de la Ley 2/2015 concede cinco días hábiles por fallecimiento de un familiar de primer grado cuando se produce en distinta localidad; deben ser consecutivos e inmediatamente posteriores al hecho causante.',
+    whys: ['Opción descartada (A). Reduce el permiso a cuatro días y permite un disfrute discontinuo que no corresponde al fallecimiento.', 'Opción correcta (B). Coincide con la duración de cinco días hábiles y con su disfrute consecutivo según el artículo 108.1.a.', 'Opción descartada (C). Aunque acierta la duración, el disfrute discontinuo se prevé para otros hechos causantes, no para el fallecimiento.', 'Opción descartada (D). Tres días hábiles no es la duración aplicable al primer grado en distinta localidad.']
+  },
+  'h2025-092': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 116.1 de la Ley 2/2015 reconoce este permiso para cuidar al cónyuge o pareja de hecho o a un familiar dentro del primer grado, tanto por consanguinidad como por afinidad.',
+    whys: ['Opción correcta (A). Incluye las dos clases de parentesco y el primer grado exigido por el artículo 116.1.', 'Opción descartada (B). Omite a los familiares de primer grado por afinidad.', 'Opción descartada (C). Amplía el permiso al segundo grado, que no es el previsto en este artículo.', 'Opción descartada (D). Además de usar el segundo grado, excluye la afinidad.']
+  },
+  'h2025-093': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción C es correcta. El artículo 121.1 de la Ley 2/2015 reconoce a la madre funcionaria un permiso retribuido de veintidós semanas; la redacción vigente añade treinta y dos semanas cuando existe una única persona progenitora.',
+    whys: ['Opción descartada (A). Dieciséis semanas fue una duración anterior, pero no la aplicable al examen ni la vigente.', 'Opción descartada (B). El artículo 121.1 no fija el permiso ordinario en veinte semanas.', 'Opción correcta (C). Reproduce las veintidós semanas establecidas en el artículo 121.1.', 'Opción descartada (D). Dieciocho semanas correspondía a una fase anterior de ampliación progresiva y ya no era la duración preguntada.']
+  },
+  'h2025-094': {
+    quality: 'Verificada y ampliada · Histórica oficial · Regla modificada contrastada 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A era la respuesta correcta conforme al artículo 124 aplicable al examen: el permiso se vinculaba al nacimiento o a la efectividad de la decisión de acogimiento o adopción. Desde el 1 de enero de 2026 el artículo fue reordenado y ampliado, por lo que esta pregunta debe estudiarse como fotografía histórica y contrastarse con la redacción vigente enlazada.',
+    whys: ['Opción correcta (A). Reflejaba el inicio del permiso ligado al hecho causante en la redacción aplicable al examen.', 'Opción descartada (B). El artículo ya lo denominaba permiso del otro progenitor, no permiso por paternidad.', 'Opción descartada (C). El artículo declaraba expresamente que este permiso era independiente del uso compartido de los permisos por parto, adopción o acogimiento.', 'Opción descartada (D). El artículo permitía disfrutarlo a jornada completa o a tiempo parcial cuando las necesidades del servicio lo posibilitasen.']
+  },
+  'h2025-095': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción C es correcta. El artículo 131 de la Ley 2/2015 concede al personal funcionario una licencia sin retribución de hasta un mes en los supuestos de hospitalización prolongada o enfermedad grave descritos.',
+    whys: ['Opción descartada (A). Habla de todo el personal y convierte el límite legal de un mes en treinta días naturales.', 'Opción descartada (B). La licencia sí está expresamente regulada en el artículo 131.', 'Opción correcta (C). Identifica al personal funcionario, la ausencia de retribución y la duración máxima de un mes.', 'Opción descartada (D). La licencia regulada por este artículo no es retribuida.']
+  },
+  'h2025-096': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 141.2 de la Ley 2/2015 atribuye el pago a la Administración pública donde se encuentre el puesto cuando el curso selectivo o las prácticas se realizan desempeñando ese puesto.',
+    whys: ['Opción descartada (A). La Administración convocante paga con carácter general, pero el artículo 141.2 establece esta excepción cuando se desempeña un puesto.', 'Opción correcta (B). Reproduce la regla especial del artículo 141.2 para las prácticas realizadas ocupando un puesto de trabajo.', 'Opción descartada (C). La ley no atribuye automáticamente este pago a la consejería competente en función pública.', 'Opción descartada (D). Tampoco lo asigna de forma general a la consejería competente en presupuestos.']
+  },
+  'h2025-097': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 146 de la Ley 2/2015 remite el régimen de Seguridad Social y derechos pasivos del personal a la normativa estatal que resulte aplicable.',
+    whys: ['Opción correcta (A). Mantiene la remisión abierta a la normativa estatal aplicable que realiza el artículo 146.', 'Opción descartada (B). No todo el personal queda necesariamente encuadrado por esta ley en el régimen general.', 'Opción descartada (C). La norma tampoco impone de manera universal un régimen especial de funcionarios.', 'Opción descartada (D). El artículo remite a normativa estatal, no a una regulación autonómica propia.']
+  },
+  'h2025-098': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 149.2 de la Ley 2/2015 legitima a los sindicatos que alcancen al menos un 10 % de representación en las elecciones para delegados y juntas de personal dentro de las unidades electorales del ámbito correspondiente.',
+    whys: ['Opción correcta (A). Reproduce el umbral del 10 % y los órganos de representación funcionarial citados en el artículo 149.2.', 'Opción descartada (B). Reduce indebidamente el umbral al 5 % y añade los comités de empresa.', 'Opción descartada (C). Aunque mantiene el 10 %, incorpora los comités de empresa, que no aparecen en esta concreta regla legal.', 'Opción descartada (D). Eleva el umbral al 20 % y también altera la enumeración de órganos representativos.']
+  },
+  'h2025-099': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 156.1 de la Ley 2/2015 establece un delegado de personal en las unidades electorales con más de cinco y menos de cincuenta funcionarios; al haber exactamente treinta no se activa la regla especial de tres delegados para más de treinta.',
+    whys: ['Opción correcta (A). Treinta está dentro del tramo general de más de cinco y menos de cincuenta, sin superar el umbral especial.', 'Opción descartada (B). Los tres delegados se eligen cuando el número es superior a treinta, no cuando es exactamente treinta.', 'Opción descartada (C). Las juntas de personal se constituyen a partir de cincuenta funcionarios.', 'Opción descartada (D). Los comités de empresa representan al personal laboral y no son la figura prevista aquí para el personal funcionario.']
+  },
+  'h2025-100': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE/DOG contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es la que no está legitimada y, por eso, es la respuesta. El artículo 163.1 de la Ley 2/2015 enumera organizaciones y delegados sindicales, delegados y juntas de personal, comités de empresa y un 40 % de los empleados públicos, pero no a los delegados de prevención.',
+    whys: ['Opción correcta (A, por no estar legitimada). Los delegados de prevención no aparecen en la lista del artículo 163.1.', 'Opción descartada (B). Los comités de empresa sí están legitimados expresamente para convocar una reunión.', 'Opción descartada (C). El artículo permite convocarla a los empleados públicos cuando alcanzan al menos el 40 % del colectivo convocado.', 'Opción descartada (D). Es falsa porque la opción A no forma parte de la enumeración legal, mientras B y C sí.']
   }
 };
 

@@ -16,7 +16,7 @@ vm.runInContext(
 );
 
 const questions = context.auditQuestions;
-const reviewedIds = Array.from({ length: 80 }, (_, index) =>
+const reviewedIds = Array.from({ length: 100 }, (_, index) =>
   `h2025-${String(index + 1).padStart(3, '0')}`
 );
 const genericPhrases = [
@@ -57,6 +57,23 @@ for (const id of ['h2025-073', 'h2025-074', 'h2025-075', 'h2025-076', 'h2025-077
   if (!question.sourceUrl.includes('DOG-g-2015-90667')) {
     throw new Error(`${id} no enlaza el texto histórico oficial correcto.`);
   }
+}
+
+for (const id of Array.from({ length: 20 }, (_, index) => `h2025-${String(index + 81).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2015-5677')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 2/2015.`);
+  }
+}
+
+const nuancedDeadline = questions.find(item => item.id === 'h2025-082');
+if (!nuancedDeadline.quality.includes('Regla matizada') || !nuancedDeadline.explanation.includes('convocatoria')) {
+  throw new Error('h2025-082 no conserva la precisión sobre el plazo fijado por la convocatoria.');
+}
+
+const modifiedParentalLeave = questions.find(item => item.id === 'h2025-094');
+if (!modifiedParentalLeave.quality.includes('Regla modificada') || !modifiedParentalLeave.explanation.includes('1 de enero de 2026')) {
+  throw new Error('h2025-094 no advierte de su modificación posterior al examen.');
 }
 
 console.log('REVISIÓN JURÍDICA DEL HISTÓRICO 2025');
