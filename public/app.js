@@ -82,7 +82,7 @@ const questions = [
 questions.push(
   {
     id: "h2025-001",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 39/2015, art. 2",
     sourceUrl: officialSources.law39,
@@ -90,12 +90,12 @@ questions.push(
     text: "Segundo o artigo 2 da Lei 39/2015, do 1 de outubro, do procedemento administrativo común das administracións públicas, as entidades de dereito privado dependentes das administracións públicas quedarán suxeitas ao disposto nesta lei:",
     options: [["A", "Só cando exerzan potestades administrativas."], ["B", "Cando as normas desta lei se refiran especificamente a estas e, en todo caso, cando exerzan potestades administrativas."], ["C", "Cando as normas desta lei se refiran especificamente a estas, pero non cando exerzan potestades administrativas."], ["D", "Supletoriamente en todo caso e cando as súas competencias se deleguen por unha Administración Pública territorial."]],
     correct: 1,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción B (\"Cando as normas desta lei se refiran especificamente a estas e, en todo caso, cando exerzan potestades administrativas.\"). Pregunta oficial 1 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (B). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La plantilla oficial marca la B y el artículo 2.2.b explica el motivo: estas entidades privadas quedan sometidas a la Ley cuando un precepto se refiere expresamente a ellas y, siempre, cuando ejercen potestades administrativas.",
+    whys: ["A es incompleta: también se aplica la Ley cuando una norma se refiere específicamente a estas entidades.", "B es correcta: reúne los dos supuestos previstos en el artículo 2.2.b.", "C es incorrecta: excluye precisamente el supuesto obligatorio de ejercicio de potestades administrativas.", "D mezcla esta regla con la prevista para las corporaciones de Derecho público, que es distinta."]
   },
   {
     id: "h2025-002",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 39/2015, art. 5",
     sourceUrl: officialSources.law39,
@@ -103,12 +103,12 @@ questions.push(
     text: "Segundo o artigo 5 da Lei 39/2015, do 1 de outubro, do procedemento administrativo común das administracións públicas, a representación dos interesados con capacidade de obrar presumirase para:",
     options: [["A", "Formular solicitudes."], ["B", "Presentar declaracións responsables."], ["C", "Os actos e xestións de mero trámite."], ["D", "Interpoñer recursos."]],
     correct: 2,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción C (\"Os actos e xestións de mero trámite.\"). Pregunta oficial 2 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (C). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La plantilla oficial marca la C. El artículo 5.3 exige acreditar la representación para solicitudes, declaraciones responsables, comunicaciones y recursos; únicamente la presume en los actos y gestiones de mero trámite.",
+    whys: ["A es incorrecta: para formular una solicitud debe acreditarse la representación.", "B es incorrecta: una declaración responsable también exige acreditación.", "C es correcta: la Ley presume la representación en los actos y gestiones de mero trámite.", "D es incorrecta: para interponer un recurso debe acreditarse la representación."]
   },
   {
     id: "h2025-003",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 39/2015, art. 10",
     sourceUrl: officialSources.law39,
@@ -116,12 +116,12 @@ questions.push(
     text: "Segundo o artigo 10 da Lei 39/2015, do 1 de outubro, do procedemento administrativo común das administracións públicas, os interesados poderán asinar a través de calquera medio que permita acreditar:",
     options: [["A", "A autenticidade do consentimento e a veracidade do documento asinado."], ["B", "A autenticidade da expresión da súa vontade e consentimento, aínda que non acredite a integridade e a inalterabilidade do documento."], ["C", "A autenticidade da expresión da súa vontade ou a integridade."], ["D", "A autenticidade da expresión da súa vontade e consentimento, así como a integridade e inalterabilidade do documento."]],
     correct: 3,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción D (\"A autenticidade da expresión da súa vontade e consentimento, así como a integridade e inalterabilidade do documento.\"). Pregunta oficial 3 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (D). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia."]
+    explanation: "La plantilla oficial marca la D. El artículo 10.1 exige que la firma acredite conjuntamente la autenticidad de la voluntad y del consentimiento, además de la integridad e inalterabilidad del documento.",
+    whys: ["A sustituye requisitos legales por la veracidad del documento, que no es lo que establece este apartado.", "B omite la integridad y la inalterabilidad, que también deben quedar acreditadas.", "C ofrece requisitos alternativos e incompletos; la Ley los exige conjuntamente.", "D es correcta porque contiene todos los elementos del artículo 10.1."]
   },
   {
     id: "h2025-004",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 39/2015, art. 23",
     sourceUrl: officialSources.law39,
@@ -129,12 +129,12 @@ questions.push(
     text: "Segundo o artigo 23 da Lei 39/2015, do 1 de outubro, do procedemento administrativo común das administracións públicas, contra o acordo que resolva sobre a ampliación de prazos para resolver e notificar do procedemento administrativo:",
     options: [["A", "Cabe recurso de reposición."], ["B", "Cabe recurso de alzada."], ["C", "Non caberá recurso ningún."], ["D", "Solo cabe recurso de revisión."]],
     correct: 2,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción C (\"Non caberá recurso ningún.\"). Pregunta oficial 4 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (C). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La plantilla oficial marca la C. El artículo 23.2 ordena notificar el acuerdo sobre la ampliación del plazo máximo para resolver y, de forma expresa, establece que contra ese acuerdo no cabe recurso.",
+    whys: ["A es incorrecta: el artículo 23.2 no permite recurso de reposición.", "B es incorrecta: tampoco permite recurso de alzada.", "C es correcta: reproduce la prohibición expresa de recurrir ese acuerdo.", "D es incorrecta: la Ley no reserva para este caso un recurso de revisión."]
   },
   {
     id: "h2025-005",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 39/2015, art. 25",
     sourceUrl: officialSources.law39,
@@ -142,12 +142,12 @@ questions.push(
     text: "Segundo o artigo 25 da Lei 39/2015, do 1 de outubro, do procedemento administrativo común das administracións públicas, nos procedementos iniciados de oficio nos que a Administración exercite potestades sancionadoras, o vencemento do prazo máximo establecido sen que se ditase e notificase resolución expresa:",
     options: [["A", "Producirá a desestimación por silencio administrativo."], ["B", "Producirá a caducidade."], ["C", "Producirá a prescrición."], ["D", "Producirá o desistimento."]],
     correct: 1,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción B (\"Producirá a caducidade.\"). Pregunta oficial 5 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (B). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La plantilla oficial marca la B. Según el artículo 25.1.b, si un procedimiento sancionador iniciado de oficio supera el plazo máximo sin resolución expresa notificada, se produce su caducidad y deben archivarse las actuaciones.",
+    whys: ["A no corresponde: aquí la Ley no establece una desestimación por silencio.", "B es correcta: el efecto previsto para este procedimiento sancionador es la caducidad.", "C confunde caducidad del procedimiento con prescripción de la infracción.", "D es incorrecta: el desistimiento es una forma distinta de terminación y no nace automáticamente por vencer el plazo."]
   },
   {
     id: "h2025-006",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 39/2015, art. 30",
     sourceUrl: officialSources.law39,
@@ -155,12 +155,12 @@ questions.push(
     text: "Segundo o artigo 30 da Lei 39/2015, do 1 de outubro, do procedemento administrativo común das administracións públicas, os prazos expresados en horas, a efectos de cómputo de prazos:",
     options: [["A", "Enténdense como hábiles."], ["B", "Son hábiles, entendéndose estas como o tramo comprendido entre as 08:00 e as 15:00 dun día hábil."], ["C", "Enténdense como laborais."], ["D", "Son laborais, entendéndose estas como o tramo comprendido entre as 08:00 e 15:00 dun día laborable."]],
     correct: 0,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción A (\"Enténdense como hábiles.\"). Pregunta oficial 6 del examen Histórico oficial 2025.",
-    whys: ["Opción correcta (A). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La plantilla oficial marca la A. El artículo 30.1 dispone que, salvo regla legal o europea distinta, los plazos señalados por horas se entienden referidos a horas hábiles; son hábiles todas las horas de un día hábil.",
+    whys: ["A es correcta: es la regla literal del artículo 30.1.", "B inventa una franja de 08:00 a 15:00 que la Ley no establece.", "C usa el concepto de horas laborales, distinto del cómputo administrativo de horas hábiles.", "D reúne los dos errores: habla de horas laborales y añade una franja horaria inexistente."]
   },
   {
     id: "h2025-007",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 39/2015, art. 37",
     sourceUrl: officialSources.law39,
@@ -168,12 +168,12 @@ questions.push(
     text: "Dentro da regulación da eficacia dos actos, o artigo 37 da Lei 39/2015 dispón que:",
     options: [["A", "As resolucións administrativas de carácter xeral non poderán vulnerar o establecido nunha disposición de carácter particular, salvo que aquelas procedan dun órgano de igual ou superior xerarquía ao que ditou a disposición xeral."], ["B", "As resolucións administrativas de carácter particular non poderán vulnerar o establecido nunha disposición de carácter xeral, salvo que aquelas procedan dun órgano de igual ou superior xerarquía ao que ditou a disposición xeral."], ["C", "As resolucións administrativas de carácter particular non poderán vulnerar o establecido nunha disposición de carácter xeral, aínda que aquelas procedan dun órgano de igual ou superior xerarquía ao que ditou a disposición xeral."], ["D", "As resolucións regulamentarias de carácter particular non poderán vulnerar o establecido nunha disposición de carácter legal, aínda que aquelas procedan dun órgano de igual ou superior xerarquía ao que ditou a disposición xeral."]],
     correct: 2,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción C (\"As resolucións administrativas de carácter particular non poderán vulnerar o establecido nunha disposición de carácter xeral, aínda que aquelas procedan dun órgano de igual ou superior xerarquía ao que ditou a disposición xeral.\"). Pregunta oficial 7 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (C). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La plantilla oficial marca la C. El artículo 37.1 aplica la inderogabilidad singular: una resolución particular no puede contradecir una disposición general, aunque proceda de un órgano de igual o superior jerarquía.",
+    whys: ["A invierte la relación legal: la regla limita las resoluciones particulares frente a disposiciones generales.", "B es incorrecta porque introduce una excepción jerárquica que el artículo niega expresamente.", "C es correcta: recoge íntegramente la regla de inderogabilidad singular.", "D cambia los conceptos legales y habla de resoluciones reglamentarias y disposiciones legales."]
   },
   {
     id: "h2025-008",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 39/2015, art. 56",
     sourceUrl: officialSources.law39,
@@ -181,12 +181,12 @@ questions.push(
     text: "Segundo o artigo 56 da Lei 39/2015, do 1 de outubro, do procedemento administrativo común das administracións públicas, o acordo de iniciación do procedemento que confirma, modifica ou levanta unha medida provisional deberá efectuarse:",
     options: [["A", "Dentro dos quince días seguintes á súa adopción."], ["B", "Dentro dos vinte días seguintes á súa adopción."], ["C", "Dentro dos trinta días seguintes á súa adopción."], ["D", "Dentro dos dez días seguintes á súa adopción."]],
     correct: 0,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción A (\"Dentro dos quince días seguintes á súa adopción.\"). Pregunta oficial 8 del examen Histórico oficial 2025.",
-    whys: ["Opción correcta (A). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La plantilla oficial marca la A. El artículo 56.2 fija quince días para que el acuerdo de iniciación confirme, modifique o levante una medida provisional adoptada antes de iniciar el procedimiento; si no lo hace, la medida queda sin efecto.",
+    whys: ["A es correcta: el plazo legal es de quince días desde la adopción de la medida.", "B es incorrecta: la Ley no concede veinte días.", "C es incorrecta: la Ley no concede treinta días.", "D es incorrecta: la Ley no reduce el plazo a diez días."]
   },
   {
     id: "h2025-009",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 39/2015, art. 63",
     sourceUrl: officialSources.law39,
@@ -194,12 +194,12 @@ questions.push(
     text: "Segundo o artigo 63 da Lei 39/2015, do 1 de outubro, do procedemento administrativo común das administracións públicas, cando o infractor persista de forma continuada na comisión de feitos ou condutas tipificadas como infraccións:",
     options: [["A", "Non se poderán iniciar novos procedementos de carácter sancionador en tanto non recaese unha primeira resolución sancionadora, con carácter firme."], ["B", "Non se poderán resolver novos procedementos de carácter sancionador en tanto non recaese unha primeira resolución sancionadora, con carácter executivo."], ["C", "Non se poderán recorrer outros procedementos de carácter sancionador en tanto non recaese unha primeira resolución sancionadora, con carácter executivo."], ["D", "Non se poderán iniciar novos procedementos de carácter sancionador en tanto non recaese unha primeira resolución sancionadora, con carácter executivo."]],
     correct: 3,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción D (\"Non se poderán iniciar novos procedementos de carácter sancionador en tanto non recaese unha primeira resolución sancionadora, con carácter executivo.\"). Pregunta oficial 9 del examen Histórico oficial 2025.",
-    whys: ["Opción descartada (A). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción correcta (D). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia."]
+    explanation: "La plantilla oficial marca la D. El artículo 63.3 impide iniciar nuevos procedimientos sancionadores por una conducta continuada mientras no exista una primera resolución sancionadora con carácter ejecutivo.",
+    whys: ["A exige que la primera resolución sea firme, pero la Ley emplea el concepto de carácter ejecutivo.", "B cambia la prohibición: la norma impide iniciar otro procedimiento, no simplemente resolverlo.", "C habla de recurrir procedimientos, supuesto que no contiene el artículo.", "D es correcta: conserva tanto la prohibición de iniciar como el carácter ejecutivo de la primera resolución."]
   },
   {
     id: "h2025-010",
-    quality: "Verificada \u00b7 Hist\u00f3rica oficial \u00b7 A2 Promoci\u00f3n Espec\u00edfica 2025",
+    quality: "Verificada y ampliada \u00b7 Hist\u00f3rica oficial \u00b7 BOE contrastado 12/08/2026",
     topic: "Hist\u00f3rico oficial 2025",
     source: "Ley 39/2015, art. 65",
     sourceUrl: officialSources.law39,
@@ -207,8 +207,8 @@ questions.push(
     text: "Segundo o artigo 65 da Lei 39/2015, do 1 de outubro, do procedemento administrativo común das administracións públicas, no inicio de oficio dos procedementos de responsabilidade patrimonial, que prazo se lles concederá no acordo de iniciación do procedemento aos particulares presuntamente lesionados para que acheguen cantas alegacións, documentos ou información estimen conveniente ao seu dereito",
     options: [["A", "Dez días."], ["B", "Quince días."], ["C", "Vinte días."], ["D", "Cinco días."]],
     correct: 0,
-    explanation: "La plantilla oficial de corrección de la Xunta de Galicia marca como correcta la opción A (\"Dez días.\"). Pregunta oficial 10 del examen Histórico oficial 2025.",
-    whys: ["Opción correcta (A). Coincide expresamente con la respuesta oficial de la plantilla de corrección publicada por la Xunta de Galicia.", "Opción descartada (B). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (C). No coincide con la solución oficial fijada por el Tribunal Calificador.", "Opción descartada (D). No coincide con la solución oficial fijada por el Tribunal Calificador."]
+    explanation: "La plantilla oficial marca la A. El artículo 65.2 concede diez días a los particulares presuntamente lesionados para presentar alegaciones, documentos o información y proponer las pruebas pertinentes.",
+    whys: ["A es correcta: el plazo fijado expresamente por el artículo 65.2 es de diez días.", "B es incorrecta: el precepto no establece quince días.", "C es incorrecta: el precepto no establece veinte días.", "D es incorrecta: el precepto no reduce el plazo a cinco días."]
   },
   {
     id: "h2025-011",

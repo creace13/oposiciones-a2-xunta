@@ -146,7 +146,8 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
   });
 
   test('4b. El historial conserva aciertos y errores anteriores', async ({ page }) => {
-    await page.addInitScript(() => {
+    await page.goto('/');
+    const seededAttempts = await page.evaluate(() => {
       localStorage.setItem('opoA2State', JSON.stringify({
         goals: [],
         answered: [
@@ -159,8 +160,12 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
         sessions: 2,
         current: []
       }));
+      return JSON.parse(localStorage.getItem('opoA2State')).answered.length;
     });
+    expect(seededAttempts).toBe(4);
+    await page.reload();
     await page.goto('/#errores');
+    expect(await page.evaluate(() => JSON.parse(localStorage.getItem('opoA2State')).answered.length)).toBe(4);
 
     await expect(page.locator('#historySummary')).toContainText('Preguntas realizadas2');
     await expect(page.locator('#historySummary')).toContainText('Con algún acierto1');
