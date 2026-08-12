@@ -28400,6 +28400,113 @@ const historical2024ExpandedReview = {
     quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
     explanation: 'La opción A es correcta. El artículo 95.3 de la Ley 39/2015 aclara que la caducidad no produce por sí sola la prescripción, pero los procedimientos caducados no interrumpen el plazo de prescripción.',
     whys: ['Opción correcta (A). Reproduce el efecto expresamente establecido por el artículo 95.3.', 'Opción descartada (B). Afirma justamente lo contrario de la regla legal.', 'Opción descartada (C). La duración superior a un año no crea una excepción a esta consecuencia.', 'Opción descartada (D). Una norma reglamentaria no puede introducir por sí sola la excepción general que la opción propone.']
+  },
+  'h2024-pe-016': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción D es correcta. El artículo 96.6 de la Ley 39/2015 limita los trámites del procedimiento simplificado y solo incluye la audiencia cuando la resolución vaya a ser desfavorable para la persona interesada.',
+    whys: ['Opción descartada (A). La iniciación de oficio o a solicitud del interesado sí forma parte de la tramitación simplificada.', 'Opción descartada (B). La subsanación de la solicitud, cuando proceda, está expresamente incluida.', 'Opción descartada (C). Las alegaciones al inicio del procedimiento durante cinco días sí están previstas.', 'Opción correcta (D). La audiencia no se celebra siempre: únicamente procede si la resolución va a ser desfavorable.']
+  },
+  'h2024-pe-017': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 107.1 de la Ley 39/2015 exige declarar lesivo para el interés público un acto favorable que sea anulable antes de impugnarlo ante la jurisdicción contencioso-administrativa.',
+    whys: ['Opción descartada (A). Los actos nulos de pleno derecho se revisan por la vía del artículo 106, no mediante declaración de lesividad.', 'Opción correcta (B). La lesividad es el paso previo para impugnar actos favorables que incurren en anulabilidad.', 'Opción descartada (C). La ley no limita esta vía a los actos que reconocen una indemnización.', 'Opción descartada (D). Tampoco la restringe a actos dictados por órganos manifiestamente incompetentes.']
+  },
+  'h2024-pe-018': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción D es correcta. El artículo 116.e de la Ley 39/2015 permite inadmitir un recurso cuando el órgano competente para resolverlo pertenece a otra Administración pública; debe remitirse entonces al órgano que se considere competente.',
+    whys: ['Opción descartada (A). La falta de legitimación sí constituye una causa legal de inadmisión.', 'Opción descartada (B). Recurrir un acto no susceptible de recurso también permite inadmitirlo.', 'Opción descartada (C). Haber transcurrido el plazo de interposición es igualmente causa de inadmisión.', 'Opción correcta (D). Describe la causa relativa a que la competencia corresponda a un órgano de otra Administración pública.']
+  },
+  'h2024-pe-019': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción D es correcta. El artículo 3.1.h de la Ley 40/2015 recoge como principio de actuación la eficacia en el cumplimiento de los objetivos fijados.',
+    whys: ['Opción descartada (A). La eficiencia se refiere a asignar y utilizar los recursos públicos, no a la formulación propuesta.', 'Opción descartada (B). La ley habla de servicio efectivo a los ciudadanos, no de servicio eficaz.', 'Opción descartada (C). El principio legal es controlar la gestión y evaluar resultados, no evaluar los medios empleados.', 'Opción correcta (D). Reproduce el principio de eficacia con la referencia exacta al cumplimiento de objetivos.']
+  },
+  'h2024-pe-020': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 6.3 de la Ley 40/2015 establece que incumplir instrucciones u órdenes de servicio no afecta por sí solo a la validez de los actos dictados, sin perjuicio de la responsabilidad disciplinaria que pueda corresponder.',
+    whys: ['Opción descartada (A). El incumplimiento no vuelve nulos automáticamente los actos afectados.', 'Opción correcta (B). Mantiene la validez del acto y separa la posible consecuencia disciplinaria.', 'Opción descartada (C). Tampoco produce anulabilidad automática por el mero incumplimiento.', 'Opción descartada (D). La validez no queda condicionada a que la orden se haya publicado en un diario oficial.']
+  },
+  'h2024-pe-021': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 14.1 de la Ley 40/2015 permite a los interesados dirigirse al órgano que está conociendo del asunto para que decline su competencia y remita las actuaciones al órgano competente.',
+    whys: ['Opción descartada (A). El órgano que se considera incompetente debe remitir directamente las actuaciones y notificarlo a los interesados.', 'Opción correcta (B). Describe la petición de declinación que los interesados pueden formular ante el órgano actuante.', 'Opción descartada (C). También pueden acudir al órgano que consideran competente para que requiera de inhibición al que conoce del asunto.', 'Opción descartada (D). Los conflictos de atribuciones solo se plantean entre órganos de una misma Administración que no estén relacionados jerárquicamente.']
+  },
+  'h2024-pe-022': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción C es correcta. El artículo 26.2 de la Ley 40/2015 aplica retroactivamente las disposiciones sancionadoras favorables tanto al presunto infractor como al infractor, incluso respecto de sanciones pendientes de cumplimiento.',
+    whys: ['Opción descartada (A). La retroactividad favorable no se limita a sanciones ya cumplidas.', 'Opción descartada (B). Tampoco exige que la resolución sancionadora todavía no sea firme.', 'Opción correcta (C). Incluye tipificación, sanción, prescripción y sanciones aún pendientes, tal como dispone la ley.', 'Opción descartada (D). La regla no perjudica al interesado: solo permite retroactividad cuando le resulta favorable.']
+  },
+  'h2024-pe-023': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 31.1 de la Ley 40/2015 impide volver a sancionar unos hechos cuando coinciden el sujeto, el hecho y el fundamento de la sanción.',
+    whys: ['Opción descartada (A). Sustituye el fundamento por la sanción y no recoge la triple identidad legal.', 'Opción correcta (B). Reúne exactamente sujeto, hecho y fundamento.', 'Opción descartada (C). Omite la identidad del hecho, que es imprescindible.', 'Opción descartada (D). La identidad del derecho no es uno de los tres elementos exigidos.']
+  },
+  'h2024-pe-024': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 43.2 de la Ley 40/2015 permite que, por razones de seguridad pública, el sistema de firma electrónica identifique al empleado únicamente mediante su número de identificación profesional.',
+    whys: ['Opción correcta (A). Reproduce la excepción de seguridad pública prevista por el artículo 43.2.', 'Opción descartada (B). No se exige incluir siempre el NIF del empleado público.', 'Opción descartada (C). La identificación conjunta es la regla general del apartado 1, pero la opción la presenta como obligatoria sin admitir la excepción preguntada.', 'Opción descartada (D). La excepción legal utiliza el número de identificación profesional, no el DNI y las iniciales.']
+  },
+  'h2024-pe-025': {
+    quality: 'Verificada y ampliada · Histórica oficial · Pregunta defectuosa contrastada 12/08/2026',
+    explanation: 'La plantilla oficial señala la opción B como incorrecta, porque el artículo 48.6 de la Ley 40/2015 impide que las aportaciones financieras superen los gastos de ejecución. Sin embargo, la opción D también es jurídicamente incorrecta: el artículo 48.8 fija cinco días hábiles para registrar el convenio y diez días hábiles para publicarlo. La aplicación conserva la respuesta oficial B para reproducir el examen, pero advierte que la pregunta contiene dos respuestas inválidas.',
+    whys: ['Opción descartada (A). Mejorar la eficiencia de la gestión pública es uno de los requisitos legales de los convenios.', 'Opción oficial (B, incorrecta). Las aportaciones comprometidas no pueden superar los gastos derivados de ejecutar el convenio.', 'Opción descartada (C). Los convenios se perfeccionan por el consentimiento de las partes.', 'Opción también incorrecta (D). Confunde los plazos: el registro debe realizarse en cinco días hábiles y la publicación en el BOE dentro de los diez días hábiles siguientes a la formalización.']
+  },
+  'h2024-pe-026': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es la incorrecta y, por ello, la respuesta. El artículo 145.2 de la Ley 40/2015 permite que los órganos de cooperación tengan composición bilateral o multilateral, no únicamente bilateral.',
+    whys: ['Opción correcta (A, por ser la incorrecta). Excluye indebidamente los órganos multilaterales.', 'Opción descartada (B). La inscripción es necesaria para que sea válida la sesión constitutiva de los órganos en los que participe la Administración General del Estado.', 'Opción descartada (C). Estos órganos se rigen por la Ley 40/2015 y por sus disposiciones específicas.', 'Opción descartada (D). Su función consiste en acordar voluntariamente actuaciones que mejoren el ejercicio de las competencias respectivas.']
+  },
+  'h2024-pe-027': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción A es correcta. El artículo 151.2 de la Ley 40/2015 establece que las decisiones de una conferencia sectorial pueden adoptar la forma de acuerdo o de recomendación.',
+    whys: ['Opción correcta (A). El acuerdo es una de las dos formas de decisión previstas legalmente.', 'Opción descartada (B). El informe no aparece como forma de decisión de la conferencia sectorial.', 'Opción descartada (C). El acta documenta la reunión, pero no es la forma jurídica de la decisión preguntada.', 'Opción descartada (D). La resolución tampoco figura entre las dos modalidades del artículo 151.2.']
+  },
+  'h2024-pe-028': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    explanation: 'La opción B es correcta. El artículo 156.2 de la Ley 40/2015 define el Esquema Nacional de Seguridad como la política formada por los principios básicos y requisitos mínimos que garantizan la seguridad de la información tratada por medios electrónicos.',
+    whys: ['Opción descartada (A). El Esquema Nacional de Interoperabilidad regula criterios para compartir información y servicios, no esta política de seguridad.', 'Opción correcta (B). Es la denominación exacta de la política descrita por el artículo 156.2.', 'Opción descartada (C). La ley no crea un Esquema Nacional de Información con esta función.', 'Opción descartada (D). Tampoco denomina Esquema Nacional de Cooperación a esta política.']
+  },
+  'h2024-pe-029': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción B es correcta. Los artículos 4 y 11.4 de la Ley 9/2017 excluyen los servicios de arbitraje y conciliación de la ley: se rigen por sus normas especiales y los principios de contratación pública sirven para resolver dudas y lagunas.',
+    whys: ['Opción descartada (A). La exclusión también opera cuando quien contrata es una Administración pública.', 'Opción correcta (B). Reúne el régimen especial y la aplicación subsidiaria de los principios de la ley.', 'Opción descartada (C). La exclusión no depende de la cuantía de las prestaciones.', 'Opción descartada (D). Que exista contratación pública no elimina la exclusión expresa de estos servicios.']
+  },
+  'h2024-pe-030': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción A es correcta. El artículo 9.1 de la Ley 9/2017 excluye de su ámbito las autorizaciones y concesiones sobre bienes de dominio público, que se regulan por su legislación específica.',
+    whys: ['Opción correcta (A). Incluye conjuntamente las dos figuras excluidas por el artículo 9.1.', 'Opción descartada (B). La exclusión no se limita a las autorizaciones.', 'Opción descartada (C). Tampoco se limita solo a las concesiones.', 'Opción descartada (D). Generaliza a todos los contratos de explotación de bienes patrimoniales una formulación que el artículo 9.1 no establece.']
+  },
+  'h2024-pe-031': {
+    quality: 'Verificada y ampliada · Histórica oficial · Umbral histórico modificado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción D era correcta conforme al artículo 20.1 de la Ley 9/2017 en la fecha normativa del examen: el umbral era 5.382.000 euros. Desde el 1 de enero de 2024 fue sustituido por 5.538.000 euros, cifra que no aparece entre las opciones; por eso se conserva D como respuesta histórica y se advierte del cambio.',
+    whys: ['Opción descartada (A). 2.250.000 euros no era ni es el umbral aplicable a estos contratos.', 'Opción descartada (B). 5.548.000 euros no coincide con la cifra histórica ni con la vigente, que es 5.538.000 euros.', 'Opción descartada (C). 4.500.000 euros tampoco corresponde al artículo 20.1.', 'Opción histórica correcta (D). 5.382.000 euros fue el umbral aplicable hasta el 31 de diciembre de 2023.']
+  },
+  'h2024-pe-032': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción A es correcta. El artículo 25.1.a.2 de la Ley 9/2017 califica como privados los contratos de una Administración pública cuyo objeto sea la suscripción a revistas, publicaciones periódicas y bases de datos.',
+    whys: ['Opción correcta (A). Es la calificación expresa que realiza el artículo 25.1.a.2.', 'Opción descartada (B). La ley los exceptúa de la categoría general de contratos administrativos.', 'Opción descartada (C). Su objeto no combina prestaciones propias de distintos contratos para convertirlos en mixtos.', 'Opción descartada (D). Aunque exista una prestación, la ley les atribuye expresamente carácter privado.']
+  },
+  'h2024-pe-033': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción D es correcta. El artículo 29.4 de la Ley 9/2017 fija para los contratos de arrendamiento de bienes muebles una duración máxima de cinco años, incluidas sus posibles prórrogas.',
+    whys: ['Opción descartada (A). Un año no es el máximo legal previsto.', 'Opción descartada (B). Dos años también queda por debajo del límite establecido.', 'Opción descartada (C). Tres años no coincide con el máximo del artículo 29.4.', 'Opción correcta (D). Cinco años es la duración total máxima contando las prórrogas.']
+  },
+  'h2024-pe-034': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción B es correcta. El artículo 32.6.c de la Ley 9/2017 exige autorización del Consejo de Ministros para los encargos de poderes adjudicadores estatales cuyo gasto sea igual o superior a doce millones de euros.',
+    whys: ['Opción descartada (A). Diez millones de euros no alcanza el umbral legal.', 'Opción correcta (B). Doce millones de euros es la cifra establecida por el artículo 32.6.c.', 'Opción descartada (C). La autorización ya resulta necesaria antes de llegar a quince millones.', 'Opción descartada (D). Veinte millones también supera el umbral, pero no identifica el punto desde el que nace la obligación.']
+  },
+  'h2024-pe-035': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción C es la incorrecta y, por ello, la respuesta. El artículo 35.1 de la Ley 9/2017 exige incluir las condiciones de pago, los supuestos de modificación y la extensión del deber de confidencialidad, pero no una relación de indemnizaciones por incumplimiento.',
+    whys: ['Opción descartada (A). Las condiciones de pago forman parte del contenido mínimo del contrato.', 'Opción descartada (B). También deben recogerse los supuestos en que procede la modificación, cuando corresponda.', 'Opción correcta (C, por ser la incorrecta). El artículo 35.1 no enumera las indemnizaciones por incumplimiento entre las menciones necesarias.', 'Opción descartada (D). La extensión objetiva y temporal del deber de confidencialidad sí debe figurar cuando se imponga al contratista.']
   }
 };
 

@@ -18,7 +18,7 @@ vm.runInContext(
 const questions = context.auditQuestions;
 const reviewedIds = [
   ...Array.from({ length: 105 }, (_, index) => `h2025-${String(index + 1).padStart(3, '0')}`),
-  ...Array.from({ length: 15 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`)
+  ...Array.from({ length: 35 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`)
 ];
 const genericPhrases = [
   'No coincide con la solución oficial',
@@ -85,6 +85,23 @@ if (!currentWorksSolvency.sourceUrl.includes('BOE-A-2017-12902')) {
 const currentGalicianOrganization = questions.find(item => item.id === 'h2025-105');
 if (!currentGalicianOrganization.sourceUrl.includes('BOE-A-2011-2544')) {
   throw new Error('h2025-105 no enlaza la versión oficial consolidada de la Ley 16/2010.');
+}
+
+const defectiveAgreementQuestion = questions.find(item => item.id === 'h2024-pe-025');
+if (defectiveAgreementQuestion.correct !== 1 || !defectiveAgreementQuestion.quality.includes('Pregunta defectuosa') || !defectiveAgreementQuestion.explanation.includes('cinco días hábiles') || !defectiveAgreementQuestion.explanation.includes('diez días hábiles')) {
+  throw new Error('h2024-pe-025 no conserva la respuesta oficial y la advertencia sobre sus dos opciones incorrectas.');
+}
+
+const modifiedProcurementThreshold = questions.find(item => item.id === 'h2024-pe-031');
+if (!modifiedProcurementThreshold.quality.includes('Umbral histórico modificado') || !modifiedProcurementThreshold.explanation.includes('5.538.000 euros')) {
+  throw new Error('h2024-pe-031 no advierte de la actualización del umbral desde 2024.');
+}
+
+for (const id of Array.from({ length: 7 }, (_, index) => `h2024-pe-${String(index + 29).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2017-12902')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 9/2017.`);
+  }
 }
 
 console.log('REVISIÓN JURÍDICA DE HISTÓRICOS OFICIALES');
