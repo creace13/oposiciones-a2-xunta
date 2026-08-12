@@ -29232,6 +29232,129 @@ const historical2024ExpandedReview = {
     sourceUrl: officialSources.digitalGaliciaCurrent,
     explanation: 'La opción C es correcta. El artículo 74.1 de la Ley 4/2019 concede a la tarjeta de acreditación una validez indefinida desde la toma de posesión hasta el cese como personal empleado público.',
     whys: ['Opción descartada (A). El inicio se vincula a la toma de posesión, no al mero nombramiento.', 'Opción descartada (B). La tarjeta no termina necesariamente al alcanzar la edad de jubilación forzosa, sino con el cese efectivo como personal empleado público.', 'Opción correcta (C). Reproduce los dos momentos legales de inicio y final de la validez.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-051': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 1.1',
+    sourceUrl: officialSources.digitalGaliciaCurrent,
+    explanation: 'La opción A es correcta. El artículo 1.1 de la Ley 4/2019 define como objeto de la ley regular el modelo de administración digital en el sector público autonómico.',
+    whys: ['Opción correcta (A). Reproduce el objeto legal y su ámbito autonómico.', 'Opción descartada (B). La ley gallega no regula el modelo de administración digital del sector público estatal.', 'Opción descartada (C). Su objeto no se extiende a regular un modelo común para los sectores privado y público autonómico.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-052': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 47.1',
+    sourceUrl: officialSources.digitalGaliciaCurrent,
+    explanation: 'La opción B es correcta. El artículo 47.1 de la Ley 4/2019 permite que la Administración general y las entidades del sector público autonómico creen de oficio la dirección electrónica habilitada única de las personas obligadas a relacionarse electrónicamente.',
+    whys: ['Opción descartada (A). La norma sí permite expresamente crear esa dirección de oficio.', 'Opción correcta (B). Incluye tanto a la Administración general como a las entidades del sector público autonómico.', 'Opción descartada (C). Excluye indebidamente a las entidades del sector público autonómico.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-053': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 18.4',
+    sourceUrl: officialSources.digitalGaliciaCurrent,
+    explanation: 'La opción A es correcta. El artículo 18.4 de la Ley 4/2019 atribuye la responsabilidad de estos contenidos a la secretaría general o secretaría general técnica de la consellería correspondiente.',
+    whys: ['Opción correcta (A). Es el órgano al que la ley atribuye la responsabilidad cuando el contenido pertenece al ámbito de un órgano de la Administración general autonómica.', 'Opción descartada (B). El órgano de desarrollo digital responde de los contenidos y servicios comunes, no de cada contenido sectorial.', 'Opción descartada (C). La ley no asigna esta responsabilidad al gabinete de la persona titular de la consellería.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-054': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 27.3 de la Ley 2/2015 hace responsables a las personas que, mediante una actuación irregular, provoquen la conversión en fija de una relación laboral temporal.',
+    whys: ['Opción correcta (A). La ley emplea el término general «personas» y no limita la responsabilidad a una clase concreta de personal.', 'Opción descartada (B). Restringe indebidamente la responsabilidad al personal funcionario.', 'Opción descartada (C). La limita todavía más al personal funcionario de carrera, precisión que no figura en el artículo.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-055': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 21 de la Ley 2/2015 establece que el personal funcionario de carrera se vincula a la Administración mediante una relación estatutaria regulada por el Derecho administrativo.',
+    whys: ['Opción correcta (A). Utiliza la denominación exacta de la relación prevista por la ley.', 'Opción descartada (B). «Relación legal» no es el concepto específico empleado por el artículo.', 'Opción descartada (C). El Derecho administrativo regula la relación, pero la ley la califica expresamente como estatutaria.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-056': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 36.1 de la Ley 2/2015 somete al personal directivo al régimen disciplinario del personal funcionario, salvo cuando accedió mediante contrato laboral de alta dirección, supuesto en que se aplica el régimen laboral.',
+    whys: ['Opción descartada (A). Omite la excepción aplicable a quien accedió mediante contrato laboral de alta dirección.', 'Opción correcta (B). Recoge la regla funcionarial y la excepción prevista en el propio artículo.', 'Opción descartada (C). Invierte la regla general: el régimen laboral solo opera en el supuesto excepcional indicado.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-057': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. Conforme al artículo 67.2 de la Ley 2/2015, la inhabilitación especial produce, cuando la sentencia es firme, la pérdida de la condición funcionarial respecto de los empleos o cargos especificados en ella.',
+    whys: ['Opción correcta (A). Identifica tanto el alcance limitado a los cargos señalados como la firmeza de la sentencia.', 'Opción descartada (B). La pérdida respecto de todos los empleos o cargos corresponde a la inhabilitación absoluta, no a la especial.', 'Opción descartada (C). Además de extender indebidamente el efecto a todos los cargos, sustituye la firmeza por la mera notificación.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-058': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 83.2 de la Ley 2/2015 exige oír a las organizaciones sindicales al diseñar y establecer los sistemas de evaluación del desempeño.',
+    whys: ['Opción descartada (A). El precepto no señala específicamente a las juntas de personal.', 'Opción correcta (B). Reproduce el trámite de audiencia y el sujeto previstos por la ley.', 'Opción descartada (C). La norma dice que las organizaciones serán oídas; no formula una participación decisoria general.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-059': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 75.b de la Ley 2/2015 define la carrera vertical como el ascenso en la estructura de puestos de trabajo mediante los procedimientos de provisión establecidos en la ley.',
+    whys: ['Opción descartada (A). Describe la promoción interna vertical, que supone ascender a un cuerpo o escala superior.', 'Opción correcta (B). Contiene la definición legal de carrera vertical.', 'Opción descartada (C). Describe la carrera horizontal, que permite progresar sin cambiar de puesto.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-060': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 98.2 de la Ley 2/2015 da carácter provisional a la adscripción por salud o rehabilitación y reserva el puesto de origen cuando se ocupaba definitivamente.',
+    whys: ['Opción correcta (A). Reúne el carácter provisional y la condición exigida para reservar el puesto de origen.', 'Opción descartada (B). La adscripción no tiene carácter definitivo.', 'Opción descartada (C). La reserva no se garantiza si el puesto de origen se ocupaba provisionalmente.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-061': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción C es correcta. El artículo 110 de la Ley 2/2015 reconoce específicamente los permisos necesarios para realizar funciones sindicales, de formación sindical o de representación del personal.',
+    whys: ['Opción descartada (A). Las funciones representativas no se atienden mediante el permiso genérico por asuntos particulares.', 'Opción descartada (B). Tampoco deben reconducirse al permiso por deberes inexcusables o conciliación.', 'Opción correcta (C). Es la clase de permiso creada expresamente para esas funciones.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-062': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción C es correcta. El artículo 91.4 de la Ley 2/2015 exige que la valoración global de los méritos generales y específicos represente como mínimo el 55 % de la puntuación máxima.',
+    whys: ['Opción descartada (A). El 45 % queda por debajo del mínimo legal.', 'Opción descartada (B). El 50 % también resulta inferior al mínimo establecido.', 'Opción correcta (C). Coincide con el mínimo legal del 55 %.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-063': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción C es correcta. El artículo 127.1 de la Ley 2/2015 permite licencias por asuntos propios sin retribución por un máximo acumulado de tres meses cada dos años de servicios efectivos.',
+    whys: ['Opción descartada (A). La ley no fija dos meses cada tres años.', 'Opción descartada (B). No permite acumular tres meses por cada año de servicios.', 'Opción correcta (C). Reproduce exactamente la duración máxima y el período de cómputo.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-064': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 150.6 de la Ley 2/2015 establece que la negociación se abre, en principio, en la fecha acordada por la Administración y la mayoría de la representación sindical.',
+    whys: ['Opción descartada (A). La representación sindical no fija unilateralmente la fecha como regla inicial.', 'Opción correcta (B). Expresa el acuerdo común exigido por el artículo.', 'Opción descartada (C). La Administración tampoco fija unilateralmente la fecha como regla general.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-065': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 161.1.d de la Ley 2/2015 dispone que las juntas de personal se eligen mediante listas cerradas y un sistema proporcional corregido.',
+    whys: ['Opción correcta (A). Reproduce los dos elementos del sistema electoral de las juntas de personal.', 'Opción descartada (B). Las listas abiertas y el sistema mayoritario corresponden a los delegados de personal.', 'Opción descartada (C). Mantiene las listas cerradas, pero sustituye erróneamente el sistema proporcional por uno mayoritario.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-066': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta porque pregunta quién no está legitimado. El artículo 163.1 de la Ley 2/2015 incluye a comités de empresa y al 40 % del colectivo, pero no menciona a los delegados de prevención.',
+    whys: ['Opción correcta (A, por no estar legitimados en este artículo). Los delegados de prevención no figuran en la relación legal de convocantes.', 'Opción descartada (B). Los comités de empresa sí están legitimados expresamente.', 'Opción descartada (C). También pueden convocar los empleados públicos en número no inferior al 40 % del colectivo.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-067': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 108.2 y 108.4 de la Ley 2/2015 concede cinco días hábiles por fallecimiento de un familiar de primer grado en distinta localidad, consecutivos e inmediatamente posteriores al hecho.',
+    whys: ['Opción descartada (A). Reduce el permiso a cuatro días y permite una discontinuidad que no se aplica al fallecimiento.', 'Opción correcta (B). Recoge tanto los cinco días como su disfrute consecutivo e inmediato.', 'Opción descartada (C). Aunque acierta en la duración, permite indebidamente disfrutar los días de manera discontinua.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-068': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 123.2 de la Ley 2/2015 permite iniciar el permiso de adopción o acogimiento internacional hasta cuatro semanas antes de la resolución o decisión correspondiente.',
+    whys: ['Opción descartada (A). Mezcla el permiso previo de desplazamiento, retribuido solo con percepciones básicas, con el inicio anticipado del permiso de adopción.', 'Opción correcta (B). Reproduce el anticipo máximo de cuatro semanas.', 'Opción descartada (C). Los tres meses corresponden al posible desplazamiento previo, no al anticipo del permiso regulado en el apartado 2.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-069': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 132.1 de la Ley 2/2015 reconoce, por año completo de servicios, un mínimo de veintidós días hábiles de vacaciones retribuidas.',
+    whys: ['Opción correcta (A). Coincide con el mínimo anual expresado en días hábiles.', 'Opción descartada (B). La ley no fija como regla general treinta días naturales.', 'Opción descartada (C). Veintiséis días hábiles supera el mínimo concreto señalado por el artículo y no es su respuesta literal.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-070': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 89.2 de la Ley 2/2015 excluye de los concursos los puestos con personal adscrito por salud o rehabilitación, violencia de género o violencia sexual.',
+    whys: ['Opción descartada (A). Omite la rehabilitación y la violencia sexual, por lo que la relación queda incompleta.', 'Opción correcta (B). Reúne todos los motivos de adscripción que producen la exclusión del puesto.', 'Opción descartada (C). Solo menciona la rehabilitación y omite el resto de supuestos legales.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
   }
 };
 

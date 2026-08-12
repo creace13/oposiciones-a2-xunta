@@ -19,7 +19,7 @@ const questions = context.auditQuestions;
 const reviewedIds = [
   ...Array.from({ length: 105 }, (_, index) => `h2025-${String(index + 1).padStart(3, '0')}`),
   ...Array.from({ length: 105 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`),
-  ...Array.from({ length: 50 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)
+  ...Array.from({ length: 70 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)
 ];
 const genericPhrases = [
   'No coincide con la solución oficial',
@@ -263,6 +263,30 @@ if (!changingServicesThreshold.quality.includes('Umbral temporal explicado') || 
 const disabilityEmploymentQuota = questions.find(item => item.id === 'h2024-func-040');
 if (!disabilityEmploymentQuota.explanation.includes('2 %') || !disabilityEmploymentQuota.explanation.includes('5 %')) {
   throw new Error('h2024-func-040 no explica la diferencia entre la cuota legal y el distractor.');
+}
+
+for (const id of Array.from({ length: 3 }, (_, index) => `h2024-func-${String(index + 51).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.source.startsWith('Ley 4/2019, art.') || !question.sourceUrl.includes('BOE-A-2019-13518')) {
+    throw new Error(`${id} no conserva la referencia consolidada correcta a la Ley 4/2019.`);
+  }
+}
+
+for (const id of Array.from({ length: 17 }, (_, index) => `h2024-func-${String(index + 54).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2015-5677')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 2/2015.`);
+  }
+}
+
+const negativeMeetingQuestion = questions.find(item => item.id === 'h2024-func-066');
+if (!negativeMeetingQuestion.explanation.includes('quién no está legitimado') || !negativeMeetingQuestion.explanation.includes('40 %')) {
+  throw new Error('h2024-func-066 no explica correctamente la formulación negativa sobre el derecho de reunión.');
+}
+
+const bereavementLeave = questions.find(item => item.id === 'h2024-func-067');
+if (!bereavementLeave.explanation.includes('cinco días hábiles') || !bereavementLeave.explanation.includes('consecutivos')) {
+  throw new Error('h2024-func-067 no conserva la duración y forma de disfrute vigentes del permiso por fallecimiento.');
 }
 
 const currentHistoricalWorksSolvency = questions.find(item => item.id === 'h2024-pe-102');
