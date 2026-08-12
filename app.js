@@ -32,6 +32,7 @@ const officialSources = {
   equalityGalicia: 'documentos/troncal/galicia/ley-7-2023-igualdad-galicia.html',
   equalityGaliciaHistorical: 'https://www.boe.es/buscar/act.php?id=DOG-g-2015-90667&p=20231211&tn=2',
   transparencyGalicia: 'documentos/troncal/galicia/ley-1-2016-transparencia-galicia.html',
+  transparencyGaliciaCurrent: 'https://www.boe.es/buscar/act.php?id=BOE-A-2016-3190',
   orgGalicia: 'documentos/troncal/galicia/ley-16-2010-organizacion-xunta.html'
 };
 
@@ -28636,6 +28637,146 @@ const historical2024ExpandedReview = {
     sourceUrl: officialSources.digitalGalicia,
     explanation: 'La opción C es correcta. El artículo 74.1 de la Ley 4/2019 fija para la tarjeta de acreditación del personal empleado público una validez indefinida desde la toma de posesión hasta el cese.',
     whys: ['Opción descartada (A). El inicio legal es la toma de posesión, no el nombramiento.', 'Opción descartada (B). La tarjeta puede dejar de ser válida por un cese anterior a la edad de jubilación forzosa.', 'Opción correcta (C). Reproduce exactamente el inicio y el final de la validez previstos por el artículo.', 'Opción descartada (D). La entrega material de la tarjeta no sustituye a la toma de posesión como momento inicial.']
+  },
+  'h2024-pe-056': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 53/1984, art. 11.2',
+    sourceUrl: officialSources.incompatibilities,
+    explanation: 'La opción A es correcta. El artículo 11.2 de la Ley 53/1984 permite al Gobierno determinar por real decreto las funciones, puestos o colectivos del sector público incompatibles con ciertas profesiones o actividades privadas cuando puedan afectar a la imparcialidad, al cumplimiento de los deberes o al interés general.',
+    whys: ['Opción correcta (A). Identifica tanto al Gobierno como la forma exigida: un real decreto.', 'Opción descartada (B). La competencia no se atribuye al Ministerio de la Presidencia ni se ejerce mediante orden.', 'Opción descartada (C). Tampoco corresponde al ministerio competente en administraciones públicas mediante una orden.', 'Opción descartada (D). La ley habilita al Gobierno para concretarlo por real decreto, no exige aprobar otra ley.']
+  },
+  'h2024-pe-057': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 53/1984, art. 12.1.a',
+    sourceUrl: officialSources.incompatibilities,
+    explanation: 'La opción A es correcta. El artículo 12.1.a de la Ley 53/1984 prohíbe ejercer actividades privadas en asuntos en los que el personal esté interviniendo, tenga que intervenir por su puesto o haya intervenido durante los dos últimos años.',
+    whys: ['Opción correcta (A). Dos años es el período de incompatibilidad que fija expresamente la ley.', 'Opción descartada (B). El precepto no amplía la prohibición a cinco años.', 'Opción descartada (C). Tres años tampoco es el plazo legal.', 'Opción descartada (D). Un año reduciría indebidamente el período protegido.']
+  },
+  'h2024-pe-058': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 53/1984, art. 14',
+    sourceUrl: officialSources.incompatibilities,
+    explanation: 'La opción B es correcta. El artículo 14 de la Ley 53/1984 establece que la resolución motivada que reconozca la compatibilidad o declare la incompatibilidad debe dictarse en el plazo de dos meses.',
+    whys: ['Opción descartada (A). El artículo no fija un plazo de un mes.', 'Opción correcta (B). Dos meses es el plazo literal previsto para resolver.', 'Opción descartada (C). Tres meses excede el plazo establecido en la ley.', 'Opción descartada (D). El precepto no establece veinte días hábiles para esta resolución.']
+  },
+  'h2024-pe-059': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'RDL 1/2013, art. 2.f',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción D es correcta. El artículo 2.f del Real Decreto Legislativo 1/2013 define el acoso como toda conducta no deseada relacionada con la discapacidad que tenga por objetivo o consecuencia atentar contra la dignidad o crear un entorno intimidatorio, hostil, degradante, humillante u ofensivo.',
+    whys: ['Opción descartada (A). Describe de forma incompleta una desventaja particular, pero omite los elementos propios de la definición de acoso.', 'Opción descartada (B). Esa formulación se aproxima a la discriminación por motivo de discapacidad, no al acoso.', 'Opción descartada (C). Una desventaja provocada por una regla aparentemente neutra corresponde a la discriminación indirecta.', 'Opción correcta (D). Reúne la conducta no deseada, su relación con la discapacidad y el ataque a la dignidad o al entorno de la persona.']
+  },
+  'h2024-pe-060': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'RDL 1/2013, art. 4',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción D es la incorrecta y, por eso, la respuesta del test. El artículo 4.6 del Real Decreto Legislativo 1/2013 no extiende las prestaciones económicas en todo caso: exige que los españoles residentes en el extranjero carezcan de una protección equiparable en su país de residencia y remite a los requisitos reglamentarios.',
+    whys: ['Opción descartada (A). Reproduce la definición general de persona con discapacidad del artículo 4.1.', 'Opción descartada (B). La acreditación del grado tiene validez en todo el territorio nacional.', 'Opción descartada (C). El artículo 4 incluye el reconocimiento de un grado igual o superior al 33 % a los efectos legales previstos.', 'Opción correcta (D, por ser la incorrecta). La expresión «en todo caso» elimina las condiciones que la ley sí exige.']
+  },
+  'h2024-pe-061': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'RDL 1/2013, art. 11',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción A es correcta. El artículo 11.3 del Real Decreto Legislativo 1/2013 ordena que los planes de prevención de deficiencias y de intensificación de discapacidades contemplen de modo específico las actuaciones destinadas a las zonas rurales.',
+    whys: ['Opción correcta (A). Reproduce la previsión específica del artículo 11.3 para las zonas rurales.', 'Opción descartada (B). El artículo 11.2 incluye expresamente la seguridad y salud en el trabajo; no la excluye.', 'Opción descartada (C). El artículo 11.1 define la prevención a la vez como derecho y deber de todo ciudadano.', 'Opción descartada (D). El artículo 11.2 también incluye la atención geriátrica entre los campos de actuación.']
+  },
+  'h2024-pe-062': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'RDL 1/2013, art. 21',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción D es correcta. El artículo 21.1 del Real Decreto Legislativo 1/2013 atribuye a los servicios de orientación educativa el apoyo a los centros docentes en su proceso hacia la inclusión y, especialmente, en la orientación, evaluación e intervención educativa.',
+    whys: ['Opción descartada (A). El consejo escolar participa en el control y gestión del centro, pero no recibe esta función específica.', 'Opción descartada (B). Los equipos multiprofesionales tienen otras funciones de valoración y atención, no la descrita en el artículo 21.1.', 'Opción descartada (C). Añade una combinación de sujetos que el precepto no establece.', 'Opción correcta (D). Es el servicio al que la ley encomienda expresamente ese apoyo inclusivo y pedagógico.']
+  },
+  'h2024-pe-063': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'RDL 1/2013, art. 26.1',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción C es correcta. El artículo 26.1 del Real Decreto Legislativo 1/2013 exige que las normas técnicas de edificación incluyan las condiciones mínimas que deben reunir los edificios de cualquier tipo para permitir la accesibilidad de las personas con discapacidad.',
+    whys: ['Opción descartada (A). La obligación no se limita a edificios públicos e instalaciones administrativas.', 'Opción descartada (B). La pregunta se refiere a la normativa técnica de edificación y el precepto habla de edificios de cualquier tipo, no de vías públicas.', 'Opción correcta (C). Mantiene el alcance general que establece literalmente el artículo 26.1.', 'Opción descartada (D). La previsión de condiciones mínimas sí es obligatoria.']
+  },
+  'h2024-pe-064': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'RDL 1/2013, art. 35.5',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción A es correcta. El artículo 35.5 del Real Decreto Legislativo 1/2013 declara nulos y sin efecto los preceptos, cláusulas, pactos y decisiones empresariales que produzcan discriminación directa o indirecta desfavorable por razón de discapacidad en el empleo.',
+    whys: ['Opción correcta (A). Es la consecuencia jurídica literal establecida por el artículo 35.5.', 'Opción descartada (B). Una decisión discriminatoria es nula, pero no se convierte automáticamente por ello en acoso.', 'Opción descartada (C). El precepto no introduce una excepción de proporcionalidad para admitir estas condiciones discriminatorias.', 'Opción descartada (D). No son meramente anulables: la ley las califica como nulas y sin efecto.']
+  },
+  'h2024-pe-065': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'RDL 1/2013, art. 49',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción A es la incorrecta y, por eso, la respuesta del test. El artículo 49.1 del Real Decreto Legislativo 1/2013 permite que los servicios sociales sean prestados tanto por las administraciones públicas como por entidades sin ánimo de lucro; no reserva su prestación exclusivamente al sector público.',
+    whys: ['Opción correcta (A, por ser la incorrecta). Excluye indebidamente a las entidades sin ánimo de lucro admitidas por el artículo 49.1.', 'Opción descartada (B). El artículo 49.2 exige respetar al máximo la permanencia en el medio familiar y el entorno geográfico.', 'Opción descartada (C). El artículo 49.2 ordena tener en cuenta las barreras específicas de quienes viven en zonas rurales.', 'Opción descartada (D). El artículo 49.3 promueve la participación de las personas con discapacidad en la convivencia, dirección y control de los servicios.']
+  },
+  'h2024-pe-066': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'RDL 1/2013, art. 54.2',
+    sourceUrl: officialSources.disability,
+    explanation: 'La opción D es correcta. El artículo 54.2 del Real Decreto Legislativo 1/2013 reconoce la participación de las personas con discapacidad, incluidos niños y niñas y sus familias, a través de sus organizaciones representativas, en las decisiones, normas y estrategias que les conciernen.',
+    whys: ['Opción descartada (A). Añade la participación directa, mientras que esta regla concreta la articula a través de las organizaciones representativas.', 'Opción descartada (B). Excluye indebidamente a menores con discapacidad, mencionados expresamente en el artículo 54.2.', 'Opción descartada (C). Omite a los niños y niñas y a las familias, que la norma incluye de forma expresa.', 'Opción correcta (D). Reúne todos los sujetos indicados y el cauce representativo previsto por el artículo 54.2.']
+  },
+  'h2024-pe-067': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 1/2016, art. 2',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción B es correcta. El artículo 2 de la Ley 1/2016 incluye, entre sus principios rectores, la transparencia, la accesibilidad universal y la integridad, honestidad, imparcialidad, objetividad y respeto al marco jurídico y a la ciudadanía.',
+    whys: ['Opción descartada (A). Introduce la jerarquía y omite el respeto a la ciudadanía en la enumeración relevante del artículo 2.', 'Opción correcta (B). Reúne sin alteraciones los principios que enumera la ley.', 'Opción descartada (C). Sustituye honestidad e imparcialidad por legalidad y modifica la lista legal.', 'Opción descartada (D). Añade sostenibilidad y vuelve a omitir el respeto a la ciudadanía.']
+  },
+  'h2024-pe-068': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 1/2016, art. 7',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción C es la que no se publicará con esa denominación y, por ello, es la respuesta. El artículo 7 de la Ley 1/2016 exige publicar el plan estratégico o de gobierno, no un denominado «plan de acción del Gobierno»; las otras tres materias sí aparecen expresamente.',
+    whys: ['Opción descartada (A). El artículo 7.1.b exige publicar las delegaciones de competencias vigentes.', 'Opción descartada (B). El artículo 7.1.c incluye la localización, los medios de contacto y el horario de atención al público.', 'Opción correcta (C, por no figurar). La ley habla de plan estratégico o de gobierno, no de plan de acción del Gobierno.', 'Opción descartada (D). El artículo 7.1.e ordena publicar las agendas de actividad institucional pública de miembros de la Xunta y altos cargos.']
+  },
+  'h2024-pe-069': {
+    quality: 'Verificada y ampliada · Histórica oficial · Regla histórica modificada 01/05/2026',
+    source: 'Ley 1/2016, art. 33.1',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción C era correcta conforme al artículo 33.1 aplicable al examen: la Comisión de la Transparencia era un órgano colegiado independiente adscrito al Valedor do Pobo. Desde el 1 de mayo de 2026 está adscrita al Consejo Consultivo de Galicia; ninguna opción reproduce hoy la regla vigente, por lo que C se conserva únicamente como respuesta histórica oficial.',
+    whys: ['Opción descartada (A). Incluso en la redacción histórica faltaban el carácter colegiado y la independencia del órgano.', 'Opción descartada (B). La Comisión no estaba adscrita al Parlamento de Galicia.', 'Opción histórica correcta (C). Reproducía la redacción vigente cuando se formuló el examen; desde el 1 de mayo de 2026 la adscripción corresponde al Consejo Consultivo de Galicia.', 'Opción descartada (D). No era un órgano dependiente del Parlamento y tampoco recogía su independencia.']
+  },
+  'h2024-pe-070': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 1/2016, art. 39.2',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción A es correcta. El artículo 39.2 de la Ley 1/2016 impide percibir más de una remuneración, periódica o eventual, con cargo a presupuestos públicos, sin perjuicio de las indemnizaciones por viajes, estancias, traslados o asistencias que correspondan por actividades compatibles.',
+    whys: ['Opción correcta (A). Resume correctamente la prohibición de doble remuneración y la salvedad de las indemnizaciones por gastos.', 'Opción descartada (B). Una actividad compatible puede generar las indemnizaciones previstas, pero no autoriza una segunda remuneración pública.', 'Opción descartada (C). El límite es una sola remuneración, no dos.', 'Opción descartada (D). La prohibición alcanza los presupuestos de las administraciones públicas en general, no sólo los autonómicos.']
+  },
+  'h2024-pe-071': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 1/2016, art. 45.1',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción C es correcta. El artículo 45.1 de la Ley 1/2016 impide durante los dos años siguientes al cese que los altos cargos realicen actividades o presten servicios en entidades privadas relacionadas con expedientes sobre los que hubiesen dictado resolución durante el cargo.',
+    whys: ['Opción descartada (A). Eleva el período a tres años, pero el artículo 45.1 fija dos.', 'Opción descartada (B). Cuatro años no es el plazo previsto por la ley.', 'Opción correcta (C). Reproduce el plazo de dos años y la prohibición exacta del artículo 45.1.', 'Opción descartada (D). Cinco años tampoco corresponde al período legal posterior al cese.']
+  },
+  'h2024-pe-072': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 1/2016, art. 48.1',
+    sourceUrl: officialSources.transparencyGaliciaCurrent,
+    explanation: 'La opción A es correcta. El artículo 48.1 de la Ley 1/2016 atribuye la gestión del régimen de incompatibilidades y el conocimiento de las denuncias por posibles incumplimientos a la Oficina de Incompatibilidades y Buenas Prácticas de la Xunta de Galicia.',
+    whys: ['Opción correcta (A). Es la denominación completa y literal del órgano competente en el artículo 48.1.', 'Opción descartada (B). Omite «y Buenas Prácticas» y no reproduce el nombre legal.', 'Opción descartada (C). La norma crea una Oficina, no un Organismo con esa denominación.', 'Opción descartada (D). Cambia «Incompatibilidades» por «Compatibilidades», alterando el nombre oficial.']
+  },
+  'h2024-pe-073': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada contrastada 12/08/2026',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 2',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción C era la respuesta conforme al artículo 2 del Decreto Legislativo 2/2015 citado por la pregunta: una disposición, criterio o práctica aparentemente neutros que coloca a un sexo en desventaja particular define la discriminación indirecta. Esta norma está derogada desde el 31 de diciembre de 2023 y se conserva sólo por fidelidad al examen histórico oficial.',
+    whys: ['Opción descartada (A). La discriminación directa suponía un trato menos favorable por razón de sexo, no una regla aparentemente neutra.', 'Opción descartada (B). El artículo 2 no denominaba esta situación acoso moral por razón de género.', 'Opción correcta (C). Es la definición de discriminación indirecta que contenía el artículo 2 de la norma hoy derogada.', 'Opción descartada (D). «Discriminación sexual» no era la categoría técnica definida para este supuesto.']
+  },
+  'h2024-pe-074': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada contrastada 12/08/2026',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 50',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción B era la respuesta conforme al artículo 50 del Decreto Legislativo 2/2015: en los cursos, jornadas y demás actividades formativas organizadas o financiadas por la Administración pública gallega se reservaba un 50 % de las plazas a mujeres que reuniesen los requisitos. La norma está derogada desde el 31 de diciembre de 2023 y se mantiene sólo como contenido histórico.',
+    whys: ['Opción descartada (A). El porcentaje previsto no era el 25 %.', 'Opción correcta (B). El artículo 50 de la norma derogada fijaba expresamente una reserva del 50 %.', 'Opción descartada (C). El precepto no establecía una reserva del 33 %.', 'Opción descartada (D). Tampoco fijaba el porcentaje en el 20 %.']
+  },
+  'h2024-pe-075': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada contrastada 12/08/2026',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 59',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción B era la respuesta conforme al artículo 59 del Decreto Legislativo 2/2015: para tramitar el procedimiento informal de solución frente al acoso, la dirección de personal debía designar una persona asesora confidencial, preferiblemente una mujer. La norma está derogada desde el 31 de diciembre de 2023 y se explica sólo como referencia del examen histórico.',
+    whys: ['Opción descartada (A). El artículo expresaba una preferencia, pero no imponía que la persona designada fuese siempre una mujer.', 'Opción correcta (B). «Preferiblemente una mujer» era la formulación exacta de la norma derogada.', 'Opción descartada (C). La designación no recaía obligatoriamente en un representante del sindicato más representativo.', 'Opción descartada (D). Tampoco se atribuía necesariamente al delegado de prevención de riesgos laborales.']
   }
 };
 
