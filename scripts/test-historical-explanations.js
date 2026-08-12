@@ -18,7 +18,7 @@ vm.runInContext(
 const questions = context.auditQuestions;
 const reviewedIds = [
   ...Array.from({ length: 105 }, (_, index) => `h2025-${String(index + 1).padStart(3, '0')}`),
-  ...Array.from({ length: 75 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`)
+  ...Array.from({ length: 95 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`)
 ];
 const genericPhrases = [
   'No coincide con la solución oficial',
@@ -161,6 +161,40 @@ for (const id of ['h2024-pe-073', 'h2024-pe-074', 'h2024-pe-075']) {
   if (!question.quality.includes('Norma derogada') || !question.source.includes('Decreto legislativo 2/2015 (derogado)') || !question.sourceUrl.includes('DOG-g-2015-90667')) {
     throw new Error(`${id} no identifica correctamente su norma histórica derogada.`);
   }
+}
+
+const derogatedEqualityQuestion76 = questions.find(item => item.id === 'h2024-pe-076');
+if (!derogatedEqualityQuestion76.quality.includes('Norma derogada') || !derogatedEqualityQuestion76.source.includes('Decreto legislativo 2/2015 (derogado)') || !derogatedEqualityQuestion76.sourceUrl.includes('DOG-g-2015-90667')) {
+  throw new Error('h2024-pe-076 no identifica correctamente su norma histórica derogada.');
+}
+
+for (const id of Array.from({ length: 9 }, (_, index) => `h2024-pe-${String(index + 77).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2015-5677')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 2/2015.`);
+  }
+}
+
+const nuancedHistoricalDeadline = questions.find(item => item.id === 'h2024-pe-082');
+if (!nuancedHistoricalDeadline.quality.includes('Regla matizada') || !nuancedHistoricalDeadline.explanation.includes('convocatoria')) {
+  throw new Error('h2024-pe-082 no conserva la precisión sobre el plazo fijado por la convocatoria.');
+}
+
+for (const id of Array.from({ length: 10 }, (_, index) => `h2024-pe-${String(index + 86).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2015-5677')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 2/2015.`);
+  }
+}
+
+const expandedBirthLeave = questions.find(item => item.id === 'h2024-pe-093');
+if (!expandedBirthLeave.quality.includes('Regla vigente ampliada') || !expandedBirthLeave.explanation.includes('treinta y dos semanas')) {
+  throw new Error('h2024-pe-093 no explica la ampliación vigente para familias monoparentales.');
+}
+
+const modifiedOtherParentLeave = questions.find(item => item.id === 'h2024-pe-094');
+if (!modifiedOtherParentLeave.quality.includes('Regla modificada') || !modifiedOtherParentLeave.explanation.includes('1 de enero de 2026') || !modifiedOtherParentLeave.explanation.includes('diecinueve semanas')) {
+  throw new Error('h2024-pe-094 no distingue la respuesta histórica de la regulación vigente desde 2026.');
 }
 
 console.log('REVISIÓN JURÍDICA DE HISTÓRICOS OFICIALES');

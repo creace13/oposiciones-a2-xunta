@@ -28777,6 +28777,128 @@ const historical2024ExpandedReview = {
     sourceUrl: officialSources.equalityGaliciaHistorical,
     explanation: 'La opción B era la respuesta conforme al artículo 59 del Decreto Legislativo 2/2015: para tramitar el procedimiento informal de solución frente al acoso, la dirección de personal debía designar una persona asesora confidencial, preferiblemente una mujer. La norma está derogada desde el 31 de diciembre de 2023 y se explica sólo como referencia del examen histórico.',
     whys: ['Opción descartada (A). El artículo expresaba una preferencia, pero no imponía que la persona designada fuese siempre una mujer.', 'Opción correcta (B). «Preferiblemente una mujer» era la formulación exacta de la norma derogada.', 'Opción descartada (C). La designación no recaía obligatoriamente en un representante del sindicato más representativo.', 'Opción descartada (D). Tampoco se atribuía necesariamente al delegado de prevención de riesgos laborales.']
+  },
+  'h2024-pe-076': {
+    quality: 'Verificada y ampliada · Histórica oficial · Norma derogada contrastada 12/08/2026',
+    source: 'Decreto legislativo 2/2015 (derogado), art. 61',
+    sourceUrl: officialSources.equalityGaliciaHistorical,
+    explanation: 'La opción A era la respuesta conforme al artículo 61 del Decreto Legislativo 2/2015: el chantaje sexual se consideraba un incumplimiento muy grave del personal funcionario, estatutario o laboral al servicio de la Administración general de la Comunidad Autónoma. La norma está derogada desde el 31 de diciembre de 2023 y se conserva sólo por fidelidad al examen histórico.',
+    whys: ['Opción correcta (A). Coincide con la calificación de incumplimiento muy grave establecida en el artículo 61 de la norma derogada.', 'Opción descartada (B). La conducta no se calificaba simplemente como grave.', 'Opción descartada (C). Tampoco tenía la consideración de incumplimiento leve.', 'Opción descartada (D). Sí existe una respuesta conforme al precepto histórico: la A.']
+  },
+  'h2024-pe-077': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 2/2015, art. 6',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 6 de la Ley 2/2015 excluye de su aplicación, en materia de carrera profesional y promoción interna, retribuciones complementarias y movilidad voluntaria entre administraciones, al personal docente dependiente de la Administración general de Galicia y al personal estatutario del Servicio Gallego de Salud.',
+    whys: ['Opción descartada (A). El personal investigador tiene sus especialidades en el artículo 5, pero no es el colectivo doble que enumera el artículo 6.', 'Opción correcta (B). Reúne exactamente los dos colectivos y las materias sometidas a su normativa específica.', 'Opción descartada (C). La ley habla de personal docente dependiente de la Administración general, no de una denominada Administración especial.', 'Opción descartada (D). El personal de las entidades locales gallegas se rige por el artículo 7 y no por esta exclusión.']
+  },
+  'h2024-pe-078': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 21 de la Ley 2/2015 define al personal funcionario de carrera como quien está vinculado a una Administración pública por una relación estatutaria regulada por el derecho administrativo para prestar servicios profesionales retribuidos de carácter permanente.',
+    whys: ['Opción correcta (A). «Relación estatutaria» es la expresión utilizada por el artículo 21.', 'Opción descartada (B). «Relación legal» no es la categoría completa con la que la ley define este vínculo.', 'Opción descartada (C). El derecho administrativo regula la relación, pero la denominación del vínculo es estatutaria.', 'Opción descartada (D). Una relación contractual corresponde al ámbito laboral y no define al personal funcionario de carrera.']
+  },
+  'h2024-pe-079': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 32.1 de la Ley 2/2015 dispone que, en la Administración general de Galicia, sólo las personas integrantes del Consejo de la Xunta pueden nombrar personal eventual dentro de los límites presupuestarios.',
+    whys: ['Opción correcta (A). Limita el nombramiento a quienes integran el Consejo de la Xunta.', 'Opción descartada (B). Añade a las personas titulares de todas las entidades públicas instrumentales, que no están incluidas.', 'Opción descartada (C). Las personas titulares de agencias públicas autonómicas tampoco se añaden a esta habilitación.', 'Opción descartada (D). La referencia genérica a titulares de entes públicos amplía indebidamente los sujetos autorizados.']
+  },
+  'h2024-pe-080': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 34.3 de la Ley 2/2015 permite que, en las entidades instrumentales indicadas, los puestos directivos puedan proveerse excepcionalmente con personas que todavía no tengan la condición de personal directivo, respetando mérito, capacidad, idoneidad, publicidad y concurrencia.',
+    whys: ['Opción descartada (A). Describe de forma incompleta el acceso ordinario, pero no la excepción preguntada.', 'Opción correcta (B). Reproduce la posibilidad excepcional del segundo párrafo del artículo 34.3.', 'Opción descartada (C). Restringe la provisión al personal funcionario y omite al laboral fijo y la excepción.', 'Opción descartada (D). El artículo 34.3 no autoriza proveer estos puestos con personal eventual.']
+  },
+  'h2024-pe-081': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 57.2 de la Ley 2/2015 permite seleccionar al personal laboral fijo mediante oposición o concurso-oposición y, excepcionalmente, mediante concurso de valoración de méritos.',
+    whys: ['Opción descartada (A). Omite el concurso de valoración de méritos admitido excepcionalmente.', 'Opción correcta (B). Reúne los dos sistemas ordinarios y la excepción legal.', 'Opción descartada (C). Presenta el concurso como ordinario, cuando debe ser excepcional y de valoración de méritos.', 'Opción descartada (D). La contratación laboral no sustituye a los sistemas selectivos legales.']
+  },
+  'h2024-pe-082': {
+    quality: 'Verificada y ampliada · Histórica oficial · Regla matizada contrastada 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es la respuesta oficial y recoge la regla general del artículo 60.e de la Ley 2/2015: tomar posesión dentro del mes siguiente a la publicación del nombramiento. Debe estudiarse con una precisión: desde 2022 el artículo también permite tomar posesión dentro del plazo que establezca la convocatoria.',
+    whys: ['Opción descartada (A). El artículo expresa el plazo general en un mes, no en treinta días.', 'Opción correcta (B). Reproduce la primera posibilidad, aunque debe recordarse la alternativa del plazo fijado por la convocatoria.', 'Opción descartada (C). Añade que el cómputo comienza al día siguiente, detalle que no figura en este requisito.', 'Opción descartada (D). El artículo no establece un plazo general de veinte días.']
+  },
+  'h2024-pe-083': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 68.3 de la Ley 2/2015 dispone que la prolongación de la permanencia en servicio activo se concede, cuando proceda, por periodos de un año renovables anualmente a petición de la persona interesada, hasta la edad máxima legal.',
+    whys: ['Opción descartada (A). No se concede de una sola vez por todo el tiempo restante.', 'Opción correcta (B). Reproduce la duración anual, la renovación a solicitud y el límite legal.', 'Opción descartada (C). El artículo no establece periodos iniciales de dos años.', 'Opción descartada (D). No limita la prolongación a una sola renovación.']
+  },
+  'h2024-pe-084': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 75.1.b de la Ley 2/2015 define la promoción interna horizontal como el acceso a otro cuerpo o escala del mismo subgrupo o, si no existe subgrupo, del mismo grupo de clasificación profesional.',
+    whys: ['Opción descartada (A). Describe la carrera horizontal, no la promoción interna horizontal.', 'Opción correcta (B). Coincide con el acceso a otro cuerpo o escala del mismo nivel de clasificación.', 'Opción descartada (C). Describe la carrera vertical mediante provisión de puestos.', 'Opción descartada (D). El acceso a un nivel diferente corresponde a la promoción interna vertical.']
+  },
+  'h2024-pe-085': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 80.1 de la Ley 2/2015 reserva a la promoción interna vertical un mínimo del 25 % de las plazas convocadas, salvo en los procesos de estabilización y consolidación indicados.',
+    whys: ['Opción correcta (A). Conserva la palabra decisiva: la reserva es como mínimo del 25 %.', 'Opción descartada (B). Fija exactamente el 25 % y elimina la posibilidad de reservar un porcentaje superior.', 'Opción descartada (C). El artículo no establece un máximo del 50 %.', 'Opción descartada (D). Tampoco impone reservar exactamente la mitad de las plazas.']
+  },
+  'h2024-pe-086': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 83.2 de la Ley 2/2015 exige que las organizaciones sindicales sean oídas al diseñar y establecer los sistemas de evaluación del desempeño.',
+    whys: ['Opción descartada (A). El artículo menciona a las organizaciones sindicales, no limita la audiencia a las juntas de personal.', 'Opción correcta (B). Utiliza exactamente el grado de intervención previsto: serán oídas.', 'Opción descartada (C). Participar en el diseño atribuiría una intervención más intensa que la audiencia legal.', 'Opción descartada (D). La norma no exige un informe preceptivo de las organizaciones sindicales.']
+  },
+  'h2024-pe-087': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 89.2 de la Ley 2/2015 excluye de los concursos los puestos que tengan adscrito personal funcionario de carrera por salud o rehabilitación, por violencia de género o por violencia sexual.',
+    whys: ['Opción descartada (A). Omite la rehabilitación y la violencia sexual.', 'Opción correcta (B). Reúne todos los motivos de exclusión enumerados en el artículo 89.2.', 'Opción descartada (C). Reduce la protección a la rehabilitación y omite los demás supuestos.', 'Opción descartada (D). Invierte la regla: esos puestos no se incluyen en los concursos.']
+  },
+  'h2024-pe-088': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción C es correcta. El artículo 91.2 de la Ley 2/2015 exige una antigüedad mínima de tres años como personal funcionario de carrera para participar en un concurso específico.',
+    whys: ['Opción descartada (A). Dos años no es la antigüedad exigida para este concurso.', 'Opción descartada (B). Omite que los tres años deben haberse cumplido como personal funcionario de carrera.', 'Opción correcta (C). Reproduce tanto los tres años como la condición profesional exigida.', 'Opción descartada (D). Un año queda por debajo de la antigüedad mínima legal.']
+  },
+  'h2024-pe-089': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 95.2 de la Ley 2/2015 reconoce a la persona cesada de un puesto de libre designación el derecho a que se le asigne otro mediante la adscripción provisional regulada en el artículo 97.',
+    whys: ['Opción correcta (A). Identifica la adscripción provisional a la que remite expresamente el artículo 95.2.', 'Opción descartada (B). La ley no garantiza una adscripción definitiva tras el cese.', 'Opción descartada (C). Es imprecisa porque omite el carácter provisional del procedimiento.', 'Opción descartada (D). Habla genéricamente de provisión y no identifica el derecho concreto reconocido.']
+  },
+  'h2024-pe-090': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción C es correcta. El artículo 103.5 de la Ley 2/2015 mantiene el complemento personal y transitorio hasta que la persona obtenga otro puesto con carácter definitivo mediante los procedimientos ordinarios de provisión del capítulo VI.',
+    whys: ['Opción descartada (A). El artículo no extingue el complemento al transcurrir tres meses.', 'Opción descartada (B). Una adjudicación provisional no pone fin al complemento.', 'Opción correcta (C). Reúne las dos condiciones legales: puesto definitivo y procedimiento ordinario de provisión.', 'Opción descartada (D). Participar en un concurso no equivale a obtener definitivamente otro puesto.']
+  },
+  'h2024-pe-091': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción B es correcta. El artículo 108.1.a de la Ley 2/2015 concede cinco días hábiles por fallecimiento de un familiar de primer grado cuando se produce en distinta localidad; deben ser consecutivos e inmediatamente posteriores al hecho causante.',
+    whys: ['Opción descartada (A). Reduce el permiso a cuatro días y permite un disfrute discontinuo que no corresponde al fallecimiento.', 'Opción correcta (B). Coincide con la duración y con su disfrute consecutivo.', 'Opción descartada (C). Acierta la duración, pero el disfrute discontinuo se prevé para otros hechos causantes.', 'Opción descartada (D). Tres días no es la duración aplicable al primer grado en distinta localidad.']
+  },
+  'h2024-pe-092': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A es correcta. El artículo 116.1 de la Ley 2/2015 reconoce este permiso para cuidar al cónyuge o pareja de hecho o a un familiar dentro del primer grado, tanto por consanguinidad como por afinidad.',
+    whys: ['Opción correcta (A). Incluye las dos clases de parentesco y el primer grado exigido.', 'Opción descartada (B). Omite a los familiares de primer grado por afinidad.', 'Opción descartada (C). Amplía el permiso al segundo grado, que no es el previsto.', 'Opción descartada (D). Además de usar el segundo grado, excluye la afinidad.']
+  },
+  'h2024-pe-093': {
+    quality: 'Verificada y ampliada · Histórica oficial · Regla vigente ampliada 01/01/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción C sigue siendo correcta. El artículo 121.1 de la Ley 2/2015 reconoce a la madre funcionaria un permiso retribuido de veintidós semanas. Desde el 1 de enero de 2026 la redacción vigente añade que, cuando existe una única persona progenitora, el permiso es de treinta y dos semanas; este supuesto adicional no invalida la respuesta general del examen.',
+    whys: ['Opción descartada (A). Dieciséis semanas fue una duración anterior, pero no la aplicable al examen ni la vigente.', 'Opción descartada (B). El artículo 121.1 no fija el permiso ordinario en veinte semanas.', 'Opción correcta (C). Reproduce las veintidós semanas de la regla general, hoy complementada para familias monoparentales.', 'Opción descartada (D). Dieciocho semanas correspondía a una fase anterior de ampliación progresiva.']
+  },
+  'h2024-pe-094': {
+    quality: 'Verificada y ampliada · Histórica oficial · Regla modificada contrastada 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción A era la respuesta correcta conforme al artículo 124 aplicable al examen: el permiso se vinculaba al nacimiento o a la efectividad de la decisión de acogimiento o adopción. Desde el 1 de enero de 2026 el artículo fue reordenado y ampliado y ahora regula un permiso retribuido de diecinueve semanas, por lo que esta pregunta debe estudiarse como fotografía histórica y contrastarse con la redacción vigente enlazada.',
+    whys: ['Opción histórica correcta (A). Reflejaba el inicio del permiso ligado al hecho causante en la redacción aplicable al examen.', 'Opción descartada (B). El artículo ya lo denominaba permiso del otro progenitor, no permiso por paternidad.', 'Opción descartada (C). El permiso era y sigue siendo independiente del uso compartido de los otros permisos.', 'Opción descartada (D). La redacción aplicable permitía disfrutarlo a jornada completa o parcial cuando el servicio lo posibilitase.']
+  },
+  'h2024-pe-095': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.employmentCurrent,
+    explanation: 'La opción C es correcta. El artículo 131 de la Ley 2/2015 concede al personal funcionario una licencia sin retribución de hasta un mes en los supuestos de hospitalización prolongada o enfermedad grave descritos.',
+    whys: ['Opción descartada (A). Habla de todo el personal y convierte el límite legal de un mes en treinta días naturales.', 'Opción descartada (B). La licencia sí está expresamente regulada.', 'Opción correcta (C). Identifica al personal funcionario, la ausencia de retribución y la duración máxima de un mes.', 'Opción descartada (D). La licencia regulada por este artículo no es retribuida.']
   }
 };
 
