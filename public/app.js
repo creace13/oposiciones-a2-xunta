@@ -29602,9 +29602,9 @@ if (activeNormativeHoldIds.size) {
 }
 
 const defaults = [
-  { id: 'goal-1', text: 'Completar 3 prácticas de procedimiento', progress: '0/3', done: false },
-  { id: 'goal-2', text: 'Revisar los errores de la semana', progress: '0/8', done: false },
-  { id: 'goal-3', text: 'Hacer un simulacro corto sin pausas', progress: '0/1', done: false }
+  { id: 'goal-1', text: 'Completar 3 prácticas de procedimiento', done: false },
+  { id: 'goal-2', text: 'Revisar los errores recientes', done: false },
+  { id: 'goal-3', text: 'Hacer un simulacro corto sin pausas', done: false }
 ];
 
 function getStoredState() {
@@ -29624,12 +29624,16 @@ function normalizeStoredState(stored) {
   const errors = Array.isArray(source.errors)
     ? [...new Set(source.errors.filter(id => validQuestionIds.has(id)))]
     : [];
+  const sessionHistory = Array.isArray(source.sessionHistory)
+    ? source.sessionHistory.filter(value => typeof value === 'string' && !Number.isNaN(Date.parse(value)))
+    : [];
   return {
-    version: 2,
+    version: 3,
     goals: Array.isArray(source.goals) ? source.goals : defaults.map(goal => ({ ...goal })),
     answered,
     errors,
     sessions: Number.isFinite(source.sessions) && source.sessions >= 0 ? source.sessions : 0,
+    sessionHistory,
     current: Array.isArray(source.current) ? source.current : []
   };
 }
@@ -29685,6 +29689,44 @@ function escapeHTML(value) {
     "'": '&#39;'
   }[char]));
 }
+function sameLocalDay(value, reference) {
+  const date = new Date(value);
+  return !Number.isNaN(date.getTime())
+    && date.getFullYear() === reference.getFullYear()
+    && date.getMonth() === reference.getMonth()
+    && date.getDate() === reference.getDate();
+}
+function startOfLocalWeek(reference) {
+  const start = new Date(reference.getFullYear(), reference.getMonth(), reference.getDate());
+  const mondayOffset = (start.getDay() + 6) % 7;
+  start.setDate(start.getDate() - mondayOffset);
+  return start;
+}
+function calculateExamScore(correct, wrong) {
+  return Math.max(0, Number(correct) - (Number(wrong) * 0.25));
+}
+function getPersonalMetrics(reference = new Date()) {
+  const attempts = state.answered.length;
+  const correct = state.answered.filter(attempt => attempt.correct).length;
+  const todayAttempts = state.answered.filter(attempt => attempt.answeredAt && sameLocalDay(attempt.answeredAt, reference)).length;
+  const weekStart = startOfLocalWeek(reference);
+  const nextWeek = new Date(weekStart);
+  nextWeek.setDate(nextWeek.getDate() + 7);
+  const weeklySessions = state.sessionHistory.filter(value => {
+    const date = new Date(value);
+    return date >= weekStart && date < nextWeek;
+  }).length;
+  return {
+    attempts,
+    todayAttempts,
+    weeklySessions,
+    net: attempts ? Math.max(0, ((correct - (attempts - correct) * 0.25) / attempts) * 100) : null
+  };
+}
+function formatDashboardDate(reference = new Date()) {
+  const formatted = new Intl.DateTimeFormat('es-ES', { weekday: 'long', day: 'numeric', month: 'long' }).format(reference);
+  return formatted.charAt(0).toUpperCase() + formatted.slice(1);
+}
 function showView(name, options = {}) {
   const { updateHash = true, scroll = true } = options;
   if (!validViews.includes(name)) name = 'dashboard';
@@ -29707,15 +29749,14 @@ function showView(name, options = {}) {
   if (scroll && typeof window.scrollTo === 'function') window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function updateDashboard() {
-  const attempts = state.answered.length;
-  const correct = state.answered.filter(a => a.correct).length;
-  const net = attempts ? Math.max(0, ((correct - (attempts - correct) * .25) / attempts) * 100) : null;
-  document.getElementById('dailyProgress').innerHTML = `${attempts}<span>/18</span>`;
-  document.querySelector('.ring span').textContent = `${Math.min(100, Math.round((attempts / 18) * 100))}%`;
-  document.getElementById('netScore').textContent = net === null ? '—' : `${Math.round(net)}%`;
-  document.getElementById('averageTime').textContent = attempts ? '1:08' : '—';
+  const metrics = getPersonalMetrics();
+  document.getElementById('dashboardDate').textContent = formatDashboardDate();
+  document.getElementById('dailyProgress').innerHTML = `${metrics.todayAttempts}<span>/18</span>`;
+  document.querySelector('.ring span').textContent = `${Math.min(100, Math.round((metrics.todayAttempts / 18) * 100))}%`;
+  document.getElementById('netScore').textContent = metrics.net === null ? '—' : `${Math.round(metrics.net)}%`;
+  document.getElementById('totalAttempts').textContent = metrics.attempts;
   document.getElementById('pendingReviews').textContent = state.errors.length;
-  document.getElementById('weeklySessions').textContent = state.sessions;
+  document.getElementById('weeklySessions').textContent = metrics.weeklySessions;
 
   const focusText = document.getElementById('focusCardText');
   if (focusText) {
@@ -29751,7 +29792,7 @@ function updateDashboard() {
 }
 function renderGoals() {
   const list = document.getElementById('goalsList');
-  list.innerHTML = state.goals.map(goal => `<label class="goal ${goal.done ? 'done' : ''}"><input type="checkbox" data-goal="${escapeHTML(goal.id)}" ${goal.done ? 'checked' : ''}><span>${escapeHTML(goal.text)}</span><small>${goal.done ? 'hecha' : escapeHTML(goal.progress)}</small></label>`).join('');
+  list.innerHTML = state.goals.map(goal => `<label class="goal ${goal.done ? 'done' : ''}"><input type="checkbox" data-goal="${escapeHTML(goal.id)}" ${goal.done ? 'checked' : ''}><span>${escapeHTML(goal.text)}</span><small>${goal.done ? 'hecha' : 'pendiente'}</small></label>`).join('');
   list.querySelectorAll('[data-goal]').forEach(box => box.addEventListener('change', e => { const goal = state.goals.find(g => g.id === e.target.dataset.goal); goal.done = e.target.checked; persist(); renderGoals(); }));
 }
 function recordAttempt(questionId, correct) {
@@ -29924,6 +29965,7 @@ function startQuiz(set, mode = 'practice') {
   examAnswers = [];
   practiceAnsweredCount = 0;
   state.sessions += 1;
+  state.sessionHistory.push(new Date().toISOString());
   persist();
 
   if (examTimerInterval) clearInterval(examTimerInterval);
@@ -30021,7 +30063,7 @@ function renderExamResults() {
   const correct = results.filter(r => r.correct).length;
   const blank = results.filter(r => r.isBlank).length;
   const wrong = results.length - correct - blank;
-  const net = Math.max(0, correct - (wrong * 0.25));
+  const net = calculateExamScore(correct, wrong);
 
   results.forEach(({ q, isBlank, correct }) => {
     if (!isBlank) {
@@ -30274,6 +30316,7 @@ if (deleteProgressBtn) {
     state.answered = [];
     state.errors = [];
     state.sessions = 0;
+    state.sessionHistory = [];
     state.current = [];
     activeQuiz = [];
     questionIndex = 0;
@@ -30289,7 +30332,7 @@ document.querySelectorAll('.dialog-close,.dialog-action').forEach(button => butt
   const privacyModal = document.getElementById('privacyModal');
   pauseDialog.close(); goalDialog.close(); if (authDialog) authDialog.close(); if (feedbackDialog) feedbackDialog.close(); if (resetPasswordModal) resetPasswordModal.close(); if (privacyModal) privacyModal.close();
 }));
-document.getElementById('saveGoal').addEventListener('click', () => { const input = document.getElementById('goalInput'); const text = input.value.trim(); if (!text) return; state.goals.push({ id:`goal-${Date.now()}`, text, progress:'0/1', done:false }); input.value = ''; persist(); renderGoals(); goalDialog.close(); });
+document.getElementById('saveGoal').addEventListener('click', () => { const input = document.getElementById('goalInput'); const text = input.value.trim(); if (!text) return; state.goals.push({ id:`goal-${Date.now()}`, text, done:false }); input.value = ''; persist(); renderGoals(); goalDialog.close(); });
 
 const resetPasswordForm = document.getElementById('resetPasswordForm');
 if (resetPasswordForm) {

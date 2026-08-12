@@ -111,7 +111,7 @@
       <main>
         <section class="view active" id="dashboard">
           <header class="page-header">
-            <div><p class="eyebrow">Viernes, 10 de julio</p><h1>Buenos días, Merce.</h1><p class="subtitle">Hoy no tienes que dominarlo todo. Solo avanzar una pregunta cada vez.</p></div>
+            <div><p class="eyebrow" id="dashboardDate">Hoy</p><h1>Buenos días, Merce.</h1><p class="subtitle">Hoy no tienes que dominarlo todo. Solo avanzar una pregunta cada vez.</p></div>
             <button class="quiet-button" id="pauseButton">☼ Pausa consciente</button>
           </header>
 
@@ -121,8 +121,8 @@
           </section>
 
           <section class="stat-grid" aria-label="Resumen de progreso">
-            <article><span class="stat-label">Precisión neta</span><strong id="netScore">—</strong><small>con penalización real</small></article>
-            <article><span class="stat-label">Tiempo medio</span><strong id="averageTime">—</strong><small>por pregunta</small></article>
+            <article><span class="stat-label">Precisión neta</span><strong id="netScore">—</strong><small>histórico con penalización</small></article>
+            <article><span class="stat-label">Respuestas registradas</span><strong id="totalAttempts">0</strong><small>histórico de este navegador</small></article>
             <article><span class="stat-label">Repasos pendientes</span><strong id="pendingReviews">0</strong><small>errores por consolidar</small></article>
             <article><span class="stat-label">Sesiones esta semana</span><strong id="weeklySessions">0</strong><small>sin contar rachas</small></article>
           </section>
@@ -132,7 +132,7 @@
 
           <section class="two-columns">
             <article class="panel goals-panel">
-              <div class="panel-heading"><div><p class="eyebrow">METAS DE LA SEMANA</p><h2>Pequeñas metas, avance real</h2></div><button class="text-button" id="newGoal">+ Nueva meta</button></div>
+              <div class="panel-heading"><div><p class="eyebrow">METAS PERSONALES</p><h2>Marca lo que completes</h2></div><button class="text-button" id="newGoal">+ Nueva meta</button></div>
               <div id="goalsList"></div>
             </article>
             <article class="panel readiness-panel">
@@ -456,7 +456,7 @@
       </div>
     </div>
 
-    <script src="maintenance-holds.js?v=v23-normative-maintenance-20260812"></script>
-    <script src="app.js?v=v23-normative-maintenance-20260812"></script>
+    <script src="maintenance-holds.js?v=v24-honest-metrics-20260812"></script>
+    <script src="app.js?v=v24-honest-metrics-20260812"></script>
   </body>
 </html>

@@ -21,6 +21,34 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
     await expect(page.locator('html')).toHaveAttribute('data-auth-mode', 'guest');
   });
 
+  test('1b. El panel separa hoy, esta semana y el histórico', async ({ page }) => {
+    const now = new Date();
+    const old = new Date(now);
+    old.setDate(old.getDate() - 15);
+    await page.evaluate(({ today, previous }) => {
+      localStorage.setItem('opoA2State', JSON.stringify({
+        version: 2,
+        goals: [],
+        answered: [
+          { id: 'procedimiento-1', correct: true, answeredAt: today },
+          { id: 'procedimiento-2', correct: false, answeredAt: previous },
+          { id: 'galicia-1', correct: true }
+        ],
+        errors: ['procedimiento-2'],
+        sessions: 9,
+        sessionHistory: [today, previous],
+        current: []
+      }));
+    }, { today: now.toISOString(), previous: old.toISOString() });
+    await page.reload();
+
+    await expect(page.locator('#dailyProgress')).toHaveText('1/18');
+    await expect(page.locator('#weeklySessions')).toHaveText('1');
+    await expect(page.locator('#totalAttempts')).toHaveText('3');
+    await expect(page.locator('#dashboardDate')).not.toContainText('10 de julio');
+    await expect(page.getByText('Tiempo medio')).toHaveCount(0);
+  });
+
   test('2. Navegación fluida por todas las pestañas principales', async ({ page }) => {
     const views = ['dashboard', 'practice', 'simulations', 'errors', 'library', 'syllabus'];
     for (const view of views) {
@@ -143,6 +171,9 @@ test.describe('Suite de Pruebas E2E en Navegadores Reales (Chromium, Firefox, We
     // Finalizar examen
     await page.evaluate(() => window.renderExamResults());
     await expect(page.locator('#quizCard')).toBeVisible();
+    const values = await page.locator('.exam-summary strong').allTextContents();
+    const expectedNet = Math.max(0, Number(values[0]) - (Number(values[2]) * 0.25)).toFixed(2);
+    expect(values[3]).toBe(expectedNet);
   });
 
   test('4b. El historial conserva aciertos y errores anteriores', async ({ page }) => {

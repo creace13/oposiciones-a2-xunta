@@ -82,6 +82,9 @@ async function runE2ESuite() {
   assert.strictEqual(document.body.textContent.includes('prevalece siempre la fuente oficial BOE/DOG'), true, '❌ DOM 0 Fallido: falta prevalencia de fuentes oficiales');
   assert.strictEqual(htmlContent.includes('Versión 1.2.0 estable local'), true, '❌ DOM 0 Fallido: versión estable local no publicada en la interfaz');
   assert.strictEqual(htmlContent.includes('Cuentas remotas pausadas'), true, '❌ DOM 0 Fallido: falta advertencia sobre cuentas remotas pausadas');
+  assert.strictEqual(document.getElementById('dashboardDate').textContent.includes('10 de julio'), false, '❌ DOM 0 Fallido: la fecha del panel sigue escrita a mano');
+  assert.strictEqual(document.getElementById('totalAttempts').textContent, '0', '❌ DOM 0 Fallido: el histórico de respuestas no comienza en cero');
+  assert.strictEqual(document.body.textContent.includes('Tiempo medio'), false, '❌ DOM 0 Fallido: se sigue mostrando un tiempo que la aplicación no mide');
   console.log('  PASADO: Métricas y textos de transparencia verificados.');
 
   // Flow 1: Carga de la aplicación e inicio en modo invitado
@@ -124,6 +127,9 @@ async function runE2ESuite() {
   assert.strictEqual(JSON.stringify(officialSet[0].options), originalOptions, '❌ E2E 2b Fallido: la pregunta fue modificada durante el renderizado');
   renderedAnswers[0].click();
   assert.strictEqual([...document.querySelectorAll('#quizCard .feedback .why-list strong')].map(item => item.textContent).join(','), 'A.,B.,C.,D.', '❌ E2E 2b Fallido: las explicaciones no conservan las mismas letras');
+  assert.strictEqual(document.getElementById('dailyProgress').textContent, '1/18', '❌ E2E 2b Fallido: el panel no cuenta la respuesta realizada hoy');
+  assert.strictEqual(document.getElementById('weeklySessions').textContent, '1', '❌ E2E 2b Fallido: el panel no cuenta la sesión iniciada esta semana');
+  assert.strictEqual(document.getElementById('totalAttempts').textContent, '1', '❌ E2E 2b Fallido: el histórico no cuenta la respuesta registrada');
   document.querySelector('.next-question').click();
   document.querySelector('.finish-practice').click();
   console.log('  PASADO: Barajado, ausencia de duplicados y correspondencia A-D verificados.');
@@ -211,6 +217,9 @@ async function runE2ESuite() {
   window.renderExamResults();
   const summaryHeading = document.querySelector('#quizCard h2, #quizCard h3');
   assert.strictEqual(!!summaryHeading, true, '❌ E2E 4 Fallido: Resumen de examen no mostrado');
+  const examValues = [...document.querySelectorAll('.exam-summary strong')].map(item => item.textContent);
+  const expectedNet = Math.max(0, Number(examValues[0]) - (Number(examValues[2]) * 0.25)).toFixed(2);
+  assert.strictEqual(examValues[3], expectedNet, '❌ E2E 4 Fallido: la nota neta no aplica exactamente -0,25 por fallo');
   console.log('  PASADO: Simulacro con penalización y nota neta verificado.');
 
   // Flow 4b: Historial conjunto de aciertos y errores
@@ -224,7 +233,8 @@ async function runE2ESuite() {
     errors: ['procedimiento-1', 'identificador-inexistente'],
     sessions: 2
   });
-  assert.strictEqual(migrated.version, 2, '❌ E2E 4b Fallido: el progreso no se migró a la versión actual');
+  assert.strictEqual(migrated.version, 3, '❌ E2E 4b Fallido: el progreso no se migró a la versión actual');
+  assert.deepStrictEqual(Array.from(migrated.sessionHistory), [], '❌ E2E 4b Fallido: las sesiones antiguas se presentaron falsamente como recientes');
   assert.strictEqual(migrated.answered.length, 2, '❌ E2E 4b Fallido: no se descartó un intento huérfano');
   assert.strictEqual(Array.from(migrated.errors).join(','), 'procedimiento-1', '❌ E2E 4b Fallido: no se descartó un error huérfano');
   window.showView('errors');
