@@ -4,6 +4,8 @@ Actualizado: 12 de agosto de 2026.
 
 Este procedimiento evita que el banco de preguntas envejezca sin control cuando cambia una norma, una convocatoria o una plantilla oficial. No sustituye una revisión jurídica independiente: define cómo detectar, aislar, corregir y documentar los cambios de forma reproducible.
 
+La explicación destinada a la persona titular, sin comandos ni conocimientos técnicos previos, está en `docs/GUIA-ACTUALIZACION-LEGAL.md`.
+
 ## Responsable y alcance
 
 - Responsable operativo: titular del proyecto, con apoyo técnico cuando sea necesario.

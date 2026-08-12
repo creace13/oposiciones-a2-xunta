@@ -26,10 +26,10 @@ Plataforma web independiente para la preparación del primer ejercicio tipo test
 
 Este proyecto ha sido dirigido por **creace13**, que ha definido su propósito, enfoque para opositores, criterios funcionales y decisiones finales.
 
-Su construcción se ha apoyado en una colaboración documentada entre distintas inteligencias artificiales:
+Su construcción se ha apoyado en distintas etapas documentadas de colaboración con inteligencia artificial:
 
-- **Gemini / Antigravity (Google)**: construcción y ampliación del banco, organización de fuentes, desarrollo funcional y documentación de continuidad.
-- **Codex (OpenAI)**: auditoría cruzada, revisión de experiencia de uso y transparencia, pruebas de regresión, correcciones técnicas y cierre de versiones.
+- **Gemini / Antigravity (Google), etapa histórica ya finalizada**: construcción y ampliación inicial del banco, organización de fuentes y desarrollo funcional.
+- **Codex (OpenAI), única IA activa desde el 12 de agosto de 2026**: auditoría, construcción, mantenimiento jurídico-técnico, pruebas, documentación y gestión de versiones.
 
 El trabajo se coordina mediante un protocolo Inter-IA con bitácora, auditorías correlativas y puntos de guardado reproducibles. La IA se utiliza como herramienta de construcción y revisión; la dirección del proyecto y las decisiones finales permanecen bajo responsabilidad humana.
 
@@ -53,9 +53,11 @@ La política de qué se publica y qué se mantiene fuera del repositorio está d
 
 La metodología pública del proyecto se resume en [`docs/METODOLOGIA-PUBLICA.md`](docs/METODOLOGIA-PUBLICA.md).
 
+El procedimiento comprensible para mantener las leyes está en [`docs/GUIA-ACTUALIZACION-LEGAL.md`](docs/GUIA-ACTUALIZACION-LEGAL.md), y la explicación de cómo se recupera el contexto al abrir una tarea nueva está en [`docs/CONTINUIDAD-DEL-PROYECTO.md`](docs/CONTINUIDAD-DEL-PROYECTO.md).
+
 El proyecto mantiene documentación interna de coordinación, auditoría y continuidad, pero esa sala de máquinas no forma parte del repositorio público. La decisión busca equilibrar transparencia con protección del flujo de trabajo propio del titular.
 
-Gemini / Antigravity (Google) y Codex (OpenAI) han colaborado en construcción, auditoría, pruebas y documentación bajo dirección humana.
+Las aportaciones históricas de Gemini / Antigravity y el trabajo operativo actual de Codex quedan documentados bajo dirección humana. Codex es la única IA activa salvo nueva decisión expresa del titular.
 
 ---
 
@@ -66,7 +68,8 @@ Gemini / Antigravity (Google) y Codex (OpenAI) han colaborado en construcción, 
 - **Backend / Auth**: Supabase queda conservado solo como opción técnica futura; las cuentas remotas están pausadas en la interfaz pública.
 - **Hosting**: Cloudflare Workers (Assets en `./public`).
 - **Validación del Banco**: `node scripts/validar-banco.js`.
-- **Mantenimiento normativo**: `docs/MANTENIMIENTO-NORMATIVO.md` y `node scripts/test-normative-maintenance.js`.
+- **Mantenimiento normativo**: `docs/MANTENIMIENTO-NORMATIVO.md`, `docs/GUIA-ACTUALIZACION-LEGAL.md` y `npm run test:normativa`.
+- **Continuidad entre sesiones**: `docs/CONTINUIDAD-DEL-PROYECTO.md` y la cadena privada iniciada por `AGENTS.md`.
 
 ---
 
