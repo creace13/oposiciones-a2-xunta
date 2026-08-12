@@ -122,6 +122,8 @@ async function runE2ESuite() {
   const originalOptions = JSON.stringify(officialSet[0].options);
   window.startQuiz([officialSet[0]], 'practice');
   const renderedAnswers = [...document.querySelectorAll('.answer')];
+  assert.strictEqual(document.querySelector('.question-topic').textContent.startsWith('Revisión interna'), true, '❌ E2E 2b Fallido: la interfaz atribuye una verificación jurídica externa inexistente');
+  assert.strictEqual(document.querySelector('.question-topic').textContent.startsWith('Verificada'), false, '❌ E2E 2b Fallido: reapareció la etiqueta editorial excesiva');
   assert.strictEqual(renderedAnswers.map(button => button.dataset.answer).join(','), '0,1,2,3', '❌ E2E 2b Fallido: las respuestas cambiaron de posición');
   assert.strictEqual(renderedAnswers.map(button => button.querySelector('.answer-letter').textContent).join(','), 'A,B,C,D', '❌ E2E 2b Fallido: las letras dejaron de coincidir con el examen');
   assert.strictEqual(JSON.stringify(officialSet[0].options), originalOptions, '❌ E2E 2b Fallido: la pregunta fue modificada durante el renderizado');

@@ -29727,6 +29727,13 @@ function formatDashboardDate(reference = new Date()) {
   const formatted = new Intl.DateTimeFormat('es-ES', { weekday: 'long', day: 'numeric', month: 'long' }).format(reference);
   return formatted.charAt(0).toUpperCase() + formatted.slice(1);
 }
+function formatQualityForDisplay(value) {
+  const quality = String(value || '').trim();
+  if (!quality) return 'Redacción propia · revisión interna pendiente';
+  return quality
+    .replace(/^Verificada y /, 'Revisión interna · ')
+    .replace(/^Verificada/, 'Revisión interna');
+}
 function showView(name, options = {}) {
   const { updateHash = true, scroll = true } = options;
   if (!validViews.includes(name)) name = 'dashboard';
@@ -29994,7 +30001,7 @@ function renderQuestion() {
   const isExam = quizMode === 'exam';
   const selectedAns = examAnswers[questionIndex];
 
-  card.innerHTML = `<div class="quiz-meta"><span>${isExam ? 'Simulacro Oficial' : q.topic}</span>${isExam ? `<span id="examTimerDisplay" style="font-weight:bold;color:var(--primary);">⏱ ${formatTimer(examTimeSeconds)}</span>` : ''}<span>Pregunta ${questionIndex + 1} de ${activeQuiz.length}</span></div><div class="quiz-body"><div class="question-topic">${isExam ? 'Modo examen · corrección al final' : q.quality || 'Redacción propia · pendiente de revisión'}</div><h2 class="question-text">${q.text}</h2><div class="answers">${q.options.map(([letter, text], optionIndex) => `<button class="answer ${selectedAns === optionIndex ? 'selected' : ''}" data-answer="${optionIndex}"><span class="answer-letter">${escapeHTML(letter)}</span><span>${escapeHTML(text)}</span></button>`).join('')}</div><div class="feedback hidden"></div></div><div class="quiz-footer"><span>${isExam ? 'Sin pistas · -0,25 por fallo · 0 en blanco' : '4 alternativas · aprendizaje con explicación'}</span><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">${isExam ? `<button class="secondary-button leave-blank-btn">${selectedAns === -1 ? '✓ Dejada en blanco' : 'Dejar en blanco'}</button>` : '<button class="secondary-button finish-practice-early">Terminar por hoy</button>'}<button class="primary-button next-question ${isExam || selectedAns !== undefined ? '' : 'hidden'}">${questionIndex === activeQuiz.length - 1 ? (isExam ? 'Finalizar examen' : 'Finalizar práctica') : 'Siguiente'} <span>→</span></button></div></div>`;
+  card.innerHTML = `<div class="quiz-meta"><span>${isExam ? 'Simulacro Oficial' : q.topic}</span>${isExam ? `<span id="examTimerDisplay" style="font-weight:bold;color:var(--primary);">⏱ ${formatTimer(examTimeSeconds)}</span>` : ''}<span>Pregunta ${questionIndex + 1} de ${activeQuiz.length}</span></div><div class="quiz-body"><div class="question-topic">${isExam ? 'Modo examen · corrección al final' : escapeHTML(formatQualityForDisplay(q.quality))}</div><h2 class="question-text">${q.text}</h2><div class="answers">${q.options.map(([letter, text], optionIndex) => `<button class="answer ${selectedAns === optionIndex ? 'selected' : ''}" data-answer="${optionIndex}"><span class="answer-letter">${escapeHTML(letter)}</span><span>${escapeHTML(text)}</span></button>`).join('')}</div><div class="feedback hidden"></div></div><div class="quiz-footer"><span>${isExam ? 'Sin pistas · -0,25 por fallo · 0 en blanco' : '4 alternativas · aprendizaje con explicación'}</span><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">${isExam ? `<button class="secondary-button leave-blank-btn">${selectedAns === -1 ? '✓ Dejada en blanco' : 'Dejar en blanco'}</button>` : '<button class="secondary-button finish-practice-early">Terminar por hoy</button>'}<button class="primary-button next-question ${isExam || selectedAns !== undefined ? '' : 'hidden'}">${questionIndex === activeQuiz.length - 1 ? (isExam ? 'Finalizar examen' : 'Finalizar práctica') : 'Siguiente'} <span>→</span></button></div></div>`;
 
   card.querySelectorAll('.answer').forEach(button => button.addEventListener('click', () => answerQuestion(Number(button.dataset.answer))));
   

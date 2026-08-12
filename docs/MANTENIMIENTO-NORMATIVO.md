@@ -28,6 +28,10 @@ El inventario actual cubre las 1.522 preguntas y las 32 fuentes diferenciadas:
 
 Los tres estados del índice son `EXACT`, `WHOLE_SOURCE` y `MANUAL_REVIEW`. Un estado `EXACT` solo significa que la referencia se pudo interpretar con seguridad; no certifica la vigencia ni la corrección jurídica del contenido.
 
+### Qué significa «revisión interna»
+
+La etiqueta visible «Revisión interna» indica que la pregunta contiene metadatos editoriales, fuente y justificación trabajados dentro del proyecto. No equivale a una certificación jurídica externa ni garantiza por sí sola que la norma no haya cambiado después. Las fechas antiguas conservadas en algunas etiquetas documentan el contraste realizado entonces; no deben confundirse con una comprobación hecha hoy. La vigencia actual se determina mediante el procedimiento selectivo de este documento y, para garantía profesional independiente, mediante `C02-09`.
+
 ## Lista selectiva ante un cambio confirmado
 
 Cuando una fuente oficial confirme una modificación, `npm run impacto:normativa` convierte la norma y los artículos afectados en una lista de revisión. La herramienta no descubre ni interpreta por sí sola reformas jurídicas: el aviso oficial debe identificarse primero.

@@ -43,7 +43,7 @@ const incomplete = questions.filter(question =>
 
 const localSources = Object.entries(sources).filter(([, value]) => !/^https?:/i.test(value));
 const missingLocalSources = localSources.filter(([, value]) => !fs.existsSync(path.join(root, value)));
-const verified = questions.filter(question => question.quality?.startsWith('Verificada'));
+const internallyLabelled = questions.filter(question => typeof question.quality === 'string' && question.quality.trim());
 const blockI = rows.filter(row => row.block === 'Bloque I').reduce((total, row) => total + row.current, 0);
 const blockII = rows.filter(row => row.block === 'Bloque II').reduce((total, row) => total + row.current, 0);
 
@@ -52,7 +52,7 @@ console.log(`Preguntas totales: ${questions.length}`);
 console.log(`Preguntas clasificadas: ${rows.reduce((total, row) => total + row.current, 0)}`);
 console.log(`Bloque I: ${blockI}`);
 console.log(`Bloque II: ${blockII}`);
-console.log(`Verificadas sistemáticamente: ${verified.length}`);
+console.log(`Con etiqueta editorial interna: ${internallyLabelled.length}`);
 console.log(`Preguntas incompletas: ${incomplete.length}`);
 console.log(`Identificadores duplicados: ${duplicatedIds.length}`);
 console.log(`Fuentes locales declaradas: ${localSources.length}`);
@@ -65,4 +65,3 @@ if (missingLocalSources.length) console.log(`Fuentes ausentes: ${missingLocalSou
 if (incomplete.length || duplicatedIds.length || missingLocalSources.length) process.exit(1);
 
 console.log('RESULTADO: OK');
-
