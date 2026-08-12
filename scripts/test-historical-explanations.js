@@ -18,7 +18,7 @@ vm.runInContext(
 const questions = context.auditQuestions;
 const reviewedIds = [
   ...Array.from({ length: 105 }, (_, index) => `h2025-${String(index + 1).padStart(3, '0')}`),
-  ...Array.from({ length: 35 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`)
+  ...Array.from({ length: 55 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`)
 ];
 const genericPhrases = [
   'No coincide con la solución oficial',
@@ -102,6 +102,32 @@ for (const id of Array.from({ length: 7 }, (_, index) => `h2024-pe-${String(inde
   if (!question.sourceUrl.includes('BOE-A-2017-12902')) {
     throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 9/2017.`);
   }
+}
+
+for (const id of Array.from({ length: 6 }, (_, index) => `h2024-pe-${String(index + 36).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2017-12902')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 9/2017.`);
+  }
+}
+
+for (const id of Array.from({ length: 5 }, (_, index) => `h2024-pe-${String(index + 42).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2011-2544')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 16/2010.`);
+  }
+}
+
+for (const id of Array.from({ length: 9 }, (_, index) => `h2024-pe-${String(index + 47).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.source.startsWith('Ley 4/2019, art.') || !question.sourceUrl.includes('AnuncioC3B0-180719-0001_gl.html')) {
+    throw new Error(`${id} no conserva la referencia oficial correcta a la Ley 4/2019.`);
+  }
+}
+
+const correctedDigitalSeatReference = questions.find(item => item.id === 'h2024-pe-048');
+if (correctedDigitalSeatReference.source !== 'Ley 4/2019, art. 16.2') {
+  throw new Error('h2024-pe-048 no conserva la referencia corregida al artículo 16.2 de la Ley 4/2019.');
 }
 
 console.log('REVISIÓN JURÍDICA DE HISTÓRICOS OFICIALES');

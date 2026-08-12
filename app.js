@@ -28507,6 +28507,135 @@ const historical2024ExpandedReview = {
     sourceUrl: officialSources.lcspCurrent,
     explanation: 'La opción C es la incorrecta y, por ello, la respuesta. El artículo 35.1 de la Ley 9/2017 exige incluir las condiciones de pago, los supuestos de modificación y la extensión del deber de confidencialidad, pero no una relación de indemnizaciones por incumplimiento.',
     whys: ['Opción descartada (A). Las condiciones de pago forman parte del contenido mínimo del contrato.', 'Opción descartada (B). También deben recogerse los supuestos en que procede la modificación, cuando corresponda.', 'Opción correcta (C, por ser la incorrecta). El artículo 35.1 no enumera las indemnizaciones por incumplimiento entre las menciones necesarias.', 'Opción descartada (D). La extensión objetiva y temporal del deber de confidencialidad sí debe figurar cuando se imponga al contratista.']
+  },
+  'h2024-pe-036': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción B es correcta. El artículo 50.1.b de la Ley 9/2017 fija un plazo de quince días hábiles, contado desde el día siguiente a la publicación del anuncio de licitación en el perfil de contratante cuando este indica cómo acceder a los pliegos.',
+    whys: ['Opción descartada (A). En el procedimiento negociado sin publicidad el cómputo empieza al día siguiente de enviar la invitación, pero el plazo sigue siendo de quince días hábiles, no diez.', 'Opción correcta (B). Reproduce tanto la duración como el inicio del cómputo cuando el anuncio permite acceder a los documentos.', 'Opción descartada (C). Si los pliegos no pueden facilitarse electrónicamente, el plazo empieza el día siguiente a su entrega, no el mismo día.', 'Opción descartada (D). En ese supuesto también debe contarse desde el día siguiente a aquel en que pudo accederse al contenido.']
+  },
+  'h2024-pe-037': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción A es correcta. El artículo 56.3 de la Ley 9/2017 concede a los restantes interesados cinco días hábiles para formular alegaciones en el recurso especial en materia de contratación.',
+    whys: ['Opción correcta (A). Cinco días hábiles es el plazo legal para presentar alegaciones.', 'Opción descartada (B). Dos días hábiles es inferior al plazo previsto.', 'Opción descartada (C). Tres días hábiles tampoco corresponde a este trámite de alegaciones.', 'Opción descartada (D). Repite el plazo erróneo de dos días hábiles de la opción B.']
+  },
+  'h2024-pe-038': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción C es correcta. El artículo 74.2 de la Ley 9/2017 exige indicar los requisitos mínimos de solvencia y la documentación acreditativa en el anuncio de licitación, y detallarlos en los pliegos del contrato.',
+    whys: ['Opción descartada (A). El anuncio de información previa no sustituye al anuncio de licitación para indicar estos requisitos.', 'Opción descartada (B). Los pliegos generales no concretan por sí solos la solvencia exigida en cada contratación.', 'Opción correcta (C). El anuncio de licitación debe indicar los requisitos y la documentación, que después se detallan en los pliegos.', 'Opción descartada (D). Los pliegos técnicos describen la prestación y no son el lugar señalado por el artículo para esta exigencia.']
+  },
+  'h2024-pe-039': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción C es correcta. El artículo 84.2 de la Ley 9/2017 permite que los empresarios no españoles de Estados miembros de la Unión Europea acrediten su capacidad mediante una declaración jurada o certificado cuando la legislación de su Estado no exija inscripción registral.',
+    whys: ['Opción descartada (A). Las personas jurídicas en general acreditan su capacidad mediante escritura, documento de constitución, estatutos o acto fundacional.', 'Opción descartada (B). La expresión «empresarios extranjeros» es demasiado amplia y omite la condición de pertenecer a un Estado miembro de la Unión Europea.', 'Opción correcta (C). Identifica el grupo al que el artículo 84.2 permite utilizar esa declaración o certificado.', 'Opción descartada (D). Los empresarios de Estados no miembros siguen el régimen documental específico previsto para ellos, no esta declaración jurada.']
+  },
+  'h2024-pe-040': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción A es correcta. Los artículos 89.1.h y 90.4 de la Ley 9/2017 consideran empresa de nueva creación, para estos contratos no armonizados, a la que tiene una antigüedad inferior a cinco años.',
+    whys: ['Opción correcta (A). Inferior a cinco años es la definición común utilizada para suministros y servicios.', 'Opción descartada (B). La ley no reduce la antigüedad máxima a tres años.', 'Opción descartada (C). Dos años tampoco es el límite establecido.', 'Opción descartada (D). Una antigüedad inferior a un año es más restrictiva que la definición legal.']
+  },
+  'h2024-pe-041': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción D es correcta. El artículo 96.1 de la Ley 9/2017 atribuye a la inscripción en el Registro Oficial de Licitadores y Empresas Clasificadas del Sector Público eficacia acreditativa frente a todos los órganos de contratación.',
+    whys: ['Opción descartada (A). «Registro Oficial de Licitación Pública» no es la denominación legal del registro.', 'Opción descartada (B). El Registro de Contratos recoge información contractual, pero no es el que acredita la aptitud del empresario.', 'Opción descartada (C). La denominación propuesta no coincide con el registro estatal previsto en la ley.', 'Opción correcta (D). Es el nombre completo del registro cuya inscripción produce el efecto acreditativo preguntado.']
+  },
+  'h2024-pe-042': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción A es correcta. El artículo 1 de la Ley 16/2010 incluye dentro de su objeto la regulación del ejercicio de la potestad reglamentaria por parte de la Administración y del Gobierno de Galicia.',
+    whys: ['Opción correcta (A). La potestad reglamentaria aparece expresamente entre las materias que regula la ley.', 'Opción descartada (B). La fórmula genérica «ejercicio de poderes de la comunidad autónoma» no es uno de los objetos definidos por el artículo.', 'Opción descartada (C). La ley regula la participación ciudadana en determinados ámbitos, pero no enuncia así su objeto general.', 'Opción descartada (D). La expresión «potestad legal» no corresponde a la categoría jurídica utilizada en el artículo 1.']
+  },
+  'h2024-pe-043': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción A es correcta. El artículo 5.1 de la Ley 16/2010 declara irrenunciable la competencia de los órganos de la Administración general de la Comunidad Autónoma de Galicia.',
+    whys: ['Opción correcta (A). Expresa la regla básica: la competencia es irrenunciable.', 'Opción descartada (B). Confunde las excepciones al ejercicio propio: la ley menciona delegación o avocación, no desconcentración y delegación.', 'Opción descartada (C). La desconcentración puede alterar la titularidad y el ejercicio, pero no convierte la competencia en renunciable.', 'Opción descartada (D). La renuncia a la competencia no está admitida como excepción.']
+  },
+  'h2024-pe-044': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción C es correcta. El artículo 11.1 de la Ley 16/2010 permite delegar la firma sin alterar la competencia y sin necesidad de publicación, pero excluye expresamente las resoluciones de carácter sancionador.',
+    whys: ['Opción descartada (A). Es cierto que no altera la competencia, pero es falso que la publicación sea necesaria para su validez.', 'Opción descartada (B). La delegación debe constar en los actos firmados, pero no necesita publicarse en el Diario Oficial de Galicia.', 'Opción correcta (C). Las resoluciones sancionadoras están expresamente excluidas de la delegación de firma.', 'Opción descartada (D). La delegación de firma no altera la competencia del órgano delegante.']
+  },
+  'h2024-pe-045': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción C es correcta. El artículo 16.2 de la Ley 16/2010 establece que la persona que ejerce la presidencia siempre tiene la condición de miembro del órgano colegiado.',
+    whys: ['Opción descartada (A). Presidir y moderar sí son funciones de la presidencia, pero el artículo no las condiciona al auxilio del secretario.', 'Opción descartada (B). La sustitución no recae automáticamente en el miembro de mayor edad: la ley aplica el orden de jerarquía, antigüedad y edad.', 'Opción correcta (C). Reproduce literalmente la condición permanente de miembro de quien ejerce la presidencia.', 'Opción descartada (D). La secretaría redacta las actas y expide certificaciones; la presidencia las visa, pero no reúne ambas funciones como afirma la opción.']
+  },
+  'h2024-pe-046': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción A es correcta. El artículo 23.2 de la Ley 16/2010 dispone que la creación, modificación y supresión de las consellerías se aprueba mediante decreto de la persona titular de la Presidencia de la Xunta.',
+    whys: ['Opción correcta (A). Identifica tanto el tipo de norma como la autoridad competente.', 'Opción descartada (B). La aprobación no corresponde mediante decreto al Consello de la Xunta.', 'Opción descartada (C). Tampoco exige una propuesta de la consellería competente en materia de Presidencia.', 'Opción descartada (D). Una orden de la consellería afectada no puede crear, modificar o suprimir consellerías.']
+  },
+  'h2024-pe-047': {
+    quality: 'Verificada y ampliada · Histórica oficial · DOG contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 10.1',
+    sourceUrl: officialSources.digitalGalicia,
+    explanation: 'La opción A es la incorrecta y, por ello, la respuesta. El artículo 10.1.a de la Ley 4/2019 obliga a los trabajadores autónomos a usar medios electrónicos en los trámites realizados en el ejercicio de su actividad profesional, no en cualquier trámite personal que efectúen.',
+    whys: ['Opción correcta (A, por ser la incorrecta). Elimina el límite relativo al ejercicio de la actividad profesional y extiende indebidamente la obligación a cualquier trámite.', 'Opción descartada (B). Las personas jurídicas ya están obligadas por el artículo 14.2 de la Ley 39/2015, al que remite la norma gallega.', 'Opción descartada (C). El artículo 10.1.b incluye al estudiantado universitario en los trámites motivados por su condición académica.', 'Opción descartada (D). Las entidades sin personalidad jurídica también están obligadas por la legislación básica estatal.']
+  },
+  'h2024-pe-048': {
+    quality: 'Verificada y ampliada · Histórica oficial · DOG contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 16.2',
+    sourceUrl: officialSources.digitalGalicia,
+    explanation: 'La opción B es correcta. El artículo 16.2 de la Ley 4/2019 extiende el ámbito de la sede electrónica de la Xunta de Galicia al conjunto de órganos y entidades que forman el sector público autonómico de Galicia.',
+    whys: ['Opción descartada (A). La sede electrónica autonómica no abarca el sector público estatal.', 'Opción correcta (B). Reproduce exactamente el ámbito definido por el artículo 16.2.', 'Opción descartada (C). El sector privado no forma parte del ámbito institucional de la sede.', 'Opción descartada (D). Limita la sede a la Administración general y deja fuera a las entidades del sector público autonómico.']
+  },
+  'h2024-pe-049': {
+    quality: 'Verificada y ampliada · Histórica oficial · DOG contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 19.1',
+    sourceUrl: officialSources.digitalGalicia,
+    explanation: 'La opción D es correcta. El artículo 19.1 de la Ley 4/2019 permite excepcionalmente que las entidades públicas instrumentales creen sedes propias cuando concurran circunstancias especiales de eficacia, eficiencia e interés general y se cumplan las condiciones reglamentarias.',
+    whys: ['Opción descartada (A). Acertaría en las razones excepcionales, pero atribuye las condiciones a una ley cuando el artículo remite al reglamento.', 'Opción descartada (B). La creación sí es posible, aunque únicamente de forma excepcional.', 'Opción descartada (C). La ley no permite crear sedes propias de manera habitual ni sin circunstancias especiales.', 'Opción correcta (D). Reúne el carácter excepcional, las circunstancias especiales y el desarrollo reglamentario.']
+  },
+  'h2024-pe-050': {
+    quality: 'Verificada y ampliada · Histórica oficial · DOG contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 27',
+    sourceUrl: officialSources.digitalGalicia,
+    explanation: 'La opción D es correcta. El artículo 27 de la Ley 4/2019 ordena registrar todo documento presentado o recibido por la Administración general o sus entidades instrumentales y permite anotar la salida de documentos oficiales dirigidos a otros órganos o a particulares.',
+    whys: ['Opción descartada (A). El Registro sí puede anotar la salida de documentos oficiales.', 'Opción descartada (B). Limita indebidamente la entrada a la Administración general y excluye a las entidades instrumentales.', 'Opción descartada (C). La anotación de salida también puede corresponder a documentos dirigidos a particulares.', 'Opción correcta (D). Recoge íntegramente las entradas, recepciones y posibles salidas previstas en el artículo 27.']
+  },
+  'h2024-pe-051': {
+    quality: 'Verificada y ampliada · Histórica oficial · DOG contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 42.2',
+    sourceUrl: officialSources.digitalGalicia,
+    explanation: 'La opción B es correcta. El artículo 42.2 de la Ley 4/2019 establece que la lista de confianza de prestadores cualificados de servicios electrónicos será accesible desde la sede electrónica de la Xunta de Galicia.',
+    whys: ['Opción descartada (A). El artículo señala específicamente la sede electrónica, no el portal web institucional.', 'Opción correcta (B). Identifica el punto de acceso previsto expresamente por la ley.', 'Opción descartada (C). La lista no se remite a la página de la consellería competente en hacienda.', 'Opción descartada (D). Tampoco depende de la sede de cada organismo.']
+  },
+  'h2024-pe-052': {
+    quality: 'Verificada y ampliada · Histórica oficial · DOG contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 45.1',
+    sourceUrl: officialSources.digitalGalicia,
+    explanation: 'La opción C es correcta. El artículo 45.1 de la Ley 4/2019 denomina Notifica.gal al sistema de notificaciones electrónicas de Galicia y lo configura como dirección electrónica habilitada única.',
+    whys: ['Opción descartada (A). Portax.gal no es la denominación legal del sistema de notificaciones.', 'Opción descartada (B). Rexel.gal tampoco corresponde al sistema definido en el artículo 45.', 'Opción correcta (C). Notifica.gal es el nombre oficial establecido por la ley.', 'Opción descartada (D). La Carpeta ciudadana reúne información y documentos personales, pero no es el nombre del sistema de notificaciones.']
+  },
+  'h2024-pe-053': {
+    quality: 'Verificada y ampliada · Histórica oficial · DOG contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 46.3',
+    sourceUrl: officialSources.digitalGalicia,
+    explanation: 'La opción B es correcta. El artículo 46.3 de la Ley 4/2019 establece que, al crear su dirección electrónica habilitada, una persona no obligada pasará a recibir las notificaciones preferentemente por vía electrónica, conservando el derecho a cambiar esa elección.',
+    whys: ['Opción descartada (A). La creación de la dirección orienta las notificaciones hacia el canal electrónico, no hacia el correo ordinario.', 'Opción correcta (B). Conserva el término «preferentemente» utilizado por la ley y no elimina el derecho a cambiar de canal.', 'Opción descartada (C). Las personas no obligadas sí pueden solicitar la creación de esa dirección.', 'Opción descartada (D). No serán siempre electrónicas, porque la persona puede comunicar posteriormente que dejen de practicarse por ese medio.']
+  },
+  'h2024-pe-054': {
+    quality: 'Verificada y ampliada · Histórica oficial · DOG contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 72',
+    sourceUrl: officialSources.digitalGalicia,
+    explanation: 'La opción C es correcta. El artículo 72.1 de la Ley 4/2019 dispone que el personal empleado público recibirá, con carácter general, un certificado electrónico reconocido o cualificado de empleado público y un sistema de usuario y contraseña.',
+    whys: ['Opción descartada (A). La ley no obliga específicamente al personal funcionario de carrera a disponer de otros sistemas distintos.', 'Opción descartada (B). El uso depende del nivel de seguridad y de los términos fijados por la Administración, no de lo que prevea el propio certificado.', 'Opción correcta (C). Reproduce los dos sistemas generales de identificación establecidos en el artículo 72.1.', 'Opción descartada (D). Los sistemas específicos pueden incluir certificados de persona física representante; la opción los excluye indebidamente.']
+  },
+  'h2024-pe-055': {
+    quality: 'Verificada y ampliada · Histórica oficial · DOG contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 74.1',
+    sourceUrl: officialSources.digitalGalicia,
+    explanation: 'La opción C es correcta. El artículo 74.1 de la Ley 4/2019 fija para la tarjeta de acreditación del personal empleado público una validez indefinida desde la toma de posesión hasta el cese.',
+    whys: ['Opción descartada (A). El inicio legal es la toma de posesión, no el nombramiento.', 'Opción descartada (B). La tarjeta puede dejar de ser válida por un cese anterior a la edad de jubilación forzosa.', 'Opción correcta (C). Reproduce exactamente el inicio y el final de la validez previstos por el artículo.', 'Opción descartada (D). La entrega material de la tarjeta no sustituye a la toma de posesión como momento inicial.']
   }
 };
 
