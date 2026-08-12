@@ -19,7 +19,7 @@ const questions = context.auditQuestions;
 const reviewedIds = [
   ...Array.from({ length: 105 }, (_, index) => `h2025-${String(index + 1).padStart(3, '0')}`),
   ...Array.from({ length: 105 }, (_, index) => `h2024-pe-${String(index + 1).padStart(3, '0')}`),
-  ...Array.from({ length: 30 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)
+  ...Array.from({ length: 50 }, (_, index) => `h2024-func-${String(index + 1).padStart(3, '0')}`)
 ];
 const genericPhrases = [
   'No coincide con la solución oficial',
@@ -232,6 +232,37 @@ if (!prescriptionTrap.explanation.includes('prescripción') || !prescriptionTrap
 const reusableApplicationCost = questions.find(item => item.id === 'h2024-func-029');
 if (!reusableApplicationCost.explanation.includes('permite expresamente') || !reusableApplicationCost.explanation.includes('coste')) {
   throw new Error('h2024-func-029 no explica la posible repercusión del coste de la aplicación cedida.');
+}
+
+for (const id of Array.from({ length: 12 }, (_, index) => `h2024-func-${String(index + 31).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2017-12902')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 9/2017.`);
+  }
+}
+
+for (const id of Array.from({ length: 5 }, (_, index) => `h2024-func-${String(index + 43).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2011-2544')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 16/2010.`);
+  }
+}
+
+for (const id of Array.from({ length: 3 }, (_, index) => `h2024-func-${String(index + 48).padStart(3, '0')}`)) {
+  const question = questions.find(item => item.id === id);
+  if (!question.sourceUrl.includes('BOE-A-2019-13518')) {
+    throw new Error(`${id} no enlaza la versión oficial consolidada de la Ley 4/2019.`);
+  }
+}
+
+const changingServicesThreshold = questions.find(item => item.id === 'h2024-func-035');
+if (!changingServicesThreshold.quality.includes('Umbral temporal explicado') || !changingServicesThreshold.explanation.includes('143.000 euros') || !changingServicesThreshold.explanation.includes('1 de enero de 2026')) {
+  throw new Error('h2024-func-035 no explica la evolución temporal del umbral de servicios de la AGE.');
+}
+
+const disabilityEmploymentQuota = questions.find(item => item.id === 'h2024-func-040');
+if (!disabilityEmploymentQuota.explanation.includes('2 %') || !disabilityEmploymentQuota.explanation.includes('5 %')) {
+  throw new Error('h2024-func-040 no explica la diferencia entre la cuota legal y el distractor.');
 }
 
 const currentHistoricalWorksSolvency = questions.find(item => item.id === 'h2024-pe-102');

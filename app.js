@@ -10,6 +10,7 @@ const officialSources = {
   law39: 'https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565',
   law40: 'https://www.boe.es/buscar/act.php?id=BOE-A-2015-10566',
   digitalGalicia: 'https://www.xunta.gal/dog/Publicados/2019/20190726/AnuncioC3B0-180719-0001_gl.html',
+  digitalGaliciaCurrent: 'https://www.boe.es/buscar/act.php?id=BOE-A-2019-13518',
   lcsp: 'documentos/troncal/boe/ley-9-2017-contratos-sector-publico.pdf',
   lcspCurrent: 'https://www.boe.es/buscar/act.php?id=BOE-A-2017-12902',
   trebep: 'documentos/troncal/boe/trebep-rdl-5-2015.pdf',
@@ -29107,6 +29108,130 @@ const historical2024ExpandedReview = {
     sourceUrl: officialSources.lcspCurrent,
     explanation: 'La opción A es correcta. El artículo 6.1.a de la Ley 9/2017 presume vocación de mercado cuando las entidades realizan en el mercado abierto un porcentaje igual o superior al 20 % de las actividades objeto de colaboración.',
     whys: ['Opción correcta (A). Reproduce el umbral legal del 20 %.', 'Opción descartada (B). El artículo no eleva la presunción al 30 %.', 'Opción descartada (C). Tampoco exige alcanzar el 50 % de las actividades.', 'Opción suplementaria (D). Fue añadida por la app y no formaba parte del examen oficial.']
+  },
+  'h2024-func-031': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción C es correcta. El artículo 10 de la Ley 9/2017 excluye de su ámbito los contratos de servicios financieros relacionados con la emisión, compra, venta o transferencia de valores u otros instrumentos financieros.',
+    whys: ['Opción descartada (A). La ley no incluye estos contratos financieros: los excluye expresamente.', 'Opción descartada (B). La exclusión no es parcial para el supuesto descrito.', 'Opción correcta (C). Reproduce la exclusión establecida en el artículo 10.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-032': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción C es correcta. El artículo 19.2.c de la Ley 9/2017 excluye de la regulación armonizada los contratos declarados secretos o reservados y otros vinculados a medidas especiales o intereses esenciales de seguridad.',
+    whys: ['Opción descartada (A). La excepción específica para concesiones se refiere a determinadas redes y suministros de agua, no al suministro de energía eléctrica indicado aquí.', 'Opción descartada (B). Los contratos de obras no quedan excluidos en todo caso; pueden estar sujetos a regulación armonizada si alcanzan el umbral y concurren los demás requisitos.', 'Opción correcta (C). Los contratos secretos o reservados figuran expresamente entre las exclusiones.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-033': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción A es correcta. El artículo 16.3.b de la Ley 9/2017 exceptúa del contrato de suministro los programas de ordenador desarrollados a medida, que se consideran contratos de servicios.',
+    whys: ['Opción correcta (A). El software desarrollado a medida se califica como servicio, no necesariamente como suministro.', 'Opción descartada (B). La adquisición o arrendamiento de equipos, sistemas y programas estándar sí se considera suministro.', 'Opción descartada (C). Los contratos de fabricación descritos son contratos de suministro aunque la entidad aporte materiales.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-034': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción C es correcta. El artículo 28.4 de la Ley 9/2017 exige programar la contratación y dar a conocer anticipadamente el plan mediante un anuncio de información previa que incluya, al menos, los contratos sujetos a regulación armonizada.',
+    whys: ['Opción descartada (A). La ley no denomina al instrumento «plan anual de actuación» ni limita necesariamente la programación a un solo año.', 'Opción descartada (B). El plan se anuncia anticipadamente, no al finalizar el ejercicio, y no se comunica de ese modo al Tribunal de Cuentas.', 'Opción correcta (C). Coincide con la publicidad anticipada mediante anuncio de información previa.', 'Opción suplementaria (D). No pertenecía al examen oficial.']
+  },
+  'h2024-func-035': {
+    quality: 'Verificada y ampliada · Histórica oficial · Umbral temporal explicado 12/08/2026',
+    source: 'Ley 9/2017, art. 22 (redacciones temporales)',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción A es la respuesta oficial y vuelve a coincidir con la norma vigente. El artículo 22.1.a fijaba 140.000 euros hasta 2023, pasó a 143.000 euros durante 2024 y 2025 y, desde el 1 de enero de 2026, ha vuelto a fijarse en 140.000 euros para estos contratos de servicios de la Administración General del Estado.',
+    whys: ['Opción correcta (A). Es la cifra de la plantilla oficial y también la vigente desde el 1 de enero de 2026; debe recordarse que durante 2024-2025 fue de 143.000 euros.', 'Opción descartada (B). Los 750.000 euros corresponden a determinados servicios sociales y otros servicios específicos del anexo IV.', 'Opción descartada (C). Los 80.000 euros operan en la excepción de ciertos lotes, no como umbral general de estos contratos de servicios.', 'Opción suplementaria (D). No formaba parte de la prueba oficial.']
+  },
+  'h2024-func-036': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción C es correcta. El artículo 26.1.b de la Ley 9/2017 califica como privados los contratos celebrados por entidades del sector público que sean poder adjudicador pero no tengan la condición de Administración pública.',
+    whys: ['Opción descartada (A). Habla de entidades del sector privado, mientras que el artículo se refiere a entidades del sector público.', 'Opción descartada (B). Además de situarlas en el sector privado, niega la condición de poder adjudicador exigida por la letra b).', 'Opción correcta (C). Reúne exactamente las tres notas legales: sector público, poder adjudicador y no Administración pública.', 'Opción suplementaria (D). No pertenecía al examen oficial.']
+  },
+  'h2024-func-037': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción C es correcta. El artículo 35.1 de la Ley 9/2017 exige que el documento de formalización incluya la identificación de las partes y las demás menciones mínimas, salvo que ya estén recogidas en los pliegos.',
+    whys: ['Opción descartada (A). La clasificación de los licitadores no elimina el contenido mínimo del contrato.', 'Opción descartada (B). El uso de un procedimiento negociado tampoco constituye esta excepción.', 'Opción correcta (C). La excepción legal existe cuando esas menciones ya figuran en los pliegos.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-038': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción B es correcta. El artículo 50.1.b de la Ley 9/2017 cuenta los quince días hábiles desde el día siguiente a la publicación del anuncio de licitación en el perfil de contratante, siempre que el anuncio indique cómo acceder a los pliegos y documentos.',
+    whys: ['Opción descartada (A). La entrega al interesado es una regla alternativa cuando el anuncio no indicó cómo acceder a los documentos, no la regla del supuesto formulado.', 'Opción correcta (B). Incluye tanto el inicio del cómputo como la condición de que se informe del acceso a los documentos.', 'Opción descartada (C). El acceso efectivo mediante el perfil también actúa como alternativa cuando falta aquella indicación, pero la opción omite esa circunstancia.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-039': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción B es correcta. El artículo 58.2 de la Ley 9/2017 permite imponer por temeridad o mala fe una multa de entre 1.000 y 30.000 euros; por tanto, su máximo es 30.000 euros.',
+    whys: ['Opción descartada (A). 50.000 euros supera el máximo legal.', 'Opción correcta (B). 30.000 euros es el límite superior de la multa.', 'Opción descartada (C). 60.000 euros tampoco está comprendido en la horquilla legal.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-040': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción B es la circunstancia no prevista y, por ello, la respuesta correcta. El artículo 71.1.d de la Ley 9/2017 se refiere a empresas de 50 o más trabajadores que no alcancen una cuota de empleo de personas con discapacidad del 2 %, no del 5 %.',
+    whys: ['Opción descartada (A). Haber solicitado la declaración de concurso voluntario sí aparece como prohibición de contratar en el artículo 71.1.c.', 'Opción correcta (B, por no estar prevista). La ley exige una cuota mínima del 2 %, de modo que la afirmación sustituye indebidamente ese porcentaje por el 5 %.', 'Opción descartada (C). La sanción firme por infracción grave en materia de extranjería sí está incluida en el artículo 71.1.b.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-041': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción B es correcta. El artículo 77.1.a de la Ley 9/2017 exige la clasificación como contratista de obras cuando el valor estimado del contrato sea igual o superior a 500.000 euros.',
+    whys: ['Opción descartada (A). 207.000 euros no es el umbral establecido para exigir la clasificación.', 'Opción correcta (B). Reproduce el umbral legal de 500.000 euros.', 'Opción descartada (C). 186.000 euros tampoco corresponde a esta exigencia.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-042': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.lcspCurrent,
+    explanation: 'La opción C es la que no pertenece al artículo 87 y, por ello, la respuesta correcta. La plantilla media anual y el personal directivo acreditan solvencia técnica o profesional, mientras que el artículo 87 regula la solvencia económica y financiera.',
+    whys: ['Opción descartada (A). El volumen anual de negocios sí es un medio de solvencia económica y financiera del artículo 87.1.a.', 'Opción descartada (B). La proporción entre activos y pasivos también puede utilizarse conforme al artículo 87.1.c, con los criterios fijados en los pliegos.', 'Opción correcta (C, por no estar prevista). Esta declaración pertenece a los medios de solvencia técnica o profesional, no a los económicos y financieros del artículo 87.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-043': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción A es correcta. El artículo 5.1 de la Ley 16/2010 declara irrenunciable la competencia de los órganos de la Administración general gallega y regula aparte cómo puede variar su ejercicio mediante delegación o avocación.',
+    whys: ['Opción correcta (A). Expresa el principio legal de irrenunciabilidad de la competencia.', 'Opción descartada (B). La delegación modifica el ejercicio, pero no convierte la competencia en renunciable; además, la excepción literal del apartado se refiere a delegación o avocación.', 'Opción descartada (C). La desconcentración se regula separadamente y no permite formular una excepción general a la irrenunciabilidad en esos términos.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-044': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción A es correcta. El artículo 10.2 de la Ley 16/2010 permite encargar tareas a personas privadas que no sean medio propio mediante convenios, respetando los contenidos y límites de la legislación básica de contratación pública.',
+    whys: ['Opción correcta (A). Reproduce el instrumento y el límite legal aplicable.', 'Opción descartada (B). La propia ley prohíbe encargar por estos convenios actividades que deban realizarse con sujeción al Derecho administrativo.', 'Opción descartada (C). Sustituye indebidamente la legislación básica de contratación por la de convenios y añade una condición de incompatibilidad que no define esta regla.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-045': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción B es correcta. El artículo 16.1.e de la Ley 16/2010 atribuye a la presidencia de cada órgano colegiado la función de asegurar el cumplimiento de las leyes.',
+    whys: ['Opción descartada (A). La presidencia representa al órgano por atribución legal, sin necesitar una aprobación por mayoría cualificada.', 'Opción correcta (B). Es una función expresa de la presidencia.', 'Opción descartada (C). La expedición de certificaciones corresponde a la secretaría del órgano colegiado.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-046': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción A es correcta. El artículo 19.4 de la Ley 16/2010 establece la mayoría simple como regla para adoptar acuerdos, salvo que las normas específicas del órgano exijan otra mayoría.',
+    whys: ['Opción correcta (A). Reproduce la regla general y su única salvedad en este apartado.', 'Opción descartada (B). El orden del día no puede crear por sí solo una mayoría distinta.', 'Opción descartada (C). La naturaleza del asunto tampoco altera automáticamente la mayoría exigible.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-047': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    sourceUrl: officialSources.law16Current,
+    explanation: 'La opción C es correcta. El artículo 29.2 de la Ley 16/2010 adscribe orgánicamente las asesorías jurídicas a las secretarías generales técnicas y las hace depender funcionalmente de la Asesoría Jurídica General de la Xunta.',
+    whys: ['Opción descartada (A). Confunde la dependencia funcional con una doble adscripción orgánica y funcional a la Asesoría Jurídica General.', 'Opción descartada (B). Invierte las relaciones: no dependen orgánicamente de la Asesoría Jurídica General ni funcionalmente de la consellería.', 'Opción correcta (C). Distingue correctamente la adscripción orgánica y la dependencia funcional.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-048': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 4',
+    sourceUrl: officialSources.digitalGaliciaCurrent,
+    explanation: 'La opción B no es un principio de la ley y, por ello, es la respuesta correcta. El artículo 4.h de la Ley 4/2019 garantiza el uso normal de la lengua gallega y el desarrollo de herramientas tecnológicas en gallego y en estándares abiertos, no lo formula respecto del castellano.',
+    whys: ['Opción descartada (A). Garantizar los derechos digitales de la Ley Orgánica 3/2018 sí es un principio general del artículo 4.f.', 'Opción correcta (B, por no ser principio). Sustituye «lengua gallega» y «en gallego» por castellano, alterando el texto legal.', 'Opción descartada (C). Evitar la brecha tecnológica y distintas formas de exclusión sí aparece en el artículo 4.i.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
+  },
+  'h2024-func-049': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 30.3',
+    sourceUrl: officialSources.digitalGaliciaCurrent,
+    explanation: 'La opción A es correcta. El artículo 30.3 de la Ley 4/2019 ordena anotar los asientos del registro respetando el orden temporal de recepción o de salida.',
+    whys: ['Opción correcta (A). Reproduce literalmente el criterio temporal impuesto por la ley.', 'Opción descartada (B). La persona responsable de la unidad no puede sustituir ese orden por uno discrecional.', 'Opción descartada (C). Sí existe un orden legal preestablecido: el temporal.', 'Opción suplementaria (D). No formaba parte del examen oficial.']
+  },
+  'h2024-func-050': {
+    quality: 'Verificada y ampliada · Histórica oficial · BOE contrastado 12/08/2026',
+    source: 'Ley 4/2019, art. 74.1',
+    sourceUrl: officialSources.digitalGaliciaCurrent,
+    explanation: 'La opción C es correcta. El artículo 74.1 de la Ley 4/2019 concede a la tarjeta de acreditación una validez indefinida desde la toma de posesión hasta el cese como personal empleado público.',
+    whys: ['Opción descartada (A). El inicio se vincula a la toma de posesión, no al mero nombramiento.', 'Opción descartada (B). La tarjeta no termina necesariamente al alcanzar la edad de jubilación forzosa, sino con el cese efectivo como personal empleado público.', 'Opción correcta (C). Reproduce los dos momentos legales de inicio y final de la validez.', 'Opción suplementaria (D). No pertenecía a la prueba oficial.']
   }
 };
 
