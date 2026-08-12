@@ -16,7 +16,7 @@ vm.runInContext(
 );
 
 const questions = context.auditQuestions;
-const reviewedIds = Array.from({ length: 10 }, (_, index) =>
+const reviewedIds = Array.from({ length: 20 }, (_, index) =>
   `h2025-${String(index + 1).padStart(3, '0')}`
 );
 const genericPhrases = [
@@ -45,6 +45,6 @@ for (const id of reviewedIds) {
 }
 
 console.log('REVISIÓN JURÍDICA DEL HISTÓRICO 2025');
-console.log(`Preguntas del primer lote comprobadas: ${reviewedIds.length}`);
+console.log(`Preguntas revisadas acumuladas comprobadas: ${reviewedIds.length}`);
 console.log('Explicación normativa y cuatro alternativas justificadas: OK');
 console.log('RESULTADO: OK');
