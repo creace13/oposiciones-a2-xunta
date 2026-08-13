@@ -8,6 +8,7 @@ const plan = read(path.join('docs', 'PLAN-MANTENIMIENTO-TECNICO.md'));
 const headers = read('_headers');
 const app = read('app.js');
 const bank = read('question-bank.js');
+const reviews = read('historical-reviews.js');
 
 [
   'data/temario-a2-2025.json',
@@ -26,6 +27,8 @@ assert.ok(!headers.includes("script-src 'self' 'unsafe-inline'"), 'La CSP no deb
 assert.ok(app.length < 100_000, 'El motor debe permanecer separado del banco de preguntas.');
 assert.ok(bank.length > 2_000_000, 'El banco extraído debe conservar el volumen completo de datos.');
 assert.ok(plan.includes('C11-02'), 'El plan debe registrar la extracción efectiva del banco.');
+assert.ok(reviews.length > 200_000, 'Las ampliaciones históricas deben conservar su contenido completo.');
+assert.ok(plan.includes('C11-03'), 'El plan debe registrar la extracción efectiva de las ampliaciones históricas.');
 
 console.log('MANTENIMIENTO TÉCNICO POR PIEZAS');
 console.log('Monolito, CSP y residuos clasificados sin borrados: OK');

@@ -1,7 +1,10 @@
 {
   "schemaVersion": 1,
   "generatedOn": "2026-08-13",
-  "generatedFrom": "question-bank.js",
+  "generatedFrom": [
+    "question-bank.js",
+    "historical-reviews.js"
+  ],
   "purpose": "Localizar preguntas potencialmente afectadas por cambios normativos sin declarar automáticamente su vigencia.",
   "safetyRule": "Una coincidencia crea una lista de revisión humana; nunca corrige, valida ni retira preguntas por sí sola.",
   "summary": {

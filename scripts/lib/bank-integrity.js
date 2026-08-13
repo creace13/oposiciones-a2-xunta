@@ -2,6 +2,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
+const { readBankSource } = require('./runtime-source');
 
 function canonicalize(value) {
   if (Array.isArray(value)) return value.map(canonicalize);
@@ -22,7 +23,7 @@ function sha256(value) {
 }
 
 function loadBank(root) {
-  const source = fs.readFileSync(path.join(root, 'question-bank.js'), 'utf8');
+  const source = readBankSource(root);
 
   const context = {};
   vm.createContext(context);

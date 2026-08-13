@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
+const { readBankSource } = require('./lib/runtime-source');
 
 const root = path.resolve(__dirname, '..');
-const source = fs.readFileSync(path.join(root, 'question-bank.js'), 'utf8');
+const source = readBankSource(root);
 
 const context = {};
 vm.createContext(context);

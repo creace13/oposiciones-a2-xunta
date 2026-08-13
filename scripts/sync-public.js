@@ -10,6 +10,7 @@ const filesToSync = [
   'bootstrap.js',
   'styles.css',
   'question-bank.js',
+  'historical-reviews.js',
   'app.js',
   'maintenance-holds.js',
   'manifest.json',

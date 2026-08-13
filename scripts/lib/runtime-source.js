@@ -6,7 +6,7 @@ function readSource(root, fileName) {
 }
 
 function readBankSource(root) {
-  return readSource(root, 'question-bank.js');
+  return `${readSource(root, 'question-bank.js')}\n${readSource(root, 'historical-reviews.js')}`;
 }
 
 function readRuntimeSource(root) {

@@ -24,6 +24,8 @@ const headersFile = read('_headers');
 const app = read('app.js');
 const bank = read('question-bank.js');
 const publicBank = read(path.join('public', 'question-bank.js'));
+const reviews = read('historical-reviews.js');
+const publicReviews = read(path.join('public', 'historical-reviews.js'));
 const bootstrap = read('bootstrap.js');
 const publicBootstrap = read(path.join('public', 'bootstrap.js'));
 const pkg = JSON.parse(read('package.json'));
@@ -40,7 +42,9 @@ assertNotIncludes(worker, "script-src 'self' 'unsafe-inline'", 'La CSP de script
 assertNotIncludes(headersFile, "script-src 'self' 'unsafe-inline'", 'La CSP pública no debe permitir ejecución inline general.');
 assertIncludes(indexHtml, 'bootstrap.js?v=1', 'El arranque temprano debe cargarse desde un archivo propio.');
 assertIncludes(indexHtml, 'question-bank.js?v=', 'El banco debe cargarse desde un archivo propio.');
+assertIncludes(indexHtml, 'historical-reviews.js?v=', 'Las ampliaciones históricas deben cargarse desde un archivo propio.');
 assert.strictEqual(publicBank, bank, 'El banco público debe coincidir con la raíz.');
+assert.strictEqual(publicReviews, reviews, 'Las ampliaciones históricas públicas deben coincidir con la raíz.');
 assertIncludes(bootstrap, "localStorage.getItem('opoA2LastView')", 'El arranque externo debe conservar la restauración de vista.');
 assert.strictEqual(publicBootstrap, bootstrap, 'El arranque público debe coincidir con la raíz.');
 const jsonLd = indexHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);

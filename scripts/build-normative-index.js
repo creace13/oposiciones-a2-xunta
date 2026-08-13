@@ -1,12 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
+const { readBankSource } = require('./lib/runtime-source');
 
 const root = path.resolve(__dirname, '..');
 const outputPath = path.join(root, 'docs', 'INDICE-NORMATIVO-PREGUNTAS.json');
 
 function loadBank() {
-  const source = fs.readFileSync(path.join(root, 'question-bank.js'), 'utf8');
+  const source = readBankSource(root);
   const context = {};
   vm.createContext(context);
   vm.runInContext(
@@ -124,7 +125,7 @@ function buildIndex(questions, officialSources, generatedOn = new Date().toISOSt
   return {
     schemaVersion: 1,
     generatedOn,
-    generatedFrom: 'question-bank.js',
+    generatedFrom: ['question-bank.js', 'historical-reviews.js'],
     purpose: 'Localizar preguntas potencialmente afectadas por cambios normativos sin declarar automáticamente su vigencia.',
     safetyRule: 'Una coincidencia crea una lista de revisión humana; nunca corrige, valida ni retira preguntas por sí sola.',
     summary: {
