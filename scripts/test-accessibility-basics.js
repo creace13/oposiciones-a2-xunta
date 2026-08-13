@@ -6,6 +6,7 @@ const { JSDOM } = require('jsdom');
 const root = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const app = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
+const dashboard = fs.readFileSync(path.join(root, 'dashboard.js'), 'utf8');
 const styles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
 const dom = new JSDOM(html);
 const { document } = dom.window;
@@ -69,7 +70,7 @@ for (const id of ['pauseDialog', 'authDialog', 'resetPasswordModal', 'privacyMod
 console.log('  PASADO: Diálogos informativos con descripción accesible.');
 
 assert(
-  app.includes("setAttribute('aria-current', 'page')") && app.includes("removeAttribute('aria-current')"),
+  dashboard.includes("setAttribute('aria-current', 'page')") && dashboard.includes("removeAttribute('aria-current')"),
   '❌ showView no actualiza aria-current al cambiar de sección'
 );
 console.log('  PASADO: showView actualiza aria-current dinámicamente.');
