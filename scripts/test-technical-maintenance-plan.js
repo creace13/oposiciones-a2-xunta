@@ -9,6 +9,7 @@ const headers = read('_headers');
 const app = read('app.js');
 const bank = read('question-bank.js');
 const reviews = read('historical-reviews.js');
+const engineModules = ['app-state.js', 'dashboard.js', 'history.js', 'practice.js', 'simulation.js'];
 
 [
   'data/temario-a2-2025.json',
@@ -29,6 +30,8 @@ assert.ok(bank.length > 2_000_000, 'El banco extraído debe conservar el volumen
 assert.ok(plan.includes('C11-02'), 'El plan debe registrar la extracción efectiva del banco.');
 assert.ok(reviews.length > 200_000, 'Las ampliaciones históricas deben conservar su contenido completo.');
 assert.ok(plan.includes('C11-03'), 'El plan debe registrar la extracción efectiva de las ampliaciones históricas.');
+engineModules.forEach(relative => assert.ok(fs.existsSync(path.join(root, relative)), `Falta módulo funcional: ${relative}`));
+assert.ok(plan.includes('C11-04'), 'El plan debe registrar la separación funcional por checkpoints.');
 
 console.log('MANTENIMIENTO TÉCNICO POR PIEZAS');
 console.log('Monolito, CSP y residuos clasificados sin borrados: OK');
