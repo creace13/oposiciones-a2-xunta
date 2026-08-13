@@ -18,7 +18,7 @@ Plataforma web independiente para la preparación del primer ejercicio tipo test
 - **Privacidad y Perfil de Usuario**: Persistencia local de fallos e historial en tu propio navegador. La autenticación remota queda pausada; el progreso no se sincroniza entre dispositivos.
 - **Uso como apoyo al estudio**: La app ayuda a practicar y razonar respuestas, pero no debe usarse como única fuente ni como garantía jurídica absoluta.
 - **Alojamiento en Producción**: Servido globalmente en **Cloudflare Workers** desde directorio estático aislado (`/public`).
-- **Filosofía 100% Abierta (Non-Commercial Open Source)**: Libre acceso para la comunidad de opositores bajo licencia CC BY-NC-SA 4.0.
+- **Código fuente disponible con uso no comercial**: El repositorio sirve como porfolio público y permite estudiar y reutilizar el proyecto sin fines comerciales. Cualquier explotación comercial requiere autorización del titular.
 
 ---
 
@@ -73,6 +73,12 @@ Las aportaciones históricas de Gemini / Antigravity y el trabajo operativo actu
 
 ---
 
-## 📄 Licencia
+## 📄 Licencias y uso comercial
 
-Este proyecto es Open Source con fines educativos bajo la licencia **CC BY-NC-SA 4.0 (Atribución - No Comercial - Compartir Igual)**. Gratuito y libre para estudiar y compartir por la comunidad de opositores, quedando estrictamente prohibida su venta o explotación comercial por terceros.
+Este repositorio es público como porfolio, pero no se presenta como Open Source porque su licencia pública restringe la explotación comercial:
+
+- el código se ofrece bajo **PolyForm Noncommercial 1.0.0**;
+- el contenido y la documentación original sobre los que el titular dispone de derechos se ofrecen bajo **CC BY-NC-SA 4.0**;
+- los exámenes, boletines, textos legales y demás materiales oficiales o de terceros conservan sus derechos y condiciones de reutilización originales.
+
+El uso personal, educativo y no comercial está permitido dentro de esas condiciones. La venta, monetización o integración comercial requiere autorización previa y escrita del titular. Consulta el reparto completo en [`LICENSE`](LICENSE) y [`docs/LICENCIAS-Y-DERECHOS.md`](docs/LICENCIAS-Y-DERECHOS.md).

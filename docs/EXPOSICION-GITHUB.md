@@ -1,10 +1,10 @@
 # Exposición pública del repositorio GitHub
 
-Actualizado: 20 de julio de 2026.
+Actualizado: 13 de agosto de 2026.
 
 ## Criterio
 
-El repositorio puede funcionar como escaparate técnico y archivo de transparencia, pero no debe convertirse en un lugar donde se publiquen credenciales, datos personales, accesos internos o información privada del titular.
+El repositorio funciona como escaparate técnico y archivo de transparencia. Que sea público permite examinarlo y usar las funciones de GitHub, pero no concede por sí solo permiso de explotación comercial. Tampoco debe convertirse en un lugar donde se publiquen credenciales, datos personales, accesos internos o información privada del titular.
 
 ## Qué puede permanecer público
 
@@ -14,6 +14,8 @@ El repositorio puede funcionar como escaparate técnico y archivo de transparenc
 - Metodología pública resumida, sin exponer la sala de máquinas interna.
 - Plantillas de erratas y contribución.
 - Pruebas automatizadas.
+
+El reparto de derechos está descrito en `LICENSE` y `docs/LICENCIAS-Y-DERECHOS.md`: código con uso no comercial, contenido original bajo CC BY-NC-SA y materiales oficiales sujetos a sus condiciones de origen.
 
 ## Qué no debe subirse nunca
 

@@ -1,14 +1,16 @@
 # Guía de Contribución · Oposiciones A2 Xunta de Galicia 🇪🇸
 
-¡Gracias por tu interés en contribuir a este proyecto Open Source! Tu ayuda permite mantener el banco de preguntas actualizado, riguroso y libre de erratas para todos los opositores.
+¡Gracias por tu interés en ayudar a mejorar este proyecto de código fuente disponible! Tu ayuda permite mantener el banco de preguntas actualizado, riguroso y libre de erratas para todos los opositores.
 
 ---
 
 ## 🎯 Formas de Contribuir
 
 1. **Notificar Erratas o Impugnaciones**: Si detectas una respuesta incorrecta o un artículo desactualizado, abre un [Issue en GitHub](https://github.com/creace13/oposiciones-a2-xunta/issues).
-2. **Proponer Nuevas Preguntas**: Puedes sugerir preguntas basadas en normativas oficiales de la Xunta de Galicia o del Estado.
-3. **Mejorar la Interfaz o Funcionalidades**: Correcciones en CSS, accesibilidad o rendimiento de la aplicación web.
+2. **Proponer Nuevas Preguntas**: Puedes sugerirlas mediante una incidencia, citando una fuente oficial de la Xunta de Galicia o del Estado.
+3. **Proponer Mejoras Técnicas**: Puedes describir correcciones de accesibilidad, diseño o rendimiento mediante una incidencia.
+
+El repositorio se mantiene como porfolio bajo dirección del titular. No se aceptarán aportaciones de código o contenido mediante Pull Request sin un acuerdo previo y escrito que aclare autoría, licencia pública y posibilidad de licencia comercial. Esta precaución evita incorporar materiales que el proyecto no tenga derecho a reutilizar o licenciar.
 
 ---
 
@@ -53,6 +55,8 @@ El script comprobará que:
 
 ---
 
-## ⚖️ Licencia
+## ⚖️ Licencias
 
-Al contribuir a este repositorio, aceptas que tus aportaciones se publiquen bajo la licencia **CC BY-NC-SA 4.0 (Atribución - No Comercial - Compartir Igual)**.
+Las incidencias y sugerencias no transfieren por sí solas la propiedad de obras o materiales adjuntos. No envíes contenido que no sea tuyo o que no puedas compartir.
+
+Si el titular acuerda previamente aceptar una aportación, el acuerdo indicará por escrito qué licencia se aplica y qué permisos recibe el proyecto. El reparto general utiliza **PolyForm Noncommercial** para el código y **CC BY-NC-SA** para el contenido original, con exclusión de los materiales oficiales y de terceros. Está documentado en [`LICENSE`](LICENSE) y [`docs/LICENCIAS-Y-DERECHOS.md`](docs/LICENCIAS-Y-DERECHOS.md).

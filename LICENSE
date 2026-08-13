@@ -1,15 +1,67 @@
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License (CC BY-NC-SA 4.0)
+# Licencias y derechos de uso
 
-Copyright (c) 2026 creace13
+Copyright (c) 2026 creace13.
 
-Por la presente se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software, su código fuente, documentación y banco de preguntas (el "Software"), para estudiar, utilizar, copiar, modificar y compartir el Software exclusivamente con FINES NO COMERCIALES Y EDUCATIVOS.
+Este repositorio es público como muestra de porfolio y proyecto educativo. Su
+publicación no convierte automáticamente todos sus materiales en software de
+código abierto ni autoriza su explotación comercial.
 
-CONDICIONES OBLIGATORIAS Y RESTRICCIONES:
+## 1. Código de la aplicación
 
-1. RECONOCIMIENTO (Attribution / BY): Debe dar el crédito adecuado al creador original (creace13), incluir un enlace al repositorio original (https://github.com/creace13/oposiciones-a2-xunta) e indicar si se han realizado modificaciones.
+Salvo los materiales indicados en los apartados siguientes, el código fuente,
+los estilos, las pruebas y los scripts creados para este proyecto se ofrecen
+bajo **PolyForm Noncommercial License 1.0.0**:
 
-2. USO NO COMERCIAL (NonCommercial / NC): Queda estrictamente PROHIBIDA la venta, subasta, cobro de suscripciones, monetización directa o indirecta, o cualquier tipo de explotación comercial del Software, de su código fuente o de su banco de preguntas sin la autorización previa, explícita y por escrito de creace13.
+https://polyformproject.org/licenses/noncommercial/1.0.0
 
-3. COMPARTIR IGUAL (ShareAlike / SA): Si transforma, remezcla o crea un trabajo derivado a partir de este material, debe distribuir sus contribuciones bajo esta misma licencia (CC BY-NC-SA 4.0).
+Required Notice: Copyright 2026 creace13.
 
-Cualquier uso comercial no autorizado constituirá una infracción legal de los derechos de propiedad intelectual del autor.
+Esta licencia permite estudiar, utilizar, modificar y distribuir el código
+para fines no comerciales en los términos de la licencia oficial. No es una
+licencia Open Source reconocida por la Open Source Initiative, porque limita
+el uso comercial.
+
+Todo uso comercial, monetización, reventa, integración en un servicio de pago
+o explotación profesional requiere una autorización separada, previa y por
+escrito del titular. La autorización comercial puede estar sujeta a precio y
+condiciones diferentes. La licencia pública no limita al titular para ofrecer
+licencias comerciales sobre aquello cuyos derechos le pertenecen.
+
+## 2. Contenido original y documentación
+
+La selección, estructura, explicaciones, textos y documentación original sobre
+los que el titular disponga de derechos se ofrecen, salvo indicación contraria,
+bajo **Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional
+(CC BY-NC-SA 4.0)**:
+
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.es
+
+La atribución debe identificar a `creace13`, enlazar el repositorio original e
+indicar si se realizaron modificaciones.
+
+## 3. Materiales oficiales y de terceros
+
+No se relicencian mediante este archivo:
+
+- preguntas, plantillas, convocatorias, boletines y documentos oficiales;
+- textos legales o administrativos procedentes de BOE, DOG u otros organismos;
+- marcas, logotipos o signos de terceros;
+- bibliotecas, dependencias o materiales que ya tengan sus propias condiciones.
+
+Cada uno conserva el régimen jurídico, los derechos y las condiciones de
+reutilización que le correspondan en su fuente original. Su presencia en el
+repositorio no implica propiedad del titular ni autorización para explotarlos
+fuera de esos límites.
+
+## 4. Repositorio público y acuerdos privados
+
+GitHub permite visualizar y realizar forks de los repositorios públicos dentro
+de las funciones de su plataforma. Eso no amplía los derechos de explotación
+concedidos en este archivo.
+
+Un acuerdo privado con una clienta o con un tercero puede conceder derechos de
+uso adicionales sin transferir la propiedad intelectual, salvo que una cesión
+expresa y escrita disponga otra cosa.
+
+Para solicitar una licencia comercial debe contactarse con el titular mediante
+su perfil público de GitHub: https://github.com/creace13
