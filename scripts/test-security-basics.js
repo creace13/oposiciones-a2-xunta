@@ -36,6 +36,7 @@ const practice = read('practice.js');
 const publicPractice = read(path.join('public', 'practice.js'));
 const simulation = read('simulation.js');
 const publicSimulation = read(path.join('public', 'simulation.js'));
+const uiSources = [indexHtml, app, dashboard, history, practice, simulation, appState].join('\n');
 const bootstrap = read('bootstrap.js');
 const publicBootstrap = read(path.join('public', 'bootstrap.js'));
 const pkg = JSON.parse(read('package.json'));
@@ -50,6 +51,10 @@ assertNotIncludes(indexHtml, 'onclick=', 'El HTML no debe depender de controlado
 assertNotIncludes(app, 'onclick=', 'La interfaz dinámica no debe crear controladores de eventos inline.');
 assertNotIncludes(worker, "script-src 'self' 'unsafe-inline'", 'La CSP de scripts no debe permitir ejecución inline general.');
 assertNotIncludes(headersFile, "script-src 'self' 'unsafe-inline'", 'La CSP pública no debe permitir ejecución inline general.');
+assertNotIncludes(worker, "style-src 'self' 'unsafe-inline'", 'La CSP no debe permitir estilos inline generales.');
+assertNotIncludes(headersFile, "style-src 'self' 'unsafe-inline'", 'La CSP pública no debe permitir estilos inline generales.');
+assert.ok(!/\sstyle\s*=/.test(uiSources), 'La interfaz no debe crear atributos style inline.');
+assertNotIncludes(uiSources, '.style.', 'La interfaz no debe escribir estilos inline mediante JavaScript.');
 assertIncludes(indexHtml, 'bootstrap.js?v=1', 'El arranque temprano debe cargarse desde un archivo propio.');
 assertIncludes(indexHtml, 'question-bank.js?v=', 'El banco debe cargarse desde un archivo propio.');
 assertIncludes(indexHtml, 'historical-reviews.js?v=', 'Las ampliaciones históricas deben cargarse desde un archivo propio.');

@@ -103,7 +103,7 @@ function updateDashboard() {
     const b1Share = ownCount ? Math.round((b1Count / ownCount) * 100) : 0;
     b1Val.textContent = `${formatCount(b1Count)} preguntas`;
     const b1Bar = document.getElementById('barBlock1');
-    if (b1Bar) b1Bar.style.width = `${b1Share}%`;
+    if (b1Bar) b1Bar.setAttribute('aria-valuenow', String(Math.round(b1Share)));
   }
   const b2Val = document.getElementById('valBlock2');
   if (b2Val) {
@@ -112,7 +112,7 @@ function updateDashboard() {
     const b2Share = ownCount ? Math.round((b2Count / ownCount) * 100) : 0;
     b2Val.textContent = `${formatCount(b2Count)} preguntas`;
     const b2Bar = document.getElementById('barBlock2');
-    if (b2Bar) b2Bar.style.width = `${b2Share}%`;
+    if (b2Bar) b2Bar.setAttribute('aria-valuenow', String(Math.round(b2Share)));
   }
 }
 function renderGoals() {

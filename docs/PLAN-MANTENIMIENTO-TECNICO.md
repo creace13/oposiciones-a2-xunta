@@ -30,14 +30,14 @@ La garantía de integridad usa huellas independientes para el banco completo, el
 
 La ejecución general de scripts inline ya está desactivada. El arranque temprano vive en `bootstrap.js`, los botones usan eventos registrados por la aplicación y el JSON-LD se autoriza únicamente mediante su hash exacto. Esto reduce la posibilidad de ejecutar código introducido accidentalmente en el HTML.
 
-Permanece `unsafe-inline` para estilos porque la interfaz conserva atributos visuales inline. Retirarlo exige mover esos estilos a clases CSS y se hará en un bloque visual independiente para evitar regresiones de diseño.
+Los estilos inline fueron retirados en C11-05 y sustituidos por clases equivalentes. La política de seguridad ya no necesita `unsafe-inline` para estilos ni para scripts.
 
 La aplicación aún genera algunas secciones con plantillas HTML. El banco es estático y controlado por el proyecto; aun así, el criterio futuro es escapar todo texto y validar todo enlace antes de mostrar cualquier dato que pueda proceder de formularios, importaciones o servicios externos.
 
 Clasificación:
 
 - scripts inline: endurecimiento inmediato completado;
-- estilos inline: modernización gradual, no defecto explotable demostrado;
+- estilos inline: retirada completada en C11-05;
 - plantillas HTML: deuda controlada; prohibido incorporar datos externos sin saneamiento específico.
 
 ## 3. Archivos históricos y duplicados

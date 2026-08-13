@@ -32,6 +32,8 @@ assert.ok(reviews.length > 200_000, 'Las ampliaciones históricas deben conserva
 assert.ok(plan.includes('C11-03'), 'El plan debe registrar la extracción efectiva de las ampliaciones históricas.');
 engineModules.forEach(relative => assert.ok(fs.existsSync(path.join(root, relative)), `Falta módulo funcional: ${relative}`));
 assert.ok(plan.includes('C11-04'), 'El plan debe registrar la separación funcional por checkpoints.');
+assert.ok(plan.includes('C11-05'), 'El plan debe registrar la retirada de estilos inline.');
+assert.ok(!headers.includes("style-src 'self' 'unsafe-inline'"), 'La CSP no debe reabrir estilos inline generales.');
 
 console.log('MANTENIMIENTO TÉCNICO POR PIEZAS');
 console.log('Monolito, CSP y residuos clasificados sin borrados: OK');

@@ -15,6 +15,7 @@ const mockElement = {
   dataset: {},
   classList: { add: () => {}, remove: () => {} },
   addEventListener: () => {},
+  setAttribute: () => {},
   querySelector: () => mockElement,
   querySelectorAll: () => []
 };

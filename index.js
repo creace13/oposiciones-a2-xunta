@@ -38,7 +38,7 @@ function withSecurityHeaders(request, response) {
       [
         "default-src 'self'",
         "script-src 'self' 'sha256-EyZLt7W+dm6gCMP5ybDTnUVQsHhUxbET53hKwkCPM7g='",
-        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+        "style-src 'self' https://fonts.googleapis.com",
         "font-src https://fonts.gstatic.com",
         "img-src 'self' data: https:",
         "connect-src 'self'",
