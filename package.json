@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "npm run test:core && npm run test:playwright",
-    "test:core": "node scripts/validar-banco.js && node scripts/test-historical-explanations.js && node scripts/test-filters.js && node scripts/test-auth-states.js && node scripts/test-accessibility-basics.js && node scripts/test-recovery-runbook.js && node scripts/test-security-basics.js && node scripts/test-normative-maintenance.js && node scripts/test-normative-index.js && node scripts/test-normative-impact.js && node scripts/test-normative-workflow.js && node scripts/test-project-continuity.js && node scripts/test-release-acceptance.js && node scripts/test-public-exposure.js && node scripts/test-license-policy.js && node scripts/test-ci-contract.js && node scripts/test-technical-maintenance-plan.js && node scripts/test-browser-e2e.js",
-    "test:public-core": "node scripts/validar-banco.js && node scripts/test-historical-explanations.js && node scripts/test-filters.js && node scripts/test-auth-states.js && node scripts/test-accessibility-basics.js && node scripts/test-security-basics.js && node scripts/test-normative-maintenance.js && node scripts/test-normative-index.js && node scripts/test-normative-impact.js && node scripts/test-normative-workflow.js && node scripts/test-public-exposure.js && node scripts/test-license-policy.js && node scripts/test-ci-contract.js && node scripts/test-technical-maintenance-plan.js && node scripts/test-browser-e2e.js",
+    "test:core": "node scripts/validar-banco.js && node scripts/test-bank-integrity.js && node scripts/test-historical-explanations.js && node scripts/test-filters.js && node scripts/test-auth-states.js && node scripts/test-accessibility-basics.js && node scripts/test-recovery-runbook.js && node scripts/test-security-basics.js && node scripts/test-normative-maintenance.js && node scripts/test-normative-index.js && node scripts/test-normative-impact.js && node scripts/test-normative-workflow.js && node scripts/test-project-continuity.js && node scripts/test-release-acceptance.js && node scripts/test-public-exposure.js && node scripts/test-license-policy.js && node scripts/test-ci-contract.js && node scripts/test-technical-maintenance-plan.js && node scripts/test-browser-e2e.js",
+    "test:public-core": "node scripts/validar-banco.js && node scripts/test-bank-integrity.js && node scripts/test-historical-explanations.js && node scripts/test-filters.js && node scripts/test-auth-states.js && node scripts/test-accessibility-basics.js && node scripts/test-security-basics.js && node scripts/test-normative-maintenance.js && node scripts/test-normative-index.js && node scripts/test-normative-impact.js && node scripts/test-normative-workflow.js && node scripts/test-public-exposure.js && node scripts/test-license-policy.js && node scripts/test-ci-contract.js && node scripts/test-technical-maintenance-plan.js && node scripts/test-browser-e2e.js",
     "test:dom": "node scripts/test-browser-e2e.js",
     "test:e2e": "npm run test:dom",
     "test:playwright": "npx playwright test --project=chromium-desktop --project=webkit-desktop --project=mobile-chrome --project=mobile-safari",
@@ -15,6 +15,7 @@
     "test:ops": "node scripts/test-recovery-runbook.js",
     "test:security": "node scripts/test-security-basics.js",
     "test:normativa": "node scripts/test-normative-maintenance.js && node scripts/test-normative-index.js && node scripts/test-normative-impact.js && node scripts/test-normative-workflow.js",
+    "test:bank-integrity": "node scripts/test-bank-integrity.js",
     "test:continuidad": "node scripts/test-project-continuity.js",
     "index:normativa": "node scripts/build-normative-index.js",
     "impacto:normativa": "node scripts/assess-normative-impact.js",

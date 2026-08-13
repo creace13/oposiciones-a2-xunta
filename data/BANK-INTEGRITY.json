@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "questionCount": 1522,
+  "classifiedCount": 1207,
+  "historicalCount": 315,
+  "topicCount": 23,
+  "blockI": 302,
+  "blockII": 905,
+  "hashes": {
+    "fullBank": "1576363e7a9c7b8709245779326d165f740ac69cc1d7d1ec29ea002944472ab3",
+    "identityAndOrder": "fbec6e289b309dd2fd83b3e19b3d7f393b9a25501caaff4ccb51334aae5c4859",
+    "promptsAndOptions": "b936ab0cc5b95dc156a8e17ac0decf4d8992e986624a72d7d165d4fc5462fce5",
+    "answers": "c073db9d89f05d892d7f732d915730ef98a5bc1d6bca18e0c27164c2e48f189c",
+    "sources": "3d68018fc3588a58641e61d2ee192dbcd913202eebe72cf9be2e64fbcfc39196",
+    "explanations": "822cbd83be2019f71f712769526db295a365f57fa6652d081ba1c9eb6f8cea02",
+    "officialSources": "0c33087e5cb676a13e5f10b1ea4c6a7e0c2eef2573b4c08962b0038f25f79abd"
+  }
+}
