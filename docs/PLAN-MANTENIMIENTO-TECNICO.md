@@ -19,7 +19,7 @@ Orden seguro de separación futura:
 1. congelar por prueba los 1.522 identificadores, respuestas, fuentes y recuentos — **completado el 13/08/2026** mediante `data/BANK-INTEGRITY.json` y `scripts/test-bank-integrity.js`;
 2. extraer solo los datos del banco a un archivo cargado antes del motor, sin cambiar contenido — **completado en C11-02 el 13/08/2026**;
 3. extraer en un segundo bloque las ampliaciones y advertencias históricas — **completado en C11-03 el 13/08/2026** mediante `historical-reviews.js`;
-4. separar después persistencia, panel, práctica, simulacro e historial, una pieza por checkpoint;
+4. separar después persistencia, panel, práctica, simulacro e historial, una pieza por checkpoint — **completado en C11-04 el 13/08/2026**;
 5. medir tamaño y tiempo de carga antes y después de cada extracción.
 
 No se mezclarán en un mismo bloque una separación de archivos y una corrección jurídica.

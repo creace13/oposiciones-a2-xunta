@@ -15,6 +15,7 @@ const filesToSync = [
   'dashboard.js',
   'history.js',
   'practice.js',
+  'simulation.js',
   'app.js',
   'maintenance-holds.js',
   'manifest.json',

@@ -23,9 +23,6 @@ function startOfLocalWeek(reference) {
   start.setDate(start.getDate() - mondayOffset);
   return start;
 }
-function calculateExamScore(correct, wrong) {
-  return Math.max(0, Number(correct) - (Number(wrong) * 0.25));
-}
 function getPersonalMetrics(reference = new Date()) {
   const attempts = state.answered.length;
   const correct = state.answered.filter(attempt => attempt.correct).length;
