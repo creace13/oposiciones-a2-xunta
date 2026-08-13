@@ -10,7 +10,7 @@ function readBankSource(root) {
 }
 
 function readRuntimeSource(root) {
-  return `${readBankSource(root)}\n${readSource(root, 'app.js')}`;
+  return `${readBankSource(root)}\n${readSource(root, 'app-state.js')}\n${readSource(root, 'app.js')}`;
 }
 
 module.exports = { readBankSource, readRuntimeSource };

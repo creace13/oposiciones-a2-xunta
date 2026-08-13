@@ -9,11 +9,13 @@ const rootDir = path.resolve(__dirname, '..');
 const htmlPath = path.join(rootDir, 'index.html');
 const bankPath = path.join(rootDir, 'question-bank.js');
 const reviewsPath = path.join(rootDir, 'historical-reviews.js');
+const statePath = path.join(rootDir, 'app-state.js');
 const appPath = path.join(rootDir, 'app.js');
 
 const htmlContent = fs.readFileSync(htmlPath, 'utf8');
 const bankContent = fs.readFileSync(bankPath, 'utf8');
 const reviewsContent = fs.readFileSync(reviewsPath, 'utf8');
+const stateContent = fs.readFileSync(statePath, 'utf8');
 const appContent = fs.readFileSync(appPath, 'utf8');
 
 async function runE2ESuite() {
@@ -61,7 +63,7 @@ async function runE2ESuite() {
   };
 
   // Evaluate both classic scripts in one shared lexical scope, matching index.html.
-  window.eval(`${bankContent}\n${reviewsContent}\n${appContent}`);
+  window.eval(`${bankContent}\n${reviewsContent}\n${stateContent}\n${appContent}`);
 
   // Regression: métricas cuantitativas honestas y formato español
   console.log('Test DOM 0: Verificando presentación honesta de métricas...');
