@@ -4,22 +4,22 @@ const path = require('path');
 const vm = require('vm');
 
 const root = path.resolve(__dirname, '..');
+const bankSource = fs.readFileSync(path.join(root, 'question-bank.js'), 'utf8');
 const appSource = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
 const holdsSource = fs.readFileSync(path.join(root, 'maintenance-holds.js'), 'utf8');
 const procedure = fs.readFileSync(path.join(root, 'docs', 'MANTENIMIENTO-NORMATIVO.md'), 'utf8');
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const syncSource = fs.readFileSync(path.join(root, 'scripts', 'sync-public.js'), 'utf8');
-const boundary = appSource.indexOf('const defaults');
 const stateBoundary = appSource.indexOf('const state = normalizeStoredState');
 
-if (boundary === -1 || stateBoundary === -1) throw new Error('No se encontraron los límites esperados de app.js.');
+if (stateBoundary === -1) throw new Error('No se encontró el límite de estado esperado en app.js.');
 
 function loadBank(holds) {
   const context = {};
   if (holds) context.NORMATIVE_MAINTENANCE_HOLDS = holds;
   vm.createContext(context);
   vm.runInContext(
-    appSource.slice(0, boundary) +
+    bankSource +
       '\nglobalThis.auditActiveQuestions = questions;' +
       '\nglobalThis.auditFullQuestionBank = fullQuestionBank;',
     context
@@ -83,7 +83,7 @@ const progressContext = {
 };
 vm.createContext(progressContext);
 vm.runInContext(
-  appSource.slice(0, stateBoundary) +
+  bankSource + '\n' + appSource.slice(0, stateBoundary) +
     '\nglobalThis.auditNormalizedState = normalizeStoredState(globalThis.auditStoredState);',
   progressContext
 );
@@ -91,7 +91,8 @@ assert.strictEqual(progressContext.auditNormalizedState.answered.length, 1, 'La 
 assert.deepStrictEqual(Array.from(progressContext.auditNormalizedState.errors), [simulatedId], 'La retirada no debe borrar el pendiente de repaso.');
 
 assert.match(appSource, /validQuestionIds = new Set\(fullQuestionBank\.map/, 'El progreso debe validarse contra el banco completo.');
-assert.ok(html.indexOf('maintenance-holds.js') < html.indexOf('app.js?v='), 'Las retiradas deben cargarse antes que la aplicación.');
+assert.ok(html.indexOf('maintenance-holds.js') < html.indexOf('question-bank.js?v='), 'Las retiradas deben cargarse antes que el banco.');
+assert.ok(html.indexOf('question-bank.js?v=') < html.indexOf('app.js?v='), 'El banco debe cargarse antes que la aplicación.');
 assert.ok(syncSource.includes("'maintenance-holds.js'"), 'El registro debe sincronizarse con la aplicación publicada.');
 assert.ok(procedure.includes('Rutina mensual'), 'Falta la rutina mensual.');
 assert.ok(procedure.includes('Rutina trimestral'), 'Falta la rutina trimestral.');

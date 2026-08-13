@@ -2,9 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
 const vm = require('vm');
+const { readRuntimeSource } = require('./lib/runtime-source');
 
-const appPath = path.resolve(__dirname, '../app.js');
-let code = fs.readFileSync(appPath, 'utf8');
+const root = path.resolve(__dirname, '..');
+let code = readRuntimeSource(root);
 code += '\nthis.questions = questions;\nthis.coverageTopic = coverageTopic;\nthis.filterQuestionsByCategory = filterQuestionsByCategory;\n';
 
 const mockElement = {

@@ -3,18 +3,12 @@ const path = require('path');
 const vm = require('vm');
 
 const root = path.resolve(__dirname, '..');
-const source = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
-const boundary = source.indexOf('const defaults');
-
-if (boundary === -1) {
-  console.error('ERROR: no se encontró el límite de carga de datos en app.js.');
-  process.exit(1);
-}
+const source = fs.readFileSync(path.join(root, 'question-bank.js'), 'utf8');
 
 const context = {};
 vm.createContext(context);
 vm.runInContext(
-  source.slice(0, boundary) +
+  source +
     '\nglobalThis.auditQuestions = questions;' +
     '\nglobalThis.auditRows = coverageRows();' +
     '\nglobalThis.auditSources = officialSources;',

@@ -2,9 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const assert = require('assert');
+const { readRuntimeSource } = require('./lib/runtime-source');
 
 const rootDir = path.resolve(__dirname, '..');
-const code = fs.readFileSync(path.join(rootDir, 'app.js'), 'utf8');
+const code = readRuntimeSource(rootDir);
 
 function createMockElement(id) {
   return {

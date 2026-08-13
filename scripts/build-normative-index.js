@@ -6,13 +6,11 @@ const root = path.resolve(__dirname, '..');
 const outputPath = path.join(root, 'docs', 'INDICE-NORMATIVO-PREGUNTAS.json');
 
 function loadBank() {
-  const source = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
-  const boundary = source.indexOf('const defaults');
-  if (boundary === -1) throw new Error('No se encontró el límite de datos de app.js.');
+  const source = fs.readFileSync(path.join(root, 'question-bank.js'), 'utf8');
   const context = {};
   vm.createContext(context);
   vm.runInContext(
-    source.slice(0, boundary) +
+    source +
       '\nglobalThis.auditQuestions = questions;' +
       '\nglobalThis.auditSources = officialSources;',
     context
@@ -126,7 +124,7 @@ function buildIndex(questions, officialSources, generatedOn = new Date().toISOSt
   return {
     schemaVersion: 1,
     generatedOn,
-    generatedFrom: 'app.js',
+    generatedFrom: 'question-bank.js',
     purpose: 'Localizar preguntas potencialmente afectadas por cambios normativos sin declarar automáticamente su vigencia.',
     safetyRule: 'Una coincidencia crea una lista de revisión humana; nunca corrige, valida ni retira preguntas por sí sola.',
     summary: {

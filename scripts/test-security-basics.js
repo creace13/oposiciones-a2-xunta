@@ -22,6 +22,8 @@ const publicIndexHtml = read(path.join('public', 'index.html'));
 const worker = read('index.js');
 const headersFile = read('_headers');
 const app = read('app.js');
+const bank = read('question-bank.js');
+const publicBank = read(path.join('public', 'question-bank.js'));
 const bootstrap = read('bootstrap.js');
 const publicBootstrap = read(path.join('public', 'bootstrap.js'));
 const pkg = JSON.parse(read('package.json'));
@@ -37,6 +39,8 @@ assertNotIncludes(app, 'onclick=', 'La interfaz dinámica no debe crear controla
 assertNotIncludes(worker, "script-src 'self' 'unsafe-inline'", 'La CSP de scripts no debe permitir ejecución inline general.');
 assertNotIncludes(headersFile, "script-src 'self' 'unsafe-inline'", 'La CSP pública no debe permitir ejecución inline general.');
 assertIncludes(indexHtml, 'bootstrap.js?v=1', 'El arranque temprano debe cargarse desde un archivo propio.');
+assertIncludes(indexHtml, 'question-bank.js?v=', 'El banco debe cargarse desde un archivo propio.');
+assert.strictEqual(publicBank, bank, 'El banco público debe coincidir con la raíz.');
 assertIncludes(bootstrap, "localStorage.getItem('opoA2LastView')", 'El arranque externo debe conservar la restauración de vista.');
 assert.strictEqual(publicBootstrap, bootstrap, 'El arranque público debe coincidir con la raíz.');
 const jsonLd = indexHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);

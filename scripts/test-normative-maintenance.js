@@ -9,15 +9,12 @@ function read(relativePath) {
   return fs.readFileSync(path.join(root, relativePath), 'utf8');
 }
 
-const source = read('app.js');
-const boundary = source.indexOf('const defaults');
-
-assert.notStrictEqual(boundary, -1, 'No se encontró el límite de carga de datos en app.js.');
+const source = read('question-bank.js');
 
 const context = {};
 vm.createContext(context);
 vm.runInContext(
-  source.slice(0, boundary) +
+  source +
     '\nglobalThis.auditQuestions = questions;' +
     '\nglobalThis.auditSources = officialSources;',
   context

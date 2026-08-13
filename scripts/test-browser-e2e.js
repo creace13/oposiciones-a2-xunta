@@ -7,9 +7,11 @@ console.log('--- SUITE DE INTEGRACIÓN DOM/JSDOM (HTML + APP.JS REALES) ---');
 
 const rootDir = path.resolve(__dirname, '..');
 const htmlPath = path.join(rootDir, 'index.html');
+const bankPath = path.join(rootDir, 'question-bank.js');
 const appPath = path.join(rootDir, 'app.js');
 
 const htmlContent = fs.readFileSync(htmlPath, 'utf8');
+const bankContent = fs.readFileSync(bankPath, 'utf8');
 const appContent = fs.readFileSync(appPath, 'utf8');
 
 async function runE2ESuite() {
@@ -56,8 +58,8 @@ async function runE2ESuite() {
     })
   };
 
-  // Inject app.js into JSDOM window context
-  window.eval(appContent);
+  // Evaluate both classic scripts in one shared lexical scope, matching index.html.
+  window.eval(`${bankContent}\n${appContent}`);
 
   // Regression: métricas cuantitativas honestas y formato español
   console.log('Test DOM 0: Verificando presentación honesta de métricas...');

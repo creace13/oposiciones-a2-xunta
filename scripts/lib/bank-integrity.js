@@ -22,14 +22,12 @@ function sha256(value) {
 }
 
 function loadBank(root) {
-  const source = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
-  const boundary = source.indexOf('const defaults');
-  if (boundary === -1) throw new Error('No se encontró el límite de datos en app.js.');
+  const source = fs.readFileSync(path.join(root, 'question-bank.js'), 'utf8');
 
   const context = {};
   vm.createContext(context);
   vm.runInContext(
-    source.slice(0, boundary)
+    source
       + '\nglobalThis.auditQuestions = questions;'
       + '\nglobalThis.auditSources = officialSources;'
       + '\nglobalThis.auditRows = coverageRows();',

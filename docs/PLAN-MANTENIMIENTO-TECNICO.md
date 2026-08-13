@@ -1,8 +1,8 @@
 # Plan de mantenimiento técnico por piezas
 
-Actualizado: 12 de agosto de 2026.
+Actualizado: 13 de agosto de 2026.
 
-Este documento clasifica tres deudas conocidas sin convertirlas en una reescritura global: el tamaño de `app.js`, la política de seguridad del navegador y los archivos históricos de construcción.
+Este documento clasifica tres deudas conocidas sin convertirlas en una reescritura global: la separación progresiva del banco y el motor, la política de seguridad del navegador y los archivos históricos de construcción.
 
 ## Decisión general
 
@@ -10,21 +10,21 @@ La aplicación está operativa y sus recorridos principales pasan. Dividirla ent
 
 ## 1. Archivo principal de gran tamaño
 
-`app.js` contiene aproximadamente 30.600 líneas y 2,9 MB. La mayor parte corresponde al banco y a las ampliaciones históricas; la lógica de la aplicación comienza cerca del final del archivo.
+Antes de C11, `app.js` contenía aproximadamente 30.600 líneas y 2,9 MB. En C11-02 el banco completo pasó a `question-bank.js` y `app.js` quedó como motor y presentación, sin transformar el contenido de ninguna pregunta.
 
 Clasificación: modernización necesaria a medio plazo, pero no bloqueo funcional actual.
 
 Orden seguro de separación futura:
 
 1. congelar por prueba los 1.522 identificadores, respuestas, fuentes y recuentos — **completado el 13/08/2026** mediante `data/BANK-INTEGRITY.json` y `scripts/test-bank-integrity.js`;
-2. extraer solo los datos del banco a un archivo cargado antes del motor, sin cambiar contenido;
+2. extraer solo los datos del banco a un archivo cargado antes del motor, sin cambiar contenido — **completado en C11-02 el 13/08/2026**;
 3. extraer en un segundo bloque las ampliaciones y advertencias históricas;
 4. separar después persistencia, panel, práctica, simulacro e historial, una pieza por checkpoint;
 5. medir tamaño y tiempo de carga antes y después de cada extracción.
 
 No se mezclarán en un mismo bloque una separación de archivos y una corrección jurídica.
 
-La garantía de integridad usa huellas independientes para el banco completo, el orden de identificadores, los textos y opciones, las respuestas, las fuentes y las explicaciones. Un cambio jurídico intencionado podrá actualizar esas huellas únicamente después de revisar el contenido; un simple movimiento técnico debe conservarlas exactamente.
+La garantía de integridad usa huellas independientes para el banco completo, el orden de identificadores, los textos y opciones, las respuestas, las fuentes y las explicaciones. C11-02 conserva exactamente las siete huellas previas a la separación. Un cambio jurídico intencionado podrá actualizarlas únicamente después de revisar el contenido; un simple movimiento técnico debe conservarlas exactamente.
 
 ## 2. Política de seguridad del navegador
 
