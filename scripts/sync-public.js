@@ -13,6 +13,7 @@ const filesToSync = [
   'historical-reviews.js',
   'app-state.js',
   'dashboard.js',
+  'history.js',
   'app.js',
   'maintenance-holds.js',
   'manifest.json',

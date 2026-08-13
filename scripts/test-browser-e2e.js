@@ -11,6 +11,7 @@ const bankPath = path.join(rootDir, 'question-bank.js');
 const reviewsPath = path.join(rootDir, 'historical-reviews.js');
 const statePath = path.join(rootDir, 'app-state.js');
 const dashboardPath = path.join(rootDir, 'dashboard.js');
+const historyPath = path.join(rootDir, 'history.js');
 const appPath = path.join(rootDir, 'app.js');
 
 const htmlContent = fs.readFileSync(htmlPath, 'utf8');
@@ -18,6 +19,7 @@ const bankContent = fs.readFileSync(bankPath, 'utf8');
 const reviewsContent = fs.readFileSync(reviewsPath, 'utf8');
 const stateContent = fs.readFileSync(statePath, 'utf8');
 const dashboardContent = fs.readFileSync(dashboardPath, 'utf8');
+const historyContent = fs.readFileSync(historyPath, 'utf8');
 const appContent = fs.readFileSync(appPath, 'utf8');
 
 async function runE2ESuite() {
@@ -65,7 +67,7 @@ async function runE2ESuite() {
   };
 
   // Evaluate both classic scripts in one shared lexical scope, matching index.html.
-  window.eval(`${bankContent}\n${reviewsContent}\n${stateContent}\n${dashboardContent}\n${appContent}`);
+  window.eval(`${bankContent}\n${reviewsContent}\n${stateContent}\n${dashboardContent}\n${historyContent}\n${appContent}`);
 
   // Regression: métricas cuantitativas honestas y formato español
   console.log('Test DOM 0: Verificando presentación honesta de métricas...');
