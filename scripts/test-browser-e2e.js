@@ -60,7 +60,7 @@ async function runE2ESuite() {
     paused: false,
     spoken: [],
     getVoices: () => [{ name: 'Voz española local', lang: 'es-ES', localService: true, default: true }],
-    speak(utterance) { this.spoken.push(utterance.text); window.setTimeout(() => utterance.onend?.(), 0); },
+    speak(utterance) { this.spoken.push({ text: utterance.text, rate: utterance.rate }); window.setTimeout(() => utterance.onend?.(), 0); },
     cancel() {},
     pause() { this.paused = true; },
     resume() { this.paused = false; }
@@ -245,6 +245,14 @@ async function runE2ESuite() {
   assert.strictEqual(quizCard.textContent.includes('Modo escucha · Beta'), true, '❌ E2E 3e Fallido: no abrió el modo escucha');
   assert.strictEqual(quizCard.textContent.includes('NO MODIFICA TU PROGRESO'), true, '❌ E2E 3e Fallido: falta la advertencia de progreso');
   assert.strictEqual(window.speechSynthesis.spoken.length >= 5, true, '❌ E2E 3e Fallido: no leyó pregunta y alternativas');
+  const spokenBeforeRateChange = window.speechSynthesis.spoken.length;
+  const rateSelector = document.getElementById('audioStudyRate');
+  rateSelector.value = '1.8';
+  rateSelector.dispatchEvent(new window.Event('change', { bubbles: true }));
+  for (let attempt = 0; attempt < 50 && window.speechSynthesis.spoken.length <= spokenBeforeRateChange; attempt += 1) {
+    await new Promise(resolve => window.setTimeout(resolve, 10));
+  }
+  assert.strictEqual(window.speechSynthesis.spoken.at(-1).rate, 1.8, '❌ E2E 3e Fallido: la velocidad rápida no llegó al sintetizador');
   document.querySelector('.audio-pause').click();
   assert.strictEqual(window.speechSynthesis.paused, true, '❌ E2E 3e Fallido: el control de pausa no actuó');
   document.querySelector('.audio-pause').click();

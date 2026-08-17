@@ -1,5 +1,12 @@
 // Modo de escucha Beta. No registra intentos ni modifica el progreso.
 
+const AUDIO_RATE_PRESETS = Object.freeze([0.6, 1, 1.4, 1.8]);
+
+function normalizeAudioRate(value) {
+  const numericValue = Number(value);
+  return AUDIO_RATE_PRESETS.includes(numericValue) ? numericValue : 1;
+}
+
 function audioLanguageForQuestion(question) {
   return /^h\d{4}-/.test(String(question?.id || '')) ? 'gl-ES' : 'es-ES';
 }
@@ -98,7 +105,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     const question = audioQuestions[audioQuestionIndex];
     if (!card || !question) return;
     const pausedLabel = audioIsPaused ? 'Continuar' : 'Pausar';
-    card.innerHTML = `<div class="quiz-meta"><span>Modo escucha · Beta</span><span>Pregunta ${audioQuestionIndex + 1} de ${audioQuestions.length}</span></div><div class="quiz-body audio-study-body"><div class="question-topic">ESCUCHA PASIVA · NO MODIFICA TU PROGRESO</div><h2 class="question-text">${escapeHTML(question.text)}</h2><ol class="audio-option-list">${question.options.map(([letter, text]) => `<li><strong>${escapeHTML(letter)}.</strong> ${escapeHTML(text)}</li>`).join('')}</ol><div class="audio-study-status" id="audioStudyStatus" role="status" aria-live="polite">${audioIsPaused ? 'Lectura en pausa.' : (audioIsPlaying ? 'Leyendo en voz alta…' : 'Preparada para escuchar.')}</div><p class="audio-voice-note" id="audioVoiceNote">${escapeHTML(voiceAvailabilityLabel(question))}</p><label class="audio-rate-control">Velocidad<select id="audioStudyRate"><option value="0.85"${audioSpeechRate === 0.85 ? ' selected' : ''}>Lenta</option><option value="1"${audioSpeechRate === 1 ? ' selected' : ''}>Normal</option><option value="1.15"${audioSpeechRate === 1.15 ? ' selected' : ''}>Ágil</option><option value="1.3"${audioSpeechRate === 1.3 ? ' selected' : ''}>Rápida</option></select></label><p class="audio-beta-warning">Beta comprobable en Windows 11 y Android. Mantén la aplicación abierta. iPhone todavía no está validado.</p></div><div class="quiz-footer audio-study-footer"><span>Esta escucha no cuenta como respuesta ni como sesión evaluada.</span><div class="audio-study-controls"><button type="button" class="secondary-button audio-previous">Anterior</button><button type="button" class="secondary-button audio-repeat">Repetir</button><button type="button" class="secondary-button audio-pause">${pausedLabel}</button><button type="button" class="secondary-button audio-next">Siguiente</button><button type="button" class="primary-button audio-finish">Terminar escucha</button></div></div>`;
+    card.innerHTML = `<div class="quiz-meta"><span>Modo escucha · Beta</span><span>Pregunta ${audioQuestionIndex + 1} de ${audioQuestions.length}</span></div><div class="quiz-body audio-study-body"><div class="question-topic">ESCUCHA PASIVA · NO MODIFICA TU PROGRESO</div><h2 class="question-text">${escapeHTML(question.text)}</h2><ol class="audio-option-list">${question.options.map(([letter, text]) => `<li><strong>${escapeHTML(letter)}.</strong> ${escapeHTML(text)}</li>`).join('')}</ol><div class="audio-study-status" id="audioStudyStatus" role="status" aria-live="polite">${audioIsPaused ? 'Lectura en pausa.' : (audioIsPlaying ? 'Leyendo en voz alta…' : 'Preparada para escuchar.')}</div><p class="audio-voice-note" id="audioVoiceNote">${escapeHTML(voiceAvailabilityLabel(question))}</p><label class="audio-rate-control">Velocidad<select id="audioStudyRate"><option value="0.6"${audioSpeechRate === 0.6 ? ' selected' : ''}>Lenta · 0,6×</option><option value="1"${audioSpeechRate === 1 ? ' selected' : ''}>Normal · 1×</option><option value="1.4"${audioSpeechRate === 1.4 ? ' selected' : ''}>Ágil · 1,4×</option><option value="1.8"${audioSpeechRate === 1.8 ? ' selected' : ''}>Rápida · 1,8×</option></select></label><p class="audio-beta-warning">Beta comprobable en Windows 11 y Android. Mantén la aplicación abierta. iPhone todavía no está validado.</p></div><div class="quiz-footer audio-study-footer"><span>Esta escucha no cuenta como respuesta ni como sesión evaluada.</span><div class="audio-study-controls"><button type="button" class="secondary-button audio-previous">Anterior</button><button type="button" class="secondary-button audio-repeat">Repetir</button><button type="button" class="secondary-button audio-pause">${pausedLabel}</button><button type="button" class="secondary-button audio-next">Siguiente</button><button type="button" class="primary-button audio-finish">Terminar escucha</button></div></div>`;
 
     card.querySelector('.audio-previous').addEventListener('click', () => changeAudioQuestion(-1));
     card.querySelector('.audio-repeat').addEventListener('click', () => playCurrentAudioQuestion());
@@ -106,7 +113,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     card.querySelector('.audio-next').addEventListener('click', () => changeAudioQuestion(1));
     card.querySelector('.audio-finish').addEventListener('click', finishAudioStudy);
     card.querySelector('#audioStudyRate').addEventListener('change', event => {
-      audioSpeechRate = Number(event.currentTarget.value);
+      audioSpeechRate = normalizeAudioRate(event.currentTarget.value);
       playCurrentAudioQuestion();
     });
   }
@@ -122,9 +129,11 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       if (!engine || runId !== audioRunId) return resolve(false);
       const utterance = new window.SpeechSynthesisUtterance(segment.text);
       utterance.lang = segment.lang;
-      utterance.rate = audioRate();
       const voice = selectAudioVoice(availableAudioVoices(), segment.lang);
       if (voice) utterance.voice = voice;
+      // Algunos motores reconstruyen sus valores al asignar la voz. La velocidad
+      // se fija al final para que llegue intacta al sintetizador del dispositivo.
+      utterance.rate = normalizeAudioRate(audioRate());
       audioSegmentResolver = resolve;
       utterance.onend = () => settleAudioSegment(runId === audioRunId);
       utterance.onerror = () => settleAudioSegment(false);
@@ -250,5 +259,5 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { audioLanguageForQuestion, buildAudioStudySegments, selectAudioVoice };
+  module.exports = { AUDIO_RATE_PRESETS, normalizeAudioRate, audioLanguageForQuestion, buildAudioStudySegments, selectAudioVoice };
 }

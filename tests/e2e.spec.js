@@ -199,6 +199,11 @@ test.describe('Recorridos E2E en Chromium y WebKit (escritorio y perfiles móvil
     const firstLanguages = await page.evaluate(() => window.__audioTestState.spoken.slice(0, 5).map(item => item.lang));
     expect(firstLanguages).toEqual(['gl-ES', 'gl-ES', 'gl-ES', 'gl-ES', 'gl-ES']);
 
+    const spokenBeforeRateChange = await page.evaluate(() => window.__audioTestState.spoken.length);
+    await page.selectOption('#audioStudyRate', '1.8');
+    await expect.poll(() => page.evaluate(length => window.__audioTestState.spoken.length > length, spokenBeforeRateChange)).toBe(true);
+    await expect.poll(() => page.evaluate(() => window.__audioTestState.spoken.at(-1).rate)).toBe(1.8);
+
     await page.click('.audio-pause');
     await expect.poll(() => page.evaluate(() => window.__audioTestState.pauseCalls)).toBe(1);
     await page.click('.audio-pause');

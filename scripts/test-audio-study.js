@@ -1,5 +1,7 @@
 const assert = require('assert');
 const {
+  AUDIO_RATE_PRESETS,
+  normalizeAudioRate,
   audioLanguageForQuestion,
   buildAudioStudySegments,
   selectAudioVoice
@@ -38,6 +40,10 @@ assert.strictEqual(galicianSegments[5].lang, 'es-ES');
 assert.strictEqual(galicianSegments[6].lang, 'gl-ES');
 assert.strictEqual(galicianSegments[7].lang, 'es-ES');
 assert.strictEqual(JSON.stringify(spanishQuestion), originalSpanish, 'Construir la lectura no debe modificar la pregunta.');
+assert.deepStrictEqual(AUDIO_RATE_PRESETS, [0.6, 1, 1.4, 1.8], 'Las velocidades deben ser suficientemente distintas para resultar audibles.');
+assert.strictEqual(normalizeAudioRate('0.6'), 0.6, 'La velocidad lenta debe conservarse.');
+assert.strictEqual(normalizeAudioRate('1.8'), 1.8, 'La velocidad rápida debe conservarse.');
+assert.strictEqual(normalizeAudioRate('valor-invalido'), 1, 'Un valor inválido debe volver a velocidad normal.');
 
 const voices = [
   { name: 'Español remoto', lang: 'es-ES', localService: false },
@@ -48,4 +54,4 @@ assert.strictEqual(selectAudioVoice(voices, 'es-ES').name, 'Español local', 'De
 assert.strictEqual(selectAudioVoice(voices, 'gl-ES').name, 'Galego local', 'Debe seleccionarse la voz gallega cuando exista.');
 assert.strictEqual(selectAudioVoice(voices, 'fr-FR'), null, 'No debe fingirse una voz que el dispositivo no ofrece.');
 
-console.log('Idiomas, orden de lectura, voz local y banco inmutable: OK');
+console.log('Idiomas, orden, velocidades, voz local y banco inmutable: OK');
