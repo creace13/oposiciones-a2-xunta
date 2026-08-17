@@ -239,12 +239,14 @@ async function runE2ESuite() {
   const progressBeforeAudio = window.localStorage.getItem('opoA2State');
   window.speechSynthesis.spoken.length = 0;
   document.getElementById('audioStudyStart').click();
-  for (let attempt = 0; attempt < 50 && window.speechSynthesis.spoken.length < 5; attempt += 1) {
+  for (let attempt = 0; attempt < 50 && window.speechSynthesis.spoken.length < 1; attempt += 1) {
     await new Promise(resolve => window.setTimeout(resolve, 10));
   }
   assert.strictEqual(quizCard.textContent.includes('Modo escucha · Beta'), true, '❌ E2E 3e Fallido: no abrió el modo escucha');
   assert.strictEqual(quizCard.textContent.includes('NO MODIFICA TU PROGRESO'), true, '❌ E2E 3e Fallido: falta la advertencia de progreso');
-  assert.strictEqual(window.speechSynthesis.spoken.length >= 5, true, '❌ E2E 3e Fallido: no leyó pregunta y alternativas');
+  assert.strictEqual(window.speechSynthesis.spoken.length >= 1, true, '❌ E2E 3e Fallido: no inició la pregunta y alternativas');
+  assert.strictEqual(window.speechSynthesis.spoken[0].text.includes('Opción A.'), true, '❌ E2E 3e Fallido: la opción A quedó fuera de la primera locución');
+  assert.strictEqual(window.speechSynthesis.spoken[0].text.includes('Opción D.'), true, '❌ E2E 3e Fallido: la opción D quedó fuera de la primera locución');
   const spokenBeforeRateChange = window.speechSynthesis.spoken.length;
   const rateSelector = document.getElementById('audioStudyRate');
   rateSelector.value = '1.8';

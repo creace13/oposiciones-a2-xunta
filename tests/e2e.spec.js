@@ -195,9 +195,11 @@ test.describe('Recorridos E2E en Chromium y WebKit (escritorio y perfiles móvil
     await expect(page.locator('#quizCard')).toContainText('Modo escucha · Beta');
     await expect(page.locator('#quizCard')).toContainText('Pregunta 1 de 5');
     await expect(page.locator('#quizCard')).toContainText('NO MODIFICA TU PROGRESO');
-    await expect.poll(() => page.evaluate(() => window.__audioTestState.spoken.length)).toBeGreaterThanOrEqual(5);
-    const firstLanguages = await page.evaluate(() => window.__audioTestState.spoken.slice(0, 5).map(item => item.lang));
-    expect(firstLanguages).toEqual(['gl-ES', 'gl-ES', 'gl-ES', 'gl-ES', 'gl-ES']);
+    await expect.poll(() => page.evaluate(() => window.__audioTestState.spoken.length)).toBeGreaterThanOrEqual(1);
+    const firstSpoken = await page.evaluate(() => window.__audioTestState.spoken[0]);
+    expect(firstSpoken.lang).toBe('gl-ES');
+    expect(firstSpoken.text).toContain('Opción A.');
+    expect(firstSpoken.text).toContain('Opción D.');
 
     const spokenBeforeRateChange = await page.evaluate(() => window.__audioTestState.spoken.length);
     await page.selectOption('#audioStudyRate', '1.8');

@@ -15,10 +15,16 @@ function buildAudioStudySegments(question) {
   const questionLanguage = audioLanguageForQuestion(question);
   const correctOption = question.options[question.correct];
   return [
-    { kind: 'question', lang: questionLanguage, text: question.text },
-    ...question.options.map(([letter, text]) => ({ kind: 'option', lang: questionLanguage, text: `Opción ${letter}. ${text}` })),
-    { kind: 'solution-label', lang: 'es-ES', text: `La respuesta correcta es la opción ${correctOption[0]}.` },
-    { kind: 'solution', lang: questionLanguage, text: correctOption[1] },
+    {
+      kind: 'prompt',
+      lang: questionLanguage,
+      text: [question.text, ...question.options.map(([letter, text]) => `Opción ${letter}. ${text}`)].join(' ')
+    },
+    {
+      kind: 'solution',
+      lang: questionLanguage,
+      text: `La respuesta correcta es la opción ${correctOption[0]}. ${correctOption[1]}`
+    },
     { kind: 'explanation', lang: 'es-ES', text: `Explicación. ${question.explanation}` }
   ];
 }
@@ -169,7 +175,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     const segments = buildAudioStudySegments(question);
     for (let index = 0; index < segments.length; index += 1) {
       if (runId !== audioRunId) return;
-      if (segments[index].kind === 'solution-label') {
+      if (segments[index].kind === 'solution') {
         updateAudioStatus('Pausa para pensar…');
         if (!await waitDuringAudio(3500, runId)) return;
       }
