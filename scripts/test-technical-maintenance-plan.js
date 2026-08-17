@@ -9,7 +9,7 @@ const headers = read('_headers');
 const app = read('app.js');
 const bank = read('question-bank.js');
 const reviews = read('historical-reviews.js');
-const engineModules = ['app-state.js', 'dashboard.js', 'history.js', 'practice.js', 'simulation.js'];
+const engineModules = ['app-state.js', 'dashboard.js', 'history.js', 'practice.js', 'simulation.js', 'audio-study.js'];
 
 [
   'data/temario-a2-2025.json',
@@ -33,6 +33,8 @@ assert.ok(plan.includes('C11-03'), 'El plan debe registrar la extracción efecti
 engineModules.forEach(relative => assert.ok(fs.existsSync(path.join(root, relative)), `Falta módulo funcional: ${relative}`));
 assert.ok(plan.includes('C11-04'), 'El plan debe registrar la separación funcional por checkpoints.');
 assert.ok(plan.includes('C11-05'), 'El plan debe registrar la retirada de estilos inline.');
+assert.ok(plan.includes('modo escucha Beta'), 'El plan debe registrar el aislamiento del modo escucha.');
+assert.ok(plan.includes('no registra sesiones'), 'El modo escucha no debe mezclarse con el progreso evaluado.');
 assert.ok(!headers.includes("style-src 'self' 'unsafe-inline'"), 'La CSP no debe reabrir estilos inline generales.');
 
 console.log('MANTENIMIENTO TÉCNICO POR PIEZAS');

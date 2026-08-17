@@ -139,6 +139,8 @@
               <label>Preguntas<select id="lengthSelect"><option value="5">5 preguntas · 8 min</option><option value="10">10 preguntas · 16 min</option><option value="18">18 preguntas · 30 min</option><option value="full" id="fullHistoricalOption" hidden disabled>Examen histórico completo · 105 preguntas</option></select></label>
               <div class="switch-row"><span>✓ Explicación tras cada respuesta</span></div>
               <button class="primary-button wide" id="createTest">Comenzar práctica <span>→</span></button>
+              <button class="secondary-button wide audio-study-start" id="audioStudyStart">🔊 Comenzar escucha <span>Beta</span></button>
+              <p class="audio-entry-note">Lee preguntas, alternativas, respuesta y explicación sin registrar aciertos ni fallos.</p>
               <p class="tiny">Modo aprendizaje: no se penaliza. El examen sí aplicará –0,25 por fallo.</p>
             </article>
             <article class="panel source-card"><p class="eyebrow">CONTENIDO CON TRAZABILIDAD</p><h2>Nada se aprende “porque sí”.</h2><p>Cada pregunta debe indicar su tema, fuente oficial, versión y justificación de las cuatro alternativas.</p><div class="source-checks"><span>✓ Fuente enlazada</span><span>✓ Revisión normativa</span><span>✓ Justificación por opción</span></div><p class="source-warning">El banco contiene preguntas oficiales de examen y de elaboración propia con revisión continua y justificación legal.</p></article>
@@ -448,6 +450,7 @@
     <script src="history.js?v=v28-modular-engine-20260813"></script>
     <script src="practice.js?v=v28-modular-engine-20260813"></script>
     <script src="simulation.js?v=v28-modular-engine-20260813"></script>
+    <script src="audio-study.js?v=v30-audio-beta-20260817"></script>
     <script src="app.js?v=v26-modular-bank-20260813"></script>
   </body>
 </html>

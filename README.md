@@ -15,6 +15,7 @@ Plataforma web independiente para la preparación del primer ejercicio tipo test
   - **315 preguntas oficiales** de 3 exámenes reales completos (2025 PE, 2024 PE, 2024 Funcionarización).
 - **Explicaciones Razonadas**: Cada pregunta incluye 4 justificaciones legales individuales ("por qués") y enlace directo al BOE/DOG oficial.
 - **Simulacros Oficiales**: Temporizador regresivo en vivo (`⏱ M:SS`), opción de *"Dejar en blanco"* (0 penalización) y penalización de –0,25 puntos por fallo.
+- **Modo escucha Beta**: Lectura automática de pregunta, alternativas, solución y explicación mediante la voz del dispositivo. Se mantiene separada del progreso evaluado y está en validación real para Windows 11 y Android; iPhone aún no está comprobado.
 - **Privacidad y Perfil de Usuario**: Persistencia local de fallos e historial en tu propio navegador. La autenticación remota queda pausada; el progreso no se sincroniza entre dispositivos.
 - **Uso como apoyo al estudio**: La app ayuda a practicar y razonar respuestas, pero no debe usarse como única fuente ni como garantía jurídica absoluta.
 - **Alojamiento en Producción**: Servido globalmente en **Cloudflare Workers** desde directorio estático aislado (`/public`).

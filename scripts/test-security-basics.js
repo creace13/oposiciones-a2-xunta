@@ -36,7 +36,9 @@ const practice = read('practice.js');
 const publicPractice = read(path.join('public', 'practice.js'));
 const simulation = read('simulation.js');
 const publicSimulation = read(path.join('public', 'simulation.js'));
-const uiSources = [indexHtml, app, dashboard, history, practice, simulation, appState].join('\n');
+const audioStudy = read('audio-study.js');
+const publicAudioStudy = read(path.join('public', 'audio-study.js'));
+const uiSources = [indexHtml, app, dashboard, history, practice, simulation, audioStudy, appState].join('\n');
 const bootstrap = read('bootstrap.js');
 const publicBootstrap = read(path.join('public', 'bootstrap.js'));
 const pkg = JSON.parse(read('package.json'));
@@ -63,6 +65,7 @@ assertIncludes(indexHtml, 'dashboard.js?v=', 'El panel debe cargarse desde un ar
 assertIncludes(indexHtml, 'history.js?v=', 'El historial debe cargarse desde un archivo propio.');
 assertIncludes(indexHtml, 'practice.js?v=', 'La práctica debe cargarse desde un archivo propio.');
 assertIncludes(indexHtml, 'simulation.js?v=', 'El simulacro debe cargarse desde un archivo propio.');
+assertIncludes(indexHtml, 'audio-study.js?v=', 'El modo audio debe cargarse desde un archivo propio.');
 assert.strictEqual(publicBank, bank, 'El banco público debe coincidir con la raíz.');
 assert.strictEqual(publicReviews, reviews, 'Las ampliaciones históricas públicas deben coincidir con la raíz.');
 assert.strictEqual(publicAppState, appState, 'El estado público debe coincidir con la raíz.');
@@ -70,6 +73,7 @@ assert.strictEqual(publicDashboard, dashboard, 'El panel público debe coincidir
 assert.strictEqual(publicHistory, history, 'El historial público debe coincidir con la raíz.');
 assert.strictEqual(publicPractice, practice, 'La práctica pública debe coincidir con la raíz.');
 assert.strictEqual(publicSimulation, simulation, 'El simulacro público debe coincidir con la raíz.');
+assert.strictEqual(publicAudioStudy, audioStudy, 'El modo audio público debe coincidir con la raíz.');
 assertIncludes(bootstrap, "localStorage.getItem('opoA2LastView')", 'El arranque externo debe conservar la restauración de vista.');
 assert.strictEqual(publicBootstrap, bootstrap, 'El arranque público debe coincidir con la raíz.');
 const jsonLd = indexHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);

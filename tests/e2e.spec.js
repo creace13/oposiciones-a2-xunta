@@ -6,6 +6,26 @@ test.describe('Recorridos E2E en Chromium y WebKit (escritorio y perfiles móvil
     // Establecer perfil guardado para mantener sesión autenticada en navegación
     await context.addInitScript(() => {
       window.localStorage.setItem('opoA2UserName', 'Merce');
+      window.__audioTestState = { spoken: [], pauseCalls: 0, resumeCalls: 0, cancelCalls: 0 };
+      class MockSpeechSynthesisUtterance {
+        constructor(text) { this.text = text; }
+      }
+      const mockSpeechSynthesis = {
+        paused: false,
+        getVoices: () => [
+          { name: 'Español local', lang: 'es-ES', localService: true, default: true },
+          { name: 'Galego local', lang: 'gl-ES', localService: true, default: false }
+        ],
+        speak(utterance) {
+          window.__audioTestState.spoken.push({ text: utterance.text, lang: utterance.lang, rate: utterance.rate });
+          window.setTimeout(() => utterance.onend?.(), 0);
+        },
+        cancel() { window.__audioTestState.cancelCalls += 1; },
+        pause() { this.paused = true; window.__audioTestState.pauseCalls += 1; },
+        resume() { this.paused = false; window.__audioTestState.resumeCalls += 1; }
+      };
+      Object.defineProperty(window, 'SpeechSynthesisUtterance', { value: MockSpeechSynthesisUtterance, configurable: true });
+      Object.defineProperty(window, 'speechSynthesis', { value: mockSpeechSynthesis, configurable: true });
     });
     await page.goto('/');
   });
@@ -151,6 +171,45 @@ test.describe('Recorridos E2E en Chromium y WebKit (escritorio y perfiles móvil
     await expect(page.locator('.start-historical')).toHaveCount(3);
     await expect(page.locator('.historical-mode-help')).toContainText('explicación después de cada respuesta');
     await expect(page.locator('.historical-mode-help')).toContainText('correcciones ocultas hasta el final');
+  });
+
+  test('3e. La escucha Beta lee y conserva exactamente el progreso', async ({ page }) => {
+    await page.goto('/#practice');
+    const seededState = {
+      version: 3,
+      goals: [{ id: 'goal-test', text: 'Meta conservada', done: true }],
+      answered: [{ id: 'procedimiento-1', correct: true, answeredAt: '2026-08-17T08:00:00.000Z' }],
+      errors: [],
+      sessions: 7,
+      sessionHistory: ['2026-08-17T08:00:00.000Z'],
+      current: []
+    };
+    await page.evaluate(state => localStorage.setItem('opoA2State', JSON.stringify(state)), seededState);
+    await page.reload();
+    const progressBefore = await page.evaluate(() => localStorage.getItem('opoA2State'));
+
+    await page.selectOption('#topicSelect', 'historico2025');
+    await page.selectOption('#lengthSelect', '5');
+    await page.click('#audioStudyStart');
+
+    await expect(page.locator('#quizCard')).toContainText('Modo escucha · Beta');
+    await expect(page.locator('#quizCard')).toContainText('Pregunta 1 de 5');
+    await expect(page.locator('#quizCard')).toContainText('NO MODIFICA TU PROGRESO');
+    await expect.poll(() => page.evaluate(() => window.__audioTestState.spoken.length)).toBeGreaterThanOrEqual(5);
+    const firstLanguages = await page.evaluate(() => window.__audioTestState.spoken.slice(0, 5).map(item => item.lang));
+    expect(firstLanguages).toEqual(['gl-ES', 'gl-ES', 'gl-ES', 'gl-ES', 'gl-ES']);
+
+    await page.click('.audio-pause');
+    await expect.poll(() => page.evaluate(() => window.__audioTestState.pauseCalls)).toBe(1);
+    await page.click('.audio-pause');
+    await expect.poll(() => page.evaluate(() => window.__audioTestState.resumeCalls)).toBe(1);
+    await page.click('.audio-next');
+    await expect(page.locator('#quizCard')).toContainText('Pregunta 2 de 5');
+    await page.click('.audio-finish');
+
+    const progressAfter = await page.evaluate(() => localStorage.getItem('opoA2State'));
+    expect(progressAfter).toBe(progressBefore);
+    await expect(page.locator('#practiceSetup')).toBeVisible();
   });
 
   test('4. Iniciar simulacro con regla de penalización –0.25 y calcular nota neta', async ({ page }) => {

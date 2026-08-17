@@ -14,6 +14,7 @@ const dashboardPath = path.join(rootDir, 'dashboard.js');
 const historyPath = path.join(rootDir, 'history.js');
 const practicePath = path.join(rootDir, 'practice.js');
 const simulationPath = path.join(rootDir, 'simulation.js');
+const audioStudyPath = path.join(rootDir, 'audio-study.js');
 const appPath = path.join(rootDir, 'app.js');
 
 const htmlContent = fs.readFileSync(htmlPath, 'utf8');
@@ -24,6 +25,7 @@ const dashboardContent = fs.readFileSync(dashboardPath, 'utf8');
 const historyContent = fs.readFileSync(historyPath, 'utf8');
 const practiceContent = fs.readFileSync(practicePath, 'utf8');
 const simulationContent = fs.readFileSync(simulationPath, 'utf8');
+const audioStudyContent = fs.readFileSync(audioStudyPath, 'utf8');
 const appContent = fs.readFileSync(appPath, 'utf8');
 
 async function runE2ESuite() {
@@ -51,6 +53,18 @@ async function runE2ESuite() {
     return null;
   };
   window.HTMLDialogElement = HTMLDialogElementPolyfill;
+  window.SpeechSynthesisUtterance = class {
+    constructor(text) { this.text = text; }
+  };
+  window.speechSynthesis = {
+    paused: false,
+    spoken: [],
+    getVoices: () => [{ name: 'Voz española local', lang: 'es-ES', localService: true, default: true }],
+    speak(utterance) { this.spoken.push(utterance.text); window.setTimeout(() => utterance.onend?.(), 0); },
+    cancel() {},
+    pause() { this.paused = true; },
+    resume() { this.paused = false; }
+  };
 
   document.querySelectorAll('dialog').forEach(d => {
     d.showModal = HTMLDialogElementPolyfill.prototype.showModal;
@@ -71,7 +85,7 @@ async function runE2ESuite() {
   };
 
   // Evaluate both classic scripts in one shared lexical scope, matching index.html.
-  window.eval(`${bankContent}\n${reviewsContent}\n${stateContent}\n${dashboardContent}\n${historyContent}\n${practiceContent}\n${simulationContent}\n${appContent}`);
+  window.eval(`${bankContent}\n${reviewsContent}\n${stateContent}\n${dashboardContent}\n${historyContent}\n${practiceContent}\n${simulationContent}\n${audioStudyContent}\n${appContent}`);
 
   // Regression: métricas cuantitativas honestas y formato español
   console.log('Test DOM 0: Verificando presentación honesta de métricas...');
@@ -216,6 +230,31 @@ async function runE2ESuite() {
   document.querySelector('.finish-practice-early').click();
   document.querySelector('.finish-practice').click();
   console.log('  PASADO: Acceso directo a estudiar verificado.');
+
+  // Flow 3e: Escucha Beta sin alterar el progreso existente
+  console.log('Test E2E 3e: Escuchando preguntas sin modificar el progreso...');
+  topicSelect.value = 'mixto';
+  topicSelect.dispatchEvent(new window.Event('change'));
+  lengthSelect.value = '5';
+  const progressBeforeAudio = window.localStorage.getItem('opoA2State');
+  window.speechSynthesis.spoken.length = 0;
+  document.getElementById('audioStudyStart').click();
+  for (let attempt = 0; attempt < 50 && window.speechSynthesis.spoken.length < 5; attempt += 1) {
+    await new Promise(resolve => window.setTimeout(resolve, 10));
+  }
+  assert.strictEqual(quizCard.textContent.includes('Modo escucha · Beta'), true, '❌ E2E 3e Fallido: no abrió el modo escucha');
+  assert.strictEqual(quizCard.textContent.includes('NO MODIFICA TU PROGRESO'), true, '❌ E2E 3e Fallido: falta la advertencia de progreso');
+  assert.strictEqual(window.speechSynthesis.spoken.length >= 5, true, '❌ E2E 3e Fallido: no leyó pregunta y alternativas');
+  document.querySelector('.audio-pause').click();
+  assert.strictEqual(window.speechSynthesis.paused, true, '❌ E2E 3e Fallido: el control de pausa no actuó');
+  document.querySelector('.audio-pause').click();
+  assert.strictEqual(window.speechSynthesis.paused, false, '❌ E2E 3e Fallido: el control de reanudación no actuó');
+  document.querySelector('.audio-next').click();
+  assert.strictEqual(quizCard.textContent.includes('Pregunta 2 de 5'), true, '❌ E2E 3e Fallido: no avanzó manualmente');
+  document.querySelector('.audio-finish').click();
+  assert.strictEqual(window.localStorage.getItem('opoA2State'), progressBeforeAudio, '❌ E2E 3e Fallido: la escucha modificó el progreso guardado');
+  assert.strictEqual(document.getElementById('practiceSetup').parentElement.classList.contains('hidden'), false, '❌ E2E 3e Fallido: no volvió al selector');
+  console.log('  PASADO: Lectura, controles y progreso intacto verificados.');
 
   // Flow 4: Iniciar simulacro con penalización –0.25 y calcular nota neta
   console.log('Test E2E 4: Iniciando simulacro oficial de 18 preguntas...');

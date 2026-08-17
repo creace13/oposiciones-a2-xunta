@@ -63,6 +63,7 @@ function buildSet(topic, length) {
 }
 
 function startQuiz(set, mode = 'practice') {
+  if (typeof window.stopAudioStudy === 'function') window.stopAudioStudy();
   activeQuiz = set;
   questionIndex = 0;
   quizMode = mode;

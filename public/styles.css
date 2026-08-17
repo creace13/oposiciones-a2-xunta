@@ -291,3 +291,23 @@ html[data-auth-state="unauthenticated"] .app-shell { display:none!important; }
   .two-columns,.practice-layout,.library-grid,.coverage-board,.coverage-dashboard-board { grid-template-columns:minmax(0,1fr); }
   .project-credits { grid-template-columns:1fr; }
 }
+.audio-study-start { margin-top:9px;justify-content:center; }
+.audio-study-start span { font:600 9px "DM Mono";letter-spacing:.5px;text-transform:uppercase;background:#e7efe2;border-radius:99px;padding:3px 7px; }
+.audio-entry-note { margin:8px 0 0;color:var(--muted);font-size:10px;line-height:1.45; }
+.audio-study-body { display:grid;gap:14px; }
+.audio-study-body .question-text { margin-bottom:4px; }
+.audio-option-list { display:grid;gap:8px;margin:0;padding:0;list-style:none; }
+.audio-option-list li { padding:11px 13px;border:1px solid #e0e6dd;border-radius:8px;background:#fbfcf8;color:#53675f;font-size:12px;line-height:1.45; }
+.audio-study-status { padding:13px 15px;border-left:4px solid var(--lime);border-radius:8px;background:#f1f6eb;color:var(--pine);font-weight:600;font-size:13px; }
+.audio-voice-note,.audio-beta-warning { margin:0;color:var(--muted);font-size:11px;line-height:1.5; }
+.audio-beta-warning { padding:10px 12px;border-radius:7px;background:#fff6db;color:#725f25; }
+.audio-rate-control { display:grid;gap:6px;max-width:220px;margin:0;color:#486057;font-size:12px;font-weight:600; }
+.audio-rate-control select { appearance:auto;width:100%;border:1px solid #d4ded5;background:#fbfcf8;border-radius:7px;padding:10px;color:var(--ink);font-size:13px; }
+.audio-study-footer { align-items:flex-start;flex-direction:column; }
+.audio-study-controls { width:100%;display:flex;gap:8px;flex-wrap:wrap; }
+.audio-study-controls button { flex:1 1 auto;white-space:nowrap; }
+
+@media (max-width:580px) {
+  .audio-study-controls { display:grid;grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .audio-study-controls .audio-finish { grid-column:1/-1; }
+}

@@ -1,6 +1,6 @@
 # Plan de mantenimiento técnico por piezas
 
-Actualizado: 13 de agosto de 2026.
+Actualizado: 17 de agosto de 2026.
 
 Este documento clasifica tres deudas conocidas sin convertirlas en una reescritura global: la separación progresiva del banco y el motor, la política de seguridad del navegador y los archivos históricos de construcción.
 
@@ -58,3 +58,11 @@ No se elimina nada automáticamente. Inventario actual:
 Cuando vuelva, el titular podrá decidir en conjunto si los dos scripts históricos y las tres copias de imagen candidatas se archivan, se eliminan del repositorio activo o se conservan con una nota de procedencia. Ninguna de estas decisiones bloquea el uso de la aplicación.
 
 La licencia permanece en un bloque separado porque afecta a derechos de uso y modelo de distribución; no se resuelve como limpieza técnica.
+
+## 4. Funciones nuevas aisladas
+
+El modo escucha Beta se incorpora en `audio-study.js`. Puede leer el banco, pero no llama a la persistencia, no registra sesiones y no cambia aciertos, fallos o historial. `practice.js` únicamente lo detiene antes de abrir una práctica normal, evitando dos modos simultáneos.
+
+La compatibilidad se declara por niveles: Windows 11 y Android son los objetivos comprobables; WebKit automatizado protege la estructura, pero no equivale a disponer de un iPhone real ni permite declarar validado su audio. La pantalla bloqueada queda fuera de la promesa inicial.
+
+Cualquier ampliación del modo escucha debe conservar tres condiciones: módulo independiente, banco protegido por sus huellas y comparación exacta del progreso antes y después de escuchar.
